@@ -1,0 +1,1215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Competitor Customer Discovery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080B10;
+    --surface: #0E1318;
+    --border: #1A2230;
+    --border-glow: #1E3A5F;
+    --text: #E8EDF5;
+    --muted: #5A7090;
+    --accent: #00C2FF;
+    --accent2: #0066FF;
+    --green: #00E5A0;
+    --amber: #FFB020;
+    --red: #FF4D6A;
+    --grade-a: #00E5A0;
+    --grade-b: #00C2FF;
+    --grade-c: #FFB020;
+    --grade-d: #FF4D6A;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Mono', monospace;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Grid background */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0,194,255,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,194,255,0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Glow orb */
+  body::after {
+    content: '';
+    position: fixed;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 400px;
+    background: radial-gradient(ellipse, rgba(0,102,255,0.12) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ── HEADER ── */
+  header {
+    padding: 32px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Syne', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text);
+  }
+
+  .logo-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 12px var(--accent);
+    animation: pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.6; transform: scale(0.8); }
+  }
+
+  .nav-tag {
+    font-size: 11px;
+    color: var(--muted);
+    letter-spacing: 0.1em;
+    border: 1px solid var(--border);
+    padding: 4px 10px;
+    border-radius: 20px;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 80px 0 60px;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 0.6s ease 0.1s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(36px, 6vw, 64px);
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeUp 0.6s ease 0.2s forwards;
+  }
+
+  .hero-title span {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    color: var(--muted);
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto 48px;
+    opacity: 0;
+    animation: fadeUp 0.6s ease 0.3s forwards;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── SEARCH BOX ── */
+  .search-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeUp 0.6s ease 0.4s forwards;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .search-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--accent), transparent);
+    opacity: 0.5;
+  }
+
+  .search-label {
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+    display: block;
+  }
+
+  .input-row {
+    display: flex;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .domain-input {
+    flex: 1;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 14px 18px;
+    font-family: 'DM Mono', monospace;
+    font-size: 15px;
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+
+  .domain-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(0,194,255,0.1);
+  }
+
+  .domain-input::placeholder { color: var(--muted); }
+
+  .search-btn {
+    background: linear-gradient(135deg, var(--accent2), var(--accent));
+    border: none;
+    border-radius: 10px;
+    padding: 14px 28px;
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 0.05em;
+    transition: opacity 0.2s, transform 0.2s;
+    white-space: nowrap;
+  }
+
+  .search-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+  .search-btn:active { transform: translateY(0); }
+  .search-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+
+  .search-hint {
+    font-size: 11px;
+    color: var(--muted);
+    margin-top: 14px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .hint-tag {
+    cursor: pointer;
+    transition: color 0.2s;
+    padding: 2px 0;
+  }
+  .hint-tag:hover { color: var(--accent); }
+  .hint-tag::before { content: '↗ '; }
+
+  /* ── LOADING STATE ── */
+  .loading-section {
+    display: none;
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  .loading-section.visible { display: block; }
+
+  .loader {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  .loader-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+
+  .loader-dot:nth-child(1) { animation: loadBounce 1.2s ease-in-out 0s infinite; }
+  .loader-dot:nth-child(2) { animation: loadBounce 1.2s ease-in-out 0.2s infinite; }
+  .loader-dot:nth-child(3) { animation: loadBounce 1.2s ease-in-out 0.4s infinite; }
+
+  @keyframes loadBounce {
+    0%, 80%, 100% { transform: scale(0.6); opacity: 0.4; }
+    40% { transform: scale(1); opacity: 1; }
+  }
+
+  .loading-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  .loading-sub { font-size: 13px; color: var(--muted); }
+
+  .loading-steps {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .step-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    color: var(--muted);
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s;
+  }
+
+  .step-item.active {
+    color: var(--text);
+    background: rgba(0,194,255,0.06);
+    border-left: 2px solid var(--accent);
+  }
+
+  .step-item.done { color: var(--green); }
+
+  .step-icon { font-size: 14px; width: 18px; text-align: center; }
+
+  /* ── RESULTS ── */
+  .results-section {
+    display: none;
+    padding: 0 0 80px;
+  }
+
+  .results-section.visible { display: block; }
+
+  .results-header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .results-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+  }
+
+  .results-title span { color: var(--accent); }
+
+  .results-meta {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.6;
+    text-align: right;
+  }
+
+  /* ── COMPANY CARDS ── */
+  .company-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .company-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    align-items: center;
+    opacity: 0;
+    animation: fadeUp 0.4s ease forwards;
+    transition: border-color 0.2s;
+  }
+
+  .company-card:nth-child(1) { animation-delay: 0.05s; }
+  .company-card:nth-child(2) { animation-delay: 0.1s; }
+  .company-card:nth-child(3) { animation-delay: 0.15s; }
+  .company-card:nth-child(4) { animation-delay: 0.2s; }
+  .company-card:nth-child(5) { animation-delay: 0.25s; }
+
+  .company-card:hover { border-color: var(--border-glow); }
+
+  .company-rank {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--border);
+    min-width: 32px;
+  }
+
+  .company-info { min-width: 0; }
+
+  .company-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .company-domain {
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+
+  .company-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    border: 1px solid;
+  }
+
+  .tag-industry { color: var(--accent); border-color: rgba(0,194,255,0.25); background: rgba(0,194,255,0.05); }
+  .tag-region { color: var(--muted); border-color: var(--border); }
+  .tag-b2b { color: var(--green); border-color: rgba(0,229,160,0.25); background: rgba(0,229,160,0.05); }
+  .tag-signal { color: #9B8FFF; border-color: rgba(155,143,255,0.25); background: rgba(155,143,255,0.05); }
+
+  .company-snippet {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+    margin-top: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+  .company-score {
+    text-align: right;
+    min-width: 60px;
+  }
+
+  .grade-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 4px;
+  }
+
+  .grade-A { background: rgba(0,229,160,0.1); color: var(--grade-a); border: 1px solid rgba(0,229,160,0.3); }
+  .grade-B { background: rgba(0,194,255,0.1); color: var(--grade-b); border: 1px solid rgba(0,194,255,0.3); }
+  .grade-C { background: rgba(255,176,32,0.1); color: var(--grade-c); border: 1px solid rgba(255,176,32,0.3); }
+  .grade-D { background: rgba(255,77,106,0.1); color: var(--grade-d); border: 1px solid rgba(255,77,106,0.3); }
+
+  .score-num {
+    font-size: 11px;
+    color: var(--muted);
+    display: block;
+  }
+
+  /* ── LOCK WALL ── */
+  .lock-wall {
+    position: relative;
+    margin-bottom: 32px;
+  }
+
+  .locked-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .locked-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    height: 88px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .locked-card::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      rgba(14,19,24,0.8) 0px,
+      rgba(14,19,24,0.4) 4px,
+      rgba(14,19,24,0.8) 8px
+    );
+    backdrop-filter: blur(2px);
+  }
+
+  .locked-card-inner {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    filter: blur(5px);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .locked-placeholder {
+    height: 14px;
+    border-radius: 4px;
+    background: var(--border);
+  }
+
+  .upgrade-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      rgba(8,11,16,0.6) 30%,
+      rgba(8,11,16,0.9) 70%,
+      var(--bg) 100%
+    );
+  }
+
+  /* ── UPGRADE BOX ── */
+  .upgrade-box {
+    background: var(--surface);
+    border: 1px solid var(--border-glow);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: 8px;
+  }
+
+  .upgrade-box::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent2), var(--accent));
+  }
+
+  .upgrade-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+  }
+
+  .upgrade-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    margin-bottom: 8px;
+  }
+
+  .upgrade-sub {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 28px;
+    line-height: 1.6;
+  }
+
+  .upgrade-sub strong { color: var(--text); }
+
+  .upgrade-tiers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-bottom: 24px;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tier-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.2s, background 0.2s;
+  }
+
+  .tier-card:hover, .tier-card.selected {
+    border-color: var(--accent);
+    background: rgba(0,194,255,0.05);
+  }
+
+  .tier-name {
+    font-family: 'Syne', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .tier-limit { font-size: 11px; color: var(--green); margin-bottom: 4px; }
+  .tier-price { font-size: 20px; font-family: 'Syne', sans-serif; font-weight: 800; }
+  .tier-price span { font-size: 12px; color: var(--muted); font-weight: 400; font-family: 'DM Mono', monospace; }
+
+  .export-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, var(--accent2), var(--accent));
+    border: none;
+    border-radius: 10px;
+    padding: 14px 32px;
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    transition: opacity 0.2s, transform 0.2s;
+    width: 100%;
+    justify-content: center;
+    max-width: 400px;
+  }
+
+  .export-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+  .free-export-btn {
+    margin-top: 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 12px 24px;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+    justify-content: center;
+    max-width: 400px;
+  }
+
+  .free-export-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── NEW SEARCH ── */
+  .new-search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .new-search-domain {
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .new-search-domain span { color: var(--accent); }
+
+  .new-search-btn {
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-family: 'DM Mono', monospace;
+    font-size: 12px;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .new-search-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── ERROR ── */
+  .error-section {
+    display: none;
+    text-align: center;
+    padding: 60px 0;
+  }
+
+  .error-section.visible { display: block; }
+
+  .error-box {
+    background: rgba(255,77,106,0.05);
+    border: 1px solid rgba(255,77,106,0.2);
+    border-radius: 12px;
+    padding: 32px;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  .error-icon { font-size: 32px; margin-bottom: 12px; }
+  .error-title {
+    font-family: 'Syne', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 8px;
+    color: var(--red);
+  }
+  .error-msg { font-size: 13px; color: var(--muted); margin-bottom: 20px; }
+
+  .retry-btn {
+    background: none;
+    border: 1px solid rgba(255,77,106,0.4);
+    border-radius: 8px;
+    padding: 10px 24px;
+    font-family: 'DM Mono', monospace;
+    font-size: 13px;
+    color: var(--red);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+
+  .retry-btn:hover { background: rgba(255,77,106,0.1); }
+
+  /* ── STATS ROW ── */
+  .stats-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+    opacity: 0;
+    animation: fadeUp 0.4s ease 0.1s forwards;
+  }
+
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px 20px;
+    text-align: center;
+  }
+
+  .stat-value {
+    font-family: 'Syne', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .stat-label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 40px 0;
+    text-align: center;
+    font-size: 12px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+    margin-top: 40px;
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 600px) {
+    .input-row { flex-direction: column; }
+    .stats-row { grid-template-columns: 1fr 1fr; }
+    .upgrade-tiers { grid-template-columns: 1fr; }
+    .company-card { grid-template-columns: 1fr auto; }
+    .company-rank { display: none; }
+    .results-meta { text-align: left; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <header>
+    <div class="logo">
+      <div class="logo-dot"></div>
+      CompetitorIQ
+    </div>
+    <div class="nav-tag">Beta</div>
+  </header>
+
+  <!-- HERO + SEARCH -->
+  <div id="homeSection">
+    <div class="hero">
+      <div class="hero-eyebrow">B2B Pipeline Intelligence</div>
+      <h1 class="hero-title">
+        Find companies<br>already buying from<br><span>your competitor</span>
+      </h1>
+      <p class="hero-sub">
+        Enter a competitor's domain. We scan the web for public signals of their customers — so you can reach them first.
+      </p>
+
+      <div class="search-card">
+        <span class="search-label">Competitor Domain</span>
+        <div class="input-row">
+          <input
+            type="text"
+            class="domain-input"
+            id="domainInput"
+            placeholder="e.g. deel.com"
+            autocomplete="off"
+            spellcheck="false"
+          />
+          <button class="search-btn" id="searchBtn" onclick="startSearch()">
+            Find Customers
+          </button>
+        </div>
+        <div class="search-hint">
+          <span class="hint-tag" onclick="setDomain('deel.com')">deel.com</span>
+          <span class="hint-tag" onclick="setDomain('rippling.com')">rippling.com</span>
+          <span class="hint-tag" onclick="setDomain('gusto.com')">gusto.com</span>
+          <span class="hint-tag" onclick="setDomain('workday.com')">workday.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOADING -->
+  <div class="loading-section" id="loadingSection">
+    <div class="loader">
+      <div class="loader-dot"></div>
+      <div class="loader-dot"></div>
+      <div class="loader-dot"></div>
+    </div>
+    <div class="loading-title">Scanning the web...</div>
+    <div class="loading-sub" id="loadingDomainLabel">Searching for <span id="loadingDomain"></span> customers</div>
+
+    <div class="loading-steps">
+      <div class="step-item active" id="step1"><span class="step-icon">🔍</span> Searching for customer mentions</div>
+      <div class="step-item" id="step2"><span class="step-icon">📊</span> Ranking signals by intent</div>
+      <div class="step-item" id="step3"><span class="step-icon">🏢</span> Extracting company names</div>
+      <div class="step-item" id="step4"><span class="step-icon">✨</span> Scoring & enriching results</div>
+    </div>
+  </div>
+
+  <!-- ERROR -->
+  <div class="error-section" id="errorSection">
+    <div class="error-box">
+      <div class="error-icon">⚠️</div>
+      <div class="error-title">Search Failed</div>
+      <div class="error-msg" id="errorMsg">Something went wrong. Please try again.</div>
+      <button class="retry-btn" onclick="resetToHome()">← Try Again</button>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="results-section" id="resultsSection">
+
+    <div class="new-search-bar">
+      <div class="new-search-domain">Results for <span id="resultDomain"></span></div>
+      <button class="new-search-btn" onclick="resetToHome()">← New Search</button>
+    </div>
+
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-value" id="statTotal">0</div>
+        <div class="stat-label">Companies Found</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statLocked" style="color: var(--amber)">0</div>
+        <div class="stat-label">Locked Results</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statGrade" style="color: var(--green)">—</div>
+        <div class="stat-label">Top Grade</div>
+      </div>
+    </div>
+
+    <div class="company-list" id="companyList"></div>
+
+    <div class="lock-wall" id="lockWall" style="display:none">
+      <div class="locked-rows" id="lockedRows"></div>
+      <div class="upgrade-overlay"></div>
+    </div>
+
+    <div class="upgrade-box" id="upgradeBox" style="display:none">
+      <div class="upgrade-icon">🔒</div>
+      <div class="upgrade-title">Unlock Full Results</div>
+      <div class="upgrade-sub">
+        You're seeing the top 5 companies.<br>
+        <strong id="lockedCountText">X more companies</strong> are ready to export.
+      </div>
+
+      <div class="upgrade-tiers">
+        <div class="tier-card selected" onclick="selectTier(this,'pro')" id="tierPro">
+          <div class="tier-name">Pro</div>
+          <div class="tier-limit">Up to 25 companies</div>
+          <div class="tier-price">$49 <span>/ search</span></div>
+        </div>
+        <div class="tier-card" onclick="selectTier(this,'advanced')" id="tierAdvanced">
+          <div class="tier-name">Advanced</div>
+          <div class="tier-limit">Unlimited</div>
+          <div class="tier-price">$99 <span>/ search</span></div>
+        </div>
+      </div>
+
+      <button class="export-btn" onclick="handleExport()">
+        ↓ Export Full List (CSV)
+      </button>
+      <br>
+      <button class="free-export-btn" onclick="exportFree()">
+        Export top 5 for free
+      </button>
+    </div>
+
+  </div>
+
+</div>
+
+<footer>
+  <div class="container">
+    CompetitorIQ — Competitor Customer Discovery &nbsp;·&nbsp; Pipeline intelligence for B2B teams
+  </div>
+</footer>
+
+<script>
+  let currentJobId = null;
+  let pollInterval = null;
+  let selectedTier = 'pro';
+  let currentResults = null;
+  let stepTimer = null;
+
+  function setDomain(d) {
+    document.getElementById('domainInput').value = d;
+    document.getElementById('domainInput').focus();
+  }
+
+  function selectTier(el, tier) {
+    document.querySelectorAll('.tier-card').forEach(c => c.classList.remove('selected'));
+    el.classList.add('selected');
+    selectedTier = tier;
+  }
+
+  function showSection(name) {
+    ['homeSection','loadingSection','errorSection','resultsSection'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.classList.remove('visible');
+      if (el) el.style.display = 'none';
+    });
+    const target = document.getElementById(name);
+    if (target) {
+      target.style.display = 'block';
+      setTimeout(() => target.classList.add('visible'), 10);
+    }
+  }
+
+  function resetToHome() {
+    clearInterval(pollInterval);
+    clearTimeout(stepTimer);
+    showSection('homeSection');
+    document.getElementById('homeSection').style.display = 'block';
+    document.getElementById('homeSection').classList.add('visible');
+  }
+
+  function animateSteps() {
+    const steps = ['step1','step2','step3','step4'];
+    let i = 0;
+
+    function next() {
+      if (i > 0) {
+        const prev = document.getElementById(steps[i-1]);
+        if (prev) { prev.classList.remove('active'); prev.classList.add('done'); }
+      }
+      if (i < steps.length) {
+        const cur = document.getElementById(steps[i]);
+        if (cur) cur.classList.add('active');
+        i++;
+        stepTimer = setTimeout(next, 3500);
+      }
+    }
+    next();
+  }
+
+  async function startSearch() {
+    const domain = document.getElementById('domainInput').value.trim();
+    if (!domain) {
+      document.getElementById('domainInput').focus();
+      return;
+    }
+
+    document.getElementById('searchBtn').disabled = true;
+    document.getElementById('loadingDomain').textContent = domain;
+
+    // Reset steps
+    ['step1','step2','step3','step4'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) { el.classList.remove('active','done'); }
+    });
+
+    showSection('loadingSection');
+    animateSteps();
+
+    try {
+      const res = await fetch('/api/search', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ domain, tier: 'lite', mode: 'live' })
+      });
+
+      if (!res.ok) throw new Error('Search request failed');
+      const data = await res.json();
+      currentJobId = data.job_id;
+      pollResults();
+
+    } catch (err) {
+      showError(err.message);
+    }
+  }
+
+  function pollResults() {
+    pollInterval = setInterval(async () => {
+      try {
+        const res = await fetch(`/api/results/${currentJobId}`);
+        const data = await res.json();
+
+        if (data.status === 'running') return;
+
+        clearInterval(pollInterval);
+        clearTimeout(stepTimer);
+
+        if (data.status === 'error') {
+          showError(data.error || 'Pipeline failed');
+          return;
+        }
+
+        if (data.status === 'done') {
+          currentResults = data;
+          renderResults(data);
+        }
+
+      } catch (err) {
+        clearInterval(pollInterval);
+        showError(err.message);
+      }
+    }, 2000);
+  }
+
+  function showError(msg) {
+    document.getElementById('errorMsg').textContent = msg;
+    document.getElementById('searchBtn').disabled = false;
+    showSection('errorSection');
+  }
+
+  function renderResults(data) {
+    document.getElementById('searchBtn').disabled = false;
+    document.getElementById('resultDomain').textContent = data.domain;
+
+    const total = data.total || 0;
+    const locked = data.locked || 0;
+    const preview = data.preview || [];
+
+    document.getElementById('statTotal').textContent = total;
+    document.getElementById('statLocked').textContent = locked;
+
+    const topGrade = preview.length > 0 ? (preview[0].grade || '—') : '—';
+    document.getElementById('statGrade').textContent = topGrade;
+
+    // Render preview cards
+    const list = document.getElementById('companyList');
+    list.innerHTML = '';
+    preview.forEach((c, i) => {
+      list.appendChild(buildCard(c, i + 1));
+    });
+
+    // Locked rows
+    if (locked > 0) {
+      document.getElementById('lockedCountText').textContent = `${locked} more companies`;
+      const lockedRows = document.getElementById('lockedRows');
+      lockedRows.innerHTML = '';
+      const shown = Math.min(locked, 4);
+      for (let j = 0; j < shown; j++) {
+        lockedRows.appendChild(buildLockedCard());
+      }
+      document.getElementById('lockWall').style.display = 'block';
+      document.getElementById('upgradeBox').style.display = 'block';
+    }
+
+    showSection('resultsSection');
+  }
+
+  function buildCard(c, rank) {
+    const div = document.createElement('div');
+    div.className = 'company-card';
+
+    const grade = c.grade || '-';
+    const gradeClass = `grade-${grade}`;
+    const signalLabel = (c.signal_group || '').replace(/_/g, ' ');
+
+    div.innerHTML = `
+      <div class="company-rank">${String(rank).padStart(2,'0')}</div>
+      <div class="company-info">
+        <div class="company-name">${escHtml(c.company_name || 'Unknown')}</div>
+        <div class="company-domain">${escHtml(c.company_domain || '')}</div>
+        <div class="company-tags">
+          ${c.industry && c.industry !== 'Unknown' ? `<span class="tag tag-industry">${escHtml(c.industry)}</span>` : ''}
+          ${c.region && c.region !== 'Unknown' ? `<span class="tag tag-region">${escHtml(c.region)}</span>` : ''}
+          ${c.b2b_flag && c.b2b_flag !== 'Unknown' ? `<span class="tag tag-b2b">${escHtml(c.b2b_flag)}</span>` : ''}
+          ${signalLabel ? `<span class="tag tag-signal">${escHtml(signalLabel)}</span>` : ''}
+        </div>
+        ${c.snippet ? `<div class="company-snippet">${escHtml(c.snippet)}</div>` : ''}
+      </div>
+      <div class="company-score">
+        <div class="grade-badge ${gradeClass}">${grade}</div>
+        <span class="score-num">${c.score || 0} pts</span>
+      </div>
+    `;
+    return div;
+  }
+
+  function buildLockedCard() {
+    const div = document.createElement('div');
+    div.className = 'locked-card';
+    div.innerHTML = `
+      <div class="locked-card-inner">
+        <div style="min-width:32px"><div class="locked-placeholder" style="width:28px;height:28px;border-radius:50%"></div></div>
+        <div style="flex:1;display:flex;flex-direction:column;gap:8px">
+          <div class="locked-placeholder" style="width:${120+Math.random()*80|0}px;height:16px"></div>
+          <div class="locked-placeholder" style="width:${80+Math.random()*60|0}px;height:12px"></div>
+          <div style="display:flex;gap:6px">
+            <div class="locked-placeholder" style="width:60px;height:20px;border-radius:4px"></div>
+            <div class="locked-placeholder" style="width:50px;height:20px;border-radius:4px"></div>
+          </div>
+        </div>
+        <div class="locked-placeholder" style="width:44px;height:44px;border-radius:10px"></div>
+      </div>
+    `;
+    return div;
+  }
+
+  async function handleExport() {
+    if (!currentJobId) return;
+
+    try {
+      const res = await fetch('/api/export', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ job_id: currentJobId, tier: selectedTier })
+      });
+
+      const data = await res.json();
+      downloadCsv(data.csv, data.filename);
+
+    } catch (err) {
+      alert('Export failed: ' + err.message);
+    }
+  }
+
+  async function exportFree() {
+    if (!currentJobId) return;
+    try {
+      const res = await fetch('/api/export', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ job_id: currentJobId, tier: 'free' })
+      });
+      const data = await res.json();
+      downloadCsv(data.csv, data.filename);
+    } catch (err) {
+      alert('Export failed: ' + err.message);
+    }
+  }
+
+  function downloadCsv(content, filename) {
+    const blob = new Blob([content], { type: 'text/csv' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    a.click();
+    URL.revokeObjectURL(url);
+  }
+
+  function escHtml(str) {
+    return String(str)
+      .replace(/&/g,'&amp;')
+      .replace(/</g,'&lt;')
+      .replace(/>/g,'&gt;')
+      .replace(/"/g,'&quot;');
+  }
+
+  // Enter key to search
+  document.getElementById('domainInput').addEventListener('keydown', e => {
+    if (e.key === 'Enter') startSearch();
+  });
+
+  // Show home on load
+  document.getElementById('homeSection').style.display = 'block';
+</script>
+</body>
+</html>
