@@ -312,7 +312,12 @@
             <span class="unlock-feature">Change ICP filters</span>
             <span class="unlock-feature">All scores visible</span>
           </div>
-          <button class="unlock-btn" id="unlockBtn" onclick="handleUnlock()">Unlock Full List — $69</button>
+          <button class="unlock-btn" id="unlockBtn" onclick="goToPayment()">Unlock Full List — $69</button>
+          <div id="alreadyPaidRow" style="display:none;margin-top:16px">
+            <button onclick="confirmUnlock()" style="background:none;border:none;color:var(--green);font-family:'DM Mono',monospace;font-size:13px;cursor:pointer;text-decoration:underline;">
+              ✓ I've completed payment — unlock my results
+            </button>
+          </div>
         </div>
       </div>
 
@@ -489,10 +494,17 @@
     showSection('resultsSection');
   }
 
-  async function handleUnlock() {
+  function goToPayment() {
+    // Open payment page in new tab
+    window.open('https://pay.sumit.co.il/hwosrn/sscaj9/sscaja/payment/', '_blank');
+    // Show "already paid" confirmation button
+    document.getElementById('alreadyPaidRow').style.display = 'block';
+  }
+
+  async function confirmUnlock() {
     if (!currentJobId) return;
     const btn = document.getElementById('unlockBtn');
-    btn.textContent = 'Processing...'; btn.disabled = true;
+    btn.textContent = 'Unlocking...'; btn.disabled = true;
     try {
       const res = await fetch(`/api/unlock/${currentJobId}`, { method: 'POST' });
       if (!res.ok) throw new Error('Unlock failed');
