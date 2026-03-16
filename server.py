@@ -45,11 +45,29 @@ class SearchRequest(BaseModel):
     domain: str
     tier: str = "lite"
     mode: str = "live"
+    icp_industries: list = []   # e.g. ["HRTech", "Fintech"]
+    icp_size: str = ""          # e.g. "Startup", "Enterprise"
+    icp_region: str = ""        # e.g. "US", "Europe"
 
 
 class ExportRequest(BaseModel):
     job_id: str
     tier: str = "lite"
+
+
+def filter_by_icp(companies: list, icp_industries: list, icp_size: str, icp_region: str) -> list:
+    if not icp_industries and not icp_size and not icp_region:
+        return companies
+    filtered = []
+    for c in companies:
+        if icp_industries and c.get("industry", "Unknown") not in icp_industries:
+            continue
+        if icp_region and c.get("region", "Unknown") != icp_region:
+            continue
+        if icp_size and c.get("company_size", "Unknown") != icp_size:
+            continue
+        filtered.append(c)
+    return filtered
 
 
 def run_pipeline(domain: str, brand: str, mode: str, tier: str) -> list:
@@ -215,24 +233,33 @@ async def start_search(req: SearchRequest, background_tasks: BackgroundTasks):
         "status": "running",
         "created_at": datetime.utcnow().isoformat(),
         "companies": [],
+        "filtered": [],
+        "unlocked": False,
         "error": None,
+        "icp_industries": req.icp_industries,
+        "icp_size": req.icp_size,
+        "icp_region": req.icp_region,
     }
 
-    background_tasks.add_task(_run_job, job_id, domain, req.tier, req.mode)
+    background_tasks.add_task(_run_job, job_id, domain, req.tier, req.mode,
+                               req.icp_industries, req.icp_size, req.icp_region)
     return {"job_id": job_id, "status": "running"}
 
 
-def _run_job(job_id: str, domain: str, tier: str, mode: str):
-    """Background task that runs the pipeline and stores results."""
+def _run_job(job_id: str, domain: str, tier: str, mode: str,
+             icp_industries: list = [], icp_size: str = "", icp_region: str = ""):
+    """Background task that runs the pipeline, enriches, filters by ICP."""
     try:
         brand = brand_from_domain(domain)
 
-        # Check cache first (live mode only)
         if mode == "live":
             cached = load_cache(domain)
             if cached and cached.get("companies"):
                 log.info(f"[job {job_id}] cache hit for {domain}")
-                jobs[job_id]["companies"] = cached["companies"]
+                companies = cached["companies"]
+                filtered = filter_by_icp(companies, icp_industries, icp_size, icp_region)
+                jobs[job_id]["companies"] = companies
+                jobs[job_id]["filtered"] = filtered
                 jobs[job_id]["status"] = "done"
                 jobs[job_id]["from_cache"] = True
                 return
@@ -242,10 +269,13 @@ def _run_job(job_id: str, domain: str, tier: str, mode: str):
         if companies and mode == "live":
             save_cache(domain, companies, tier=tier)
 
+        filtered = filter_by_icp(companies, icp_industries, icp_size, icp_region)
+
         jobs[job_id]["companies"] = companies
+        jobs[job_id]["filtered"] = filtered
         jobs[job_id]["status"] = "done"
-        jobs[job_id]["total"] = len(companies)
-        log.info(f"[job {job_id}] done — {len(companies)} companies")
+        jobs[job_id]["total"] = len(filtered)
+        log.info(f"[job {job_id}] done — {len(companies)} total, {len(filtered)} after ICP filter")
 
     except Exception as e:
         log.error(f"[job {job_id}] error: {e}")
@@ -255,7 +285,7 @@ def _run_job(job_id: str, domain: str, tier: str, mode: str):
 
 @app.get("/api/results/{job_id}")
 async def get_results(job_id: str):
-    """Poll for job results. Returns preview (top 5) + locked count."""
+    """Poll for job results. Returns top 5 free + locked count, or all if unlocked."""
     job = jobs.get(job_id)
     if not job:
         raise HTTPException(status_code=404, detail="Job not found")
@@ -266,35 +296,50 @@ async def get_results(job_id: str):
     if job["status"] == "error":
         return {"status": "error", "error": job.get("error", "Unknown error")}
 
-    companies = job.get("companies", [])
+    companies = job.get("filtered") or job.get("companies", [])
     total = len(companies)
-    preview = companies[:5]
+    unlocked = job.get("unlocked", False)
 
-    # Clean preview data for frontend
-    preview_clean = []
-    for c in preview:
-        preview_clean.append({
+    # If unlocked or total ≤ 5, return all. Otherwise top 5.
+    visible = companies if (unlocked or total <= 5) else companies[:5]
+    locked_count = 0 if (unlocked or total <= 5) else max(0, total - 5)
+
+    def clean(c):
+        return {
             "company_name": c.get("company_name", ""),
             "company_domain": c.get("company_domain", ""),
             "industry": c.get("industry", "Unknown"),
             "region": c.get("region", "Unknown"),
+            "company_size": c.get("company_size", "Unknown"),
             "b2b_flag": c.get("b2b_flag", "Unknown"),
             "grade": c.get("grade", "-"),
             "score": c.get("score", 0),
             "confidence": c.get("confidence", ""),
             "signal_group": c.get("signal_group", ""),
             "snippet": c.get("snippet", ""),
-        })
+        }
 
     return {
         "status": "done",
         "job_id": job_id,
         "domain": job["domain"],
         "total": total,
-        "preview": preview_clean,
-        "locked": max(0, total - 5),
+        "preview": [clean(c) for c in visible],
+        "locked": locked_count,
+        "unlocked": unlocked,
         "from_cache": job.get("from_cache", False),
     }
+
+
+@app.post("/api/unlock/{job_id}")
+async def unlock_results(job_id: str):
+    """Simulate payment and unlock full results."""
+    job = jobs.get(job_id)
+    if not job:
+        raise HTTPException(status_code=404, detail="Job not found")
+    job["unlocked"] = True
+    log.info(f"[unlock] job {job_id} unlocked")
+    return {"success": True, "job_id": job_id}
 
 
 @app.post("/api/export")
@@ -310,7 +355,8 @@ async def export_results(req: ExportRequest):
     if job["status"] != "done":
         raise HTTPException(status_code=400, detail="Job not complete")
 
-    companies = apply_tier_limit(job.get("companies", []), req.tier)
+    companies = job.get("filtered") or job.get("companies", [])
+    companies = apply_tier_limit(companies, req.tier)
 
     fields = [
         "company_name", "company_domain", "industry", "region", "b2b_flag",

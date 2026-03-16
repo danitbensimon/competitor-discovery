@@ -51,6 +51,13 @@ B2C_KEYWORDS = [
     "consumers", "consumer", "shoppers", "shop", "marketplace", "buyers", "b2c"
 ]
 
+SIZE_KEYWORDS = {
+    "Startup": ["startup", "early-stage", "seed", "bootstrap", "pre-series", "small team", "founding team"],
+    "SMB": ["smb", "small business", "series a", "growing team", "50 employees", "100 employees"],
+    "Mid-Market": ["mid-market", "midsize", "series b", "series c", "500 employees", "scaling", "hundreds of"],
+    "Enterprise": ["enterprise", "fortune 500", "fortune500", "multinational", "thousands of employees", "global company", "large organization"],
+}
+
 
 def clean_text(value):
     if not value:
@@ -105,6 +112,16 @@ def detect_region(text):
     return "Unknown"
 
 
+def detect_company_size(text):
+    if not text:
+        return "Unknown"
+    for size, keywords in SIZE_KEYWORDS.items():
+        for kw in keywords:
+            if kw in text:
+                return size
+    return "Unknown"
+
+
 def detect_b2b(text):
     if not text:
         return "Unknown"
@@ -127,6 +144,7 @@ def enrich_company(company):
     company["industry"] = detect_industry(text)
     company["region"] = detect_region(text)
     company["b2b_flag"] = detect_b2b(text)
+    company["company_size"] = detect_company_size(text)
 
     return company
 
