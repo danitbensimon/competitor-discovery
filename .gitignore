@@ -2,5 +2,11 @@ __pycache__/
 *.pyc
 .env
 .DS_Store
-cache/
+
+# generated exports
 customers_*.csv
+competitors_*.csv
+
+# caches
+cache/
+data/*.json
