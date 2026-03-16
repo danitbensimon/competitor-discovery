@@ -1019,7 +1019,7 @@
       const res = await fetch('/api/search', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ domain, tier: 'lite', mode: 'live' })
+        body: JSON.stringify({ domain, tier: 'lite', mode: 'test' })
       });
 
       if (!res.ok) throw new Error('Search request failed');
