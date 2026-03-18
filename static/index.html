@@ -150,9 +150,14 @@
   .unlock-features { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin-bottom: 28px; }
   .unlock-feature { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 6px; }
   .unlock-feature::before { content: '✓'; color: var(--green); }
+  .email-capture { display: flex; gap: 0; max-width: 400px; margin: 0 auto 20px; border-radius: 10px; overflow: hidden; border: 1px solid #2A3F58; }
+  .email-capture input { flex: 1; background: #0D1520; border: none; padding: 13px 16px; font-family: 'DM Mono', monospace; font-size: 13px; color: var(--text); outline: none; }
+  .email-capture input::placeholder { color: #4A6A84; }
   .unlock-btn { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--accent2), var(--accent)); border: none; border-radius: 12px; padding: 16px 48px; font-family: 'Syne', sans-serif; font-size: 15px; font-weight: 700; color: #fff; cursor: pointer; letter-spacing: 0.04em; transition: opacity 0.2s, transform 0.15s; }
   .unlock-btn:hover { opacity: 0.9; transform: translateY(-1px); }
   .unlock-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+  .payment-polling { font-size: 12px; color: var(--accent); margin-top: 12px; display: none; }
+  .payment-polling.visible { display: block; }
   .export-bar { display: none; align-items: center; justify-content: space-between; background: rgba(0,229,160,0.05); border: 1px solid rgba(0,229,160,0.2); border-radius: 12px; padding: 16px 24px; margin-top: 16px; flex-wrap: wrap; gap: 12px; }
   .export-bar.visible { display: flex; }
   .export-info { font-size: 13px; color: var(--green); }
@@ -312,12 +317,16 @@
             <span class="unlock-feature">Change ICP filters</span>
             <span class="unlock-feature">All scores visible</span>
           </div>
+          <div class="email-capture">
+            <input type="email" id="emailInput" placeholder="your@email.com — we'll send you the results" autocomplete="email" />
+          </div>
           <button class="unlock-btn" id="unlockBtn" onclick="goToPayment()">Unlock Full List — $69</button>
           <div id="alreadyPaidRow" style="display:none;margin-top:16px">
             <button onclick="confirmUnlock()" style="background:none;border:none;color:var(--green);font-family:'DM Mono',monospace;font-size:13px;cursor:pointer;text-decoration:underline;">
               ✓ I've completed payment — unlock my results
             </button>
           </div>
+          <div class="payment-polling" id="paymentPolling">⏳ Checking payment status…</div>
         </div>
       </div>
 
@@ -347,11 +356,15 @@
 
 <script>
   let currentJobId = null;
+  let currentResultId = null;
+  let currentUnlockToken = null;
   let pollInterval = null;
+  let paymentPollInterval = null;
   let stepTimer = null;
   let currentResults = null;
   let icpState = { industries: [], size: '', region: '' };
 
+  // ── Industry dropdown ────────────────────────────────────────────────────────
   function toggleIndustryDropdown() {
     const trigger = document.getElementById('industryTrigger');
     const dropdown = document.getElementById('industryDropdown');
@@ -379,6 +392,7 @@
     return Array.from(document.querySelectorAll('#industryDropdown input[type=checkbox]:checked')).map(c => c.value);
   }
 
+  // ── Helpers ──────────────────────────────────────────────────────────────────
   function setDomain(d) { document.getElementById('domainInput').value = d; document.getElementById('domainInput').focus(); }
 
   function showSection(id) {
@@ -388,11 +402,26 @@
   }
 
   function resetToHome() {
-    clearInterval(pollInterval); clearTimeout(stepTimer);
+    clearInterval(pollInterval); clearTimeout(stepTimer); clearInterval(paymentPollInterval);
     document.getElementById('searchBtn').disabled = false;
     showSection('searchSection');
   }
 
+  function escHtml(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+  function signalStrength(sg) {
+    if (['own_site','customer_signals'].includes(sg)) return {label:'High',cls:'tag-high'};
+    if (['review_sites','blog_press'].includes(sg)) return {label:'Medium',cls:'tag-medium'};
+    return {label:'Low',cls:'tag-low'};
+  }
+
+  function showError(msg) {
+    document.getElementById('errorMsg').textContent = msg;
+    document.getElementById('searchBtn').disabled = false;
+    showSection('errorSection');
+  }
+
+  // ── Loading animation ────────────────────────────────────────────────────────
   function animateSteps() {
     const steps = ['step1','step2','step3','step4']; let i = 0;
     function next() {
@@ -402,6 +431,7 @@
     next();
   }
 
+  // ── Search ───────────────────────────────────────────────────────────────────
   async function startSearch() {
     const domain = document.getElementById('domainInput').value.trim();
     if (!domain) { document.getElementById('domainInput').focus(); return; }
@@ -418,11 +448,12 @@
       const res = await fetch('/api/search', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ domain, tier: 'lite', mode: 'test', icp_industries: industries, icp_size: size, icp_region: region })
+        body: JSON.stringify({ domain, tier: 'lite', mode: 'live', icp_industries: industries, icp_size: size, icp_region: region })
       });
       if (!res.ok) throw new Error('Search request failed');
       const data = await res.json();
       currentJobId = data.job_id;
+      currentResultId = data.result_id;
       pollResults();
     } catch (err) { showError(err.message); }
   }
@@ -435,21 +466,16 @@
         if (data.status === 'running') return;
         clearInterval(pollInterval); clearTimeout(stepTimer);
         if (data.status === 'error') { showError(data.error || 'Pipeline failed'); return; }
-        if (data.status === 'done') { currentResults = data; renderResults(data); }
+        if (data.status === 'done') {
+          currentResultId = data.result_id || currentResultId;
+          currentResults = data;
+          renderResults(data);
+        }
       } catch (err) { clearInterval(pollInterval); showError(err.message); }
     }, 2000);
   }
 
-  function showError(msg) { document.getElementById('errorMsg').textContent = msg; document.getElementById('searchBtn').disabled = false; showSection('errorSection'); }
-
-  function signalStrength(sg) {
-    if (['own_site','customer_signals'].includes(sg)) return {label:'High',cls:'tag-high'};
-    if (['review_sites','blog_press'].includes(sg)) return {label:'Medium',cls:'tag-medium'};
-    return {label:'Low',cls:'tag-low'};
-  }
-
-  function escHtml(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
-
+  // ── Render results ───────────────────────────────────────────────────────────
   function renderResults(data) {
     document.getElementById('searchBtn').disabled = false;
     document.getElementById('statTotal').textContent = data.total || 0;
@@ -494,34 +520,108 @@
     showSection('resultsSection');
   }
 
-  function goToPayment() {
-    // Open payment page in new tab
-    window.open('https://pay.sumit.co.il/hwosrn/sscaj9/sscaja/payment/', '_blank');
-    // Show "already paid" confirmation button
-    document.getElementById('alreadyPaidRow').style.display = 'block';
-  }
-
-  async function confirmUnlock() {
-    if (!currentJobId) return;
+  // ── Payment flow ─────────────────────────────────────────────────────────────
+  async function goToPayment() {
+    if (!currentResultId) { alert('Please run a search first.'); return; }
     const btn = document.getElementById('unlockBtn');
-    btn.textContent = 'Unlocking...'; btn.disabled = true;
+
+    // Save email if provided
+    const email = document.getElementById('emailInput').value.trim();
+    if (email) {
+      try {
+        await fetch(`/api/results/${currentResultId}/email`, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify({ email })
+        });
+      } catch (_) {}
+    }
+
+    btn.textContent = 'Opening payment…'; btn.disabled = true;
+
     try {
-      const res = await fetch(`/api/unlock/${currentJobId}`, { method: 'POST' });
-      if (!res.ok) throw new Error('Unlock failed');
-      const r2 = await fetch(`/api/results/${currentJobId}`);
-      const data = await r2.json();
-      currentResults = data;
-      renderResults(data);
+      // Get payment URL from backend (so result_id is embedded)
+      const res = await fetch(`/api/results/${currentResultId}/create-payment`, { method: 'POST' });
+      const data = await res.json();
+
+      if (data.already_paid) {
+        // Edge case: already paid, just unlock
+        await applyUnlockToken(data.unlock_token);
+        return;
+      }
+
+      window.open(data.payment_url, '_blank');
+      document.getElementById('alreadyPaidRow').style.display = 'block';
+      btn.textContent = 'Unlock Full List — $69'; btn.disabled = false;
+
     } catch (err) {
       btn.textContent = 'Unlock Full List — $69'; btn.disabled = false;
-      alert('Unlock failed: ' + err.message);
+      alert('Could not create payment: ' + err.message);
     }
   }
 
+  async function confirmUnlock() {
+    if (!currentResultId) return;
+
+    document.getElementById('alreadyPaidRow').style.display = 'none';
+    document.getElementById('paymentPolling').classList.add('visible');
+
+    // Poll payment status for up to 2 minutes
+    let attempts = 0;
+    const maxAttempts = 24; // 24 × 5s = 2 minutes
+    paymentPollInterval = setInterval(async () => {
+      attempts++;
+      try {
+        const res = await fetch(`/api/results/${currentResultId}/status`);
+        const data = await res.json();
+        if (data.paid) {
+          clearInterval(paymentPollInterval);
+          document.getElementById('paymentPolling').classList.remove('visible');
+          await applyUnlockToken(data.unlock_token);
+          return;
+        }
+      } catch (_) {}
+      if (attempts >= maxAttempts) {
+        clearInterval(paymentPollInterval);
+        document.getElementById('paymentPolling').classList.remove('visible');
+        document.getElementById('alreadyPaidRow').style.display = 'block';
+        alert('Payment not confirmed yet. If you completed payment, please wait a moment and try again.');
+      }
+    }, 5000);
+  }
+
+  async function applyUnlockToken(token) {
+    currentUnlockToken = token;
+    if (!token) {
+      // Fall back to dev unlock (no webhook configured yet)
+      await fetch(`/api/unlock/${currentJobId}`, { method: 'POST' });
+    }
+    // Re-fetch results
+    const res = await fetch(`/api/results/${currentJobId}`);
+    const data = await res.json();
+    currentResults = data;
+    renderResults(data);
+  }
+
+  // ── CSV export ────────────────────────────────────────────────────────────────
   async function handleExport() {
-    if (!currentJobId) return;
+    if (!currentResultId && !currentJobId) return;
+
+    // If we have a result_id with a token, use the DB-backed endpoint
+    if (currentResultId && currentUnlockToken) {
+      const url = `/api/results/${currentResultId}/csv?token=${currentUnlockToken}`;
+      const a = document.createElement('a');
+      a.href = url; a.download = ''; a.click();
+      return;
+    }
+
+    // Fallback: in-memory export (dev/test mode)
     try {
-      const res = await fetch('/api/export', { method: 'POST', headers: {'Content-Type':'application/json'}, body: JSON.stringify({job_id: currentJobId, tier: 'advanced'}) });
+      const res = await fetch('/api/export', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({job_id: currentJobId, tier: 'advanced'})
+      });
       const data = await res.json();
       const blob = new Blob([data.csv], {type:'text/csv'});
       const url = URL.createObjectURL(blob);
@@ -529,6 +629,28 @@
       URL.revokeObjectURL(url);
     } catch (err) { alert('Export failed: ' + err.message); }
   }
+
+  // ── Token access from email link ──────────────────────────────────────────────
+  (function checkTokenInUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('token');
+    if (!token) return;
+    currentUnlockToken = token;
+    showSection('loadingSection');
+    document.getElementById('loadingDomain').textContent = '…';
+    fetch(`/api/token/${token}`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.status === 'done') {
+          icpState = { industries: [], size: '', region: '' };
+          currentResults = data;
+          renderResults(data);
+        } else {
+          showError('Invalid or expired access link.');
+        }
+      })
+      .catch(() => showError('Could not load results. Please try the link again.'));
+  })();
 
   document.getElementById('domainInput').addEventListener('keydown', e => { if (e.key==='Enter') startSearch(); });
 </script>
