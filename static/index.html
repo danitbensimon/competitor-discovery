@@ -215,12 +215,21 @@
                 <span class="placeholder" id="industryLabel">All industries</span>
               </button>
               <div class="multi-select-dropdown" id="industryDropdown">
-                <label class="multi-option"><input type="checkbox" value="HRTech" onchange="updateIndustryLabel()"> HRTech</label>
+                <label class="multi-option"><input type="checkbox" value="SaaS / Software" onchange="updateIndustryLabel()"> SaaS / Software</label>
                 <label class="multi-option"><input type="checkbox" value="Fintech" onchange="updateIndustryLabel()"> Fintech</label>
-                <label class="multi-option"><input type="checkbox" value="MarTech" onchange="updateIndustryLabel()"> MarTech</label>
-                <label class="multi-option"><input type="checkbox" value="DevTools" onchange="updateIndustryLabel()"> DevTools</label>
-                <label class="multi-option"><input type="checkbox" value="Ecommerce" onchange="updateIndustryLabel()"> Ecommerce</label>
+                <label class="multi-option"><input type="checkbox" value="Healthcare / MedTech" onchange="updateIndustryLabel()"> Healthcare / MedTech</label>
+                <label class="multi-option"><input type="checkbox" value="E-commerce / Retail" onchange="updateIndustryLabel()"> E-commerce / Retail</label>
+                <label class="multi-option"><input type="checkbox" value="Marketing / AdTech" onchange="updateIndustryLabel()"> Marketing / AdTech</label>
                 <label class="multi-option"><input type="checkbox" value="Cybersecurity" onchange="updateIndustryLabel()"> Cybersecurity</label>
+                <label class="multi-option"><input type="checkbox" value="Developer Tools" onchange="updateIndustryLabel()"> Developer Tools</label>
+                <label class="multi-option"><input type="checkbox" value="HR Tech" onchange="updateIndustryLabel()"> HR Tech</label>
+                <label class="multi-option"><input type="checkbox" value="Data & Analytics" onchange="updateIndustryLabel()"> Data & Analytics</label>
+                <label class="multi-option"><input type="checkbox" value="Legal Tech" onchange="updateIndustryLabel()"> Legal Tech</label>
+                <label class="multi-option"><input type="checkbox" value="Real Estate" onchange="updateIndustryLabel()"> Real Estate</label>
+                <label class="multi-option"><input type="checkbox" value="Education / EdTech" onchange="updateIndustryLabel()"> Education / EdTech</label>
+                <label class="multi-option"><input type="checkbox" value="Manufacturing" onchange="updateIndustryLabel()"> Manufacturing</label>
+                <label class="multi-option"><input type="checkbox" value="Media & Entertainment" onchange="updateIndustryLabel()"> Media & Entertainment</label>
+                <label class="multi-option"><input type="checkbox" value="Professional Services" onchange="updateIndustryLabel()"> Professional Services</label>
               </div>
             </div>
           </div>
@@ -229,10 +238,12 @@
             <span class="field-label">Company Size</span>
             <select class="icp-select" id="sizeSelect">
               <option value="">All sizes</option>
-              <option value="Startup">Startup</option>
-              <option value="SMB">SMB</option>
-              <option value="Mid-Market">Mid-Market</option>
-              <option value="Enterprise">Enterprise</option>
+              <option value="1-10">1–10 employees</option>
+              <option value="11-50">11–50 employees</option>
+              <option value="51-200">51–200 employees</option>
+              <option value="201-500">201–500 employees</option>
+              <option value="501-1000">501–1,000 employees</option>
+              <option value="1000+">1,000+ employees</option>
             </select>
           </div>
 
@@ -240,8 +251,11 @@
             <span class="field-label">Region</span>
             <select class="icp-select" id="regionSelect">
               <option value="">All regions</option>
-              <option value="US">US</option>
+              <option value="North America">North America</option>
               <option value="Europe">Europe</option>
+              <option value="APAC">APAC</option>
+              <option value="Latin America">Latin America</option>
+              <option value="Middle East & Africa">Middle East & Africa</option>
               <option value="Israel">Israel</option>
             </select>
           </div>
