@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CompetitorIQ — Find companies using your competitors</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #080B10;
@@ -42,7 +42,7 @@
     border-bottom: 1px solid var(--border);
   }
   .header-left { display: flex; align-items: center; gap: 16px; }
-  .logo { display: flex; align-items: center; gap: 8px; font-family: 'Syne', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .logo { display: flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
   .logo-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); animation: pulse 2s ease-in-out infinite; }
   @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.7)} }
   .header-credit { font-size: 11px; color: var(--muted); padding-left: 16px; border-left: 1px solid var(--border); }
@@ -55,9 +55,9 @@
   /* SCREEN 1 */
   .hero { padding: 32px 0 24px; text-align: center; }
   .hero-eyebrow { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 12px; }
-  .hero-title { font-family: 'Syne', sans-serif; font-size: clamp(24px, 4vw, 42px); font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; margin-bottom: 10px; }
+  .hero-title { font-family: 'Inter', sans-serif; font-size: clamp(22px, 3.5vw, 36px); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 10px; }
   .hero-title span { background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .hero-sub { font-size: 13px; color: var(--muted); line-height: 1.6; max-width: 480px; margin: 0 auto 24px; }
+  .hero-sub { font-size: 16px; color: var(--muted); line-height: 1.65; max-width: 520px; margin: 0 auto 24px; }
   .search-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 24px; max-width: 720px; margin: 0 auto; position: relative; overflow: hidden; }
   .search-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, var(--accent), transparent); opacity: 0.4; }
   .field-label { font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; display: block; }
@@ -82,7 +82,7 @@
   .multi-option { display: flex; align-items: center; gap: 8px; padding: 6px 8px; border-radius: 5px; cursor: pointer; font-size: 12px; transition: background 0.15s; user-select: none; }
   .multi-option:hover { background: rgba(0,194,255,0.06); }
   .multi-option input[type="checkbox"] { accent-color: var(--accent); width: 13px; height: 13px; cursor: pointer; }
-  .search-btn { width: 100%; background: linear-gradient(135deg, var(--accent2), var(--accent)); border: none; border-radius: 10px; padding: 13px; font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #fff; cursor: pointer; letter-spacing: 0.04em; transition: opacity 0.2s, transform 0.15s; }
+  .search-btn { width: 100%; background: linear-gradient(135deg, var(--accent2), var(--accent)); border: none; border-radius: 10px; padding: 13px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; color: #fff; cursor: pointer; letter-spacing: 0.04em; transition: opacity 0.2s, transform 0.15s; }
   .search-btn:hover { opacity: 0.92; transform: translateY(-1px); }
   .search-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
   .hint-row { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 12px; justify-content: center; }
@@ -98,7 +98,7 @@
   .loader-dot:nth-child(2){animation:bounce 1.2s ease-in-out 0.2s infinite}
   .loader-dot:nth-child(3){animation:bounce 1.2s ease-in-out 0.4s infinite}
   @keyframes bounce{0%,80%,100%{transform:scale(0.5);opacity:0.3}40%{transform:scale(1);opacity:1}}
-  .loading-title { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+  .loading-title { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 8px; }
   .loading-sub { font-size: 12px; color: var(--muted); margin-bottom: 32px; }
   .steps { display: flex; flex-direction: column; gap: 6px; max-width: 360px; margin: 0 auto; text-align: left; }
   .step { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--muted); padding: 8px 12px; border-radius: 8px; transition: all 0.3s; }
@@ -108,7 +108,7 @@
   /* SCREEN 3 */
   .results-wrap { padding: 28px 0 60px; }
   .results-topbar { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
-  .results-headline { font-family: 'Syne', sans-serif; font-size: 22px; font-weight: 800; line-height: 1.2; }
+  .results-headline { font-family: 'Inter', sans-serif; font-size: 22px; font-weight: 800; line-height: 1.2; }
   .results-headline span { color: var(--accent); }
   .new-search-btn { background: none; border: 1px solid var(--border); border-radius: 8px; padding: 7px 14px; font-family: 'DM Mono', monospace; font-size: 11px; color: var(--muted); cursor: pointer; transition: all 0.2s; white-space: nowrap; }
   .new-search-btn:hover { border-color: var(--accent); color: var(--accent); }
@@ -122,7 +122,7 @@
   tbody tr:last-child { border-bottom: none; }
   tbody tr:hover { background: rgba(0,194,255,0.03); }
   td { padding: 10px 12px; font-size: 12px; vertical-align: middle; }
-  .td-company { font-family: 'Syne', sans-serif; font-weight: 700; font-size: 13px; }
+  .td-company { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 13px; }
   .td-domain { color: var(--muted); font-size: 11px; }
   .td-domain a { color: var(--accent); text-decoration: none; }
   .td-domain a:hover { text-decoration: underline; }
@@ -141,12 +141,12 @@
   .icp-low { color: var(--muted); border-color: var(--border); }
   .unlock-banner { background: var(--surface); border: 1px solid var(--border-glow); border-radius: 14px; padding: 28px 24px; text-align: center; position: relative; overflow: hidden; margin-top: 12px; }
   .unlock-banner::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent2), var(--accent)); }
-  .unlock-title { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 6px; }
+  .unlock-title { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 6px; }
   .unlock-sub { font-size: 12px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
   .unlock-sub strong { color: var(--text); }
   .price-tag { display: inline-flex; align-items: baseline; gap: 4px; margin-bottom: 16px; }
-  .price-currency { font-family: 'Syne', sans-serif; font-size: 20px; font-weight: 700; color: var(--muted); align-self: flex-start; margin-top: 4px; }
-  .price-amount { font-family: 'Syne', sans-serif; font-size: 44px; font-weight: 800; color: var(--text); line-height: 1; }
+  .price-currency { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; color: var(--muted); align-self: flex-start; margin-top: 4px; }
+  .price-amount { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 800; color: var(--text); line-height: 1; }
   .price-note { font-size: 11px; color: var(--muted); margin-left: 4px; }
   .unlock-features { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
   .unlock-feature { font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 5px; }
@@ -154,7 +154,7 @@
   .email-capture { display: flex; gap: 0; max-width: 380px; margin: 0 auto 16px; border-radius: 8px; overflow: hidden; border: 1px solid #2A3F58; }
   .email-capture input { flex: 1; background: #0D1520; border: none; padding: 11px 14px; font-family: 'DM Mono', monospace; font-size: 12px; color: var(--text); outline: none; }
   .email-capture input::placeholder { color: #4A6A84; }
-  .unlock-btn { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--accent2), var(--accent)); border: none; border-radius: 10px; padding: 13px 40px; font-family: 'Syne', sans-serif; font-size: 14px; font-weight: 700; color: #fff; cursor: pointer; letter-spacing: 0.04em; transition: opacity 0.2s, transform 0.15s; }
+  .unlock-btn { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--accent2), var(--accent)); border: none; border-radius: 10px; padding: 13px 40px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; color: #fff; cursor: pointer; letter-spacing: 0.04em; transition: opacity 0.2s, transform 0.15s; }
   .unlock-btn:hover { opacity: 0.9; transform: translateY(-1px); }
   .unlock-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
   .payment-polling { font-size: 12px; color: var(--accent); margin-top: 10px; display: none; }
@@ -168,7 +168,7 @@
   /* ERROR */
   .error-wrap { text-align: center; padding: 60px 0; }
   .error-box { background: rgba(255,77,106,0.05); border: 1px solid rgba(255,77,106,0.2); border-radius: 12px; padding: 28px; max-width: 440px; margin: 0 auto; }
-  .error-title { font-family: 'Syne', sans-serif; font-size: 18px; font-weight: 700; color: var(--red); margin-bottom: 8px; }
+  .error-title { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 700; color: var(--red); margin-bottom: 8px; }
   .error-msg { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
   .retry-btn { background: none; border: 1px solid rgba(255,77,106,0.35); border-radius: 7px; padding: 9px 20px; font-family: 'DM Mono', monospace; font-size: 12px; color: var(--red); cursor: pointer; }
   .retry-btn:hover { background: rgba(255,77,106,0.08); }
