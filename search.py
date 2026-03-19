@@ -96,24 +96,36 @@ def _test_pages(domain: str, brand: str) -> list[dict]:
 def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
     lite_queries = [
         ('site:' + domain + ' "case study"', "own_site"),
-        (f'"using {brand}"', "customer_signals"),
-        (f'"{brand} customer"', "blog_press"),
+        ('site:' + domain + ' customers', "own_site"),
+        ('site:' + domain + ' "success story"', "own_site"),
+        (f'"{brand} customers"', "blog_press"),
+        (f'"{brand} case study"', "blog_press"),
+        (f'"{brand} uses" OR "uses {brand}"', "customer_signals"),
+        (f'"{brand} user" company', "customer_signals"),
         ('site:g2.com "' + brand + '"', "review_sites"),
+        ('site:capterra.com "' + brand + '"', "review_sites"),
+        (f'"{brand} review" company', "review_sites"),
     ]
 
     pro_extra = [
-        ('site:' + domain + ' "customer"', "own_site"),
-        (f'"implemented {brand}"', "customer_signals"),
+        (f'"{brand} client"', "customer_signals"),
+        (f'"{brand} partner"', "customer_signals"),
         (f'"switched to {brand}"', "customer_signals"),
-        ('site:capterra.com "' + brand + '"', "review_sites"),
+        (f'"implemented {brand}"', "customer_signals"),
+        (f'"{brand} powered" company', "customer_signals"),
+        ('site:trustpilot.com "' + brand + '"', "review_sites"),
+        (f'"{brand}" testimonial', "blog_press"),
+        (f'"{brand}" "we use"', "customer_signals"),
     ]
 
     advanced_extra = [
-        ('site:' + domain + ' "success story"', "own_site"),
-        (f'"moved to {brand}"', "customer_signals"),
+        (f'"{brand}" "our customers" site:linkedin.com', "customer_signals"),
+        (f'"{brand} integration" company', "customer_signals"),
+        (f'"{brand} platform" company', "customer_signals"),
         (f'"powered by {brand}"', "customer_signals"),
-        (f'"{brand} case study"', "blog_press"),
         (f'"{brand} success story"', "blog_press"),
+        (f'"{brand}" annual report', "blog_press"),
+        (f'"{brand}" "case study" site:linkedin.com', "customer_signals"),
     ]
 
     if tier == "lite":

@@ -521,7 +521,7 @@
         <td>${c.region&&c.region!=='Unknown'?`<span class="tag tag-region">${escHtml(c.region)}</span>`:'<span style="color:var(--muted)">—</span>'}</td>
         <td><span class="icp-badge ${icpCls}">${icpFit}</span></td>
         <td><span class="tag ${sig.cls}">${sig.label}</span></td>
-        <td><div class="snippet-cell">${escHtml(c.snippet)}</div></td>
+        <td><div class="snippet-cell">${c.source_url ? "<a href='" + escHtml(c.source_url) + "' target='_blank' style='color:var(--accent);font-size:11px;display:block;margin-bottom:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:200px'>" + escHtml(c.source_url.replace(/^https?:\/\//, "")) + "</a>" : ""}${escHtml(c.snippet||"")}}</div></td>
         <td><div class="score-badge grade-${grade}">${grade}</div></td>
       `;
       tbody.appendChild(tr);
