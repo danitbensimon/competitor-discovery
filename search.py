@@ -3,7 +3,7 @@ import os
 import requests
 
 
-SERPAPI_KEY = os.getenv("SERPAPI_KEY", "").strip()
+BRAVE_API_KEY = os.getenv("BRAVE_API_KEY", "").strip()
 
 
 def brand_from_domain(domain: str) -> str:
@@ -18,19 +18,22 @@ def brand_from_domain(domain: str) -> str:
     return domain.capitalize()
 
 
-def _serpapi_search(query: str, num: int = 10) -> dict:
-    if not SERPAPI_KEY:
-        raise ValueError("Missing SERPAPI_KEY environment variable")
+def _brave_search(query: str, num: int = 10) -> dict:
+    if not BRAVE_API_KEY:
+        raise ValueError("Missing BRAVE_API_KEY environment variable")
 
-    url = "https://serpapi.com/search"
+    url = "https://api.search.brave.com/res/v1/web/search"
+    headers = {
+        "Accept": "application/json",
+        "Accept-Encoding": "gzip",
+        "X-Subscription-Token": BRAVE_API_KEY,
+    }
     params = {
-        "engine": "google",
         "q": query,
-        "num": num,
-        "api_key": SERPAPI_KEY,
+        "count": min(num, 20),
     }
 
-    response = requests.get(url, params=params, timeout=30)
+    response = requests.get(url, headers=headers, params=params, timeout=30)
     response.raise_for_status()
     return response.json()
 
@@ -39,11 +42,11 @@ def _fetch_query(query: str, group_name: str, seen_urls: set) -> list[dict]:
     results = []
 
     try:
-        data = _serpapi_search(query, num=10)
-        organic = data.get("organic_results", [])
+        data = _brave_search(query, num=10)
+        organic = data.get("web", {}).get("results", [])
 
         for item in organic:
-            page_url = item.get("link")
+            page_url = item.get("url")
             if not page_url or page_url in seen_urls:
                 continue
 
@@ -53,7 +56,7 @@ def _fetch_query(query: str, group_name: str, seen_urls: set) -> list[dict]:
                 {
                     "title": item.get("title", ""),
                     "url": page_url,
-                    "snippet": item.get("snippet", ""),
+                    "snippet": item.get("description", ""),
                     "group": group_name,
                 }
             )
