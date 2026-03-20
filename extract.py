@@ -66,18 +66,20 @@ def extract_companies(pages: list[dict], brand: str = "Deel") -> list[dict]:
         text = content if content else f"{page.get('title', '')} {page.get('snippet', '')}"
 
         url_lower = page["url"].lower()
-        signal_group = page.get("signal_group", "")
+        signal_group = page.get("signal_group", "") or page.get("group", "")
 
         if any(seg in url_lower for seg in ("/case-study/", "/case_study/", "/customer-stor", "/customers/", "/clients/")):
             confidence = "high"
-        elif signal_group in ("job_postings", "linkedin", "review_sites", "tech_stack"):
+        elif signal_group in ("own_site", "customer_signals"):
+            confidence = "high"
+        elif signal_group in ("job_postings", "linkedin", "review_sites", "tech_stack", "blog_press"):
             confidence = "medium"
         else:
             confidence = score_confidence(text, brand)
 
         print(f"→ {confidence}")
 
-        if confidence in ("high", "medium"):
+        if confidence in ("high", "medium", "low"):
             qualified_pages.append({
                 **page,
                 "content": text,

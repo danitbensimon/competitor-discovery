@@ -40,7 +40,7 @@ MEDIUM_INTENT_PHRASES = [
 def score_result(page: dict, brand: str) -> int:
     score = 0
 
-    signal_group = page.get("signal_group", "")
+    signal_group = page.get("signal_group", "") or page.get("group", "")
     score += SIGNAL_WEIGHTS.get(signal_group, 0)
 
     url = page.get("url", "").lower()
