@@ -2,7 +2,6 @@
 import os
 import requests
 
-
 BRAVE_API_KEY = os.getenv("BRAVE_API_KEY", "").strip()
 
 
@@ -11,17 +10,14 @@ def brand_from_domain(domain: str) -> str:
     domain = domain.replace("https://", "").replace("http://", "")
     domain = domain.replace("www.", "")
     domain = domain.split("/")[0]
-
     if "." in domain:
         return domain.split(".")[0].capitalize()
-
     return domain.capitalize()
 
 
-def _brave_search(query: str, num: int = 10) -> dict:
+def _brave_search(query: str, num: int = 20, offset: int = 0) -> dict:
     if not BRAVE_API_KEY:
         raise ValueError("Missing BRAVE_API_KEY environment variable")
-
     url = "https://api.search.brave.com/res/v1/web/search"
     headers = {
         "Accept": "application/json",
@@ -31,108 +27,116 @@ def _brave_search(query: str, num: int = 10) -> dict:
     params = {
         "q": query,
         "count": min(num, 20),
+        "offset": offset,
     }
-
     response = requests.get(url, headers=headers, params=params, timeout=30)
     response.raise_for_status()
     return response.json()
 
 
-def _fetch_query(query: str, group_name: str, seen_urls: set) -> list[dict]:
+def _fetch_query(query: str, group_name: str, seen_urls: set, pages: int = 1) -> list[dict]:
     results = []
-
-    try:
-        data = _brave_search(query, num=10)
-        organic = data.get("web", {}).get("results", [])
-
-        for item in organic:
-            page_url = item.get("url")
-            if not page_url or page_url in seen_urls:
-                continue
-
-            seen_urls.add(page_url)
-
-            results.append(
-                {
+    for page in range(pages):
+        offset = page * 20
+        try:
+            data = _brave_search(query, num=20, offset=offset)
+            organic = data.get("web", {}).get("results", [])
+            if not organic:
+                break
+            for item in organic:
+                page_url = item.get("url")
+                if not page_url or page_url in seen_urls:
+                    continue
+                seen_urls.add(page_url)
+                results.append({
                     "title": item.get("title", ""),
                     "url": page_url,
                     "snippet": item.get("description", ""),
                     "group": group_name,
-                }
-            )
-
-        print(f'{query} → {len(results)} results')
-
-    except Exception as e:
-        print(f"Search error: {e}")
-        print(f'{query} → 0 results')
-
+                })
+        except Exception as e:
+            print(f"Search error ({query}): {e}")
+            break
+    print(f'{query} → {len(results)} results')
     return results
 
 
 def _test_pages(domain: str, brand: str) -> list[dict]:
     return [
-        {
-            "title": f"Acme uses {brand} for global hiring",
-            "url": "https://example.com/acme-case-study",
-            "snippet": f"Acme explains how it uses {brand} to manage international hiring and payroll.",
-            "group": "own_site",
-        },
-        {
-            "title": f"Startup switched to {brand}",
-            "url": "https://example.com/startup-switched",
-            "snippet": f"The company switched to {brand} and improved contractor onboarding.",
-            "group": "customer_signals",
-        },
-        {
-            "title": f"{brand} customer review on G2",
-            "url": "https://example.com/g2-review",
-            "snippet": f"A reviewer describes using {brand} across multiple regions.",
-            "group": "review_sites",
-        },
+        {"title": f"Acme uses {brand}", "url": "https://example.com/acme", "snippet": f"Acme uses {brand} for global hiring.", "group": "own_site"},
+        {"title": f"Startup switched to {brand}", "url": "https://example.com/startup", "snippet": f"The company switched to {brand}.", "group": "customer_signals"},
+        {"title": f"{brand} review on G2", "url": "https://example.com/g2", "snippet": f"A reviewer describes using {brand}.", "group": "review_sites"},
     ]
 
 
 def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
-    lite_queries = [
-        ('site:' + domain + ' "case study"', "own_site"),
-        ('site:' + domain + ' customers', "own_site"),
-        ('site:' + domain + ' "success story"', "own_site"),
-        (f'"{brand} customers"', "blog_press"),
-        (f'"{brand} case study"', "blog_press"),
-        (f'"{brand} uses" OR "uses {brand}"', "customer_signals"),
-        (f'"{brand} user" company', "customer_signals"),
-        ('site:g2.com "' + brand + '"', "review_sites"),
-        ('site:capterra.com "' + brand + '"', "review_sites"),
-        (f'"{brand} review" company', "review_sites"),
+    b = brand
+
+    # GROUP 1: Customer signals — direct usage evidence
+    customer_signals = [
+        (f'"using {b}"', "customer_signals"),
+        (f'"implemented {b}"', "customer_signals"),
+        (f'"switched to {b}"', "customer_signals"),
+        (f'"moved to {b}"', "customer_signals"),
+        (f'"powered by {b}"', "customer_signals"),
+        (f'"company uses {b}"', "customer_signals"),
+        (f'"we use {b}"', "customer_signals"),
     ]
 
-    pro_extra = [
-        (f'"{brand} client"', "customer_signals"),
-        (f'"{brand} partner"', "customer_signals"),
-        (f'"switched to {brand}"', "customer_signals"),
-        (f'"implemented {brand}"', "customer_signals"),
-        (f'"{brand} powered" company', "customer_signals"),
-        ('site:trustpilot.com "' + brand + '"', "review_sites"),
-        (f'"{brand}" testimonial', "blog_press"),
-        (f'"{brand}" "we use"', "customer_signals"),
+    # GROUP 2: Job postings — companies hiring people who know the tool
+    job_postings = [
+        (f'"experience with {b}"', "job_postings"),
+        (f'"familiar with {b}"', "job_postings"),
+        (f'"manage {b}"', "job_postings"),
+        (f'"administer {b}"', "job_postings"),
     ]
 
-    advanced_extra = [
-        (f'"{brand}" "our customers" site:linkedin.com', "customer_signals"),
-        (f'"{brand} integration" company', "customer_signals"),
-        (f'"{brand} platform" company', "customer_signals"),
-        (f'"powered by {brand}"', "customer_signals"),
-        (f'"{brand} success story"', "blog_press"),
-        (f'"{brand}" annual report', "blog_press"),
-        (f'"{brand}" "case study" site:linkedin.com', "customer_signals"),
+    # GROUP 3: Tech stack / integrations
+    tech_stack = [
+        (f'"{b} integration"', "tech_stack"),
+        (f'"integration with {b}"', "tech_stack"),
+        (f'"{b} API" company', "tech_stack"),
+    ]
+
+    # GROUP 4: Review sites
+    review_sites = [
+        (f'site:g2.com "{b}"', "review_sites"),
+        (f'site:capterra.com "{b}"', "review_sites"),
+        (f'site:trustpilot.com "{b}"', "review_sites"),
+        (f'"{b} review" company', "review_sites"),
+    ]
+
+    # GROUP 5: LinkedIn
+    linkedin = [
+        (f'site:linkedin.com "using {b}"', "linkedin"),
+        (f'site:linkedin.com "{b}" customers', "linkedin"),
+    ]
+
+    # GROUP 6: Blog / press / own site
+    blog_press = [
+        (f'site:{domain} customers', "own_site"),
+        (f'site:{domain} "case study"', "own_site"),
+        (f'site:{domain} "success story"', "own_site"),
+        (f'"{b} customers"', "blog_press"),
+        (f'"{b} case study"', "blog_press"),
+        (f'"{b} success story"', "blog_press"),
+        (f'"{b} customer"', "blog_press"),
     ]
 
     if tier == "lite":
-        return lite_queries
+        # Core queries from each group — ~20 queries total
+        return (
+            customer_signals[:3] +
+            job_postings[:2] +
+            tech_stack[:1] +
+            review_sites[:2] +
+            linkedin[:1] +
+            blog_press[:4]
+        )
     if tier == "pro":
-        return lite_queries + pro_extra
-    return lite_queries + pro_extra + advanced_extra
+        return customer_signals + job_postings + tech_stack[:2] + review_sites + linkedin + blog_press
+    # advanced: everything
+    return customer_signals + job_postings + tech_stack + review_sites + linkedin + blog_press
 
 
 def search_customer_mentions(domain: str, brand: str = None, mode: str = "live", tier: str = "lite") -> list[dict]:
@@ -154,8 +158,7 @@ def search_customer_mentions(domain: str, brand: str = None, mode: str = "live",
         if group_name != current_group:
             current_group = group_name
             print(f"\n[{group_name}]")
-
-        rows = _fetch_query(query, group_name, seen_urls)
+        rows = _fetch_query(query, group_name, seen_urls, pages=1)
         all_results.extend(rows)
 
     print(f"\nTotal URLs collected: {len(all_results)}")

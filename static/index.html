@@ -141,15 +141,15 @@
   .icp-low { color: var(--muted); border-color: var(--border); }
   .unlock-banner { background: var(--surface); border: 1px solid var(--border-glow); border-radius: 14px; padding: 28px 24px; text-align: center; position: relative; overflow: hidden; margin-top: 12px; }
   .unlock-banner::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent2), var(--accent)); }
-  .unlock-title { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 800; margin-bottom: 6px; }
-  .unlock-sub { font-size: 12px; color: var(--muted); margin-bottom: 16px; line-height: 1.6; }
+  .unlock-title { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 800; margin-bottom: 10px; }
+  .unlock-sub { font-size: 15px; color: var(--muted); margin-bottom: 16px; line-height: 1.7; }
   .unlock-sub strong { color: var(--text); }
   .price-tag { display: inline-flex; align-items: baseline; gap: 4px; margin-bottom: 16px; }
   .price-currency { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; color: var(--muted); align-self: flex-start; margin-top: 4px; }
   .price-amount { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 800; color: var(--text); line-height: 1; }
   .price-note { font-size: 11px; color: var(--muted); margin-left: 4px; }
   .unlock-features { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
-  .unlock-feature { font-size: 11px; color: var(--muted); display: flex; align-items: center; gap: 5px; }
+  .unlock-feature { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 5px; }
   .unlock-feature::before { content: '✓'; color: var(--green); }
   .email-capture { display: flex; gap: 0; max-width: 380px; margin: 0 auto 16px; border-radius: 8px; overflow: hidden; border: 1px solid #2A3F58; }
   .email-capture input { flex: 1; background: #0D1520; border: none; padding: 11px 14px; font-family: 'DM Mono', monospace; font-size: 12px; color: var(--text); outline: none; }
@@ -299,6 +299,7 @@
         <div>
           <div class="results-headline">We found <span id="statTotal">0</span> companies matching your ICP</div>
           <div id="icpChips" class="icp-chips"></div>
+          <div id="freeNote" style="display:none;margin-top:8px;font-size:13px;color:var(--muted)"></div>
         </div>
         <button class="new-search-btn" onclick="resetToHome()">← New Search</button>
       </div>
@@ -324,7 +325,7 @@
       <div id="lockWall" style="display:none">
         <div class="unlock-banner">
           <div class="unlock-title">🔒 Unlock Full List</div>
-          <div class="unlock-sub">You're seeing the top 5 companies free.<br><strong id="lockedCountText">X more companies</strong> are ready to export.</div>
+          <div class="unlock-sub">You're seeing the top <strong style="color:var(--text)">5 companies for free.</strong><br><strong id="lockedCountText">X more companies</strong> are waiting — unlock to get the full list + CSV export.</div>
           <div class="price-tag">
             <span class="price-currency">$</span>
             <span class="price-amount">69</span>
@@ -522,14 +523,33 @@
     });
 
     const locked = data.locked || 0;
+    const total = data.total || 0;
+    const preview = (data.preview || []).length;
+    // Update the free preview note in the table header area
+    const freeNote = document.getElementById('freeNote');
+    if (freeNote) {
+      if (locked > 0) {
+        freeNote.textContent = `Showing ${preview} of ${total} companies free — unlock to see all ${total}`;
+        freeNote.style.display = 'block';
+      } else {
+        freeNote.textContent = `Showing all ${total} companies`;
+        freeNote.style.display = 'block';
+      }
+    }
     if (data.unlocked) {
       document.getElementById('lockWall').style.display = 'none';
       document.getElementById('exportBar').classList.add('visible');
-      document.getElementById('exportCount').textContent = data.total;
-    } else if (locked > 0) {
+      document.getElementById('exportCount').textContent = total;
+    } else if (locked >= 10) {
       document.getElementById('lockedCountText').textContent = `${locked} more companies`;
       document.getElementById('lockWall').style.display = 'block';
       document.getElementById('exportBar').classList.remove('visible');
+    } else if (locked > 0) {
+      // Too few locked to charge — show all for free
+      document.getElementById('lockWall').style.display = 'none';
+      document.getElementById('exportBar').classList.remove('visible');
+      // Re-render showing all companies
+      if (data.companies) renderAllFree(data.companies);
     } else {
       document.getElementById('lockWall').style.display = 'none';
       document.getElementById('exportBar').classList.remove('visible');
