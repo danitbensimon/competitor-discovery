@@ -1,9 +1,9 @@
 from urllib.parse import urlparse
 
 TIER_LIMITS = {
-    "lite": 25,
-    "pro": 50,
-    "advanced": 80,
+    "lite": 100,
+    "pro": 200,
+    "advanced": 400,
 }
 
 SIGNAL_WEIGHTS = {

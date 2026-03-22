@@ -79,8 +79,12 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
         (f'"switched to {b}"', "customer_signals"),
         (f'"moved to {b}"', "customer_signals"),
         (f'"powered by {b}"', "customer_signals"),
+        (f'"integrates {b}"', "customer_signals"),
+        (f'"integrated {b}"', "customer_signals"),
+        (f'"partnered with {b}"', "customer_signals"),
         (f'"company uses {b}"', "customer_signals"),
         (f'"we use {b}"', "customer_signals"),
+        (f'"{b} partner"', "customer_signals"),
     ]
 
     # GROUP 2: Job postings — companies hiring people who know the tool
@@ -130,12 +134,12 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
     ]
 
     if tier == "lite":
-        # Core queries from each group — ~20 queries total
-        # Always include the 5 tech-intelligence sites (enlyft, theirstack, zoominfo, builtwith, stackshare)
+        # Core queries from each group — ~22 queries total
+        # customer_signals[:5] picks: using, implemented, switched, moved, powered_by, integrates
         return (
-            customer_signals[:3] +
+            customer_signals[:6] +   # using, implemented, switched, moved, powered_by, integrates
             job_postings[:2] +
-            tech_stack[:5] +      # all 5 intelligence databases first
+            tech_stack[:5] +         # all 5 intelligence databases
             review_sites[:2] +
             linkedin[:1] +
             blog_press[:4]

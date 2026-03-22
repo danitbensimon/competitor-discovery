@@ -56,6 +56,7 @@ jobs: dict = {}
 
 class SearchRequest(BaseModel):
     domain: str
+    brand: str = ""       # Optional user-supplied brand name override
     tier: str = "lite"
     mode: str = "live"
     icp_industries: list = []
@@ -79,11 +80,16 @@ def filter_by_icp(companies: list, icp_industries: list, icp_size: str, icp_regi
         return companies
     filtered = []
     for c in companies:
-        if icp_industries and c.get("industry", "Unknown") not in icp_industries:
+        industry = c.get("industry") or "Unknown"
+        region   = c.get("region")   or "Unknown"
+        size     = c.get("company_size") or "Unknown"
+        # Only exclude if we have a KNOWN value that is a definite mismatch.
+        # "Unknown" always passes — snippets rarely contain enough info to classify.
+        if icp_industries and industry != "Unknown" and industry not in icp_industries:
             continue
-        if icp_region and c.get("region", "Unknown") != icp_region:
+        if icp_region and region != "Unknown" and region != icp_region:
             continue
-        if icp_size and c.get("company_size", "Unknown") != icp_size:
+        if icp_size and size != "Unknown" and size != icp_size:
             continue
         filtered.append(c)
     return filtered
@@ -236,10 +242,11 @@ def run_pipeline(domain: str, brand: str, mode: str, tier: str) -> list:
 # ── Background job runner ─────────────────────────────────────────────────────
 
 def _run_job(job_id: str, result_id: str, domain: str, tier: str, mode: str,
-             icp_industries: list, icp_size: str, icp_region: str):
+             icp_industries: list, icp_size: str, icp_region: str, brand_override: str = None):
     """Background task: runs pipeline, enriches, filters by ICP, persists to DB."""
     try:
-        brand = brand_from_domain(domain)
+        brand = brand_override if brand_override else brand_from_domain(domain)
+        log.info(f"[job {job_id}] brand={brand!r} (override={bool(brand_override)})")
 
         if mode == "live":
             cached = load_cache(domain)
@@ -321,9 +328,12 @@ async def start_search(req: SearchRequest, background_tasks: BackgroundTasks):
         "icp_region": req.icp_region,
     }
 
+    # Use user-supplied brand name if provided, else auto-detect
+    brand_override = req.brand.strip() if req.brand else None
+
     background_tasks.add_task(
         _run_job, job_id, result_id, domain, req.tier, req.mode,
-        req.icp_industries, req.icp_size, req.icp_region,
+        req.icp_industries, req.icp_size, req.icp_region, brand_override,
     )
 
     return {"job_id": job_id, "result_id": result_id, "status": "running"}
