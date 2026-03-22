@@ -91,11 +91,17 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
         (f'"administer {b}"', "job_postings"),
     ]
 
-    # GROUP 3: Tech stack / integrations
+    # GROUP 3: Tech stack / integrations — including tech intelligence databases
     tech_stack = [
+        (f'site:enlyft.com "{b}"', "tech_stack"),
+        (f'site:theirstack.com "{b}"', "tech_stack"),
+        (f'site:zoominfo.com "{b}"', "tech_stack"),
+        (f'site:builtwith.com "{b}"', "tech_stack"),
+        (f'site:stackshare.io "{b}"', "tech_stack"),
         (f'"{b} integration"', "tech_stack"),
         (f'"integration with {b}"', "tech_stack"),
         (f'"{b} API" company', "tech_stack"),
+        (f'"{b}" customers site:g2.com', "tech_stack"),
     ]
 
     # GROUP 4: Review sites
@@ -125,16 +131,17 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
 
     if tier == "lite":
         # Core queries from each group — ~20 queries total
+        # Always include the 5 tech-intelligence sites (enlyft, theirstack, zoominfo, builtwith, stackshare)
         return (
             customer_signals[:3] +
             job_postings[:2] +
-            tech_stack[:1] +
+            tech_stack[:5] +      # all 5 intelligence databases first
             review_sites[:2] +
             linkedin[:1] +
             blog_press[:4]
         )
     if tier == "pro":
-        return customer_signals + job_postings + tech_stack[:2] + review_sites + linkedin + blog_press
+        return customer_signals + job_postings + tech_stack[:7] + review_sites + linkedin + blog_press
     # advanced: everything
     return customer_signals + job_postings + tech_stack + review_sites + linkedin + blog_press
 
