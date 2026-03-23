@@ -95,12 +95,20 @@
 
   /* SCREEN 2 */
   .loading-wrap { text-align: center; padding: 80px 0; }
-  .loader { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px; }
-  .loader-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
-  .loader-dot:nth-child(1){animation:bounce 1.2s ease-in-out 0s infinite}
-  .loader-dot:nth-child(2){animation:bounce 1.2s ease-in-out 0.2s infinite}
-  .loader-dot:nth-child(3){animation:bounce 1.2s ease-in-out 0.4s infinite}
-  @keyframes bounce{0%,80%,100%{transform:scale(0.5);opacity:0.3}40%{transform:scale(1);opacity:1}}
+  .snake-track { width: 280px; height: 6px; background: var(--surface2); border-radius: 6px; margin: 0 auto 28px; overflow: hidden; position: relative; }
+  .snake-track::after {
+    content: '';
+    position: absolute; top: 0; left: -60%;
+    width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent, var(--accent2), var(--accent), var(--accent2), transparent);
+    border-radius: 6px;
+    animation: snake-crawl 1.6s ease-in-out infinite;
+  }
+  @keyframes snake-crawl {
+    0%   { left: -60%; opacity: 0.6; }
+    50%  { opacity: 1; }
+    100% { left: 110%; opacity: 0.6; }
+  }
   .loading-title { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; margin-bottom: 8px; }
   .loading-sub { font-size: 12px; color: var(--muted); margin-bottom: 32px; }
   .steps { display: flex; flex-direction: column; gap: 6px; max-width: 360px; margin: 0 auto; text-align: left; }
@@ -144,24 +152,35 @@
   .icp-high { color: var(--green); border-color: rgba(0,229,160,0.3); background: rgba(0,229,160,0.07); }
   .icp-medium { color: var(--amber); border-color: rgba(255,176,32,0.3); background: rgba(255,176,32,0.07); }
   .icp-low { color: var(--muted); border-color: var(--border); }
-  .unlock-banner { background: var(--surface); border: 1px solid var(--border-glow); border-radius: 14px; padding: 28px 24px; text-align: center; position: relative; overflow: hidden; margin-top: 12px; }
+  .unlock-banner { background: var(--surface); border: 1px solid var(--border-glow); border-radius: 14px; padding: 32px 28px; text-align: center; position: relative; overflow: hidden; margin-top: 12px; }
   .unlock-banner::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent2), var(--accent)); }
-  .unlock-title { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 800; margin-bottom: 10px; }
-  .unlock-sub { font-size: 15px; color: var(--muted); margin-bottom: 16px; line-height: 1.7; }
+  .unlock-eyebrow { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); background: rgba(0,194,255,0.07); border: 1px solid rgba(0,194,255,0.2); padding: 4px 14px; border-radius: 20px; margin-bottom: 14px; }
+  .unlock-title { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 800; margin-bottom: 10px; line-height: 1.2; }
+  .unlock-sub { font-size: 15px; color: var(--muted); margin-bottom: 24px; line-height: 1.7; max-width: 500px; margin-left: auto; margin-right: auto; }
   .unlock-sub strong { color: var(--text); }
+  .unlock-value-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 560px; margin: 0 auto 24px; text-align: left; }
+  .unlock-value-item { display: flex; gap: 12px; align-items: flex-start; background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
+  .unlock-value-icon { font-size: 20px; line-height: 1; flex-shrink: 0; margin-top: 1px; }
+  .unlock-value-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
+  .unlock-value-desc { font-size: 11px; color: var(--muted); line-height: 1.5; }
   .price-tag { display: inline-flex; align-items: baseline; gap: 4px; margin-bottom: 16px; }
   .price-currency { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; color: var(--muted); align-self: flex-start; margin-top: 4px; }
   .price-amount { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 800; color: var(--text); line-height: 1; }
   .price-note { font-size: 11px; color: var(--muted); margin-left: 4px; }
-  .unlock-features { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
-  .unlock-feature { font-size: 13px; color: var(--muted); display: flex; align-items: center; gap: 5px; }
-  .unlock-feature::before { content: '✓'; color: var(--green); }
   .email-capture { display: flex; gap: 0; max-width: 380px; margin: 0 auto 16px; border-radius: 8px; overflow: hidden; border: 1px solid #2A3F58; }
   .email-capture input { flex: 1; background: #0D1520; border: none; padding: 11px 14px; font-family: 'DM Mono', monospace; font-size: 12px; color: var(--text); outline: none; }
   .email-capture input::placeholder { color: #4A6A84; }
-  .unlock-btn { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--accent2), var(--accent)); border: none; border-radius: 10px; padding: 13px 40px; font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; color: #fff; cursor: pointer; letter-spacing: 0.04em; transition: opacity 0.2s, transform 0.15s; }
-  .unlock-btn:hover { opacity: 0.9; transform: translateY(-1px); }
-  .unlock-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+  .unlock-btn { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--accent2), var(--accent)); border: none; border-radius: 10px; padding: 14px 36px; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700; color: #fff; cursor: pointer; letter-spacing: 0.02em; transition: opacity 0.2s, transform 0.15s; box-shadow: 0 4px 20px rgba(0,102,255,0.25); }
+  .unlock-btn:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 6px 28px rgba(0,102,255,0.35); }
+  .unlock-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+  .meeting-banner { background: var(--surface); border: 1px solid rgba(0,229,160,0.2); border-radius: 14px; padding: 24px; overflow: hidden; }
+  .meeting-banner::before { content: ''; display: block; height: 2px; background: linear-gradient(90deg, var(--green), var(--accent)); margin: -24px -24px 24px; }
+  .meeting-banner-header { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 20px; }
+  .meeting-banner-icon { font-size: 28px; line-height: 1; flex-shrink: 0; }
+  .meeting-banner-title { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+  .meeting-banner-sub { font-size: 13px; color: var(--muted); line-height: 1.5; }
+  .meetings-iframe-container iframe { border-radius: 10px; }
+  @media (max-width: 560px) { .unlock-value-grid { grid-template-columns: 1fr; } }
   .payment-polling { font-size: 12px; color: var(--accent); margin-top: 10px; display: none; }
   .payment-polling.visible { display: block; }
   .export-bar { display: none; align-items: center; justify-content: space-between; background: rgba(0,229,160,0.05); border: 1px solid rgba(0,229,160,0.2); border-radius: 10px; padding: 12px 20px; margin-top: 12px; flex-wrap: wrap; gap: 10px; }
@@ -288,13 +307,9 @@
   <!-- SCREEN 2: LOADING -->
   <div id="loadingSection" class="section">
     <div class="loading-wrap">
-      <div class="loader">
-        <div class="loader-dot"></div>
-        <div class="loader-dot"></div>
-        <div class="loader-dot"></div>
-      </div>
+      <div class="snake-track"></div>
       <div class="loading-title">Scanning the web for companies<br>matching your ICP</div>
-      <div class="loading-sub">Searching for customers of <strong id="loadingDomain"></strong></div>
+      <div class="loading-sub">Searching for customers of <strong id="loadingDomain"></strong> — this takes 30–60 seconds</div>
       <div class="steps">
         <div class="step active" id="step1">🔍 Searching for customer mentions</div>
         <div class="step" id="step2">📊 Ranking signals by intent</div>
@@ -334,28 +349,76 @@
 
       <div id="lockWall" style="display:none">
         <div class="unlock-banner">
-          <div class="unlock-title">🔒 Unlock Full List</div>
-          <div class="unlock-sub">You're seeing the top <strong style="color:var(--text)">5 companies for free.</strong><br><strong id="lockedCountText">X more companies</strong> are waiting — unlock to get the full list + CSV export.</div>
+          <div class="unlock-eyebrow">🎯 Strategy Session + Full Intelligence List</div>
+          <div class="unlock-title">Turn competitor customers into<br>your pipeline</div>
+          <div class="unlock-sub">
+            You're seeing <strong style="color:var(--text)">5 companies free.</strong>
+            Unlock <strong id="lockedCountText" style="color:var(--accent)">all results</strong> + book a 1:1 session with Danit to build your outbound campaign around them.
+          </div>
+
+          <div class="unlock-value-grid">
+            <div class="unlock-value-item">
+              <div class="unlock-value-icon">📋</div>
+              <div>
+                <div class="unlock-value-title">Full company list</div>
+                <div class="unlock-value-desc">Every company with verified domain, industry & signal source</div>
+              </div>
+            </div>
+            <div class="unlock-value-item">
+              <div class="unlock-value-icon">📞</div>
+              <div>
+                <div class="unlock-value-title">30-min strategy session with Danit</div>
+                <div class="unlock-value-desc">Book directly after payment — walk through the list together</div>
+              </div>
+            </div>
+            <div class="unlock-value-item">
+              <div class="unlock-value-icon">🚀</div>
+              <div>
+                <div class="unlock-value-title">Complete outbound campaign framework</div>
+                <div class="unlock-value-desc">The exact playbook Danit used to 10X pipeline with competitor intelligence</div>
+              </div>
+            </div>
+            <div class="unlock-value-item">
+              <div class="unlock-value-icon">🎯</div>
+              <div>
+                <div class="unlock-value-title">Personalized ICP targeting strategy</div>
+                <div class="unlock-value-desc">Which accounts to hit first, what to say, and how to sequence</div>
+              </div>
+            </div>
+          </div>
+
           <div class="price-tag">
             <span class="price-currency">$</span>
             <span class="price-amount">69</span>
-            <span class="price-note">one-time</span>
+            <span class="price-note">one-time · includes the session</span>
           </div>
-          <div class="unlock-features">
-            <span class="unlock-feature">Full company list</span>
-            <span class="unlock-feature">CSV export</span>
-            <span class="unlock-feature">All sources visible</span>
-          </div>
+
           <div class="email-capture">
             <input type="email" id="emailInput" placeholder="your@email.com — we'll send you the results" autocomplete="email" />
           </div>
-          <button class="unlock-btn" id="unlockBtn" onclick="goToPayment()">Unlock Full List — $69</button>
+          <button class="unlock-btn" id="unlockBtn" onclick="goToPayment()">Book Session + Unlock List — $69</button>
           <div id="alreadyPaidRow" style="display:none;margin-top:14px">
             <button onclick="confirmUnlock()" style="background:none;border:none;color:var(--green);font-family:'DM Mono',monospace;font-size:12px;cursor:pointer;text-decoration:underline;">
               ✓ I've completed payment — unlock my results
             </button>
           </div>
           <div class="payment-polling" id="paymentPolling">⏳ Checking payment status…</div>
+        </div>
+      </div>
+
+      <!-- MEETING EMBED — shown after unlock -->
+      <div id="meetingEmbed" style="display:none;margin-top:24px">
+        <div class="meeting-banner">
+          <div class="meeting-banner-header">
+            <div class="meeting-banner-icon">📅</div>
+            <div>
+              <div class="meeting-banner-title">Book your strategy session</div>
+              <div class="meeting-banner-sub">Pick a time that works — Danit will walk you through the list and build your outbound campaign live</div>
+            </div>
+          </div>
+          <!-- HubSpot Meetings Embed -->
+          <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/dben-simon?embed=true"></div>
+          <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
         </div>
       </div>
 
@@ -553,6 +616,7 @@
       document.getElementById('lockWall').style.display = 'none';
       document.getElementById('exportBar').classList.add('visible');
       document.getElementById('exportCount').textContent = total;
+      document.getElementById('meetingEmbed').style.display = 'block';
     } else if (locked > 0) {
       // Always show the paywall whenever there are locked companies
       document.getElementById('lockedCountText').textContent = `${locked} more companies`;
