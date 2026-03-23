@@ -221,7 +221,7 @@
       <div class="hero-eyebrow">B2B Pipeline Intelligence</div>
       <div class="hero-badge"><span class="hero-badge-dot"></span> Built for B2B SaaS &amp; tech companies</div>
       <h1 class="hero-title">Find companies already<br>using <span>your competitors</span></h1>
-      <p class="hero-sub">Enter a competitor's domain. We scan the web for public signals — case studies, reviews, job posts, tech databases — and surface their customers for you.</p>
+      <p class="hero-sub">Enter a competitor's domain. We scan the web for public signals — case studies, reviews, job posts, tech databases — and surface their customers. Book a session to turn the list into a full outbound campaign.</p>
 
       <div class="search-card">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px">
@@ -235,64 +235,7 @@
           </div>
         </div>
 
-        <div class="divider"></div>
-        <div class="icp-label">ICP Filters <span>Optional — narrow results to your target market</span></div>
-
-        <div class="icp-grid">
-          <div class="icp-field">
-            <span class="field-label">Industry</span>
-            <div class="multi-select-wrapper" id="industryWrapper">
-              <button class="multi-select-trigger" id="industryTrigger" onclick="toggleIndustryDropdown()">
-                <span class="placeholder" id="industryLabel">All industries</span>
-              </button>
-              <div class="multi-select-dropdown" id="industryDropdown">
-                <label class="multi-option"><input type="checkbox" value="SaaS / Software" onchange="updateIndustryLabel()"> SaaS / Software</label>
-                <label class="multi-option"><input type="checkbox" value="Fintech" onchange="updateIndustryLabel()"> Fintech</label>
-                <label class="multi-option"><input type="checkbox" value="Healthcare / MedTech" onchange="updateIndustryLabel()"> Healthcare / MedTech</label>
-                <label class="multi-option"><input type="checkbox" value="E-commerce / Retail" onchange="updateIndustryLabel()"> E-commerce / Retail</label>
-                <label class="multi-option"><input type="checkbox" value="Marketing / AdTech" onchange="updateIndustryLabel()"> Marketing / AdTech</label>
-                <label class="multi-option"><input type="checkbox" value="Cybersecurity" onchange="updateIndustryLabel()"> Cybersecurity</label>
-                <label class="multi-option"><input type="checkbox" value="Developer Tools" onchange="updateIndustryLabel()"> Developer Tools</label>
-                <label class="multi-option"><input type="checkbox" value="HR Tech" onchange="updateIndustryLabel()"> HR Tech</label>
-                <label class="multi-option"><input type="checkbox" value="Data & Analytics" onchange="updateIndustryLabel()"> Data & Analytics</label>
-                <label class="multi-option"><input type="checkbox" value="Legal Tech" onchange="updateIndustryLabel()"> Legal Tech</label>
-                <label class="multi-option"><input type="checkbox" value="Real Estate" onchange="updateIndustryLabel()"> Real Estate</label>
-                <label class="multi-option"><input type="checkbox" value="Education / EdTech" onchange="updateIndustryLabel()"> Education / EdTech</label>
-                <label class="multi-option"><input type="checkbox" value="Manufacturing" onchange="updateIndustryLabel()"> Manufacturing</label>
-                <label class="multi-option"><input type="checkbox" value="Media & Entertainment" onchange="updateIndustryLabel()"> Media & Entertainment</label>
-                <label class="multi-option"><input type="checkbox" value="Professional Services" onchange="updateIndustryLabel()"> Professional Services</label>
-              </div>
-            </div>
-          </div>
-
-          <div class="icp-field">
-            <span class="field-label">Company Size</span>
-            <select class="icp-select" id="sizeSelect">
-              <option value="">All sizes</option>
-              <option value="1-10">1–10 employees</option>
-              <option value="11-50">11–50 employees</option>
-              <option value="51-200">51–200 employees</option>
-              <option value="201-500">201–500 employees</option>
-              <option value="501-1000">501–1,000 employees</option>
-              <option value="1000+">1,000+ employees</option>
-            </select>
-          </div>
-
-          <div class="icp-field">
-            <span class="field-label">Region</span>
-            <select class="icp-select" id="regionSelect">
-              <option value="">All regions</option>
-              <option value="North America">North America</option>
-              <option value="Europe">Europe</option>
-              <option value="APAC">APAC</option>
-              <option value="Latin America">Latin America</option>
-              <option value="Middle East & Africa">Middle East & Africa</option>
-              <option value="Israel">Israel</option>
-            </select>
-          </div>
-        </div>
-
-        <button class="search-btn" id="searchBtn" onclick="startSearch()">Find Matching Companies</button>
+        <button class="search-btn" id="searchBtn" onclick="startSearch()">Find Companies Using This Competitor</button>
 
         <div class="hint-row">
           <span class="hint-tag" onclick="setDomain('deel.com')">deel.com</span>
@@ -308,13 +251,13 @@
   <div id="loadingSection" class="section">
     <div class="loading-wrap">
       <div class="snake-track"></div>
-      <div class="loading-title">Scanning the web for companies<br>matching your ICP</div>
-      <div class="loading-sub">Searching for customers of <strong id="loadingDomain"></strong> — this takes 30–60 seconds</div>
+      <div class="loading-title">Scanning the web for customers of<br><strong id="loadingDomain" style="color:var(--accent)"></strong></div>
+      <div class="loading-sub">Searching reviews, case studies, job posts, tech databases — takes 30–60 seconds</div>
       <div class="steps">
         <div class="step active" id="step1">🔍 Searching for customer mentions</div>
-        <div class="step" id="step2">📊 Ranking signals by intent</div>
+        <div class="step" id="step2">📊 Ranking signals by purchase intent</div>
         <div class="step" id="step3">🏢 Extracting &amp; enriching companies</div>
-        <div class="step" id="step4">🎯 Filtering by your ICP</div>
+        <div class="step" id="step4">✅ Building your prospect list</div>
       </div>
     </div>
   </div>
@@ -326,7 +269,6 @@
         <div>
           <div style="font-size:12px;color:var(--muted);margin-bottom:6px;letter-spacing:0.05em">Customers of <span id="resultDomain" style="color:var(--accent);font-weight:700;font-size:14px"></span></div>
           <div class="results-headline"><span id="statTotal">0</span> companies found using your competitor</div>
-          <div id="icpChips" class="icp-chips"></div>
           <div id="freeNote" style="display:none;margin-top:8px;font-size:13px;color:var(--muted)"></div>
         </div>
         <button class="new-search-btn" onclick="resetToHome()">← New Search</button>
@@ -456,34 +398,6 @@
   let paymentPollInterval = null;
   let stepTimer = null;
   let currentResults = null;
-  let icpState = { industries: [], size: '', region: '' };
-
-  function toggleIndustryDropdown() {
-    const trigger = document.getElementById('industryTrigger');
-    const dropdown = document.getElementById('industryDropdown');
-    const isOpen = dropdown.classList.contains('open');
-    dropdown.classList.toggle('open', !isOpen);
-    trigger.classList.toggle('open', !isOpen);
-  }
-
-  document.addEventListener('click', e => {
-    const wrapper = document.getElementById('industryWrapper');
-    if (wrapper && !wrapper.contains(e.target)) {
-      document.getElementById('industryDropdown').classList.remove('open');
-      document.getElementById('industryTrigger').classList.remove('open');
-    }
-  });
-
-  function updateIndustryLabel() {
-    const checks = document.querySelectorAll('#industryDropdown input[type=checkbox]:checked');
-    const label = document.getElementById('industryLabel');
-    if (checks.length === 0) { label.className = 'placeholder'; label.textContent = 'All industries'; }
-    else { label.className = ''; label.textContent = Array.from(checks).map(c => c.value).join(', '); }
-  }
-
-  function getSelectedIndustries() {
-    return Array.from(document.querySelectorAll('#industryDropdown input[type=checkbox]:checked')).map(c => c.value);
-  }
 
   function setDomain(d) { document.getElementById('domainInput').value = d; document.getElementById('domainInput').focus(); }
 
@@ -527,10 +441,6 @@
     if (!domain) { document.getElementById('domainInput').focus(); return; }
     const brandRaw = document.getElementById('brandInput').value.trim();
     const brand = brandRaw || domain.replace(/^https?:\/\//, '').replace(/^www\./, '').split('.')[0];
-    const industries = getSelectedIndustries();
-    const size = document.getElementById('sizeSelect').value;
-    const region = document.getElementById('regionSelect').value;
-    icpState = { industries, size, region };
     document.getElementById('searchBtn').disabled = true;
     document.getElementById('loadingDomain').textContent = brandRaw || domain;
     ['step1','step2','step3','step4'].forEach(id => { const el = document.getElementById(id); if(el){el.classList.remove('active','done');} });
@@ -540,7 +450,7 @@
       const res = await fetch('/api/search', {
         method: 'POST',
         headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({ domain, brand, tier: 'lite', mode: 'live', icp_industries: industries, icp_size: size, icp_region: region })
+        body: JSON.stringify({ domain, brand, tier: 'lite', mode: 'live', icp_industries: [], icp_size: '', icp_region: '' })
       });
       if (!res.ok) throw new Error('Search request failed');
       const data = await res.json();
@@ -572,11 +482,6 @@
     document.getElementById('statTotal').textContent = data.total || 0;
     const domainEl = document.getElementById('resultDomain');
     if (domainEl) domainEl.textContent = document.getElementById('domainInput').value.trim() || (data.preview && data.preview[0] && data.preview[0].competitor_domain) || '';
-    const chips = document.getElementById('icpChips');
-    chips.innerHTML = '';
-    if (icpState.industries.length) icpState.industries.forEach(i => { chips.innerHTML += `<span class="icp-chip">${i}</span>`; });
-    if (icpState.size) chips.innerHTML += `<span class="icp-chip">${icpState.size}</span>`;
-    if (icpState.region) chips.innerHTML += `<span class="icp-chip">${icpState.region}</span>`;
 
     const tbody = document.getElementById('resultsBody');
     tbody.innerHTML = '';

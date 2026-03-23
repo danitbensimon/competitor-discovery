@@ -28,7 +28,8 @@ from pricing import apply_tier_limit
 # New: persistence, payments, email, csv
 import database as db
 from sumit_service import build_payment_url, verify_webhook, extract_webhook_data
-from email_service import send_full_results_email
+from email_service import send_full_results_email, send_followup_email
+from hubspot_service import upsert_contact
 from csv_utils import companies_to_csv
 
 # Logging
@@ -415,12 +416,27 @@ async def get_results(job_id: str):
 
 
 @app.post("/api/results/{result_id}/email")
-async def save_email(result_id: str, req: EmailRequest):
-    """Capture email address before payment."""
+async def save_email(result_id: str, req: EmailRequest, background_tasks: BackgroundTasks):
+    """Capture email address before payment — syncs to HubSpot and sends follow-up."""
     record = db.get_result(result_id)
     if not record:
         raise HTTPException(status_code=404, detail="Result not found")
-    db.update_email(result_id, req.email.strip().lower())
+
+    email = req.email.strip().lower()
+    db.update_email(result_id, email)
+
+    # Pull context for HubSpot & follow-up email
+    competitor_domain = record.get("competitor_domain", "")
+    try:
+        companies = json.loads(record.get("full_companies") or "[]")
+    except Exception:
+        companies = []
+    preview_count = len(companies)
+
+    # Run HubSpot upsert + follow-up email in background (non-blocking)
+    background_tasks.add_task(upsert_contact, email, competitor_domain, preview_count)
+    background_tasks.add_task(send_followup_email, email, competitor_domain, preview_count)
+
     return {"success": True}
 
 
@@ -501,6 +517,13 @@ async def sumit_webhook(request: Request):
                 db.mark_email_sent(result_id)
         except Exception as e:
             log.error(f"[webhook] email failed: {e}")
+
+        # Update HubSpot contact to "paid" status
+        try:
+            from hubspot_service import mark_contact_paid
+            mark_contact_paid(email, record.get("competitor_domain", ""))
+        except Exception as e:
+            log.error(f"[webhook] hubspot paid update failed: {e}")
 
     return {"received": True, "unlock_token": unlock_token}
 

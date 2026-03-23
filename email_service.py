@@ -8,7 +8,7 @@ from typing import Optional
 log = logging.getLogger(__name__)
 
 RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
-FROM_EMAIL = os.environ.get("FROM_EMAIL", "results@competitoriq.app")
+FROM_EMAIL = os.environ.get("FROM_EMAIL", "results@competitorcustomer.com")
 APP_URL = os.environ.get("APP_URL", "https://competitoriq.onrender.com")
 
 
@@ -16,8 +16,7 @@ def _build_csv_attachment(companies: list) -> str:
     """Return CSV string of full company list."""
     fields = [
         "company_name", "company_domain", "industry", "region", "company_size",
-        "b2b_flag", "grade", "score", "confidence", "signal_group",
-        "evidence_count", "source_url", "snippet",
+        "icp_fit", "grade", "score", "signal_group", "source_url", "snippet",
     ]
     output = io.StringIO()
     writer = csv.DictWriter(output, fieldnames=fields, extrasaction="ignore")
@@ -66,23 +65,24 @@ def _build_results_html(companies: list, competitor_domain: str, unlock_url: str
       <div style="max-width:680px;margin:0 auto;padding:40px 20px;">
 
         <!-- Header -->
-        <div style="margin-bottom:32px;">
-          <h1 style="margin:0;font-size:22px;color:#f1f5f9;font-weight:700;">
-            🎯 Your CompetitorIQ results are ready
+        <div style="margin-bottom:28px;">
+          <p style="margin:0 0 10px;color:#00C2FF;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;">CompetitorIQ · Competitor Customer Discovery</p>
+          <h1 style="margin:0 0 8px;font-size:24px;color:#f1f5f9;font-weight:700;line-height:1.3;">
+            Your full list is ready — {total} companies using {competitor_domain}
           </h1>
-          <p style="margin:8px 0 0;color:#64748b;font-size:14px;">
-            Companies using <strong style="color:#3b82f6;">{competitor_domain}</strong>
-            &nbsp;·&nbsp; {total} companies found
+          <p style="margin:0;color:#64748b;font-size:14px;line-height:1.6;">
+            We found <strong style="color:#f1f5f9;">{total} companies</strong> that match your ICP and show signals of using <strong style="color:#3b82f6;">{competitor_domain}</strong>. Click below to view and download the full list.
           </p>
         </div>
 
         <!-- CTA -->
         <div style="margin-bottom:32px;">
           <a href="{unlock_url}"
-             style="display:inline-block;background:#3b82f6;color:#fff;padding:14px 28px;
-                    border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;">
-            View Full Results Online →
+             style="display:inline-block;background:linear-gradient(135deg,#0066FF,#00C2FF);color:#fff;padding:16px 32px;
+                    border-radius:10px;font-size:16px;font-weight:700;text-decoration:none;letter-spacing:0.02em;">
+            → Access Your Full List
           </a>
+          <p style="margin:10px 0 0;color:#475569;font-size:12px;">This link is unique to your purchase and does not expire.</p>
         </div>
 
         <!-- Table preview -->
@@ -110,8 +110,9 @@ def _build_results_html(companies: list, competitor_domain: str, unlock_url: str
         </div>
 
         <!-- Footer -->
-        <p style="margin-top:32px;color:#334155;font-size:12px;">
-          CompetitorIQ · You received this because you purchased full results for {competitor_domain}.
+        <p style="margin-top:32px;color:#334155;font-size:12px;line-height:1.6;">
+          CompetitorIQ by <a href="https://www.linkedin.com/in/danitbensimon/" style="color:#00C2FF;text-decoration:none;">Danit Ben Simon</a> · AI Growth<br>
+          You received this because you purchased competitor intelligence for {competitor_domain}.
         </p>
       </div>
     </body>
@@ -144,7 +145,7 @@ def send_full_results_email(
         params = {
             "from": FROM_EMAIL,
             "to": [to_email],
-            "subject": f"Your CompetitorIQ results: {len(companies)} companies using {competitor_domain}",
+            "subject": f"Your list is ready: {len(companies)} companies using {competitor_domain}",
             "html": html_body,
             "attachments": [
                 {
@@ -160,4 +161,73 @@ def send_full_results_email(
 
     except Exception as e:
         log.error(f"[email] failed to send to {to_email}: {e}")
+        return False
+
+
+def send_followup_email(to_email: str, competitor_domain: str, preview_count: int = 5) -> bool:
+    """
+    Send a 'your results are waiting' email right after the user enters their email.
+    Nudges them to complete the purchase.
+    """
+    if not RESEND_API_KEY:
+        log.warning("[email] RESEND_API_KEY not set — skipping follow-up email")
+        return False
+
+    html_body = f"""
+    <!DOCTYPE html>
+    <html>
+    <head><meta charset="UTF-8"></head>
+    <body style="margin:0;padding:0;background:#0a0f1a;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;">
+      <div style="max-width:600px;margin:0 auto;padding:40px 20px;">
+
+        <p style="margin:0 0 6px;color:#00C2FF;font-size:11px;letter-spacing:0.15em;text-transform:uppercase;">CompetitorIQ · Competitor Customer Discovery</p>
+
+        <h1 style="margin:0 0 16px;font-size:22px;color:#f1f5f9;font-weight:700;line-height:1.3;">
+          Your {competitor_domain} customer list is ready
+        </h1>
+
+        <p style="margin:0 0 20px;color:#94a3b8;font-size:15px;line-height:1.6;">
+          We found <strong style="color:#f1f5f9;">{preview_count}+ companies</strong> already using
+          <strong style="color:#3b82f6;">{competitor_domain}</strong> that match your ICP.
+          Unlock the full list to see company names, domains, industries, and signal sources.
+        </p>
+
+        <a href="{APP_URL}"
+           style="display:inline-block;background:linear-gradient(135deg,#0066FF,#00C2FF);
+                  color:#fff;padding:14px 28px;border-radius:10px;font-size:15px;
+                  font-weight:700;text-decoration:none;letter-spacing:0.02em;">
+          → Unlock Full List — $69
+        </a>
+
+        <p style="margin:20px 0 0;color:#475569;font-size:13px;line-height:1.6;">
+          Your search results are saved and ready. One-time purchase, instant delivery to this inbox.
+        </p>
+
+        <hr style="margin:32px 0;border:none;border-top:1px solid #1e293b;">
+        <p style="margin:0;color:#334155;font-size:12px;">
+          CompetitorIQ by <a href="https://www.linkedin.com/in/danitbensimon/" style="color:#00C2FF;text-decoration:none;">Danit Ben Simon</a>
+          · You're receiving this because you ran a search on competitorcustomer.com.
+        </p>
+      </div>
+    </body>
+    </html>
+    """
+
+    try:
+        import resend
+        resend.api_key = RESEND_API_KEY
+
+        params = {
+            "from": FROM_EMAIL,
+            "to": [to_email],
+            "subject": f"Your {competitor_domain} customer list is ready — unlock it now",
+            "html": html_body,
+        }
+
+        response = resend.Emails.send(params)
+        log.info(f"[email] follow-up sent to {to_email} | id={response.get('id','?')}")
+        return True
+
+    except Exception as e:
+        log.error(f"[email] follow-up failed to {to_email}: {e}")
         return False
