@@ -189,6 +189,32 @@
   .export-btn { background: none; border: 1px solid rgba(0,229,160,0.4); border-radius: 7px; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 11px; color: var(--green); cursor: pointer; transition: all 0.2s; }
   .export-btn:hover { background: rgba(0,229,160,0.1); }
 
+  /* FRAMEWORK SECTION */
+  .framework-section { padding: 64px 0 48px; max-width: 760px; margin: 0 auto; }
+  .framework-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+  .framework-title { font-family: 'Inter', sans-serif; font-size: clamp(26px, 4vw, 38px); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 14px; }
+  .framework-title span { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .framework-sub { font-size: 15px; color: var(--muted2); line-height: 1.7; max-width: 580px; margin-bottom: 40px; }
+  .framework-steps { display: flex; flex-direction: column; gap: 0; margin-bottom: 48px; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+  .framework-step { display: flex; gap: 20px; padding: 22px 24px; border-bottom: 1px solid var(--border); transition: background 0.2s; }
+  .framework-step:last-child { border-bottom: none; }
+  .framework-step:hover { background: rgba(0,194,255,0.03); }
+  .fstep-num { font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500; color: var(--accent); opacity: 0.7; min-width: 24px; padding-top: 2px; }
+  .fstep-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 5px; }
+  .fstep-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .framework-video { }
+  .framework-video-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
+  .yt-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; border: 1px solid var(--border); }
+  .yt-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+
+  /* RESULT FRAMEWORK TEASER */
+  .result-framework-teaser { background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 16px 0 0; }
+  .rft-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 14px; }
+  .rft-steps { display: flex; flex-wrap: wrap; gap: 8px 0; flex-direction: column; }
+  .rft-step { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 10px; padding: 3px 0; }
+  .rft-n { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent); min-width: 22px; }
+  .rft-done { font-size: 10px; color: var(--green); background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.25); border-radius: 10px; padding: 1px 8px; margin-left: 4px; }
+
   /* ERROR */
   .error-wrap { text-align: center; padding: 60px 0; }
   .error-box { background: rgba(255,77,106,0.05); border: 1px solid rgba(255,77,106,0.2); border-radius: 12px; padding: 28px; max-width: 440px; margin: 0 auto; }
@@ -245,6 +271,60 @@
         </div>
       </div>
     </div>
+
+    <!-- FRAMEWORK SECTION -->
+    <div class="framework-section">
+      <div class="framework-eyebrow">The Framework</div>
+      <h2 class="framework-title">How I 10X'd my outbound using<br><span>competitor customers</span></h2>
+      <p class="framework-sub">Most outbound fails because you're cold. Competitor customers aren't cold — they already have the budget, the use case, and the pain. Here's the exact playbook I used.</p>
+
+      <div class="framework-steps">
+        <div class="framework-step">
+          <div class="fstep-num">01</div>
+          <div class="fstep-body">
+            <div class="fstep-title">Find who's already buying from your competitor</div>
+            <div class="fstep-desc">Use this tool to surface companies that are publicly using your competitor — case studies, reviews, job posts, tech databases. These are buyers with proven intent and budget.</div>
+          </div>
+        </div>
+        <div class="framework-step">
+          <div class="fstep-num">02</div>
+          <div class="fstep-body">
+            <div class="fstep-title">Understand the signal behind each company</div>
+            <div class="fstep-desc">Not all signals are equal. A company actively hiring for your competitor's tool is more likely to switch than one who mentioned them 2 years ago. Prioritize by signal strength.</div>
+          </div>
+        </div>
+        <div class="framework-step">
+          <div class="fstep-num">03</div>
+          <div class="fstep-body">
+            <div class="fstep-title">Write outreach that references the competitor</div>
+            <div class="fstep-desc">Lead with what you know: "I saw you're using [Competitor] — we work with companies like yours who outgrew it." Specificity converts. Generic cold email doesn't.</div>
+          </div>
+        </div>
+        <div class="framework-step">
+          <div class="fstep-num">04</div>
+          <div class="fstep-body">
+            <div class="fstep-title">Sequence across channels, not just email</div>
+            <div class="fstep-desc">Email → LinkedIn → call. The companies on this list are warm — treat them like inbound. A 3-touch sequence over 5 days outperforms 10 generic blasts.</div>
+          </div>
+        </div>
+        <div class="framework-step">
+          <div class="fstep-num">05</div>
+          <div class="fstep-body">
+            <div class="fstep-title">Run this live with me — personalized to your market</div>
+            <div class="fstep-desc">The framework adapts based on your competitor, your ICP, and your messaging. Book a session and we'll build your campaign together from the list we just generated.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- YouTube embed -->
+      <div class="framework-video">
+        <div class="framework-video-label">Watch the full breakdown</div>
+        <div class="yt-wrap">
+          <iframe src="https://www.youtube.com/embed/LKkJZPqJrwQ" title="How I 10X'd outbound using competitor customers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+
+    </div>
   </div>
 
   <!-- SCREEN 2: LOADING -->
@@ -287,6 +367,18 @@
           </thead>
           <tbody id="resultsBody"></tbody>
         </table>
+      </div>
+
+      <!-- Mini framework teaser above paywall -->
+      <div id="resultFrameworkTeaser" class="result-framework-teaser">
+        <div class="rft-title">The list is step 1. Here's what to do with it.</div>
+        <div class="rft-steps">
+          <div class="rft-step"><span class="rft-n">01</span> Find competitor customers <span class="rft-done">← you're here</span></div>
+          <div class="rft-step"><span class="rft-n">02</span> Prioritize by signal strength</div>
+          <div class="rft-step"><span class="rft-n">03</span> Write competitor-aware outreach</div>
+          <div class="rft-step"><span class="rft-n">04</span> Sequence across email + LinkedIn</div>
+          <div class="rft-step"><span class="rft-n">05</span> Run it live with Danit → book below</div>
+        </div>
       </div>
 
       <div id="lockWall" style="display:none">
