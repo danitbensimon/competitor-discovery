@@ -281,9 +281,7 @@
       </div>
     </div>
 
-  </div>
-
-  <!-- FRAMEWORK BAND — full width, light blue -->
+  <!-- FRAMEWORK BAND — full width, light blue, inside searchSection so it hides on search -->
   <div class="framework-band">
     <div class="framework-eyebrow">The Playbook</div>
     <h2 class="framework-title">How I 10X'd outbound using <span>competitor customers</span></h2>
@@ -320,14 +318,15 @@
         <iframe src="https://www.youtube.com/embed/LKkJZPqJrwQ" title="10X outbound switch campaign" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
-  </div>
+  </div><!-- end searchSection -->
 
   <!-- SCREEN 2: LOADING -->
   <div id="loadingSection" class="section">
     <div class="loading-wrap">
       <div class="snake-track"></div>
+      <div style="display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--amber);background:rgba(255,176,32,0.08);border:1px solid rgba(255,176,32,0.25);padding:4px 12px;border-radius:20px;margin-bottom:14px;">⚡ Lite Search — Top 5 results</div>
       <div class="loading-title">Scanning the web for customers of<br><strong id="loadingDomain" style="color:var(--accent)"></strong></div>
-      <div class="loading-sub">Scanning case studies, reviews &amp; tech databases — takes ~15 seconds</div>
+      <div class="loading-sub">Running 5 targeted searches — takes about 10 seconds</div>
       <div class="steps">
         <div class="step active" id="step1">🔍 Searching for customer mentions</div>
         <div class="step" id="step2">📊 Ranking signals by purchase intent</div>
@@ -342,7 +341,10 @@
     <div class="results-wrap">
       <div class="results-topbar">
         <div>
-          <div style="font-size:12px;color:var(--muted);margin-bottom:6px;letter-spacing:0.05em">Customers of <span id="resultDomain" style="color:var(--accent);font-weight:700;font-size:14px"></span></div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+            <span style="font-size:12px;color:var(--muted);letter-spacing:0.05em">Customers of <span id="resultDomain" style="color:var(--accent);font-weight:700;font-size:14px"></span></span>
+            <span style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);background:rgba(255,176,32,0.08);border:1px solid rgba(255,176,32,0.25);padding:2px 9px;border-radius:20px;">⚡ Lite Search</span>
+          </div>
           <div class="results-headline"><span id="statTotal">0</span> companies found using your competitor</div>
           <div id="freeNote" style="display:none;margin-top:8px;font-size:13px;color:var(--muted)"></div>
         </div>
