@@ -158,11 +158,11 @@
   .unlock-title { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 800; margin-bottom: 10px; line-height: 1.2; }
   .unlock-sub { font-size: 15px; color: var(--muted); margin-bottom: 24px; line-height: 1.7; max-width: 500px; margin-left: auto; margin-right: auto; }
   .unlock-sub strong { color: var(--text); }
-  .unlock-value-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 560px; margin: 0 auto 24px; text-align: left; }
-  .unlock-value-item { display: flex; gap: 12px; align-items: flex-start; background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 14px; }
-  .unlock-value-icon { font-size: 20px; line-height: 1; flex-shrink: 0; margin-top: 1px; }
-  .unlock-value-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 3px; }
-  .unlock-value-desc { font-size: 11px; color: var(--muted); line-height: 1.5; }
+  .unlock-value-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 620px; margin: 0 auto 24px; text-align: left; }
+  .unlock-value-item { display: flex; gap: 14px; align-items: flex-start; background: #0C1322; border: 1px solid var(--border-glow); border-radius: 12px; padding: 18px 16px; }
+  .unlock-value-icon { font-size: 26px; line-height: 1; flex-shrink: 0; margin-top: 2px; }
+  .unlock-value-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 5px; }
+  .unlock-value-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
   .price-tag { display: inline-flex; align-items: baseline; gap: 4px; margin-bottom: 16px; }
   .price-currency { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; color: var(--muted); align-self: flex-start; margin-top: 4px; }
   .price-amount { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 800; color: var(--text); line-height: 1; }
@@ -189,31 +189,40 @@
   .export-btn { background: none; border: 1px solid rgba(0,229,160,0.4); border-radius: 7px; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 11px; color: var(--green); cursor: pointer; transition: all 0.2s; }
   .export-btn:hover { background: rgba(0,229,160,0.1); }
 
-  /* FRAMEWORK SECTION */
-  .framework-section { padding: 64px 0 48px; max-width: 760px; margin: 0 auto; }
-  .framework-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
-  .framework-title { font-family: 'Inter', sans-serif; font-size: clamp(26px, 4vw, 38px); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 14px; }
+  /* FRAMEWORK BAND — distinct bg */
+  .framework-band { background: #0C1322; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 36px 24px 32px; margin-top: 8px; }
+  .framework-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; text-align: center; }
+  .framework-title { font-family: 'Inter', sans-serif; font-size: clamp(18px, 2.5vw, 24px); font-weight: 800; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 6px; text-align: center; }
   .framework-title span { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .framework-sub { font-size: 15px; color: var(--muted2); line-height: 1.7; max-width: 580px; margin-bottom: 40px; }
-  .framework-steps { display: flex; flex-direction: column; gap: 0; margin-bottom: 48px; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
-  .framework-step { display: flex; gap: 20px; padding: 22px 24px; border-bottom: 1px solid var(--border); transition: background 0.2s; }
-  .framework-step:last-child { border-bottom: none; }
-  .framework-step:hover { background: rgba(0,194,255,0.03); }
-  .fstep-num { font-family: 'DM Mono', monospace; font-size: 12px; font-weight: 500; color: var(--accent); opacity: 0.7; min-width: 24px; padding-top: 2px; }
-  .fstep-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 5px; }
-  .fstep-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
-  .framework-video { }
-  .framework-video-label { font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted); margin-bottom: 14px; }
-  .yt-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; border: 1px solid var(--border); }
-  .yt-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+  .framework-sub { font-size: 13px; color: var(--muted); line-height: 1.6; max-width: 500px; margin: 0 auto 22px; text-align: center; }
+  .fw-boxes { display: flex; gap: 8px; align-items: stretch; max-width: 1100px; margin: 0 auto 20px; }
+  .fw-box { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 14px; position: relative; overflow: hidden; }
+  .fw-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+  .fw-box:nth-child(1)::before { background: #3B82F6; }
+  .fw-box:nth-child(2)::before { background: var(--accent); }
+  .fw-box:nth-child(3)::before { background: var(--green); }
+  .fw-box:nth-child(4)::before { background: var(--amber); }
+  .fw-box:nth-child(5)::before { background: #A855F7; }
+  .fw-num { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); margin-bottom: 6px; }
+  .fw-title { font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 5px; line-height: 1.3; }
+  .fw-desc { font-size: 11px; color: var(--muted); line-height: 1.5; }
+  .fw-video-row { display: flex; align-items: center; gap: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; max-width: 1100px; margin: 0 auto; }
+  .fw-video-text { flex: 1; }
+  .fw-video-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 3px; }
+  .fw-video-title { font-size: 14px; font-weight: 700; color: var(--text); }
+  .fw-video-thumb { width: 160px; flex-shrink: 0; border-radius: 8px; overflow: hidden; position: relative; height: 90px; }
+  .fw-video-thumb iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
+  @media (max-width: 800px) { .fw-boxes { flex-wrap: wrap; } .fw-box { flex: 1 1 calc(50% - 4px); } .fw-video-thumb { width: 110px; height: 62px; } }
 
-  /* RESULT FRAMEWORK TEASER */
-  .result-framework-teaser { background: var(--surface2); border: 1px solid var(--border); border-radius: 12px; padding: 20px 24px; margin: 16px 0 0; }
-  .rft-title { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 14px; }
-  .rft-steps { display: flex; flex-wrap: wrap; gap: 8px 0; flex-direction: column; }
-  .rft-step { font-size: 12px; color: var(--muted); display: flex; align-items: center; gap: 10px; padding: 3px 0; }
-  .rft-n { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent); min-width: 22px; }
-  .rft-done { font-size: 10px; color: var(--green); background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.25); border-radius: 10px; padding: 1px 8px; margin-left: 4px; }
+  /* RESULT TEASER — horizontal pill steps */
+  .result-framework-teaser { background: #0C1322; border: 1px solid var(--border-glow); border-radius: 12px; padding: 18px 20px; margin: 16px 0 0; text-align: center; }
+  .rft-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 14px; }
+  .rft-steps { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px; }
+  .rft-step { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); padding: 8px 16px; border-radius: 20px; border: 1px solid transparent; }
+  .rft-step.active { background: rgba(0,194,255,0.1); border-color: rgba(0,194,255,0.3); color: var(--text); font-weight: 600; }
+  .rft-n { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent); }
+  .rft-arrow { color: var(--border); padding: 0 2px; font-size: 14px; }
+  .rft-done { font-size: 10px; color: var(--green); background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.25); border-radius: 10px; padding: 1px 7px; margin-left: 4px; }
 
   /* ERROR */
   .error-wrap { text-align: center; padding: 60px 0; }
@@ -272,58 +281,50 @@
       </div>
     </div>
 
-    <!-- FRAMEWORK SECTION -->
-    <div class="framework-section">
-      <div class="framework-eyebrow">The Framework</div>
-      <h2 class="framework-title">How I 10X'd my outbound using<br><span>competitor customers</span></h2>
-      <p class="framework-sub">Most outbound fails because you're cold. Competitor customers aren't cold — they already have the budget, the use case, and the pain. Here's the exact playbook I used.</p>
+  </div>
 
-      <div class="framework-steps">
-        <div class="framework-step">
-          <div class="fstep-num">01</div>
-          <div class="fstep-body">
-            <div class="fstep-title">Find who's already buying from your competitor</div>
-            <div class="fstep-desc">Use this tool to surface companies that are publicly using your competitor — case studies, reviews, job posts, tech databases. These are buyers with proven intent and budget.</div>
-          </div>
-        </div>
-        <div class="framework-step">
-          <div class="fstep-num">02</div>
-          <div class="fstep-body">
-            <div class="fstep-title">Understand the signal behind each company</div>
-            <div class="fstep-desc">Not all signals are equal. A company actively hiring for your competitor's tool is more likely to switch than one who mentioned them 2 years ago. Prioritize by signal strength.</div>
-          </div>
-        </div>
-        <div class="framework-step">
-          <div class="fstep-num">03</div>
-          <div class="fstep-body">
-            <div class="fstep-title">Write outreach that references the competitor</div>
-            <div class="fstep-desc">Lead with what you know: "I saw you're using [Competitor] — we work with companies like yours who outgrew it." Specificity converts. Generic cold email doesn't.</div>
-          </div>
-        </div>
-        <div class="framework-step">
-          <div class="fstep-num">04</div>
-          <div class="fstep-body">
-            <div class="fstep-title">Sequence across channels, not just email</div>
-            <div class="fstep-desc">Email → LinkedIn → call. The companies on this list are warm — treat them like inbound. A 3-touch sequence over 5 days outperforms 10 generic blasts.</div>
-          </div>
-        </div>
-        <div class="framework-step">
-          <div class="fstep-num">05</div>
-          <div class="fstep-body">
-            <div class="fstep-title">Run this live with me — personalized to your market</div>
-            <div class="fstep-desc">The framework adapts based on your competitor, your ICP, and your messaging. Book a session and we'll build your campaign together from the list we just generated.</div>
-          </div>
-        </div>
+  <!-- FRAMEWORK BAND — full width, different background -->
+  <div class="framework-band">
+    <div class="framework-eyebrow">The Playbook</div>
+    <h2 class="framework-title">How I 10X'd outbound using <span>competitor customers</span></h2>
+    <p class="framework-sub">Your competitor's customers already have the budget, the use case, and the pain. They're the warmest list you'll ever reach.</p>
+
+    <div class="fw-boxes">
+      <div class="fw-box">
+        <div class="fw-num">01</div>
+        <div class="fw-title">Find who's buying from your competitor</div>
+        <div class="fw-desc">Scan case studies, reviews, job posts & tech databases for companies publicly using the tool.</div>
       </div>
-
-      <!-- YouTube embed -->
-      <div class="framework-video">
-        <div class="framework-video-label">Watch the full breakdown</div>
-        <div class="yt-wrap">
-          <iframe src="https://www.youtube.com/embed/LKkJZPqJrwQ" title="How I 10X'd outbound using competitor customers" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+      <div class="fw-box">
+        <div class="fw-num">02</div>
+        <div class="fw-title">Enrich their buying committee</div>
+        <div class="fw-desc">Find the decision makers — VP Sales, RevOps, CRO — not just the company name.</div>
       </div>
+      <div class="fw-box">
+        <div class="fw-num">03</div>
+        <div class="fw-title">Write competitor-aware outreach</div>
+        <div class="fw-desc">"I saw you use [Competitor] — we help teams like yours who've outgrown it." Specificity converts.</div>
+      </div>
+      <div class="fw-box">
+        <div class="fw-num">04</div>
+        <div class="fw-title">Sequence email + LinkedIn</div>
+        <div class="fw-desc">3-touch sequence over 5 days. These are warm accounts — treat them like inbound.</div>
+      </div>
+      <div class="fw-box">
+        <div class="fw-num">05</div>
+        <div class="fw-title">Run it live with Danit</div>
+        <div class="fw-desc">Book a session and we build your full campaign from the list we just generated — together.</div>
+      </div>
+    </div>
 
+    <div class="fw-video-row">
+      <div class="fw-video-text">
+        <div class="fw-video-label">Watch the full breakdown</div>
+        <div class="fw-video-title">How I 10X'd my outbound results using competitor intelligence</div>
+      </div>
+      <div class="fw-video-thumb">
+        <iframe src="https://www.youtube.com/embed/LKkJZPqJrwQ" title="10X outbound" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 
@@ -332,7 +333,7 @@
     <div class="loading-wrap">
       <div class="snake-track"></div>
       <div class="loading-title">Scanning the web for customers of<br><strong id="loadingDomain" style="color:var(--accent)"></strong></div>
-      <div class="loading-sub">Searching reviews, case studies, job posts, tech databases — takes 30–60 seconds</div>
+      <div class="loading-sub">Scanning case studies, reviews &amp; tech databases — takes ~15 seconds</div>
       <div class="steps">
         <div class="step active" id="step1">🔍 Searching for customer mentions</div>
         <div class="step" id="step2">📊 Ranking signals by purchase intent</div>
@@ -369,15 +370,19 @@
         </table>
       </div>
 
-      <!-- Mini framework teaser above paywall -->
-      <div id="resultFrameworkTeaser" class="result-framework-teaser">
-        <div class="rft-title">The list is step 1. Here's what to do with it.</div>
+      <!-- Framework teaser — horizontal pills -->
+      <div class="result-framework-teaser">
+        <div class="rft-title">The list is step 1 — here's what to do with it</div>
         <div class="rft-steps">
-          <div class="rft-step"><span class="rft-n">01</span> Find competitor customers <span class="rft-done">← you're here</span></div>
-          <div class="rft-step"><span class="rft-n">02</span> Prioritize by signal strength</div>
-          <div class="rft-step"><span class="rft-n">03</span> Write competitor-aware outreach</div>
-          <div class="rft-step"><span class="rft-n">04</span> Sequence across email + LinkedIn</div>
-          <div class="rft-step"><span class="rft-n">05</span> Run it live with Danit → book below</div>
+          <div class="rft-step active"><span class="rft-n">01</span> Find competitor customers <span class="rft-done">you're here</span></div>
+          <span class="rft-arrow">→</span>
+          <div class="rft-step"><span class="rft-n">02</span> Enrich buying committee</div>
+          <span class="rft-arrow">→</span>
+          <div class="rft-step"><span class="rft-n">03</span> Write competitor outreach</div>
+          <span class="rft-arrow">→</span>
+          <div class="rft-step"><span class="rft-n">04</span> Sequence email + LinkedIn</div>
+          <span class="rft-arrow">→</span>
+          <div class="rft-step"><span class="rft-n">05</span> Run live with Danit ↓</div>
         </div>
       </div>
 

@@ -140,14 +140,13 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
     ]
 
     if tier == "lite":
-        return (
-            customer_signals[:6] +   # using, implemented, switched, moved, powered_by, integrates
-            job_postings[:2] +
-            tech_stack[:5] +         # all 5 intelligence databases
-            review_sites[:2] +
-            linkedin[:1] +
-            blog_press[:7]           # own_site (5) + top blog_press (2)
-        )
+        return [
+            customer_signals[0],   # "using {b}"
+            blog_press[0],         # site:{domain} customers
+            blog_press[1],         # site:{domain} "case study"
+            tech_stack[1],         # site:theirstack.com
+            review_sites[0],       # site:g2.com
+        ]
     if tier == "pro":
         return customer_signals + job_postings + tech_stack[:7] + review_sites + linkedin + blog_press
     # advanced: everything
