@@ -189,30 +189,30 @@
   .export-btn { background: none; border: 1px solid rgba(0,229,160,0.4); border-radius: 7px; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 11px; color: var(--green); cursor: pointer; transition: all 0.2s; }
   .export-btn:hover { background: rgba(0,229,160,0.1); }
 
-  /* FRAMEWORK BAND — distinct bg */
-  .framework-band { background: #0C1322; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 36px 24px 32px; margin-top: 8px; }
-  .framework-eyebrow { font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 6px; text-align: center; }
-  .framework-title { font-family: 'Inter', sans-serif; font-size: clamp(18px, 2.5vw, 24px); font-weight: 800; line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 6px; text-align: center; }
-  .framework-title span { background: linear-gradient(135deg, var(--accent), var(--accent2)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .framework-sub { font-size: 13px; color: var(--muted); line-height: 1.6; max-width: 500px; margin: 0 auto 22px; text-align: center; }
-  .fw-boxes { display: flex; gap: 8px; align-items: stretch; max-width: 1100px; margin: 0 auto 20px; }
-  .fw-box { flex: 1; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px 14px; position: relative; overflow: hidden; }
-  .fw-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; }
+  /* FRAMEWORK BAND — light blue, dark text */
+  .framework-band { background: #C8E6FF; border-top: 3px solid #3B82F6; border-bottom: 3px solid #3B82F6; padding: 48px 24px 44px; margin-top: 8px; }
+  .framework-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #1D4ED8; margin-bottom: 10px; text-align: center; }
+  .framework-title { font-family: 'Inter', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 12px; text-align: center; color: #0A1628; }
+  .framework-title span { color: #1D4ED8; -webkit-text-fill-color: #1D4ED8; background: none; }
+  .framework-sub { font-size: 18px; color: #1E3A5F; line-height: 1.6; max-width: 560px; margin: 0 auto 32px; text-align: center; font-weight: 500; }
+  .fw-boxes { display: flex; gap: 12px; align-items: stretch; max-width: 1100px; margin: 0 auto 28px; }
+  .fw-box { flex: 1; background: #fff; border: 2px solid #BFDBFE; border-radius: 12px; padding: 22px 18px; position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(59,130,246,0.1); }
+  .fw-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
   .fw-box:nth-child(1)::before { background: #3B82F6; }
-  .fw-box:nth-child(2)::before { background: var(--accent); }
-  .fw-box:nth-child(3)::before { background: var(--green); }
-  .fw-box:nth-child(4)::before { background: var(--amber); }
-  .fw-box:nth-child(5)::before { background: #A855F7; }
-  .fw-num { font-family: 'DM Mono', monospace; font-size: 10px; color: var(--muted); margin-bottom: 6px; }
-  .fw-title { font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 5px; line-height: 1.3; }
-  .fw-desc { font-size: 11px; color: var(--muted); line-height: 1.5; }
-  .fw-video-row { display: flex; align-items: center; gap: 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 18px; max-width: 1100px; margin: 0 auto; }
-  .fw-video-text { flex: 1; }
-  .fw-video-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 3px; }
-  .fw-video-title { font-size: 14px; font-weight: 700; color: var(--text); }
-  .fw-video-thumb { width: 160px; flex-shrink: 0; border-radius: 8px; overflow: hidden; position: relative; height: 90px; }
-  .fw-video-thumb iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
-  @media (max-width: 800px) { .fw-boxes { flex-wrap: wrap; } .fw-box { flex: 1 1 calc(50% - 4px); } .fw-video-thumb { width: 110px; height: 62px; } }
+  .fw-box:nth-child(2)::before { background: #06B6D4; }
+  .fw-box:nth-child(3)::before { background: #10B981; }
+  .fw-box:nth-child(4)::before { background: #F59E0B; }
+  .fw-num { font-family: 'DM Mono', monospace; font-size: 13px; color: #64748B; margin-bottom: 8px; font-weight: 600; }
+  .fw-title { font-size: 16px; font-weight: 800; color: #0A1628; margin-bottom: 8px; line-height: 1.3; }
+  .fw-desc { font-size: 14px; color: #334155; line-height: 1.6; }
+  .fw-here { display: inline-block; font-size: 11px; font-weight: 700; color: #fff; background: #3B82F6; border-radius: 8px; padding: 2px 10px; margin-top: 8px; letter-spacing: 0.05em; text-transform: uppercase; }
+  /* Full-width video */
+  .fw-video-wrap { max-width: 800px; margin: 0 auto; }
+  .fw-video-label { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1D4ED8; margin-bottom: 12px; text-align: center; }
+  .fw-video-title { font-size: 22px; font-weight: 800; color: #0A1628; text-align: center; margin-bottom: 20px; }
+  .fw-yt { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 14px; box-shadow: 0 8px 32px rgba(0,0,0,0.18); }
+  .fw-yt iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 14px; }
+  @media (max-width: 800px) { .fw-boxes { flex-wrap: wrap; } .fw-box { flex: 1 1 calc(50% - 6px); } }
 
   /* RESULT TEASER — horizontal pill steps */
   .result-framework-teaser { background: #0C1322; border: 1px solid var(--border-glow); border-radius: 12px; padding: 18px 20px; margin: 16px 0 0; text-align: center; }
@@ -283,7 +283,7 @@
 
   </div>
 
-  <!-- FRAMEWORK BAND — full width, different background -->
+  <!-- FRAMEWORK BAND — full width, light blue -->
   <div class="framework-band">
     <div class="framework-eyebrow">The Playbook</div>
     <h2 class="framework-title">How I 10X'd outbound using <span>competitor customers</span></h2>
@@ -293,37 +293,31 @@
       <div class="fw-box">
         <div class="fw-num">01</div>
         <div class="fw-title">Find who's buying from your competitor</div>
-        <div class="fw-desc">Scan case studies, reviews, job posts & tech databases for companies publicly using the tool.</div>
+        <div class="fw-desc">Scan case studies, reviews, job posts and tech databases for companies publicly using the tool.</div>
+        <div class="fw-here">You are here</div>
       </div>
       <div class="fw-box">
         <div class="fw-num">02</div>
         <div class="fw-title">Enrich their buying committee</div>
-        <div class="fw-desc">Find the decision makers — VP Sales, RevOps, CRO — not just the company name.</div>
+        <div class="fw-desc">Find the decision makers: VP Sales, RevOps, CRO. Not just the company name.</div>
       </div>
       <div class="fw-box">
         <div class="fw-num">03</div>
         <div class="fw-title">Write competitor-aware outreach</div>
-        <div class="fw-desc">"I saw you use [Competitor] — we help teams like yours who've outgrown it." Specificity converts.</div>
+        <div class="fw-desc">"I saw you use [Competitor]. We help teams like yours who've outgrown it." Specificity converts.</div>
       </div>
       <div class="fw-box">
         <div class="fw-num">04</div>
         <div class="fw-title">Sequence email + LinkedIn</div>
-        <div class="fw-desc">3-touch sequence over 5 days. These are warm accounts — treat them like inbound.</div>
-      </div>
-      <div class="fw-box">
-        <div class="fw-num">05</div>
-        <div class="fw-title">Run it live with Danit</div>
-        <div class="fw-desc">Book a session and we build your full campaign from the list we just generated — together.</div>
+        <div class="fw-desc">3-touch sequence over 5 days. These are warm accounts. Treat them like inbound.</div>
       </div>
     </div>
 
-    <div class="fw-video-row">
-      <div class="fw-video-text">
-        <div class="fw-video-label">Watch the full breakdown</div>
-        <div class="fw-video-title">How I 10X'd my outbound results using competitor intelligence</div>
-      </div>
-      <div class="fw-video-thumb">
-        <iframe src="https://www.youtube.com/embed/LKkJZPqJrwQ" title="10X outbound" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="fw-video-wrap">
+      <div class="fw-video-label">Watch the full breakdown</div>
+      <div class="fw-video-title">How I 10X'd my outbound results using switch campaign</div>
+      <div class="fw-yt">
+        <iframe src="https://www.youtube.com/embed/LKkJZPqJrwQ" title="10X outbound switch campaign" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </div>
