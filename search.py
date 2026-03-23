@@ -127,22 +127,26 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
         (f'site:{domain} customers', "own_site"),
         (f'site:{domain} "case study"', "own_site"),
         (f'site:{domain} "success story"', "own_site"),
+        (f'site:{domain} blog', "own_site"),
+        (f'site:{domain} testimonial', "own_site"),
+        (f'site:{domain} "customer story"', "own_site"),
         (f'"{b} customers"', "blog_press"),
         (f'"{b} case study"', "blog_press"),
         (f'"{b} success story"', "blog_press"),
         (f'"{b} customer"', "blog_press"),
+        (f'"{b} review" "company"', "blog_press"),
+        (f'site:reddit.com "{b}"', "blog_press"),
+        (f'"{b}" "we switched" OR "we moved" OR "we chose"', "blog_press"),
     ]
 
     if tier == "lite":
-        # Core queries from each group — ~22 queries total
-        # customer_signals[:5] picks: using, implemented, switched, moved, powered_by, integrates
         return (
             customer_signals[:6] +   # using, implemented, switched, moved, powered_by, integrates
             job_postings[:2] +
             tech_stack[:5] +         # all 5 intelligence databases
             review_sites[:2] +
             linkedin[:1] +
-            blog_press[:4]
+            blog_press[:7]           # own_site (5) + top blog_press (2)
         )
     if tier == "pro":
         return customer_signals + job_postings + tech_stack[:7] + review_sites + linkedin + blog_press

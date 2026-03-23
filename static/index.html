@@ -571,16 +571,25 @@
   async function goToPayment() {
     if (!currentResultId) { alert('Please run a search first.'); return; }
     const btn = document.getElementById('unlockBtn');
-    const email = document.getElementById('emailInput').value.trim();
-    if (email) {
-      try {
-        await fetch(`/api/results/${currentResultId}/email`, {
-          method: 'POST',
-          headers: {'Content-Type': 'application/json'},
-          body: JSON.stringify({ email })
-        });
-      } catch (_) {}
+    const emailInput = document.getElementById('emailInput');
+    const email = emailInput.value.trim();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      emailInput.style.border = '1.5px solid var(--red)';
+      emailInput.placeholder = 'Please enter your email first ↑';
+      emailInput.focus();
+      setTimeout(() => {
+        emailInput.style.border = '';
+        emailInput.placeholder = "your@email.com — we'll send you the results";
+      }, 3000);
+      return;
     }
+    try {
+      await fetch(`/api/results/${currentResultId}/email`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ email })
+      });
+    } catch (_) {}
     btn.textContent = 'Opening payment…'; btn.disabled = true;
     try {
       const res = await fetch(`/api/results/${currentResultId}/create-payment`, { method: 'POST' });

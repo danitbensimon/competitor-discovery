@@ -95,6 +95,24 @@ def filter_by_icp(companies: list, icp_industries: list, icp_size: str, icp_regi
     return filtered
 
 
+def filter_unknown_companies(companies: list) -> list:
+    """Remove entries with no real company name — e.g. 'Unknown', empty, or
+    vague descriptions like 'Unknown Europe-based company (600+ employees)'."""
+    result = []
+    for c in companies:
+        name = (c.get("company_name") or "").strip()
+        if not name:
+            continue
+        name_lower = name.lower()
+        # Drop anything that starts with "unknown" or is just a descriptor
+        if name_lower.startswith("unknown"):
+            continue
+        if name_lower in ("n/a", "none", "unnamed", "-", "company"):
+            continue
+        result.append(c)
+    return result
+
+
 # ── Pipeline ──────────────────────────────────────────────────────────────────
 
 def run_pipeline(domain: str, brand: str, mode: str, tier: str) -> list:
@@ -253,6 +271,7 @@ def _run_job(job_id: str, result_id: str, domain: str, tier: str, mode: str,
             if cached and cached.get("companies"):
                 log.info(f"[job {job_id}] cache hit for {domain}")
                 companies = cached["companies"]
+                companies = filter_unknown_companies(companies)
                 filtered = filter_by_icp(companies, icp_industries, icp_size, icp_region)
                 preview = filtered[:5]
                 db.save_companies(result_id, preview=preview, full=filtered)
@@ -265,6 +284,7 @@ def _run_job(job_id: str, result_id: str, domain: str, tier: str, mode: str,
                 return
 
         companies = run_pipeline(domain, brand, mode, tier)
+        companies = filter_unknown_companies(companies)
 
         if companies and mode == "live":
             save_cache(domain, companies, tier=tier)
