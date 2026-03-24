@@ -274,7 +274,7 @@ def _run_job(job_id: str, result_id: str, domain: str, tier: str, mode: str,
                 companies = cached["companies"]
                 companies = filter_unknown_companies(companies)
                 filtered = filter_by_icp(companies, icp_industries, icp_size, icp_region)
-                preview = filtered[:5]
+                preview = filtered[:10]
                 db.save_companies(result_id, preview=preview, full=filtered)
                 jobs[job_id].update({
                     "companies": companies,
@@ -291,7 +291,7 @@ def _run_job(job_id: str, result_id: str, domain: str, tier: str, mode: str,
             save_cache(domain, companies, tier=tier)
 
         filtered = filter_by_icp(companies, icp_industries, icp_size, icp_region)
-        preview = filtered[:5]
+        preview = filtered[:10]
 
         # Persist to DB
         db.save_companies(result_id, preview=preview, full=filtered)
