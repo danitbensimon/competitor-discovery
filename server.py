@@ -383,8 +383,26 @@ async def get_results(job_id: str):
     total = len(companies)
     unlocked = job.get("unlocked", False) or is_paid
 
-    visible = companies if (unlocked or total <= 5) else companies[:5]
-    locked_count = 0 if (unlocked or total <= 5) else max(0, total - 5)
+    FREE_LIMIT = 10
+    visible = companies if (unlocked or total <= FREE_LIMIT) else companies[:FREE_LIMIT]
+    locked_count = 0 if (unlocked or total <= FREE_LIMIT) else max(0, total - FREE_LIMIT)
+    locked_companies = [] if (unlocked or total <= FREE_LIMIT) else companies[FREE_LIMIT:]
+
+    # Collect unique signal sources from locked companies (for teaser strip)
+    SOURCE_LABELS = {
+        "own_site": "Case Studies",
+        "customer_signals": "Customer Mentions",
+        "review_sites": "G2 / Capterra Reviews",
+        "tech_stack": "Tech Stack Databases",
+        "job_postings": "Job Postings",
+        "linkedin": "LinkedIn",
+        "blog_press": "Blog & Press",
+    }
+    locked_sources = list(dict.fromkeys(
+        SOURCE_LABELS.get(c.get("signal_group", ""), c.get("signal_group", ""))
+        for c in locked_companies
+        if c.get("signal_group")
+    ))
 
     def clean(c):
         return {
@@ -410,6 +428,7 @@ async def get_results(job_id: str):
         "total": total,
         "preview": [clean(c) for c in visible],
         "locked": locked_count,
+        "locked_sources": locked_sources,
         "unlocked": unlocked,
         "from_cache": job.get("from_cache", False),
     }

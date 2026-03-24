@@ -184,6 +184,12 @@
   .meeting-section-sub { font-size: 14px; color: #334155; text-align: center; margin-bottom: 20px; }
   .meetings-iframe-container iframe { border-radius: 10px; }
   @media (max-width: 700px) { .unlock-value-bar { flex-wrap: wrap; } .uvb-arrow { display: none; } .uvb-item { flex: 1 1 40%; padding: 8px; } }
+  /* Sources teaser strip */
+  .sources-strip { display: none; align-items: center; gap: 10px; background: rgba(0,194,255,0.04); border: 1px solid var(--border); border-radius: 10px; padding: 11px 18px; margin: 10px 0 0; flex-wrap: wrap; }
+  .sources-strip.visible { display: flex; }
+  .sources-strip-label { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+  .sources-strip-divider { width: 1px; height: 14px; background: var(--border); flex-shrink: 0; }
+  .source-pill { font-size: 11px; font-weight: 600; color: var(--accent); background: rgba(0,194,255,0.07); border: 1px solid rgba(0,194,255,0.2); padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
   .payment-polling { font-size: 12px; color: var(--accent); margin-top: 10px; display: none; }
   .payment-polling.visible { display: block; }
   .export-bar { display: none; align-items: center; justify-content: space-between; background: rgba(0,229,160,0.05); border: 1px solid rgba(0,229,160,0.2); border-radius: 10px; padding: 12px 20px; margin-top: 12px; flex-wrap: wrap; gap: 10px; }
@@ -376,6 +382,13 @@
         </table>
       </div>
 
+
+      <!-- SOURCES TEASER STRIP -->
+      <div class="sources-strip" id="sourcesStrip">
+        <span class="sources-strip-label">🔒 Also found in full list</span>
+        <div class="sources-strip-divider"></div>
+        <div id="sourcesPills"></div>
+      </div>
 
       <div id="lockWall">
         <div class="unlock-banner">
@@ -586,16 +599,25 @@
         freeNote.style.display = 'block';
       }
     }
+    // Sources teaser strip
+    const sources = data.locked_sources || [];
+    const strip = document.getElementById('sourcesStrip');
+    const pills = document.getElementById('sourcesPills');
+    if (strip && pills && sources.length > 0 && !data.unlocked) {
+      pills.innerHTML = sources.map(s => `<span class="source-pill">${s}</span>`).join(' ');
+      strip.classList.add('visible');
+    } else if (strip) {
+      strip.classList.remove('visible');
+    }
+
     if (data.unlocked) {
       // Paid — hide the lockWall paywall but keep the calendar visible
       document.getElementById('lockWall').style.display = 'none';
       document.getElementById('exportBar').classList.add('visible');
       document.getElementById('exportCount').textContent = total;
-      // Show standalone calendar after unlock
       const mc = document.getElementById('meetingEmbed');
       if (mc) { mc.style.display = 'block'; mc.scrollIntoView({behavior:'smooth', block:'start'}); }
     } else {
-      // Always show the CTA section
       document.getElementById('lockWall').style.display = 'block';
       document.getElementById('exportBar').classList.remove('visible');
     }
