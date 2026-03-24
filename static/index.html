@@ -579,7 +579,7 @@
     const freeNote = document.getElementById('freeNote');
     if (freeNote) {
       if (locked > 0) {
-        freeNote.textContent = `${locked + preview} companies found — 10 shown free`;
+        freeNote.textContent = `${locked + preview} companies found — ${preview} shown free`;
         freeNote.style.display = 'block';
       } else {
         freeNote.textContent = `${total} companies found`;
