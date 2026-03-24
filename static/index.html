@@ -594,7 +594,7 @@
 
   function renderResults(data) {
     document.getElementById('searchBtn').disabled = false;
-    document.getElementById('statTotal').textContent = data.total || 0;
+    const statEl = document.getElementById('statTotal'); if (statEl) statEl.textContent = data.total || 0;
     const domainEl = document.getElementById('resultDomain');
     if (domainEl) domainEl.textContent = document.getElementById('domainInput').value.trim() || (data.preview && data.preview[0] && data.preview[0].competitor_domain) || '';
 
