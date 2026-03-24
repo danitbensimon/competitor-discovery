@@ -152,21 +152,29 @@
   .icp-high { color: var(--green); border-color: rgba(0,229,160,0.3); background: rgba(0,229,160,0.07); }
   .icp-medium { color: var(--amber); border-color: rgba(255,176,32,0.3); background: rgba(255,176,32,0.07); }
   .icp-low { color: var(--muted); border-color: var(--border); }
-  .unlock-banner { background: var(--surface); border: 1px solid var(--border-glow); border-radius: 14px; padding: 32px 28px; text-align: center; position: relative; overflow: hidden; margin-top: 12px; }
-  .unlock-banner::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: linear-gradient(90deg, var(--accent2), var(--accent)); }
-  .unlock-eyebrow { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); background: rgba(0,194,255,0.07); border: 1px solid rgba(0,194,255,0.2); padding: 4px 14px; border-radius: 20px; margin-bottom: 14px; }
-  .unlock-title { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 800; margin-bottom: 10px; line-height: 1.2; }
-  .unlock-sub { font-size: 15px; color: var(--muted); margin-bottom: 24px; line-height: 1.7; max-width: 500px; margin-left: auto; margin-right: auto; }
-  .unlock-sub strong { color: var(--text); }
-  .unlock-value-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; max-width: 620px; margin: 0 auto 24px; text-align: left; }
-  .unlock-value-item { display: flex; gap: 14px; align-items: flex-start; background: #0C1322; border: 1px solid var(--border-glow); border-radius: 12px; padding: 18px 16px; }
-  .unlock-value-icon { font-size: 26px; line-height: 1; flex-shrink: 0; margin-top: 2px; }
-  .unlock-value-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 5px; }
-  .unlock-value-desc { font-size: 12px; color: var(--muted); line-height: 1.5; }
+  .unlock-banner { background: #C8E6FF; border: 2px solid #3B82F6; border-radius: 14px; padding: 32px 28px; text-align: center; position: relative; overflow: hidden; margin-top: 12px; }
+  .unlock-banner::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #1D4ED8, #3B82F6, #06B6D4); }
+  .unlock-eyebrow { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #1D4ED8; background: rgba(29,78,216,0.1); border: 1px solid rgba(29,78,216,0.3); padding: 4px 14px; border-radius: 20px; margin-bottom: 14px; }
+  .unlock-title { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 800; margin-bottom: 10px; line-height: 1.2; color: #0A1628; }
+  .unlock-sub { font-size: 15px; color: #1E3A5F; margin-bottom: 24px; line-height: 1.7; max-width: 520px; margin-left: auto; margin-right: auto; }
+  .unlock-sub strong { color: #0A1628; }
+  .unlock-value-grid { display: flex; gap: 12px; max-width: 900px; margin: 0 auto 24px; text-align: left; }
+  .unlock-value-item { flex: 1; display: flex; gap: 12px; align-items: flex-start; background: #fff; border: 1.5px solid #BFDBFE; border-radius: 12px; padding: 16px 14px; box-shadow: 0 2px 8px rgba(59,130,246,0.1); }
+  .unlock-value-icon { font-size: 22px; line-height: 1; flex-shrink: 0; margin-top: 2px; }
+  .unlock-value-title { font-size: 13px; font-weight: 700; color: #0A1628; margin-bottom: 4px; }
+  .unlock-value-desc { font-size: 11px; color: #334155; line-height: 1.5; }
   .price-tag { display: inline-flex; align-items: baseline; gap: 4px; margin-bottom: 16px; }
-  .price-currency { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; color: var(--muted); align-self: flex-start; margin-top: 4px; }
-  .price-amount { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 800; color: var(--text); line-height: 1; }
-  .price-note { font-size: 11px; color: var(--muted); margin-left: 4px; }
+  .price-currency { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; color: #1E3A5F; align-self: flex-start; margin-top: 4px; }
+  .price-amount { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 800; color: #0A1628; line-height: 1; }
+  .price-note { font-size: 11px; color: #334155; margin-left: 4px; }
+  /* CMO Club stripe */
+  .cmo-club-stripe { background: #0A1628; border: 1.5px solid #3B82F6; border-radius: 12px; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
+  .cmo-club-label { font-size: 13px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; }
+  .cmo-club-badge { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: #1D4ED8; border-radius: 6px; padding: 2px 8px; }
+  .cmo-club-free { font-size: 13px; font-weight: 800; color: #00E5A0; }
+  .cmo-club-wa { display: inline-flex; align-items: center; gap: 6px; background: #25D366; color: #fff; font-size: 13px; font-weight: 700; padding: 8px 18px; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; white-space: nowrap; }
+  .cmo-club-wa:hover { opacity: 0.88; }
+  @media (max-width: 700px) { .unlock-value-grid { flex-wrap: wrap; } .unlock-value-item { flex: 1 1 calc(50% - 6px); } }
   .email-capture { display: flex; gap: 0; max-width: 380px; margin: 0 auto 16px; border-radius: 8px; overflow: hidden; border: 1px solid #2A3F58; }
   .email-capture input { flex: 1; background: #0D1520; border: none; padding: 11px 14px; font-family: 'DM Mono', monospace; font-size: 12px; color: var(--text); outline: none; }
   .email-capture input::placeholder { color: #4A6A84; }
@@ -347,7 +355,7 @@
             <span style="font-size:12px;color:var(--muted);letter-spacing:0.05em">Customers of <span id="resultDomain" style="color:var(--accent);font-weight:700;font-size:14px"></span></span>
             <span style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--amber);background:rgba(255,176,32,0.08);border:1px solid rgba(255,176,32,0.25);padding:2px 9px;border-radius:20px;">⚡ Lite Search</span>
           </div>
-          <div class="results-headline"><span id="statTotal">0</span> companies found using your competitor</div>
+          <div class="results-headline">5 companies <span>free</span> — unlock more below</div>
           <div id="freeNote" style="display:none;margin-top:8px;font-size:13px;color:var(--muted)"></div>
         </div>
         <button class="new-search-btn" onclick="resetToHome()">← New Search</button>
@@ -384,13 +392,22 @@
         </div>
       </div>
 
+      <!-- CMO CLUB STRIPE -->
+      <div class="cmo-club-stripe" id="cmoClubStripe" style="display:none">
+        <div class="cmo-club-label">
+          <span class="cmo-club-badge">CMO Club</span>
+          Members get this <span class="cmo-club-free">free</span>
+        </div>
+        <a class="cmo-club-wa" href="https://wa.me/972546890011?text=Unlock%20the%20full%20competitor%20customers%20list" target="_blank">💬 Message Danit on WhatsApp</a>
+      </div>
+
       <div id="lockWall" style="display:none">
         <div class="unlock-banner">
           <div class="unlock-eyebrow">🎯 Strategy Session + Full Intelligence List</div>
           <div class="unlock-title">Turn competitor customers into<br>your pipeline</div>
           <div class="unlock-sub">
-            You're seeing <strong style="color:var(--text)">5 companies free.</strong>
-            Unlock <strong id="lockedCountText" style="color:var(--accent)">all results</strong> + book a 1:1 session with Danit to build your outbound campaign around them.
+            You're seeing <strong>5 companies free.</strong>
+            Unlock <strong id="lockedCountText">more companies</strong> + book a 1:1 session with Danit to build your full outbound campaign around them.
           </div>
 
           <div class="unlock-value-grid">
@@ -434,11 +451,6 @@
             <input type="email" id="emailInput" placeholder="your@email.com — we'll send you the results" autocomplete="email" />
           </div>
           <button class="unlock-btn" id="unlockBtn" onclick="goToPayment()">Book Session + Unlock List — $69</button>
-          <div id="alreadyPaidRow" style="display:none;margin-top:14px">
-            <button onclick="confirmUnlock()" style="background:none;border:none;color:var(--green);font-family:'DM Mono',monospace;font-size:12px;cursor:pointer;text-decoration:underline;">
-              ✓ I've completed payment — unlock my results
-            </button>
-          </div>
           <div class="payment-polling" id="paymentPolling">⏳ Checking payment status…</div>
         </div>
       </div>
@@ -605,22 +617,24 @@
     const freeNote = document.getElementById('freeNote');
     if (freeNote) {
       if (locked > 0) {
-        freeNote.textContent = `Showing ${preview} of ${total} companies free — unlock to see all ${total}`;
+        freeNote.textContent = `${locked + preview} companies found — 5 shown free`;
         freeNote.style.display = 'block';
       } else {
-        freeNote.textContent = `Showing all ${total} companies`;
+        freeNote.textContent = `${total} companies found`;
         freeNote.style.display = 'block';
       }
     }
     if (data.unlocked) {
       document.getElementById('lockWall').style.display = 'none';
+      const cmoStripe = document.getElementById('cmoClubStripe'); if (cmoStripe) cmoStripe.style.display = 'none';
       document.getElementById('exportBar').classList.add('visible');
       document.getElementById('exportCount').textContent = total;
       document.getElementById('meetingEmbed').style.display = 'block';
     } else if (locked > 0) {
       // Always show the paywall whenever there are locked companies
-      document.getElementById('lockedCountText').textContent = `${locked} more companies`;
+      document.getElementById('lockedCountText').textContent = 'more companies';
       document.getElementById('lockWall').style.display = 'block';
+      const cmoStripe = document.getElementById('cmoClubStripe'); if (cmoStripe) cmoStripe.style.display = 'flex';
       document.getElementById('exportBar').classList.remove('visible');
     } else if (false) {
       // (kept for structure — no longer used)
@@ -660,7 +674,6 @@
       const data = await res.json();
       if (data.already_paid) { await applyUnlockToken(data.unlock_token); return; }
       window.open(data.payment_url, '_blank');
-      document.getElementById('alreadyPaidRow').style.display = 'block';
       btn.textContent = 'Unlock Full List — $69'; btn.disabled = false;
     } catch (err) {
       btn.textContent = 'Unlock Full List — $69'; btn.disabled = false;
