@@ -245,7 +245,7 @@ def run_pipeline(domain: str, brand: str, mode: str, tier: str) -> list:
     if not normalized:
         return []
 
-    extracted = extract_companies(normalized, brand=brand, fetch_content=(tier != "lite"))
+    extracted = extract_companies(normalized, brand=brand, fetch_content=True)
     if not extracted:
         return []
 

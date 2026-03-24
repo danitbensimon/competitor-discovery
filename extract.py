@@ -3,6 +3,7 @@
 
 import re
 import anthropic
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from fetch import fetch_page_text
 
 client = anthropic.Anthropic()
@@ -46,28 +47,41 @@ def score_confidence(text: str, brand: str = "Deel") -> str:
     return "low"
 
 
+def _fetch_one(page: dict, fetch_content: bool) -> dict:
+    """Fetch a single page and return enriched dict with text + confidence."""
+    if fetch_content:
+        content = fetch_page_text(page["url"])
+        text = content if content else f"{page.get('title', '')} {page.get('snippet', '')}"
+    else:
+        text = f"{page.get('title', '')} {page.get('snippet', '')}"
+    return {**page, "_text": text}
+
+
 def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: bool = True) -> list[dict]:
     """
     For each page:
-      1. Optionally download full page content (skipped when fetch_content=False)
+      1. Download page content in parallel (or use snippet only when fetch_content=False)
       2. Score confidence based on signal phrases
-      3. Skip low-confidence pages
-      4. Use Claude to extract company name and domain
+      3. Use Claude to extract company name and domain
     Returns a list of company evidence rows.
     """
 
     qualified_pages = []
 
-    print(f"  {'Fetching' if fetch_content else 'Using snippets for'} {len(pages)} pages...")
-    for i, page in enumerate(pages):
-        print(f"    [{i+1}/{len(pages)}] {page['url'][:80]}", end=" ", flush=True)
+    print(f"  Parallel {'fetching' if fetch_content else 'snippet'} for {len(pages)} pages...")
 
-        if fetch_content:
-            content = fetch_page_text(page["url"])
-            text = content if content else f"{page.get('title', '')} {page.get('snippet', '')}"
-        else:
-            text = f"{page.get('title', '')} {page.get('snippet', '')}"
+    # Fetch all pages concurrently — stays within ~10s regardless of page count
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = {executor.submit(_fetch_one, page, fetch_content): page for page in pages}
+        enriched = []
+        for future in as_completed(futures):
+            try:
+                enriched.append(future.result())
+            except Exception as e:
+                print(f"  Fetch error: {e}")
 
+    for page in enriched:
+        text = page.pop("_text", "")
         url_lower = page["url"].lower()
         signal_group = page.get("signal_group", "") or page.get("group", "")
 
@@ -79,8 +93,6 @@ def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: boo
             confidence = "medium"
         else:
             confidence = score_confidence(text, brand)
-
-        print(f"→ {confidence}")
 
         if confidence in ("high", "medium", "low"):
             qualified_pages.append({
