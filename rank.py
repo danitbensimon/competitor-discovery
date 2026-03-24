@@ -1,7 +1,7 @@
 from urllib.parse import urlparse
 
 TIER_LIMITS = {
-    "lite": 10,
+    "lite": 6,
     "pro": 200,
     "advanced": 400,
 }

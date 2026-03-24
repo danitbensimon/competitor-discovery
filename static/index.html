@@ -296,7 +296,7 @@
 
     <!-- VIDEO FIRST -->
     <div class="fw-video-wrap">
-      <div class="fw-video-label">Watch the full breakdown</div>
+      <div class="fw-video-label">Watch the Case Study</div>
       <div class="fw-video-title">How I 10X'd my outbound results using switch campaign</div>
       <div class="fw-yt">
         <iframe src="https://www.youtube.com/embed/LKkJZPqJrwQ" title="10X outbound switch campaign" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -384,30 +384,6 @@
         </table>
       </div>
 
-      <!-- Framework teaser — horizontal pills -->
-      <div class="result-framework-teaser">
-        <div class="rft-title">The list is step 1 — here's what to do with it</div>
-        <div class="rft-steps">
-          <div class="rft-step active"><span class="rft-n">01</span> Find competitor customers <span class="rft-done">you're here</span></div>
-          <span class="rft-arrow">→</span>
-          <div class="rft-step"><span class="rft-n">02</span> Enrich buying committee</div>
-          <span class="rft-arrow">→</span>
-          <div class="rft-step"><span class="rft-n">03</span> Write competitor outreach</div>
-          <span class="rft-arrow">→</span>
-          <div class="rft-step"><span class="rft-n">04</span> Sequence email + LinkedIn</div>
-          <span class="rft-arrow">→</span>
-          <div class="rft-step"><span class="rft-n">05</span> Run live with Danit ↓</div>
-        </div>
-      </div>
-
-      <!-- CMO CLUB STRIPE -->
-      <div class="cmo-club-stripe" id="cmoClubStripe" style="display:none">
-        <div class="cmo-club-label">
-          <span class="cmo-club-badge">CMO Club</span>
-          Members get this <span class="cmo-club-free">free</span>
-        </div>
-        <a class="cmo-club-wa" href="https://wa.me/972546890011?text=Unlock%20the%20full%20competitor%20customers%20list" target="_blank">💬 Message Danit on WhatsApp</a>
-      </div>
 
       <div id="lockWall" style="display:none">
         <div class="unlock-banner">
@@ -453,6 +429,14 @@
             <span class="price-currency">$</span>
             <span class="price-amount">69</span>
             <span class="price-note">one-time · includes the session</span>
+          </div>
+
+          <div style="margin:-8px 0 20px;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;">
+            <span style="font-size:13px;color:#334155;">
+              <span style="background:#0A1628;color:#fff;font-size:10px;font-weight:700;letter-spacing:0.08em;padding:2px 8px;border-radius:5px;text-transform:uppercase;margin-right:6px;">CMO Club</span>
+              Members get this <strong style="color:#059669;">free</strong>
+            </span>
+            <a href="https://mycmoclub.com" target="_blank" style="font-size:12px;font-weight:700;color:#1D4ED8;text-decoration:none;border-bottom:1px solid #1D4ED8;">Apply at MyCMOClub.com →</a>
           </div>
 
           <div class="email-capture">
@@ -634,15 +618,12 @@
     }
     if (data.unlocked) {
       document.getElementById('lockWall').style.display = 'none';
-      const cmoStripe = document.getElementById('cmoClubStripe'); if (cmoStripe) cmoStripe.style.display = 'none';
       document.getElementById('exportBar').classList.add('visible');
       document.getElementById('exportCount').textContent = total;
       document.getElementById('meetingEmbed').style.display = 'block';
     } else if (locked > 0) {
-      // Always show the paywall whenever there are locked companies
       document.getElementById('lockedCountText').textContent = 'more companies';
       document.getElementById('lockWall').style.display = 'block';
-      const cmoStripe = document.getElementById('cmoClubStripe'); if (cmoStripe) cmoStripe.style.display = 'flex';
       document.getElementById('exportBar').classList.remove('visible');
     } else if (false) {
       // (kept for structure — no longer used)

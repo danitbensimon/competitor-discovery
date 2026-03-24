@@ -46,10 +46,10 @@ def score_confidence(text: str, brand: str = "Deel") -> str:
     return "low"
 
 
-def extract_companies(pages: list[dict], brand: str = "Deel") -> list[dict]:
+def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: bool = True) -> list[dict]:
     """
     For each page:
-      1. Download full page content
+      1. Optionally download full page content (skipped when fetch_content=False)
       2. Score confidence based on signal phrases
       3. Skip low-confidence pages
       4. Use Claude to extract company name and domain
@@ -58,12 +58,15 @@ def extract_companies(pages: list[dict], brand: str = "Deel") -> list[dict]:
 
     qualified_pages = []
 
-    print(f"  Fetching content for {len(pages)} pages...")
+    print(f"  {'Fetching' if fetch_content else 'Using snippets for'} {len(pages)} pages...")
     for i, page in enumerate(pages):
         print(f"    [{i+1}/{len(pages)}] {page['url'][:80]}", end=" ", flush=True)
 
-        content = fetch_page_text(page["url"])
-        text = content if content else f"{page.get('title', '')} {page.get('snippet', '')}"
+        if fetch_content:
+            content = fetch_page_text(page["url"])
+            text = content if content else f"{page.get('title', '')} {page.get('snippet', '')}"
+        else:
+            text = f"{page.get('title', '')} {page.get('snippet', '')}"
 
         url_lower = page["url"].lower()
         signal_group = page.get("signal_group", "") or page.get("group", "")
