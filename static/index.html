@@ -290,14 +290,11 @@
 
   <!-- FRAMEWORK BAND — full width, light blue, inside searchSection so it hides on search -->
   <div class="framework-band">
-    <div class="framework-eyebrow">The Playbook</div>
-    <h2 class="framework-title">How I 10X'd outbound using <span>competitor customers</span></h2>
-    <p class="framework-sub">Your competitor's customers already have the budget, the use case, and the pain. They're the warmest list you'll ever reach.</p>
 
     <!-- VIDEO FIRST -->
     <div class="fw-video-wrap">
       <div class="fw-video-label">Watch the Case Study</div>
-      <div class="fw-video-title">How I 10X'd my outbound results using switch campaign</div>
+      <div class="fw-video-title">How I 10X'd outbound results using competitor customers</div>
       <div class="fw-yt">
         <iframe src="https://www.youtube.com/embed/LKkJZPqJrwQ" title="10X outbound switch campaign" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
@@ -385,11 +382,11 @@
       </div>
 
 
-      <div id="lockWall" style="display:none">
+      <div id="lockWall">
         <div class="unlock-banner">
           <div class="unlock-eyebrow">🎯 Strategy Session + Full Intelligence List</div>
           <div class="unlock-title">Turn competitor customers into<br>your pipeline</div>
-          <div class="unlock-sub">
+          <div class="unlock-sub" id="lockWallSub">
             You're seeing <strong>5 companies free.</strong>
             Unlock <strong id="lockedCountText">more companies</strong> + book a 1:1 session with Danit to build your full outbound campaign around them.
           </div>
@@ -621,16 +618,18 @@
       document.getElementById('exportBar').classList.add('visible');
       document.getElementById('exportCount').textContent = total;
       document.getElementById('meetingEmbed').style.display = 'block';
-    } else if (locked > 0) {
-      document.getElementById('lockedCountText').textContent = 'more companies';
+    } else {
+      // Always show the CTA — adjust messaging based on whether there are locked companies
       document.getElementById('lockWall').style.display = 'block';
       document.getElementById('exportBar').classList.remove('visible');
-    } else if (false) {
-      // (kept for structure — no longer used)
-      if (data.companies) renderAllFree(data.companies);
-    } else {
-      document.getElementById('lockWall').style.display = 'none';
-      document.getElementById('exportBar').classList.remove('visible');
+      const subEl = document.getElementById('lockWallSub');
+      if (locked > 0) {
+        document.getElementById('lockedCountText').textContent = 'more companies';
+        if (subEl) subEl.innerHTML = `You're seeing <strong>5 companies free.</strong> Unlock <strong id="lockedCountText">more companies</strong> + book a 1:1 session with Danit to build your full outbound campaign around them.`;
+      } else {
+        // All results shown — still push the session booking
+        if (subEl) subEl.innerHTML = `You've seen the full list. Book a 1:1 session with Danit to <strong>build your outbound campaign</strong> around these competitor customers.`;
+      }
     }
     showSection('resultsSection');
   }
