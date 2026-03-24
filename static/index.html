@@ -152,43 +152,38 @@
   .icp-high { color: var(--green); border-color: rgba(0,229,160,0.3); background: rgba(0,229,160,0.07); }
   .icp-medium { color: var(--amber); border-color: rgba(255,176,32,0.3); background: rgba(255,176,32,0.07); }
   .icp-low { color: var(--muted); border-color: var(--border); }
-  .unlock-banner { background: #C8E6FF; border: 2px solid #3B82F6; border-radius: 14px; padding: 32px 28px; text-align: center; position: relative; overflow: hidden; margin-top: 12px; }
-  .unlock-banner::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, #1D4ED8, #3B82F6, #06B6D4); }
-  .unlock-eyebrow { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #1D4ED8; background: rgba(29,78,216,0.1); border: 1px solid rgba(29,78,216,0.3); padding: 4px 14px; border-radius: 20px; margin-bottom: 14px; }
-  .unlock-title { font-family: 'Inter', sans-serif; font-size: 26px; font-weight: 800; margin-bottom: 10px; line-height: 1.2; color: #0A1628; }
-  .unlock-sub { font-size: 15px; color: #1E3A5F; margin-bottom: 24px; line-height: 1.7; max-width: 520px; margin-left: auto; margin-right: auto; }
-  .unlock-sub strong { color: #0A1628; }
-  .unlock-value-grid { display: flex; gap: 12px; max-width: 900px; margin: 0 auto 24px; text-align: left; }
-  .unlock-value-item { flex: 1; display: flex; gap: 12px; align-items: flex-start; background: #fff; border: 1.5px solid #BFDBFE; border-radius: 12px; padding: 16px 14px; box-shadow: 0 2px 8px rgba(59,130,246,0.1); }
-  .unlock-value-icon { font-size: 22px; line-height: 1; flex-shrink: 0; margin-top: 2px; }
-  .unlock-value-title { font-size: 13px; font-weight: 700; color: #0A1628; margin-bottom: 4px; }
-  .unlock-value-desc { font-size: 11px; color: #334155; line-height: 1.5; }
-  .price-tag { display: inline-flex; align-items: baseline; gap: 4px; margin-bottom: 16px; }
-  .price-currency { font-family: 'Inter', sans-serif; font-size: 20px; font-weight: 700; color: #1E3A5F; align-self: flex-start; margin-top: 4px; }
-  .price-amount { font-family: 'Inter', sans-serif; font-size: 44px; font-weight: 800; color: #0A1628; line-height: 1; }
-  .price-note { font-size: 11px; color: #334155; margin-left: 4px; }
-  /* CMO Club stripe */
-  .cmo-club-stripe { background: #0A1628; border: 1.5px solid #3B82F6; border-radius: 12px; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between; gap: 16px; margin-top: 12px; flex-wrap: wrap; }
-  .cmo-club-label { font-size: 13px; font-weight: 700; color: #fff; display: flex; align-items: center; gap: 8px; }
-  .cmo-club-badge { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #fff; background: #1D4ED8; border-radius: 6px; padding: 2px 8px; }
-  .cmo-club-free { font-size: 13px; font-weight: 800; color: #00E5A0; }
-  .cmo-club-wa { display: inline-flex; align-items: center; gap: 6px; background: #25D366; color: #fff; font-size: 13px; font-weight: 700; padding: 8px 18px; border-radius: 8px; text-decoration: none; transition: opacity 0.2s; white-space: nowrap; }
-  .cmo-club-wa:hover { opacity: 0.88; }
-  @media (max-width: 700px) { .unlock-value-grid { flex-wrap: wrap; } .unlock-value-item { flex: 1 1 calc(50% - 6px); } }
-  .email-capture { display: flex; gap: 0; max-width: 380px; margin: 0 auto 16px; border-radius: 8px; overflow: hidden; border: 1px solid #2A3F58; }
-  .email-capture input { flex: 1; background: #0D1520; border: none; padding: 11px 14px; font-family: 'DM Mono', monospace; font-size: 12px; color: var(--text); outline: none; }
-  .email-capture input::placeholder { color: #4A6A84; }
-  .unlock-btn { display: inline-flex; align-items: center; gap: 8px; background: linear-gradient(135deg, var(--accent2), var(--accent)); border: none; border-radius: 10px; padding: 14px 36px; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700; color: #fff; cursor: pointer; letter-spacing: 0.02em; transition: opacity 0.2s, transform 0.15s; box-shadow: 0 4px 20px rgba(0,102,255,0.25); }
-  .unlock-btn:hover { opacity: 0.9; transform: translateY(-1px); box-shadow: 0 6px 28px rgba(0,102,255,0.35); }
-  .unlock-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
-  .meeting-banner { background: var(--surface); border: 1px solid rgba(0,229,160,0.2); border-radius: 14px; padding: 24px; overflow: hidden; }
-  .meeting-banner::before { content: ''; display: block; height: 2px; background: linear-gradient(90deg, var(--green), var(--accent)); margin: -24px -24px 24px; }
-  .meeting-banner-header { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 20px; }
-  .meeting-banner-icon { font-size: 28px; line-height: 1; flex-shrink: 0; }
-  .meeting-banner-title { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 4px; }
-  .meeting-banner-sub { font-size: 13px; color: var(--muted); line-height: 1.5; }
+  /* CTA / Unlock section */
+  .unlock-banner { background: #C8E6FF; border: 2px solid #3B82F6; border-radius: 16px; padding: 32px 28px 28px; text-align: center; position: relative; overflow: hidden; margin-top: 16px; }
+  .unlock-eyebrow { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #1D4ED8; background: rgba(29,78,216,0.1); border: 1px solid rgba(29,78,216,0.3); padding: 5px 16px; border-radius: 20px; margin-bottom: 16px; }
+  .unlock-title { font-family: 'Inter', sans-serif; font-size: 30px; font-weight: 800; margin-bottom: 8px; line-height: 1.2; color: #0A1628; }
+  .unlock-sub { font-size: 16px; color: #1E3A5F; margin-bottom: 22px; line-height: 1.6; max-width: 520px; margin-left: auto; margin-right: auto; }
+  /* Dark blue value bar */
+  .unlock-value-bar { background: #1E3A70; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; justify-content: center; gap: 0; margin: 0 auto 24px; max-width: 860px; }
+  .uvb-item { flex: 1; text-align: center; padding: 0 12px; }
+  .uvb-icon { font-size: 28px; margin-bottom: 8px; }
+  .uvb-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .uvb-desc { font-size: 12px; color: #93C5FD; line-height: 1.4; }
+  .uvb-arrow { color: #60A5FA; font-size: 20px; font-weight: 700; flex-shrink: 0; padding: 0 4px; }
+  /* Price row */
+  .unlock-price-row { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 18px; flex-wrap: wrap; }
+  .unlock-price-amt { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 800; color: #0A1628; }
+  .unlock-price-note { font-size: 14px; color: #334155; }
+  .cmo-free-badge { background: #0A1628; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; white-space: nowrap; }
+  /* Email + button */
+  .email-capture { display: flex; gap: 0; max-width: 480px; margin: 0 auto 12px; border-radius: 10px; overflow: hidden; border: 1.5px solid #93C5FD; background: #fff; }
+  .email-capture input { flex: 1; background: #fff; border: none; padding: 13px 16px; font-family: 'Inter', sans-serif; font-size: 14px; color: #0A1628; outline: none; }
+  .email-capture input::placeholder { color: #94A3B8; }
+  .unlock-btn { display: block; width: 100%; max-width: 480px; margin: 0 auto; background: #1D4ED8; border: none; border-radius: 10px; padding: 15px; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; color: #fff; cursor: pointer; transition: background 0.2s, transform 0.15s; }
+  .unlock-btn:hover { background: #1E40AF; transform: translateY(-1px); }
+  .unlock-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+  .cmo-club-link { font-size: 13px; color: #334155; margin-top: 12px; }
+  .cmo-club-link a { color: #1D4ED8; font-weight: 600; }
+  /* Meeting embed */
+  .meeting-section { margin-top: 20px; background: #fff; border: 2px solid #BFDBFE; border-radius: 16px; padding: 24px; }
+  .meeting-section-title { font-size: 18px; font-weight: 800; color: #0A1628; margin-bottom: 4px; text-align: center; }
+  .meeting-section-sub { font-size: 14px; color: #334155; text-align: center; margin-bottom: 20px; }
   .meetings-iframe-container iframe { border-radius: 10px; }
-  @media (max-width: 560px) { .unlock-value-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 700px) { .unlock-value-bar { flex-wrap: wrap; } .uvb-arrow { display: none; } .uvb-item { flex: 1 1 40%; padding: 8px; } }
   .payment-polling { font-size: 12px; color: var(--accent); margin-top: 10px; display: none; }
   .payment-polling.visible { display: block; }
   .export-bar { display: none; align-items: center; justify-content: space-between; background: rgba(0,229,160,0.05); border: 1px solid rgba(0,229,160,0.2); border-radius: 10px; padding: 12px 20px; margin-top: 12px; flex-wrap: wrap; gap: 10px; }
@@ -384,81 +379,59 @@
 
       <div id="lockWall">
         <div class="unlock-banner">
-          <div class="unlock-eyebrow">🎯 Strategy Session + Full Intelligence List</div>
-          <div class="unlock-title">Turn competitor customers into<br>your pipeline</div>
-          <div class="unlock-sub" id="lockWallSub">
-            You're seeing <strong>5 companies free.</strong>
-            Unlock <strong id="lockedCountText">more companies</strong> + book a 1:1 session with Danit to build your full outbound campaign around them.
-          </div>
+          <div class="unlock-eyebrow">@ Strategy Session</div>
+          <div class="unlock-title">Turn Competitor Customers into Your Pipeline</div>
+          <div class="unlock-sub" id="lockWallSub">Book your 1:1 strategy session with Danit to build your campaign.</div>
 
-          <div class="unlock-value-grid">
-            <div class="unlock-value-item">
-              <div class="unlock-value-icon">📋</div>
-              <div>
-                <div class="unlock-value-title">Full company list</div>
-                <div class="unlock-value-desc">Every company with verified domain, industry & signal source</div>
-              </div>
+          <div class="unlock-value-bar">
+            <div class="uvb-item">
+              <div class="uvb-icon">📋</div>
+              <div class="uvb-title">Full List:</div>
+              <div class="uvb-desc">Verified domains &amp; signals.</div>
             </div>
-            <div class="unlock-value-item">
-              <div class="unlock-value-icon">📞</div>
-              <div>
-                <div class="unlock-value-title">30-min strategy session with Danit</div>
-                <div class="unlock-value-desc">Book directly after payment — walk through the list together</div>
-              </div>
+            <div class="uvb-arrow">→</div>
+            <div class="uvb-item">
+              <div class="uvb-icon">📞</div>
+              <div class="uvb-title">30-Min Strategy:</div>
+              <div class="uvb-desc">Walk through the list.</div>
             </div>
-            <div class="unlock-value-item">
-              <div class="unlock-value-icon">🚀</div>
-              <div>
-                <div class="unlock-value-title">Complete outbound campaign framework</div>
-                <div class="unlock-value-desc">The exact playbook Danit used to 10X pipeline with competitor intelligence</div>
-              </div>
+            <div class="uvb-arrow">→</div>
+            <div class="uvb-item">
+              <div class="uvb-icon">🚀</div>
+              <div class="uvb-title">Outbound Framework:</div>
+              <div class="uvb-desc">10X pipeline playbook.</div>
             </div>
-            <div class="unlock-value-item">
-              <div class="unlock-value-icon">🎯</div>
-              <div>
-                <div class="unlock-value-title">Personalized ICP targeting strategy</div>
-                <div class="unlock-value-desc">Which accounts to hit first, what to say, and how to sequence</div>
-              </div>
+            <div class="uvb-arrow">→</div>
+            <div class="uvb-item">
+              <div class="uvb-icon">🎯</div>
+              <div class="uvb-title">Targeted ICP:</div>
+              <div class="uvb-desc">Which accounts to hit first.</div>
             </div>
           </div>
 
-          <div class="price-tag">
-            <span class="price-currency">$</span>
-            <span class="price-amount">69</span>
-            <span class="price-note">one-time · includes the session</span>
-          </div>
-
-          <div style="margin:-8px 0 20px;display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;">
-            <span style="font-size:13px;color:#334155;">
-              <span style="background:#0A1628;color:#fff;font-size:10px;font-weight:700;letter-spacing:0.08em;padding:2px 8px;border-radius:5px;text-transform:uppercase;margin-right:6px;">CMO Club</span>
-              Members get this <strong style="color:#059669;">free</strong>
-            </span>
-            <a href="https://mycmoclub.com" target="_blank" style="font-size:12px;font-weight:700;color:#1D4ED8;text-decoration:none;border-bottom:1px solid #1D4ED8;">Apply at MyCMOClub.com →</a>
+          <div class="unlock-price-row">
+            <span class="unlock-price-amt">$69</span>
+            <span class="unlock-price-note">/ one-time</span>
+            <span class="cmo-free-badge">Free for CMOClub Members</span>
           </div>
 
           <div class="email-capture">
-            <input type="email" id="emailInput" placeholder="your@email.com — we'll send you the results" autocomplete="email" />
+            <input type="email" id="emailInput" placeholder="Enter your work email..." autocomplete="email" />
           </div>
-          <button class="unlock-btn" id="unlockBtn" onclick="goToPayment()">Book Session + Unlock List — $69</button>
+          <button class="unlock-btn" id="unlockBtn" onclick="goToPayment()">Get the List + Book My Session</button>
           <div class="payment-polling" id="paymentPolling">⏳ Checking payment status…</div>
+          <p class="cmo-club-link">CMO Club Members: <a href="https://mycmoclub.com" target="_blank">Log in to apply for free</a></p>
+        </div>
+
+        <!-- HubSpot Calendar — always visible below the CTA -->
+        <div class="meeting-section" id="meetingEmbed">
+          <div class="meeting-section-title">📅 Book your strategy session</div>
+          <div class="meeting-section-sub">Pick a time — Danit will walk through the list and build your outbound campaign with you live.</div>
+          <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/dben-simon?embed=true"></div>
         </div>
       </div>
 
-      <!-- MEETING EMBED — shown after unlock -->
-      <div id="meetingEmbed" style="display:none;margin-top:24px">
-        <div class="meeting-banner">
-          <div class="meeting-banner-header">
-            <div class="meeting-banner-icon">📅</div>
-            <div>
-              <div class="meeting-banner-title">Book your strategy session</div>
-              <div class="meeting-banner-sub">Pick a time that works — Danit will walk you through the list and build your outbound campaign live</div>
-            </div>
-          </div>
-          <!-- HubSpot Meetings Embed -->
-          <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/dben-simon?embed=true"></div>
-          <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
-        </div>
-      </div>
+      <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
 
       <div class="export-bar" id="exportBar">
         <div class="export-info">✓ Full list unlocked — <span id="exportCount">0</span> companies</div>
@@ -614,22 +587,17 @@
       }
     }
     if (data.unlocked) {
+      // Paid — hide the lockWall paywall but keep the calendar visible
       document.getElementById('lockWall').style.display = 'none';
       document.getElementById('exportBar').classList.add('visible');
       document.getElementById('exportCount').textContent = total;
-      document.getElementById('meetingEmbed').style.display = 'block';
+      // Show standalone calendar after unlock
+      const mc = document.getElementById('meetingEmbed');
+      if (mc) { mc.style.display = 'block'; mc.scrollIntoView({behavior:'smooth', block:'start'}); }
     } else {
-      // Always show the CTA — adjust messaging based on whether there are locked companies
+      // Always show the CTA section
       document.getElementById('lockWall').style.display = 'block';
       document.getElementById('exportBar').classList.remove('visible');
-      const subEl = document.getElementById('lockWallSub');
-      if (locked > 0) {
-        document.getElementById('lockedCountText').textContent = 'more companies';
-        if (subEl) subEl.innerHTML = `You're seeing <strong>5 companies free.</strong> Unlock <strong id="lockedCountText">more companies</strong> + book a 1:1 session with Danit to build your full outbound campaign around them.`;
-      } else {
-        // All results shown — still push the session booking
-        if (subEl) subEl.innerHTML = `You've seen the full list. Book a 1:1 session with Danit to <strong>build your outbound campaign</strong> around these competitor customers.`;
-      }
     }
     showSection('resultsSection');
   }
@@ -645,7 +613,7 @@
       emailInput.focus();
       setTimeout(() => {
         emailInput.style.border = '';
-        emailInput.placeholder = "your@email.com — we'll send you the results";
+        emailInput.placeholder = "Enter your work email...";
       }, 3000);
       return;
     }
