@@ -113,6 +113,8 @@ def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: boo
         batch = qualified_pages[i:i + batch_size]
         extracted = extract_from_batch(batch, brand)
         companies.extend(extracted)
+        if len(companies) >= 15:  # Stop early once we have enough
+            break
 
     print(f"  Extracted {len(companies)} company evidence rows.")
     return companies
