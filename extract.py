@@ -57,6 +57,11 @@ def _fetch_one(page: dict, fetch_content: bool) -> dict:
     return {**page, "_text": text}
 
 
+def _clean_url(url: str) -> str:
+    """Fix repeated .html.html.html bug in stored URLs."""
+    import re
+    return re.sub(r'(\.html){2,}', '.html', url)
+
 def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: bool = True) -> list[dict]:
     """
     For each page:
