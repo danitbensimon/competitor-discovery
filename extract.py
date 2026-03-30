@@ -120,8 +120,8 @@ def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: boo
             import re as _re
             src = _re.sub(r'(\.html){2,}', '.html', src)
             row["source_url"] = src
-            # Max 2 companies per source URL (prevents listing pages dominating)
-            if seen_sources.get(src, 0) < 2:
+            # Max 5 companies per source URL (review/tech stack pages list many real companies)
+            if seen_sources.get(src, 0) < 5:
                 companies.append(row)
                 seen_sources[src] = seen_sources.get(src, 0) + 1
         if len(companies) >= 15:
