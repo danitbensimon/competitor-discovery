@@ -14,7 +14,7 @@ HEADERS = {
 MAX_CHARS = 4000  # Truncate to keep Claude prompts manageable
 
 
-def fetch_page_text(url: str, timeout: int = 10) -> str:
+def fetch_page_text(url: str, timeout: int = 4) -> str:
     """
     Downloads a URL and returns clean plain text.
     Returns an empty string if the page is unreachable or blocked.

@@ -167,13 +167,18 @@ def search_customer_mentions(domain: str, brand: str = None, mode: str = "live",
 
     print(f"Brand: {brand} | Queries: {len(queries)} | Tier: {tier}")
 
-    current_group = None
-    for query, group_name in queries:
-        if group_name != current_group:
-            current_group = group_name
-            print(f"\n[{group_name}]")
-        rows = _fetch_query(query, group_name, seen_urls, pages=1)
-        all_results.extend(rows)
+    import threading
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    lock = threading.Lock()
+    def fetch_q(qg):
+        return _fetch_query(qg[0], qg[1], set(), pages=1)
+    with ThreadPoolExecutor(max_workers=min(len(queries),10)) as ex:
+        for rows in ex.map(fetch_q, queries):
+            with lock:
+                for row in rows:
+                    if row["url"] not in seen_urls:
+                        seen_urls.add(row["url"])
+                        all_results.append(row)
 
     print(f"\nTotal URLs collected: {len(all_results)}")
     return all_results
