@@ -176,7 +176,7 @@ def search_customer_mentions(domain: str, brand: str = None, mode: str = "live",
         query, group_name = query_group
         return _fetch_query(query, group_name, set(), pages=1)
 
-    with ThreadPoolExecutor(max_workers=min(len(queries), 10)) as executor:
+    with ThreadPoolExecutor(max_workers=3) as executor:
         futures = {executor.submit(fetch_query_safe, qg): qg for qg in queries}
         for future in as_completed(futures):
             try:

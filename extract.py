@@ -71,7 +71,7 @@ def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: boo
     print(f"  Parallel {'fetching' if fetch_content else 'snippet'} for {len(pages)} pages...")
 
     # Fetch all pages concurrently — stays within ~10s regardless of page count
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=4) as executor:
         futures = {executor.submit(_fetch_one, page, fetch_content): page for page in pages}
         enriched = []
         for future in as_completed(futures):
