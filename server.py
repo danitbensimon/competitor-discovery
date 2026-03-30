@@ -245,7 +245,9 @@ def run_pipeline(domain: str, brand: str, mode: str, tier: str) -> list:
     if not normalized:
         return []
 
-    extracted = extract_companies(normalized, brand=brand, fetch_content=True)
+    # Lite: skip page fetch except for own_site pages (case studies have rich company names)
+    fetch_content = tier != "lite"
+    extracted = extract_companies(normalized, brand=brand, fetch_content=fetch_content)
     if not extracted:
         return []
 
