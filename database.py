@@ -75,6 +75,27 @@ def get_result(result_id: str):
     return dict(row) if row else None
 
 
+def get_cached_companies(competitor_domain: str):
+    """Return the most recent saved company list for a domain (any previous search)."""
+    conn = get_db()
+    row = conn.execute(
+        """SELECT full_companies FROM search_results
+           WHERE competitor_domain = ?
+             AND full_companies IS NOT NULL
+             AND full_companies != '[]'
+             AND full_companies != ''
+           ORDER BY created_at DESC LIMIT 1""",
+        (competitor_domain,)
+    ).fetchone()
+    conn.close()
+    if row and row["full_companies"]:
+        try:
+            return json.loads(row["full_companies"])
+        except Exception:
+            return None
+    return None
+
+
 def get_result_by_token(token: str):
     conn = get_db()
     row = conn.execute(
