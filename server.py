@@ -246,9 +246,7 @@ def run_pipeline(domain: str, brand: str, mode: str, tier: str) -> list:
     if not normalized:
         return []
 
-    # Lite tier: use Brave snippets only (no page fetch) — much faster for free demo
-    fetch_content = tier != "lite"
-    extracted = extract_companies(normalized, brand=brand, fetch_content=fetch_content)
+    extracted = extract_companies(normalized, brand=brand, fetch_content=True)
     if not extracted:
         return []
 
