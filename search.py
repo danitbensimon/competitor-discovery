@@ -167,18 +167,27 @@ def search_customer_mentions(domain: str, brand: str = None, mode: str = "live",
 
     print(f"Brand: {brand} | Queries: {len(queries)} | Tier: {tier}")
 
+    # Run all search queries IN PARALLEL instead of one by one
     import threading
     from concurrent.futures import ThreadPoolExecutor, as_completed
     lock = threading.Lock()
-    def fetch_q(qg):
-        return _fetch_query(qg[0], qg[1], set(), pages=1)
-    with ThreadPoolExecutor(max_workers=min(len(queries),10)) as ex:
-        for rows in ex.map(fetch_q, queries):
-            with lock:
-                for row in rows:
-                    if row["url"] not in seen_urls:
-                        seen_urls.add(row["url"])
-                        all_results.append(row)
+
+    def fetch_query_safe(query_group):
+        query, group_name = query_group
+        return _fetch_query(query, group_name, set(), pages=1)
+
+    with ThreadPoolExecutor(max_workers=min(len(queries), 10)) as executor:
+        futures = {executor.submit(fetch_query_safe, qg): qg for qg in queries}
+        for future in as_completed(futures):
+            try:
+                rows = future.result()
+                with lock:
+                    for row in rows:
+                        if row["url"] not in seen_urls:
+                            seen_urls.add(row["url"])
+                            all_results.append(row)
+            except Exception as e:
+                print(f"Search error: {e}")
 
     print(f"\nTotal URLs collected: {len(all_results)}")
     return all_results

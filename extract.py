@@ -57,11 +57,6 @@ def _fetch_one(page: dict, fetch_content: bool) -> dict:
     return {**page, "_text": text}
 
 
-def _clean_url(url: str) -> str:
-    """Fix repeated .html.html.html bug in stored URLs."""
-    import re
-    return re.sub(r'(\.html){2,}', '.html', url)
-
 def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: bool = True) -> list[dict]:
     """
     For each page:
@@ -106,21 +101,31 @@ def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: boo
                 "confidence": confidence,
             })
 
+    qualified_pages = qualified_pages[:30]
+
     print(f"\n  {len(qualified_pages)} pages passed confidence filter. Extracting companies...")
 
     if not qualified_pages:
         return []
 
     companies = []
+    seen_sources: dict = {}
 
     batch_size = 5
     for i in range(0, len(qualified_pages), batch_size):
         batch = qualified_pages[i:i + batch_size]
-        extracted = extract_from_batch(batch, brand)
-        companies.extend(extracted)
+        for row in extract_from_batch(batch, brand):
+            # Fix repeated .html.html.html bug
+            src = row.get("source_url", "")
+            import re as _re
+            src = _re.sub(r'(\.html){2,}', '.html', src)
+            row["source_url"] = src
+            # Max 2 companies per source URL (prevents listing pages dominating)
+            if seen_sources.get(src, 0) < 2:
+                companies.append(row)
+                seen_sources[src] = seen_sources.get(src, 0) + 1
         if len(companies) >= 15:
-            break
-        if len(companies) >= 15:  # Stop early once we have enough
+            print(f"  Early stop: {len(companies)} companies found.")
             break
 
     print(f"  Extracted {len(companies)} company evidence rows.")

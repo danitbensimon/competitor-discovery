@@ -60,6 +60,7 @@ class SearchRequest(BaseModel):
     brand: str = ""       # Optional user-supplied brand name override
     tier: str = "lite"
     mode: str = "live"
+    force: bool = False   # Skip cache and run fresh search
     icp_industries: list = []
     icp_size: str = ""
     icp_region: str = ""
@@ -245,7 +246,7 @@ def run_pipeline(domain: str, brand: str, mode: str, tier: str) -> list:
     if not normalized:
         return []
 
-    # Lite: skip page fetch except for own_site pages (case studies have rich company names)
+    # Lite tier: use Brave snippets only (no page fetch) — much faster for free demo
     fetch_content = tier != "lite"
     extracted = extract_companies(normalized, brand=brand, fetch_content=fetch_content)
     if not extracted:
@@ -263,16 +264,33 @@ def run_pipeline(domain: str, brand: str, mode: str, tier: str) -> list:
 # ── Background job runner ─────────────────────────────────────────────────────
 
 def _run_job(job_id: str, result_id: str, domain: str, tier: str, mode: str,
-             icp_industries: list, icp_size: str, icp_region: str, brand_override: str = None):
+             icp_industries: list, icp_size: str, icp_region: str, brand_override: str = None, force: bool = False):
     """Background task: runs pipeline, enriches, filters by ICP, persists to DB."""
     try:
         brand = brand_override if brand_override else brand_from_domain(domain)
         log.info(f"[job {job_id}] brand={brand!r} (override={bool(brand_override)})")
 
-        if mode == "live":
+        if mode == "live" and not force:
+            # 1. Check SQLite first — persists across restarts, shared across all users
+            db_companies = db.get_cached_companies(domain)
+            if db_companies:
+                log.info(f"[job {job_id}] DB cache hit for {domain} ({len(db_companies)} companies)")
+                companies = filter_unknown_companies(db_companies)
+                filtered = filter_by_icp(companies, icp_industries, icp_size, icp_region)
+                preview = filtered[:10]
+                db.save_companies(result_id, preview=preview, full=filtered)
+                jobs[job_id].update({
+                    "companies": companies,
+                    "filtered": filtered,
+                    "status": "done",
+                    "from_cache": True,
+                })
+                return
+
+            # 2. Fallback: JSON file cache (same instance, same session)
             cached = load_cache(domain)
             if cached and cached.get("companies"):
-                log.info(f"[job {job_id}] cache hit for {domain}")
+                log.info(f"[job {job_id}] file cache hit for {domain}")
                 companies = cached["companies"]
                 companies = filter_unknown_companies(companies)
                 filtered = filter_by_icp(companies, icp_industries, icp_size, icp_region)
@@ -356,7 +374,7 @@ async def start_search(req: SearchRequest, background_tasks: BackgroundTasks):
 
     background_tasks.add_task(
         _run_job, job_id, result_id, domain, req.tier, req.mode,
-        req.icp_industries, req.icp_size, req.icp_region, brand_override,
+        req.icp_industries, req.icp_size, req.icp_region, brand_override, req.force,
     )
 
     return {"job_id": job_id, "result_id": result_id, "status": "running"}
