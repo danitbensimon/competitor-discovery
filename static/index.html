@@ -252,12 +252,12 @@
     .header-credit { display: none; }
   }
     /* Signal tags */
-    .signal-tags-strip { display:flex; flex-wrap:wrap; gap:8px; margin-top:22px; justify-content:center; align-items:center; }
-    .signal-tags-strip .sig-label { font-size:11px; color:#4a6a8a; font-family:'DM Mono',monospace; margin-right:4px; text-transform:uppercase; letter-spacing:.05em; }
-    .sig-tag { display:inline-flex; align-items:center; gap:5px; padding:5px 13px; border-radius:20px; font-size:11px; font-family:'DM Mono',monospace; border:1px solid rgba(0,194,255,0.18); color:#4a6a8a; background:rgba(0,194,255,0.03); transition:all 0.4s; cursor:default; }
-    .sig-tag.scanning { border-color:#00C2FF; color:#00C2FF; background:rgba(0,194,255,0.1); animation:sig-pulse 1.2s ease-in-out infinite; }
-    .sig-tag.done { border-color:rgba(0,194,255,0.45); color:#00C2FF; background:rgba(0,194,255,0.07); animation:none; }
-    .sig-tag.done::after { content:' ✓'; opacity:0.7; }
+    .signal-tags-strip { display:flex; flex-wrap:wrap; gap:6px; margin-top:16px; justify-content:center; align-items:center; }
+    .signal-tags-strip .sig-label { font-size:10px; color:#5a8aaa; font-family:'DM Mono',monospace; margin-right:6px; text-transform:uppercase; letter-spacing:.08em; }
+    .sig-tag { display:inline-flex; align-items:center; padding:4px 11px; border-radius:20px; font-size:10px; font-family:'DM Mono',monospace; border:1px solid rgba(0,194,255,0.35); color:#7ab8cc; background:rgba(0,194,255,0.07); transition:all 0.4s; cursor:default; letter-spacing:.03em; }
+    .sig-tag.scanning { border-color:#00C2FF; color:#00C2FF; background:rgba(0,194,255,0.15); animation:sig-pulse 1.2s ease-in-out infinite; }
+    .sig-tag.done { border-color:#00C2FF; color:#00C2FF; background:rgba(0,194,255,0.12); animation:none; }
+    .sig-tag.done::after { content:' ✓'; opacity:0.8; }
     @keyframes sig-pulse { 0%,100%{box-shadow:0 0 0 0 rgba(0,194,255,0.3)} 50%{box-shadow:0 0 0 5px rgba(0,194,255,0)} }
 </style>
 </head>
@@ -290,16 +290,6 @@
         </div>
 
         <button class="search-btn" id="searchBtn" onclick="startSearch()">Get 10 Results Free →</button>
-        <div class="signal-tags-strip" id="signalTagsStrip">
-            <span class="sig-label">signals:</span>
-            <span class="sig-tag" data-sig="own_site">own site</span>
-            <span class="sig-tag" data-sig="customer_signals">customer signals</span>
-            <span class="sig-tag" data-sig="job_postings">job postings</span>
-            <span class="sig-tag" data-sig="tech_stack">tech stack</span>
-            <span class="sig-tag" data-sig="review_sites">review sites</span>
-            <span class="sig-tag" data-sig="linkedin">linkedin</span>
-            <span class="sig-tag" data-sig="blog_press">blog & press</span>
-        </div>
 
         <div style="text-align:center;margin:14px 0 6px;font-size:14px;font-weight:600;color:var(--muted);letter-spacing:0.01em;">
           ✦ Most effective for <span style="color:var(--accent);">legacy B2B SaaS</span> competitors
@@ -310,6 +300,16 @@
           <span class="hint-tag" onclick="setDomain('rippling.com','Rippling')">rippling.com</span>
           <span class="hint-tag" onclick="setDomain('gusto.com','Gusto')">gusto.com</span>
           <span class="hint-tag" onclick="setDomain('workday.com','Workday')">workday.com</span>
+        </div>
+        <div class="signal-tags-strip" id="signalTagsStrip">
+            <span class="sig-label">signals:</span>
+            <span class="sig-tag" data-sig="own_site">own site</span>
+            <span class="sig-tag" data-sig="customer_signals">customer signals</span>
+            <span class="sig-tag" data-sig="job_postings">job postings</span>
+            <span class="sig-tag" data-sig="tech_stack">tech stack</span>
+            <span class="sig-tag" data-sig="review_sites">review sites</span>
+            <span class="sig-tag" data-sig="linkedin">linkedin</span>
+            <span class="sig-tag" data-sig="blog_press">blog & press</span>
         </div>
       </div>
     </div>
