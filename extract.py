@@ -1,4 +1,4 @@
-# extract.py — Downloads page content, scores confidence, and extracts companies.
+# extract.py â Downloads page content, scores confidence, and extracts companies.
 # Keeps page rank score and other evidence so scoring can use it later.
 
 import re
@@ -49,7 +49,7 @@ def score_confidence(text: str, brand: str = "Deel") -> str:
 
 def _fetch_one(page: dict, fetch_content: bool) -> dict:
     """Fetch a single page and return enriched dict with text + confidence.
-    Only fetches full content for own_site/customer_signals pages — others use snippet.
+    Only fetches full content for own_site/customer_signals pages â others use snippet.
     This keeps memory usage low on Render free tier.
     """
     signal_group = page.get("signal_group", "") or page.get("group", "")
@@ -75,7 +75,7 @@ def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: boo
 
     print(f"  Parallel {'fetching' if fetch_content else 'snippet'} for {len(pages)} pages...")
 
-    # Fetch all pages concurrently — stays within ~8s regardless of page count
+    # Fetch all pages concurrently â stays within ~8s regardless of page count
     with ThreadPoolExecutor(max_workers=6) as executor:
         futures = {executor.submit(_fetch_one, page, fetch_content): page for page in pages}
         enriched = []
@@ -137,7 +137,7 @@ def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: boo
                     src = _re.sub(r'(\.html){2,}', '.html', src)
                     row["source_url"] = src
                     # Customer index pages (/customers, /case-studies, /clients) can yield
-                    # many real companies — allow up to 30 per source instead of 5
+                    # many real companies â allow up to 30 per source instead of 5
                     is_index = any(p in src for p in ['/customers', '/case-studies', '/clients', '/success-stories'])
                     per_source_limit = 30 if is_index else 5
                     if seen_sources.get(src, 0) < per_source_limit:
