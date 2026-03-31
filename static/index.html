@@ -397,6 +397,827 @@
       </div>
 
 
+      <!-- CONTEXTUAL RESULTS MESSAGE -->
+      <div id="contextMsg" style="display:none;margin:14px 0;padding:16px 20px;border-radius:12px;font-size:13px;line-height:1.7;"></div>
+
+      <!-- SOURCES TEASER STRIP -->
+      <div class="sources-strip" id="sourcesStrip">
+        <span class="sources-strip-label">🔒 Also found in full list</span>
+        <div class="sources-strip-divider"></div>
+        <div id="sourcesPills"></div>
+      </div>
+
+      <div id="lockWall">
+        <div class="unlock-banner">
+          <div class="unlock-eyebrow">Unlock the Full List Here</div>
+          <div class="unlock-title">Turn Competitor Customers into Your Pipeline</div>
+          <div class="unlock-sub" id="lockWallSub">Book your 1:1 strategy session with Danit to build your campaign.</div>
+
+          <div class="unlock-value-bar">
+            <div class="uvb-item">
+              <div class="uvb-icon">📋</div>
+              <div class="uvb-title">Full List:</div>
+              <div class="uvb-desc">Verified domains &amp; signals.</div>
+            </div>
+            <div class="uvb-arrow">→</div>
+            <div class="uvb-item">
+              <div class="uvb-icon">📞</div>
+              <div class="uvb-title">30-Min Strategy:</div>
+              <div class="uvb-desc">Walk through the list.</div>
+            </div>
+            <div class="uvb-arrow">→</div>
+            <div class="uvb-item">
+              <div class="uvb-icon">🚀</div>
+              <div class="uvb-title">Outbound Framework:</div>
+              <div class="uvb-desc">10X pipeline playbook.</div>
+            </div>
+            <div class="uvb-arrow">→</div>
+            <div class="uvb-item">
+              <div class="uvb-icon">🎯</div>
+              <div class="uvb-title">Targeted ICP:</div>
+              <div class="uvb-desc">Which accounts to hit first.</div>
+            </div>
+          </div>
+
+          <!-- Calendar embed directly — no paywall -->
+          <div class="meetings-iframe-container" data-src="https://meetings-eu1.hubspot.com/dben-simon?embed=true"></div>
+        </div>
+      </div>
+
+      <script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+
+      <div class="export-bar" id="exportBar">
+        <div class="export-info">✓ Full list unlocked — <span id="exportCount">0</span> companies</div>
+        <button class="export-btn" onclick="handleExport()">↓ Export CSV</button>
+      </div>
+
+      <button class="bottom-new-search" onclick="resetToHome()">← Run a New Search</button>
+    </div>
+  </div>
+
+  <!-- ERROR -->
+  <div id="errorSection" class="section">
+    <div class="error-wrap">
+      <div class="error-box">
+        <div style="font-size:24px;margin-bottom:10px">⚠️</div>
+        <div class="error-title">Search Failed</div>
+        <div class="error-msg" id="errorMsg">Something went wrong. Please try again.</div>
+        <button class="retry-btn" onclick="resetToHome()">← Try Again</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">CompetitorIQ &nbsp;·&nbsp; by <a href="https://www.linkedin.com/in/danitbensimon/" target="_blank" style="color:var(--accent);text-decoration:none">Danit Ben Simon</a> &nbsp;·&nbsp; Pipeline intelligence for B2B teams</div>
+</footer>
+
+<script>
+  let currentJobId = null;
+  let currentResultId = null;
+  let currentUnlockToken = null;
+  let pollInterval = null;
+  let paymentPollInterval = null;
+  let stepTimer = null;
+  let currentResults = null;
+
+  function setDomain(d, brand) {
+    document.getElementById('domainInput').value = d;
+    if (brand) document.getElementById('brandInput').value = brand;
+    document.getElementById('brandInput').focus();
+  }
+
+  function showSection(id) {
+    document.querySelectorAll('.section').forEach(s => s.classList.remove('visible'));
+    const el = document.getElementById(id);
+    if (el) el.classList.add('visible');
+  }
+
+  function resetToHome() {
+    clearInterval(pollInterval); clearTimeout(stepTimer); clearInterval(paymentPollInterval);
+    document.getElementById('searchBtn').disabled = false;
+    showSection('searchSection');
+  }
+
+  function escHtml(s) { return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;'); }
+
+  function signalStrength(sg) {
+    if (['own_site','customer_signals'].includes(sg)) return {label:'High',cls:'tag-high'};
+    if (['review_sites','blog_press'].includes(sg)) return {label:'Medium',cls:'tag-medium'};
+    return {label:'Low',cls:'tag-low'};
+  }
+
+  function showError(msg) {
+    document.getElementById('errorMsg').textContent = msg;
+    document.getElementById('searchBtn').disabled = false;
+    showSection('errorSection');
+  }
+
+  function animateSteps() {
+    const steps = ['step1','step2','step3','step4']; let i = 0;
+    function next() {
+      if (i > 0) { const p = document.getElementById(steps[i-1]); if(p){p.classList.remove('active');p.classList.add('done');} }
+      if (i < steps.length) { const c = document.getElementById(steps[i]); if(c) c.classList.add('active'); i++; stepTimer = setTimeout(next, 4000); }
+    }
+    next();
+  }
+
+  async function startSearch() {
+    const domain = document.getElementById('domainInput').value.trim();
+    if (!domain) { document.getElementById('domainInput').focus(); return; }
+    const brandRaw = document.getElementById('brandInput').value.trim();
+    // Sub-product URL detection (Scenario E)
+    var _str = domain.replace(/^https?:\/\/(www\.)?/, '');
+    var _pi = _str.indexOf('/');
+    if (_pi > -1 && _str.slice(_pi+1).replace(/\/+$/,'').length > 0) {
+      var _root = _str.split('/')[0];
+      if (!confirm('⚠️ Looks like a product page URL, not a root domain.\n\nI can search "' + _root + '" (parent company). Click OK to proceed, or Cancel to edit.')) {
+        document.getElementById('searchBtn').disabled = false; return;
+      }
+      domain = _root; document.getElementById('domainInput').value = _root;
+    }
+    const brand = brandRaw || domain.replace(/^https?:\/\//, '').replace(/^www\./, '').split('.')[0];
+    document.getElementById('searchBtn').disabled = true;
+    document.getElementById('loadingDomain').textContent = brandRaw || domain;
+    ['step1','step2','step3','step4'].forEach(id => { const el = document.getElementById(id); if(el){el.classList.remove('active','done');} });
+    showSection('loadingSection');
+    animateSteps();
+    try {
+      const res = await fetch('/api/search', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ domain, brand, tier: 'lite', mode: 'live', icp_industries: [], icp_size: '', icp_region: '' })
+      });
+      if (!res.ok) throw new Error('Search request failed');
+      const data = await res.json();
+      currentJobId = data.job_id;
+      currentResultId = data.result_id;
+      pollResults();
+    } catch (err) { showError(err.message); }
+  }
+
+  function pollResults() {
+    pollInterval = setInterval(async () => {
+      try {
+        const res = await fetch(`/api/results/${currentJobId}`);
+        const data = await res.json();
+        if (data.status === 'running') return;
+        clearInterval(pollInterval); clearTimeout(stepTimer);
+        if (data.status === 'error') { showError(data.error || 'Pipeline failed'); return; }
+        if (data.status === 'done') {
+          currentResultId = data.result_id || currentResultId;
+          currentResults = data;
+          renderResults(data);
+        }
+      } catch (err) { clearInterval(pollInterval); showError(err.message); }
+    }, 2000);
+  }
+
+  function renderResults(data) {
+    document.getElementById('searchBtn').disabled = false;
+    const statEl = document.getElementById('statTotal'); if (statEl) statEl.textContent = data.total || 0;
+    const domainEl = document.getElementById('resultDomain');
+    if (domainEl) domainEl.textContent = document.getElementById('domainInput').value.trim() || (data.preview && data.preview[0] && data.preview[0].competitor_domain) || '';
+
+    const tbody = document.getElementById('resultsBody');
+    tbody.innerHTML = '';
+    (data.preview || []).forEach((c, i) => {
+      const sig = signalStrength(c.signal_group);
+      const icpFit = c.icp_fit || 'LOW';
+      const icpCls = icpFit === 'HIGH' ? 'icp-high' : icpFit === 'MEDIUM' ? 'icp-medium' : 'icp-low';
+      const sourceHtml = c.source_url
+        ? `<a href="${escHtml(c.source_url)}" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block;max-width:220px">${escHtml(c.source_url.replace(/^https?:\/\//, ''))}</a>`
+        : '—';
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td style="color:var(--muted);font-size:11px">${String(i+1).padStart(2,'0')}</td>
+        <td class="td-company">${escHtml(c.company_name||'Unknown')}</td>
+        <td class="td-domain"><a href="https://${escHtml(c.company_domain)}" target="_blank">${escHtml(c.company_domain)}</a></td>
+        <td>${c.industry&&c.industry!=='Unknown'?`<span class="tag tag-industry">${escHtml(c.industry)}</span>`:'<span style="color:var(--muted)">—</span>'}</td>
+        <td>${sourceHtml}</td>
+      `;
+      tbody.appendChild(tr);
+    });
+
+    const locked = data.locked || 0;
+    const total = data.total || 0;
+    const preview = (data.preview || []).length;
+
+    // Handle zero results — show helpful message instead of empty table
+    if (total === 0) {
+      const searchedDomain = document.getElementById('domainInput').value.trim();
+      tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:40px 20px;color:var(--muted);">
+        <div style="font-size:28px;margin-bottom:12px;">🔍</div>
+        <div style="font-size:16px;font-weight:600;color:var(--text);margin-bottom:8px;">No companies found for <span style="color:var(--accent)">${escHtml(searchedDomain)}</span></div>
+        <div style="font-size:13px;line-height:1.6;max-width:420px;margin:0 auto;">
+          This usually means the tool doesn't have enough web presence for our search engine to find customer mentions.<br><br>
+          <strong>Try a well-known SaaS competitor</strong> like <code>rippling.com</code>, <code>bamboohr.com</code>, or <code>gusto.com</code> to see how it works.
+        </div>
+        <button onclick="resetToHome()" style="margin-top:20px;background:var(--accent);color:#0a0a0f;border:none;border-radius:8px;padding:10px 24px;font-weight:700;font-size:14px;cursor:pointer;">← Try a different domain</button>
+      </td></tr>`;
+      const freeTierBanner = document.getElementById('freeTierBanner');
+      if (freeTierBanner) freeTierBanner.style.display = 'none';
+      const freeNote = document.getElementById('freeNote');
+      if (freeNote) freeNote.style.display = 'none';
+      const strip = document.getElementById('sourcesStrip');
+      if (strip) strip.classList.remove('visible');
+      const lockWallEl = document.getElementById('lockWall');
+      if (lockWallEl) lockWallEl.style.display = 'none';
+      document.getElementById('exportBar').classList.remove('visible');
+      showSection('resultsSection');
+      return;
+    }
+
+    // Update the free preview note in the table header area
+    const freeTierBanner = document.getElementById('freeTierBanner');
+    if (freeTierBanner) freeTierBanner.style.display = 'block';
+
+    const freeNote = document.getElementById('freeNote');
+    if (freeNote) {
+      if (locked > 0) {
+        freeNote.textContent = `${locked + preview} companies found — ${preview} shown free`;
+        freeNote.style.display = 'block';
+      } else {
+        freeNote.textContent = `${total} companies found`;
+        freeNote.style.display = 'block';
+      }
+    }
+    // Sources teaser strip
+    const sources = data.locked_sources || [];
+    const strip = document.getElementById('sourcesStrip');
+    const pills = document.getElementById('sourcesPills');
+    if (strip && pills && sources.length > 0 && !data.unlocked) {
+      pills.innerHTML = sources.map(s => `<span class="source-pill">${s}</span>`).join(' ');
+      strip.classList.add('visible');
+    } else if (strip) {
+      strip.classList.remove('visible');
+    }
+
+    const lockWallEl = document.getElementById('lockWall');
+    if (data.unlocked) {
+      // Paid — hide the lockWall paywall but keep the calendar visible
+      if (lockWallEl) lockWallEl.style.display = 'none';
+      document.getElementById('exportBar').classList.add('visible');
+      document.getElementById('exportCount').textContent = total;
+      const mc = document.getElementById('meetingEmbed');
+      if (mc) { mc.style.display = 'block'; mc.scrollIntoView({behavior:'smooth', block:'start'}); }
+    } else {
+      if (lockWallEl) lockWallEl.style.display = 'block';
+      document.getElementById('exportBar').classList.remove('visible');
+    }
+    showContextMessage(data, document.getElementById('domainInput').value.trim(), document.getElementById('brandInput').value.trim());
+    showSection('resultsSection');
+  }
+
+  async function goToPayment() {
+    if (!currentResultId) { alert('Please run a search first.'); return; }
+    const btn = document.getElementById('unlockBtn');
+    const emailInput = document.getElementById('emailInput');
+    const email = emailInput.value.trim();
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      emailInput.style.border = '1.5px solid var(--red)';
+      emailInput.placeholder = 'Please enter your email first ↑';
+      emailInput.focus();
+      setTimeout(() => {
+        emailInput.style.border = '';
+        emailInput.placeholder = "Enter your work email...";
+      }, 3000);
+      return;
+    }
+    try {
+      await fetch(`/api/results/${currentResultId}/email`, {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ email })
+      });
+    } catch (_) {}
+    btn.textContent = 'Opening payment…'; btn.disabled = true;
+    try {
+      const res = await fetch(`/api/results/${currentResultId}/create-payment`, { method: 'POST' });
+      const data = await res.json();
+      if (data.already_paid) { await applyUnlockToken(data.unlock_token); return; }
+      window.open(data.payment_url, '_blank');
+      btn.textContent = 'Unlock Full List — $69'; btn.disabled = false;
+    } catch (err) {
+      btn.textContent = 'Unlock Full List — $69'; btn.disabled = false;
+      alert('Could not create payment: ' + err.message);
+    }
+  }
+
+  async function confirmUnlock() {
+    if (!currentResultId) return;
+    document.getElementById('alreadyPaidRow').style.display = 'none';
+    document.getElementById('paymentPolling').classList.add('visible');
+    let attempts = 0;
+    const maxAttempts = 24;
+    paymentPollInterval = setInterval(async () => {
+      attempts++;
+      try {
+        const res = await fetch(`/api/results/${currentResultId}/status`);
+        const data = await res.json();
+        if (data.paid) {
+          clearInterval(paymentPollInterval);
+          document.getElementById('paymentPolling').classList.remove('visible');
+          await applyUnlockToken(data.unlock_token);
+          return;
+        }
+      } catch (_) {}
+      if (attempts >= maxAttempts) {
+        clearInterval(paymentPollInterval);
+        document.getElementById('paymentPolling').classList.remove('visible');
+        document.getElementById('alreadyPaidRow').style.display = 'block';
+        alert('Payment not confirmed yet. Please wait and try again.');
+      }
+    }, 5000);
+  }
+
+  async function applyUnlockToken(token) {
+    currentUnlockToken = token;
+    if (!token) { await fetch(`/api/unlock/${currentJobId}`, { method: 'POST' }); }
+    const res = await fetch(`/api/results/${currentJobId}`);
+    const data = await res.json();
+    currentResults = data;
+    renderResults(data);
+  }
+
+  function showContextMessage(data, sd, sb) {
+    var el = document.getElementById('contextMsg');
+    if (!el) return;
+    var tot = data.total || 0;
+    if (tot === 0) { el.style.display='none'; return; }
+    var prev = data.preview || [];
+    var sgs = prev.map(function(c){return c.signal_group;}).filter(Boolean).filter(function(v,i,a){return a.indexOf(v)===i;});
+    var ownOnly = sgs.length===0||(sgs.length===1&&sgs[0]==='own_site');
+    var brand = escHtml(sb||sd);
+    if (tot>=10&&sgs.length>=3){el.style.display='none';return;}
+    var bg,brd,icon,ttl,bdy;
+    if (ownOnly){
+      bg='rgba(0,194,255,0.05)';brd='rgba(0,194,255,0.25)';icon='🔍';
+      ttl='Found '+tot+' compan'+(tot===1?'y':'ies')+' — all from '+brand+'’s own website';
+      bdy='The other 6 signal groups (job boards, LinkedIn, G2, tech databases) returned nothing. This is normal for <strong style="color:var(--muted2)">early-stage or niche tools</strong> — not yet indexed by third-party databases.<br><br>The companies listed are <strong style="color:var(--green)">real verified customers</strong>. This is the complete public list '+brand+' has chosen to publish.';
+    } else {
+      bg='rgba(0,229,160,0.04)';brd='rgba(0,229,160,0.2)';icon='📊';
+      var gl=sgs.map(function(s){return '<code style="font-size:11px;background:rgba(255,255,255,0.07);padding:1px 5px;border-radius:3px">'+escHtml(s)+'</code>';}).join(' ');
+      ttl='Found '+tot+' compan'+(tot===1?'y':'ies')+' across '+sgs.length+' signal source'+(sgs.length!==1?'s':'');
+      bdy=brand+' has a presence but hasn’t generated wide coverage yet. Results came from: '+gl+'. Typical for a growing product building brand awareness.';
+    }
+    el.style.cssText='display:block;margin:14px 0;padding:16px 20px;border-radius:12px;font-size:13px;line-height:1.7;border:1px solid '+brd+';background:'+bg+';';
+    el.innerHTML='<div style="display:flex;gap:12px;align-items:flex-start"><span style="font-size:20px;flex-shrink:0">'+icon+'</span><div><div style="font-weight:700;color:var(--text);margin-bottom:6px;">'+ttl+'</div><div style="color:var(--muted)">'+bdy+'</div></div></div>';
+  }
+
+  async function handleExport() {
+    if (!currentResultId && !currentJobId) return;
+    if (currentResultId && currentUnlockToken) {
+      const url = `/api/results/${currentResultId}/csv?token=${currentUnlockToken}`;
+      const a = document.createElement('a');
+      a.href = url; a.download = ''; a.click();
+      return;
+    }
+    try {
+      const res = await fetch('/api/export', {
+        method: 'POST',
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify({job_id: currentJobId, tier: 'advanced'})
+      });
+      const data = await res.json();
+      const blob = new Blob([data.csv], {type:'text/csv'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a'); a.href=url; a.download=data.filename; a.click();
+      URL.revokeObjectURL(url);
+    } catch (err) { alert('Export failed: ' + err.message); }
+  }
+
+  (function checkTokenInUrl() {
+    const params = new URLSearchParams(window.location.search);
+    const token = params.get('token');
+    if (!token) return;
+    currentUnlockToken = token;
+    showSection('loadingSection');
+    document.getElementById('loadingDomain').textContent = '…';
+    fetch(`/api/token/${token}`)
+      .then(r => r.json())
+      .then(data => {
+        if (data.status === 'done') { icpState = { industries: [], size: '', region: '' }; currentResults = data; renderResults(data); }
+        else { showError('Invalid or expired access link.'); }
+      })
+      .catch(() => showError('Could not load results. Please try the link again.'));
+  })();
+
+  document.getElementById('domainInput').addEventListener('keydown', e => { if (e.key==='Enter') startSearch(); });
+  // Auto-suggest brand name from domain when brand field is empty
+  document.getElementById('domainInput').addEventListener('blur', () => {
+    const domain = document.getElementById('domainInput').value.trim();
+    const brandInput = document.getElementById('brandInput');
+    if (domain && !brandInput.value.trim()) {
+      const raw = domain.replace(/^https?:\/\//, '').replace(/^www\./, '').split('/')[0].split('.')[0];
+      brandInput.value = raw.charAt(0).toUpperCase() + raw.slice(1);
+      brandInput.style.border = '1.5px solid rgba(255,180,0,0.6)';
+      brandInput.title = 'Auto-filled from domain — please verify this is the exact brand name';
+      setTimeout(() => { brandInput.style.border = ''; }, 3000);
+    }
+  });
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CompetitorIQ — Find companies using your competitors</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #07090E;
+    --surface: #0F1520;
+    --surface2: #141D2B;
+    --border: #233047;
+    --border-glow: #2A4A70;
+    --text: #EDF2FA;
+    --muted: #92AECF;
+    --muted2: #C4D4E8;
+    --accent: #00C2FF;
+    --accent2: #1A6FFF;
+    --green: #00E5A0;
+    --amber: #FFB020;
+    --red: #FF4D6A;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; min-height: 100vh; font-size: 14px; }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background-image: linear-gradient(rgba(0,194,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(0,194,255,0.02) 1px, transparent 1px);
+    background-size: 40px 40px;
+    pointer-events: none; z-index: 0;
+  }
+  body::after {
+    content: ''; position: fixed; top: -200px; left: 50%; transform: translateX(-50%);
+    width: 900px; height: 400px;
+    background: radial-gradient(ellipse, rgba(0,102,255,0.08) 0%, transparent 70%);
+    pointer-events: none; z-index: 0;
+  }
+  .container { position: relative; z-index: 1; max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  header {
+    padding: 16px 0; display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+  }
+  .header-left { display: flex; align-items: center; gap: 16px; }
+  .logo { display: flex; align-items: center; gap: 8px; font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase; }
+  .logo-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 8px var(--accent); animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(0.7)} }
+  .header-credit { font-size: 18px; font-weight: 600; color: var(--muted); padding-left: 16px; border-left: 1px solid var(--border); font-family: 'Inter', sans-serif; }
+  .header-credit a { color: var(--accent); text-decoration: none; }
+  .header-credit a:hover { text-decoration: underline; }
+  .nav-tag { font-size: 10px; color: var(--muted); letter-spacing: 0.1em; border: 1px solid var(--border); padding: 3px 9px; border-radius: 20px; }
+  .section { display: none; }
+  .section.visible { display: block; }
+
+  /* SCREEN 1 */
+  .hero { padding: 40px 0 28px; text-align: center; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; background: rgba(0,194,255,0.07); border: 1px solid rgba(0,194,255,0.2); padding: 5px 14px; border-radius: 20px; }
+  .hero-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: var(--muted2); background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: 8px 20px; border-radius: 20px; margin-bottom: 20px; }
+  .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); }
+  .hero-title { font-family: 'Inter', sans-serif; font-size: clamp(34px, 5.5vw, 60px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 16px; }
+  .hero-title span { background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+  .hero-sub { font-size: 16px; color: var(--muted2); line-height: 1.7; max-width: 500px; margin: 0 auto 28px; font-weight: 400; }
+  .search-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 28px; max-width: 700px; margin: 0 auto; position: relative; overflow: hidden; }
+  .search-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(0,194,255,0.5), transparent); }
+  .field-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted2); margin-bottom: 8px; display: block; }
+  .domain-row { display: flex; gap: 10px; margin-bottom: 20px; }
+  .domain-input { flex: 1; background: var(--surface2); border: 1.5px solid var(--border); border-radius: 10px; padding: 13px 16px; font-family: 'Inter', sans-serif; font-size: 15px; color: var(--text); outline: none; transition: border-color 0.2s, box-shadow 0.2s; }
+  .domain-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(0,194,255,0.1); }
+  .domain-input::placeholder { color: var(--muted); }
+  .divider { height: 1px; background: var(--border); margin-bottom: 20px; }
+  .icp-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted2); margin-bottom: 14px; display: flex; align-items: center; gap: 8px; }
+  .icp-label span { font-size: 10px; color: var(--muted); font-weight: 400; letter-spacing: 0.06em; background: var(--surface2); border: 1px solid var(--border); padding: 2px 8px; border-radius: 10px; text-transform: none; }
+  .icp-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 12px; margin-bottom: 20px; }
+  .icp-field { position: relative; }
+  .icp-select { width: 100%; background: var(--surface2); border: 1.5px solid var(--border); border-radius: 10px; padding: 10px 28px 10px 13px; font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text); outline: none; appearance: none; cursor: pointer; transition: border-color 0.2s; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2392AECF' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
+  .icp-select:focus { border-color: var(--accent); }
+  .icp-select option { background: #0F1520; color: var(--text); }
+  .multi-select-wrapper { position: relative; }
+  .multi-select-trigger { width: 100%; background: var(--surface2); border: 1.5px solid var(--border); border-radius: 10px; padding: 10px 28px 10px 13px; font-family: 'Inter', sans-serif; font-size: 13px; color: var(--text); outline: none; cursor: pointer; text-align: left; transition: border-color 0.2s; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%2392AECF' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 10px center; }
+  .multi-select-trigger.open { border-color: var(--accent); }
+  .multi-select-trigger .placeholder { color: var(--muted); }
+  .multi-select-dropdown { display: none; position: absolute; top: calc(100% + 6px); left: 0; right: 0; background: #0F1520; border: 1px solid var(--border-glow); border-radius: 12px; padding: 6px; z-index: 100; box-shadow: 0 12px 32px rgba(0,0,0,0.5); max-height: 260px; overflow-y: auto; }
+  .multi-select-dropdown.open { display: block; }
+  .multi-option { display: flex; align-items: center; gap: 8px; padding: 7px 10px; border-radius: 6px; cursor: pointer; font-size: 13px; color: var(--muted2); transition: background 0.15s; user-select: none; }
+  .multi-option:hover { background: rgba(0,194,255,0.07); color: var(--text); }
+  .multi-option input[type="checkbox"] { accent-color: var(--accent); width: 13px; height: 13px; cursor: pointer; }
+  .search-btn { width: 100%; background: linear-gradient(135deg, var(--accent2), var(--accent)); border: none; border-radius: 12px; padding: 15px; font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700; color: #fff; cursor: pointer; letter-spacing: 0.02em; transition: opacity 0.2s, transform 0.15s, box-shadow 0.2s; box-shadow: 0 4px 20px rgba(0,194,255,0.2); }
+  .search-btn:hover { opacity: 0.93; transform: translateY(-1px); box-shadow: 0 6px 28px rgba(0,194,255,0.3); }
+  .search-btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; box-shadow: none; }
+  .hint-row { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 14px; justify-content: center; }
+  .hint-tag { font-size: 12px; color: var(--muted); cursor: pointer; transition: color 0.2s; padding: 3px 0; }
+  .hint-tag:hover { color: var(--accent); }
+  .hint-tag::before { content: '↗ '; opacity: 0.6; }
+
+  /* SCREEN 2 */
+  .loading-wrap { text-align: center; padding: 80px 0; }
+  .snake-track { width: 480px; height: 10px; background: var(--surface2); border-radius: 6px; margin: 0 auto 32px; overflow: hidden; position: relative; }
+  .snake-track::after {
+    content: '';
+    position: absolute; top: 0; left: -60%;
+    width: 60%; height: 100%;
+    background: linear-gradient(90deg, transparent, var(--accent2), var(--accent), var(--accent2), transparent);
+    border-radius: 6px;
+    animation: snake-crawl 1.6s ease-in-out infinite;
+  }
+  @keyframes snake-crawl {
+    0%   { left: -60%; opacity: 0.6; }
+    50%  { opacity: 1; }
+    100% { left: 110%; opacity: 0.6; }
+  }
+  .loading-title { font-family: 'Inter', sans-serif; font-size: 28px; font-weight: 700; margin-bottom: 12px; }
+  .loading-sub { font-size: 12px; color: var(--muted); margin-bottom: 32px; }
+  .steps { display: flex; flex-direction: column; gap: 6px; max-width: 360px; margin: 0 auto; text-align: left; }
+  .step { display: flex; align-items: center; gap: 10px; font-size: 12px; color: var(--muted); padding: 8px 12px; border-radius: 8px; transition: all 0.3s; }
+  .step.active { color: var(--text); background: rgba(0,194,255,0.07); border-left: 2px solid var(--accent); }
+  .step.done { color: var(--green); }
+
+  /* SCREEN 3 */
+  .results-wrap { padding: 28px 0 60px; }
+  .results-topbar { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
+  .results-headline { font-family: 'Inter', sans-serif; font-size: 24px; font-weight: 800; line-height: 1.2; color: var(--text); }
+  .results-headline span { color: var(--accent); }
+  .new-search-btn { background: rgba(0,194,255,0.08); border: 1px solid var(--accent); border-radius: 8px; padding: 10px 20px; font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 600; color: var(--accent); cursor: pointer; transition: all 0.2s; white-space: nowrap; }
+  .new-search-btn:hover { background: rgba(0,194,255,0.15); }
+  .bottom-new-search { display: block; margin: 24px auto 0; background: none; border: 1px solid var(--border); border-radius: 8px; padding: 11px 28px; font-family: 'Inter', sans-serif; font-size: 13px; color: var(--muted); cursor: pointer; transition: all 0.2s; }
+  .bottom-new-search:hover { border-color: var(--accent); color: var(--accent); }
+  .icp-chips { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 8px; }
+  .icp-chip { font-size: 10px; padding: 3px 10px; border-radius: 20px; border: 1px solid rgba(0,194,255,0.3); color: var(--accent); background: rgba(0,194,255,0.05); letter-spacing: 0.05em; }
+  .table-wrap { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
+  table { width: 100%; border-collapse: collapse; }
+  thead { background: var(--surface2); border-bottom: 1px solid var(--border); }
+  th { padding: 11px 14px; text-align: left; font-size: 11px; font-weight: 600; letter-spacing: 0.07em; text-transform: uppercase; color: var(--muted2); white-space: nowrap; }
+  tbody tr { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+  tbody tr:last-child { border-bottom: none; }
+  tbody tr:hover { background: rgba(0,194,255,0.04); }
+  td { padding: 13px 14px; font-size: 13px; vertical-align: middle; color: var(--muted2); }
+  .td-company { font-family: 'Inter', sans-serif; font-weight: 700; font-size: 14px; color: var(--text); }
+  .td-domain { font-size: 12px; }
+  .td-domain a { color: var(--accent); text-decoration: none; }
+  .td-domain a:hover { text-decoration: underline; }
+  .tag { display: inline-block; font-size: 10px; letter-spacing: 0.05em; text-transform: uppercase; padding: 2px 7px; border-radius: 4px; border: 1px solid; white-space: nowrap; }
+  .tag-industry { color: var(--accent); border-color: rgba(0,194,255,0.25); background: rgba(0,194,255,0.07); }
+  .tag-region   { color: var(--muted); border-color: var(--border); }
+  .tag-high     { color: var(--green); border-color: rgba(0,229,160,0.3); background: rgba(0,229,160,0.07); }
+  .tag-medium   { color: var(--amber); border-color: rgba(255,176,32,0.3); background: rgba(255,176,32,0.07); }
+  .tag-low      { color: var(--muted); border-color: var(--border); }
+  .snippet-cell { font-size: 11px; color: var(--muted); max-width: 220px; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; line-height: 1.4; }
+  .snippet-cell a { color: var(--accent); font-size: 10px; display: block; margin-bottom: 2px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; text-decoration: none; }
+  .snippet-cell a:hover { text-decoration: underline; }
+  .icp-badge { display: inline-flex; align-items: center; gap: 4px; font-size: 10px; padding: 2px 6px; border-radius: 4px; border: 1px solid; }
+  .icp-high { color: var(--green); border-color: rgba(0,229,160,0.3); background: rgba(0,229,160,0.07); }
+  .icp-medium { color: var(--amber); border-color: rgba(255,176,32,0.3); background: rgba(255,176,32,0.07); }
+  .icp-low { color: var(--muted); border-color: var(--border); }
+  /* CTA / Unlock section */
+  .unlock-banner { background: #fff; border: 2px solid #BFDBFE; border-radius: 16px; padding: 32px 28px 28px; text-align: center; position: relative; overflow: hidden; margin-top: 16px; box-shadow: 0 4px 24px rgba(59,130,246,0.1); }
+  .unlock-eyebrow { display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #1D4ED8; background: rgba(29,78,216,0.1); border: 1px solid rgba(29,78,216,0.3); padding: 5px 16px; border-radius: 20px; margin-bottom: 16px; }
+  .unlock-title { font-family: 'Inter', sans-serif; font-size: 30px; font-weight: 800; margin-bottom: 8px; line-height: 1.2; color: #0A1628; }
+  .unlock-sub { font-size: 16px; color: #1E3A5F; margin-bottom: 22px; line-height: 1.6; max-width: 520px; margin-left: auto; margin-right: auto; }
+  /* Dark blue value bar */
+  .unlock-value-bar { background: #1E3A70; border-radius: 12px; padding: 20px 24px; display: flex; align-items: center; justify-content: center; gap: 0; margin: 0 auto 24px; max-width: 860px; }
+  .uvb-item { flex: 1; text-align: center; padding: 0 12px; }
+  .uvb-icon { font-size: 28px; margin-bottom: 8px; }
+  .uvb-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+  .uvb-desc { font-size: 12px; color: #93C5FD; line-height: 1.4; }
+  .uvb-arrow { color: #60A5FA; font-size: 20px; font-weight: 700; flex-shrink: 0; padding: 0 4px; }
+  /* Price row */
+  .unlock-price-row { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 18px; flex-wrap: wrap; }
+  .unlock-price-amt { font-family: 'Inter', sans-serif; font-size: 36px; font-weight: 800; color: #0A1628; }
+  .unlock-price-note { font-size: 14px; color: #334155; }
+  .cmo-free-badge { background: #0A1628; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 6px 14px; border-radius: 20px; white-space: nowrap; }
+  /* Email + button */
+  .email-capture { display: flex; gap: 0; max-width: 480px; margin: 0 auto 12px; border-radius: 10px; overflow: hidden; border: 1.5px solid #93C5FD; background: #fff; }
+  .email-capture input { flex: 1; background: #fff; border: none; padding: 13px 16px; font-family: 'Inter', sans-serif; font-size: 14px; color: #0A1628; outline: none; }
+  .email-capture input::placeholder { color: #94A3B8; }
+  .unlock-btn { display: block; width: 100%; max-width: 480px; margin: 0 auto; background: #1D4ED8; border: none; border-radius: 10px; padding: 15px; font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; color: #fff; cursor: pointer; transition: background 0.2s, transform 0.15s; }
+  .unlock-btn:hover { background: #1E40AF; transform: translateY(-1px); }
+  .unlock-btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+  .cmo-club-link { font-size: 13px; color: #334155; margin-top: 12px; }
+  .cmo-club-link a { color: #1D4ED8; font-weight: 600; }
+  /* Meeting embed */
+  .meeting-section { margin-top: 20px; background: #fff; border: 2px solid #BFDBFE; border-radius: 16px; padding: 24px; }
+  .meeting-section-title { font-size: 18px; font-weight: 800; color: #0A1628; margin-bottom: 4px; text-align: center; }
+  .meeting-section-sub { font-size: 14px; color: #334155; text-align: center; margin-bottom: 20px; }
+  .meetings-iframe-container iframe { border-radius: 10px; }
+  @media (max-width: 700px) { .unlock-value-bar { flex-wrap: wrap; } .uvb-arrow { display: none; } .uvb-item { flex: 1 1 40%; padding: 8px; } }
+  /* Sources teaser strip */
+  .sources-strip { display: none; align-items: center; gap: 10px; background: rgba(0,194,255,0.04); border: 1px solid var(--border); border-radius: 10px; padding: 11px 18px; margin: 10px 0 0; flex-wrap: wrap; }
+  .sources-strip.visible { display: flex; }
+  .sources-strip-label { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap; }
+  .sources-strip-divider { width: 1px; height: 14px; background: var(--border); flex-shrink: 0; }
+  .source-pill { font-size: 11px; font-weight: 600; color: var(--accent); background: rgba(0,194,255,0.07); border: 1px solid rgba(0,194,255,0.2); padding: 3px 10px; border-radius: 20px; white-space: nowrap; }
+  .payment-polling { font-size: 12px; color: var(--accent); margin-top: 10px; display: none; }
+  .payment-polling.visible { display: block; }
+  .export-bar { display: none; align-items: center; justify-content: space-between; background: rgba(0,229,160,0.05); border: 1px solid rgba(0,229,160,0.2); border-radius: 10px; padding: 12px 20px; margin-top: 12px; flex-wrap: wrap; gap: 10px; }
+  .export-bar.visible { display: flex; }
+  .export-info { font-size: 12px; color: var(--green); }
+  .export-btn { background: none; border: 1px solid rgba(0,229,160,0.4); border-radius: 7px; padding: 8px 16px; font-family: 'DM Mono', monospace; font-size: 11px; color: var(--green); cursor: pointer; transition: all 0.2s; }
+  .export-btn:hover { background: rgba(0,229,160,0.1); }
+
+  /* FRAMEWORK BAND — light blue, dark text */
+  .framework-band { background: #C8E6FF; border-top: 3px solid #3B82F6; border-bottom: 3px solid #3B82F6; padding: 48px 24px 44px; margin-top: 8px; }
+  .framework-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #1D4ED8; margin-bottom: 10px; text-align: center; }
+  .framework-title { font-family: 'Inter', sans-serif; font-size: clamp(28px, 4vw, 44px); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; margin-bottom: 12px; text-align: center; color: #0A1628; }
+  .framework-title span { color: #1D4ED8; -webkit-text-fill-color: #1D4ED8; background: none; }
+  .framework-sub { font-size: 18px; color: #1E3A5F; line-height: 1.6; max-width: 560px; margin: 0 auto 32px; text-align: center; font-weight: 500; }
+  .fw-boxes { display: flex; align-items: center; max-width: 1100px; margin: 0 auto 28px; gap: 0; }
+  .fw-arrow-sep { font-size: 24px; color: #3B82F6; font-weight: 700; flex-shrink: 0; padding: 0 8px; }
+  .fw-box { flex: 1; background: #fff; border: 2px solid #BFDBFE; border-radius: 12px; padding: 22px 16px; position: relative; overflow: hidden; box-shadow: 0 2px 12px rgba(59,130,246,0.1); text-align: center; }
+  .fw-box::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+  .fw-box:nth-child(1)::before { background: #3B82F6; }
+  .fw-box:nth-child(3)::before { background: #06B6D4; }
+  .fw-box:nth-child(5)::before { background: #10B981; }
+  .fw-box:nth-child(7)::before { background: #F59E0B; }
+  .fw-num { font-family: 'DM Mono', monospace; font-size: 13px; color: #64748B; margin-bottom: 8px; font-weight: 600; }
+  .fw-title { font-size: 15px; font-weight: 800; color: #0A1628; margin-bottom: 8px; line-height: 1.3; }
+  .fw-desc { font-size: 13px; color: #334155; line-height: 1.5; }
+  .fw-here { display: inline-block; font-size: 11px; font-weight: 700; color: #fff; background: #3B82F6; border-radius: 8px; padding: 2px 10px; margin-top: 8px; letter-spacing: 0.05em; text-transform: uppercase; }
+  /* Full-width video */
+  .fw-video-wrap { max-width: 820px; margin: 0 auto 0; }
+  .fw-video-label { font-size: 13px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #1D4ED8; margin-bottom: 12px; text-align: center; }
+  .fw-video-title { font-size: 22px; font-weight: 800; color: #0A1628; text-align: center; margin-bottom: 20px; }
+  .fw-yt { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 14px; box-shadow: 0 8px 32px rgba(0,0,0,0.18); }
+  .fw-yt iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 14px; }
+  @media (max-width: 800px) { .fw-boxes { flex-wrap: wrap; } .fw-arrow-sep { display: none; } .fw-box { flex: 1 1 calc(50% - 6px); } }
+
+  /* RESULT TEASER — horizontal pill steps */
+  .result-framework-teaser { background: #0C1322; border: 1px solid var(--border-glow); border-radius: 12px; padding: 18px 20px; margin: 16px 0 0; text-align: center; }
+  .rft-title { font-size: 15px; font-weight: 700; color: var(--text); margin-bottom: 14px; }
+  .rft-steps { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 4px; }
+  .rft-step { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--muted); padding: 8px 16px; border-radius: 20px; border: 1px solid transparent; }
+  .rft-step.active { background: rgba(0,194,255,0.1); border-color: rgba(0,194,255,0.3); color: var(--text); font-weight: 600; }
+  .rft-n { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--accent); }
+  .rft-arrow { color: var(--border); padding: 0 2px; font-size: 14px; }
+  .rft-done { font-size: 10px; color: var(--green); background: rgba(0,229,160,0.08); border: 1px solid rgba(0,229,160,0.25); border-radius: 10px; padding: 1px 7px; margin-left: 4px; }
+
+  /* ERROR */
+  .error-wrap { text-align: center; padding: 60px 0; }
+  .error-box { background: rgba(255,77,106,0.05); border: 1px solid rgba(255,77,106,0.2); border-radius: 12px; padding: 28px; max-width: 440px; margin: 0 auto; }
+  .error-title { font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 700; color: var(--red); margin-bottom: 8px; }
+  .error-msg { font-size: 12px; color: var(--muted); margin-bottom: 16px; }
+  .retry-btn { background: none; border: 1px solid rgba(255,77,106,0.35); border-radius: 7px; padding: 9px 20px; font-family: 'DM Mono', monospace; font-size: 12px; color: var(--red); cursor: pointer; }
+  .retry-btn:hover { background: rgba(255,77,106,0.08); }
+  footer { padding: 24px 0; text-align: center; font-size: 10px; color: var(--muted); border-top: 1px solid var(--border); margin-top: 32px; letter-spacing: 0.05em; }
+  @media (max-width: 640px) {
+    .icp-grid{grid-template-columns:1fr}
+    .domain-row{flex-direction:column}
+    th:nth-child(5),td:nth-child(5){font-size:10px}
+    .header-credit { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="header-left">
+      <div class="logo"><div class="logo-dot"></div>CompetitorIQ</div>
+      <div class="header-credit">by <a href="https://www.linkedin.com/in/danitbensimon/" target="_blank">Danit Ben Simon</a> · AI Growth</div>
+    </div>
+    <div class="nav-tag">Beta</div>
+  </header>
+
+  <!-- SCREEN 1: SEARCH -->
+  <div id="searchSection" class="section visible">
+    <div class="hero">
+      <h1 class="hero-title">Find companies already<br>using <span>your competitors</span></h1>
+      <p class="hero-sub" style="font-size:18px;color:var(--muted2);margin-bottom:20px;">For B2B SaaS &mdash; scan the web for public signals and surface competitor customers in seconds.</p>
+
+      <div class="search-card">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px">
+          <div>
+            <span class="field-label">Competitor Domain</span>
+            <input type="text" class="domain-input" id="domainInput" placeholder="e.g. redpoints.com" autocomplete="off" spellcheck="false" style="width:100%;margin:0" />
+          </div>
+          <div>
+            <span class="field-label" style="color:var(--accent)">Brand Name <span style="font-size:10px;font-weight:600;color:var(--accent);text-transform:none;letter-spacing:0;opacity:0.8">← important: exact name as written online</span></span>
+            <input type="text" class="domain-input" id="brandInput" placeholder="e.g. Chargeflow (not chargflow)" autocomplete="off" spellcheck="false" style="width:100%;margin:0;border-color:rgba(0,194,255,0.4)" />
+          </div>
+        </div>
+
+        <button class="search-btn" id="searchBtn" onclick="startSearch()">Get 10 Results Free →</button>
+
+        <div style="text-align:center;margin:14px 0 6px;font-size:14px;font-weight:600;color:var(--muted);letter-spacing:0.01em;">
+          ✦ Most effective for <span style="color:var(--accent);">legacy B2B SaaS</span> competitors
+        </div>
+
+        <div class="hint-row">
+          <span class="hint-tag" onclick="setDomain('deel.com','Deel')">deel.com</span>
+          <span class="hint-tag" onclick="setDomain('rippling.com','Rippling')">rippling.com</span>
+          <span class="hint-tag" onclick="setDomain('gusto.com','Gusto')">gusto.com</span>
+          <span class="hint-tag" onclick="setDomain('workday.com','Workday')">workday.com</span>
+        </div>
+      </div>
+    </div>
+
+  <!-- FRAMEWORK BAND — full width, light blue, inside searchSection so it hides on search -->
+  <div class="framework-band">
+
+    <!-- VIDEO FIRST -->
+    <div class="fw-video-wrap">
+      <div class="fw-video-label">Watch the Case Study</div>
+      <div class="fw-video-title">How I 10X'd outbound results using competitor customers</div>
+      <div class="fw-yt">
+        <iframe src="https://www.youtube.com/embed/LKkJZPqJrwQ" title="10X outbound switch campaign" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <!-- ARROW DIVIDER -->
+    <div style="text-align:center;margin:28px 0 20px;font-size:13px;font-weight:700;color:#1D4ED8;letter-spacing:0.1em;text-transform:uppercase;">
+      ↓ &nbsp; Here's the 4-step framework &nbsp; ↓
+    </div>
+
+    <!-- BOXES BELOW VIDEO — centered text, arrows between -->
+    <div class="fw-boxes">
+      <div class="fw-box">
+        <div class="fw-num">01</div>
+        <div class="fw-title">Find who's buying from your competitor</div>
+        <div class="fw-desc">Scan case studies, reviews, job posts and tech databases for companies publicly using the tool.</div>
+        <div class="fw-here">You are here ↑</div>
+      </div>
+      <div class="fw-arrow-sep">→</div>
+      <div class="fw-box">
+        <div class="fw-num">02</div>
+        <div class="fw-title">Enrich their buying committee</div>
+        <div class="fw-desc">Find the decision makers: VP Sales, RevOps, CRO. Not just the company name.</div>
+      </div>
+      <div class="fw-arrow-sep">→</div>
+      <div class="fw-box">
+        <div class="fw-num">03</div>
+        <div class="fw-title">Write competitor-aware outreach</div>
+        <div class="fw-desc">"I saw you use [Competitor]. We help teams like yours who've outgrown it." Specificity converts.</div>
+      </div>
+      <div class="fw-arrow-sep">→</div>
+      <div class="fw-box">
+        <div class="fw-num">04</div>
+        <div class="fw-title">Sequence email + LinkedIn</div>
+        <div class="fw-desc">3-touch sequence over 5 days. These are warm accounts. Treat them like inbound.</div>
+      </div>
+    </div>
+  </div><!-- end framework-band -->
+  </div><!-- end searchSection -->
+
+  <!-- SCREEN 2: LOADING -->
+  <div id="loadingSection" class="section">
+    <div class="loading-wrap">
+      <div class="snake-track"></div>
+      <div class="loading-title">Scanning the web for customers of<br><strong id="loadingDomain" style="color:var(--accent)"></strong></div>
+      <div style="margin: 24px auto 0; max-width: 660px; padding: 0 20px;">
+        <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:14px;box-shadow:0 0 40px rgba(0,194,255,0.15);">
+          <iframe
+            id="loadingVideo"
+            src="https://www.youtube.com/embed/LKkJZPqJrwQ?autoplay=1&mute=1&rel=0&modestbranding=1"
+            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <div style="font-size:22px;font-weight:700;color:var(--text);margin-top:18px;text-align:center;line-height:1.3;">👆 While you wait — open this in a new tab to turn your results into pipeline</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCREEN 3: RESULTS -->
+  <div id="resultsSection" class="section">
+    <div class="results-wrap">
+      <div class="results-topbar">
+        <div>
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:6px;">
+            <span style="font-size:12px;color:var(--muted);letter-spacing:0.05em">Customers of <span id="resultDomain" style="color:var(--accent);font-weight:700;font-size:14px"></span></span>
+            <span style="font-size:10px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--green);background:rgba(0,229,160,0.08);border:1px solid rgba(0,229,160,0.25);padding:2px 9px;border-radius:20px;">✦ Free Search</span>
+          </div>
+          <div class="results-headline">10 companies <span>free</span> — unlock more below</div>
+          <div id="freeNote" style="margin-top:8px;font-size:13px;color:var(--muted);display:none;"></div>
+          <div id="freeTierBanner" style="display:none;margin-top:12px;background:rgba(0,194,255,0.06);border:1px solid rgba(0,194,255,0.2);border-radius:10px;padding:10px 16px;font-size:13px;color:var(--text);">
+            🔍 <strong>This is a free preview.</strong> The full search scans <strong>7 signal sources</strong> including G2, LinkedIn, job boards, tech stack databases & more — and typically uncovers <strong>30–100+ companies</strong>. Unlock the full list below.
+          </div>
+        </div>
+        <button class="new-search-btn" onclick="resetToHome()">← New Search</button>
+      </div>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Company</th>
+              <th>Website</th>
+              <th>Industry</th>
+              <th>Source</th>
+            </tr>
+          </thead>
+          <tbody id="resultsBody"></tbody>
+        </table>
+      </div>
+
+
       <!-- SOURCES TEASER STRIP -->
       <div class="sources-strip" id="sourcesStrip">
         <span class="sources-strip-label">🔒 Also found in full list</span>
