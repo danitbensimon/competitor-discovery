@@ -49,12 +49,15 @@ def score_confidence(text: str, brand: str = "Deel") -> str:
 
 def _fetch_one(page: dict, fetch_content: bool) -> dict:
     """Fetch a single page and return enriched dict with text + confidence.
-    Only fetches full content for own_site/customer_signals pages â others use snippet.
-    This keeps memory usage low on Render free tier.
+    - probe_sublink pages: skip fetch â company name is already in title/snippet from URL slug
+    - own_site / customer_signals: fetch full content
+    - others: use snippet only
     """
     signal_group = page.get("signal_group", "") or page.get("group", "")
-    should_fetch = fetch_content and signal_group in ("own_site", "customer_signals")
-    if should_fetch:
+    # Probe sub-links already have a company name hint in title â no fetch needed
+    if page.get("probe_sublink"):
+        text = f"{page.get('title', '')} {page.get('snippet', '')}"
+    elif fetch_content and signal_group in ("own_site", "customer_signals"):
         content = fetch_page_text(page["url"])
         text = content if content else f"{page.get('title', '')} {page.get('snippet', '')}"
     else:
