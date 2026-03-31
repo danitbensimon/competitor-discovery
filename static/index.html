@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CompetitorIQ — Find companies using your competitors</title>
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -273,8 +276,8 @@
             <input type="text" class="domain-input" id="domainInput" placeholder="e.g. redpoints.com" autocomplete="off" spellcheck="false" style="width:100%;margin:0" />
           </div>
           <div>
-            <span class="field-label">Brand Name <span style="font-size:10px;font-weight:400;color:var(--muted);text-transform:none;letter-spacing:0">(auto-detected — fix if wrong)</span></span>
-            <input type="text" class="domain-input" id="brandInput" placeholder="e.g. Red Points" autocomplete="off" spellcheck="false" style="width:100%;margin:0" />
+            <span class="field-label" style="color:var(--accent)">Brand Name <span style="font-size:10px;font-weight:600;color:var(--accent);text-transform:none;letter-spacing:0;opacity:0.8">← important: exact name as written online</span></span>
+            <input type="text" class="domain-input" id="brandInput" placeholder="e.g. Chargeflow (not chargflow)" autocomplete="off" spellcheck="false" style="width:100%;margin:0;border-color:rgba(0,194,255,0.4)" />
           </div>
         </div>
 
@@ -285,10 +288,10 @@
         </div>
 
         <div class="hint-row">
-          <span class="hint-tag" onclick="setDomain('deel.com')">deel.com</span>
-          <span class="hint-tag" onclick="setDomain('rippling.com')">rippling.com</span>
-          <span class="hint-tag" onclick="setDomain('gusto.com')">gusto.com</span>
-          <span class="hint-tag" onclick="setDomain('workday.com')">workday.com</span>
+          <span class="hint-tag" onclick="setDomain('deel.com','Deel')">deel.com</span>
+          <span class="hint-tag" onclick="setDomain('rippling.com','Rippling')">rippling.com</span>
+          <span class="hint-tag" onclick="setDomain('gusto.com','Gusto')">gusto.com</span>
+          <span class="hint-tag" onclick="setDomain('workday.com','Workday')">workday.com</span>
         </div>
       </div>
     </div>
@@ -475,7 +478,11 @@
   let stepTimer = null;
   let currentResults = null;
 
-  function setDomain(d) { document.getElementById('domainInput').value = d; document.getElementById('domainInput').focus(); }
+  function setDomain(d, brand) {
+    document.getElementById('domainInput').value = d;
+    if (brand) document.getElementById('brandInput').value = brand;
+    document.getElementById('brandInput').focus();
+  }
 
   function showSection(id) {
     document.querySelectorAll('.section').forEach(s => s.classList.remove('visible'));
@@ -582,6 +589,32 @@
     const locked = data.locked || 0;
     const total = data.total || 0;
     const preview = (data.preview || []).length;
+
+    // Handle zero results — show helpful message instead of empty table
+    if (total === 0) {
+      const searchedDomain = document.getElementById('domainInput').value.trim();
+      tbody.innerHTML = `<tr><td colspan="5" style="text-align:center;padding:40px 20px;color:var(--muted);">
+        <div style="font-size:28px;margin-bottom:12px;">🔍</div>
+        <div style="font-size:16px;font-weight:600;color:var(--text);margin-bottom:8px;">No companies found for <span style="color:var(--accent)">${escHtml(searchedDomain)}</span></div>
+        <div style="font-size:13px;line-height:1.6;max-width:420px;margin:0 auto;">
+          This usually means the tool doesn't have enough web presence for our search engine to find customer mentions.<br><br>
+          <strong>Try a well-known SaaS competitor</strong> like <code>rippling.com</code>, <code>bamboohr.com</code>, or <code>gusto.com</code> to see how it works.
+        </div>
+        <button onclick="resetToHome()" style="margin-top:20px;background:var(--accent);color:#0a0a0f;border:none;border-radius:8px;padding:10px 24px;font-weight:700;font-size:14px;cursor:pointer;">← Try a different domain</button>
+      </td></tr>`;
+      const freeTierBanner = document.getElementById('freeTierBanner');
+      if (freeTierBanner) freeTierBanner.style.display = 'none';
+      const freeNote = document.getElementById('freeNote');
+      if (freeNote) freeNote.style.display = 'none';
+      const strip = document.getElementById('sourcesStrip');
+      if (strip) strip.classList.remove('visible');
+      const lockWallEl = document.getElementById('lockWall');
+      if (lockWallEl) lockWallEl.style.display = 'none';
+      document.getElementById('exportBar').classList.remove('visible');
+      showSection('resultsSection');
+      return;
+    }
+
     // Update the free preview note in the table header area
     const freeTierBanner = document.getElementById('freeTierBanner');
     if (freeTierBanner) freeTierBanner.style.display = 'block';
@@ -607,15 +640,16 @@
       strip.classList.remove('visible');
     }
 
+    const lockWallEl = document.getElementById('lockWall');
     if (data.unlocked) {
       // Paid — hide the lockWall paywall but keep the calendar visible
-      document.getElementById('lockWall').style.display = 'none';
+      if (lockWallEl) lockWallEl.style.display = 'none';
       document.getElementById('exportBar').classList.add('visible');
       document.getElementById('exportCount').textContent = total;
       const mc = document.getElementById('meetingEmbed');
       if (mc) { mc.style.display = 'block'; mc.scrollIntoView({behavior:'smooth', block:'start'}); }
     } else {
-      document.getElementById('lockWall').style.display = 'block';
+      if (lockWallEl) lockWallEl.style.display = 'block';
       document.getElementById('exportBar').classList.remove('visible');
     }
     showSection('resultsSection');
@@ -731,6 +765,18 @@
   })();
 
   document.getElementById('domainInput').addEventListener('keydown', e => { if (e.key==='Enter') startSearch(); });
+  // Auto-suggest brand name from domain when brand field is empty
+  document.getElementById('domainInput').addEventListener('blur', () => {
+    const domain = document.getElementById('domainInput').value.trim();
+    const brandInput = document.getElementById('brandInput');
+    if (domain && !brandInput.value.trim()) {
+      const raw = domain.replace(/^https?:\/\//, '').replace(/^www\./, '').split('/')[0].split('.')[0];
+      brandInput.value = raw.charAt(0).toUpperCase() + raw.slice(1);
+      brandInput.style.border = '1.5px solid rgba(255,180,0,0.6)';
+      brandInput.title = 'Auto-filled from domain — please verify this is the exact brand name';
+      setTimeout(() => { brandInput.style.border = ''; }, 3000);
+    }
+  });
 </script>
 </body>
 </html>

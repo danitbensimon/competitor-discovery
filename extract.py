@@ -75,8 +75,8 @@ def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: boo
 
     print(f"  Parallel {'fetching' if fetch_content else 'snippet'} for {len(pages)} pages...")
 
-    # Fetch all pages concurrently — stays within ~10s regardless of page count
-    with ThreadPoolExecutor(max_workers=4) as executor:
+    # Fetch all pages concurrently — stays within ~8s regardless of page count
+    with ThreadPoolExecutor(max_workers=6) as executor:
         futures = {executor.submit(_fetch_one, page, fetch_content): page for page in pages}
         enriched = []
         for future in as_completed(futures):
@@ -106,35 +106,46 @@ def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: boo
                 "confidence": confidence,
             })
 
-    qualified_pages = qualified_pages[:30]
+    qualified_pages = qualified_pages[:25]
 
     print(f"\n  {len(qualified_pages)} pages passed confidence filter. Extracting companies...")
 
     if not qualified_pages:
         return []
 
+    import re as _re
+    import threading
     companies = []
     seen_sources: dict = {}
+    results_lock = threading.Lock()
 
     batch_size = 5
-    for i in range(0, len(qualified_pages), batch_size):
-        batch = qualified_pages[i:i + batch_size]
-        for row in extract_from_batch(batch, brand):
-            # Fix repeated .html.html.html bug
-            src = row.get("source_url", "")
-            import re as _re
-            src = _re.sub(r'(\.html){2,}', '.html', src)
-            row["source_url"] = src
-            # Max 5 companies per source URL (review/tech stack pages list many real companies)
-            if seen_sources.get(src, 0) < 5:
-                companies.append(row)
-                seen_sources[src] = seen_sources.get(src, 0) + 1
-        if len(companies) >= 15:
-            print(f"  Early stop: {len(companies)} companies found.")
-            break
+    batches = [qualified_pages[i:i + batch_size] for i in range(0, len(qualified_pages), batch_size)]
+
+    # Run up to 3 extraction batches in parallel to cut Claude latency
+    with ThreadPoolExecutor(max_workers=3) as ex:
+        future_to_batch = {ex.submit(extract_from_batch, batch, brand): batch for batch in batches}
+        for future in as_completed(future_to_batch):
+            try:
+                rows = future.result()
+            except Exception as e:
+                print(f"  Extraction batch error: {e}")
+                continue
+            with results_lock:
+                for row in rows:
+                    src = row.get("source_url", "")
+                    src = _re.sub(r'(\.html){2,}', '.html', src)
+                    row["source_url"] = src
+                    # Customer index pages (/customers, /case-studies, /clients) can yield
+                    # many real companies — allow up to 30 per source instead of 5
+                    is_index = any(p in src for p in ['/customers', '/case-studies', '/clients', '/success-stories'])
+                    per_source_limit = 30 if is_index else 5
+                    if seen_sources.get(src, 0) < per_source_limit:
+                        companies.append(row)
+                        seen_sources[src] = seen_sources.get(src, 0) + 1
 
     print(f"  Extracted {len(companies)} company evidence rows.")
-    return companies
+    return companies[:30]
 
 
 def extract_from_batch(pages: list[dict], brand: str) -> list[dict]:
@@ -142,9 +153,10 @@ def extract_from_batch(pages: list[dict], brand: str) -> list[dict]:
 
     blocks = []
     for p in pages:
+        signal = p.get('signal_group') or p.get('group', 'unknown')
         blocks.append(
             f"SOURCE: {p['url']}\n"
-            f"SIGNAL: {p.get('signal_group', 'unknown')}\n"
+            f"SIGNAL: {signal}\n"
             f"RANK_SCORE: {p.get('rank_score', 0)}\n"
             f"CONFIDENCE: {p.get('confidence', 'unknown')}\n"
             f"CONTENT:\n{p['content'][:2000]}\n"
@@ -214,7 +226,7 @@ Pages:
                 "company_name": company_name,
                 "company_domain": company_domain,
                 "source_url": source_url,
-                "signal_group": original_page.get("signal_group", ""),
+                "signal_group": original_page.get("signal_group") or original_page.get("group", ""),
                 "rank_score": original_page.get("rank_score", 0),
                 "confidence": original_page.get("confidence", ""),
                 "title": original_page.get("title", ""),

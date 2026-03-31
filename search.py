@@ -144,13 +144,57 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
             customer_signals[0],   # "using {b}"
             blog_press[0],         # site:{domain} customers
             blog_press[1],         # site:{domain} "case study"
+            blog_press[6],         # "{b} customers"
+            blog_press[7],         # "{b} case study"
+            blog_press[9],         # "{b} customer"
+            tech_stack[0],         # site:enlyft.com
             tech_stack[1],         # site:theirstack.com
             review_sites[0],       # site:g2.com
+            review_sites[1],       # site:capterra.com
         ]
     if tier == "pro":
         return customer_signals + job_postings + tech_stack[:7] + review_sites + linkedin + blog_press
     # advanced: everything
     return customer_signals + job_postings + tech_stack + review_sites + linkedin + blog_press
+
+
+def _probe_customer_index_pages(domain: str, brand: str) -> list[dict]:
+    """
+    Directly probe well-known customer/case-study listing paths on the competitor's site.
+    Many companies don't have their individual case study pages indexed by Brave, but DO
+    have a /customers or /case-studies index page that lists all of them.
+    Returns those pages as own_site signals so extraction can pull all customers at once.
+    """
+    import requests as _req
+    candidate_paths = [
+        "/customers", "/case-studies", "/clients",
+        "/success-stories", "/our-customers", "/customer-stories",
+        "/testimonials", "/references",
+    ]
+    headers = {
+        "User-Agent": (
+            "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+            "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        )
+    }
+    found = []
+    for path in candidate_paths:
+        url = f"https://{domain}{path}"
+        try:
+            resp = _req.get(url, headers=headers, timeout=5, allow_redirects=True)
+            # Accept only real pages (not 404s, not redirects off-domain)
+            if resp.status_code == 200 and domain in resp.url and len(resp.text) > 1000:
+                found.append({
+                    "url": resp.url,
+                    "title": f"{brand} customers",
+                    "snippet": f"Customer listing page for {brand} — may contain multiple customer names.",
+                    "group": "own_site",
+                    "signal_group": "own_site",
+                })
+                print(f"  [probe] found customer index: {resp.url}")
+        except Exception:
+            pass
+    return found
 
 
 def search_customer_mentions(domain: str, brand: str = None, mode: str = "live", tier: str = "lite") -> list[dict]:
@@ -176,9 +220,13 @@ def search_customer_mentions(domain: str, brand: str = None, mode: str = "live",
         query, group_name = query_group
         return _fetch_query(query, group_name, set(), pages=1)
 
-    with ThreadPoolExecutor(max_workers=3) as executor:
-        futures = {executor.submit(fetch_query_safe, qg): qg for qg in queries}
-        for future in as_completed(futures):
+    # Probe customer index pages directly (runs in parallel with Brave queries)
+    with ThreadPoolExecutor(max_workers=6) as executor:
+        probe_future = executor.submit(_probe_customer_index_pages, domain, brand)
+        query_futures = {executor.submit(fetch_query_safe, qg): qg for qg in queries}
+
+        # Collect Brave results
+        for future in as_completed(query_futures):
             try:
                 rows = future.result()
                 with lock:
@@ -188,6 +236,17 @@ def search_customer_mentions(domain: str, brand: str = None, mode: str = "live",
                             all_results.append(row)
             except Exception as e:
                 print(f"Search error: {e}")
+
+        # Prepend probed index pages so they get processed first (highest priority)
+        try:
+            probe_pages = probe_future.result()
+            with lock:
+                for row in probe_pages:
+                    if row["url"] not in seen_urls:
+                        seen_urls.add(row["url"])
+                        all_results.insert(0, row)  # prepend = high priority
+        except Exception as e:
+            print(f"Probe error: {e}")
 
     print(f"\nTotal URLs collected: {len(all_results)}")
     return all_results
