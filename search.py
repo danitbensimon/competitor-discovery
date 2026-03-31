@@ -57,7 +57,7 @@ def _fetch_query(query: str, group_name: str, seen_urls: set, pages: int = 1) ->
         except Exception as e:
             print(f"Search error ({query}): {e}")
             break
-    print(f'{query} → {len(results)} results')
+    print(f'{query} â {len(results)} results')
     return results
 
 
@@ -72,7 +72,7 @@ def _test_pages(domain: str, brand: str) -> list[dict]:
 def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
     b = brand
 
-    # GROUP 1: Customer signals — direct usage evidence
+    # GROUP 1: Customer signals â direct usage evidence
     customer_signals = [
         (f'"using {b}"', "customer_signals"),
         (f'"implemented {b}"', "customer_signals"),
@@ -87,7 +87,7 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
         (f'"{b} partner"', "customer_signals"),
     ]
 
-    # GROUP 2: Job postings — companies hiring people who know the tool
+    # GROUP 2: Job postings â companies hiring people who know the tool
     job_postings = [
         (f'"experience with {b}"', "job_postings"),
         (f'"familiar with {b}"', "job_postings"),
@@ -95,7 +95,7 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
         (f'"administer {b}"', "job_postings"),
     ]
 
-    # GROUP 3: Tech stack / integrations — including tech intelligence databases
+    # GROUP 3: Tech stack / integrations â including tech intelligence databases
     tech_stack = [
         (f'site:enlyft.com "{b}"', "tech_stack"),
         (f'site:theirstack.com "{b}"', "tech_stack"),
@@ -113,7 +113,7 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
         (f'site:g2.com "{b}"', "review_sites"),
         (f'site:capterra.com "{b}"', "review_sites"),
         (f'site:trustpilot.com "{b}"', "review_sites"),
-        (f'"{b} review" company', "review_sites"),
+        (f'"{b}" review" company', "review_sites"),
     ]
 
     # GROUP 5: LinkedIn
@@ -130,8 +130,8 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
         (f'site:{domain} blog', "own_site"),
         (f'site:{domain} testimonial', "own_site"),
         (f'site:{domain} "customer story"', "own_site"),
-        (f'"{b} customers"', "blog_press"),
-        (f'"{b} case study"', "blog_press"),
+        (f'"z{b} customers"', "blog_press"),
+        (f'"z{b} case study"', "blog_press"),
         (f'"{b} success story"', "blog_press"),
         (f'"{b} customer"', "blog_press"),
         (f'"{b} review" "company"', "blog_press"),
@@ -203,7 +203,7 @@ def _probe_customer_index_pages(domain: str, brand: str) -> list[dict]:
                 found.append({
                     "url": resp.url,
                     "title": f"{brand} customers",
-                    "snippet": f"Customer listing page for {brand} — may contain multiple customer names.",
+                    "snippet": f"Customer listing page for a{brand} â may contain multiple customer names.",
                     "group": "own_site",
                     "signal_group": "own_site",
                 })
