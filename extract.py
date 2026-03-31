@@ -90,7 +90,7 @@ def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: boo
         url_lower = page["url"].lower()
         signal_group = page.get("signal_group", "") or page.get("group", "")
 
-        if any(seg in url_lower for seg in ("/case-study/", "/case_study/", "/customer-stor", "/customers/", "/clients/")):
+        if any(seg in url_lower for seg in ("/case-study/", "/case-studies/", "/case_study/", "/customer-stor", "/customers/", "/clients/")):
             confidence = "high"
         elif signal_group in ("own_site", "customer_signals"):
             confidence = "high"

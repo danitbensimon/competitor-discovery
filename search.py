@@ -161,15 +161,26 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
 def _probe_customer_index_pages(domain: str, brand: str) -> list[dict]:
     """
     Directly probe well-known customer/case-study listing paths on the competitor's site.
-    Many companies don't have their individual case study pages indexed by Brave, but DO
-    have a /customers or /case-studies index page that lists all of them.
-    Returns those pages as own_site signals so extraction can pull all customers at once.
+    Adds the index page AND follows all case study sub-links found on it.
     """
     import requests as _req
+    import re as _re_probe
+    try:
+        from bs4 import BeautifulSoup as _BS
+        _has_bs4 = True
+    except ImportError:
+        _has_bs4 = False
+
     candidate_paths = [
         "/customers", "/case-studies", "/clients",
         "/success-stories", "/our-customers", "/customer-stories",
         "/testimonials", "/references",
+    ]
+    # URL segments that indicate an individual customer/case-study page
+    case_study_segs = [
+        "/case-studies/", "/case-study/", "/case_study/",
+        "/customers/", "/clients/", "/success-stories/",
+        "/customer-stories/", "/our-customers/",
     ]
     headers = {
         "User-Agent": (
@@ -178,12 +189,17 @@ def _probe_customer_index_pages(domain: str, brand: str) -> list[dict]:
         )
     }
     found = []
+    seen_urls = set()
+
     for path in candidate_paths:
         url = f"https://{domain}{path}"
         try:
             resp = _req.get(url, headers=headers, timeout=5, allow_redirects=True)
-            # Accept only real pages (not 404s, not redirects off-domain)
-            if resp.status_code == 200 and domain in resp.url and len(resp.text) > 1000:
+            if resp.status_code != 200 or domain not in resp.url or len(resp.text) < 1000:
+                continue
+
+            # Add the index page itself
+            if resp.url not in seen_urls:
                 found.append({
                     "url": resp.url,
                     "title": f"{brand} customers",
@@ -191,9 +207,43 @@ def _probe_customer_index_pages(domain: str, brand: str) -> list[dict]:
                     "group": "own_site",
                     "signal_group": "own_site",
                 })
+                seen_urls.add(resp.url)
                 print(f"  [probe] found customer index: {resp.url}")
+
+            # Follow individual case study links from this index page
+            if _has_bs4:
+                soup = _BS(resp.text, "html.parser")
+                hrefs = [a.get("href", "") for a in soup.find_all("a", href=True)]
+            else:
+                hrefs = _re_probe.findall(r'href=["\']([^"\']+)["\']', resp.text)
+
+            for href in hrefs:
+                # Normalise to absolute URL
+                if href.startswith("/"):
+                    href = f"https://{domain}{href}"
+                elif not href.startswith("http"):
+                    continue
+                # Only keep links on the same domain that look like individual case pages
+                if domain not in href:
+                    continue
+                if "#" in href or "?" in href:
+                    href = href.split("#")[0].split("?")[0]
+                if href in seen_urls:
+                    continue
+                if any(seg in href for seg in case_study_segs):
+                    found.append({
+                        "url": href,
+                        "title": f"{brand} case study",
+                        "snippet": f"Individual case study page for a {brand} customer.",
+                        "group": "own_site",
+                        "signal_group": "own_site",
+                    })
+                    seen_urls.add(href)
+
         except Exception:
             pass
+
+    print(f"  [probe] total pages found: {len(found)}")
     return found
 
 
