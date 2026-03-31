@@ -132,7 +132,7 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
         (f'site:{domain} "customer story"', "own_site"),
         (f'"{b} customers"', "blog_press"),
         (f'"{b} case study"', "blog_press"),
-        (f'"{h} success story"', "blog_press"),
+        (f'"{b} success story"', "blog_press"),
         (f'"{b} customer"', "blog_press"),
         (f'"{b} review" "company"', "blog_press"),
         (f'site:reddit.com "{b}"', "blog_press"),
