@@ -113,7 +113,7 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
         (f'site:g2.com "{b}"', "review_sites"),
         (f'site:capterra.com "{b}"', "review_sites"),
         (f'site:trustpilot.com "{b}"', "review_sites"),
-        (f'"{b}" review" company', "review_sites"),
+        (f'"{b} review" company', "review_sites"),
     ]
 
     # GROUP 5: LinkedIn
@@ -130,9 +130,9 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
         (f'site:{domain} blog', "own_site"),
         (f'site:{domain} testimonial', "own_site"),
         (f'site:{domain} "customer story"', "own_site"),
-        (f'"z{b} customers"', "blog_press"),
-        (f'"z{b} case study"', "blog_press"),
-        (f'"{b} success story"', "blog_press"),
+        (f'"{b} customers"', "blog_press"),
+        (f'"{b} case study"', "blog_press"),
+        (f'"{h} success story"', "blog_press"),
         (f'"{b} customer"', "blog_press"),
         (f'"{b} review" "company"', "blog_press"),
         (f'site:reddit.com "{b}"', "blog_press"),
@@ -158,13 +158,31 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
     return customer_signals + job_postings + tech_stack + review_sites + linkedin + blog_press
 
 
+def _slug_to_company_hint(slug: str) -> str:
+    """Extract a likely company name from a URL slug like 'the-beard-club-saves-40-pct'."""
+    STOP = {'saves', 'saved', 'increases', 'increased', 'reduces', 'reduced',
+            'slashes', 'cuts', 'grows', 'achieves', 'how', 'why', 'with',
+            'using', 'and', 'for', 'of', 'a', 'to', 'in', 'on', 'at',
+            'case', 'study', 'customer', 'success', 'story', 'boost', 'boosted'}
+    words = slug.replace('-', ' ').replace('_', ' ').split()
+    out = []
+    for w in words[:6]:
+        if w.lower() in STOP and out:
+            break
+        if not w.isdigit():
+            out.append(w.capitalize())
+    return ' '.join(out) if out else slug.replace('-', ' ').title()
+
+
 def _probe_customer_index_pages(domain: str, brand: str) -> list[dict]:
     """
     Directly probe well-known customer/case-study listing paths on the competitor's site.
-    Adds the index page AND follows all case study sub-links found on it.
+    Paths are fetched IN PARALLEL for speed. Adds the index page AND follows sub-links.
+    Sub-links get a company name hint from the URL slug so full-page fetch can be skipped.
     """
     import requests as _req
     import re as _re_probe
+    from concurrent.futures import ThreadPoolExecutor as _TPE, as_completed as _ac
     try:
         from bs4 import BeautifulSoup as _BS
         _has_bs4 = True
@@ -176,7 +194,6 @@ def _probe_customer_index_pages(domain: str, brand: str) -> list[dict]:
         "/success-stories", "/our-customers", "/customer-stories",
         "/testimonials", "/references",
     ]
-    # URL segments that indicate an individual customer/case-study page
     case_study_segs = [
         "/case-studies/", "/case-study/", "/case_study/",
         "/customers/", "/clients/", "/success-stories/",
@@ -188,62 +205,74 @@ def _probe_customer_index_pages(domain: str, brand: str) -> list[dict]:
             "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
         )
     }
+
+    def _fetch_path(path):
+        url = f"https://{domain}{path}"
+        try:
+            resp = _req.get(url, headers=headers, timeout=4, allow_redirects=True)
+            if resp.status_code == 200 and domain in resp.url and len(resp.text) > 1000:
+                return resp
+        except Exception:
+            pass
+        return None
+
     found = []
     seen_urls = set()
 
-    for path in candidate_paths:
-        url = f"https://{domain}{path}"
-        try:
-            resp = _req.get(url, headers=headers, timeout=5, allow_redirects=True)
-            if resp.status_code != 200 or domain not in resp.url or len(resp.text) < 1000:
+    # Fetch all candidate paths IN PARALLEL
+    with _TPE(max_workers=8) as tpe:
+        future_to_path = {tpe.submit(_fetch_path, p): p for p in candidate_paths}
+        for future in _ac(future_to_path):
+            resp = future.result()
+            if resp is None:
                 continue
 
-            # Add the index page itself
             if resp.url not in seen_urls:
                 found.append({
                     "url": resp.url,
                     "title": f"{brand} customers",
-                    "snippet": f"Customer listing page for a{brand} â may contain multiple customer names.",
+                    "snippet": f"Customer listing page for {brand} â may contain multiple customer names.",
                     "group": "own_site",
                     "signal_group": "own_site",
+                    "probe_index": True,
                 })
                 seen_urls.add(resp.url)
-                print(f"  [probe] found customer index: {resp.url}")
+                print(f"  [probe] found index: {resp.url}")
 
-            # Follow individual case study links from this index page
+            # Follow sub-links (cap at 15 to avoid overwhelming extraction)
             if _has_bs4:
-                soup = _BS(resp.text, "html.parser")
-                hrefs = [a.get("href", "") for a in soup.find_all("a", href=True)]
+                hrefs = [a.get("href", "") for a in _BS(resp.text, "html.parser").find_all("a", href=True)]
             else:
                 hrefs = _re_probe.findall(r'href=["\']([^"\']+)["\']', resp.text)
 
+            sub_count = 0
             for href in hrefs:
-                # Normalise to absolute URL
+                if sub_count >= 15:
+                    break
                 if href.startswith("/"):
                     href = f"https://{domain}{href}"
                 elif not href.startswith("http"):
                     continue
-                # Only keep links on the same domain that look like individual case pages
                 if domain not in href:
                     continue
-                if "#" in href or "?" in href:
-                    href = href.split("#")[0].split("?")[0]
+                href = href.split("#")[0].split("?")[0]
                 if href in seen_urls:
                     continue
                 if any(seg in href for seg in case_study_segs):
+                    slug = href.rstrip("/").split("/")[-1]
+                    name_hint = _slug_to_company_hint(slug)
                     found.append({
                         "url": href,
-                        "title": f"{brand} case study",
-                        "snippet": f"Individual case study page for a {brand} customer.",
+                        "title": name_hint,
+                        "snippet": f"{brand} customer: {name_hint}",
                         "group": "own_site",
                         "signal_group": "own_site",
+                        "probe_sublink": True,   # skip full-page fetch in extract.py
                     })
                     seen_urls.add(href)
+                    sub_count += 1
 
-        except Exception:
-            pass
-
-    print(f"  [probe] total pages found: {len(found)}")
+    print(f"  [probe] total: {len(found)} pages")
     return found
 
 
