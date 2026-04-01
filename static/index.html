@@ -263,6 +263,8 @@
   @media (max-width: 600px) {
     .hero { padding: 32px 16px 24px; }
     .hero-title { font-size: clamp(28px, 9vw, 44px); }
+    .hero-b2b { font-size: 18px; }
+    .hero-desc { font-size: 15px; }
     .hero-sub { font-size: 17px; padding: 0 8px; }
     header { padding: 10px 16px; }
     .header-credit { font-size: 11px; }
@@ -284,6 +286,23 @@
     .framework-band { padding: 20px 16px; }
     .loading-section { padding: 40px 20px; }
   }
+  .hero-b2b {
+    font-size: 22px;
+    font-weight: 700;
+    color: #00C2FF;
+    margin: 0 auto 10px;
+    text-align: center;
+    letter-spacing: 0.01em;
+  }
+  .hero-desc {
+    font-size: 18px;
+    color: var(--muted2);
+    line-height: 1.65;
+    max-width: 500px;
+    margin: 0 auto 12px;
+    font-weight: 400;
+    text-align: center;
+  }
 </style>
 </head>
 <body>
@@ -300,7 +319,8 @@
   <div id="searchSection" class="section visible">
     <div class="hero">
       <h1 class="hero-title">Find companies already<br>using <span>your competitors</span></h1>
-      <p class="hero-sub" style="font-size: 24px;color:var(--muted2);margin-bottom:20px;">For B2B SaaS &mdash; scan the web for public signals and surface competitor customers in seconds.</p>
+      <p class="hero-b2b">For B2B SaaS</p>
+        <p class="hero-desc">scan the web for public signals and surface competitor customers in seconds.</p>
         <p style="font-size:16px; font-weight:700; color:#f0b429; margin:10px 0 0; text-align:center;">&#9889; Demo version &mdash; 10 results only</p>
 
       <div class="search-card">
