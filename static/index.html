@@ -740,7 +740,7 @@
             }
         });
     }
-    function startSearch() {
+    async function startSearch() {
         activateSignalTags();
     const domain = document.getElementById('domainInput').value.trim();
     if (!domain) { document.getElementById('domainInput').focus(); return; }
@@ -1039,6 +1039,7 @@
 </script>
 </body>
   </html>
+ 
  
  
  
