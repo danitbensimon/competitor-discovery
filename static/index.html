@@ -441,62 +441,53 @@
   <!-- SCREEN 1: SEARCH -->
   <div id="searchSection" class="section visible">
     <div class="hero hero-split">
-    <div class="hero-left">
 
     <!-- LEFT: copy -->
     <div class="hero-left">
       <span class="hero-eyebrow">For B2B SaaS</span>
-      <h1 class="hero-title">Find competitor<br>customers.<br><span class="hero-accent">Instantly.</span></h1>
-      <p class="hero-desc">Scan the web for public signals and surface companies already using your competitors — in seconds.</p>
-        <div class="hero-trust">
-          <span class="hero-trust-item"><span class="trust-dot"></span>No sign up</span>
-          <span class="hero-trust-item"><span class="trust-dot"></span>10 free results</span>
-          <span class="hero-trust-item"><span class="trust-dot"></span>B2B SaaS focus</span>
-        </div>
-      <div class="hero-trust">
-        <span class="hero-trust-item"><span class="trust-dot"></span>No sign up required</span>
+      <h1 class="hero-title">Find companies already<br>using your<br><span class="hero-accent">competitors.</span></h1>
+      <p class="hero-desc">Scan the web for public signals and surface competitor customers in seconds.</p>
+      <p class="demo-note">⚡ Demo version — 10 results only</p>
+      <p style="color:#f0c040;font-size:14px;font-weight:600;margin:0 0 24px;letter-spacing:.02em;">❆ Most effective for <span style="color:#f0c040;">legacy B2B SaaS</span> competitors</p>
+      <div class="hero-trust-badges">
+        <span class="hero-trust-item"><span class="trust-dot"></span>No sign up</span>
         <span class="hero-trust-item"><span class="trust-dot"></span>10 free results</span>
-        <span class="hero-trust-item"><span class="trust-dot"></span>Legacy B2B SaaS</span>
+        <span class="hero-trust-item"><span class="trust-dot"></span>B2B SaaS focus</span>
       </div>
-    </div>
+    </div><!-- /hero-left -->
 
     <!-- RIGHT: search card -->
     <div class="hero-right">
-      
-    </div><!-- /hero-left -->
-    <div class="hero-right">
       <div class="search-card">
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px">
-          <div>
-            <span class="field-label">Competitor Domain</span>
-            <input type="text" class="domain-input" id="domainInput" placeholder="e.g. redpoints.com" autocomplete="off" spellcheck="false" style="width:100%;margin:0" />
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px">
+                <div>
+                  <span class="field-label">Competitor Domain</span>
+                  <input type="text" class="domain-input" id="domainInput" placeholder="e.g. redpoints.com" autocomplete="off" spellcheck="false" style="width:100%;margin:0" />
+                </div>
+                <div>
+                  <span class="field-label" style="color:var(--accent)">Brand Name <span style="font-size:10px;font-weight:600;color:var(--accent);text-transform:none;letter-spacing:0;opacity:0.8">← important: exact name as written online</span></span>
+                  <input type="text" class="domain-input" id="brandInput" placeholder="e.g. Chargeflow (not chargflow)" autocomplete="off" spellcheck="false" style="width:100%;margin:0;border-color:rgba(0,194,255,0.4)" />
+                </div>
+              </div>
+      
+              <button class="search-btn" id="searchBtn" onclick="startSearch()"><span style="display:block;font-size:inherit;">Get 10 Results Free →</span><span style="display:block;font-size:11px;font-weight:400;opacity:0.72;margin-top:3px;letter-spacing:.02em;">No sign up required</span></button>
+              
+      
+              <div style="text-align:center;margin:14px 0 6px;font-size:14px;font-weight:600;color:var(--muted);letter-spacing:0.01em;">
+                ✦ Most effective for <span style="color:var(--accent);">legacy B2B SaaS</span> competitors
+              </div>
+      
+              <div class="signal-tags-strip" id="signalTagsStrip">
+                  <span class="sig-label">sources:</span>
+                  <span class="sig-tag" data-sig="customer_signals">case studies</span>
+                  <span class="sig-tag" data-sig="job_postings">job postings</span>
+                  <span class="sig-tag" data-sig="tech_stack">tech stack</span>
+                  <span class="sig-tag" data-sig="review_sites">review sites</span>
+                  <span class="sig-tag" data-sig="linkedin">linkedin</span>
+                  <span class="sig-tag" data-sig="blog_press">blog & press</span>
+              </div>
+            </div>
           </div>
-          <div>
-            <span class="field-label" style="color:var(--accent)">Brand Name <span style="font-size:10px;font-weight:600;color:var(--accent);text-transform:none;letter-spacing:0;opacity:0.8">← important: exact name as written online</span></span>
-            <input type="text" class="domain-input" id="brandInput" placeholder="e.g. Chargeflow (not chargflow)" autocomplete="off" spellcheck="false" style="width:100%;margin:0;border-color:rgba(0,194,255,0.4)" />
-          </div>
-        </div>
-
-        <button class="search-btn" id="searchBtn" onclick="startSearch()"><span style="display:block;font-size:inherit;">Get 10 Results Free →</span><span style="display:block;font-size:11px;font-weight:400;opacity:0.72;margin-top:3px;letter-spacing:.02em;">No sign up required</span></button>
-        
-
-        <div style="text-align:center;margin:14px 0 6px;font-size:14px;font-weight:600;color:var(--muted);letter-spacing:0.01em;">
-          ✦ Most effective for <span style="color:var(--accent);">legacy B2B SaaS</span> competitors
-        </div>
-
-        <div class="signal-tags-strip" id="signalTagsStrip">
-            <span class="sig-label">sources:</span>
-            <span class="sig-tag" data-sig="customer_signals">case studies</span>
-            <span class="sig-tag" data-sig="job_postings">job postings</span>
-            <span class="sig-tag" data-sig="tech_stack">tech stack</span>
-            <span class="sig-tag" data-sig="review_sites">review sites</span>
-            <span class="sig-tag" data-sig="linkedin">linkedin</span>
-            <span class="sig-tag" data-sig="blog_press">blog & press</span>
-        </div>
-      </div>
-    </div>
-
-  
     </div><!-- /hero-right --></div>
 
   <!-- FRAMEWORK BAND — full width, light blue, inside searchSection so it hides on search -->
