@@ -406,6 +406,26 @@
     .hero-right { max-width: 100%; width: 100%; }
     .hero-trust { justify-content: center; }
   }
+
+  .hero-split{display:flex!important;align-items:center;gap:56px;max-width:1120px;margin:0 auto;padding:72px 48px 64px;min-height:88vh;text-align:left;}
+  .hero-left{flex:1 1 50%;display:flex;flex-direction:column;}
+  .hero-right{flex:0 0 44%;max-width:480px;}
+  .hero-split .hero-title{font-size:clamp(36px,4vw,58px);font-weight:800;line-height:1.08;margin:0 0 16px;text-align:left;letter-spacing:-0.02em;}
+  .hero-split .hero-b2b{text-align:left;margin:0 0 8px;font-size:20px;}
+  .hero-split .hero-desc{text-align:left;margin:0 0 24px;max-width:400px;}
+  .hero-split p[style*="Demo"]{text-align:left;}
+  .hero-split .search-card{margin:0;width:100%;}
+  .hero-trust{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:8px;}
+  .hero-trust-item{display:flex;align-items:center;gap:7px;font-size:13px;color:#6a8aaa;font-family:'DM Mono',monospace;}
+  .trust-dot{width:6px;height:6px;border-radius:50%;background:#00C2FF;opacity:.7;flex-shrink:0;}
+  @media(max-width:860px){
+    .hero-split{flex-direction:column!important;padding:40px 20px;gap:32px;min-height:unset;text-align:center;}
+    .hero-left{align-items:center;}
+    .hero-split .hero-title,.hero-split .hero-b2b,.hero-split .hero-desc,.hero-split p[style*="Demo"]{text-align:center;}
+    .hero-split .hero-desc{margin-left:auto;margin-right:auto;}
+    .hero-right{max-width:100%;width:100%;}
+    .hero-trust{justify-content:center;}
+  }
 </style>
 </head>
 <body>
@@ -421,12 +441,18 @@
   <!-- SCREEN 1: SEARCH -->
   <div id="searchSection" class="section visible">
     <div class="hero hero-split">
+    <div class="hero-left">
 
     <!-- LEFT: copy -->
     <div class="hero-left">
       <span class="hero-eyebrow">For B2B SaaS</span>
       <h1 class="hero-title">Find competitor<br>customers.<br><span class="hero-accent">Instantly.</span></h1>
       <p class="hero-desc">Scan the web for public signals and surface companies already using your competitors — in seconds.</p>
+        <div class="hero-trust">
+          <span class="hero-trust-item"><span class="trust-dot"></span>No sign up</span>
+          <span class="hero-trust-item"><span class="trust-dot"></span>10 free results</span>
+          <span class="hero-trust-item"><span class="trust-dot"></span>B2B SaaS focus</span>
+        </div>
       <div class="hero-trust">
         <span class="hero-trust-item"><span class="trust-dot"></span>No sign up required</span>
         <span class="hero-trust-item"><span class="trust-dot"></span>10 free results</span>
@@ -435,6 +461,9 @@
     </div>
 
     <!-- RIGHT: search card -->
+    <div class="hero-right">
+      
+    </div><!-- /hero-left -->
     <div class="hero-right">
       <div class="search-card">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px">
@@ -467,7 +496,8 @@
       </div>
     </div>
 
-  </div>
+  
+    </div><!-- /hero-right --></div>
 
   <!-- FRAMEWORK BAND — full width, light blue, inside searchSection so it hides on search -->
   <div class="framework-band">
