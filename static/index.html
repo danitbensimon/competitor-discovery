@@ -57,7 +57,7 @@
   .section.visible { display: block; }
 
   /* SCREEN 1 */
-  .hero { padding: 40px 0 28px; text-align: center; }
+  .hero { padding: 0; text-align: center; }
   .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; background: rgba(0,194,255,0.07); border: 1px solid rgba(0,194,255,0.2); padding: 5px 14px; border-radius: 20px; }
   .hero-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: var(--muted2); background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: 8px 20px; border-radius: 20px; margin-bottom: 20px; }
   .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); }
@@ -303,6 +303,109 @@
     font-weight: 400;
     text-align: center;
   }
+
+  /* ── SPLIT HERO LAYOUT ───────────────────────────────────────────────── */
+  .hero-split {
+    display: flex;
+    align-items: center;
+    gap: 56px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 72px 48px 64px;
+    min-height: 90vh;
+    text-align: left;
+  }
+  .hero-left {
+    flex: 1 1 48%;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+  .hero-right {
+    flex: 0 0 44%;
+    max-width: 480px;
+  }
+  .hero-eyebrow {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #00C2FF;
+    background: rgba(0,194,255,0.1);
+    border: 1px solid rgba(0,194,255,0.3);
+    padding: 5px 14px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    width: fit-content;
+  }
+  .hero-split .hero-title {
+    font-size: clamp(38px, 4.5vw, 62px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+    text-align: left;
+    letter-spacing: -0.02em;
+  }
+  .hero-accent {
+    color: #00C2FF;
+    display: block;
+  }
+  .hero-split .hero-desc {
+    font-size: 17px;
+    color: var(--muted2, #92AECF);
+    line-height: 1.65;
+    margin: 0 0 28px 0;
+    max-width: 420px;
+    text-align: left;
+  }
+  .hero-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+  }
+  .hero-trust-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 13px;
+    color: #6a8aaa;
+    font-family: 'DM Mono', monospace;
+  }
+  .trust-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #00C2FF;
+    opacity: 0.7;
+    flex-shrink: 0;
+  }
+  /* Hide old hero-b2b / hero-badge / demo note — replaced by split layout */
+  .hero-split ~ .hero-b2b,
+  .hero-split ~ .hero-badge,
+  .hero-b2b { display: none; }
+  .hero-split .search-card {
+    margin: 0;
+    width: 100%;
+  }
+
+  /* ── MOBILE: stack vertically ─────────────────────────────────────────── */
+  @media (max-width: 860px) {
+    .hero-split {
+      flex-direction: column;
+      padding: 48px 24px 40px;
+      gap: 36px;
+      min-height: unset;
+      text-align: center;
+      align-items: center;
+    }
+    .hero-left { align-items: center; }
+    .hero-split .hero-title { text-align: center; font-size: clamp(32px, 8vw, 52px); }
+    .hero-split .hero-desc { text-align: center; margin-left: auto; margin-right: auto; }
+    .hero-right { max-width: 100%; width: 100%; }
+    .hero-trust { justify-content: center; }
+  }
 </style>
 </head>
 <body>
@@ -317,12 +420,22 @@
 
   <!-- SCREEN 1: SEARCH -->
   <div id="searchSection" class="section visible">
-    <div class="hero">
-      <h1 class="hero-title">Find companies already<br>using <span>your competitors</span></h1>
-      <p class="hero-b2b">For B2B SaaS</p>
-        <p class="hero-desc">scan the web for public signals and surface competitor customers in seconds.</p>
-        <p style="font-size:16px; font-weight:700; color:#f0b429; margin:10px 0 0; text-align:center;">&#9889; Demo version &mdash; 10 results only</p>
+    <div class="hero hero-split">
 
+    <!-- LEFT: copy -->
+    <div class="hero-left">
+      <span class="hero-eyebrow">For B2B SaaS</span>
+      <h1 class="hero-title">Find competitor<br>customers.<br><span class="hero-accent">Instantly.</span></h1>
+      <p class="hero-desc">Scan the web for public signals and surface companies already using your competitors — in seconds.</p>
+      <div class="hero-trust">
+        <span class="hero-trust-item"><span class="trust-dot"></span>No sign up required</span>
+        <span class="hero-trust-item"><span class="trust-dot"></span>10 free results</span>
+        <span class="hero-trust-item"><span class="trust-dot"></span>Legacy B2B SaaS</span>
+      </div>
+    </div>
+
+    <!-- RIGHT: search card -->
+    <div class="hero-right">
       <div class="search-card">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px">
           <div>
@@ -353,6 +466,8 @@
         </div>
       </div>
     </div>
+
+  </div>
 
   <!-- FRAMEWORK BAND — full width, light blue, inside searchSection so it hides on search -->
   <div class="framework-band">
