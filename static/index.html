@@ -691,7 +691,9 @@
     document.querySelectorAll('.section').forEach(s => s.classList.remove('visible'));
     const el = document.getElementById(id);
     if (el) el.classList.add('visible');
-  }
+    const fw = document.querySelector('.framework-band');
+    if (fw) fw.style.display = (id === 'searchSection') ? '' : 'none';
+}
 
   function resetToHome() {
     clearInterval(pollInterval); clearTimeout(stepTimer); clearInterval(paymentPollInterval);
