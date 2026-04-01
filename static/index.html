@@ -58,12 +58,12 @@
 
   /* SCREEN 1 */
   .hero { padding: 40px 0 28px; text-align: center; }
-  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 16px; background: rgba(0,194,255,0.07); border: 1px solid rgba(0,194,255,0.2); padding: 5px 14px; border-radius: 20px; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 8px; background: rgba(0,194,255,0.07); border: 1px solid rgba(0,194,255,0.2); padding: 5px 14px; border-radius: 20px; }
   .hero-badge { display: inline-flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 600; color: var(--muted2); background: rgba(255,255,255,0.04); border: 1px solid var(--border); padding: 8px 20px; border-radius: 20px; margin-bottom: 20px; }
   .hero-badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--green); box-shadow: 0 0 6px var(--green); }
   .hero-title { font-family: 'Inter', sans-serif; font-size: clamp(34px, 5.5vw, 60px); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; margin-bottom: 16px; }
   .hero-title span { background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .hero-sub { font-size: 21px; color: var(--muted2); line-height: 1.7; max-width: 500px; margin: 0 auto 28px; font-weight: 400; }
+  .hero-sub { font-size: 21px; color: var(--muted2); line-height: 1.7; max-width: 500px; margin: 0 auto 12px; font-weight: 400; }
   .search-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 28px; max-width: 700px; margin: 0 auto; position: relative; overflow: hidden; }
   .search-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(0,194,255,0.5), transparent); }
   .field-label { font-size: 11px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted2); margin-bottom: 8px; display: block; }
@@ -290,8 +290,8 @@
           </div>
         </div>
 
-        <button class="search-btn" id="searchBtn" onclick="startSearch()">Get 10 Results Free →</button>
-        <p style="text-align:center; margin:8px 0 0; font-size:12px; color:#4a6a8a; font-family:'DM Mono',monospace; letter-spacing:.04em;">No sign up required</p>
+        <button class="search-btn" id="searchBtn" onclick="startSearch()"><span style="display:block;font-size:inherit;">Get 10 Results Free →</span><span style="display:block;font-size:11px;font-weight:400;opacity:0.72;margin-top:3px;letter-spacing:.02em;">No sign up required</span></button>
+        
 
         <div style="text-align:center;margin:14px 0 6px;font-size:14px;font-weight:600;color:var(--muted);letter-spacing:0.01em;">
           ✦ Most effective for <span style="color:var(--accent);">legacy B2B SaaS</span> competitors
@@ -1328,9 +1328,6 @@
   </div>
 </div>
 
-<footer>
-  <div class="container">CompetitorIQ &nbsp;·&nbsp; by <a href="https://www.linkedin.com/in/danitbensimon/" target="_blank" style="color:var(--accent);text-decoration:none">Danit Ben Simon</a> &nbsp;·&nbsp; Pipeline intelligence for B2B teams</div>
-</footer>
 
 <script>
   let currentJobId = null;
