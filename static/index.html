@@ -426,10 +426,10 @@
     .hero-right{max-width:100%;width:100%;}
     .hero-trust{justify-content:center;}
   }
-  .card-meta-strip{display:flex;align-items:center;gap:10px;margin:14px 0 8px;padding:0 2px;}
-  .card-meta-item{font-size:11.5px;font-family:'DM Mono',monospace;color:#5a8aaa;letter-spacing:.02em;}
-  .card-meta-yellow{color:#c9981a !important;}
-  .card-meta-dot{color:#2a4060;font-size:14px;}
+  .meta-tags-strip{display:flex;gap:8px;margin:12px 0 2px;justify-content:center;align-items:center;}
+  .meta-tag{display:inline-flex;align-items:center;padding:5px 13px;border-radius:20px;font-size:11px;font-family:'DM Mono',monospace;letter-spacing:.03em;white-space:nowrap;}
+  .meta-tag-blue{border:1px solid rgba(0,194,255,0.28);color:#5a8aaa;background:rgba(0,194,255,0.06);}
+  .meta-tag-gold{border:1px solid rgba(201,152,26,0.32);color:#b8861a;background:rgba(201,152,26,0.06);}
 </style>
 </head>
 <body>
@@ -462,7 +462,7 @@
     <!-- RIGHT: search card -->
     <div class="hero-right">
       <div class="search-card">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px">
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;align-items:end">
                 <div>
                   <span class="field-label">Competitor Domain</span>
                   <input type="text" class="domain-input" id="domainInput" placeholder="e.g. redpoints.com" autocomplete="off" spellcheck="false" style="width:100%;margin:0" />
@@ -478,10 +478,10 @@
       
               
       
-              <div class="card-meta-strip">
-              <span class="card-meta-item">⚡ Demo — 10 results only</span>
-              <span class="card-meta-dot">·</span>
-              <span class="card-meta-item card-meta-yellow">❆ Best for legacy B2B SaaS</span>
+              
+            <div class="meta-tags-strip">
+              <span class="meta-tag meta-tag-blue">⚡ demo · 10 results</span>
+              <span class="meta-tag meta-tag-gold">❆ legacy B2B SaaS</span>
             </div>
             <div class="signal-tags-strip" id="signalTagsStrip">
                   <span class="sig-label">sources:</span>
@@ -1039,5 +1039,6 @@
 </script>
 </body>
   </html>
+ 
  
  
