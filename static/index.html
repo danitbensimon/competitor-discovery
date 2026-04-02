@@ -365,22 +365,8 @@
     gap: 16px;
     align-items: center;
   }
-  .hero-trust-item {
-    display: flex;
-    align-items: center;
-    gap: 7px;
-    font-size: 13px;
-    color: #6a8aaa;
-    font-family: 'DM Mono', monospace;
-  }
-  .trust-dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background: #00C2FF;
-    opacity: 0.7;
-    flex-shrink: 0;
-  }
+  
+  
   /* Hide old hero-b2b / hero-badge / demo note — replaced by split layout */
   .hero-split ~ .hero-b2b,
   .hero-split ~ .hero-badge,
@@ -416,8 +402,8 @@
   .hero-split p[style*="Demo"]{text-align:left;}
   .hero-split .search-card{margin:0;width:100%;}
   .hero-trust{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:8px;}
-  .hero-trust-item{display:flex;align-items:center;gap:7px;font-size:13px;color:#6a8aaa;font-family:'DM Mono',monospace;}
-  .trust-dot{width:6px;height:6px;border-radius:50%;background:#00C2FF;opacity:.7;flex-shrink:0;}
+  
+  .hero-trust-lightning { font-size: 13px; color: #f0c040; font-weight: 500; letter-spacing: 0.02em; }
   @media(max-width:860px){
     .hero-split{flex-direction:column!important;padding:40px 20px;gap:32px;min-height:unset;text-align:center;}
     .hero-left{align-items:center;}
@@ -449,11 +435,9 @@
       <h1 class="hero-title">Find companies already<br>using <span class="hero-accent">your competitors.</span></h1>
       <p class="hero-desc">Scan the web for public signals and surface competitor customers in seconds.</p>
       
-      <div class="hero-trust-badges">
-        <span class="hero-trust-item"><span class="trust-dot"></span>No sign up</span>
-        <span class="hero-trust-item"><span class="trust-dot"></span>10 free results</span>
-        <span class="hero-trust-item"><span class="trust-dot"></span>B2B SaaS focus</span>
-      </div>
+      <div class="<div class="hero-trust-badges">
+              <span class="hero-trust-lightning">⚡ Most effective for B2B Legacy SaaS</span>
+            </div>
     </div><!-- /hero-left -->
 
     <!-- RIGHT: search card -->
