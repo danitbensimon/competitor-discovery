@@ -755,7 +755,14 @@
     document.getElementById('searchBtn').disabled = true;
     document.getElementById('loadingDomain').textContent = brandRaw || domain;
     ['step1','step2','step3','step4'].forEach(id => { const el = document.getElementById(id); if(el){el.classList.remove('active','done');} });
-    showSection('loadingSection');
+    // 90-day localStorage cache (7776000000ms = 90 days)
+    const _cacheKey = 'ciq_' + domain + '_' + (brand || '');
+    const _lsc = (() => { try { return JSON.parse(localStorage.getItem(_cacheKey)); } catch(e) { return null; } })();
+    if (_lsc && _lsc.t && (Date.now() - _lsc.t) < 7776000000) {
+      renderResults(_lsc.d);
+      return;
+    }
+        showSection('loadingSection');
     animateSteps();
     try {
       const res = await fetch('/api/search', {
@@ -783,6 +790,7 @@
           currentResultId = data.result_id || currentResultId;
           currentResults = data;
           renderResults(data);
+            try { localStorage.setItem(_cacheKey, JSON.stringify({d: data, t: Date.now()})); } catch(e) {}
         }
       } catch (err) { clearInterval(pollInterval); showError(err.message); }
     }, 2000);
