@@ -1,7 +1,7 @@
 # cache.py
 import json
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from typing import Any, Dict, List, Optional
 
 
@@ -39,6 +39,17 @@ def load_cache(competitor: str) -> Optional[Dict[str, Any]]:
 
         if not isinstance(data["companies"], list):
             return None
+
+        # 90-day TTL: treat expired cache as a miss
+        saved_at_str = data.get("saved_at", "")
+        if saved_at_str:
+            try:
+                saved_at = datetime.fromisoformat(saved_at_str.rstrip("Z"))
+                if datetime.utcnow() - saved_at > timedelta(days=90):
+                    print(f"[cache] Expired for {competitor} (saved {saved_at_str})")
+                    return None
+            except Exception:
+                pass
 
         return data
 
