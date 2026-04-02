@@ -84,6 +84,7 @@ def get_cached_companies(competitor_domain: str):
              AND full_companies IS NOT NULL
              AND full_companies != '[]'
              AND full_companies != ''
+             AND created_at >= datetime('now', '-90 days')
            ORDER BY created_at DESC LIMIT 1""",
         (competitor_domain,)
     ).fetchone()
