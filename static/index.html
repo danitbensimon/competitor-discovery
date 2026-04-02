@@ -393,9 +393,9 @@
     .hero-trust { justify-content: center; }
   }
 
-  .hero-split{display:flex!important;align-items:center;gap:56px;max-width:1120px;margin:0 auto;padding:72px 48px 64px;min-height:88vh;text-align:left;}
-  .hero-left{flex:1 1 50%;display:flex;flex-direction:column;}
-  .hero-right{flex:0 0 50%;max-width:580px;}
+  .hero-center{display:flex;flex-direction:column;align-items:center;text-align:center;padding:72px 24px 60px;max-width:680px;margin:0 auto;}
+.hero-card-wrap{width:100%;max-width:640px;margin-top:28px;}
+.hero-lightning{font-size:13px;color:#f0c040;font-weight:500;letter-spacing:0.02em;margin:4px 0 0;}
   .hero-split .hero-title{font-size:clamp(36px,4vw,58px);font-weight:800;line-height:1.08;margin:0 0 16px;text-align:left;letter-spacing:-0.02em;}
   .hero-split .hero-b2b{text-align:left;margin:0 0 8px;font-size:20px;}
   .hero-split .hero-desc{text-align:left;margin:0 0 24px;max-width:400px;}
@@ -403,7 +403,7 @@
   .hero-split .search-card{margin:0;width:100%;}
   .hero-trust{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:8px;}
   
-  .hero-trust-lightning { font-size: 13px; color: #f0c040; font-weight: 500; letter-spacing: 0.02em; }
+  
   @media(max-width:860px){
     .hero-split{flex-direction:column!important;padding:40px 20px;gap:32px;min-height:unset;text-align:center;}
     .hero-left{align-items:center;}
@@ -427,22 +427,13 @@
 
   <!-- SCREEN 1: SEARCH -->
   <div id="searchSection" class="section visible">
-    <div class="hero hero-split">
-
-    <!-- LEFT: copy -->
-    <div class="hero-left">
-      <span class="hero-eyebrow">For B2B SaaS</span>
-      <h1 class="hero-title">Find companies already<br>using <span class="hero-accent">your competitors.</span></h1>
-      <p class="hero-desc">Scan the web for public signals and surface competitor customers in seconds.</p>
-      
-      <div class="<div class="hero-trust-badges">
-              <span class="hero-trust-lightning">⚡ Most effective for B2B Legacy SaaS</span>
-            </div>
-    </div><!-- /hero-left -->
-
-    <!-- RIGHT: search card -->
-    <div class="hero-right">
-      <div class="search-card">
+    <div class="hero hero-center">
+          <span class="hero-eyebrow">For B2B SaaS</span>
+          <h1 class="hero-title">Find companies already<br>using <span class="hero-accent">your competitors.</span></h1>
+          <p class="hero-desc">Scan the web for public signals and surface competitor customers in seconds.</p>
+          <p class="hero-lightning">⚡ Most effective for B2B Legacy SaaS</p>
+          <div class="hero-card-wrap">
+            <div class="search-card">
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;align-items:end">
                 <div>
                   <span class="field-label">Competitor Domain</span>
@@ -472,7 +463,7 @@
               </div>
             </div>
           </div>
-    </div><!-- /hero-right --></div>
+        </div>
 
   <!-- FRAMEWORK BAND — full width, light blue, inside searchSection so it hides on search -->
   <div class="framework-band">
