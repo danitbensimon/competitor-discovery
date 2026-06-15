@@ -23,6 +23,7 @@ from extract import extract_companies
 from classify import classify_companies
 from score import aggregate_company_records
 from enrich import enrich_companies
+from validate import validate_sources
 from pricing import apply_tier_limit
 
 # New: persistence, payments, email, csv
@@ -256,6 +257,10 @@ def run_pipeline(domain: str, brand: str, mode: str, tier: str) -> list:
 
     scored = aggregate_company_records(classified)
     enriched = enrich_companies(scored)
+
+    # Validate every source link before results can be shown/cached.
+    # Drops companies whose evidence URL doesn't resolve (404 / hallucinated).
+    enriched = validate_sources(enriched)
     return enriched
 
 

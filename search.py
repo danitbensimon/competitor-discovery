@@ -247,7 +247,7 @@ def _probe_customer_index_pages(domain: str, brand: str) -> list[dict]:
 
             sub_count = 0
             for href in hrefs:
-                if sub_count >= 15:
+                if sub_count >= 40:   # was 15 — capped niche tools (e.g. Swimm) at ~5 results
                     break
                 if href.startswith("/"):
                     href = f"https://{domain}{href}"
