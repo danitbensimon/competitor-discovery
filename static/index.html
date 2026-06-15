@@ -716,7 +716,12 @@
         activateSignalTags();
     const domain = document.getElementById('domainInput').value.trim();
     if (!domain) { document.getElementById('domainInput').focus(); return; }
-    const brandRaw = document.getElementById('brandInput').value.trim();
+    let brandRaw = document.getElementById('brandInput').value.trim();
+    // Safety net: collapse an accidentally doubled brand (e.g. "SwimmSwimm" -> "Swimm")
+    if (brandRaw.length > 1 && brandRaw.length % 2 === 0) {
+      const _h = brandRaw.slice(0, brandRaw.length / 2);
+      if (_h && _h.toLowerCase() === brandRaw.slice(brandRaw.length / 2).toLowerCase()) brandRaw = _h;
+    }
     // Sub-product URL detection (Scenario E)
     var _str = domain.replace(/^https?:\/\/(www\.)?/, '');
     var _pi = _str.indexOf('/');
@@ -1011,11 +1016,22 @@
     if (domain && !brandInput.value.trim()) {
       const raw = domain.replace(/^https?:\/\//, '').replace(/^www\./, '').split('/')[0].split('.')[0];
       brandInput.value = raw.charAt(0).toUpperCase() + raw.slice(1);
+      brandInput.dataset.autofilled = '1';   // remember this was auto-filled, not typed
       brandInput.style.border = '1.5px solid rgba(255,180,0,0.6)';
       brandInput.title = 'Auto-filled from domain — please verify this is the exact brand name';
       setTimeout(() => { brandInput.style.border = ''; }, 3000);
     }
   });
+  // If the brand was auto-filled, the first time the user touches the field
+  // select its contents so typing REPLACES it (prevents "SwimmSwimm" doubling).
+  (function () {
+    const brandInput = document.getElementById('brandInput');
+    if (!brandInput) return;
+    brandInput.addEventListener('focus', () => {
+      if (brandInput.dataset.autofilled === '1') brandInput.select();
+    });
+    brandInput.addEventListener('input', () => { brandInput.dataset.autofilled = ''; });
+  })();
 </script>
 </body>
   </html>
