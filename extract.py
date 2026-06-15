@@ -109,7 +109,7 @@ def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: boo
                 "confidence": confidence,
             })
 
-    qualified_pages = qualified_pages[:25]
+    qualified_pages = qualified_pages[:40]   # was 25 — let more customer-page links through
 
     print(f"\n  {len(qualified_pages)} pages passed confidence filter. Extracting companies...")
 
@@ -148,7 +148,7 @@ def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: boo
                         seen_sources[src] = seen_sources.get(src, 0) + 1
 
     print(f"  Extracted {len(companies)} company evidence rows.")
-    return companies[:30]
+    return companies[:50]   # was 30 — leave headroom; ICP + source validation trim later
 
 
 def extract_from_batch(pages: list[dict], brand: str) -> list[dict]:
@@ -210,6 +210,34 @@ Pages:
     source_map = {}
     for p in pages:
         source_map[p["url"]] = p
+    input_urls = list(source_map.keys())
+
+    def _snap_source(model_url: str):
+        """
+        Never trust the URL the model echoes back — it may be hallucinated or
+        mangled (extra path segments, .pdf suffixes, etc.). Snap it to one of the
+        REAL input page URLs we actually fetched. Returns None if the model's URL
+        cannot be matched to any input page (so the row is dropped, not invented).
+        """
+        if model_url in source_map:
+            return model_url
+        from urllib.parse import urlparse
+        m = urlparse(model_url)
+        m_host = m.netloc.replace("www.", "")
+        best, best_len = None, -1
+        for u in input_urls:
+            pu = urlparse(u)
+            if pu.netloc.replace("www.", "") != m_host:
+                continue
+            # same host → choose the input URL sharing the longest path prefix
+            shared = 0
+            for a, b in zip(m.path, pu.path):
+                if a != b:
+                    break
+                shared += 1
+            if shared > best_len:
+                best, best_len = u, shared
+        return best  # None if no input URL shares the host
 
     for line in raw.splitlines():
         match = re.match(
@@ -219,7 +247,12 @@ Pages:
         if match:
             company_name = match.group(1).strip()
             company_domain = match.group(2).strip().lower()
-            source_url = match.group(3).strip()
+            model_source = match.group(3).strip()
+
+            source_url = _snap_source(model_source)
+            if not source_url:
+                # Model cited a URL we never fetched → unverifiable, skip it.
+                continue
 
             original_page = source_map.get(source_url, {})
 
