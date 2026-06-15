@@ -276,6 +276,75 @@ def _probe_customer_index_pages(domain: str, brand: str) -> list[dict]:
     return found
 
 
+def _probe_sitemap(domain: str, brand: str) -> list[dict]:
+    """
+    Discover REAL customer / case-study pages from the competitor's XML sitemap.
+    Sitemaps are plain XML (no JavaScript), so this catches stories that are
+    rendered client-side on listing pages — invisible to a normal HTML fetch
+    (which is why niche tools like Swimm under-returned). Every URL here is a
+    live, publisher-confirmed page, so results pass source validation instead
+    of being dropped as 404s.
+    """
+    import requests as _req
+    import re as _re
+
+    headers = {"User-Agent": ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+               "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36")}
+    # URL path segments that indicate a customer / case-study page
+    segs = ("/case-studies/", "/case-study/", "/case_study/", "/customers/",
+            "/customer-stories/", "/success-stories/", "/clients/")
+    # sub-sitemaps worth opening (matched against the sitemap filename)
+    want = ("case-study", "case_study", "casestud", "customer", "success", "client", "story", "page")
+
+    def _get(url):
+        try:
+            r = _req.get(url, headers=headers, timeout=5, allow_redirects=True)
+            if r.status_code == 200 and "<" in r.text:
+                return r.text
+        except Exception:
+            pass
+        return ""
+
+    locs = []
+    seen_sm = set()
+    for root in (f"https://{domain}/sitemap.xml", f"https://{domain}/sitemap_index.xml"):
+        xml = _get(root)
+        if not xml:
+            continue
+        entries = _re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", xml)
+        sitemaps = [u for u in entries if u.lower().endswith(".xml")]
+        if sitemaps:  # this was a sitemap INDEX → open relevant sub-sitemaps
+            for sm in sitemaps:
+                if sm in seen_sm:
+                    continue
+                seen_sm.add(sm)
+                if any(w in sm.lower() for w in want):
+                    locs += _re.findall(r"<loc>\s*([^<\s]+)\s*</loc>", _get(sm))
+        else:         # this was already a flat urlset
+            locs += entries
+        if locs:
+            break
+
+    found, seen = [], set()
+    for url in locs:
+        u = url.split("#")[0].split("?")[0]
+        if u in seen or u.lower().endswith(".xml"):
+            continue
+        if any(s in u.lower() for s in segs):
+            seen.add(u)
+            hint = _slug_to_company_hint(u.rstrip("/").split("/")[-1])
+            found.append({
+                "url": u,
+                "title": hint,
+                "snippet": f"{brand} customer case study: {hint}",
+                "group": "own_site",
+                "signal_group": "own_site",
+                "probe_sublink": True,   # real URL + slug hint; Claude extracts the company
+            })
+    print(f"  [sitemap] {len(found)} customer/case-study URLs from sitemap")
+    return found
+
+
 def search_customer_mentions(domain: str, brand: str = None, mode: str = "live", tier: str = "lite") -> list[dict]:
     brand = brand or brand_from_domain(domain)
 
@@ -299,9 +368,10 @@ def search_customer_mentions(domain: str, brand: str = None, mode: str = "live",
         query, group_name = query_group
         return _fetch_query(query, group_name, set(), pages=1)
 
-    # Probe customer index pages directly (runs in parallel with Brave queries)
-    with ThreadPoolExecutor(max_workers=6) as executor:
+    # Probe customer index pages + sitemap directly (runs in parallel with Brave queries)
+    with ThreadPoolExecutor(max_workers=7) as executor:
         probe_future = executor.submit(_probe_customer_index_pages, domain, brand)
+        sitemap_future = executor.submit(_probe_sitemap, domain, brand)
         query_futures = {executor.submit(fetch_query_safe, qg): qg for qg in queries}
 
         # Collect Brave results
@@ -316,16 +386,16 @@ def search_customer_mentions(domain: str, brand: str = None, mode: str = "live",
             except Exception as e:
                 print(f"Search error: {e}")
 
-        # Prepend probed index pages so they get processed first (highest priority)
-        try:
-            probe_pages = probe_future.result()
-            with lock:
-                for row in probe_pages:
-                    if row["url"] not in seen_urls:
-                        seen_urls.add(row["url"])
-                        all_results.insert(0, row)  # prepend = high priority
-        except Exception as e:
-            print(f"Probe error: {e}")
+        # Prepend probed index + sitemap pages so they get processed first (highest priority)
+        for fut, label in ((probe_future, "Probe"), (sitemap_future, "Sitemap")):
+            try:
+                with lock:
+                    for row in fut.result():
+                        if row["url"] not in seen_urls:
+                            seen_urls.add(row["url"])
+                            all_results.insert(0, row)  # prepend = high priority
+            except Exception as e:
+                print(f"{label} error: {e}")
 
     print(f"\nTotal URLs collected: {len(all_results)}")
     return all_results
