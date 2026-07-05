@@ -1,0 +1,57 @@
+---
+const { title, description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site);
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <style>
+      :root { --ink:#111827; --muted:#6b7280; --line:#e5e7eb; --brand:#4f46e5; --bg:#ffffff; }
+      * { box-sizing:border-box; }
+      body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
+      main { max-width:960px; margin:0 auto; padding:2rem 1.25rem 4rem; }
+      header.site { border-bottom:1px solid var(--line); }
+      header.site .inner { max-width:960px; margin:0 auto; padding:.9rem 1.25rem; display:flex; justify-content:space-between; align-items:center; }
+      header.site a { color:var(--ink); text-decoration:none; font-weight:700; }
+      h1 { font-size:2rem; line-height:1.2; margin:.5rem 0 1rem; }
+      h2 { margin-top:2.5rem; }
+      table { width:100%; border-collapse:collapse; font-size:.95rem; }
+      th, td { text-align:left; padding:.55rem .6rem; border-bottom:1px solid var(--line); }
+      th { background:#f9fafb; font-weight:600; }
+      .grade-A { color:#059669; font-weight:700; }
+      .grade-B { color:#d97706; font-weight:700; }
+      .muted { color:var(--muted); }
+      .gate { position:relative; margin-top:-1px; }
+      .gate .fade { position:absolute; top:-140px; left:0; right:0; height:140px; background:linear-gradient(transparent, var(--bg)); pointer-events:none; }
+      .gate-card { border:1px solid var(--line); border-radius:12px; padding:2rem; text-align:center; box-shadow:0 8px 24px rgba(0,0,0,.06); }
+      .gate-card input[type=email] { padding:.7rem .9rem; border:1px solid var(--line); border-radius:8px; width:min(320px,100%); font-size:1rem; }
+      .gate-card button { padding:.7rem 1.4rem; border:0; border-radius:8px; background:var(--brand); color:#fff; font-size:1rem; font-weight:600; cursor:pointer; }
+      details { border-bottom:1px solid var(--line); padding:.75rem 0; }
+      summary { cursor:pointer; font-weight:600; }
+      footer.site { border-top:1px solid var(--line); margin-top:3rem; }
+      footer.site .inner { max-width:960px; margin:0 auto; padding:1.5rem 1.25rem; color:var(--muted); font-size:.9rem; }
+    </style>
+    <slot name="head" />
+  </head>
+  <body>
+    <header class="site">
+      <div class="inner">
+        <a href="/">CompetitorCustomer</a>
+        <nav><a href="/" style="font-weight:400">All competitor lists</a></nav>
+      </div>
+    </header>
+    <main><slot /></main>
+    <footer class="site">
+      <div class="inner">© {new Date().getFullYear()} CompetitorCustomer — customer lists built from public signals. Not affiliated with the companies listed.</div>
+    </footer>
+  </body>
+</html>

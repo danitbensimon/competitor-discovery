@@ -1,0 +1,21 @@
+{
+  "apify_token": "YOUR_APIFY_TOKEN",
+  "apify_actors": {
+    "linkedin_engagement_lead_finder": {
+      "actor_id": "YOUR_USERNAME~linkedin-engagement-lead-finder",
+      "enabled": true,
+      "input_overrides": {}
+    },
+    "linkedin_hashtag_scraper": {
+      "actor_id": "YOUR_USERNAME~linkedin-hashtag-scraper",
+      "enabled": true,
+      "input_overrides": {}
+    }
+  },
+  "brave_api_key": "",
+  "anthropic_api_key": "",
+  "theirstack_api_key": "",
+  "builtwith_api_key": "",
+  "web_search_tier": "lite",
+  "max_companies": 200
+}

@@ -10,3 +10,16 @@ competitors_*.csv
 # caches
 cache/
 data/*.json
+
+# secrets — never commit
+pipeline/scripts/config.json
+config.json
+
+# astro
+astro-site/node_modules/
+astro-site/dist/
+astro-site/.astro/
+
+# pipeline outputs
+pipeline/output/
+*.xlsx

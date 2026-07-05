@@ -1,0 +1,29 @@
+---
+import Base from '../layouts/Base.astro';
+
+const files = import.meta.glob('../data/competitors/*.json', { eager: true });
+const lists = Object.values(files)
+  .map((d) => d)
+  .sort((a, b) => a.competitor.name.localeCompare(b.competitor.name));
+
+const title = 'CompetitorCustomer — lists of companies using popular B2B tools';
+const description = 'Free, verified lists of companies using popular B2B software — built from case studies, reviews, job postings, tech-stack data and LinkedIn signals.';
+---
+<Base title={title} description={description}>
+  <h1>Who uses what?</h1>
+  <p>
+    Free, verified customer lists for popular B2B tools — built from public signals.
+    Pick a competitor to see who's paying them today.
+  </p>
+  <ul style="list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem;">
+    {lists.map((d) => (
+      <li style="border:1px solid var(--line); border-radius:12px; padding:1.25rem;">
+        <a href={`/companies-using/${d.competitor.slug}/`} style="text-decoration:none; color:inherit;">
+          <strong style="font-size:1.1rem;">Companies using {d.competitor.name}</strong>
+          <p class="muted" style="margin:.4rem 0 0;">{d.company_count} companies · {d.competitor.domain}</p>
+        </a>
+      </li>
+    ))}
+  </ul>
+  {lists.length === 0 && <p class="muted">No lists published yet — run the pipeline to generate the first one.</p>}
+</Base>
