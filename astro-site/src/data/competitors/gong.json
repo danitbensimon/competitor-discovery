@@ -1,0 +1,10 @@
+{
+  "competitor": {"name": "Gong", "domain": "gong.io", "slug": "gong"},
+  "generated_at": "2026-07-05T12:00:00+00:00",
+  "signal_report": {"web_search": "test"},
+  "company_count": 2,
+  "companies": [
+    {"name": "Acme", "domain": "acme.com", "industry": "SaaS", "grade": "A", "score": 90, "confidence": "high", "signal_groups": "own_site", "evidence_count": 3, "source_url": "https://example.com", "snippet": "Acme uses Gong."},
+    {"name": "StartupX", "domain": "startupx.com", "industry": "Fintech", "grade": "B", "score": 70, "confidence": "medium", "signal_groups": "review_sites", "evidence_count": 1, "source_url": "https://example.com", "snippet": "Review mentions Gong."}
+  ]
+}

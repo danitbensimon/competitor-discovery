@@ -16,6 +16,7 @@
   "anthropic_api_key": "",
   "theirstack_api_key": "",
   "builtwith_api_key": "",
+  "linkedin_li_at": "",
   "web_search_tier": "lite",
   "max_companies": 200
 }

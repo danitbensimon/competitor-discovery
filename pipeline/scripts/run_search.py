@@ -118,6 +118,9 @@ def run_apify_group(domain: str, brand: str, cfg: dict, report: dict) -> list:
         report["apify"] = "skipped — missing apify_token"
         return []
 
+    li_at = cfg.get("linkedin_li_at", "")
+    slug = slugify(brand)
+
     out = []
     for key, spec in actors.items():
         if not spec.get("enabled", True):
@@ -126,28 +129,44 @@ def run_apify_group(domain: str, brand: str, cfg: dict, report: dict) -> list:
         if not actor_id or actor_id.startswith("YOUR_"):
             report[f"apify:{key}"] = "skipped — actor_id not set"
             continue
-        base_input = {"competitorDomain": domain, "competitorName": brand,
-                      "keyword": brand, "hashtag": brand.lower().replace(" ", "")}
+        if not li_at and "li_at" not in spec.get("input_overrides", {}):
+            report[f"apify:{key}"] = "skipped — missing linkedin_li_at cookie in config.json (both actors log into LinkedIn)"
+            continue
+
+        # Defaults matching the actors' INPUT_SCHEMA
+        if "hashtag" in key:
+            base_input = {"hashtag": brand.lower().replace(" ", ""), "li_at": li_at,
+                          "maxPosts": 25, "peopleOnly": True}
+        else:  # engagement lead finder — scan the competitor's company page posts
+            base_input = {"mode": "company",
+                          "companyUrl": f"https://www.linkedin.com/company/{slug}",
+                          "li_at": li_at, "maxPosts": 10, "peopleOnly": True}
         base_input.update(spec.get("input_overrides", {}))
+
         try:
             items = run_apify_actor(token, actor_id, base_input)
+            found = 0
             for it in items:
-                name = it.get("companyName") or it.get("company") or it.get("name") or ""
-                dom = normalize_domain(it.get("companyDomain") or it.get("domain") or it.get("website") or "")
-                if not (name or dom):
+                if it.get("_debug"):
                     continue
+                # Actors return people; the company signal is the employer parsed
+                # from their LinkedIn headline.
+                company = (it.get("company") or "").strip()
+                if not company:
+                    continue
+                found += 1
                 out.append({
-                    "company_name": name or dom,
-                    "company_domain": dom,
+                    "company_name": company,
+                    "company_domain": "",
                     "signal_group": f"apify_{key}",
-                    "source_url": it.get("postUrl") or it.get("profileUrl") or it.get("url", ""),
-                    "snippet": (it.get("text") or it.get("headline") or "")[:300],
+                    "source_url": it.get("profileUrl", ""),
+                    "snippet": (it.get("headline") or "")[:300],
                     "confidence": "medium",
                     "evidence_count": 1,
                     "score": 60,
                     "grade": "B",
                 })
-            report[f"apify:{key}"] = f"ran — {len(items)} items"
+            report[f"apify:{key}"] = f"ran — {len(items)} leads, {found} with company"
         except Exception as e:
             report[f"apify:{key}"] = f"error — {e}"
     return out
