@@ -1,0 +1,3543 @@
+{
+ "competitor": {
+  "name": "Vanta",
+  "slug": "vanta",
+  "domain": "vanta.com",
+  "category": "Compliance automation"
+ },
+ "generated_at": "2026-07-06T12:00:00Z",
+ "company_count": 353,
+ "methodology_version": "deep-search-v2-12-signals",
+ "companies": [
+  {
+   "name": "55 Degrees",
+   "domain": "55degrees.se",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "trust_center,partners_si",
+   "evidence": "automated trust portal, hosted by Vanta (own trust page)",
+   "source_url": "https://www.55degrees.se/trust"
+  },
+  {
+   "name": "Anthropic",
+   "domain": "anthropic.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "job_postings,events_awards,trust_center",
+   "evidence": "Vanta-hosted Trust Center (app.vanta.com/anthropic/trust); VantaCon 2025 speaker",
+   "source_url": "https://app.vanta.com/anthropic/trust/iz673w96495gyjer8h78n/updates"
+  },
+  {
+   "name": "Ashby",
+   "domain": "ashbyhq.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,linkedin",
+   "evidence": "How Ashby (YC W19) automated SOC 2 and scaled their business with Vanta",
+   "source_url": "https://www.vanta.com/customers/ashby"
+  },
+  {
+   "name": "AssemblyAI",
+   "domain": "assemblyai.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "job_postings,trust_center",
+   "evidence": "Vanta-hosted Trust Center; \"leveraging existing Vanta infrastructure for security compliance",
+   "source_url": "https://app.vanta.com/assemblyai/trust/7n80syl8zln1bn1qm3x8eg"
+  },
+  {
+   "name": "Atlassian",
+   "domain": "atlassian.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,blog_press,events_awards,linkedin",
+   "evidence": "How Atlassian strengthens partner compliance with Vanta for Marketplaces",
+   "source_url": "https://www.vanta.com/customers/atlassian"
+  },
+  {
+   "name": "Atoro",
+   "domain": "atoro.io",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "customer_signals,partners_si",
+   "evidence": "Atoro achieves ISO/IEC 42001 certification with A-LIGN & Vanta (own certification)",
+   "source_url": "https://www.a-lign.com/resources/atoro-case-study"
+  },
+  {
+   "name": "BreachRx",
+   "domain": "breachrx.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,review_sites",
+   "evidence": "BreachRx shortens sales cycles by achieving SOC 2 compliance fast",
+   "source_url": "https://www.vanta.com/customers/breachrx"
+  },
+  {
+   "name": "BVNK",
+   "domain": "bvnk.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,job_postings,events_awards",
+   "evidence": "How BVNK built a stronger, more scalable compliance program for a lean team",
+   "source_url": "https://www.vanta.com/customers/bvnk"
+  },
+  {
+   "name": "Cedar",
+   "domain": "cedar.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,events_awards",
+   "evidence": "How Cedar leverages Vanta to build trust in the highly-regulated healthcare industry",
+   "source_url": "https://www.vanta.com/customers/cedar"
+  },
+  {
+   "name": "Charityvest",
+   "domain": "charityvest.org",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,blog_press",
+   "evidence": "Charityvest gets SOC 2 in 10 days with Vanta",
+   "source_url": "https://www.vanta.com/customers/charityvest"
+  },
+  {
+   "name": "Clay",
+   "domain": "clay.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,partners_si,events_awards",
+   "evidence": "How Clay achieves six-figure savings with Vanta",
+   "source_url": "https://www.vanta.com/customers/clay"
+  },
+  {
+   "name": "Clozd",
+   "domain": "clozd.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,events_awards",
+   "evidence": "Clozd drives efficiency and business growth with Vanta",
+   "source_url": "https://www.vanta.com/customers/clozd"
+  },
+  {
+   "name": "Comprose",
+   "domain": "comprose.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "customer_signals,partners_si",
+   "evidence": "Comprose partnered with Vanta to streamline the monitoring requirements and audit process",
+   "source_url": "https://www.comprose.com/vanta-zavanta-soc2-iso27001-case-study"
+  },
+  {
+   "name": "Coxwave",
+   "domain": "coxwave.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,review_sites",
+   "evidence": "Coxwave achieves compliance for its Align AI solution with Vanta",
+   "source_url": "https://www.vanta.com/customers/coxwave"
+  },
+  {
+   "name": "CrypDefi",
+   "domain": "crypdefi.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,partners_si",
+   "evidence": "CrypDefi achieved ISO 27001 compliance in 6 weeks with Vanta and Cognisys",
+   "source_url": "https://www.vanta.com/customers/crypdefi"
+  },
+  {
+   "name": "Cursor (Anysphere)",
+   "domain": "cursor.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,trust_center",
+   "evidence": "Vanta just worked out of the box. It pulled in the right data...",
+   "source_url": "https://trust.cursor.com/subprocessors"
+  },
+  {
+   "name": "Databook",
+   "domain": "trydatabook.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,video",
+   "evidence": "Databook cuts time spent on vendor tracking from 10 hours to 15 minutes a week",
+   "source_url": "https://www.youtube.com/watch?v=07CnsE5N8Ds"
+  },
+  {
+   "name": "DraftWise",
+   "domain": "draftwise.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "blog_press,partners_si",
+   "evidence": "Vanta provided an automated compliance platform that guided us through the labyrinth of SOC 2 preparation.",
+   "source_url": "https://www.draftwise.com/blog/navigating-soc-2-type-ii-compliance"
+  },
+  {
+   "name": "Duolingo",
+   "domain": "duolingo.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,events_awards",
+   "evidence": "How Duolingo achieved ISO 27001 while saving 12+ hours per week",
+   "source_url": "https://www.vanta.com/customers/duolingo"
+  },
+  {
+   "name": "Dust",
+   "domain": "dust.tt",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,linkedin",
+   "evidence": "With Vanta, Dust achieved SOC 2 Type II audit readiness in three weeks",
+   "source_url": "https://www.vanta.com/customers/dust"
+  },
+  {
+   "name": "Evervault",
+   "domain": "evervault.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,video",
+   "evidence": "Vanta guided us through a process that we had no experience with before... SOC 2 Type II compliant in just a few weeks. — CEO",
+   "source_url": "https://www.youtube.com/watch?v=zOlG7SzX0-Y"
+  },
+  {
+   "name": "Explo",
+   "domain": "explo.co",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "customer_signals,blog_press",
+   "evidence": "We chose to use Vanta to help us prepare for the SOC 2 audit.",
+   "source_url": "https://www.explo.co/blog/explo-soc-2-heres-how-we-got-our-security-accreditation"
+  },
+  {
+   "name": "Factory",
+   "domain": "factory.ai",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,events_awards",
+   "evidence": "Factory adheres to ISO 42001 and SOC 2 to build AI trust with Vanta",
+   "source_url": "https://www.vanta.com/customers/factory"
+  },
+  {
+   "name": "Fern",
+   "domain": "buildwithfern.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,blog_press,events_awards",
+   "evidence": "How Fern (YC W23) achieved SOC 2 compliance in 8 weeks with Vanta Quick Start",
+   "source_url": "https://www.vanta.com/customers/fern"
+  },
+  {
+   "name": "Flo Health",
+   "domain": "flo.health",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,tech_stack",
+   "evidence": "Flo Health builds a world-class security program with Vanta",
+   "source_url": "https://www.vanta.com/customers/flo-health"
+  },
+  {
+   "name": "Getint",
+   "domain": "getint.io",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "customer_signals,trust_center",
+   "evidence": "Getint has chosen Vanta as a compliance partner to streamline the SOC2 Type II process",
+   "source_url": "https://www.getint.io/blog/getint-has-started-the-soc2-type-ii-certification-process-via-vanta"
+  },
+  {
+   "name": "GitHub",
+   "domain": "github.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,events_awards",
+   "evidence": "How GitHub automates 93% of security questionnaires with Vanta",
+   "source_url": "https://www.vanta.com/customers/github"
+  },
+  {
+   "name": "Granola",
+   "domain": "granola.ai",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,partners_si",
+   "evidence": "Granola achieves SOC 2 compliance in 3 months and unlocks B2B sales with Vanta",
+   "source_url": "https://www.vanta.com/customers/granola"
+  },
+  {
+   "name": "Henchman",
+   "domain": "henchman.io",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,customer_signals",
+   "evidence": "we were able to get ISO 27001 certified in just 2 months",
+   "source_url": "https://www.vanta.com/customers"
+  },
+  {
+   "name": "IcePanel",
+   "domain": "icepanel.io",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "customer_signals,trust_center",
+   "evidence": "We use Vanta for our SOC 2 Type 2 compliance",
+   "source_url": "https://icepanel.medium.com/our-soc-2-compliance-journey-42985b7811df"
+  },
+  {
+   "name": "incident.io",
+   "domain": "incident.io",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,video,communities",
+   "evidence": "we used Vanta to help us through the process — incident.io engineer on HN",
+   "source_url": "https://news.ycombinator.com/item?id=32665965"
+  },
+  {
+   "name": "Ironclad",
+   "domain": "ironcladapp.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,events_awards",
+   "evidence": "How Ironclad saves hundreds of hours on compliance with Vanta",
+   "source_url": "https://www.vanta.com/customers/ironclad"
+  },
+  {
+   "name": "Leela AI",
+   "domain": "leela.ai",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,review_sites",
+   "evidence": "Vanta has helped us get our SOC 2 Type II quickly - which has been critical for closing new deals — CEO",
+   "source_url": "https://www.vanta.com/customers/leela-ai"
+  },
+  {
+   "name": "Lemba Therapeutics",
+   "domain": "lemba.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,partners_si",
+   "evidence": "Lemba Therapeutics builds trust in biotech with Vanta and BD Emerson",
+   "source_url": "https://www.vanta.com/customers/lemba-therapeutics"
+  },
+  {
+   "name": "Maxon",
+   "domain": "maxon.net",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "customer_signals,partners_si",
+   "evidence": "Maxon reduces 90% of manual work with A-LIGN and Vanta to achieve ISO 27001",
+   "source_url": "https://www.a-lign.com/resources/case-study-maxon"
+  },
+  {
+   "name": "Midori",
+   "domain": "midori-global.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "customer_signals,linkedin",
+   "evidence": "decided to commit to a SOC 2 audit with the help of Vanta",
+   "source_url": "https://www.atlassian.com/blog/developer/midori-soc-2-audit-vanta"
+  },
+  {
+   "name": "Modern Health",
+   "domain": "modernhealth.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,video",
+   "evidence": "Modern Health saves over 100 hours annually on security and compliance",
+   "source_url": "https://www.vanta.com/customers/modern-health"
+  },
+  {
+   "name": "Newfront",
+   "domain": "newfront.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,blog_press,tech_stack",
+   "evidence": "By using Vanta to complete their SOC 2 Type II attestation, Newfront saved an estimated $100,000 per year",
+   "source_url": "https://www.ycombinator.com/companies/vanta"
+  },
+  {
+   "name": "Nominal",
+   "domain": "nominal.io",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,tech_stack",
+   "evidence": "Nominal wins customer trust in mission-critical industries with Vanta",
+   "source_url": "https://www.vanta.com/customers/nominal"
+  },
+  {
+   "name": "Ongoing Warehouse",
+   "domain": "ongoingwarehouse.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "customer_signals,partners_si",
+   "evidence": "Ongoing Warehouse streamlines ISO 27001 certification with A-LIGN and Vanta",
+   "source_url": "https://www.a-lign.com/resources/case-study-ongoing"
+  },
+  {
+   "name": "Pigment",
+   "domain": "pigment.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,events_awards",
+   "evidence": "How Pigment kickstarted their vendor management and SOC 2 programmes",
+   "source_url": "https://www.vanta.com/customers/pigment"
+  },
+  {
+   "name": "Ramp",
+   "domain": "ramp.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,events_awards,linkedin",
+   "evidence": "How Ramp keeps its global financial operations platform compliant with Vanta",
+   "source_url": "https://www.vanta.com/customers/ramp"
+  },
+  {
+   "name": "Reachdesk",
+   "domain": "reachdesk.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,review_sites",
+   "evidence": "How Reachdesk completes audits 3x faster with Vanta and Moss Adams",
+   "source_url": "https://www.vanta.com/customers/reachdesk"
+  },
+  {
+   "name": "Relay",
+   "domain": "relayco.io",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "blog_press,partners_si",
+   "evidence": "How Relay Achieved SOC 2 Type II Compliance with Vanta and Advantage Partners",
+   "source_url": "https://www.relayco.io/insights/how-relay-achieved-soc-2-type-ii-compliance-with-vanta-and-advantage-partners"
+  },
+  {
+   "name": "Ro",
+   "domain": "ro.co",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "job_postings,events_awards",
+   "evidence": "owning and maintaining the compliance platform (Vanta)",
+   "source_url": "https://jobgether.com/offer/69a3dd2e7f0cfae7f1229545-sr.-grc-engineer"
+  },
+  {
+   "name": "Robust Intelligence",
+   "domain": "robustintelligence.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,video",
+   "evidence": "Robust Intelligence reduced compliance tasks down to just one hour a week",
+   "source_url": "https://www.youtube.com/watch?v=f2IgSnQwBCs"
+  },
+  {
+   "name": "ShipBob",
+   "domain": "shipbob.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,events_awards",
+   "evidence": "How ShipBob scales GRC and builds customer trust with Vanta",
+   "source_url": "https://www.vanta.com/customers/shipbob"
+  },
+  {
+   "name": "Snowflake",
+   "domain": "snowflake.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,events_awards,linkedin",
+   "evidence": "How Snowflake saves 2,000+ hours a year with Vanta",
+   "source_url": "https://www.vanta.com/customers/snowflake"
+  },
+  {
+   "name": "Solvvy",
+   "domain": "solvvy.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "video,partners_si",
+   "evidence": "Rhymetec utilized Vanta as the source of truth for compliance",
+   "source_url": "https://rhymetec.com/case-studies/how-solvvy-scales-and-secures-with-rhymetec-and-vanta/"
+  },
+  {
+   "name": "Supabase",
+   "domain": "supabase.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,customer_signals,communities",
+   "evidence": "We chose Vanta, with Drata coming in a close second.",
+   "source_url": "https://supabase.com/blog/supabase-soc2"
+  },
+  {
+   "name": "The MJ Companies",
+   "domain": "themjcompanies.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,video",
+   "evidence": "How The MJ Companies establishes customer trust with Vanta",
+   "source_url": "https://www.vanta.com/customers/the-mj-companies"
+  },
+  {
+   "name": "Typeform",
+   "domain": "typeform.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,events_awards",
+   "evidence": "How Typeform improved posture management by 30% with Vanta",
+   "source_url": "https://www.vanta.com/customers/typeform"
+  },
+  {
+   "name": "Unosecur",
+   "domain": "unosecur.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "customer_signals,blog_press",
+   "evidence": "we acquired SOC 2 compliance with the assistance of Vanta",
+   "source_url": "https://www.unosecur.com/resources/blog/why-does-soc2-matter-and-how-does-unosecur-achieve-the-certification"
+  },
+  {
+   "name": "US Med-Equip",
+   "domain": "usme.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,events_awards",
+   "evidence": "How US Med-Equip cut audit time in half with Vanta",
+   "source_url": "https://www.vanta.com/customers/us-med-equip"
+  },
+  {
+   "name": "Vantage",
+   "domain": "vantage.sh",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "customer_signals,linkedin",
+   "evidence": "completed by Prescient Assurance and assisted by Vanta",
+   "source_url": "https://www.vantage.sh/blog/vantage-soc2-type2"
+  },
+  {
+   "name": "WorkJam",
+   "domain": "workjam.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,events_awards",
+   "evidence": "How WorkJam turned GRC from a roadblock to business accelerator",
+   "source_url": "https://www.vanta.com/customers/workjam"
+  },
+  {
+   "name": "ZoomInfo",
+   "domain": "zoominfo.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,video,linkedin",
+   "evidence": "ZoomInfo turns customer trust into topline revenue with Vanta Trust Center",
+   "source_url": "https://www.vanta.com/customers/zoominfo"
+  },
+  {
+   "name": "Zuddl",
+   "domain": "zuddl.com",
+   "industry": "",
+   "grade": "A",
+   "confidence": "Verified+",
+   "signal_groups": "own_site,review_sites",
+   "evidence": "Zuddl benefits from on-demand visibility into its security posture",
+   "source_url": "https://www.vanta.com/customers"
+  },
+  {
+   "name": "Accumulus Synergy",
+   "domain": "accumulus.org",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Accumulus centralized 13,000+ controls and scaled global compliance",
+   "source_url": "https://www.vanta.com/customers/accumulus-technologies"
+  },
+  {
+   "name": "Acme Technology",
+   "domain": "acme.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Acme Technology accelerates growth with Vanta",
+   "source_url": "https://www.vanta.com/customers/acme-technology"
+  },
+  {
+   "name": "ADVANTAGE (powered by JMFA)",
+   "domain": "advantage-fi.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "blog_press",
+   "evidence": "collaboration with Vanta for continuous compliance monitoring",
+   "source_url": "https://advantage-fi.com/advantage-achieves-soc-2-type-ii-certification-and-implements-enhanced-security-measures-in-software/"
+  },
+  {
+   "name": "AI Insurance",
+   "domain": "aiinsurance.io",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "AI Insurance preps for SOC 2 fast and accelerates expansion",
+   "source_url": "https://www.vanta.com/customers/ai-insurance"
+  },
+  {
+   "name": "AI-Media",
+   "domain": "ai-media.tv",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "filings_docs,trust_center",
+   "evidence": "Vanta-hosted Trust Center with subprocessors page",
+   "source_url": "https://trust.ai-media.tv/subprocessors"
+  },
+  {
+   "name": "Aikitech",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "Aikitech used Workstreet to streamline its SOC 2 audit, validate controls in Vanta",
+   "source_url": "https://www.workstreet.com/case-studies/aikitech"
+  },
+  {
+   "name": "AIQ Markets",
+   "domain": "aiqmarkets.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Indexed Vanta-hosted trust page",
+   "source_url": "https://app.vanta.com/aiqmarkets.com/trust/s5qnt127c9r6tbdnqng286"
+  },
+  {
+   "name": "Airtree",
+   "domain": "airtree.vc",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "Airtree was referred to Sensiba by their auditing platform, Vanta.",
+   "source_url": "https://sensiba.com/resources/case-studies/airtree/"
+  },
+  {
+   "name": "Alchemy Cloud",
+   "domain": "alchemy.cloud",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "Kobalt.io was recommended to us by Vanta... instrumental in getting us ready",
+   "source_url": "https://kobalt.io/case-studies/"
+  },
+  {
+   "name": "Aledade",
+   "domain": "aledade.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "job_postings",
+   "evidence": "own Aledade's risk program, GRC platforms (including Vanta)",
+   "source_url": "https://jobs.lever.co/aledade/c98a48b6-7e03-47c8-abe3-9b665a210311"
+  },
+  {
+   "name": "Anam",
+   "domain": "anam.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How Anam Unlocked Growth with SOC 2 (Workstreet/Vanta)",
+   "source_url": "https://www.workstreet.com/case-studies/anam"
+  },
+  {
+   "name": "AppFolio",
+   "domain": "appfolio.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "Using Vanta was an order of magnitude easier than chasing down documents",
+   "source_url": "https://sensiba.com/resources/case-studies/appfolio/"
+  },
+  {
+   "name": "Apply Digital",
+   "domain": "applydigital.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "job_postings",
+   "evidence": "administer the Vanta platform, remediate findings, and ensure continuous monitoring",
+   "source_url": "https://jobs.lever.co/applydigital/78115138-2021-49b9-9996-491270338d48"
+  },
+  {
+   "name": "Aptean",
+   "domain": "aptean.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "events_awards",
+   "evidence": "25 to Trust winner: \"Gail launched and expanded Aptean's Trust Center",
+   "source_url": "https://www.vanta.com/lp/25-to-trust?1e5fdc59_page=3"
+  },
+  {
+   "name": "Arcadia",
+   "domain": "arcadia.io",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "job_postings",
+   "evidence": "implementing and maximizing Vanta's capabilities, automating compliance workflows",
+   "source_url": "https://jobs.lever.co/arcadia/0b3b498d-e95b-46c2-83e6-0be62784862a"
+  },
+  {
+   "name": "Assembly",
+   "domain": "joinassembly.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "review_sites",
+   "evidence": "Vanta paid for itself 100x over — CEO",
+   "source_url": "https://www.trustradius.com/reviews/vanta-2021-11-04-11-44-32"
+  },
+  {
+   "name": "Audiense",
+   "domain": "audiense.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "linkedin",
+   "evidence": "partnered with Vanta to automate the collection of audit evidence",
+   "source_url": "https://www.linkedin.com/posts/audiense_audiense-is-now-soc-2-compliant-activity-6984119646568230913--igR"
+  },
+  {
+   "name": "AudioStack",
+   "domain": "audiostack.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How AudioStack saves hundreds of hours while deepening trust with customers",
+   "source_url": "https://www.vanta.com/customers/audiostack"
+  },
+  {
+   "name": "Avant Assessment",
+   "domain": "avantassessment.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Indexed Vanta-hosted trust page",
+   "source_url": "https://app.vanta.com/avantassessment.com/trust/pjzgmcksv57ihe7g8lw8k"
+  },
+  {
+   "name": "Belvo",
+   "domain": "belvo.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Customer story page on vanta.com",
+   "source_url": "https://www.vanta.com/customers/belvo"
+  },
+  {
+   "name": "Bend HSA",
+   "domain": "bendhsa.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "We think of Vanta as our outsourced CISO.",
+   "source_url": "https://www.vanta.com/customers"
+  },
+  {
+   "name": "Beneration",
+   "domain": "beneration.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "After onboarding with the readiness platform, Vanta introduced Beneration to potential audit partners.",
+   "source_url": "https://sensiba.com/resources/case-studies/beneration/"
+  },
+  {
+   "name": "BetterPic / BetterStudio",
+   "domain": "betterpic.io",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How BetterPic and BetterStudio Turned Enterprise Procurement into a Competitive Advantage (Workstreet/Vanta)",
+   "source_url": "https://www.workstreet.com/case-studies/betterstudio"
+  },
+  {
+   "name": "Black Kite",
+   "domain": "blackkite.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Vanta allowed Black Kite to scale their compliance program",
+   "source_url": "https://www.vanta.com/customers/black-kite"
+  },
+  {
+   "name": "BlackCloak",
+   "domain": "blackcloak.io",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "job_postings",
+   "evidence": "enabling the continuous compliance program at BlackCloak using tools such as Vanta",
+   "source_url": "https://jobs.lever.co/BlackCloak/7de58f2e-9291-4f85-9907-98b45a94b461"
+  },
+  {
+   "name": "Blade Labs",
+   "domain": "bladelabs.io",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Blade Labs builds trust through seamless certification with Vanta",
+   "source_url": "https://www.vanta.com/customers/blade-labs"
+  },
+  {
+   "name": "Blue Marble",
+   "domain": "bluemarblepayroll.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "events_awards",
+   "evidence": "Paylocity and Blue Marble's Trust Centers, ensuring seamless updates",
+   "source_url": "https://www.vanta.com/lp/25-to-trust?1e5fdc59_page=3"
+  },
+  {
+   "name": "BlueTally",
+   "domain": "bluetally.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "blog_press",
+   "evidence": "partnered with Vanta to establish and maintain effective controls",
+   "source_url": "https://bluetally.com/blog/soc-2-compliant"
+  },
+  {
+   "name": "Blumira",
+   "domain": "blumira.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "video",
+   "evidence": "Blumira & Vanta Compliance: From Cost Center To Revenue Driver",
+   "source_url": "https://www.youtube.com/watch?v=xzlhhgFRqLc"
+  },
+  {
+   "name": "Border0",
+   "domain": "border0.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "blog_press",
+   "evidence": "Border0 is a Vanta customer and it has been great",
+   "source_url": "https://medium.com/@border0/vanta-integration-real-time-compliance-checks-before-access-is-granted-3b557d803408"
+  },
+  {
+   "name": "Bravado",
+   "domain": "bravado.co",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How Bravado Unlocked $100K+ in Enterprise Revenue with 14-Day SOC 2 Certification (Workstreet/Vanta)",
+   "source_url": "https://www.workstreet.com/case-studies/how-bravado-unlocked-100k-in-enterprise-revenue-with-14-day-soc-2-certification"
+  },
+  {
+   "name": "Bubble",
+   "domain": "bubble.io",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "The Bubble team used Vanta's trust management platform and hired Sensiba",
+   "source_url": "https://sensiba.com/resources/case-studies/bubble/"
+  },
+  {
+   "name": "Bynder",
+   "domain": "bynder.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Bynder saves 375 hours annually by automating security workflows with Vanta",
+   "source_url": "https://www.vanta.com/customers/bynder"
+  },
+  {
+   "name": "Cable",
+   "domain": "cable.tech",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Cable instills customer trust with SOC 2 compliance from Vanta",
+   "source_url": "https://www.vanta.com/customers/cable"
+  },
+  {
+   "name": "Capcade",
+   "domain": "capcade.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "filings_docs",
+   "evidence": "Subprocessor list names Vanta; Trust Center at app.vanta.com/capcade.com/trust",
+   "source_url": "https://www.capcade.com/list-of-subprocessors"
+  },
+  {
+   "name": "Certn",
+   "domain": "certn.co",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "blog_press",
+   "evidence": "they found Vanta... software that streamlines and automates much of the SOC 2 readiness process",
+   "source_url": "https://certn.co/us/blog/certn-vanta/"
+  },
+  {
+   "name": "Chegg",
+   "domain": "chegg.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "events_awards",
+   "evidence": "25 to Trust winner: \"Divya Singh, Senior Director, Compliance and Privacy, Chegg Inc.",
+   "source_url": "https://www.vanta.com/lp/25-to-trust"
+  },
+  {
+   "name": "Chili Piper",
+   "domain": "chilipiper.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Vanta helped us save the salary of paying someone to own security and compliance",
+   "source_url": "https://www.vanta.com/customers/chili-piper"
+  },
+  {
+   "name": "Chkk",
+   "domain": "chkk.io",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "blog_press",
+   "evidence": "Chkk partnered with Vanta, the leader in continuous compliance monitoring",
+   "source_url": "https://www.chkk.io/blog/4-lessons-from-our-soc2-journey"
+  },
+  {
+   "name": "Choice Screening",
+   "domain": "choicescreening.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "review_sites",
+   "evidence": "The Access Review tool has been exceptional in its ability to help us audit our user access levels",
+   "source_url": "https://www.featuredcustomers.com/vendor/vanta"
+  },
+  {
+   "name": "CipherStash",
+   "domain": "cipherstash.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "CipherStash accelerates compliance and strengthens customer trust with Vanta",
+   "source_url": "https://www.vanta.com/customers/cipherstash"
+  },
+  {
+   "name": "Clario",
+   "domain": "clario.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "Clario selected the Vanta readiness platform and partnered with Sensiba",
+   "source_url": "https://sensiba.com/resources/case-studies/clario/"
+  },
+  {
+   "name": "Cloud Storage Security",
+   "domain": "cloudstoragesec.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "video",
+   "evidence": "Cloud Storage Security Streamlines SOC 2 Compliance With Vanta's AI-Powered Platform",
+   "source_url": "https://www.youtube.com/watch?v=eO7gPPcvEEM"
+  },
+  {
+   "name": "CoachHub",
+   "domain": "coachhub.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How CoachHub optimised their security team's time with Vanta",
+   "source_url": "https://www.vanta.com/customers/coachhub"
+  },
+  {
+   "name": "Coinflow",
+   "domain": "coinflow.cash",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "Coinflow uses Vanta as its compliance platform",
+   "source_url": "https://insightassurance.com/insights/case-study/how-coinflow-manages-soc-2-iso-27001-pci-dss-and-dora-compliance-with-insight-assurance/"
+  },
+  {
+   "name": "ComplyCube",
+   "domain": "complycube.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How ComplyCube completes security questionnaires 7x faster with Vanta",
+   "source_url": "https://www.vanta.com/customers/complycube"
+  },
+  {
+   "name": "Continuous Technologies",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "Continuous Technologies used Workstreet to automate SOC 2 compliance (Workstreet/Vanta)",
+   "source_url": "https://www.workstreet.com/case-studies/continuous-technologies"
+  },
+  {
+   "name": "Convictional",
+   "domain": "convictional.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "BARR also utilized the compliance automation software, Vanta",
+   "source_url": "https://www.barradvisory.com/resource/convictional/"
+  },
+  {
+   "name": "Counterpart",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How Counterpart Scales Security with a Workstreet vCISO (Workstreet = Vanta MSP)",
+   "source_url": "https://www.workstreet.com/case-studies/counterpart"
+  },
+  {
+   "name": "Courier",
+   "domain": "courier.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "customer_signals",
+   "evidence": "We used a software service called Vanta... to develop these policies",
+   "source_url": "https://dev.to/courier/how-courier-became-soc-2-type-2-compliant-2ohi"
+  },
+  {
+   "name": "Coviu",
+   "domain": "coviu.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Coviu streamlines ISO 27001 to fuel growth on a global scale",
+   "source_url": "https://www.vanta.com/customers/coviu"
+  },
+  {
+   "name": "Covlant",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How SOC 2 Helped Covlant Strengthen Trust with Enterprise Customers (Workstreet/Vanta)",
+   "source_url": "https://www.workstreet.com/case-studies/covlant"
+  },
+  {
+   "name": "CrowdComms",
+   "domain": "crowdcomms.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "blog_press",
+   "evidence": "CrowdComms partnered with Vanta... couldn't have achieved this without their security partner Vanta",
+   "source_url": "https://www.crowdcomms.com/all/taking-security-measures-further-by-becoming-soc-2-type-ii-compliant/"
+  },
+  {
+   "name": "Dagger",
+   "domain": "dagger.io",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Dagger gets compliant in half the time with Vanta and BARR Advisory",
+   "source_url": "https://www.vanta.com/customers/dagger"
+  },
+  {
+   "name": "Daya Labs",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How Daya Labs Got SOC 2 Ready for Enterprise Growth (Workstreet/Vanta)",
+   "source_url": "https://www.workstreet.com/case-studies/daya-labs"
+  },
+  {
+   "name": "Dedupely",
+   "domain": "dedupely.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "configure security controls, policy management, and audit automation inside Vanta",
+   "source_url": "https://www.bdemerson.com/case-studies/dedupely"
+  },
+  {
+   "name": "Defog.ai",
+   "domain": "defog.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "linkedin",
+   "evidence": "Defog is now SOC 2 Type II compliant. Vanta and Advantage Partners are tremendous partners!",
+   "source_url": "https://www.linkedin.com/posts/defog-ai_defog-is-now-soc-2-type-ii-compliant-demonstrating-activity-7116118298051715074-7aoZ"
+  },
+  {
+   "name": "Dixa",
+   "domain": "dixa.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Indexed Vanta-hosted trust page (app.vanta.com/dixa.com/trust)",
+   "source_url": "https://app.vanta.com/dixa.com/trust/yklgi29rk5xppqe8vaimlk"
+  },
+  {
+   "name": "DocGo",
+   "domain": "docgo.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How DocGo shaved 3-4 weeks off sales cycles with Vanta",
+   "source_url": "https://www.vanta.com/customers/docgo"
+  },
+  {
+   "name": "DoltHub",
+   "domain": "dolthub.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "customer_signals",
+   "evidence": "we chose Vanta to help guide and manage our compliance needs",
+   "source_url": "https://www.dolthub.com/blog/2024-11-15-hipaa/"
+  },
+  {
+   "name": "Dovetail",
+   "domain": "dovetail.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Dovetail takes customer trust to new heights with Vanta",
+   "source_url": "https://www.vanta.com/customers/dovetail"
+  },
+  {
+   "name": "Duve",
+   "domain": "duve.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "linkedin",
+   "evidence": "Congrats to Duve on achieving both ISO 27001 and ISO 27701! (Vanta post)",
+   "source_url": "https://il.linkedin.com/posts/vanta-security_congrats-to-duve-on-achieving-both-iso-27001-activity-7031781895864541184-FjZO"
+  },
+  {
+   "name": "EasyLlama",
+   "domain": "easyllama.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Vanta trust-center showcase links trust.easyllama.com",
+   "source_url": "https://www.vanta.com/resources/customer-week-2025"
+  },
+  {
+   "name": "Ecanvasser",
+   "domain": "ecanvasser.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How Ecanvasser Accelerated Enterprise Sales with ISO 27001 (Workstreet/Vanta)",
+   "source_url": "https://www.workstreet.com/case-studies/ecanvasser"
+  },
+  {
+   "name": "Element Logic",
+   "domain": "elementlogic.net",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How Element Logic Earned ISO 27001 to Remove Friction from Enterprise Sales (Workstreet/Vanta)",
+   "source_url": "https://www.workstreet.com/case-studies/element-logic"
+  },
+  {
+   "name": "Engine by Starling",
+   "domain": "enginebystarling.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "events_awards",
+   "evidence": "VantaCon UK 2025 panel: \"how they've automated and scaled compliance",
+   "source_url": "https://www.businesswire.com/news/home/20250317183426/en/Announcing-VantaCon-UK-2025-Beyond-the-Standard"
+  },
+  {
+   "name": "Envoy AI",
+   "domain": "tryenvoy.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Trust Center - tryenvoy.ai with security controls listed",
+   "source_url": "https://app.vanta.com/tryenvoy.ai/trust/svr9c2jxpslvpl1f0le1fo"
+  },
+  {
+   "name": "Epsilon3",
+   "domain": "epsilon3.io",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Vanta trust-center showcase links trust.epsilon3.io",
+   "source_url": "https://www.vanta.com/resources/customer-week-2025"
+  },
+  {
+   "name": "Everlab",
+   "domain": "everlab.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Everlab cuts compliance costs by 50% with Vanta",
+   "source_url": "https://www.vanta.com/customers/everlab"
+  },
+  {
+   "name": "FaceUp",
+   "domain": "faceup.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "blog_press",
+   "evidence": "How to achieve SOC 2 compliance with Vanta and FaceUp",
+   "source_url": "https://www.faceup.com/en/blog/soc2-compliance-with-vanta"
+  },
+  {
+   "name": "Feroot Security",
+   "domain": "feroot.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "Vanta recommended Insight Assurance to Feroot",
+   "source_url": "https://insightassurance.com/insights/case-study/how-insight-assurance-helped-feroot-security-with-soc-2-compliance/"
+  },
+  {
+   "name": "fileAI",
+   "domain": "fileai.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "fileAI scales trust and compliance to unlock global growth with Vanta",
+   "source_url": "https://www.vanta.com/customers/fileai"
+  },
+  {
+   "name": "Fireant",
+   "domain": "fireant.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Fireant quickly and seamlessly obtains first security certifications with Vanta",
+   "source_url": "https://www.vanta.com/customers/fireant"
+  },
+  {
+   "name": "Fleet",
+   "domain": "fleetdm.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "blog_press",
+   "evidence": "We picked Vanta because it had integrations for the most critical systems",
+   "source_url": "https://fleetdm.com/securing/tales-from-fleet-security-soc2"
+  },
+  {
+   "name": "Flossie",
+   "domain": "flossie.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Flossie saves time while building trust with Vanta",
+   "source_url": "https://www.vanta.com/customers/flossie"
+  },
+  {
+   "name": "Flowcase",
+   "domain": "flowcase.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "customer_signals",
+   "evidence": "Vanta stood out as the clear frontrunner",
+   "source_url": "https://www.flowcase.com/blog/why-we-chose-vanta-as-our-compliance-solution"
+  },
+  {
+   "name": "Fluency",
+   "domain": "fluencyinc.co",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Indexed Vanta-hosted trust page (app.vanta.com/fluencyinc/trust)",
+   "source_url": "https://app.vanta.com/fluencyinc/trust/ixml7eso6qgc2hsl1gys7"
+  },
+  {
+   "name": "ForeFlight",
+   "domain": "foreflight.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "events_awards",
+   "evidence": "25 to Trust winner: \"displacing OneTrust with Vanta at the enterprise level",
+   "source_url": "https://www.vanta.com/lp/25-to-trust?1e5fdc59_page=2"
+  },
+  {
+   "name": "Formal",
+   "domain": "joinformal.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "events_awards",
+   "evidence": "25 to Trust winner: \"Paul Yoo, CISO, Formal... driving engagement within Vanta's PAB",
+   "source_url": "https://www.vanta.com/lp/25-to-trust?1e5fdc59_page=2"
+  },
+  {
+   "name": "Fourier Health",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How Fourier Health Accelerated Enterprise Deals with SOC 2 (Workstreet/Vanta)",
+   "source_url": "https://www.workstreet.com/case-studies/fourier-health"
+  },
+  {
+   "name": "Fujitsu Launchpad",
+   "domain": "fujitsu.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Fujitsu Launchpad hits ISO 27001 in 4 months—83% faster with Vanta",
+   "source_url": "https://www.vanta.com/customers/fujitsu-launchpad"
+  },
+  {
+   "name": "Garner Health",
+   "domain": "getgarner.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Garner Health drove $2-3 million in sales by streamlining security reviews with automation from Vanta",
+   "source_url": "https://www.vanta.com/solutions/healthcare"
+  },
+  {
+   "name": "Golden State Warriors",
+   "domain": "warriors.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site,events_awards",
+   "evidence": "Vanta boilerplate names GSW as customer; VantaCon 2025 speaker",
+   "source_url": "https://www.businesswire.com/news/home/20251112633252/en/Announcing-VantaCon-2025-How-AI-is-Rewriting-Trust"
+  },
+  {
+   "name": "Gray Digital",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "Gray Digital GRC program case study (Workstreet = Vanta MSP)",
+   "source_url": "https://www.workstreet.com/case-studies/gray-digital"
+  },
+  {
+   "name": "Healthie",
+   "domain": "gethealthie.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Healthie achieves HITRUST r2 certification seamlessly with Vanta",
+   "source_url": "https://www.vanta.com/customers/healthie"
+  },
+  {
+   "name": "Holistics",
+   "domain": "holistics.io",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "blog_press",
+   "evidence": "partnered with \"Vanta - the leading automated security platform - for continuous SOC2 compliance monitoring",
+   "source_url": "https://www.holistics.io/blog/holistics-is-soc2-compliant/"
+  },
+  {
+   "name": "Hook",
+   "domain": "hook.co",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "a comprehensive review of Hook's Vanta instance, ensuring all SOC 2 controls were designed appropriately",
+   "source_url": "https://insightassurance.com/insights/case-study/hooks-experience-with-insight-assurance/"
+  },
+  {
+   "name": "Humanforce",
+   "domain": "humanforce.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "helping with Humanforce's compliance automation tool, Vanta.",
+   "source_url": "https://sensiba.com/resources/case-studies/soc-and-iso-case-study-humanforce/"
+  },
+  {
+   "name": "Hummingbird Healthcare",
+   "domain": "hummingbird.healthcare",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Customer story page on vanta.com",
+   "source_url": "https://www.vanta.com/customers/hummingbird-healthcare"
+  },
+  {
+   "name": "Hyperbound",
+   "domain": "hyperbound.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Hyperbound (YC S23) unlocked the Fortune 100 and $1.5M in 3 months",
+   "source_url": "https://www.vanta.com/customers/hyperbound"
+  },
+  {
+   "name": "Icelandair",
+   "domain": "icelandair.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site,blog_press",
+   "evidence": "Vanta boilerplate: \"Over 16,000 companies like Atlassian, Duolingo, Golden State Warriors, Icelandair, Ramp, and Synthesia rely on Vanta",
+   "source_url": "https://www.businesswire.com/news/home/20251029144534/en/Vanta-State-of-Trust-2025-AI-Threats-Outpace-Security-Expertise"
+  },
+  {
+   "name": "incentX",
+   "domain": "incentx.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How incentX accelerated compliance after switching to Vanta",
+   "source_url": "https://www.vanta.com/customers/incentx"
+  },
+  {
+   "name": "Intercom",
+   "domain": "intercom.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site,events_awards",
+   "evidence": "25 to Trust winner: \"David helped launch and scale Intercom's Trust Center",
+   "source_url": "https://www.vanta.com/lp/25-to-trust"
+  },
+  {
+   "name": "JetBrains",
+   "domain": "jetbrains.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How JetBrains turned SOC 2 into scalable infrastructure for a global engineering org",
+   "source_url": "https://www.vanta.com/customers/jetbrains"
+  },
+  {
+   "name": "JetPatch",
+   "domain": "jetpatch.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "customer_signals",
+   "evidence": "We chose to work with Vanta for our SOC 2 compliance at JetPatch",
+   "source_url": "https://jetpatch-pm.medium.com/jetpatch-is-now-soc-2-compliant-348584466c0f"
+  },
+  {
+   "name": "Josef",
+   "domain": "joseflegal.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Josef uses SOC 2 to streamline their sales process",
+   "source_url": "https://www.vanta.com/customers/josef"
+  },
+  {
+   "name": "Kara Connect",
+   "domain": "karaconnect.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "Cognisys and Vanta assisted Kara Connect in obtaining ISO 27001 certification",
+   "source_url": "https://cognisys.co.uk/blog/case-study/kara-connect-iso-27001-certification/"
+  },
+  {
+   "name": "Keeper",
+   "domain": "keeper.app",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Keeper shortens access reviews and SOC 2 by months with Vanta",
+   "source_url": "https://www.vanta.com/customers/keeper"
+  },
+  {
+   "name": "Kinsta",
+   "domain": "kinsta.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "bridging any visibility gaps in Kinsta's Vanta system",
+   "source_url": "https://www.barradvisory.com/resource/kinsta/"
+  },
+  {
+   "name": "Kurve Inc",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "review_sites",
+   "evidence": "We originally purchased Vanta for SOC 2 compliance — CEO (churned customer)",
+   "source_url": "https://www.trustradius.com/reviews/vanta-2025-06-17-21-30-33"
+  },
+  {
+   "name": "LeanTaaS",
+   "domain": "leantaas.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How LeanTaaS protects healthcare data—and its reputation—with Vanta",
+   "source_url": "https://www.vanta.com/customers/leantaas"
+  },
+  {
+   "name": "Leapsome",
+   "domain": "leapsome.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Leapsome reduces time spent on security questionnaires by 50% with Vanta",
+   "source_url": "https://www.vanta.com/customers/leapsome"
+  },
+  {
+   "name": "Learning Lab",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "using Vanta's platform to automate the workload and streamline their compliance efforts",
+   "source_url": "https://cognisys.co.uk/case-study/learning-lab-iso-27001-certification/"
+  },
+  {
+   "name": "Linea",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "Linea SOC 2 vCISO case study (Workstreet = Vanta MSP)",
+   "source_url": "https://www.workstreet.com/case-studies/linea"
+  },
+  {
+   "name": "Loop Returns",
+   "domain": "loopreturns.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "job_postings",
+   "evidence": "our existing tools, Rippling, GitLab, GSuite, Vanta, Slack",
+   "source_url": "https://jobs.lever.co/loopreturns/501e3bad-2653-4402-bebd-0f4f96afa314"
+  },
+  {
+   "name": "Lumos",
+   "domain": "lumos.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Vanta trust-center customer showcase links trust.lumos.com",
+   "source_url": "https://www.vanta.com/resources/customer-week-2025"
+  },
+  {
+   "name": "Machinify",
+   "domain": "machinify.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "Machinify leverages A-LIGN's GRC partnership with Vanta for streamlined compliance",
+   "source_url": "https://www.a-lign.com/resources/case-study-machinify"
+  },
+  {
+   "name": "Maltego",
+   "domain": "maltego.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Maltego used Vanta to pass their ISO 27001 audit 5 weeks early",
+   "source_url": "https://www.vanta.com/customers/maltego"
+  },
+  {
+   "name": "Master Electronics",
+   "domain": "masterelectronics.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Customer story page on vanta.com",
+   "source_url": "https://www.vanta.com/customers/master-electronics"
+  },
+  {
+   "name": "MEGA",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How MEGA Built a Security-First Culture to Scale AI-Driven O2C Solutions (Workstreet/Vanta)",
+   "source_url": "https://www.workstreet.com/case-studies/mega"
+  },
+  {
+   "name": "Menlo Security",
+   "domain": "menlosecurity.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Indexed Vanta-hosted trust page (app.vanta.com/menlosecurity.com/trust)",
+   "source_url": "https://app.vanta.com/menlosecurity.com/trust/1wex2ncj4qnhvo9p19xxna"
+  },
+  {
+   "name": "Merge",
+   "domain": "merge.dev",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "our Trust Center takes care of in a matter of minutes",
+   "source_url": "https://www.vanta.com/customers"
+  },
+  {
+   "name": "MERGE (agency)",
+   "domain": "mergeworld.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "events_awards",
+   "evidence": "25 to Trust winner: \"Roze transformed security at MERGE by leveraging Vanta to cut audit prep time",
+   "source_url": "https://www.vanta.com/lp/25-to-trust?1e5fdc59_page=2"
+  },
+  {
+   "name": "Miro",
+   "domain": "miro.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "events_awards",
+   "evidence": "25 to Trust winner: \"Kevin launched and optimized Miro's Trust Center, streamlining security automation",
+   "source_url": "https://www.vanta.com/lp/25-to-trust?1e5fdc59_page=3"
+  },
+  {
+   "name": "Mobile Action",
+   "domain": "mobileaction.co",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "review_sites",
+   "evidence": "Vanta helped us with any steps required for preparation, contacts, and monitoring",
+   "source_url": "https://www.trustradius.com/reviews/vanta-2022-03-29-12-45-52"
+  },
+  {
+   "name": "MoonPay",
+   "domain": "moonpay.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How MoonPay completes vendor security reviews 2x faster with Vanta",
+   "source_url": "https://www.vanta.com/customers/moonpay"
+  },
+  {
+   "name": "Multiverse",
+   "domain": "multiverse.io",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "events_awards",
+   "evidence": "25 to Trust winner: \"streamlining third-party VRM in Vanta\"; VantaCon UK 2025 panelist",
+   "source_url": "https://www.vanta.com/lp/25-to-trust?1e5fdc59_page=4"
+  },
+  {
+   "name": "Neuralift AI",
+   "domain": "neuralift.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Neuralift AI got ISO 42001 audit-ready in just 2 weeks",
+   "source_url": "https://www.vanta.com/customers/neuralift-ai"
+  },
+  {
+   "name": "Noibu",
+   "domain": "noibu.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Noibu completes security questionnaires 5x faster with Vanta",
+   "source_url": "https://www.vanta.com/customers/noibu"
+  },
+  {
+   "name": "Notion",
+   "domain": "notion.so",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "blog_press",
+   "evidence": "Notion was among Vanta's early customers and adopted its compliance and security monitoring products",
+   "source_url": "https://en.wikipedia.org/wiki/Vanta_(company)"
+  },
+  {
+   "name": "Octopus Deploy",
+   "domain": "octopus.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "After... speaking to Vanta, Sensiba stood out as the preferred audit partner.",
+   "source_url": "https://sensiba.com/resources/case-studies/octopus-deploy/"
+  },
+  {
+   "name": "OneSchema",
+   "domain": "oneschema.co",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "customer_signals",
+   "evidence": "We ended up going with Vanta because they had better supported integrations",
+   "source_url": "https://www.oneschema.co/blog/soc-2-learnings-for-startups"
+  },
+  {
+   "name": "Opypro",
+   "domain": "opy.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "Their proven expertise with the Vanta platform made them the clear choice for us.",
+   "source_url": "https://kobalt.io/case-studies/"
+  },
+  {
+   "name": "OutboundSync",
+   "domain": "outboundsync.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "It had already invested in Vanta, an industry-leading trust management platform",
+   "source_url": "https://advantage-partners.com/case-study/outboundsync/"
+  },
+  {
+   "name": "Overwatch Data",
+   "domain": "overwatchdata.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "communities",
+   "evidence": "Founder on HN: \"We had a 3 month audit window and we used Vanta.",
+   "source_url": "https://news.ycombinator.com/item?id=40659349"
+  },
+  {
+   "name": "Owkin",
+   "domain": "owkin.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Indexed Vanta-hosted trust page (app.vanta.com/owkin/trust)",
+   "source_url": "https://app.vanta.com/owkin/trust/qq8guymgbci1jnk49kjbc"
+  },
+  {
+   "name": "Pano AI",
+   "domain": "pano.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "job_postings",
+   "evidence": "operate and maintain GRC tools (Vanta) to track controls",
+   "source_url": "https://talents.vaia.com/companies/pano-ai/senior-security-analyst-38960300/"
+  },
+  {
+   "name": "Parallel Learning",
+   "domain": "parallellearning.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "Rhymetec takes clear ownership of Vanta: uploading evidence, managing test statuses",
+   "source_url": "https://www.g2.com/products/rhymetec/reviews"
+  },
+  {
+   "name": "Partly",
+   "domain": "partly.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How Partly ran their ISO 27001 Vanta implementation with Kobalt",
+   "source_url": "https://kobalt.io/success-vanta/"
+  },
+  {
+   "name": "Paylocity",
+   "domain": "paylocity.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "events_awards",
+   "evidence": "25 to Trust winner: \"Emily helped launch and drive adoption of Paylocity and Blue Marble's Trust Centers",
+   "source_url": "https://www.vanta.com/lp/25-to-trust?1e5fdc59_page=3"
+  },
+  {
+   "name": "Peak",
+   "domain": "peak.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Peak builds trust in new markets with Vanta",
+   "source_url": "https://www.vanta.com/customers/peak"
+  },
+  {
+   "name": "Perforce",
+   "domain": "perforce.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Perforce cut compliance labor by 75% with Vanta",
+   "source_url": "https://www.vanta.com/customers/perforce"
+  },
+  {
+   "name": "Perk",
+   "domain": "perk.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Perk cuts questionnaire time by 50% with Vanta",
+   "source_url": "https://www.vanta.com/customers/perk"
+  },
+  {
+   "name": "Picarro",
+   "domain": "picarro.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "50% realized efficiency by leveraging Vanta's compliance automation platform",
+   "source_url": "https://www.a-lign.com/resources/case-study-picarro"
+  },
+  {
+   "name": "Pilbara Group",
+   "domain": "pilbaragroup.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "blog_press",
+   "evidence": "audited by Prescient Assurance for SOC 2 Type II compliance and used Vanta as their trust management platform",
+   "source_url": "https://www.pilbaragroup.com/soc-2-type-ii-compliance/"
+  },
+  {
+   "name": "Pinpoint",
+   "domain": "pinpointhq.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Customer story page on vanta.com",
+   "source_url": "https://www.vanta.com/customers/pinpoint"
+  },
+  {
+   "name": "Popl",
+   "domain": "popl.co",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Trust Center - Popl Vanta-format subprocessors page",
+   "source_url": "https://security.popl.co/subprocessors"
+  },
+  {
+   "name": "Push",
+   "domain": "push.cash",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site,partners_si",
+   "evidence": "The combination of Vanta's automation and VioletX's in-depth security expertise enabled Push to achieve a SOC 2 report",
+   "source_url": "https://www.vanta.com/resources/push-invests-in-pre-product-security"
+  },
+  {
+   "name": "Qualifi",
+   "domain": "qualifi.hr",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Vanta trust-center showcase links trust.qualifi.hr",
+   "source_url": "https://www.vanta.com/resources/customer-week-2025"
+  },
+  {
+   "name": "Quindar",
+   "domain": "quindar.space",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "blog_press",
+   "evidence": "Partnering with experts like Vanta... played a significant role in our successful journey to SOC2 Type II compliance. — CEO",
+   "source_url": "https://www.quindar.space/security"
+  },
+  {
+   "name": "Quix",
+   "domain": "quix.io",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "a collaborative effort between Quix and Cognisys, powered by Vanta, the ISO 27001 was successfully achieved",
+   "source_url": "https://cognisys.co.uk/blog/case-study/quix-iso-27001-certification/"
+  },
+  {
+   "name": "Rad AI",
+   "domain": "radai.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Rad AI got audit-ready in 3 months after switching to Vanta",
+   "source_url": "https://www.vanta.com/customers/rad-ai"
+  },
+  {
+   "name": "Recidiviz",
+   "domain": "recidiviz.org",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "With Vanta, Recidiviz expands state partnerships to safeguard lives and liberties",
+   "source_url": "https://www.vanta.com/customers/recidiviz"
+  },
+  {
+   "name": "Registrar Corp",
+   "domain": "registrarcorp.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Registrar Corp eliminates 160 hours of manual work weekly with Vanta and Rhymetec",
+   "source_url": "https://www.vanta.com/customers/registrar-corp"
+  },
+  {
+   "name": "RFP360",
+   "domain": "rfp360.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "RFP360 Partners With BARR Advisory and Vanta to Simplify the SOC 2 Process",
+   "source_url": "https://www.barradvisory.com/resource/rfp360/"
+  },
+  {
+   "name": "Riscosity",
+   "domain": "riscosity.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "customer_signals",
+   "evidence": "a dedicated Trust Center at trust.riscosity.com, powered by industry leader Vanta",
+   "source_url": "https://www.riscosity.com/blog/riscosity-launches-the-dfpm-trust-center"
+  },
+  {
+   "name": "RMR Benefits",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "RMR Benefits recognized the need to establish strong security and compliance credentials on the Vanta platform",
+   "source_url": "https://www.workstreet.com/case-studies/rmr-benefits"
+  },
+  {
+   "name": "RocketDocs",
+   "domain": "rocketdocs.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Their integrations are quick and easy to use",
+   "source_url": "https://www.vanta.com/customers"
+  },
+  {
+   "name": "Samsara",
+   "domain": "samsara.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Samsara realized $150M+ in influenced revenue while scaling its GRC program with Vanta",
+   "source_url": "https://www.vanta.com/customers/samsara"
+  },
+  {
+   "name": "Sawport",
+   "domain": "sawport.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "linkedin",
+   "evidence": "Sawport Inc achieves SOC 2 Type II compliance with Vanta",
+   "source_url": "https://www.linkedin.com/posts/sawport_sawport-vanta-soc2-activity-7303021497294471168-_gWZ"
+  },
+  {
+   "name": "Seer Medical",
+   "domain": "seermedical.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "It truly is a one-stop shop for enabling compliance",
+   "source_url": "https://www.vanta.com/customers"
+  },
+  {
+   "name": "Shaped",
+   "domain": "shaped.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "linkedin",
+   "evidence": "Shaped is now SOC 2 Compliant — partnered with Vanta and Prescient Assurance",
+   "source_url": "https://www.linkedin.com/posts/shapedai_shaped-is-now-soc-2-compliant-activity-7034547196700033025-MdyK"
+  },
+  {
+   "name": "Shortcut",
+   "domain": "shortcut.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Customer story page on vanta.com",
+   "source_url": "https://www.vanta.com/customers/shortcut"
+  },
+  {
+   "name": "Sierra",
+   "domain": "sierra.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site,events_awards",
+   "evidence": "25 to Trust winner: \"Akhila drives security innovation at Sierra.ai\"; VantaCon 2025 speaker",
+   "source_url": "https://www.vanta.com/lp/25-to-trust"
+  },
+  {
+   "name": "SIGQ",
+   "domain": "sigq.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How SIGQ's proactive compliance bet became a fast path to enterprise deals",
+   "source_url": "https://www.vanta.com/customers/sigq"
+  },
+  {
+   "name": "Silico",
+   "domain": "silico.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "managing our ISO 27001 compliance process on Vanta with ease.",
+   "source_url": "https://kobalt.io/case-studies/"
+  },
+  {
+   "name": "Silvr",
+   "domain": "silvr.co",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "blog_press",
+   "evidence": "worked with compliance service provider Vanta... very pleased with Vanta's support",
+   "source_url": "https://www.silvr.co/blog/certification-iso-iec-27001-why-silvr-protects-its-information-system"
+  },
+  {
+   "name": "Simetrik",
+   "domain": "simetrik.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Simetrik turned compliance into a competitive advantage",
+   "source_url": "https://www.vanta.com/customers/simetrik"
+  },
+  {
+   "name": "Sitation",
+   "domain": "sitation.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "events_awards",
+   "evidence": "His rapid Vanta implementation introduced automated policies, risk assessments, and streamlined audits",
+   "source_url": "https://www.sitation.com/blog/vanta-recognizes-sitations-digital-infrastructure-manager-in-25-to-trust-awards/"
+  },
+  {
+   "name": "Sitoo",
+   "domain": "sitoo.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Sitoo uses Vanta to achieve compliance in over 20 countries",
+   "source_url": "https://www.vanta.com/customers/sitoo"
+  },
+  {
+   "name": "Sketch My Roof",
+   "domain": "sketchmyroof.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How Sketch My Roof Unlocked Enterprise Partnerships with SOC 2 (Workstreet/Vanta)",
+   "source_url": "https://www.workstreet.com/case-studies/sketch-my-roof"
+  },
+  {
+   "name": "Slope Software",
+   "domain": "slopesoftware.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Slope Software reduces sales cycle by 30% with Vanta",
+   "source_url": "https://www.vanta.com/customers/slope-software"
+  },
+  {
+   "name": "SMART Doc App",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How SMART Doc App Achieved SOC 2 Readiness in Just 29 Days (Workstreet/Vanta)",
+   "source_url": "https://www.workstreet.com/case-studies/smart-doc-app"
+  },
+  {
+   "name": "Solidroad",
+   "domain": "solidroad.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Solidroad uses Vanta to calm security concerns in the AI era",
+   "source_url": "https://www.vanta.com/customers/solidroad"
+  },
+  {
+   "name": "Source Meridian",
+   "domain": "sourcemeridian.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "events_awards",
+   "evidence": "25 to Trust winner: \"Oscar scaled security across multiple companies, earning six certifications in two years",
+   "source_url": "https://www.vanta.com/lp/25-to-trust"
+  },
+  {
+   "name": "Specbook",
+   "domain": "specbook.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Specbook achieved CMMC Level 1 and landed a six-figure deal with Vanta",
+   "source_url": "https://www.vanta.com/customers/specbook-ai"
+  },
+  {
+   "name": "SpyCloud",
+   "domain": "spycloud.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Indexed Vanta-hosted trust page (app.vanta.com/spycloud.com/trust)",
+   "source_url": "https://app.vanta.com/spycloud.com/trust/itvhddyqxnnf6gi6aatcx"
+  },
+  {
+   "name": "Squadify",
+   "domain": "squadify.net",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Squadify uses Vanta to breakthrough into enterprise deals",
+   "source_url": "https://www.vanta.com/customers/squadify"
+  },
+  {
+   "name": "Stormboard",
+   "domain": "stormboard.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Stormboard leverages Vanta to generate revenue and stay compliant",
+   "source_url": "https://www.vanta.com/customers/stormboard"
+  },
+  {
+   "name": "Stride Health",
+   "domain": "stridehealth.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How Workstreet Transformed Stride Health's Security Program (Workstreet = Vanta MSP)",
+   "source_url": "https://www.workstreet.com/case-studies/stride-health"
+  },
+  {
+   "name": "SuccessKPI",
+   "domain": "successkpi.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "events_awards",
+   "evidence": "25 to Trust winner: \"Rajat Ravinder Varuni, CISO, DPO... SuccessKPI",
+   "source_url": "https://www.vanta.com/lp/25-to-trust?1e5fdc59_page=2"
+  },
+  {
+   "name": "Sweep",
+   "domain": "sweep.net",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "events_awards",
+   "evidence": "25 to Trust winner: \"maintaining 100% control completion in Vanta and monitoring 285 controls",
+   "source_url": "https://www.vanta.com/lp/25-to-trust?1e5fdc59_page=3"
+  },
+  {
+   "name": "SweetHawk",
+   "domain": "sweethawk.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Indexed Vanta-hosted trust page (app.vanta.com/sweethawk/trust)",
+   "source_url": "https://app.vanta.com/sweethawk/trust/qj4zmrgdamau6fr4o4yplg"
+  },
+  {
+   "name": "Symbl.ai",
+   "domain": "symbl.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How Symbl.ai mastered SOC2 with VioletX and Vanta",
+   "source_url": "https://www.violetx.com/customers/how-we-helped-symbl-launch-soc2"
+  },
+  {
+   "name": "Synthesia",
+   "domain": "synthesia.io",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "events_awards,blog_press",
+   "evidence": "Vanta boilerplate names Synthesia as customer; VantaCon UK 2025 keynote (co-founder/COO)",
+   "source_url": "https://www.businesswire.com/news/home/20250317183426/en/Announcing-VantaCon-UK-2025-Beyond-the-Standard"
+  },
+  {
+   "name": "Tactiq",
+   "domain": "tactiq.io",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Tactiq unlocks efficiency and trust with Vanta",
+   "source_url": "https://www.vanta.com/customers/tactiq"
+  },
+  {
+   "name": "Tag1",
+   "domain": "tag1consulting.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "BD Emerson tailored compliance controls to Tag1's workflows using Vanta as the backbone",
+   "source_url": "https://www.bdemerson.com/case-studies/tag1"
+  },
+  {
+   "name": "Tailor",
+   "domain": "tailor.tech",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Tailor built trust and gained credibility with SOC 2 compliance",
+   "source_url": "https://www.vanta.com/customers/tailor"
+  },
+  {
+   "name": "TankLogix",
+   "domain": "tanklogix.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How TankLogix Achieved both SOC 1 and SOC 2 Compliance (Workstreet/Vanta)",
+   "source_url": "https://www.workstreet.com/case-studies/tanklogix"
+  },
+  {
+   "name": "Taptap Send",
+   "domain": "taptapsend.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Taptap Send takes the work out of managing risk with Vanta",
+   "source_url": "https://www.vanta.com/customers/taptap-send"
+  },
+  {
+   "name": "TeamBuilder",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How SOC 2 Type II Accelerates TeamBuilder's Sales Pipeline (Workstreet/Vanta)",
+   "source_url": "https://www.workstreet.com/case-studies/teambuilder"
+  },
+  {
+   "name": "TeamViewer",
+   "domain": "teamviewer.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "TeamViewer scales global compliance initiatives with A-LIGN and Vanta",
+   "source_url": "https://www.a-lign.com/resources/case-study-teamviewer"
+  },
+  {
+   "name": "Techstars",
+   "domain": "techstars.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Techstars centralizes compliance processes and improves efficiency",
+   "source_url": "https://www.vanta.com/customers"
+  },
+  {
+   "name": "ThreeFlow",
+   "domain": "threeflow.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "ThreeFlow leveraged compliance automation tools such as Vanta to simplify evidence collection",
+   "source_url": "https://www.barradvisory.com/resource/a-case-study-overview-threeflow-emerges-as-market-leader-with-soc-2-hitrust-e1-from-barr/"
+  },
+  {
+   "name": "Tibber",
+   "domain": "tibber.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "events_awards",
+   "evidence": "25 to Trust winner: \"Jon expanded Tibber's security program, rolling out compliance across six frameworks",
+   "source_url": "https://www.vanta.com/lp/25-to-trust?1e5fdc59_page=3"
+  },
+  {
+   "name": "tikpay",
+   "domain": "tikpay.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How tikpay wins transport contracts competitors can't qualify for",
+   "source_url": "https://www.vanta.com/customers/tikpay"
+  },
+  {
+   "name": "Timesheets.com",
+   "domain": "timesheets.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "review_sites",
+   "evidence": "We hired them to help us with SOC compliance — President (churned customer)",
+   "source_url": "https://www.trustradius.com/reviews/vanta-2024-03-06-21-50-44"
+  },
+  {
+   "name": "Toku",
+   "domain": "trytoku.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Vanta trust-center showcase links compliance.trytoku.com",
+   "source_url": "https://www.vanta.com/resources/customer-week-2025"
+  },
+  {
+   "name": "Traffyk.ai",
+   "domain": "traffyk.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Traffyk.ai uses Vanta to establish trust with enterprise buyers",
+   "source_url": "https://www.vanta.com/customers/traffyk-ai"
+  },
+  {
+   "name": "Treasure Technologies",
+   "domain": "treasure.tech",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "review_sites",
+   "evidence": "Treasure Technologies decreased operational risk by 25% with Vanta",
+   "source_url": "https://www.featuredcustomers.com/vendor/vanta"
+  },
+  {
+   "name": "TSIA",
+   "domain": "tsia.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "review_sites",
+   "evidence": "The Vanta software tool is being used with our IT & Information Security departments to continue our SOC2 compliance",
+   "source_url": "https://www.trustradius.com/reviews/vanta-2021-11-10-16-25-48"
+  },
+  {
+   "name": "Turing Labs",
+   "domain": "turingsaas.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Vanta really cares... they do everything to make sure that we are successful. — CEO",
+   "source_url": "https://www.vanta.com/customers"
+  },
+  {
+   "name": "Union.ai",
+   "domain": "union.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "customer_signals",
+   "evidence": "maintains a public Trust Center at trust.union.ai (powered by Vanta)",
+   "source_url": "https://www.union.ai/docs/v2/union/security/compliance-and-certifications/"
+  },
+  {
+   "name": "Unleash",
+   "domain": "unleash.so",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Unleash prepares for enterprise growth with continuous monitoring and SOC 2",
+   "source_url": "https://www.vanta.com/customers/unleash"
+  },
+  {
+   "name": "Unmudl",
+   "domain": "unmudl.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "customer_signals",
+   "evidence": "the Unmudl Trust Center, powered by Vanta",
+   "source_url": "https://unmudl.com/product/updates/unmudl-launches-vanta-trust-center-to-strengthen-transparency"
+  },
+  {
+   "name": "Upflow",
+   "domain": "upflow.io",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Upflow enhances security credibility with Vanta",
+   "source_url": "https://www.vanta.com/customers/upflow"
+  },
+  {
+   "name": "urllo",
+   "domain": "urllo.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "filings_docs,trust_center",
+   "evidence": "Public Vanta-hosted Trust Center",
+   "source_url": "https://trust.urllo.com/updates"
+  },
+  {
+   "name": "UserEvidence",
+   "domain": "userevidence.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "saved 240 hours+ of engineering time — CEO Evan Huck",
+   "source_url": "https://www.vanta.com/customers/userevidence"
+  },
+  {
+   "name": "VaultSpeed",
+   "domain": "vaultspeed.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How VaultSpeed Unlocked Enterprise Growth with ISO 27001 (Workstreet/Vanta)",
+   "source_url": "https://www.workstreet.com/case-studies/vaultspeed"
+  },
+  {
+   "name": "Veriff",
+   "domain": "veriff.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Veriff saves 1+ day per week by automating compliance with Vanta",
+   "source_url": "https://www.vanta.com/customers/veriff"
+  },
+  {
+   "name": "Versa",
+   "domain": "versa.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Versa gained SOC 2 compliance to facilitate future growth",
+   "source_url": "https://www.vanta.com/customers/versa"
+  },
+  {
+   "name": "Vibrent Health",
+   "domain": "vibrenthealth.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Vanta's Vendor Risk Management solution allows us to reduce this to only a few hours a week",
+   "source_url": "https://www.vanta.com/customers/vibrent-health"
+  },
+  {
+   "name": "Viking Sasquatch",
+   "domain": "vikingsasquatch.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Indexed Vanta-hosted trust page",
+   "source_url": "https://app.vanta.com/vikingsasquatch.com/trust/edha8nzkubxqhlvw01cqv"
+  },
+  {
+   "name": "vittae360",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "How vittae360 Unlocked Growth with ISO 27001 (Workstreet/Vanta)",
+   "source_url": "https://www.workstreet.com/case-studies/vittae360"
+  },
+  {
+   "name": "Warmly",
+   "domain": "warmly.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "strong coordination and familiarity with Vanta's GRC tool",
+   "source_url": "https://prescientsecurity.com/resources/case-studies/warmly-keeps-soc-2-continuity-on-track-with-prescient-security"
+  },
+  {
+   "name": "Warp",
+   "domain": "warp.dev",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Warp accelerates enterprise deals and builds trust with Vanta",
+   "source_url": "https://www.vanta.com/customers/warp"
+  },
+  {
+   "name": "Weel",
+   "domain": "letsweel.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How Weel built scalable, automated compliance to accelerate growth with Vanta",
+   "source_url": "https://www.vanta.com/customers/weel"
+  },
+  {
+   "name": "Work Technologies",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "video",
+   "evidence": "Vanta Customer Spotlight: Work Technologies",
+   "source_url": "https://www.youtube.com/watch?v=QhC6lJQCpdg"
+  },
+  {
+   "name": "WRITER",
+   "domain": "writer.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "How WRITER achieved the ISO triad and SOC 2 Type 2 in under a year with Vanta",
+   "source_url": "https://www.vanta.com/customers/writer"
+  },
+  {
+   "name": "WRK",
+   "domain": "wrk.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "WRK saves time and money by automating tasks",
+   "source_url": "https://www.vanta.com/customers"
+  },
+  {
+   "name": "WunderGraph",
+   "domain": "wundergraph.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "customer_signals",
+   "evidence": "We opted for Vanta, which has its light and dark sides.",
+   "source_url": "https://wundergraph.com/blog/soc2-type-ii-is-a-wrap"
+  },
+  {
+   "name": "Yarken",
+   "domain": "yarken.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "customer_signals",
+   "evidence": "We partnered with Vanta to streamline this journey",
+   "source_url": "https://www.yarken.com/blog/yarken-achieves-soc-2-compliance-with-vanta"
+  },
+  {
+   "name": "yasoon",
+   "domain": "yasoon.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "customer_signals",
+   "evidence": "yasoon opted for Vanta as their trust management provider",
+   "source_url": "https://www.atlassian.com/blog/it-teams/compliance-with-vanta"
+  },
+  {
+   "name": "Yellow Canary",
+   "domain": "yellowcanary.com.au",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Yellow Canary strengthens security and scales faster with Vanta",
+   "source_url": "https://www.vanta.com/customers/yellow-canary"
+  },
+  {
+   "name": "Yuma AI",
+   "domain": "yuma.ai",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "trust_center",
+   "evidence": "Trust Center - Yuma AI (app.vanta.com/yuma.ai/trust)",
+   "source_url": "https://app.vanta.com/yuma.ai/trust/5ygxqbtvs7dmqtb52j3m36"
+  },
+  {
+   "name": "Zededa",
+   "domain": "zededa.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "own_site",
+   "evidence": "Most complete GRC solution to start enterprise compliance.",
+   "source_url": "https://www.vanta.com/customers"
+  },
+  {
+   "name": "Zirtue",
+   "domain": "zirtue.com",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "blog_press",
+   "evidence": "Zirtue has partnered with leading compliance experts Vanta and Advantage Partners",
+   "source_url": "https://newsroom.zirtue.com/"
+  },
+  {
+   "name": "Zynctechgroup",
+   "domain": "",
+   "industry": "",
+   "grade": "B",
+   "confidence": "Verified",
+   "signal_groups": "partners_si",
+   "evidence": "Zynctechgroup SOC 2 program case study (Workstreet = Vanta MSP)",
+   "source_url": "https://www.workstreet.com/case-studies/zynctechgroup"
+  },
+  {
+   "name": "1Password",
+   "domain": "1password.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "events_awards",
+   "evidence": "VantaCon 2025 speaker; past-speakers wall (not independently confirmed)",
+   "source_url": "https://www.vanta.com/vantacon"
+  },
+  {
+   "name": "A Million Ads",
+   "domain": "amillionads.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.amillionads.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Aliro Quantum",
+   "domain": "aliroquantum.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.aliroquantum.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Apollo.io",
+   "domain": "apollo.io",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "job_postings",
+   "evidence": "experience with continuous compliance tooling such as Vanta, SecureFrame, Drata",
+   "source_url": "https://boards.greenhouse.io/apolloio/jobs/5007681004"
+  },
+  {
+   "name": "AssetWatch",
+   "domain": "assetwatch.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "job_postings",
+   "evidence": "compliance frameworks and GRC tooling (e.g., Vanta)",
+   "source_url": "https://builtin.com/job/it-systems-analyst/9211384"
+  },
+  {
+   "name": "ATRIIS",
+   "domain": "atriis.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "trust_center",
+   "evidence": "Security Information & Trust Center - ATRIIS indexed under Vanta trust-center query",
+   "source_url": "https://atriis.zendesk.com/hc/en-us/articles/23982071918364"
+  },
+  {
+   "name": "Axlora",
+   "domain": "axlora.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Listed among \"Companies that use Vanta in United States",
+   "source_url": "https://theirstack.com/en/technology/vanta/us"
+  },
+  {
+   "name": "BILL",
+   "domain": "bill.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "events_awards",
+   "evidence": "VantaCon 2024 speaker \"Rinki Sethi (CISO and CIO, BILL)\" (not independently confirmed)",
+   "source_url": "https://vantacon24.com/livestream"
+  },
+  {
+   "name": "Box",
+   "domain": "box.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "events_awards",
+   "evidence": "VantaCon 2024 speaker \"Bryan Culp (Trust and Quality, Box)\" (not independently confirmed)",
+   "source_url": "https://vantacon24.com/livestream"
+  },
+  {
+   "name": "Bruno",
+   "domain": "usebruno.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.usebruno.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Calendly",
+   "domain": "calendly.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "job_postings",
+   "evidence": "Experience administering compliance automation platforms such as Drata, Vanta",
+   "source_url": "https://job-boards.greenhouse.io/calendly/jobs/8612719002"
+  },
+  {
+   "name": "Cartken",
+   "domain": "cartken.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.cartken.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Chargebee",
+   "domain": "chargebee.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Some of the companies that use Vanta include: Chargebee",
+   "source_url": "https://enlyft.com/tech/products/vanta"
+  },
+  {
+   "name": "Coconut",
+   "domain": "coconut.dev",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.coconut.dev",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Dandy",
+   "domain": "meetdandy.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.meetdandy.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "DataDome",
+   "domain": "datadome.co",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "job_postings",
+   "evidence": "Experience with Vanta or similar GRC automation platforms",
+   "source_url": "https://job-boards.greenhouse.io/ddome/jobs/8602893002"
+  },
+  {
+   "name": "Datassential",
+   "domain": "datassential.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Some of the companies that use Vanta include: Datassential",
+   "source_url": "https://enlyft.com/tech/products/vanta"
+  },
+  {
+   "name": "Drivetrain",
+   "domain": "drivetrain.ai",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.drivetrain.ai",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Ediphi",
+   "domain": "ediphi.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.ediphi.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Encircle",
+   "domain": "getencircle.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Some of the companies that use Vanta include: Encircle",
+   "source_url": "https://enlyft.com/tech/products/vanta"
+  },
+  {
+   "name": "Every",
+   "domain": "every.io",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.every.io",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Findem",
+   "domain": "findem.ai",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.findem.ai",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Golden State Valkyries",
+   "domain": "valkyries.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "events_awards",
+   "evidence": "VantaCon 2025 speaker announcement (not independently confirmed)",
+   "source_url": "https://www.businesswire.com/news/home/20251112633252/en/Announcing-VantaCon-2025-How-AI-is-Rewriting-Trust"
+  },
+  {
+   "name": "Green.Earth",
+   "domain": "green.earth",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.green.earth",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Harver",
+   "domain": "harver.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.harver.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Headway",
+   "domain": "headway.co",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "job_postings",
+   "evidence": "Experience using a GRC platform like Vanta, Drata, OneTrust",
+   "source_url": "https://job-boards.greenhouse.io/headway/jobs/5995843004"
+  },
+  {
+   "name": "Hermes International",
+   "domain": "hermes.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Some of the companies that use Vanta include: Hermes International S.A",
+   "source_url": "https://enlyft.com/tech/products/vanta"
+  },
+  {
+   "name": "iClassPro",
+   "domain": "iclasspro.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.iclasspro.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "iCover",
+   "domain": "icover.ai",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "linkedin",
+   "evidence": "We are proud to have partnered with iCover on their SOC 2 Type I & II (Advantage Partners, Vanta implementation partner)",
+   "source_url": "https://www.linkedin.com/posts/advantagepartners_we-are-proud-to-have-partnered-with-icover-activity-7110383072008695808-yB1C"
+  },
+  {
+   "name": "Imperial Brands",
+   "domain": "imperialbrandsplc.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Listed among \"Companies that use Vanta\" (job-posting technographics)",
+   "source_url": "https://theirstack.com/en/technology/vanta"
+  },
+  {
+   "name": "Intangible",
+   "domain": "intangible.ai",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.intangible.ai",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Introw",
+   "domain": "introw.io",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "partners_si",
+   "evidence": "Introw achieved their ISO 27001 in 6 weeks (Cognisys Vanta implementation page)",
+   "source_url": "https://cognisys.co.uk/compliance/vanta-implementation/frameworks/iso-27001/"
+  },
+  {
+   "name": "Kick",
+   "domain": "kick.co",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.kick.co",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Klarna",
+   "domain": "klarna.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "events_awards",
+   "evidence": "VantaCon UK 2025 CISO panel speaker (not independently confirmed as customer)",
+   "source_url": "https://www.businesswire.com/news/home/20250317183426/en/Announcing-VantaCon-UK-2025-Beyond-the-Standard"
+  },
+  {
+   "name": "Klaviyo",
+   "domain": "klaviyo.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Some of the companies that use Vanta include: Klaviyo",
+   "source_url": "https://enlyft.com/tech/products/vanta"
+  },
+  {
+   "name": "LangChain",
+   "domain": "langchain.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Listed among \"Companies that use Vanta in United States",
+   "source_url": "https://theirstack.com/en/technology/vanta/us"
+  },
+  {
+   "name": "LEAP Legal Software",
+   "domain": "leaplegalsoftware.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "job_postings",
+   "evidence": "GRC tooling such as OneTrust, Drata and Vanta",
+   "source_url": "https://apply.workable.com/leap-legal-software/j/9864A29F4C/"
+  },
+  {
+   "name": "Leexi",
+   "domain": "leexi.ai",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.leexi.ai",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Libra",
+   "domain": "",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "partners_si",
+   "evidence": "Libra achieved their ISO 27001 in just one month with Cognisys and Vanta",
+   "source_url": "https://cognisys.co.uk/compliance/vanta-implementation/frameworks/iso-27001/"
+  },
+  {
+   "name": "Lovable",
+   "domain": "lovable.dev",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "own_site",
+   "evidence": "Logo on \"More than 15,000 companies choose Vanta\" wall",
+   "source_url": "https://www.vanta.com/customers"
+  },
+  {
+   "name": "Mesh",
+   "domain": "meshconnect.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "job_postings",
+   "evidence": "Familiarity with GRC platforms such as Vanta, Drata, or Archer",
+   "source_url": "https://job-boards.greenhouse.io/mesh/jobs/5254431008"
+  },
+  {
+   "name": "Murphy AI",
+   "domain": "getmurphy.ai",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.getmurphy.ai",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "MythWorx",
+   "domain": "mythworx.ai",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.mythworx.ai",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Nasuni",
+   "domain": "nasuni.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.nasuni.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Netflix",
+   "domain": "netflix.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "events_awards",
+   "evidence": "VantaCon 2024 speaker (not independently confirmed as customer)",
+   "source_url": "https://vantacon24.com/livestream"
+  },
+  {
+   "name": "Newcode.ai",
+   "domain": "newcode.ai",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "job_postings",
+   "evidence": "Experience in Vanta, OneTrust or similar software",
+   "source_url": "https://apply.workable.com/newcode/j/AD1EB4E356"
+  },
+  {
+   "name": "Novasign",
+   "domain": "novasign.at",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.novasign.at",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Novelis",
+   "domain": "novelis.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Listed among \"Companies that use Vanta in United States",
+   "source_url": "https://theirstack.com/en/technology/vanta/us"
+  },
+  {
+   "name": "Ntropy",
+   "domain": "ntropy.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.ntropy.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Okta",
+   "domain": "okta.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "events_awards",
+   "evidence": "VantaCon UK 2025 CISO panel speaker (not independently confirmed as customer)",
+   "source_url": "https://www.businesswire.com/news/home/20250317183426/en/Announcing-VantaCon-UK-2025-Beyond-the-Standard"
+  },
+  {
+   "name": "OpsArmy",
+   "domain": "opsarmy.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Listed among \"Companies that use Vanta in United States",
+   "source_url": "https://theirstack.com/en/technology/vanta/us"
+  },
+  {
+   "name": "Perplexity",
+   "domain": "perplexity.ai",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "own_site",
+   "evidence": "Logo on \"More than 15,000 companies choose Vanta\" wall",
+   "source_url": "https://www.vanta.com/customers"
+  },
+  {
+   "name": "PlayOn! Sports",
+   "domain": "playonsports.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "job_postings",
+   "evidence": "GRC platform familiarity, including experience with Vanta, Hyperproof, Drata",
+   "source_url": "https://jobs.lever.co/playonsports/48fb9cf0-1eec-4402-9210-3d0712053255"
+  },
+  {
+   "name": "Pomelo Care",
+   "domain": "pomelocare.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "job_postings",
+   "evidence": "experience in GRC tools and platforms, such as Vanta and MyCSF",
+   "source_url": "https://job-boards.greenhouse.io/pomelocare/jobs/5579964004"
+  },
+  {
+   "name": "Power Factors",
+   "domain": "powerfactors.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.powerfactors.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "PrizePicks",
+   "domain": "prizepicks.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "job_postings",
+   "evidence": "compliance tooling including Vanta, SecureFrame, Asana",
+   "source_url": "https://boards.greenhouse.io/embed/job_app?token=6670841003"
+  },
+  {
+   "name": "PromptWrx",
+   "domain": "promptwrx.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.promptwrx.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Protex AI",
+   "domain": "protex.ai",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.protex.ai",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "QuadC",
+   "domain": "quadc.io",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.quadc.io",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Raptive",
+   "domain": "raptive.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.raptive.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Relais & Chateaux",
+   "domain": "relaischateaux.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Listed among \"Companies that use Vanta",
+   "source_url": "https://theirstack.com/en/technology/vanta"
+  },
+  {
+   "name": "Reliance Cyber",
+   "domain": "reliancecyber.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.reliancecyber.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Rex Software",
+   "domain": "rexsoftware.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.rexsoftware.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Rivian Automotive",
+   "domain": "rivian.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "events_awards",
+   "evidence": "VantaCon 2024 speaker \"Mike Johnson (CISO, Rivian Automotive)\" (not independently confirmed)",
+   "source_url": "https://vantacon24.com/livestream"
+  },
+  {
+   "name": "Sigma Computing",
+   "domain": "sigmacomputing.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Listed among \"Companies that use Vanta in United States",
+   "source_url": "https://theirstack.com/en/technology/vanta/us"
+  },
+  {
+   "name": "Sim",
+   "domain": "sim.ai",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.sim.ai",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "SimpleRose",
+   "domain": "simplerose.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.simplerose.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Snyk",
+   "domain": "snyk.io",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "own_site",
+   "evidence": "Logo on \"More than 15,000 companies choose Vanta\" wall",
+   "source_url": "https://www.vanta.com/customers"
+  },
+  {
+   "name": "SonoSim",
+   "domain": "sonosim.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.sonosim.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Spacture AI",
+   "domain": "spacture.ai",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.spacture.ai",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Squad AI",
+   "domain": "meetsquad.ai",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.meetsquad.ai",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "StarCompliance",
+   "domain": "starcompliance.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.starcompliance.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Subsplash",
+   "domain": "subsplash.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "job_postings",
+   "evidence": "Direct experience with Vanta is a significant advantage",
+   "source_url": "https://job-boards.greenhouse.io/subsplash/jobs/8552281002"
+  },
+  {
+   "name": "Tealium",
+   "domain": "tealium.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.tealium.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "The 7E",
+   "domain": "the7e.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.the7e.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Troutwood",
+   "domain": "troutwood.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at trust.troutwood.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  },
+  {
+   "name": "Truora",
+   "domain": "truora.com",
+   "industry": "",
+   "grade": "C",
+   "confidence": "Likely",
+   "signal_groups": "tech_stack",
+   "evidence": "Vanta Trust Center detected at security.truora.com",
+   "source_url": "https://bloomberry.com/data/vanta/"
+  }
+ ]
+}
