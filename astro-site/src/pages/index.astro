@@ -6,24 +6,65 @@ const lists = Object.values(files)
   .map((d) => d)
   .sort((a, b) => a.competitor.name.localeCompare(b.competitor.name));
 
-const title = 'CompetitorCustomer — lists of companies using popular B2B tools';
-const description = 'Free, verified lists of companies using popular B2B software — built from case studies, reviews, job postings, tech-stack data and LinkedIn signals.';
+const index = lists.map((d) => ({
+  slug: d.competitor.slug,
+  name: d.competitor.name.toLowerCase(),
+  domain: (d.competitor.domain || '').toLowerCase(),
+  count: d.company_count,
+}));
+
+const LIVE_SEARCH_URL = 'https://competitoriq.onrender.com/';
+
+const title = 'CompetitorIQ — find companies already using your competitors';
+const description = 'Free, verified lists of companies using popular B2B software — built from case studies, reviews, job postings, tech-stack data and public signals. By Danit Ben Simon.';
 ---
 <Base title={title} description={description}>
-  <h1>Who uses what?</h1>
-  <p>
-    Free, verified customer lists for popular B2B tools — built from public signals.
-    Pick a competitor to see who's paying them today.
-  </p>
+  <section style="text-align:center; padding:3rem 0 2rem;">
+    <h1 style="font-size:2.8rem; margin-bottom:.4rem;">Find companies already using <span class="accent">your competitors</span></h1>
+    <p class="muted" style="max-width:560px; margin:0 auto 1.6rem;">
+      Type a competitor's name or domain. Indexed brands open a full verified customer list instantly —
+      anything else runs a live search (10 results free).
+    </p>
+    <form id="ciq-search" style="display:flex; gap:.6rem; justify-content:center; flex-wrap:wrap;">
+      <input id="q" type="search" placeholder="e.g. vanta or vanta.com" aria-label="Competitor name or domain"
+        style="padding:.85rem 1.1rem; border-radius:10px; width:min(420px,100%); font-size:1.05rem; border:1px solid var(--line);" />
+      <button type="submit"
+        style="padding:.85rem 1.6rem; border:0; border-radius:10px; background:linear-gradient(90deg,#2f7fe8,var(--brand2)); color:#fff; font-weight:700; font-size:1.05rem; cursor:pointer;">
+        Search →
+      </button>
+    </form>
+    <p id="fallback-note" class="muted" style="display:none; margin-top:.8rem;">
+      Not indexed yet — opening a live search (first load can take up to a minute)…
+    </p>
+  </section>
+
+  <h2>Verified customer lists</h2>
   <ul style="list-style:none; padding:0; display:grid; grid-template-columns:repeat(auto-fill,minmax(260px,1fr)); gap:1rem;">
     {lists.map((d) => (
-      <li style="border:1px solid var(--line); border-radius:12px; padding:1.25rem;">
+      <li style="border:1px solid var(--line); border-radius:12px; padding:1.25rem; background:var(--card);">
         <a href={`/companies-using/${d.competitor.slug}/`} style="text-decoration:none; color:inherit;">
           <strong style="font-size:1.1rem;">Companies using {d.competitor.name}</strong>
-          <p class="muted" style="margin:.4rem 0 0;">{d.company_count} companies · {d.competitor.domain}</p>
+          <p class="muted" style="margin:.4rem 0 0;">{d.company_count} verified companies · {d.competitor.domain}</p>
         </a>
       </li>
     ))}
   </ul>
-  {lists.length === 0 && <p class="muted">No lists published yet — run the pipeline to generate the first one.</p>}
+  {lists.length === 0 && <p class="muted">No lists published yet.</p>}
+
+  <script define:vars={{ index, LIVE_SEARCH_URL }}>
+    const form = document.getElementById('ciq-search');
+    const note = document.getElementById('fallback-note');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const q = document.getElementById('q').value.trim().toLowerCase().replace(/^https?:\/\//,'').replace(/^www\./,'').replace(/\/.*$/,'');
+      if (!q) return;
+      const hit = index.find((d) =>
+        d.slug === q || d.name === q || d.domain === q ||
+        d.name.includes(q) || q.includes(d.name) || d.domain.split('.')[0] === q.split('.')[0]
+      );
+      if (hit) { window.location.href = `/companies-using/${hit.slug}/`; return; }
+      note.style.display = 'block';
+      setTimeout(() => { window.location.href = LIVE_SEARCH_URL; }, 900);
+    });
+  </script>
 </Base>
