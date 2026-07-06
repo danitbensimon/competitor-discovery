@@ -138,6 +138,15 @@ const datasetJsonLd = {
   <style>
     .grade-C { color:#b45309; font-weight:700; }
     td.evidence { max-width:380px; font-size:.85rem; }
+    #companies{border-collapse:separate;border-spacing:0;margin:1.25rem 0;background:#111a2e;border:1px solid #2b3a55;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.45)}
+    #companies thead th{background:#1b2a45;color:#dbe4f5;border-bottom:2px solid var(--brand);padding:.8rem .9rem;text-transform:uppercase;font-size:.72rem;letter-spacing:.06em;font-weight:700}
+    #companies tbody td{padding:.7rem .9rem;border-bottom:1px solid #273449;vertical-align:top}
+    #companies tbody tr:nth-child(even) td{background:rgba(255,255,255,.03)}
+    #companies tbody tr:hover td{background:rgba(74,158,255,.12)}
+    #companies tbody tr:last-child td{border-bottom:0}
+    #companies td a{color:var(--brand2);font-weight:600}
+    #companies td.grade-A,#companies td.grade-B,#companies td.grade-C{text-align:center;font-weight:800;font-size:1rem}
+    #companies td.grade-C{color:#f87171}
   </style>
   <script>
     const q = document.getElementById('filter');
