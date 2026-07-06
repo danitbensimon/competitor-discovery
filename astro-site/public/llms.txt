@@ -1,0 +1,5 @@
+# CompetitorCustomer
+> Evidence-verified lists of companies using B2B software products. Every company is backed by a public source URL.
+
+## Pages
+- [Companies using Vanta — 353 verified customers](https://competitorcustomer.com/companies-using-vanta/): named companies with evidence quotes, source links and confidence tiers. Updated 2026-07-06.
