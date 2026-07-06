@@ -11,35 +11,36 @@ export async function getStaticPaths() {
 
 const { data } = Astro.props;
 const { competitor, companies, generated_at, company_count } = data;
-const FREE_ROWS = 15;
-const visible = companies.slice(0, FREE_ROWS);
-const gatedCount = Math.max(company_count - FREE_ROWS, 0);
-const updated = new Date(generated_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
+const updated = new Date(generated_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const nA = companies.filter((c) => c.grade === 'A').length;
+const nB = companies.filter((c) => c.grade === 'B').length;
+const nC = companies.filter((c) => c.grade === 'C').length;
+const notable = companies.filter((c) => c.grade === 'A').slice(0, 12).map((c) => c.name).join(', ');
 
 // HubSpot form — replaced by setup script / manually with real IDs
 const HUBSPOT_PORTAL_ID = 'YOUR_PORTAL_ID';
 const HUBSPOT_FORM_ID = 'YOUR_FORM_ID';
 const hubspotAction = `https://forms.hubspot.com/uploads/form/v2/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`;
 
-const title = `Companies using ${competitor.name} (${company_count}+ verified) — ${updated}`;
-const description = `Browse ${company_count}+ companies that use ${competitor.name} (${competitor.domain}), found via public signals: case studies, reviews, job postings, tech-stack data and LinkedIn engagement. Updated ${updated}.`;
+const title = `Companies using ${competitor.name}: ${company_count} verified customers (${updated})`;
+const description = `${company_count} named companies verified to use ${competitor.name} (${competitor.domain}), each with a public evidence source: case studies, customer blogs, partner case studies, job postings and reviews. Updated ${updated}.`;
 
 const faqs = [
   {
+    q: `How many companies use ${competitor.name}?`,
+    a: `CompetitorCustomer has verified ${company_count} named companies using ${competitor.name} as of ${updated}. Every company on this page is backed by a public, linked source; the vendor's total customer count is typically much larger.`,
+  },
+  {
     q: `How do you know these companies use ${competitor.name}?`,
-    a: `Every company on this list is backed by at least one public signal: a case study or customer page on ${competitor.domain}, a review on G2 or Capterra, a job posting requiring ${competitor.name} experience, tech-stack detection, or LinkedIn engagement with ${competitor.name} content. Each row shows its signal source.`,
+    a: `Every row links to a public source: a case study on ${competitor.domain}, the company's own blog or trust page, an auditor or partner case study, a job posting requiring ${competitor.name} experience, or a named review. Rows are graded A (multiple independent signals), B (one direct piece of evidence) or C (technographic databases only).`,
   },
   {
     q: 'How fresh is this data?',
-    a: `This list was last generated in ${updated}. We re-run our discovery pipeline regularly, so companies that switch away from ${competitor.name} are removed and new adopters are added.`,
+    a: `This list was last verified on ${updated}. The discovery pipeline re-runs regularly; companies that switch away are removed and new adopters are added.`,
   },
   {
     q: 'Can I download the full list?',
-    a: `Yes — enter your work email above and you'll get the complete list of ${company_count}+ companies as a spreadsheet, including domains, industries, confidence grades and evidence links.`,
-  },
-  {
-    q: `Why would I want a list of ${competitor.name} customers?`,
-    a: `If you sell a competing or complementary product, companies already paying for ${competitor.name} have budget and an active need — they're the warmest accounts you can prospect.`,
+    a: `Yes — the full list is free on this page. Enter your work email to get it as a spreadsheet with domains, confidence grades and evidence links.`,
   },
 ];
 
@@ -52,48 +53,64 @@ const faqJsonLd = {
     acceptedAnswer: { '@type': 'Answer', text: f.a },
   })),
 };
+
+const datasetJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Dataset',
+  name: `Companies using ${competitor.name} — ${company_count} verified customers`,
+  description,
+  url: new URL(Astro.url.pathname, Astro.site).toString(),
+  dateModified: generated_at,
+  license: 'https://creativecommons.org/licenses/by/4.0/',
+  creator: { '@type': 'Organization', name: 'CompetitorCustomer', url: 'https://competitorcustomer.com' },
+  keywords: [`${competitor.name} customers`, `companies using ${competitor.name}`, `${competitor.name} customer list`],
+};
 ---
 <Base title={title} description={description}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(datasetJsonLd)} slot="head" />
 
-  <p class="muted" style="margin-bottom:0">Updated {updated} · {company_count} companies · built from public signals</p>
-  <h1>Companies using {competitor.name}</h1>
+  <p class="muted" style="margin-bottom:0">Last verified {updated} · {company_count} named companies · every row has a public source · data license CC BY 4.0</p>
+  <h1>Companies using {competitor.name}: {company_count} verified customers</h1>
   <p>
-    A verified list of companies that use <strong>{competitor.name}</strong> ({competitor.domain}),
-    discovered through case studies, review sites, job postings, tech-stack data and LinkedIn engagement.
-    The first {FREE_ROWS} are free — download the full list of {company_count}+ below.
+    A full, free list of companies verified to use <strong>{competitor.name}</strong> ({competitor.domain}).
+    Unlike technographic databases, every company here is backed by a linked public source — case studies,
+    customer blogs, partner and auditor case studies, job postings and named reviews. <strong>{nA} companies</strong>
+    have multiple independent signals (grade A), {nB} have direct evidence (grade B), {nC} appear in
+    technographic databases only (grade C).
+  </p>
+  <p><strong>Notable {competitor.name} customers:</strong> {notable}.</p>
+
+  <p style="margin:1rem 0">
+    <input type="search" id="filter" placeholder={`Filter ${company_count} companies…`} aria-label="Filter companies"
+      style="padding:.6rem .9rem;border:1px solid var(--line);border-radius:8px;width:min(360px,100%);font-size:1rem" />
   </p>
 
-  <table>
+  <table id="companies">
     <thead>
-      <tr><th>Company</th><th>Domain</th><th>Industry</th><th>Grade</th><th>Signal</th></tr>
+      <tr><th>Company</th><th>Domain</th><th>Grade</th><th>Evidence</th><th>Source</th></tr>
     </thead>
     <tbody>
-      {visible.map((c) => (
+      {companies.map((c) => (
         <tr>
           <td><strong>{c.name}</strong></td>
           <td>{c.domain ? <a href={`https://${c.domain}`} rel="nofollow noopener" target="_blank">{c.domain}</a> : '—'}</td>
-          <td>{c.industry || '—'}</td>
-          <td class={`grade-${c.grade}`}>{c.grade}</td>
-          <td class="muted">{(c.signal_groups || '').split(',')[0].replace(/_/g, ' ')}</td>
+          <td class={`grade-${c.grade}`} title={c.confidence}>{c.grade}</td>
+          <td class="muted evidence">{c.evidence}</td>
+          <td>{c.source_url && c.source_url.startsWith('http') ? <a href={c.source_url} rel="noopener" target="_blank">source</a> : '—'}</td>
         </tr>
       ))}
     </tbody>
   </table>
 
-  <div class="gate">
-    <div class="fade"></div>
+  <div class="gate" style="margin-top:2rem">
     <div class="gate-card" id="download">
-      <h2 style="margin-top:0">Get all {company_count}+ companies using {competitor.name}</h2>
-      <p class="muted">Full spreadsheet with domains, industries, confidence grades and evidence URLs. Free.</p>
-      <form
-        action={hubspotAction}
-        method="POST"
-        style="display:flex; gap:.6rem; justify-content:center; flex-wrap:wrap;"
-      >
+      <h2 style="margin-top:0">Get this list as a spreadsheet</h2>
+      <p class="muted">The full {company_count}-company list is already free above. The download adds a clean spreadsheet with domains, grades, evidence quotes and source URLs.</p>
+      <form action={hubspotAction} method="POST" style="display:flex; gap:.6rem; justify-content:center; flex-wrap:wrap;">
         <input type="email" name="email" placeholder="Work email" required />
         <input type="hidden" name="competitor" value={competitor.slug} />
-        <button type="submit">Send me the list</button>
+        <button type="submit">Send me the spreadsheet</button>
       </form>
       <p class="muted" style="font-size:.8rem">No spam. One email with the download link.</p>
     </div>
@@ -109,10 +126,25 @@ const faqJsonLd = {
 
   <h2>Methodology</h2>
   <p>
-    This list of {competitor.name} customers is generated by the open CompetitorIQ pipeline. It aggregates
-    public signals — customer pages and case studies on {competitor.domain}, G2/Capterra reviews, job postings
-    that require {competitor.name} experience, tech-stack databases, and LinkedIn engagement with {competitor.name}
-    content — then deduplicates, grades (A = multiple strong signals, B = single signal) and scores each company.
-    {gatedCount > 0 && ` ${gatedCount} additional companies are in the full download.`}
+    This list of {competitor.name} customers is generated by the CompetitorIQ deep-search pipeline across 12 signal
+    groups: customer pages and case studies on {competitor.domain}, customer blogs and press releases, auditor and
+    MSP partner case studies, vendor-hosted trust centers, job postings requiring {competitor.name} experience, named
+    reviews, event speaker lists and technographic databases. Results are deduplicated and graded:
+    <strong>A</strong> = multiple independent signals, <strong>B</strong> = one direct piece of evidence with a source link,
+    <strong>C</strong> = technographic database detection only (treat with more caution). Known false positives are
+    excluded. Found an error? <a href="mailto:hello@competitorcustomer.com">Report it</a> — corrections are published.
   </p>
+
+  <style>
+    .grade-C { color:#b45309; font-weight:700; }
+    td.evidence { max-width:380px; font-size:.85rem; }
+  </style>
+  <script>
+    const q = document.getElementById('filter');
+    const rows = [...document.querySelectorAll('#companies tbody tr')];
+    q.addEventListener('input', () => {
+      const v = q.value.toLowerCase();
+      rows.forEach((r) => { r.style.display = r.textContent.toLowerCase().includes(v) ? '' : 'none'; });
+    });
+  </script>
 </Base>
