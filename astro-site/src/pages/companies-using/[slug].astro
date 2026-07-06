@@ -28,7 +28,7 @@ const description = `${company_count} named companies verified to use ${competit
 const faqs = [
   {
     q: `How many companies use ${competitor.name}?`,
-    a: `CompetitorCustomer has verified ${company_count} named companies using ${competitor.name} as of ${updated}. Every company on this page is backed by a public, linked source; the vendor's total customer count is typically much larger.`,
+    a: `CompetitorIQ has verified ${company_count} named companies using ${competitor.name} as of ${updated}. Every company on this page is backed by a public, linked source; the vendor's total customer count is typically much larger.`,
   },
   {
     q: `How do you know these companies use ${competitor.name}?`,
@@ -62,7 +62,7 @@ const datasetJsonLd = {
   url: new URL(Astro.url.pathname, Astro.site).toString(),
   dateModified: generated_at,
   license: 'https://creativecommons.org/licenses/by/4.0/',
-  creator: { '@type': 'Organization', name: 'CompetitorCustomer', url: 'https://competitorcustomer.com' },
+  creator: { '@type': 'Organization', name: 'CompetitorIQ', url: 'https://competitorcustomer.com' },
   keywords: [`${competitor.name} customers`, `companies using ${competitor.name}`, `${competitor.name} customer list`],
 };
 ---
