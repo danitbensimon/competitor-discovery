@@ -703,4 +703,4 @@ async def health():
 
 
 # Serve frontend (must be last)
-app.mount("/", StaticFiles(directory="static", html=True), name="static")
+if os.path.isdir("static"): app.mount("/", StaticFiles(directory="static", html=True), name="static")
