@@ -702,5 +702,15 @@ async def health():
     return {"status": "ok", "time": datetime.utcnow().isoformat()}
 
 
+@app.get("/api/admin/top-searches")
+async def admin_top_searches(key: str = "", days: int = 30, limit: int = 100):
+    if key != os.environ.get("ADMIN_KEY", "danit-geo-2026"):
+        raise HTTPException(status_code=403, detail="Forbidden")
+    conn = db.get_db()
+    rows = conn.execute("SELECT competitor_domain AS domain, COUNT(*) AS searches, MAX(created_at) AS last_searched FROM search_results WHERE created_at >= datetime('now', ?) GROUP BY competitor_domain ORDER BY searches DESC LIMIT ?", ("-" + str(int(days)) + " days", int(limit))).fetchall()
+    conn.close()
+    return {"days": days, "brands": [dict(r) for r in rows]}
+
+
 # Serve frontend (must be last)
 if os.path.isdir("static"): app.mount("/", StaticFiles(directory="static", html=True), name="static")
