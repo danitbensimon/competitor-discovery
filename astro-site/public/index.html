@@ -455,13 +455,19 @@
               
             
             <div class="signal-tags-strip" id="signalTagsStrip">
-                  <span class="sig-label">sources:</span>
+                  <span class="sig-label">12 sources:</span>
+                  <span class="sig-tag" data-sig="own_site">own site</span>
                   <span class="sig-tag" data-sig="customer_signals">case studies</span>
                   <span class="sig-tag" data-sig="job_postings">job postings</span>
                   <span class="sig-tag" data-sig="tech_stack">tech stack</span>
                   <span class="sig-tag" data-sig="review_sites">review sites</span>
                   <span class="sig-tag" data-sig="linkedin">linkedin</span>
                   <span class="sig-tag" data-sig="blog_press">blog & press</span>
+                  <span class="sig-tag" data-sig="video">video</span>
+                  <span class="sig-tag" data-sig="partners_si">partners / SI</span>
+                  <span class="sig-tag" data-sig="events_awards">events & awards</span>
+                  <span class="sig-tag" data-sig="communities">communities</span>
+                  <span class="sig-tag" data-sig="filings_docs">filings & docs</span>
               </div>
             </div>
           </div>
@@ -512,6 +518,37 @@
       </div>
     </div>
   </div><!-- end framework-band -->
+
+  <!-- PUBLISHED LISTS — auto-populated from /lists-index.json -->
+  <div class="lists-band" id="listsBand" style="display:none;padding:8px 20px 56px;">
+    <div style="max-width:1000px;margin:0 auto;">
+      <h2 style="text-align:center;font-size:24px;font-weight:800;margin:0 0 6px;color:var(--text);">Explore our verified customer lists</h2>
+      <p style="text-align:center;color:var(--muted);font-size:14px;margin:0 0 26px;">Every company backed by a public source. Free to browse &amp; download.</p>
+      <div id="listsGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;"></div>
+    </div>
+  </div>
+  <style>
+    .list-card{display:block;text-decoration:none;background:rgba(255,255,255,0.03);border:1px solid var(--border);border-radius:14px;padding:20px 20px 18px;transition:border-color .18s,transform .18s,box-shadow .18s;}
+    .list-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.45);}
+  </style>
+  <script>
+    (async function(){
+      try{
+        var idx = await fetch('/lists-index.json').then(function(r){return r.ok?r.json():[];});
+        var grid = document.getElementById('listsGrid'), band = document.getElementById('listsBand');
+        if(!grid||!band||!idx.length) return;
+        grid.innerHTML = idx.map(function(x){
+          var name = x.name ? x.name.charAt(0).toUpperCase()+x.name.slice(1) : x.slug;
+          return '<a class="list-card" href="/companies-using/'+x.slug+'/">'
+            + '<div style="font-weight:700;font-size:16px;color:var(--text);">Companies using '+name+'</div>'
+            + '<div style="font-size:13px;color:var(--muted);margin-top:5px;">'+(x.domain||'')+'</div>'
+            + '<div style="margin-top:14px;color:var(--accent);font-size:13px;font-weight:600;">View the full list &rarr;</div>'
+            + '</a>';
+        }).join('');
+        band.style.display = 'block';
+      }catch(e){}
+    })();
+  </script>
   </div><!-- end searchSection -->
 
   <!-- SCREEN 2: LOADING -->
@@ -546,7 +583,7 @@
           <div class="results-headline">10 companies <span>free</span> — unlock more below</div>
           <div id="freeNote" style="margin-top:8px;font-size:13px;color:var(--muted);display:none;"></div>
           <div id="freeTierBanner" style="display:none;margin-top:12px;background:rgba(0,194,255,0.06);border:1px solid rgba(0,194,255,0.2);border-radius:10px;padding:10px 16px;font-size:13px;color:var(--text);">
-            🔍 <strong>This is a free preview.</strong> The full search scans <strong>7 signal sources</strong> including G2, LinkedIn, job boards, tech stack databases & more — and typically uncovers <strong>30–100+ companies</strong>. Unlock the full list below.
+            🔍 <strong>This is a free preview.</strong> The full search scans <strong>12 signal sources</strong> including G2, LinkedIn, job boards, tech stack databases & more — and typically uncovers <strong>30–100+ companies</strong>. Unlock the full list below.
           </div>
         </div>
         <button class="new-search-btn" onclick="resetToHome()">← New Search</button>
@@ -968,7 +1005,7 @@
     if (ownOnly){
       bg='rgba(0,194,255,0.05)';brd='rgba(0,194,255,0.25)';icon='🔍';
       ttl='Found '+tot+' compan'+(tot===1?'y':'ies')+' — all from '+brand+'’s own website';
-      bdy='The other 6 signal groups (job boards, LinkedIn, G2, tech databases) returned nothing. This is normal for <strong style="color:var(--muted2)">early-stage or niche tools</strong> — not yet indexed by third-party databases.<br><br>The companies listed are <strong style="color:var(--green)">real verified customers</strong>. This is the complete public list '+brand+' has chosen to publish.';
+      bdy='The other 11 signal groups (own site, job boards, LinkedIn, G2, tech databases, partners, events, communities, filings & more) returned nothing. This is normal for <strong style="color:var(--muted2)">early-stage or niche tools</strong> — not yet indexed by third-party databases.<br><br>The companies listed are <strong style="color:var(--green)">real verified customers</strong>. This is the complete public list '+brand+' has chosen to publish.';
     } else {
       bg='rgba(0,229,160,0.04)';brd='rgba(0,229,160,0.2)';icon='📊';
       var gl=sgs.map(function(s){return '<code style="font-size:11px;background:rgba(255,255,255,0.07);padding:1px 5px;border-radius:3px">'+escHtml(s)+'</code>';}).join(' ');
