@@ -173,13 +173,22 @@ const datasetJsonLd = {
         var ws=XLSX.utils.aoa_to_sheet(rows); var wb=XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(wb,ws,'Companies'); XLSX.writeFile(wb,slug+'_customers.xlsx');
       }
+      function doDownload(){
+        var dd=document.getElementById('ciq-download'); if(!dd)return;
+        var slug=dd.getAttribute('data-slug')||'competitor';
+        var url='/downloads/'+slug+'_customers.xlsx';
+        fetch(url,{method:'HEAD'}).then(function(r){
+          if(r.ok){ var a=document.createElement('a'); a.href=url; a.download=slug+'_customers.xlsx'; document.body.appendChild(a); a.click(); a.remove(); }
+          else { buildXlsx(); }
+        }).catch(function(){ buildXlsx(); });
+      }
       window.addEventListener('message',function(e){
         try{ if(e.data&&e.data.type==='hsFormCallback'&&(e.data.eventName==='onFormSubmitted'||e.data.eventName==='onFormSubmit')){
           var f=document.getElementById('ciq-form'),d=document.getElementById('ciq-download');
-          if(f)f.style.display='none'; if(d)d.style.display='block'; setTimeout(buildXlsx,300);
+          if(f)f.style.display='none'; if(d)d.style.display='block'; setTimeout(doDownload,300);
         } }catch(_){}
       });
-      document.addEventListener('click',function(e){ if(e.target&&e.target.id==='ciq-dl-again'){buildXlsx();} });
+      document.addEventListener('click',function(e){ if(e.target&&e.target.id==='ciq-dl-again'){doDownload();} });
     })();
   </script>
 </Base>
