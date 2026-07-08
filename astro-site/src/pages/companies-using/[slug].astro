@@ -86,7 +86,9 @@ const datasetJsonLd = {
       style="padding:.6rem .9rem;border:1px solid var(--line);border-radius:8px;width:min(360px,100%);font-size:1rem" />
   </p>
 
-  <table id="companies">
+  <div class="list-layout">
+    <div class="list-main">
+    <table id="companies">
     <thead>
       <tr><th>Company</th><th>Domain</th><th>Grade</th><th>Evidence</th><th>Source</th></tr>
     </thead>
@@ -103,18 +105,21 @@ const datasetJsonLd = {
     </tbody>
   </table>
 
-  <div class="gate" style="margin-top:2rem">
-    <div class="gate-card" id="download">
-      <h2 style="margin-top:0">Get this list as a spreadsheet</h2>
-      <p class="muted">The full {company_count}-company list is already free above. The download adds a clean spreadsheet with domains, grades, evidence quotes and source URLs.</p>
-      <div id="ciq-form"><div class="hs-form-frame" data-region="eu1" data-form-id="1642d998-a0e2-493f-8e8b-2a6538736043" data-portal-id="147616801"></div></div>
-      <div id="ciq-download" data-slug={competitor.slug} style="display:none;margin-top:1rem">
-        <p style="font-weight:700;color:#34d399;margin:.4rem 0">✓ Thanks — your spreadsheet is downloading.</p>
-        <button id="ciq-dl-again" style="padding:.6rem 1.2rem;border:0;border-radius:8px;background:linear-gradient(90deg,#2f7fe8,#7db8ff);color:#fff;font-weight:700;cursor:pointer">↓ Download again (.xlsx)</button>
+    </div><!-- .list-main -->
+    <aside class="gate-aside">
+      <div class="gate-card gate-side" id="download">
+        <span class="gate-badge">⤓ .XLSX</span>
+        <h2>Get the full list as a spreadsheet</h2>
+        <p class="muted gate-sub">All {company_count} companies — domains, confidence grades, evidence quotes &amp; source links, ready to sort and filter.</p>
+        <div id="ciq-form"><div class="hs-form-frame" data-region="eu1" data-form-id="1642d998-a0e2-493f-8e8b-2a6538736043" data-portal-id="147616801"></div></div>
+        <div id="ciq-download" data-slug={competitor.slug} style="display:none;margin-top:1rem">
+          <p style="font-weight:700;color:#34d399;margin:.4rem 0">✓ Thanks — your spreadsheet is downloading.</p>
+          <button id="ciq-dl-again">↓ Download again (.xlsx)</button>
+        </div>
+        <p class="muted gate-fine">🔒 No spam. One email with the download link.</p>
       </div>
-      <p class="muted" style="font-size:.8rem">No spam. One email with the download link.</p>
-    </div>
-  </div>
+    </aside>
+  </div><!-- .list-layout -->
 
   <h2>FAQ</h2>
   {faqs.map((f) => (
@@ -147,6 +152,26 @@ const datasetJsonLd = {
     #companies td a{color:var(--brand2);font-weight:600}
     #companies td.grade-A,#companies td.grade-B,#companies td.grade-C{text-align:center;font-weight:800;font-size:1rem}
     #companies td.grade-C{color:#f87171}
+    /* two-column: table + sticky sidebar download */
+    .list-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:1.75rem;align-items:start;margin:1.25rem 0;}
+    .list-main{min-width:0;}
+    .list-main #companies{margin:0;}
+    .gate-aside{position:sticky;top:1rem;}
+    .gate-card.gate-side{padding:1.3rem 1.3rem 1.15rem;text-align:left;border-radius:16px;background:linear-gradient(180deg,#0f1a2e 0%,#0c1220 100%);border:1px solid #26344f;box-shadow:0 14px 34px rgba(0,0,0,.55);}
+    .gate-badge{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.06em;color:#7db8ff;background:rgba(74,158,255,.12);border:1px solid rgba(74,158,255,.35);padding:.24rem .6rem;border-radius:999px;margin-bottom:.65rem;}
+    .gate-side h2{margin:.1rem 0 .35rem;font-size:1.12rem;line-height:1.25;}
+    .gate-side .gate-sub{font-size:.83rem;line-height:1.55;margin:0 0 .95rem;}
+    .gate-side .gate-fine{font-size:.72rem;margin:.75rem 0 0;opacity:.85;}
+    .gate-side #ciq-dl-again{padding:.55rem 1rem;border:0;border-radius:8px;background:linear-gradient(90deg,#2f7fe8,#7db8ff);color:#fff;font-weight:700;cursor:pointer;width:100%;}
+    /* compact + on-brand HubSpot embedded form */
+    #ciq-form{min-height:150px;}
+    #ciq-form input,#ciq-form select,#ciq-form textarea{font-size:.88rem !important;padding:.5rem .6rem !important;border-radius:8px !important;max-width:100% !important;box-sizing:border-box;}
+    #ciq-form .hs-form-field,#ciq-form .hsfc-Field{margin-bottom:.55rem !important;}
+    #ciq-form label,#ciq-form .hsfc-FieldLabel{font-size:.78rem !important;margin-bottom:.2rem !important;}
+    #ciq-form .hs-richtext,#ciq-form .hsfc-RichText,#ciq-form .hsfc-Step__Title{display:none !important;}
+    #ciq-form .hs-button,#ciq-form input[type=submit],#ciq-form .hsfc-Button{background:linear-gradient(90deg,#2f7fe8,#7db8ff) !important;border:0 !important;color:#fff !important;font-weight:700 !important;border-radius:8px !important;padding:.6rem 1rem !important;width:100% !important;cursor:pointer;}
+    td.evidence{max-width:240px;font-size:.8rem;}
+    @media(max-width:860px){.list-layout{grid-template-columns:1fr;}.gate-aside{position:static;}.gate-card.gate-side{max-width:420px;}}
   </style>
   <script>
     const q = document.getElementById('filter');
