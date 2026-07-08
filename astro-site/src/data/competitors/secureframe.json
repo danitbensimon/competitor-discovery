@@ -1,0 +1,587 @@
+{
+  "competitor": {
+    "name": "Secureframe",
+    "slug": "secureframe",
+    "domain": "secureframe.com"
+  },
+  "companies": [
+    {
+      "name": "Coda",
+      "domain": "coda.io",
+      "grade": "A",
+      "evidence": "The team, the attention, and the expertise are 100% the reason we stay with Secureframe... it was a no-brainer to use it to organize our HIPAA compliance.",
+      "source_url": "https://secureframe.com/customers/coda",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Osmos",
+      "domain": "osmos.io",
+      "grade": "A",
+      "evidence": "Secureframe made it possible for one of two co-founders of a fast-growing startup to take SOC 2 compliance to completion.",
+      "source_url": "https://secureframe.com/customers/osmos",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "unitQ",
+      "domain": "unitq.com",
+      "grade": "A",
+      "evidence": "thanks to Secureframe's help in achieving SOC 2, we can demonstrate our maturity level... This has accelerated our sales cycle with enterprise customers.",
+      "source_url": "https://secureframe.com/customers/unitq",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Rootly",
+      "domain": "rootly.com",
+      "grade": "A",
+      "evidence": "Having the report in hand lends us a lot of credibility. It's given us a huge competitive edge.",
+      "source_url": "https://secureframe.com/customers/rootly",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Haystack",
+      "domain": "haystackteam.com",
+      "grade": "A",
+      "evidence": "We now have all the security and privacy certificates that prospective customers are looking for.",
+      "source_url": "https://secureframe.com/customers/haystack",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Wealth",
+      "domain": "wealth.com",
+      "grade": "A",
+      "evidence": "With Secureframe, we just gave the auditors access to the platform, and they automatically got access to all the evidence. It was really, really smooth.",
+      "source_url": "https://secureframe.com/customers/wealth",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Adyton",
+      "domain": "adyton.com",
+      "grade": "A",
+      "evidence": "It's the peace of mind that Secureframe provides, the continuous monitoring... Adyton Streamlines NIST 800-53 Compliance, Resulting in 50-70% Time Savings with Secureframe.",
+      "source_url": "https://secureframe.com/customers/adyton",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Inflectra",
+      "domain": "inflectra.com",
+      "grade": "A",
+      "evidence": "Secureframe is a trusted partner who will value your journey and efforts to become more compliant.",
+      "source_url": "https://secureframe.com/customers/inflectra",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Echo IQ",
+      "domain": "echoiq.ai",
+      "grade": "A",
+      "evidence": "It saved us at least $120,000 a year in resourcing, let alone compliance and consultancy fees.",
+      "source_url": "https://secureframe.com/customers/echo-iq",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Data Virtuality",
+      "domain": "datavirtuality.com",
+      "grade": "A",
+      "evidence": "Secureframe makes your life so much easier because you see the next steps at a glance... The system tells you what you need to do and where you have gaps that you need to fill.",
+      "source_url": "https://secureframe.com/customers/data-virtuality",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Base Power",
+      "domain": "basepower.com",
+      "grade": "A",
+      "evidence": "Not only did we achieve compliance, but our internal security is now much stronger.",
+      "source_url": "https://secureframe.com/customers/base-power",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Manufacturing Consulting Concepts",
+      "domain": "mfgcc.com",
+      "grade": "A",
+      "evidence": "Using Secureframe to get NIST 800-171 and CMMC compliant saved us at least 500 hours.",
+      "source_url": "https://secureframe.com/customers/manufacturing-consulting-concepts",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "My AskAI",
+      "domain": "myaskai.com",
+      "grade": "A",
+      "evidence": "Considered Vanta and Sprinto but chose Secureframe for its integrations, people, and pricing. Secureframe kind of felt like the 'just right' option of the three we looked at.",
+      "source_url": "https://secureframe.com/customers/my-askai",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "OTH Security",
+      "domain": "othsecurity.com",
+      "grade": "A",
+      "evidence": "We've largely consolidated on Secureframe... We've done about 35 SOC 2s in the past two years alone.",
+      "source_url": "https://secureframe.com/customers/oth-security",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Finch",
+      "domain": "tryfinch.com",
+      "grade": "A",
+      "evidence": "Secureframe Questionnaires saves us so much time responding to RFPs and security questionnaires.",
+      "source_url": "https://secureframe.com/newsroom/secureframe-questionnaires",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "LendAPI",
+      "domain": "lendapi.com",
+      "grade": "A",
+      "evidence": "Secureframe is our go-to compliance automation platform with the latest technology and integrations.",
+      "source_url": "https://www.lendapi.com/blog/lendapi-partners-with-secureframe-to-achieve-and-maintain-soc-2-compliance",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Akooda",
+      "domain": "akooda.co",
+      "grade": "B",
+      "evidence": "If you're considering SOC 2, go with Secureframe... They were with us every step of the way to make sure we got our SOC 2 report.",
+      "source_url": "https://secureframe.com/customers/akooda",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Kinectify",
+      "domain": "kinectify.com",
+      "grade": "B",
+      "evidence": "Kinectify went from kickoff to SOC 2 Type I in less than three months and got SOC 2 Type II in only two months.",
+      "source_url": "https://secureframe.com/customers/kinectify",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Troops",
+      "domain": "troops.ai",
+      "grade": "B",
+      "evidence": "Troops chose Secureframe to get and stay SOC 2 compliant to meet strict security requirements of its HR clients.",
+      "source_url": "https://secureframe.com/customers/troops",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Headcount365",
+      "domain": "headcount365.com",
+      "grade": "B",
+      "evidence": "It took less than 30 days to go from signing with Secureframe to having their SOC 2 Type I report in hand.",
+      "source_url": "https://secureframe.com/customers/headcount365",
+      "confidence": "Verified"
+    },
+    {
+      "name": "PerkUp",
+      "domain": "perkupapp.com",
+      "grade": "B",
+      "evidence": "How PerkUp Reduced Their Sales Cycle by 2 to 3 Weeks After Achieving SOC 2 Compliance with Secureframe.",
+      "source_url": "https://secureframe.com/customers/perkup",
+      "confidence": "Verified"
+    },
+    {
+      "name": "rready",
+      "domain": "rready.com",
+      "grade": "B",
+      "evidence": "How rready Achieved ISO 27001 Certification 5x Faster and Expanded in a Competitive Global Market with Secureframe.",
+      "source_url": "https://secureframe.com/customers/rready",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Open Assessment Technologies",
+      "domain": "taotesting.com",
+      "grade": "B",
+      "evidence": "How Open Assessment Technologies Got ISO 27001 Compliant, Won Three Multi-Million Dollar Contracts, and Secured Future Growth with Secureframe.",
+      "source_url": "https://secureframe.com/customers/open-assessment-technologies",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Slatewell",
+      "domain": "slatewell.com",
+      "grade": "B",
+      "evidence": "Slatewell estimates they save about 2-3 weeks in the sales process (ISO 27001 / SOC 2 with Secureframe).",
+      "source_url": "https://secureframe.com/customers/slatewell",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Roadie",
+      "domain": "roadie.com",
+      "grade": "B",
+      "evidence": "Roadie saved a year on SOC 2 compliance using Secureframe's all-in-one compliance automation platform.",
+      "source_url": "https://secureframe.com/customers/roadie",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Formsort",
+      "domain": "formsort.com",
+      "grade": "B",
+      "evidence": "Formsort completed compliance 2x to 3x faster with Secureframe... removed 2+ weeks from the sales process by eliminating security questionnaires.",
+      "source_url": "https://secureframe.com/customers/formsort",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Bento",
+      "domain": "trybento.co",
+      "grade": "B",
+      "evidence": "How Bento Saved Hundreds of Hours and Delivered ROI By Eliminating Manual Compliance with Secureframe (HIPAA, SOC 2, CCPA).",
+      "source_url": "https://secureframe.com/customers/bento",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Abmatic AI",
+      "domain": "abmatic.ai",
+      "grade": "B",
+      "evidence": "How Abmatic AI Achieved SOC 2 Compliance in Just Six Days and Unblocked Two Deals.",
+      "source_url": "https://secureframe.com/customers/abmatic-ai",
+      "confidence": "Verified"
+    },
+    {
+      "name": "ElectricFish",
+      "domain": "electricfish.io",
+      "grade": "B",
+      "evidence": "The team chose Secureframe over Drata and Vanta based on pricing, people, platform, and word-of-mouth... completed its SOC 2 Type 2 audit in less than two months\u201412 weeks faster.",
+      "source_url": "https://secureframe.com/customers/electricfish",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Stream",
+      "domain": "getstream.io",
+      "grade": "B",
+      "evidence": "How Stream Saved Hundreds of Hours and Had Zero Delays Getting SOC 2 and ISO 27001 Compliant With Secureframe.",
+      "source_url": "https://secureframe.com/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "AngelList",
+      "domain": "angellist.com",
+      "grade": "B",
+      "evidence": "As of November 2024, Secureframe had more than 3K customers including Coda, AngelList, Smartcar, Lyra, Nasdaq, Ramp, Remote, and Generali.",
+      "source_url": "https://research.contrary.com/company/secureframe",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Smartcar",
+      "domain": "smartcar.com",
+      "grade": "B",
+      "evidence": "As of November 2024, Secureframe had more than 3K customers including Coda, AngelList, Smartcar, Lyra, Nasdaq, Ramp, Remote, and Generali.",
+      "source_url": "https://research.contrary.com/company/secureframe",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Lyra Health",
+      "domain": "lyrahealth.com",
+      "grade": "B",
+      "evidence": "As of November 2024, Secureframe had more than 3K customers including Coda, AngelList, Smartcar, Lyra, Nasdaq, Ramp, Remote, and Generali.",
+      "source_url": "https://research.contrary.com/company/secureframe",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Nasdaq",
+      "domain": "nasdaq.com",
+      "grade": "B",
+      "evidence": "As of November 2024, Secureframe had more than 3K customers including Coda, AngelList, Smartcar, Lyra, Nasdaq, Ramp, Remote, and Generali.",
+      "source_url": "https://research.contrary.com/company/secureframe",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Ramp",
+      "domain": "ramp.com",
+      "grade": "B",
+      "evidence": "As of November 2024, Secureframe had more than 3K customers including Coda, AngelList, Smartcar, Lyra, Nasdaq, Ramp, Remote, and Generali.",
+      "source_url": "https://research.contrary.com/company/secureframe",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Remote",
+      "domain": "remote.com",
+      "grade": "B",
+      "evidence": "As of November 2024, Secureframe had more than 3K customers including Coda, AngelList, Smartcar, Lyra, Nasdaq, Ramp, Remote, and Generali.",
+      "source_url": "https://research.contrary.com/company/secureframe",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Generali",
+      "domain": "generali.com",
+      "grade": "B",
+      "evidence": "As of November 2024, Secureframe had more than 3K customers including Coda, AngelList, Smartcar, Lyra, Nasdaq, Ramp, Remote, and Generali.",
+      "source_url": "https://research.contrary.com/company/secureframe",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Fabric",
+      "domain": "fabric.inc",
+      "grade": "B",
+      "evidence": "Secureframe enables hyper-growth organizations like AngelList, Fabric, Doodle, Dooly, Lob, Rand McNally, Slab, and Stream to focus on what matters.",
+      "source_url": "https://www.zuora.com/our-customers/case-studies/secureframe/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Doodle",
+      "domain": "doodle.com",
+      "grade": "B",
+      "evidence": "Secureframe enables hyper-growth organizations like AngelList, Fabric, Doodle, Dooly, Lob, Rand McNally, Slab, and Stream to focus on what matters.",
+      "source_url": "https://www.zuora.com/our-customers/case-studies/secureframe/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Dooly",
+      "domain": "dooly.ai",
+      "grade": "B",
+      "evidence": "Secureframe enables hyper-growth organizations like AngelList, Fabric, Doodle, Dooly, Lob, Rand McNally, Slab, and Stream to focus on what matters.",
+      "source_url": "https://www.zuora.com/our-customers/case-studies/secureframe/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Lob",
+      "domain": "lob.com",
+      "grade": "B",
+      "evidence": "Secureframe enables hyper-growth organizations like AngelList, Fabric, Doodle, Dooly, Lob, Rand McNally, Slab, and Stream to focus on what matters.",
+      "source_url": "https://www.zuora.com/our-customers/case-studies/secureframe/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Rand McNally",
+      "domain": "randmcnally.com",
+      "grade": "B",
+      "evidence": "Secureframe enables hyper-growth organizations like AngelList, Fabric, Doodle, Dooly, Lob, Rand McNally, Slab, and Stream to focus on what matters.",
+      "source_url": "https://www.zuora.com/our-customers/case-studies/secureframe/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Slab",
+      "domain": "slab.com",
+      "grade": "B",
+      "evidence": "Secureframe enables hyper-growth organizations like AngelList, Fabric, Doodle, Dooly, Lob, Rand McNally, Slab, and Stream to focus on what matters.",
+      "source_url": "https://www.zuora.com/our-customers/case-studies/secureframe/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Grafana Labs",
+      "domain": "grafana.com",
+      "grade": "C",
+      "evidence": "Listed under 'List of companies using Secureframe in the US' (technology tag: Secureframe).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/us",
+      "confidence": "Likely"
+    },
+    {
+      "name": "MediaRadar",
+      "domain": "mediaradar.com",
+      "grade": "C",
+      "evidence": "Listed under 'List of companies using Secureframe in the US' (technology tag: Secureframe).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/us",
+      "confidence": "Likely"
+    },
+    {
+      "name": "HumanQ",
+      "domain": "humanq.com",
+      "grade": "C",
+      "evidence": "Listed under 'List of companies using Secureframe in the US' (technology tag: Secureframe).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/us",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Workstreet",
+      "domain": "workstreet.com",
+      "grade": "C",
+      "evidence": "Listed under 'List of companies using Secureframe in the US' (technology tag: Secureframe).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/us",
+      "confidence": "Likely"
+    },
+    {
+      "name": "DoctusTech",
+      "domain": "doctustech.com",
+      "grade": "C",
+      "evidence": "Listed under 'List of companies using Secureframe in the US' (technology tag: Secureframe).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/us",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Sigma Computing",
+      "domain": "sigmacomputing.com",
+      "grade": "C",
+      "evidence": "Listed under 'List of companies using Secureframe in the US' (technology tag: Secureframe).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/us",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Weaver",
+      "domain": "weaver.com",
+      "grade": "C",
+      "evidence": "Listed under 'List of companies using Secureframe in the US' (technology tag: Secureframe).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/us",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Givebutter",
+      "domain": "givebutter.com",
+      "grade": "C",
+      "evidence": "Listed under 'List of companies using Secureframe in the US' (technology tag: Secureframe).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/us",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Supportwave",
+      "domain": "supportwave.com",
+      "grade": "C",
+      "evidence": "Listed under 'Companies that use Secureframe in EMEA' (United Kingdom, IT Services).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/emea",
+      "confidence": "Likely"
+    },
+    {
+      "name": "AvenDATA",
+      "domain": "avendata.com",
+      "grade": "C",
+      "evidence": "Listed under 'Companies that use Secureframe in EMEA' (Germany, IT Services).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/emea",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Duel Tech",
+      "domain": "duel.tech",
+      "grade": "C",
+      "evidence": "Listed under 'Companies that use Secureframe in EMEA' (UK, Software Development).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/emea",
+      "confidence": "Likely"
+    },
+    {
+      "name": "PhysicsX",
+      "domain": "physicsx.ai",
+      "grade": "C",
+      "evidence": "Listed under 'Companies that use Secureframe in EMEA' (UK, Software Development).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/emea",
+      "confidence": "Likely"
+    },
+    {
+      "name": "ICAS World",
+      "domain": "icas.world",
+      "grade": "C",
+      "evidence": "Listed under 'Companies that use Secureframe in EMEA' (UK, Wellness & Fitness).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/emea",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Tribal Group",
+      "domain": "tribalgroup.com",
+      "grade": "C",
+      "evidence": "Listed under 'Companies that use Secureframe in EMEA' (UK, IT Services, 1.4k employees).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/emea",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Wilhelmsen",
+      "domain": "wilhelmsen.com",
+      "grade": "C",
+      "evidence": "Listed under 'Companies that use Secureframe in EMEA' (Norway, Logistics).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/emea",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Presail",
+      "domain": "presail.com",
+      "grade": "C",
+      "evidence": "Listed under 'Companies that use Secureframe in EMEA' (Norway, Internet Publishing).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/emea",
+      "confidence": "Likely"
+    },
+    {
+      "name": "XTEL",
+      "domain": "xtel.com",
+      "grade": "C",
+      "evidence": "Listed under 'Companies that use Secureframe in EMEA' (Italy, Software Development).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/emea",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Cognisys",
+      "domain": "cognisys.co.uk",
+      "grade": "C",
+      "evidence": "Listed under 'List of companies using Secureframe in the UK' (technology tag: Secureframe).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/gb",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Project Brains",
+      "domain": "projectbrains.io",
+      "grade": "C",
+      "evidence": "Listed under 'List of companies using Secureframe in the UK' (technology tag: Secureframe).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/gb",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Humaans",
+      "domain": "humaans.io",
+      "grade": "C",
+      "evidence": "Listed under 'List of companies using Secureframe in the UK' (technology tag: Secureframe).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/gb",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Bruin",
+      "domain": "getbruin.com",
+      "grade": "A",
+      "evidence": "Support was one of the important factors that I had doubts about when evaluating other vendors... Secureframe made me feel good from the beginning of working with them until I became a customer.",
+      "source_url": "https://secureframe.com/customers/bruin",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "CampTek Software",
+      "domain": "campteksoftware.com",
+      "grade": "A",
+      "evidence": "Secureframe is 100% worth it... the time and effort we spent with Secureframe was 100% worth it for our long-term growth.",
+      "source_url": "https://secureframe.com/customers/camptek",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Alpine IQ",
+      "domain": "alpineiq.com",
+      "grade": "A",
+      "evidence": "Secureframe is one of our most valuable vendors. They act like a complete in-house security team compared to anyone else in the market... There isn't a better solution out there for achieving and maintaining compliance.",
+      "source_url": "https://secureframe.com/customers/alpineiq",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Commutifi",
+      "domain": "commutifi.com",
+      "grade": "A",
+      "evidence": "The audit was completed with the help of Johanson Group LLP and Secureframe... Secureframe drives Commutifi's continuous compliance strategy.",
+      "source_url": "https://www.commutifi.com/resources/commutifi-successfully-achieves-soc-2-compliance",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "HealthHive",
+      "domain": "healthhive.org",
+      "grade": "A",
+      "evidence": "We look forward to completing our SOC2 type 2 in 2024 and appreciate the Secureframe platform that has made this monumental lift manageable for our small team.",
+      "source_url": "https://www.healthhive.org/post/healthhive-soc2-certification",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Prolifiq",
+      "domain": "prolifiq.ai",
+      "grade": "A",
+      "evidence": "The audit was completed with the help of Secureframe... Secureframe drives Prolifiq's continuous compliance strategy.",
+      "source_url": "https://www.prweb.com/releases/native-salesforce-software-prolifiq-successfully-achieves-soc-2-type-ii-compliance-878011452.html",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Reach Reporting",
+      "domain": "reachreporting.com",
+      "grade": "A",
+      "evidence": "The audit was completed with the help of Secureframe... Secureframe drives Reach Reporting's continuous compliance strategy including the ability to continuously track, monitor, and remediate any compliance needs.",
+      "source_url": "https://reachreporting.com/blog/achieves-soc-2-type-2-compliance",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Inspira Holding",
+      "domain": "inspiraholding.com",
+      "grade": "C",
+      "evidence": "Listed under 'Companies that use Secureframe in EMEA' (United Kingdom, Travel Arrangements).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/emea",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Apoddo",
+      "domain": "apoddo.com",
+      "grade": "C",
+      "evidence": "Listed under 'List of companies using Secureframe in the UK' (technology tag: Secureframe).",
+      "source_url": "https://theirstack.com/en/technology/secure-frame/gb",
+      "confidence": "Likely"
+    }
+  ],
+  "generated_at": "2026-07-08",
+  "company_count": 72
+}
