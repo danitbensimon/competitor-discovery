@@ -428,6 +428,34 @@
   
 </style>
 <script>window.API_BASE='https://competitor-discovery.onrender.com';</script>
+<style id="ciq-light-theme">
+  :root{ --bg:#FAFAFC; --text:#0B0B12; --muted:#6A6A74; --muted2:#54545F; --surface2:#F4F3FA; --border:#ECECF1; --accent:#4B3BFF; --green:#0E7C66; }
+  body{ font-family:'Manrope',sans-serif; color:#0B0B12; }
+  #loadingSection,#resultsSection,#errorSection{ background:#FAFAFC; }
+  .loading-title,.results-headline,.unlock-title,.error-title,.export-info{ font-family:'Space Grotesk','Manrope',sans-serif; letter-spacing:-0.01em; }
+  .results-headline{ font-weight:600; }
+  .results-headline span{ color:#4B3BFF; }
+  .new-search-btn,.bottom-new-search{ background:#F2F1FF; border:1px solid #DBE0FF; color:#4B3BFF; border-radius:12px; font-family:'Space Grotesk',sans-serif; }
+  .new-search-btn:hover,.bottom-new-search:hover{ background:#E7E4FF; }
+  .td-domain a{ color:#4B3BFF; }
+  .tag-industry{ color:#4B3BFF; border-color:#DBE0FF; background:#F2F1FF; }
+  .source-pill{ color:#4B3BFF; background:#F2F1FF; border:1px solid #E3E0FF; }
+  .sources-strip{ background:#F7F6FC; border:1px solid #ECECF1; }
+  .table-wrap{ border:1px solid #EAEAEF; border-radius:18px; box-shadow:0 24px 60px -44px rgba(75,59,255,.28),0 2px 8px rgba(11,11,18,.04); }
+  thead{ background:#FAFAFC; border-bottom:1px solid #EEEEF2; }
+  th{ color:#6A6A74; font-family:'JetBrains Mono',monospace; letter-spacing:.04em; }
+  td{ color:#54545F; border-bottom:1px solid #F3F3F5; }
+  tbody tr:hover td{ background:#FBFAFF; }
+  .snake-track{ background:#ECECF1; }
+  #freeTierBanner{ background:#F2F1FF !important; border:1px solid #E3E0FF !important; color:#54545F !important; border-radius:12px !important; }
+  .unlock-banner{ background:#fff; border:1px solid #ECECF1; box-shadow:0 24px 60px -44px rgba(75,59,255,.28),0 2px 8px rgba(11,11,18,.04); border-radius:18px; }
+  .unlock-eyebrow{ color:#4B3BFF; background:#F2F1FF; border:1px solid #E3E0FF; }
+  .unlock-value-bar{ background:#0B0B14; }
+  .unlock-btn{ background:#4B3BFF; font-family:'Space Grotesk',sans-serif; border-radius:12px; }
+  .unlock-btn:hover{ background:#3324D6; }
+  .export-btn,.retry-btn{ background:#4B3BFF; color:#fff; border:0; border-radius:12px; font-family:'Space Grotesk',sans-serif; }
+  .error-box{ background:#fff; border:1px solid #FBD5D5; border-radius:18px; box-shadow:0 1px 2px rgba(11,11,18,.04); }
+</style>
 </head>
 <body>
 <div id="searchSection" class="section visible" style="background:#FAFAFC; color:#0B0B12; font-family:'Manrope',sans-serif; position:relative; overflow:hidden;">
@@ -441,6 +469,7 @@
       <a href="#lists" style="font-size:14.5px; color:#4A4A55; font-weight:500;">Browse lists</a>
       <a href="#framework" style="font-size:14.5px; color:#4A4A55; font-weight:500;">How it works</a>
       <a href="#demo" style="font-size:14.5px; color:#4A4A55; font-weight:500;">Live demo</a>
+      <a href="https://meetings-eu1.hubspot.com/dben-simon" target="_blank" rel="noopener" style="font-size:14.5px; color:#4B3BFF; font-weight:600;">Book a demo</a>
       <button onclick="document.getElementById('domainInput').focus();window.scrollTo({top:0,behavior:'smooth'});" style="height:40px; padding:0 18px; border:0; border-radius:11px; background:#0B0B12; color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; cursor:pointer; box-shadow:0 8px 20px -10px rgba(11,11,18,.6);">Try it free</button>
     </div>
   </div>
