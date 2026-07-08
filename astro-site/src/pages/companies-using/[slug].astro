@@ -31,7 +31,7 @@ const gated = [
 function gradeStyle(g) {
   if (g === 'A') return 'background:linear-gradient(135deg,#4B3BFF,#7C3AED);color:#fff;border:none;';
   if (g === 'B') return 'background:#EEF0FF;color:#4B3BFF;border:1px solid #DBE0FF;';
-  return 'background:#F1F1F4;color:#6A6A74;border:1px solid #E4E4EA;';
+  return 'background:#F0E7DB;color:#8A8175;border:1px solid #E7DFD3;';
 }
 
 const title = `Companies using ${competitor.name}: ${company_count} verified customers (${updated})`;
@@ -54,51 +54,51 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
   <div style="position:relative; overflow:hidden; min-height:100%;">
 
   <!-- NAV -->
-  <div style="border-bottom:1px solid #EDEDF1; background:rgba(255,255,255,.7); backdrop-filter:blur(8px);">
+  <div style="border-bottom:1px solid #EFE6DA; background:rgba(255,255,255,.7); backdrop-filter:blur(8px);">
     <div style="max-width:1200px; margin:0 auto; padding:20px 40px; display:flex; align-items:center; justify-content:space-between;">
       <a href="/" style="display:flex; align-items:center; gap:11px;">
         <div style="width:30px; height:30px; border-radius:9px; background:linear-gradient(140deg,#4B3BFF,#8B5CF6); display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px -6px rgba(75,59,255,.7);"><div style="width:9px; height:9px; border-radius:2px; background:#fff;"></div></div>
-        <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; letter-spacing:-0.02em; color:#0B0B12;">CompetitorIQ</span>
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; letter-spacing:-0.02em; color:#1B1712;">CompetitorIQ</span>
       </a>
       <div style="display:flex; align-items:center; gap:26px;">
-        <a href="/" style="font-size:14.5px; color:#4A4A55; font-weight:500;">All lists</a>
-        <a href="/#framework" style="font-size:14.5px; color:#4A4A55; font-weight:500;">How it works</a>
+        <a href="/" style="font-size:14.5px; color:#6B6157; font-weight:500;">All lists</a>
+        <a href="/#framework" style="font-size:14.5px; color:#6B6157; font-weight:500;">How it works</a>
         <a href="https://meetings-eu1.hubspot.com/dben-simon" target="_blank" rel="noopener" style="font-size:14.5px; color:#4B3BFF; font-weight:600;">Book a demo</a>
-        <a href="/#demo" style="height:40px; padding:0 18px; border:0; border-radius:11px; background:#0B0B12; color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; display:inline-flex; align-items:center; box-shadow:0 8px 20px -10px rgba(11,11,18,.6);">Build your list free</a>
+        <a href="/#demo" style="height:40px; padding:0 18px; border:0; border-radius:11px; background:#1B1712; color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; display:inline-flex; align-items:center; box-shadow:0 8px 20px -10px rgba(11,11,18,.6);">Build your list free</a>
       </div>
     </div>
   </div>
 
   <!-- HEADER -->
-  <div style="position:relative; overflow:hidden; border-bottom:1px solid #EDEDF1;">
+  <div style="position:relative; overflow:hidden; border-bottom:1px solid #EFE6DA;">
     <div style="position:absolute; inset:-20% -5% 0; z-index:0; pointer-events:none;">
       <div style="position:absolute; width:560px; height:560px; left:-6%; top:-40%; border-radius:50%; background:radial-gradient(circle,rgba(75,59,255,.14),transparent 62%); filter:blur(12px); animation:ciq-drift 22s ease-in-out infinite;"></div>
       <div style="position:absolute; width:520px; height:520px; right:-6%; top:-30%; border-radius:50%; background:radial-gradient(circle,rgba(34,211,238,.1),transparent 62%); filter:blur(14px); animation:ciq-drift 26s ease-in-out infinite reverse;"></div>
     </div>
     <div style="position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:36px 40px 44px;">
-      <div style="display:flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#8A8A94; margin-bottom:20px;">
-        <a href="/" style="color:#8A8A94;">CompetitorIQ</a><span>/</span><a href="/" style="color:#8A8A94;">Companies using</a><span>/</span><span style="color:#4B3BFF;">{competitor.name}</span>
+      <div style="display:flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#A69C90; margin-bottom:20px;">
+        <a href="/" style="color:#A69C90;">CompetitorIQ</a><span>/</span><a href="/" style="color:#A69C90;">Companies using</a><span>/</span><span style="color:#4B3BFF;">{competitor.name}</span>
       </div>
       <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:46px; line-height:1.05; letter-spacing:-0.03em; margin:0; max-width:20em;">Companies using <span style="background:linear-gradient(115deg,#4B3BFF,#8B5CF6 60%,#22D3EE 120%); -webkit-background-clip:text; background-clip:text; color:transparent;">{competitor.name}</span>: {company_count} verified customers</h1>
-      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:16px; margin-top:18px; font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#6A6A74;">
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:16px; margin-top:18px; font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#8A8175;">
         <span>Last verified {updated}</span><span style="color:#D0D0D6;">·</span>
         <span>{company_count} named companies</span><span style="color:#D0D0D6;">·</span>
         <span>every row has a public source</span><span style="color:#D0D0D6;">·</span>
         <span style="color:#4B3BFF;">CC BY 4.0</span>
       </div>
-      <p style="font-size:17px; line-height:1.6; color:#54545F; margin:22px 0 0; max-width:52em;">A full, free list of companies verified to use <strong style="color:#0B0B12; font-weight:600;">{competitor.name}</strong> ({competitor.domain}). Unlike technographic databases, every company here is backed by a linked public source — case studies, customer blogs, partner and auditor case studies, job postings and named reviews.</p>
+      <p style="font-size:17px; line-height:1.6; color:#6B6157; margin:22px 0 0; max-width:52em;">A full, free list of companies verified to use <strong style="color:#1B1712; font-weight:600;">{competitor.name}</strong> ({competitor.domain}). Unlike technographic databases, every company here is backed by a linked public source — case studies, customer blogs, partner and auditor case studies, job postings and named reviews.</p>
       <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:26px;">
-        <div style="display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #ECECF1; border-radius:14px; padding:14px 18px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
+        <div style="display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #EFE6DA; border-radius:14px; padding:14px 18px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
           <span style="width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">A</span>
-          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.01em;">{nA}</span><span style="font-size:12px; color:#6A6A74;">multiple signals</span></div>
+          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.01em;">{nA}</span><span style="font-size:12px; color:#8A8175;">multiple signals</span></div>
         </div>
-        <div style="display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #ECECF1; border-radius:14px; padding:14px 18px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
+        <div style="display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #EFE6DA; border-radius:14px; padding:14px 18px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
           <span style="width:34px; height:34px; border-radius:9px; background:#EEF0FF; color:#4B3BFF; border:1px solid #DBE0FF; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">B</span>
-          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.01em;">{nB}</span><span style="font-size:12px; color:#6A6A74;">direct evidence</span></div>
+          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.01em;">{nB}</span><span style="font-size:12px; color:#8A8175;">direct evidence</span></div>
         </div>
-        <div style="display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #ECECF1; border-radius:14px; padding:14px 18px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
-          <span style="width:34px; height:34px; border-radius:9px; background:#F1F1F4; color:#6A6A74; border:1px solid #E4E4EA; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">C</span>
-          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.01em;">{nC}</span><span style="font-size:12px; color:#6A6A74;">technographic only</span></div>
+        <div style="display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #EFE6DA; border-radius:14px; padding:14px 18px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
+          <span style="width:34px; height:34px; border-radius:9px; background:#F0E7DB; color:#8A8175; border:1px solid #E7DFD3; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">C</span>
+          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.01em;">{nC}</span><span style="font-size:12px; color:#8A8175;">technographic only</span></div>
         </div>
       </div>
     </div>
@@ -110,76 +110,76 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
       <div>
         <div style="display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-bottom:18px;">
           <div style="position:relative; flex:1; min-width:240px;">
-            <span style="position:absolute; left:14px; top:50%; transform:translateY(-50%); font-family:'JetBrains Mono',monospace; font-size:13px; color:#B5B5BD;">⌕</span>
-            <input id="ciq-q" type="search" placeholder="Search company, domain or evidence…" aria-label="Filter companies" style="width:100%; height:46px; border:1px solid #E6E6EC; border-radius:12px; background:#fff; padding:0 14px 0 34px; font-size:14.5px; font-family:'Manrope',sans-serif; color:#0B0B12; outline:none; box-shadow:0 1px 2px rgba(11,11,18,.04);" />
+            <span style="position:absolute; left:14px; top:50%; transform:translateY(-50%); font-family:'JetBrains Mono',monospace; font-size:13px; color:#A69C90;">⌕</span>
+            <input id="ciq-q" type="search" placeholder="Search company, domain or evidence…" aria-label="Filter companies" style="width:100%; height:46px; border:1px solid #E7DFD3; border-radius:12px; background:#fff; padding:0 14px 0 34px; font-size:14.5px; font-family:'Manrope',sans-serif; color:#1B1712; outline:none; box-shadow:0 1px 2px rgba(11,11,18,.04);" />
           </div>
-          <div id="ciq-tabs" style="display:flex; background:#fff; border:1px solid #E6E6EC; border-radius:12px; padding:4px; gap:2px;">
+          <div id="ciq-tabs" style="display:flex; background:#fff; border:1px solid #E7DFD3; border-radius:12px; padding:4px; gap:2px;">
             <button data-grade="all" class="ciq-tab" style="height:38px; padding:0 15px; border:0; border-radius:9px; background:linear-gradient(135deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">All</button>
-            <button data-grade="A" class="ciq-tab" style="height:38px; padding:0 15px; border:0; border-radius:9px; background:transparent; color:#4A4A55; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">A</button>
-            <button data-grade="B" class="ciq-tab" style="height:38px; padding:0 15px; border:0; border-radius:9px; background:transparent; color:#4A4A55; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">B</button>
-            <button data-grade="C" class="ciq-tab" style="height:38px; padding:0 15px; border:0; border-radius:9px; background:transparent; color:#4A4A55; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">C</button>
+            <button data-grade="A" class="ciq-tab" style="height:38px; padding:0 15px; border:0; border-radius:9px; background:transparent; color:#6B6157; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">A</button>
+            <button data-grade="B" class="ciq-tab" style="height:38px; padding:0 15px; border:0; border-radius:9px; background:transparent; color:#6B6157; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">B</button>
+            <button data-grade="C" class="ciq-tab" style="height:38px; padding:0 15px; border:0; border-radius:9px; background:transparent; color:#6B6157; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">C</button>
           </div>
-          <button id="ciq-csv" style="height:46px; padding:0 18px; border:1px solid #E6E6EC; border-radius:12px; background:#fff; color:#0B0B12; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; display:flex; align-items:center; gap:8px; box-shadow:0 1px 2px rgba(11,11,18,.04);"><span style="color:#4B3BFF;">↓</span> Download CSV</button>
+          <button id="ciq-csv" style="height:46px; padding:0 18px; border:1px solid #E7DFD3; border-radius:12px; background:#fff; color:#1B1712; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; display:flex; align-items:center; gap:8px; box-shadow:0 1px 2px rgba(11,11,18,.04);"><span style="color:#4B3BFF;">↓</span> Download CSV</button>
           <button id="ciq-xlsx" style="height:46px; padding:0 18px; border:0; border-radius:12px; background:linear-gradient(135deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; display:flex; align-items:center; gap:8px; box-shadow:0 14px 30px -14px rgba(75,59,255,.7);"><span>↓</span> Download Excel</button>
         </div>
 
         <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
-          <span style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#6A6A74;"><span id="ciq-shown">{company_count}</span> of {company_count} companies</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#8A8A94;">Grade A: multiple independent signals · B: direct evidence · C: technographic databases</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#8A8175;"><span id="ciq-shown">{company_count}</span> of {company_count} companies</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#A69C90;">Grade A: multiple independent signals · B: direct evidence · C: technographic databases</span>
         </div>
 
-        <div style="border:1px solid #EAEAEF; border-radius:18px; overflow:hidden; background:#fff; box-shadow:0 24px 60px -44px rgba(75,59,255,.28), 0 2px 8px rgba(11,11,18,.04);">
-          <div style="display:grid; grid-template-columns:1.5fr 1.2fr 72px 3fr 90px; background:#FAFAFC; border-bottom:1px solid #EEEEF2; padding:14px 22px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A6A74; letter-spacing:.04em;">
-            <button id="ciq-sort" style="text-align:left; border:0; background:transparent; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A6A74; letter-spacing:.04em; padding:0; display:flex; align-items:center; gap:5px;">COMPANY <span id="ciq-arrow" style="color:#4B3BFF;">↑</span></button>
+        <div style="border:1px solid #EFE6DA; border-radius:18px; overflow:hidden; background:#fff; box-shadow:0 24px 60px -44px rgba(75,59,255,.28), 0 2px 8px rgba(11,11,18,.04);">
+          <div style="display:grid; grid-template-columns:1.5fr 1.2fr 72px 3fr 90px; background:#FBF5EE; border-bottom:1px solid #EFE6DA; padding:14px 22px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#8A8175; letter-spacing:.04em;">
+            <button id="ciq-sort" style="text-align:left; border:0; background:transparent; font-family:'JetBrains Mono',monospace; font-size:11px; color:#8A8175; letter-spacing:.04em; padding:0; display:flex; align-items:center; gap:5px;">COMPANY <span id="ciq-arrow" style="color:#4B3BFF;">↑</span></button>
             <span>DOMAIN</span><span>GRADE</span><span>EVIDENCE</span><span>SOURCE</span>
           </div>
           <div id="ciq-rows">
             {companies.map((c) => (
-              <div class="ciq-row" data-company={c.name} data-grade={c.grade} data-search={`${c.name} ${c.domain} ${c.evidence}`.toLowerCase()} style="display:grid; grid-template-columns:1.5fr 1.2fr 72px 3fr 90px; padding:15px 22px; border-bottom:1px solid #F3F3F5; align-items:center; gap:10px;">
-                <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14.5px; color:#0B0B12;">{c.name}</span>
-                {c.domain ? <a href={`https://${c.domain}`} rel="nofollow noopener" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#4B3BFF; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">{c.domain}</a> : <span style="color:#9A9AA2;">—</span>}
+              <div class="ciq-row" data-company={c.name} data-grade={c.grade} data-search={`${c.name} ${c.domain} ${c.evidence}`.toLowerCase()} style="display:grid; grid-template-columns:1.5fr 1.2fr 72px 3fr 90px; padding:15px 22px; border-bottom:1px solid #F0E7DB; align-items:center; gap:10px;">
+                <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14.5px; color:#1B1712;">{c.name}</span>
+                {c.domain ? <a href={`https://${c.domain}`} rel="nofollow noopener" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#4B3BFF; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">{c.domain}</a> : <span style="color:#A69C90;">—</span>}
                 <span style={`display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:8px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; ${gradeStyle(c.grade)}`} title={c.confidence}>{c.grade}</span>
-                <span style="font-size:13px; line-height:1.45; color:#54545F; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">{c.evidence}</span>
-                {c.source_url && c.source_url.startsWith('http') ? <a href={c.source_url} rel="noopener" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#4B3BFF; display:inline-flex; align-items:center; gap:3px;">source ↗</a> : <span style="color:#9A9AA2;">—</span>}
+                <span style="font-size:13px; line-height:1.45; color:#6B6157; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">{c.evidence}</span>
+                {c.source_url && c.source_url.startsWith('http') ? <a href={c.source_url} rel="noopener" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#4B3BFF; display:inline-flex; align-items:center; gap:3px;">source ↗</a> : <span style="color:#A69C90;">—</span>}
               </div>
             ))}
           </div>
-          <div id="ciq-empty" style="display:none; padding:56px 20px; text-align:center;"><span style="font-size:15px; color:#8A8A94;">No companies match your filter.</span></div>
+          <div id="ciq-empty" style="display:none; padding:56px 20px; text-align:center;"><span style="font-size:15px; color:#A69C90;">No companies match your filter.</span></div>
         </div>
       </div>
 
       <aside class="ciq-aside" style="position:sticky; top:20px; display:flex; flex-direction:column; gap:16px;">
-        <div style="background:#fff; border:1px solid #ECECF1; border-radius:18px; padding:20px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
+        <div style="background:#fff; border:1px solid #EFE6DA; border-radius:18px; padding:20px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
           <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px; letter-spacing:-0.01em; margin:0 0 4px;">More customer lists</h3>
-          <p style="font-size:13px; color:#8A8A94; margin:0 0 14px;">Same methodology, other tools.</p>
+          <p style="font-size:13px; color:#A69C90; margin:0 0 14px;">Same methodology, other tools.</p>
           <div style="display:flex; flex-direction:column; gap:8px;">
             {others.map((o) => (
-              <a href={`/companies-using/${o.slug}/`} style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:11px 13px; border:1px solid #EEEEF2; border-radius:12px; background:#fff; text-decoration:none;">
+              <a href={`/companies-using/${o.slug}/`} style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:11px 13px; border:1px solid #EFE6DA; border-radius:12px; background:#fff; text-decoration:none;">
                 <span style="display:flex; flex-direction:column; gap:2px; min-width:0;">
-                  <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:#0B0B12;">{o.name}</span>
-                  <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#9A9AA2;">{o.count} companies · free</span>
+                  <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:#1B1712;">{o.name}</span>
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#A69C90;">{o.count} companies · free</span>
                 </span>
                 <span style="flex:none; color:#4B3BFF;">↗</span>
               </a>
             ))}
             {gated.map((g) => (
-              <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:11px 13px; border:1px solid #EEEEF2; border-radius:12px; background:#FAFAFB;">
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:11px 13px; border:1px solid #EFE6DA; border-radius:12px; background:#FBF5EE;">
                 <span style="display:flex; flex-direction:column; gap:2px; min-width:0;">
-                  <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:#8A8A94;">{g.name}</span>
-                  <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#9A9AA2;">{g.sub}</span>
+                  <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:#A69C90;">{g.name}</span>
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#A69C90;">{g.sub}</span>
                 </span>
-                <span style="flex:none; color:#B5B5BD;">🔒</span>
+                <span style="flex:none; color:#A69C90;">🔒</span>
               </div>
             ))}
           </div>
         </div>
 
-        <div style="position:relative; overflow:hidden; border-radius:18px; background:#08080F; padding:22px;">
+        <div style="position:relative; overflow:hidden; border-radius:18px; background:#211A15; padding:22px;">
           <div style="position:absolute; inset:0; opacity:.8; pointer-events:none;"><div style="position:absolute; width:320px; height:320px; left:-20%; top:-40%; border-radius:50%; background:radial-gradient(circle,rgba(75,59,255,.5),transparent 60%); filter:blur(16px);"></div></div>
           <div style="position:relative;">
             <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; color:#fff; margin:0;">Find your own list</h3>
-            <p style="font-size:13.5px; line-height:1.5; color:#B6B6C6; margin:8px 0 16px;">Drop any competitor's domain and get the companies already using them — each with a public source.</p>
-            <a href="/#demo" style="display:block; text-align:center; width:100%; height:44px; line-height:44px; border-radius:11px; background:#fff; color:#0B0B12; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px;">Build your list free →</a>
+            <p style="font-size:13.5px; line-height:1.5; color:#C9BFB2; margin:8px 0 16px;">Drop any competitor's domain and get the companies already using them — each with a public source.</p>
+            <a href="/#demo" style="display:block; text-align:center; width:100%; height:44px; line-height:44px; border-radius:11px; background:#fff; color:#1B1712; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px;">Build your list free →</a>
           </div>
         </div>
       </aside>
@@ -189,16 +189,16 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
     <div style="max-width:820px; margin:56px auto 0;">
       <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:28px; letter-spacing:-0.02em; margin:0 0 18px;">Frequently asked</h2>
       {faqs.map((f) => (
-        <details style="border-bottom:1px solid #ECECF1; padding:16px 0;">
-          <summary style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px; color:#0B0B12; list-style:none;">{f.q}</summary>
-          <p style="font-size:15px; line-height:1.6; color:#54545F; margin:12px 0 0;">{f.a}</p>
+        <details style="border-bottom:1px solid #EFE6DA; padding:16px 0;">
+          <summary style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px; color:#1B1712; list-style:none;">{f.q}</summary>
+          <p style="font-size:15px; line-height:1.6; color:#6B6157; margin:12px 0 0;">{f.a}</p>
         </details>
       ))}
-      <p style="font-size:13px; line-height:1.6; color:#8A8A94; margin:24px 0 0;">This list is generated by the CompetitorIQ deep-search pipeline across 12 signal groups and graded A (multiple independent signals), B (one direct piece of evidence) or C (technographic detection only). Found an error? <a href="mailto:hello@competitorcustomer.com">Report it</a>.</p>
+      <p style="font-size:13px; line-height:1.6; color:#A69C90; margin:24px 0 0;">This list is generated by the CompetitorIQ deep-search pipeline across 12 signal groups and graded A (multiple independent signals), B (one direct piece of evidence) or C (technographic detection only). Found an error? <a href="mailto:hello@competitorcustomer.com">Report it</a>.</p>
     </div>
 
     <!-- BOTTOM CTA -->
-    <div style="position:relative; overflow:hidden; margin-top:56px; border-radius:20px; background:#08080F;">
+    <div style="position:relative; overflow:hidden; margin-top:56px; border-radius:20px; background:#211A15;">
       <div style="position:absolute; inset:0; z-index:0; pointer-events:none; opacity:.8;">
         <div style="position:absolute; width:520px; height:520px; left:-6%; top:-60%; border-radius:50%; background:radial-gradient(circle,rgba(75,59,255,.45),transparent 60%); filter:blur(18px); animation:ciq-drift 22s ease-in-out infinite;"></div>
         <div style="position:absolute; width:460px; height:460px; right:-6%; bottom:-60%; border-radius:50%; background:radial-gradient(circle,rgba(34,211,238,.22),transparent 62%); filter:blur(20px); animation:ciq-drift 26s ease-in-out infinite reverse;"></div>
@@ -206,15 +206,15 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
       <div style="position:relative; z-index:1; padding:44px 40px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
         <div style="max-width:34em;">
           <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:28px; letter-spacing:-0.02em; color:#fff; margin:0;">Download the <span style="background:linear-gradient(115deg,#8B8BFF,#8FE9F6); -webkit-background-clip:text; background-clip:text; color:transparent;">full list</span></h2>
-          <p style="font-size:16px; color:#B6B6C6; margin:12px 0 0;">Drop a competitor domain and get every company using it, each with a public source. 10 results free, no signup.</p>
+          <p style="font-size:16px; color:#C9BFB2; margin:12px 0 0;">Drop a competitor domain and get every company using it, each with a public source. 10 results free, no signup.</p>
         </div>
-        <a href="/#demo" style="height:52px; line-height:52px; padding:0 28px; border-radius:13px; background:#fff; color:#0B0B12; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px; white-space:nowrap; box-shadow:0 18px 40px -16px rgba(0,0,0,.6);">Build your list free →</a>
+        <a href="/#demo" style="height:52px; line-height:52px; padding:0 28px; border-radius:13px; background:#fff; color:#1B1712; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px; white-space:nowrap; box-shadow:0 18px 40px -16px rgba(0,0,0,.6);">Build your list free →</a>
       </div>
     </div>
   </div>
 
   <!-- FOOTER -->
-  <div style="background:#08080F; border-top:1px solid rgba(255,255,255,.07);">
+  <div style="background:#211A15; border-top:1px solid rgba(255,255,255,.07);">
     <div style="max-width:1200px; margin:0 auto; padding:28px 40px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px;">
       <div style="display:flex; align-items:center; gap:10px;">
         <div style="width:24px; height:24px; border-radius:7px; background:linear-gradient(140deg,#4B3BFF,#8B5CF6);"></div>
@@ -228,19 +228,19 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
   <div id="ciq-gate" style="display:none; position:fixed; inset:0; z-index:99; background:rgba(11,11,18,.55); align-items:center; justify-content:center; padding:20px;">
     <div style="background:#fff; border-radius:18px; padding:28px 26px; max-width:400px; width:100%; box-shadow:0 40px 90px -30px rgba(11,11,18,.5);">
       <span style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:11px; color:#4B3BFF; background:#F2F1FF; border:1px solid #E3E0FF; border-radius:999px; padding:4px 11px;">.XLSX</span>
-      <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:20px; margin:14px 0 6px; color:#0B0B12;">Get the full list as Excel</h3>
-      <p style="font-size:14px; color:#6A6A74; margin:0 0 16px; line-height:1.5;">Enter your work email and the formatted spreadsheet — domains, grades, evidence and sources — is yours.</p>
-      <input id="ciq-email" type="email" placeholder="you@company.com" style="width:100%; height:46px; border:1px solid #E6E6EC; border-radius:12px; padding:0 14px; font-size:15px; font-family:'Manrope',sans-serif; color:#0B0B12; outline:none;" />
+      <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:20px; margin:14px 0 6px; color:#1B1712;">Get the full list as Excel</h3>
+      <p style="font-size:14px; color:#8A8175; margin:0 0 16px; line-height:1.5;">Enter your work email and the formatted spreadsheet — domains, grades, evidence and sources — is yours.</p>
+      <input id="ciq-email" type="email" placeholder="you@company.com" style="width:100%; height:46px; border:1px solid #E7DFD3; border-radius:12px; padding:0 14px; font-size:15px; font-family:'Manrope',sans-serif; color:#1B1712; outline:none;" />
       <p id="ciq-gate-err" style="display:none; color:#D8422A; font-size:13px; margin:8px 0 0;">Please enter a valid email.</p>
       <button id="ciq-gate-submit" style="width:100%; height:48px; margin-top:12px; border:0; border-radius:12px; background:linear-gradient(135deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; cursor:pointer; box-shadow:0 14px 30px -14px rgba(75,59,255,.7);">Download Excel →</button>
-      <button id="ciq-gate-close" style="width:100%; height:40px; margin-top:8px; border:0; background:transparent; color:#8A8A94; font-family:'Manrope',sans-serif; font-size:14px; cursor:pointer;">No thanks</button>
-      <p style="font-size:12px; color:#9A9AA2; margin:10px 0 0; text-align:center;">No spam. One email with the download.</p>
+      <button id="ciq-gate-close" style="width:100%; height:40px; margin-top:8px; border:0; background:transparent; color:#A69C90; font-family:'Manrope',sans-serif; font-size:14px; cursor:pointer;">No thanks</button>
+      <p style="font-size:12px; color:#A69C90; margin:10px 0 0; text-align:center;">No spam. One email with the download.</p>
     </div>
   </div>
 
   <style>
     @media (max-width: 900px) { .ciq-layout { grid-template-columns: 1fr !important; } .ciq-aside { position: static !important; } }
-    .ciq-row:hover { background: #FBFAFF; }
+    .ciq-row:hover { background: #FBF5EE; }
   </style>
 
   <script type="application/json" id="ciq-data" set:html={ciqData} />
@@ -281,7 +281,7 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
       document.querySelectorAll('.ciq-tab').forEach(function(t){
         t.addEventListener('click', function(){
           grade = t.getAttribute('data-grade');
-          document.querySelectorAll('.ciq-tab').forEach(function(x){ x.style.background='transparent'; x.style.color='#4A4A55'; });
+          document.querySelectorAll('.ciq-tab').forEach(function(x){ x.style.background='transparent'; x.style.color='#6B6157'; });
           t.style.background='linear-gradient(135deg,#4B3BFF,#7C3AED)'; t.style.color='#fff';
           apply();
         });
