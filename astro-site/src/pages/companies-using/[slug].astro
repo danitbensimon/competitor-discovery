@@ -3,232 +3,311 @@ import Base from '../../layouts/Base.astro';
 
 export async function getStaticPaths() {
   const files = import.meta.glob('../../data/competitors/*.json', { eager: true });
+  const all = Object.values(files).map((d) => ({
+    name: d.competitor.name,
+    slug: d.competitor.slug,
+    domain: d.competitor.domain,
+    count: d.company_count,
+  }));
   return Object.values(files).map((data) => ({
     params: { slug: data.competitor.slug },
-    props: { data },
+    props: { data, others: all.filter((b) => b.slug !== data.competitor.slug) },
   }));
 }
 
-const { data } = Astro.props;
+const { data, others } = Astro.props;
 const { competitor, companies, generated_at, company_count } = data;
 const updated = new Date(generated_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 const nA = companies.filter((c) => c.grade === 'A').length;
 const nB = companies.filter((c) => c.grade === 'B').length;
 const nC = companies.filter((c) => c.grade === 'C').length;
-const notable = companies.filter((c) => c.grade === 'A').slice(0, 12).map((c) => c.name).join(', ');
 
-// HubSpot form — replaced by setup script / manually with real IDs
-const HUBSPOT_PORTAL_ID = 'YOUR_PORTAL_ID';
-const HUBSPOT_FORM_ID = 'YOUR_FORM_ID';
-const hubspotAction = `https://forms.hubspot.com/uploads/form/v2/${HUBSPOT_PORTAL_ID}/${HUBSPOT_FORM_ID}`;
+const gated = [
+  { name: 'OneTrust', sub: 'coming soon' },
+  { name: 'Sprinto', sub: 'coming soon' },
+  { name: 'Thoropass', sub: 'coming soon' },
+];
+
+function gradeStyle(g) {
+  if (g === 'A') return 'background:linear-gradient(135deg,#4B3BFF,#7C3AED);color:#fff;border:none;';
+  if (g === 'B') return 'background:#EEF0FF;color:#4B3BFF;border:1px solid #DBE0FF;';
+  return 'background:#F1F1F4;color:#6A6A74;border:1px solid #E4E4EA;';
+}
 
 const title = `Companies using ${competitor.name}: ${company_count} verified customers (${updated})`;
 const description = `${company_count} named companies verified to use ${competitor.name} (${competitor.domain}), each with a public evidence source: case studies, customer blogs, partner case studies, job postings and reviews. Updated ${updated}.`;
 
 const faqs = [
-  {
-    q: `How many companies use ${competitor.name}?`,
-    a: `CompetitorIQ has verified ${company_count} named companies using ${competitor.name} as of ${updated}. Every company on this page is backed by a public, linked source; the vendor's total customer count is typically much larger.`,
-  },
-  {
-    q: `How do you know these companies use ${competitor.name}?`,
-    a: `Every row links to a public source: a case study on ${competitor.domain}, the company's own blog or trust page, an auditor or partner case study, a job posting requiring ${competitor.name} experience, or a named review. Rows are graded A (multiple independent signals), B (one direct piece of evidence) or C (technographic databases only).`,
-  },
-  {
-    q: 'How fresh is this data?',
-    a: `This list was last verified on ${updated}. The discovery pipeline re-runs regularly; companies that switch away are removed and new adopters are added.`,
-  },
-  {
-    q: 'Can I download the full list?',
-    a: `Yes — the full list is free on this page. Enter your work email to get it as a spreadsheet with domains, confidence grades and evidence links.`,
-  },
+  { q: `How many companies use ${competitor.name}?`, a: `CompetitorIQ has verified ${company_count} named companies using ${competitor.name} as of ${updated}. Every company on this page is backed by a public, linked source; the vendor's total customer count is typically much larger.` },
+  { q: `How do you know these companies use ${competitor.name}?`, a: `Every row links to a public source: a case study on ${competitor.domain}, the company's own blog or trust page, an auditor or partner case study, a job posting requiring ${competitor.name} experience, or a named review. Rows are graded A (multiple independent signals), B (one direct piece of evidence) or C (technographic databases only).` },
+  { q: 'How fresh is this data?', a: `This list was last verified on ${updated}. The discovery pipeline re-runs regularly; companies that switch away are removed and new adopters are added.` },
+  { q: 'Can I download the full list?', a: `Yes — the full list is free on this page. Download it instantly as CSV or Excel, with domains, confidence grades, evidence and source links.` },
 ];
-
-const faqJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqs.map((f) => ({
-    '@type': 'Question',
-    name: f.q,
-    acceptedAnswer: { '@type': 'Answer', text: f.a },
-  })),
-};
-
-const datasetJsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'Dataset',
-  name: `Companies using ${competitor.name} — ${company_count} verified customers`,
-  description,
-  url: new URL(Astro.url.pathname, Astro.site).toString(),
-  dateModified: generated_at,
-  license: 'https://creativecommons.org/licenses/by/4.0/',
-  creator: { '@type': 'Organization', name: 'CompetitorIQ', url: 'https://competitorcustomer.com' },
-  keywords: [`${competitor.name} customers`, `companies using ${competitor.name}`, `${competitor.name} customer list`],
-};
+const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+const datasetJsonLd = { '@context': 'https://schema.org', '@type': 'Dataset', name: `Companies using ${competitor.name} — ${company_count} verified customers`, description, url: new URL(Astro.url.pathname, Astro.site).toString(), dateModified: generated_at, license: 'https://creativecommons.org/licenses/by/4.0/', creator: { '@type': 'Organization', name: 'CompetitorIQ', url: 'https://competitorcustomer.com' }, keywords: [`${competitor.name} customers`, `companies using ${competitor.name}`, `${competitor.name} customer list`] };
+const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, companies });
 ---
 <Base title={title} description={description}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} slot="head" />
   <script type="application/ld+json" set:html={JSON.stringify(datasetJsonLd)} slot="head" />
 
-  <p class="muted" style="margin-bottom:0">Last verified {updated} · {company_count} named companies · every row has a public source · data license CC BY 4.0</p>
-  <h1>Companies using {competitor.name}: {company_count} verified customers</h1>
-  <p>
-    A full, free list of companies verified to use <strong>{competitor.name}</strong> ({competitor.domain}).
-    Unlike technographic databases, every company here is backed by a linked public source — case studies,
-    customer blogs, partner and auditor case studies, job postings and named reviews. <strong>{nA} companies</strong>
-    have multiple independent signals (grade A), {nB} have direct evidence (grade B), {nC} appear in
-    technographic databases only (grade C).
-  </p>
-  <p><strong>Notable {competitor.name} customers:</strong> {notable}.</p>
+  <div style="position:relative; overflow:hidden; min-height:100%;">
 
-  <p style="margin:1rem 0">
-    <input type="search" id="filter" placeholder={`Filter ${company_count} companies…`} aria-label="Filter companies"
-      style="padding:.6rem .9rem;border:1px solid var(--line);border-radius:8px;width:min(360px,100%);font-size:1rem" />
-  </p>
-
-  <div class="list-layout">
-    <div class="list-main">
-    <table id="companies">
-    <thead>
-      <tr><th>Company</th><th>Domain</th><th>Grade</th><th>Evidence</th><th>Source</th></tr>
-    </thead>
-    <tbody>
-      {companies.map((c) => (
-        <tr>
-          <td><strong>{c.name}</strong></td>
-          <td>{c.domain ? <a href={`https://${c.domain}`} rel="nofollow noopener" target="_blank">{c.domain}</a> : '—'}</td>
-          <td class={`grade-${c.grade}`} title={c.confidence}>{c.grade}</td>
-          <td class="muted evidence">{c.evidence}</td>
-          <td>{c.source_url && c.source_url.startsWith('http') ? <a href={c.source_url} rel="noopener" target="_blank">source</a> : '—'}</td>
-        </tr>
-      ))}
-    </tbody>
-  </table>
-
-    </div><!-- .list-main -->
-    <aside class="gate-aside">
-      <div class="gate-card gate-side" id="download">
-        <span class="gate-badge"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:4px"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>.XLSX</span>
-        <h2>Download the full list</h2>
-        <p class="muted gate-sub">All {company_count} companies — domains, confidence grades, evidence quotes &amp; source links, ready to sort and filter.</p>
-        <button id="ciq-dl-now" class="dl-btn"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-2px;margin-right:6px"><path d="M12 3v12M7 11l5 5 5-5M5 21h14"/></svg>Download the spreadsheet (.xlsx)</button>
-        <div class="gate-or"><span>or get the link by email</span></div>
-        <div id="ciq-form"><div class="hs-form-frame" data-region="eu1" data-form-id="1642d998-a0e2-493f-8e8b-2a6538736043" data-portal-id="147616801"></div></div>
-        <div id="ciq-download" data-slug={competitor.slug} style="display:none;margin-top:1rem">
-          <p style="font-weight:700;color:#34d399;margin:.4rem 0">✓ Thanks — your spreadsheet is downloading.</p>
-          <button id="ciq-dl-again">↓ Download again (.xlsx)</button>
-        </div>
-        <p class="muted gate-fine">🔒 No spam. One email with the download link.</p>
+  <!-- NAV -->
+  <div style="border-bottom:1px solid #EDEDF1; background:rgba(255,255,255,.7); backdrop-filter:blur(8px);">
+    <div style="max-width:1200px; margin:0 auto; padding:20px 40px; display:flex; align-items:center; justify-content:space-between;">
+      <a href="/" style="display:flex; align-items:center; gap:11px;">
+        <div style="width:30px; height:30px; border-radius:9px; background:linear-gradient(140deg,#4B3BFF,#8B5CF6); display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px -6px rgba(75,59,255,.7);"><div style="width:9px; height:9px; border-radius:2px; background:#fff;"></div></div>
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; letter-spacing:-0.02em; color:#0B0B12;">CompetitorIQ</span>
+      </a>
+      <div style="display:flex; align-items:center; gap:26px;">
+        <a href="/" style="font-size:14.5px; color:#4A4A55; font-weight:500;">All lists</a>
+        <a href="/#framework" style="font-size:14.5px; color:#4A4A55; font-weight:500;">How it works</a>
+        <a href="/#demo" style="height:40px; padding:0 18px; border:0; border-radius:11px; background:#0B0B12; color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; display:inline-flex; align-items:center; box-shadow:0 8px 20px -10px rgba(11,11,18,.6);">Build your list free</a>
       </div>
-    </aside>
-  </div><!-- .list-layout -->
+    </div>
+  </div>
 
-  <h2>FAQ</h2>
-  {faqs.map((f) => (
-    <details>
-      <summary>{f.q}</summary>
-      <p>{f.a}</p>
-    </details>
-  ))}
+  <!-- HEADER -->
+  <div style="position:relative; overflow:hidden; border-bottom:1px solid #EDEDF1;">
+    <div style="position:absolute; inset:-20% -5% 0; z-index:0; pointer-events:none;">
+      <div style="position:absolute; width:560px; height:560px; left:-6%; top:-40%; border-radius:50%; background:radial-gradient(circle,rgba(75,59,255,.14),transparent 62%); filter:blur(12px); animation:ciq-drift 22s ease-in-out infinite;"></div>
+      <div style="position:absolute; width:520px; height:520px; right:-6%; top:-30%; border-radius:50%; background:radial-gradient(circle,rgba(34,211,238,.1),transparent 62%); filter:blur(14px); animation:ciq-drift 26s ease-in-out infinite reverse;"></div>
+    </div>
+    <div style="position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:36px 40px 44px;">
+      <div style="display:flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:12px; color:#8A8A94; margin-bottom:20px;">
+        <a href="/" style="color:#8A8A94;">CompetitorIQ</a><span>/</span><a href="/" style="color:#8A8A94;">Companies using</a><span>/</span><span style="color:#4B3BFF;">{competitor.name}</span>
+      </div>
+      <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:46px; line-height:1.05; letter-spacing:-0.03em; margin:0; max-width:20em;">Companies using <span style="background:linear-gradient(115deg,#4B3BFF,#8B5CF6 60%,#22D3EE 120%); -webkit-background-clip:text; background-clip:text; color:transparent;">{competitor.name}</span>: {company_count} verified customers</h1>
+      <div style="display:flex; flex-wrap:wrap; align-items:center; gap:16px; margin-top:18px; font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#6A6A74;">
+        <span>Last verified {updated}</span><span style="color:#D0D0D6;">·</span>
+        <span>{company_count} named companies</span><span style="color:#D0D0D6;">·</span>
+        <span>every row has a public source</span><span style="color:#D0D0D6;">·</span>
+        <span style="color:#4B3BFF;">CC BY 4.0</span>
+      </div>
+      <p style="font-size:17px; line-height:1.6; color:#54545F; margin:22px 0 0; max-width:52em;">A full, free list of companies verified to use <strong style="color:#0B0B12; font-weight:600;">{competitor.name}</strong> ({competitor.domain}). Unlike technographic databases, every company here is backed by a linked public source — case studies, customer blogs, partner and auditor case studies, job postings and named reviews.</p>
+      <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:26px;">
+        <div style="display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #ECECF1; border-radius:14px; padding:14px 18px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
+          <span style="width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">A</span>
+          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.01em;">{nA}</span><span style="font-size:12px; color:#6A6A74;">multiple signals</span></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #ECECF1; border-radius:14px; padding:14px 18px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
+          <span style="width:34px; height:34px; border-radius:9px; background:#EEF0FF; color:#4B3BFF; border:1px solid #DBE0FF; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">B</span>
+          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.01em;">{nB}</span><span style="font-size:12px; color:#6A6A74;">direct evidence</span></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #ECECF1; border-radius:14px; padding:14px 18px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
+          <span style="width:34px; height:34px; border-radius:9px; background:#F1F1F4; color:#6A6A74; border:1px solid #E4E4EA; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">C</span>
+          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.01em;">{nC}</span><span style="font-size:12px; color:#6A6A74;">technographic only</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <h2>Methodology</h2>
-  <p>
-    This list of {competitor.name} customers is generated by the CompetitorIQ deep-search pipeline across 12 signal
-    groups: customer pages and case studies on {competitor.domain}, customer blogs and press releases, auditor and
-    MSP partner case studies, vendor-hosted trust centers, job postings requiring {competitor.name} experience, named
-    reviews, event speaker lists and technographic databases. Results are deduplicated and graded:
-    <strong>A</strong> = multiple independent signals, <strong>B</strong> = one direct piece of evidence with a source link,
-    <strong>C</strong> = technographic database detection only (treat with more caution). Known false positives are
-    excluded. Found an error? <a href="mailto:hello@competitorcustomer.com">Report it</a> — corrections are published.
-  </p>
+  <!-- CONTROLS + TABLE -->
+  <div style="max-width:1200px; margin:0 auto; padding:32px 40px 80px;">
+    <div class="ciq-layout" style="display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:28px; align-items:start;">
+      <div>
+        <div style="display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-bottom:18px;">
+          <div style="position:relative; flex:1; min-width:240px;">
+            <span style="position:absolute; left:14px; top:50%; transform:translateY(-50%); font-family:'JetBrains Mono',monospace; font-size:13px; color:#B5B5BD;">⌕</span>
+            <input id="ciq-q" type="search" placeholder="Search company, domain or evidence…" aria-label="Filter companies" style="width:100%; height:46px; border:1px solid #E6E6EC; border-radius:12px; background:#fff; padding:0 14px 0 34px; font-size:14.5px; font-family:'Manrope',sans-serif; color:#0B0B12; outline:none; box-shadow:0 1px 2px rgba(11,11,18,.04);" />
+          </div>
+          <div id="ciq-tabs" style="display:flex; background:#fff; border:1px solid #E6E6EC; border-radius:12px; padding:4px; gap:2px;">
+            <button data-grade="all" class="ciq-tab" style="height:38px; padding:0 15px; border:0; border-radius:9px; background:linear-gradient(135deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">All</button>
+            <button data-grade="A" class="ciq-tab" style="height:38px; padding:0 15px; border:0; border-radius:9px; background:transparent; color:#4A4A55; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">A</button>
+            <button data-grade="B" class="ciq-tab" style="height:38px; padding:0 15px; border:0; border-radius:9px; background:transparent; color:#4A4A55; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">B</button>
+            <button data-grade="C" class="ciq-tab" style="height:38px; padding:0 15px; border:0; border-radius:9px; background:transparent; color:#4A4A55; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">C</button>
+          </div>
+          <button id="ciq-csv" style="height:46px; padding:0 18px; border:1px solid #E6E6EC; border-radius:12px; background:#fff; color:#0B0B12; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; display:flex; align-items:center; gap:8px; box-shadow:0 1px 2px rgba(11,11,18,.04);"><span style="color:#4B3BFF;">↓</span> Download CSV</button>
+          <button id="ciq-xlsx" style="height:46px; padding:0 18px; border:0; border-radius:12px; background:linear-gradient(135deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; display:flex; align-items:center; gap:8px; box-shadow:0 14px 30px -14px rgba(75,59,255,.7);"><span>↓</span> Download Excel</button>
+        </div>
+
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#6A6A74;"><span id="ciq-shown">{company_count}</span> of {company_count} companies</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#8A8A94;">Grade A: multiple independent signals · B: direct evidence · C: technographic databases</span>
+        </div>
+
+        <div style="border:1px solid #EAEAEF; border-radius:18px; overflow:hidden; background:#fff; box-shadow:0 24px 60px -44px rgba(75,59,255,.28), 0 2px 8px rgba(11,11,18,.04);">
+          <div style="display:grid; grid-template-columns:1.5fr 1.2fr 72px 3fr 90px; background:#FAFAFC; border-bottom:1px solid #EEEEF2; padding:14px 22px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A6A74; letter-spacing:.04em;">
+            <button id="ciq-sort" style="text-align:left; border:0; background:transparent; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A6A74; letter-spacing:.04em; padding:0; display:flex; align-items:center; gap:5px;">COMPANY <span id="ciq-arrow" style="color:#4B3BFF;">↑</span></button>
+            <span>DOMAIN</span><span>GRADE</span><span>EVIDENCE</span><span>SOURCE</span>
+          </div>
+          <div id="ciq-rows">
+            {companies.map((c) => (
+              <div class="ciq-row" data-company={c.name} data-grade={c.grade} data-search={`${c.name} ${c.domain} ${c.evidence}`.toLowerCase()} style="display:grid; grid-template-columns:1.5fr 1.2fr 72px 3fr 90px; padding:15px 22px; border-bottom:1px solid #F3F3F5; align-items:center; gap:10px;">
+                <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14.5px; color:#0B0B12;">{c.name}</span>
+                {c.domain ? <a href={`https://${c.domain}`} rel="nofollow noopener" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#4B3BFF; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">{c.domain}</a> : <span style="color:#9A9AA2;">—</span>}
+                <span style={`display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:8px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; ${gradeStyle(c.grade)}`} title={c.confidence}>{c.grade}</span>
+                <span style="font-size:13px; line-height:1.45; color:#54545F; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">{c.evidence}</span>
+                {c.source_url && c.source_url.startsWith('http') ? <a href={c.source_url} rel="noopener" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#4B3BFF; display:inline-flex; align-items:center; gap:3px;">source ↗</a> : <span style="color:#9A9AA2;">—</span>}
+              </div>
+            ))}
+          </div>
+          <div id="ciq-empty" style="display:none; padding:56px 20px; text-align:center;"><span style="font-size:15px; color:#8A8A94;">No companies match your filter.</span></div>
+        </div>
+      </div>
+
+      <aside class="ciq-aside" style="position:sticky; top:20px; display:flex; flex-direction:column; gap:16px;">
+        <div style="background:#fff; border:1px solid #ECECF1; border-radius:18px; padding:20px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
+          <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px; letter-spacing:-0.01em; margin:0 0 4px;">More customer lists</h3>
+          <p style="font-size:13px; color:#8A8A94; margin:0 0 14px;">Same methodology, other tools.</p>
+          <div style="display:flex; flex-direction:column; gap:8px;">
+            {others.map((o) => (
+              <a href={`/companies-using/${o.slug}/`} style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:11px 13px; border:1px solid #EEEEF2; border-radius:12px; background:#fff; text-decoration:none;">
+                <span style="display:flex; flex-direction:column; gap:2px; min-width:0;">
+                  <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:#0B0B12;">{o.name}</span>
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#9A9AA2;">{o.count} companies · free</span>
+                </span>
+                <span style="flex:none; color:#4B3BFF;">↗</span>
+              </a>
+            ))}
+            {gated.map((g) => (
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:10px; padding:11px 13px; border:1px solid #EEEEF2; border-radius:12px; background:#FAFAFB;">
+                <span style="display:flex; flex-direction:column; gap:2px; min-width:0;">
+                  <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:#8A8A94;">{g.name}</span>
+                  <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#9A9AA2;">{g.sub}</span>
+                </span>
+                <span style="flex:none; color:#B5B5BD;">🔒</span>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div style="position:relative; overflow:hidden; border-radius:18px; background:#08080F; padding:22px;">
+          <div style="position:absolute; inset:0; opacity:.8; pointer-events:none;"><div style="position:absolute; width:320px; height:320px; left:-20%; top:-40%; border-radius:50%; background:radial-gradient(circle,rgba(75,59,255,.5),transparent 60%); filter:blur(16px);"></div></div>
+          <div style="position:relative;">
+            <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; color:#fff; margin:0;">Find your own list</h3>
+            <p style="font-size:13.5px; line-height:1.5; color:#B6B6C6; margin:8px 0 16px;">Drop any competitor's domain and get the companies already using them — each with a public source.</p>
+            <a href="/#demo" style="display:block; text-align:center; width:100%; height:44px; line-height:44px; border-radius:11px; background:#fff; color:#0B0B12; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px;">Build your list free →</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+
+    <!-- FAQ -->
+    <div style="max-width:820px; margin:56px auto 0;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:28px; letter-spacing:-0.02em; margin:0 0 18px;">Frequently asked</h2>
+      {faqs.map((f) => (
+        <details style="border-bottom:1px solid #ECECF1; padding:16px 0;">
+          <summary style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px; color:#0B0B12; list-style:none;">{f.q}</summary>
+          <p style="font-size:15px; line-height:1.6; color:#54545F; margin:12px 0 0;">{f.a}</p>
+        </details>
+      ))}
+      <p style="font-size:13px; line-height:1.6; color:#8A8A94; margin:24px 0 0;">This list is generated by the CompetitorIQ deep-search pipeline across 12 signal groups and graded A (multiple independent signals), B (one direct piece of evidence) or C (technographic detection only). Found an error? <a href="mailto:hello@competitorcustomer.com">Report it</a>.</p>
+    </div>
+
+    <!-- BOTTOM CTA -->
+    <div style="position:relative; overflow:hidden; margin-top:56px; border-radius:20px; background:#08080F;">
+      <div style="position:absolute; inset:0; z-index:0; pointer-events:none; opacity:.8;">
+        <div style="position:absolute; width:520px; height:520px; left:-6%; top:-60%; border-radius:50%; background:radial-gradient(circle,rgba(75,59,255,.45),transparent 60%); filter:blur(18px); animation:ciq-drift 22s ease-in-out infinite;"></div>
+        <div style="position:absolute; width:460px; height:460px; right:-6%; bottom:-60%; border-radius:50%; background:radial-gradient(circle,rgba(34,211,238,.22),transparent 62%); filter:blur(20px); animation:ciq-drift 26s ease-in-out infinite reverse;"></div>
+      </div>
+      <div style="position:relative; z-index:1; padding:44px 40px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+        <div style="max-width:34em;">
+          <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:28px; letter-spacing:-0.02em; color:#fff; margin:0;">Download the <span style="background:linear-gradient(115deg,#8B8BFF,#8FE9F6); -webkit-background-clip:text; background-clip:text; color:transparent;">full list</span></h2>
+          <p style="font-size:16px; color:#B6B6C6; margin:12px 0 0;">Drop a competitor domain and get every company using it, each with a public source. 10 results free, no signup.</p>
+        </div>
+        <a href="/#demo" style="height:52px; line-height:52px; padding:0 28px; border-radius:13px; background:#fff; color:#0B0B12; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px; white-space:nowrap; box-shadow:0 18px 40px -16px rgba(0,0,0,.6);">Build your list free →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div style="background:#08080F; border-top:1px solid rgba(255,255,255,.07);">
+    <div style="max-width:1200px; margin:0 auto; padding:28px 40px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px;">
+      <div style="display:flex; align-items:center; gap:10px;">
+        <div style="width:24px; height:24px; border-radius:7px; background:linear-gradient(140deg,#4B3BFF,#8B5CF6);"></div>
+        <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; color:#fff;">CompetitorIQ</span>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6C6C7E;">by Danit Ben Simon · data licensed CC BY 4.0</span>
+    </div>
+  </div>
+  </div>
 
   <style>
-    .grade-C { color:#b45309; font-weight:700; }
-    td.evidence { max-width:380px; font-size:.85rem; }
-    #companies{border-collapse:separate;border-spacing:0;margin:1.25rem 0;background:#111a2e;border:1px solid #2b3a55;border-radius:12px;overflow:hidden;box-shadow:0 10px 30px rgba(0,0,0,.45)}
-    #companies thead th{background:#1b2a45;color:#dbe4f5;border-bottom:2px solid var(--brand);padding:.8rem .9rem;text-transform:uppercase;font-size:.72rem;letter-spacing:.06em;font-weight:700}
-    #companies tbody td{padding:.7rem .9rem;border-bottom:1px solid #273449;vertical-align:top}
-    #companies tbody tr:nth-child(even) td{background:rgba(255,255,255,.03)}
-    #companies tbody tr:hover td{background:rgba(74,158,255,.12)}
-    #companies tbody tr:last-child td{border-bottom:0}
-    #companies td a{color:var(--brand2);font-weight:600}
-    #companies td.grade-A,#companies td.grade-B,#companies td.grade-C{text-align:center;font-weight:800;font-size:1rem}
-    #companies td.grade-C{color:#f87171}
-    /* two-column: table + sticky sidebar download */
-    .list-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:1.75rem;align-items:start;margin:1.25rem 0;}
-    .list-main{min-width:0;}
-    .list-main #companies{margin:0;}
-    .list-main #companies{table-layout:fixed;width:100%;}
-    #companies th:nth-child(1),#companies td:nth-child(1){width:18%;}
-    #companies th:nth-child(2),#companies td:nth-child(2){width:18%;}
-    #companies th:nth-child(3),#companies td:nth-child(3){width:8%;}
-    #companies th:nth-child(4),#companies td:nth-child(4){width:43%;}
-    #companies th:nth-child(5),#companies td:nth-child(5){width:13%;white-space:nowrap;text-align:center;}
-    #companies td:nth-child(5) a{white-space:nowrap;}
-    #companies td:nth-child(2) a{word-break:break-word;}
-    .gate-aside{position:sticky;top:1rem;}
-    .gate-card.gate-side{padding:1.4rem 1.35rem 1.2rem;text-align:left;border-radius:16px;background:linear-gradient(180deg,#1b2c4f 0%,#152340 100%);border:1px solid #3a5488;box-shadow:0 16px 38px rgba(0,0,0,.55);}
-    .gate-side h2,.gate-side .gate-sub,.gate-side .gate-fine{color:#eef2f9;}
-    .dl-btn{display:block;width:100%;padding:.8rem 1rem;border:0;border-radius:10px;background:linear-gradient(90deg,#2f7fe8,#7db8ff);color:#fff;font-size:.95rem;font-weight:800;cursor:pointer;box-shadow:0 6px 18px rgba(47,127,232,.4);transition:transform .15s,box-shadow .15s;}
-    .dl-btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(47,127,232,.55);}
-    .gate-or{display:flex;align-items:center;gap:.6rem;margin:.9rem 0 .6rem;color:#9fb2d0;font-size:.75rem;}
-    .gate-or::before,.gate-or::after{content:"";flex:1;height:1px;background:#3a5488;}
-    .gate-badge{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.06em;color:#7db8ff;background:rgba(74,158,255,.12);border:1px solid rgba(74,158,255,.35);padding:.24rem .6rem;border-radius:999px;margin-bottom:.65rem;}
-    .gate-side h2{margin:.1rem 0 .35rem;font-size:1.12rem;line-height:1.25;}
-    .gate-side .gate-sub{font-size:.83rem;line-height:1.55;margin:0 0 .95rem;}
-    .gate-side .gate-fine{font-size:.72rem;margin:.75rem 0 0;opacity:.85;}
-    .gate-side #ciq-dl-again{padding:.55rem 1rem;border:0;border-radius:8px;background:linear-gradient(90deg,#2f7fe8,#7db8ff);color:#fff;font-weight:700;cursor:pointer;width:100%;}
-    /* compact + on-brand HubSpot embedded form */
-    #ciq-form{min-height:150px;}
-    #ciq-form input,#ciq-form select,#ciq-form textarea{font-size:.88rem !important;padding:.5rem .6rem !important;border-radius:8px !important;max-width:100% !important;box-sizing:border-box;}
-    #ciq-form .hs-form-field,#ciq-form .hsfc-Field{margin-bottom:.55rem !important;}
-    #ciq-form label,#ciq-form .hsfc-FieldLabel{font-size:.78rem !important;margin-bottom:.2rem !important;}
-    #ciq-form .hs-richtext,#ciq-form .hsfc-RichText,#ciq-form .hsfc-Step__Title{display:none !important;}
-    #ciq-form .hs-button,#ciq-form input[type=submit],#ciq-form .hsfc-Button{background:linear-gradient(90deg,#2f7fe8,#7db8ff) !important;border:0 !important;color:#fff !important;font-weight:700 !important;border-radius:8px !important;padding:.6rem 1rem !important;width:100% !important;cursor:pointer;}
-    td.evidence{max-width:none;font-size:.82rem;}
-    @media(max-width:860px){.list-layout{grid-template-columns:1fr;}.gate-aside{position:static;}.gate-card.gate-side{max-width:420px;}}
+    @media (max-width: 900px) { .ciq-layout { grid-template-columns: 1fr !important; } .ciq-aside { position: static !important; } }
+    .ciq-row:hover { background: #FBFAFF; }
   </style>
-  <script>
-    const q = document.getElementById('filter');
-    const rows = [...document.querySelectorAll('#companies tbody tr')];
-    q.addEventListener('input', () => {
-      const v = q.value.toLowerCase();
-      rows.forEach((r) => { r.style.display = r.textContent.toLowerCase().includes(v) ? '' : 'none'; });
-    });
-  </script>
-  <script is:inline src="https://js-eu1.hsforms.net/forms/embed/147616801.js" defer></script>
+
+  <script type="application/json" id="ciq-data" set:html={ciqData} />
   <script is:inline src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" defer></script>
   <script is:inline>
     (function(){
-      function buildXlsx(){
-        var dd=document.getElementById('ciq-download'); if(!dd||typeof XLSX==='undefined')return;
-        var slug=dd.getAttribute('data-slug')||'competitor';
-        var rows=[['Company','Domain','Grade','Evidence','Source URL']];
-        document.querySelectorAll('#companies tbody tr').forEach(function(tr){
-          var c=tr.querySelectorAll('td'); if(c.length<5)return;
-          var a=c[4].querySelector('a'); var src=a?a.href:(c[4].innerText||'').trim();
-          var dm=c[1].querySelector('a'); var dom=dm?dm.textContent.trim():(c[1].innerText||'').trim();
-          rows.push([c[0].innerText.trim(),dom,c[2].innerText.trim(),c[3].innerText.trim(),src]);
+      var DATA = JSON.parse(document.getElementById('ciq-data').textContent);
+      var q = document.getElementById('ciq-q');
+      var rowsEl = document.getElementById('ciq-rows');
+      var rows = [].slice.call(document.querySelectorAll('.ciq-row'));
+      var empty = document.getElementById('ciq-empty');
+      var shown = document.getElementById('ciq-shown');
+      var arrow = document.getElementById('ciq-arrow');
+      var grade = 'all', sortDir = 'asc';
+
+      function apply(){
+        var term = (q.value||'').trim().toLowerCase();
+        var n = 0;
+        rows.forEach(function(r){
+          var okG = grade === 'all' || r.getAttribute('data-grade') === grade;
+          var okQ = !term || r.getAttribute('data-search').indexOf(term) !== -1;
+          var vis = okG && okQ;
+          r.style.display = vis ? '' : 'none';
+          if (vis) { r.style.animation = 'ciq-rowin .25s ease both'; n++; }
         });
-        var ws=XLSX.utils.aoa_to_sheet(rows); var wb=XLSX.utils.book_new();
-        XLSX.utils.book_append_sheet(wb,ws,'Companies'); XLSX.writeFile(wb,slug+'_customers.xlsx');
+        shown.textContent = n;
+        empty.style.display = n ? 'none' : 'block';
       }
-      function doDownload(){
-        var dd=document.getElementById('ciq-download'); if(!dd)return;
-        var slug=dd.getAttribute('data-slug')||'competitor';
-        var url='/downloads/'+slug+'_customers.xlsx';
-        fetch(url,{method:'HEAD'}).then(function(r){
-          if(r.ok){ var a=document.createElement('a'); a.href=url; a.download=slug+'_customers.xlsx'; document.body.appendChild(a); a.click(); a.remove(); }
-          else { buildXlsx(); }
-        }).catch(function(){ buildXlsx(); });
+      function sort(){
+        var sorted = rows.slice().sort(function(a,b){
+          var x = a.getAttribute('data-company').toLowerCase(), y = b.getAttribute('data-company').toLowerCase();
+          return sortDir === 'asc' ? x.localeCompare(y) : y.localeCompare(x);
+        });
+        sorted.forEach(function(r){ rowsEl.appendChild(r); });
       }
-      window.addEventListener('message',function(e){
-        try{ if(e.data&&e.data.type==='hsFormCallback'&&(e.data.eventName==='onFormSubmitted'||e.data.eventName==='onFormSubmit')){
-          var f=document.getElementById('ciq-form'),d=document.getElementById('ciq-download');
-          if(f)f.style.display='none'; if(d)d.style.display='block'; setTimeout(doDownload,300);
-        } }catch(_){}
+
+      q.addEventListener('input', apply);
+      document.querySelectorAll('.ciq-tab').forEach(function(t){
+        t.addEventListener('click', function(){
+          grade = t.getAttribute('data-grade');
+          document.querySelectorAll('.ciq-tab').forEach(function(x){ x.style.background='transparent'; x.style.color='#4A4A55'; });
+          t.style.background='linear-gradient(135deg,#4B3BFF,#7C3AED)'; t.style.color='#fff';
+          apply();
+        });
       });
-      document.addEventListener('click',function(e){ if(e.target&&(e.target.id==='ciq-dl-again'||e.target.id==='ciq-dl-now')){doDownload();} });
+      document.getElementById('ciq-sort').addEventListener('click', function(){
+        sortDir = sortDir === 'asc' ? 'desc' : 'asc';
+        arrow.textContent = sortDir === 'asc' ? '↑' : '↓';
+        sort(); apply();
+      });
+
+      function visibleData(){
+        var set = {};
+        rows.forEach(function(r){ if (r.style.display !== 'none') set[r.getAttribute('data-company')] = true; });
+        return DATA.companies.filter(function(c){ return set[c.name]; });
+      }
+      document.getElementById('ciq-csv').addEventListener('click', function(){
+        var d = visibleData();
+        var esc = function(v){ return '"' + String(v==null?'':v).replace(/"/g,'""') + '"'; };
+        var head = ['Company','Domain','Grade','Confidence','Evidence','Source URL'];
+        var body = d.map(function(c){ return [c.name,c.domain,c.grade,c.confidence,c.evidence,c.source_url].map(esc).join(','); });
+        var csv = [head.join(','), body.join('\n')].join('\n');
+        var a = document.createElement('a');
+        a.href = URL.createObjectURL(new Blob([csv], {type:'text/csv'}));
+        a.download = DATA.slug + '_customers.csv'; a.click(); URL.revokeObjectURL(a.href);
+      });
+      document.getElementById('ciq-xlsx').addEventListener('click', function(){
+        var url = '/downloads/' + DATA.slug + '_customers.xlsx';
+        fetch(url, {method:'HEAD'}).then(function(res){
+          if (res.ok) { var a=document.createElement('a'); a.href=url; a.download=DATA.slug+'_customers.xlsx'; document.body.appendChild(a); a.click(); a.remove(); }
+          else { buildXlsx(); }
+        }).catch(buildXlsx);
+      });
+      function buildXlsx(){
+        if (typeof XLSX === 'undefined') return;
+        var d = visibleData();
+        var aoa = [['Company','Domain','Grade','Confidence','Evidence','Source URL']].concat(d.map(function(c){ return [c.name,c.domain,c.grade,c.confidence,c.evidence,c.source_url]; }));
+        var ws = XLSX.utils.aoa_to_sheet(aoa); var wb = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(wb, ws, 'Companies'); XLSX.writeFile(wb, DATA.slug + '_customers.xlsx');
+      }
+      sort();
     })();
   </script>
 </Base>
