@@ -156,6 +156,13 @@ const datasetJsonLd = {
     .list-layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:1.75rem;align-items:start;margin:1.25rem 0;}
     .list-main{min-width:0;}
     .list-main #companies{margin:0;}
+    .list-main #companies{table-layout:fixed;width:100%;}
+    #companies th:nth-child(1),#companies td:nth-child(1){width:19%;}
+    #companies th:nth-child(2),#companies td:nth-child(2){width:19%;}
+    #companies th:nth-child(3),#companies td:nth-child(3){width:8%;}
+    #companies th:nth-child(4),#companies td:nth-child(4){width:46%;}
+    #companies th:nth-child(5),#companies td:nth-child(5){width:8%;}
+    #companies td:nth-child(2) a{word-break:break-word;}
     .gate-aside{position:sticky;top:1rem;}
     .gate-card.gate-side{padding:1.3rem 1.3rem 1.15rem;text-align:left;border-radius:16px;background:linear-gradient(180deg,#0f1a2e 0%,#0c1220 100%);border:1px solid #26344f;box-shadow:0 14px 34px rgba(0,0,0,.55);}
     .gate-badge{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.06em;color:#7db8ff;background:rgba(74,158,255,.12);border:1px solid rgba(74,158,255,.35);padding:.24rem .6rem;border-radius:999px;margin-bottom:.65rem;}
@@ -170,7 +177,7 @@ const datasetJsonLd = {
     #ciq-form label,#ciq-form .hsfc-FieldLabel{font-size:.78rem !important;margin-bottom:.2rem !important;}
     #ciq-form .hs-richtext,#ciq-form .hsfc-RichText,#ciq-form .hsfc-Step__Title{display:none !important;}
     #ciq-form .hs-button,#ciq-form input[type=submit],#ciq-form .hsfc-Button{background:linear-gradient(90deg,#2f7fe8,#7db8ff) !important;border:0 !important;color:#fff !important;font-weight:700 !important;border-radius:8px !important;padding:.6rem 1rem !important;width:100% !important;cursor:pointer;}
-    td.evidence{max-width:240px;font-size:.8rem;}
+    td.evidence{max-width:none;font-size:.82rem;}
     @media(max-width:860px){.list-layout{grid-template-columns:1fr;}.gate-aside{position:static;}.gate-card.gate-side{max-width:420px;}}
   </style>
   <script>
