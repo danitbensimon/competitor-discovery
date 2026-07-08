@@ -9,6 +9,19 @@
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=DM+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7JQB8CKVMT"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-7JQB8CKVMT');</script>
+<style>
+  #searchSection ::selection{background:#DED9FF;color:#0B0B12;}
+  #searchSection :focus-visible{outline:2px solid #4B3BFF;outline-offset:2px;border-radius:6px;}
+  @keyframes ciq-drift{0%{transform:translate(0,0) scale(1);}50%{transform:translate(3%,-3%) scale(1.06);}100%{transform:translate(0,0) scale(1);}}
+  @keyframes ciq-float{0%,100%{transform:translateY(0);}50%{transform:translateY(-8px);}}
+  .ciq-card:hover{transform:translateY(-4px);box-shadow:0 26px 52px -30px rgba(75,59,255,.35);}
+  .ciq-listcard:hover{transform:translateY(-4px);border-color:rgba(75,59,255,.6)!important;}
+  @media(max-width:960px){#searchSection .ciq-hero{grid-template-columns:1fr!important;} #searchSection .ciq-2{grid-template-columns:1fr!important;} #searchSection .ciq-3{grid-template-columns:1fr!important;} #searchSection .ciq-4{grid-template-columns:1fr 1fr!important;}}
+</style>
 <style>
   :root {
     --bg: #07090E;
@@ -417,141 +430,162 @@
 <script>window.API_BASE='https://competitor-discovery.onrender.com';</script>
 </head>
 <body>
-<div class="container">
-  <header>
-    <div class="header-left">
-      <div class="logo"><div class="logo-dot"></div>CompetitorIQ</div>
-      <div class="header-credit">by <a href="https://www.linkedin.com/in/danitbensimon/" target="_blank">Danit Ben Simon</a> · AI Growth</div>
+<div id="searchSection" class="section visible" style="background:#FAFAFC; color:#0B0B12; font-family:'Manrope',sans-serif; position:relative; overflow:hidden;">
+  <div style="max-width:1200px; margin:0 auto; padding:26px 40px; display:flex; align-items:center; justify-content:space-between;">
+    <a href="/" style="display:flex; align-items:center; gap:11px; text-decoration:none;">
+      <div style="width:30px; height:30px; border-radius:9px; background:linear-gradient(140deg,#4B3BFF,#8B5CF6); display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px -6px rgba(75,59,255,.7);"><div style="width:9px; height:9px; border-radius:2px; background:#fff;"></div></div>
+      <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; letter-spacing:-0.02em; color:#0B0B12;">CompetitorIQ</span>
+    </a>
+    <div style="display:flex; align-items:center; gap:26px;">
+      <a href="#uses" style="font-size:14.5px; color:#4A4A55; font-weight:500;">Use cases</a>
+      <a href="#lists" style="font-size:14.5px; color:#4A4A55; font-weight:500;">Browse lists</a>
+      <a href="#framework" style="font-size:14.5px; color:#4A4A55; font-weight:500;">How it works</a>
+      <a href="#demo" style="font-size:14.5px; color:#4A4A55; font-weight:500;">Live demo</a>
+      <button onclick="document.getElementById('domainInput').focus();window.scrollTo({top:0,behavior:'smooth'});" style="height:40px; padding:0 18px; border:0; border-radius:11px; background:#0B0B12; color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; cursor:pointer; box-shadow:0 8px 20px -10px rgba(11,11,18,.6);">Try it free</button>
     </div>
-    <div class="nav-tag">Beta</div>
-  </header>
+  </div>
 
-  <!-- SCREEN 1: SEARCH -->
-  <div id="searchSection" class="section visible">
-    <div class="hero hero-center">
-          <h1 class="hero-title">Find companies already<br>using <span class="hero-accent">your competitors</span></h1>
-          <p class="hero-subtitle">For B2B SaaS Companies</p>
-          <p class="hero-desc-text">Enter your competitor's domain below to discover which companies are already using them.</p>
-          <p class="hero-demo-badge">⚡ Demo version — 10 results only</p>
-          
-          <div class="hero-card-wrap">
-            <div class="search-card">
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:20px;align-items:end">
-                <div>
-                  <span class="field-label">Competitor Domain</span>
-                  <input type="text" class="domain-input" id="domainInput" placeholder="e.g. redpoints.com" autocomplete="off" spellcheck="false" style="width:100%;margin:0" />
-                </div>
-                <div>
-                  <span class="field-label" style="color:var(--accent)">Brand Name <span style="font-size:10px;font-weight:600;color:var(--accent);text-transform:none;letter-spacing:0;opacity:0.8">← important: exact name as written online</span></span>
-                  <input type="text" class="domain-input" id="brandInput" placeholder="e.g. Chargeflow (not chargflow)" autocomplete="off" spellcheck="false" style="width:100%;margin:0;border-color:rgba(0,194,255,0.4)" />
-                </div>
+  <div style="position:relative; overflow:hidden;">
+    <div style="position:absolute; inset:-10% -5% 0; z-index:0; pointer-events:none;">
+      <div style="position:absolute; width:620px; height:620px; left:-8%; top:-30%; border-radius:50%; background:radial-gradient(circle at 50% 50%, rgba(75,59,255,.20), transparent 62%); filter:blur(10px); animation:ciq-drift 18s ease-in-out infinite;"></div>
+      <div style="position:absolute; width:560px; height:560px; right:-6%; top:-24%; border-radius:50%; background:radial-gradient(circle at 50% 50%, rgba(139,92,246,.18), transparent 62%); filter:blur(10px); animation:ciq-drift 22s ease-in-out infinite reverse;"></div>
+    </div>
+    <div class="ciq-hero" style="position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:52px 40px 88px; display:grid; grid-template-columns:1.08fr 0.92fr; gap:56px; align-items:center;">
+      <div>
+        <span style="display:inline-flex; align-items:center; gap:9px; font-family:'JetBrains Mono',monospace; font-size:13px; color:#4B3BFF; background:rgba(255,255,255,.75); border:1px solid rgba(75,59,255,.2); padding:8px 14px; border-radius:999px;"><span style="width:7px; height:7px; border-radius:50%; background:linear-gradient(140deg,#4B3BFF,#22D3EE);"></span>For B2B GTM teams</span>
+        <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:60px; line-height:1.02; letter-spacing:-0.035em; margin:22px 0 0; color:#0B0B12;">Find the companies already <span style="background:linear-gradient(115deg,#4B3BFF 10%,#8B5CF6 55%,#22D3EE 120%); -webkit-background-clip:text; background-clip:text; color:transparent;">paying</span> your competitors.</h1>
+        <p style="font-size:19px; line-height:1.55; color:#54545F; margin:22px 0 0; max-width:34em;">You don't need another cold list. You need the accounts already sold on your category. Drop a competitor's domain and get every company using them, with the source behind every row.</p>
+        <div style="position:relative; margin-top:34px; max-width:520px; border-radius:20px; padding:1.5px; background:linear-gradient(140deg,rgba(75,59,255,.55),rgba(139,92,246,.25) 45%,rgba(34,211,238,.35)); box-shadow:0 30px 60px -34px rgba(75,59,255,.5);">
+          <div style="background:#fff; border-radius:18.5px; padding:22px; display:flex; flex-direction:column; gap:13px;">
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <label style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6A6A74;">COMPETITOR DOMAIN</label>
+              <input id="domainInput" type="text" autocomplete="off" spellcheck="false" placeholder="e.g. redpoints.com" style="height:48px; border:1px solid #E6E6EC; border-radius:12px; background:#FBFBFC; padding:0 15px; font-size:15px; font-family:'Manrope',sans-serif; color:#0B0B12; outline:none;">
+            </div>
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <label style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6A6A74;">BRAND NAME</label>
+              <input id="brandInput" type="text" autocomplete="off" spellcheck="false" placeholder="e.g. Chargeflow (not chargflow)" style="height:48px; border:1px solid #E6E6EC; border-radius:12px; background:#FBFBFC; padding:0 15px; font-size:15px; font-family:'Manrope',sans-serif; color:#0B0B12; outline:none;">
+            </div>
+            <button id="searchBtn" onclick="startSearch()" style="margin-top:3px; height:52px; border:0; border-radius:13px; background:linear-gradient(135deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px; cursor:pointer; box-shadow:0 14px 30px -12px rgba(75,59,255,.75);">Get 10 results free →</button>
+            <span style="text-align:center; font-size:13px; color:#8A8A94;">No signup · results in seconds · CSV export</span>
+          </div>
+        </div>
+        <div style="margin-top:28px; display:flex; flex-wrap:wrap; gap:8px; align-items:center; max-width:560px;">
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6A6A74; margin-right:2px;">12 SOURCES:</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#4A4A55; border:1px solid #E0E0E7; background:rgba(255,255,255,.7); border-radius:999px; padding:5px 11px;">case studies</span><span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#4A4A55; border:1px solid #E0E0E7; background:rgba(255,255,255,.7); border-radius:999px; padding:5px 11px;">job posts</span><span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#4A4A55; border:1px solid #E0E0E7; background:rgba(255,255,255,.7); border-radius:999px; padding:5px 11px;">tech stack</span><span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#4A4A55; border:1px solid #E0E0E7; background:rgba(255,255,255,.7); border-radius:999px; padding:5px 11px;">G2 reviews</span><span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#4A4A55; border:1px solid #E0E0E7; background:rgba(255,255,255,.7); border-radius:999px; padding:5px 11px;">LinkedIn</span><span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#4A4A55; border:1px solid #E0E0E7; background:rgba(255,255,255,.7); border-radius:999px; padding:5px 11px;">press</span>
+        </div>
+      </div>
+      <div style="position:relative;">
+        <div style="position:relative; border-radius:22px; padding:1px; background:linear-gradient(160deg,rgba(255,255,255,.9),rgba(139,92,246,.25)); box-shadow:0 40px 90px -40px rgba(75,59,255,.55); animation:ciq-float 7s ease-in-out infinite;">
+          <div style="background:#0B0B14; border-radius:21px; overflow:hidden;">
+            <div style="height:42px; display:flex; align-items:center; gap:7px; padding:0 16px; background:linear-gradient(180deg,#15151F,#0E0E17); border-bottom:1px solid rgba(255,255,255,.06);">
+              <span style="width:11px; height:11px; border-radius:50%; background:#3A3A46;"></span><span style="width:11px; height:11px; border-radius:50%; background:#3A3A46;"></span><span style="width:11px; height:11px; border-radius:50%; background:#3A3A46;"></span>
+              <span style="margin-left:12px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6B6B78;">customers of acme.com</span>
+              <span style="margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:10px; color:#22D3EE;">● live</span>
+            </div>
+            <div style="padding:18px; display:flex; flex-direction:column; gap:9px;">
+              <div style="display:flex; align-items:baseline; justify-content:space-between; padding:2px 4px 10px;">
+                <span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; color:#fff;">247 companies found</span>
+                <span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#8FE9F6;">across 12 sources</span>
               </div>
-      
-              <button class="search-btn" id="searchBtn" onclick="startSearch()"><span style="display:block;font-size:inherit;">Get 10 Results Free →</span><span style="display:block;font-size:11px;font-weight:400;opacity:0.72;margin-top:3px;letter-spacing:.02em;">No sign up required</span></button>
-              
-      
-              
-      
-              
-            
-            <div class="signal-tags-strip" id="signalTagsStrip">
-                  <span class="sig-label">12 sources:</span>
-                  <span class="sig-tag" data-sig="own_site">own site</span>
-                  <span class="sig-tag" data-sig="customer_signals">case studies</span>
-                  <span class="sig-tag" data-sig="job_postings">job postings</span>
-                  <span class="sig-tag" data-sig="tech_stack">tech stack</span>
-                  <span class="sig-tag" data-sig="review_sites">review sites</span>
-                  <span class="sig-tag" data-sig="linkedin">linkedin</span>
-                  <span class="sig-tag" data-sig="blog_press">blog & press</span>
-                  <span class="sig-tag" data-sig="video">video</span>
-                  <span class="sig-tag" data-sig="partners_si">partners / SI</span>
-                  <span class="sig-tag" data-sig="events_awards">events & awards</span>
-                  <span class="sig-tag" data-sig="communities">communities</span>
-                  <span class="sig-tag" data-sig="filings_docs">filings & docs</span>
-              </div>
+              <div style="display:flex; align-items:center; gap:12px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:12px 14px;"><div style="width:32px; height:32px; border-radius:9px; background:linear-gradient(140deg,#4B3BFF,#8B5CF6); flex:none; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#fff;">N</div><div style="display:flex; flex-direction:column; gap:2px; min-width:0;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:#fff;">Northwind Labs</span><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#7C7C88;">G2 review</span></div><span style="margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:10px; color:#22D3EE; background:rgba(34,211,238,.1); padding:3px 8px; border-radius:6px;">verified</span></div><div style="display:flex; align-items:center; gap:12px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:12px 14px;"><div style="width:32px; height:32px; border-radius:9px; background:linear-gradient(140deg,#7C3AED,#22D3EE); flex:none; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#fff;">C</div><div style="display:flex; flex-direction:column; gap:2px; min-width:0;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:#fff;">Cobalt Systems</span><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#7C7C88;">Case study</span></div><span style="margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:10px; color:#22D3EE; background:rgba(34,211,238,.1); padding:3px 8px; border-radius:6px;">verified</span></div><div style="display:flex; align-items:center; gap:12px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:12px 14px;"><div style="width:32px; height:32px; border-radius:9px; background:linear-gradient(140deg,#8B5CF6,#4B3BFF); flex:none; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#fff;">V</div><div style="display:flex; flex-direction:column; gap:2px; min-width:0;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:#fff;">Vellum Health</span><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#7C7C88;">Tech stack</span></div><span style="margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:10px; color:#22D3EE; background:rgba(34,211,238,.1); padding:3px 8px; border-radius:6px;">verified</span></div><div style="display:flex; align-items:center; gap:12px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:12px 14px;"><div style="width:32px; height:32px; border-radius:9px; background:linear-gradient(140deg,#22D3EE,#4B3BFF); flex:none; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#fff;">P</div><div style="display:flex; flex-direction:column; gap:2px; min-width:0;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:#fff;">Peakline</span><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#7C7C88;">LinkedIn</span></div><span style="margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:10px; color:#22D3EE; background:rgba(34,211,238,.1); padding:3px 8px; border-radius:6px;">verified</span></div><div style="display:flex; align-items:center; gap:12px; background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:12px 14px;"><div style="width:32px; height:32px; border-radius:9px; background:linear-gradient(140deg,#4B3BFF,#22D3EE); flex:none; display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13px; color:#fff;">A</div><div style="display:flex; flex-direction:column; gap:2px; min-width:0;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:#fff;">Astra Freight</span><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#7C7C88;">Partner page</span></div><span style="margin-left:auto; font-family:'JetBrains Mono',monospace; font-size:10px; color:#22D3EE; background:rgba(34,211,238,.1); padding:3px 8px; border-radius:6px;">verified</span></div>
+              <div style="text-align:center; font-family:'JetBrains Mono',monospace; font-size:11px; color:#5A5A66; padding-top:4px;">+ 43 more found</div>
             </div>
           </div>
         </div>
-
-  <!-- FRAMEWORK BAND — full width, light blue, inside searchSection so it hides on search -->
-  <div class="framework-band">
-
-    <!-- VIDEO FIRST -->
-    <div class="fw-video-wrap">
-      <div class="fw-video-label">Watch the Case Study</div>
-      <div class="fw-video-title">How I 10X'd outbound results using competitor customers</div>
-      <div class="fw-yt">
-        <iframe src="https://www.youtube.com/embed/LKkJZPqJrwQ" title="10X outbound switch campaign" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
-    </div>
-
-    <!-- ARROW DIVIDER -->
-    <div style="text-align:center;margin:28px 0 20px;font-size:13px;font-weight:700;color:#1D4ED8;letter-spacing:0.1em;text-transform:uppercase;">
-      ↓ &nbsp; Here's the 4-step framework &nbsp; ↓
-    </div>
-
-    <!-- BOXES BELOW VIDEO — centered text, arrows between -->
-    <div class="fw-boxes">
-      <div class="fw-box">
-        <div class="fw-num">01</div>
-        <div class="fw-title">Find who's buying from your competitor</div>
-        <div class="fw-desc">Scan case studies, reviews, job posts and tech databases for companies publicly using the tool.</div>
-        <div class="fw-here">You are here ↑</div>
-      </div>
-      <div class="fw-arrow-sep">→</div>
-      <div class="fw-box">
-        <div class="fw-num">02</div>
-        <div class="fw-title">Enrich their buying committee</div>
-        <div class="fw-desc">Find the decision makers: VP Sales, RevOps, CRO. Not just the company name.</div>
-      </div>
-      <div class="fw-arrow-sep">→</div>
-      <div class="fw-box">
-        <div class="fw-num">03</div>
-        <div class="fw-title">Write competitor-aware outreach</div>
-        <div class="fw-desc">"I saw you use [Competitor]. We help teams like yours who've outgrown it." Specificity converts.</div>
-      </div>
-      <div class="fw-arrow-sep">→</div>
-      <div class="fw-box">
-        <div class="fw-num">04</div>
-        <div class="fw-title">Sequence email + LinkedIn</div>
-        <div class="fw-desc">3-touch sequence over 5 days. These are warm accounts. Treat them like inbound.</div>
-      </div>
-    </div>
-  </div><!-- end framework-band -->
-
-  <!-- PUBLISHED LISTS — auto-populated from /lists-index.json -->
-  <div class="lists-band" id="listsBand" style="display:none;padding:8px 20px 56px;">
-    <div style="max-width:1000px;margin:0 auto;">
-      <h2 style="text-align:center;font-size:24px;font-weight:800;margin:0 0 6px;color:var(--text);">Explore our verified customer lists</h2>
-      <p style="text-align:center;color:var(--muted);font-size:14px;margin:0 0 26px;">Every company backed by a public source. Free to browse &amp; download.</p>
-      <div id="listsGrid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;"></div>
     </div>
   </div>
-  <style>
-    .list-card{display:block;text-decoration:none;background:linear-gradient(180deg,#151f34 0%,#0e1626 100%);border:1px solid #2c3d5c;border-radius:14px;padding:22px 22px 20px;box-shadow:0 8px 24px rgba(0,0,0,.45);transition:border-color .18s,transform .18s,box-shadow .18s;}
-    .list-card:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:0 16px 36px rgba(0,0,0,.6);}
-  </style>
-  <script>
-    (async function(){
-      try{
-        var idx = await fetch('/lists-index.json').then(function(r){return r.ok?r.json():[];});
-        var grid = document.getElementById('listsGrid'), band = document.getElementById('listsBand');
-        if(!grid||!band||!idx.length) return;
-        grid.innerHTML = idx.map(function(x){
-          var name = x.name ? x.name.charAt(0).toUpperCase()+x.name.slice(1) : x.slug;
-          return '<a class="list-card" href="/companies-using/'+x.slug+'/">'
-            + '<div style="font-weight:700;font-size:16px;color:var(--text);">Companies using '+name+'</div>'
-            + '<div style="font-size:13px;color:var(--muted);margin-top:5px;">'+(x.domain||'')+'</div>'
-            + '<div style="margin-top:14px;color:var(--accent);font-size:13px;font-weight:600;">View the full list &rarr;</div>'
-            + '</a>';
-        }).join('');
-        band.style.display = 'block';
-      }catch(e){}
-    })();
-  </script>
-  </div><!-- end searchSection -->
 
-  <!-- SCREEN 2: LOADING -->
+  <div style="border-top:1px solid #EDEDF1; border-bottom:1px solid #EDEDF1; background:rgba(255,255,255,.6);">
+    <div style="max-width:1200px; margin:0 auto; padding:26px 40px; display:flex; align-items:center; justify-content:center; gap:40px; flex-wrap:wrap;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6A6A74;">TRUSTED BY GTM TEAMS AT</span>
+      <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; color:#7C7C88;">Northwind</span><span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; color:#7C7C88;">Cobalt</span><span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; color:#7C7C88;">Peakline</span><span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; color:#7C7C88;">Vellum</span><span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; color:#7C7C88;">Astra</span>
+    </div>
+  </div>
+
+  <div id="uses" style="max-width:1200px; margin:0 auto; padding:92px 40px;">
+    <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px; margin-bottom:52px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:14px; font-weight:500; letter-spacing:.14em; color:#4B3BFF;">WHAT YOU CAN FIND</span>
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:42px; letter-spacing:-0.03em; margin:0; max-width:16em; color:#0B0B12;">One search, four ways to use the data</h2>
+      <p style="font-size:18px; line-height:1.55; color:#6A6A74; margin:0; max-width:40em;">Competitors are only the start. Point CompetitorIQ at any product and pull the companies around it, then act on the exact signal that makes each account worth a message.</p>
+    </div>
+    <div class="ciq-2" style="display:grid; grid-template-columns:repeat(2,1fr); gap:20px;"><div class="ciq-card" style="background:#fff; border:1px solid #ECECF1; border-radius:20px; padding:30px; display:flex; gap:20px; box-shadow:0 1px 2px rgba(11,11,18,.04); transition:transform .2s, box-shadow .2s;"><div style="flex:none; width:52px; height:52px; border-radius:14px; background:linear-gradient(140deg,#4B3BFF,#7C3AED); display:flex; align-items:center; justify-content:center; box-shadow:0 12px 26px -12px rgba(75,59,255,.6);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg></div><div style="display:flex; flex-direction:column; gap:8px;"><h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:21px; letter-spacing:-0.01em; margin:0; line-height:1.2;">Competitor customers</h3><p style="font-size:15px; line-height:1.55; color:#6A6A74; margin:0;">Pull every company publicly using a direct competitor — the strongest wedge in outbound: they already buy your category, they're just paying someone else.</p><span style="margin-top:4px; align-self:flex-start; font-family:'JetBrains Mono',monospace; font-size:12px; color:#4B3BFF; background:#F2F1FF; border:1px solid #E3E0FF; border-radius:8px; padding:5px 10px;">Displacement plays</span></div></div><div class="ciq-card" style="background:#fff; border:1px solid #ECECF1; border-radius:20px; padding:30px; display:flex; gap:20px; box-shadow:0 1px 2px rgba(11,11,18,.04); transition:transform .2s, box-shadow .2s;"><div style="flex:none; width:52px; height:52px; border-radius:14px; background:linear-gradient(140deg,#7C3AED,#22D3EE); display:flex; align-items:center; justify-content:center; box-shadow:0 12px 26px -12px rgba(75,59,255,.6);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h6v6H4zM14 11h6v6h-6z"/><path d="M10 10l4 4"/></svg></div><div style="display:flex; flex-direction:column; gap:8px;"><h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:21px; letter-spacing:-0.01em; margin:0; line-height:1.2;">Complementary-product users</h3><p style="font-size:15px; line-height:1.55; color:#6A6A74; margin:0;">Find companies running tools that pair naturally with yours. An integration-led, better-together angle that lands warm on day one.</p><span style="margin-top:4px; align-self:flex-start; font-family:'JetBrains Mono',monospace; font-size:12px; color:#4B3BFF; background:#F2F1FF; border:1px solid #E3E0FF; border-radius:8px; padding:5px 10px;">Partner & integration fit</span></div></div><div class="ciq-card" style="background:#fff; border:1px solid #ECECF1; border-radius:20px; padding:30px; display:flex; gap:20px; box-shadow:0 1px 2px rgba(11,11,18,.04); transition:transform .2s, box-shadow .2s;"><div style="flex:none; width:52px; height:52px; border-radius:14px; background:linear-gradient(140deg,#4B3BFF,#22D3EE); display:flex; align-items:center; justify-content:center; box-shadow:0 12px 26px -12px rgba(75,59,255,.6);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="4" rx="1"/><rect x="4" y="10" width="16" height="4" rx="1"/><rect x="4" y="16" width="16" height="4" rx="1"/></svg></div><div style="display:flex; flex-direction:column; gap:8px;"><h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:21px; letter-spacing:-0.01em; margin:0; line-height:1.2;">Technographic filters</h3><p style="font-size:15px; line-height:1.55; color:#6A6A74; margin:0;">Slice any list by the exact stack an account runs — cloud, CRM, security, data. Qualify on real fit before a rep spends a minute.</p><span style="margin-top:4px; align-self:flex-start; font-family:'JetBrains Mono',monospace; font-size:12px; color:#4B3BFF; background:#F2F1FF; border:1px solid #E3E0FF; border-radius:8px; padding:5px 10px;">Qualify on fit</span></div></div><div class="ciq-card" style="background:#fff; border:1px solid #ECECF1; border-radius:20px; padding:30px; display:flex; gap:20px; box-shadow:0 1px 2px rgba(11,11,18,.04); transition:transform .2s, box-shadow .2s;"><div style="flex:none; width:52px; height:52px; border-radius:14px; background:linear-gradient(140deg,#8B5CF6,#4B3BFF); display:flex; align-items:center; justify-content:center; box-shadow:0 12px 26px -12px rgba(75,59,255,.6);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18"/><path d="M3 8l9-5 9 5"/><path d="M3 8v8l9 5 9-5V8"/></svg></div><div style="display:flex; flex-direction:column; gap:8px;"><h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:21px; letter-spacing:-0.01em; margin:0; line-height:1.2;">Adjacent-market accounts</h3><p style="font-size:15px; line-height:1.55; color:#6A6A74; margin:0;">Surface buyers in adjacent categories moving into yours, so you reach them while intent is forming instead of after a vendor is chosen.</p><span style="margin-top:4px; align-self:flex-start; font-family:'JetBrains Mono',monospace; font-size:12px; color:#4B3BFF; background:#F2F1FF; border:1px solid #E3E0FF; border-radius:8px; padding:5px 10px;">Catch demand early</span></div></div></div>
+  </div>
+
+  <div id="lists" style="position:relative; overflow:hidden; background:#08080F;">
+    <div style="position:absolute; inset:0; z-index:0; pointer-events:none; opacity:.7;">
+      <div style="position:absolute; width:560px; height:560px; left:-6%; top:-30%; border-radius:50%; background:radial-gradient(circle,rgba(75,59,255,.34),transparent 60%); filter:blur(16px); animation:ciq-drift 22s ease-in-out infinite;"></div>
+      <div style="position:absolute; width:520px; height:520px; right:-6%; bottom:-34%; border-radius:50%; background:radial-gradient(circle,rgba(34,211,238,.18),transparent 62%); filter:blur(20px); animation:ciq-drift 26s ease-in-out infinite reverse;"></div>
+    </div>
+    <div style="position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:88px 40px;">
+      <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:14px; margin-bottom:48px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:14px; font-weight:500; letter-spacing:.14em; color:#8FE9F6;">READY TO BROWSE</span>
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:42px; letter-spacing:-0.03em; margin:0; color:#fff;">Explore our verified customer lists</h2>
+        <p style="font-size:18px; color:#B6B6C6; margin:0; max-width:38em;">Every company backed by a public source. Free to browse and download, no domain required.</p>
+      </div>
+      <div id="ciqLists" class="ciq-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px;"></div>
+    </div>
+  </div>
+
+  <div id="framework" style="max-width:1200px; margin:0 auto; padding:92px 40px;">
+    <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px; margin-bottom:52px;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:14px; font-weight:500; letter-spacing:.14em; color:#4B3BFF;">HOW IT WORKS</span>
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:42px; letter-spacing:-0.03em; margin:0; max-width:18em; color:#0B0B12;">From a competitor's domain to booked pipeline, in four moves</h2>
+    </div>
+    <div class="ciq-4" style="display:grid; grid-template-columns:repeat(4,1fr); gap:20px;"><div class="ciq-card" style="background:#fff; border:1px solid #ECECF1; border-radius:18px; padding:26px; display:flex; flex-direction:column; gap:14px; box-shadow:0 1px 2px rgba(11,11,18,.04); transition:transform .2s, box-shadow .2s;"><span style="width:42px; height:42px; border-radius:12px; background:linear-gradient(140deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 22px -10px rgba(75,59,255,.7);">01</span><h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; letter-spacing:-0.01em; margin:4px 0 0; line-height:1.2;">Find who already buys</h3><p style="font-size:14.5px; line-height:1.5; color:#6A6A74; margin:0;">We scan case studies, reviews, job posts and tech databases for companies publicly using your competitor.</p></div><div class="ciq-card" style="background:#fff; border:1px solid #ECECF1; border-radius:18px; padding:26px; display:flex; flex-direction:column; gap:14px; box-shadow:0 1px 2px rgba(11,11,18,.04); transition:transform .2s, box-shadow .2s;"><span style="width:42px; height:42px; border-radius:12px; background:linear-gradient(140deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 22px -10px rgba(75,59,255,.7);">02</span><h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; letter-spacing:-0.01em; margin:4px 0 0; line-height:1.2;">Name the buyers</h3><p style="font-size:14.5px; line-height:1.5; color:#6A6A74; margin:0;">Surface the buying committee: VP Sales, RevOps, CRO — not just the company name.</p></div><div class="ciq-card" style="background:#fff; border:1px solid #ECECF1; border-radius:18px; padding:26px; display:flex; flex-direction:column; gap:14px; box-shadow:0 1px 2px rgba(11,11,18,.04); transition:transform .2s, box-shadow .2s;"><span style="width:42px; height:42px; border-radius:12px; background:linear-gradient(140deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 22px -10px rgba(75,59,255,.7);">03</span><h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; letter-spacing:-0.01em; margin:4px 0 0; line-height:1.2;">Write the wedge</h3><p style="font-size:14.5px; line-height:1.5; color:#6A6A74; margin:0;">"I saw you use [Competitor]. We help teams who have outgrown it." Specific beats clever.</p></div><div class="ciq-card" style="background:#fff; border:1px solid #ECECF1; border-radius:18px; padding:26px; display:flex; flex-direction:column; gap:14px; box-shadow:0 1px 2px rgba(11,11,18,.04); transition:transform .2s, box-shadow .2s;"><span style="width:42px; height:42px; border-radius:12px; background:linear-gradient(140deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:16px; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 22px -10px rgba(75,59,255,.7);">04</span><h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; letter-spacing:-0.01em; margin:4px 0 0; line-height:1.2;">Run the sequence</h3><p style="font-size:14.5px; line-height:1.5; color:#6A6A74; margin:0;">Three touches over five days, email plus LinkedIn. Warm accounts — treat them like inbound.</p></div></div>
+  </div>
+
+  <div id="demo" style="position:relative; border-top:1px solid #EDEDF1; background:linear-gradient(180deg,#FBFBFD,#F4F3FA);">
+    <div style="max-width:900px; margin:0 auto; padding:88px 40px;">
+      <div style="display:flex; flex-direction:column; align-items:center; text-align:center; gap:16px; margin-bottom:34px;">
+        <span style="font-family:'JetBrains Mono',monospace; font-size:14px; font-weight:500; letter-spacing:.14em; color:#4B3BFF;">TRY IT LIVE</span>
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:42px; letter-spacing:-0.03em; margin:0; color:#0B0B12;">Run a real search, right now</h2>
+        <p style="font-size:17px; color:#6A6A74; margin:0; max-width:38em;">Drop a competitor's domain to pull a live sample list. No black box — each company comes with the public signal that proves they use the tool. 10 results free.</p>
+      </div>
+      <div style="display:flex; gap:11px;">
+        <input id="demoInput" type="text" placeholder="competitor.com" style="flex:1; height:54px; border:1px solid #E6E6EC; border-radius:14px; background:#fff; padding:0 18px; font-size:15px; font-family:'Manrope',sans-serif; color:#0B0B12; outline:none; box-shadow:0 1px 2px rgba(11,11,18,.04);">
+        <button onclick="var v=document.getElementById('demoInput').value.trim(); if(v){document.getElementById('domainInput').value=v; startSearch();}" style="height:54px; padding:0 28px; border:0; border-radius:14px; background:#0B0B12; color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; cursor:pointer; white-space:nowrap;">Search</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="story" style="border-top:1px solid #EDEDF1;">
+    <div class="ciq-2" style="max-width:1200px; margin:0 auto; padding:92px 40px; display:grid; grid-template-columns:1.05fr 0.95fr; gap:56px; align-items:center;">
+      <div style="position:relative; border-radius:20px; padding:1.5px; background:linear-gradient(150deg,rgba(75,59,255,.5),rgba(34,211,238,.4)); box-shadow:0 34px 70px -34px rgba(75,59,255,.5);">
+        <div style="position:relative; border-radius:18.5px; overflow:hidden; aspect-ratio:16/9; background:#0B0B14;">
+          <iframe src="https://www.youtube.com/embed/LKkJZPqJrwQ" title="Case study" style="width:100%; height:100%; border:0;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+        </div>
+      </div>
+      <div>
+        <span style="font-family:'JetBrains Mono',monospace; font-size:14px; font-weight:500; letter-spacing:.14em; color:#4B3BFF;">CUSTOMER STORY</span>
+        <p style="font-family:'Space Grotesk',sans-serif; font-weight:500; font-size:28px; line-height:1.3; letter-spacing:-0.02em; margin:18px 0 0; color:#161620;">"We stopped buying lead lists. Now we build the week's outbound off the competitor lists, and reply rates more than tripled."</p>
+        <div style="display:flex; align-items:center; gap:12px; margin-top:22px;">
+          <span style="width:44px; height:44px; border-radius:50%; background:linear-gradient(140deg,#4B3BFF,#22D3EE); display:flex; align-items:center; justify-content:center; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; color:#fff;">MR</span>
+          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px;">Maya Rowen</span><span style="font-size:13px; color:#6A6A74;">Head of Growth, Peakline</span></div>
+        </div>
+        <div style="display:flex; gap:36px; margin-top:32px;"><div style="display:flex; flex-direction:column; gap:4px;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:32px; letter-spacing:-0.02em; background:linear-gradient(135deg,#4B3BFF,#22D3EE); -webkit-background-clip:text; background-clip:text; color:transparent;">3.4x</span><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A6A74;">reply rate</span></div><div style="display:flex; flex-direction:column; gap:4px;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:32px; letter-spacing:-0.02em; background:linear-gradient(135deg,#4B3BFF,#22D3EE); -webkit-background-clip:text; background-clip:text; color:transparent;">-52%</span><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A6A74;">time to list</span></div><div style="display:flex; flex-direction:column; gap:4px;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:32px; letter-spacing:-0.02em; background:linear-gradient(135deg,#4B3BFF,#22D3EE); -webkit-background-clip:text; background-clip:text; color:transparent;">41</span><span style="font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A6A74;">meetings / mo</span></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="pricing" style="position:relative; overflow:hidden; background:#08080F;">
+    <div style="position:absolute; inset:0; z-index:0; pointer-events:none;">
+      <div style="position:absolute; width:720px; height:720px; left:-10%; top:-40%; border-radius:50%; background:radial-gradient(circle,rgba(75,59,255,.5),transparent 60%); filter:blur(20px); animation:ciq-drift 20s ease-in-out infinite;"></div>
+      <div style="position:absolute; width:640px; height:640px; right:-8%; bottom:-46%; border-radius:50%; background:radial-gradient(circle,rgba(124,58,237,.42),transparent 60%); filter:blur(20px); animation:ciq-drift 24s ease-in-out infinite reverse;"></div>
+    </div>
+    <div style="position:relative; z-index:1; max-width:1200px; margin:0 auto; padding:100px 40px; text-align:center; display:flex; flex-direction:column; align-items:center;">
+      <span style="font-family:'JetBrains Mono',monospace; font-size:14px; font-weight:500; letter-spacing:.14em; color:#A9A2FF;">FOR YOUR PIPELINE</span>
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:52px; letter-spacing:-0.035em; line-height:1.05; margin:18px 0 0; color:#fff; max-width:16em;">Stop guessing who to sell to.</h2>
+      <p style="font-size:19px; line-height:1.55; color:#B6B6C6; margin:20px 0 0; max-width:34em;">Get your competitor's customer list, then a 1:1 to build the outbound around it: the ICP, the angle, the sequence.</p>
+      <div style="margin-top:34px; display:flex; gap:14px; flex-wrap:wrap; justify-content:center;">
+        <button onclick="document.getElementById('domainInput').focus();window.scrollTo({top:0,behavior:'smooth'});" style="height:54px; padding:0 30px; border:0; border-radius:14px; background:#fff; color:#0B0B12; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px; cursor:pointer; box-shadow:0 18px 40px -16px rgba(0,0,0,.6);">Get 10 results free →</button>
+        <a href="https://meetings-eu1.hubspot.com/dben-simon" target="_blank" style="height:54px; line-height:54px; padding:0 30px; border:1px solid rgba(255,255,255,.24); border-radius:14px; background:rgba(255,255,255,.04); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px;">Book a strategy session</a>
+      </div>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6C6C7E; margin-top:22px;">No credit card · 12 sources scanned · export to CSV</span>
+    </div>
+  </div>
+</div>
+<div class="container">
   <div id="loadingSection" class="section">
     <div class="loading-wrap">
       <div class="snake-track"></div>
@@ -676,9 +710,37 @@
   </div>
 </div>
 
-<footer>
-  <div class="container">CompetitorIQ &nbsp;·&nbsp; by <a href="https://www.linkedin.com/in/danitbensimon/" target="_blank" style="color:var(--accent);text-decoration:none">Danit Ben Simon</a> &nbsp;·&nbsp; Pipeline intelligence for B2B teams</div>
-</footer>
+<div style="background:#08080F; border-top:1px solid rgba(255,255,255,.07);">
+  <div style="max-width:1200px; margin:0 auto; padding:30px 40px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px;">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <div style="width:24px; height:24px; border-radius:7px; background:linear-gradient(140deg,#4B3BFF,#8B5CF6);"></div>
+      <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; color:#fff;">CompetitorIQ</span>
+    </div>
+    <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6C6C7E;">by Danit Ben Simon · Pipeline intelligence for B2B GTM</span>
+  </div>
+</div>
+
+
+<script>
+  (async function(){
+    try{
+      var idx = await fetch('/lists-index.json').then(function(r){return r.ok?r.json():[];});
+      var grid = document.getElementById('ciqLists'); if(!grid) return;
+      var grads = ['140deg,#4B3BFF,#7C3AED','140deg,#7C3AED,#22D3EE','140deg,#4B3BFF,#22D3EE','140deg,#8B5CF6,#4B3BFF','140deg,#22D3EE,#4B3BFF'];
+      grid.innerHTML = idx.map(function(x,n){
+        var nm = x.name ? x.name.charAt(0).toUpperCase()+x.name.slice(1) : x.slug;
+        var mono = nm.slice(0,2);
+        var g = grads[n % grads.length];
+        return '<a class="ciq-listcard" href="/companies-using/'+x.slug+'/" style="text-decoration:none; position:relative; background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.1); border-radius:18px; padding:26px; display:flex; flex-direction:column; gap:6px; transition:transform .2s, border-color .2s;">'
+          + '<div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;"><span style="width:38px; height:38px; border-radius:10px; background:linear-gradient('+g+'); display:flex; align-items:center; justify-content:center; font-family:\'Space Grotesk\',sans-serif; font-weight:700; font-size:15px; color:#fff;">'+mono+'</span><span style="font-family:\'JetBrains Mono\',monospace; font-size:11px; color:#8FE9F6; background:rgba(34,211,238,.1); border-radius:6px; padding:3px 8px;">verified</span></div>'
+          + '<h3 style="font-family:\'Space Grotesk\',sans-serif; font-weight:600; font-size:19px; color:#fff; margin:0; letter-spacing:-0.01em;">Companies using '+nm+'</h3>'
+          + '<span style="font-family:\'JetBrains Mono\',monospace; font-size:13px; color:#8A8A98;">'+(x.domain||'')+'</span>'
+          + '<span style="margin-top:12px; font-family:\'Space Grotesk\',sans-serif; font-weight:600; font-size:14px; color:#8B8BFF;">View the full list →</span>'
+          + '</a>';
+      }).join('');
+    }catch(e){}
+  })();
+</script>
 
 <script>
   let currentJobId = null;
@@ -1080,8 +1142,4 @@
   })();
 </script>
 </body>
-  </html>
- 
- 
- 
- 
+</html>
