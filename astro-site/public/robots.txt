@@ -25,4 +25,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://competitorcustomer.com/sitemap.xml
+Sitemap: https://competitorcustomer.com/sitemap-index.xml
