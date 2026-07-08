@@ -22,61 +22,28 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
     <style>
-      :root { --ink:#eef2f9; --muted:#8b95ab; --line:#1e2638; --brand:#4a9eff; --brand2:#7db8ff; --bg:#070b14; --card:#0d1322; }
-      * { box-sizing:border-box; }
-      body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); line-height:1.6; }
-      main { max-width:960px; margin:0 auto; padding:2rem 1.25rem 4rem; }
-      header.site { border-bottom:1px solid var(--line); background:var(--bg); }
-      header.site .inner { max-width:960px; margin:0 auto; padding:.9rem 1.25rem; display:flex; justify-content:space-between; align-items:center; }
-      header.site a.logo { color:var(--ink); text-decoration:none; font-weight:800; letter-spacing:.12em; text-transform:uppercase; font-size:.95rem; }
-      header.site a.logo::before { content:""; display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--brand); margin-right:.55rem; vertical-align:middle; }
-      header.site .byline { color:var(--muted); font-size:.85rem; }
-      header.site .byline a { color:var(--brand); text-decoration:none; font-weight:600; }
-      h1 { font-size:2.2rem; line-height:1.15; margin:.5rem 0 1rem; font-weight:800; }
-      h1 em, .accent { font-style:normal; color:var(--brand); background:linear-gradient(90deg,var(--brand),var(--brand2)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
-      h2 { margin-top:2.5rem; font-weight:700; }
-      a { color:var(--brand); }
-      table { width:100%; border-collapse:collapse; font-size:.95rem; }
-      th, td { text-align:left; padding:.55rem .6rem; border-bottom:1px solid var(--line); }
-      th { background:var(--card); font-weight:600; color:var(--muted); text-transform:uppercase; font-size:.72rem; letter-spacing:.06em; }
-      .grade-A { color:#34d399; font-weight:700; }
-      .grade-B { color:#fbbf24; font-weight:700; }
-      .grade-C { color:#f87171; font-weight:700; }
-      .muted { color:var(--muted); }
-      .gate { position:relative; margin-top:-1px; }
-      .gate .fade { position:absolute; top:-140px; left:0; right:0; height:140px; background:linear-gradient(transparent, var(--bg)); pointer-events:none; }
-      .gate-card { border:1px solid var(--line); border-radius:14px; padding:2rem; text-align:center; background:var(--card); box-shadow:0 8px 24px rgba(0,0,0,.35); }
-      .gate-card input[type=email] { padding:.7rem .9rem; border:1px solid var(--line); border-radius:8px; width:min(320px,100%); font-size:1rem; background:#0a1020; color:var(--ink); }
-      .gate-card button { padding:.7rem 1.4rem; border:0; border-radius:8px; background:linear-gradient(90deg,#2f7fe8,var(--brand2)); color:#fff; font-size:1rem; font-weight:700; cursor:pointer; }
-      details { border-bottom:1px solid var(--line); padding:.75rem 0; }
-      summary { cursor:pointer; font-weight:600; }
-      input[type=search] { background:#0a1020; color:var(--ink); border:1px solid var(--line) !important; }
-      footer.site { border-top:1px solid var(--line); margin-top:3rem; }
-      footer.site .inner { max-width:960px; margin:0 auto; padding:1.5rem 1.25rem; color:var(--muted); font-size:.9rem; }
-      /* ui-ux-pro-max: accessibility + interaction rules */
-      :focus-visible { outline:2px solid var(--brand); outline-offset:2px; border-radius:4px; }
-      a, button, summary, input[type=search], [role=button] { cursor:pointer; }
-      button, .dl-btn, .gate-card button { min-height:44px; }
-      html { scroll-behavior:smooth; }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: #FAFAFC; color: #0B0B12; font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
+      a { color: #4B3BFF; text-decoration: none; }
+      a:hover { color: #3324D6; }
+      ::selection { background: #DED9FF; color: #0B0B12; }
+      :focus-visible { outline: 2px solid #4B3BFF; outline-offset: 2px; border-radius: 6px; }
+      button, a, summary, input, [role=button] { cursor: pointer; }
+      html { scroll-behavior: smooth; }
+      @keyframes ciq-drift { 0% { transform: translate(0,0) scale(1); } 50% { transform: translate(3%,-3%) scale(1.06); } 100% { transform: translate(0,0) scale(1); } }
+      @keyframes ciq-rowin { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: none; } }
+      @keyframes ciq-float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-8px); } }
       @media (prefers-reduced-motion: reduce) {
-        *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; scroll-behavior:auto !important; }
+        *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
       }
     </style>
-    <!-- HubSpot tracking -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="https://js.hs-scripts.com/147616801.js"></script>
     <slot name="head" />
   </head>
   <body>
-    <header class="site">
-      <div class="inner">
-        <a class="logo" href="/">CompetitorIQ</a>
-        <nav class="byline">by <a href="/">Danit Ben Simon</a> · AI Growth &nbsp;|&nbsp; <a href="/" style="font-weight:400">All competitor lists</a></nav>
-      </div>
-    </header>
-    <main><slot /></main>
-    <footer class="site">
-      <div class="inner">© {new Date().getFullYear()} CompetitorIQ — customer lists built from public signals. Not affiliated with the companies listed.</div>
-    </footer>
+    <slot />
   </body>
 </html>
