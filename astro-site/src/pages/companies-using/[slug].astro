@@ -111,6 +111,8 @@ const datasetJsonLd = {
         <span class="gate-badge">⤓ .XLSX</span>
         <h2>Download the full list</h2>
         <p class="muted gate-sub">All {company_count} companies — domains, confidence grades, evidence quotes &amp; source links, ready to sort and filter.</p>
+        <button id="ciq-dl-now" class="dl-btn">⬇ Download the spreadsheet (.xlsx)</button>
+        <div class="gate-or"><span>or get the link by email</span></div>
         <div id="ciq-form"><div class="hs-form-frame" data-region="eu1" data-form-id="1642d998-a0e2-493f-8e8b-2a6538736043" data-portal-id="147616801"></div></div>
         <div id="ciq-download" data-slug={competitor.slug} style="display:none;margin-top:1rem">
           <p style="font-weight:700;color:#34d399;margin:.4rem 0">✓ Thanks — your spreadsheet is downloading.</p>
@@ -157,14 +159,20 @@ const datasetJsonLd = {
     .list-main{min-width:0;}
     .list-main #companies{margin:0;}
     .list-main #companies{table-layout:fixed;width:100%;}
-    #companies th:nth-child(1),#companies td:nth-child(1){width:19%;}
-    #companies th:nth-child(2),#companies td:nth-child(2){width:19%;}
+    #companies th:nth-child(1),#companies td:nth-child(1){width:18%;}
+    #companies th:nth-child(2),#companies td:nth-child(2){width:18%;}
     #companies th:nth-child(3),#companies td:nth-child(3){width:8%;}
-    #companies th:nth-child(4),#companies td:nth-child(4){width:46%;}
-    #companies th:nth-child(5),#companies td:nth-child(5){width:8%;}
+    #companies th:nth-child(4),#companies td:nth-child(4){width:43%;}
+    #companies th:nth-child(5),#companies td:nth-child(5){width:13%;white-space:nowrap;text-align:center;}
+    #companies td:nth-child(5) a{white-space:nowrap;}
     #companies td:nth-child(2) a{word-break:break-word;}
     .gate-aside{position:sticky;top:1rem;}
-    .gate-card.gate-side{padding:1.3rem 1.3rem 1.15rem;text-align:left;border-radius:16px;background:linear-gradient(180deg,#0f1a2e 0%,#0c1220 100%);border:1px solid #26344f;box-shadow:0 14px 34px rgba(0,0,0,.55);}
+    .gate-card.gate-side{padding:1.4rem 1.35rem 1.2rem;text-align:left;border-radius:16px;background:linear-gradient(180deg,#1b2c4f 0%,#152340 100%);border:1px solid #3a5488;box-shadow:0 16px 38px rgba(0,0,0,.55);}
+    .gate-side h2,.gate-side .gate-sub,.gate-side .gate-fine{color:#eef2f9;}
+    .dl-btn{display:block;width:100%;padding:.8rem 1rem;border:0;border-radius:10px;background:linear-gradient(90deg,#2f7fe8,#7db8ff);color:#fff;font-size:.95rem;font-weight:800;cursor:pointer;box-shadow:0 6px 18px rgba(47,127,232,.4);transition:transform .15s,box-shadow .15s;}
+    .dl-btn:hover{transform:translateY(-1px);box-shadow:0 10px 24px rgba(47,127,232,.55);}
+    .gate-or{display:flex;align-items:center;gap:.6rem;margin:.9rem 0 .6rem;color:#9fb2d0;font-size:.75rem;}
+    .gate-or::before,.gate-or::after{content:"";flex:1;height:1px;background:#3a5488;}
     .gate-badge{display:inline-block;font-size:.68rem;font-weight:800;letter-spacing:.06em;color:#7db8ff;background:rgba(74,158,255,.12);border:1px solid rgba(74,158,255,.35);padding:.24rem .6rem;border-radius:999px;margin-bottom:.65rem;}
     .gate-side h2{margin:.1rem 0 .35rem;font-size:1.12rem;line-height:1.25;}
     .gate-side .gate-sub{font-size:.83rem;line-height:1.55;margin:0 0 .95rem;}
@@ -220,7 +228,7 @@ const datasetJsonLd = {
           if(f)f.style.display='none'; if(d)d.style.display='block'; setTimeout(doDownload,300);
         } }catch(_){}
       });
-      document.addEventListener('click',function(e){ if(e.target&&e.target.id==='ciq-dl-again'){doDownload();} });
+      document.addEventListener('click',function(e){ if(e.target&&(e.target.id==='ciq-dl-again'||e.target.id==='ciq-dl-now')){doDownload();} });
     })();
   </script>
 </Base>
