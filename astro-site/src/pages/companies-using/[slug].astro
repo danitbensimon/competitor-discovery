@@ -21,6 +21,8 @@ const updated = new Date(generated_at).toLocaleDateString('en-US', { year: 'nume
 const nA = companies.filter((c) => c.grade === 'A').length;
 const nB = companies.filter((c) => c.grade === 'B').length;
 const nC = companies.filter((c) => c.grade === 'C').length;
+const notable = companies.filter((c) => c.grade === 'A').slice(0, 10).map((c) => c.name);
+const notableStr = (notable.length ? notable : companies.slice(0, 10).map((c) => c.name)).join(', ');
 
 const gated = [
   { name: 'OneTrust', sub: 'coming soon' },
@@ -41,15 +43,21 @@ const faqs = [
   { q: `How many companies use ${competitor.name}?`, a: `CompetitorIQ has verified ${company_count} named companies using ${competitor.name} as of ${updated}. Every company on this page is backed by a public, linked source; the vendor's total customer count is typically much larger.` },
   { q: `How do you know these companies use ${competitor.name}?`, a: `Every row links to a public source: a case study on ${competitor.domain}, the company's own blog or trust page, an auditor or partner case study, a job posting requiring ${competitor.name} experience, or a named review. Rows are graded A (multiple independent signals), B (one direct piece of evidence) or C (technographic databases only).` },
   { q: 'How fresh is this data?', a: `This list was last verified on ${updated}. The discovery pipeline re-runs regularly; companies that switch away are removed and new adopters are added.` },
-  { q: 'Can I download the full list?', a: `Yes — the full list is free on this page. Download it instantly as CSV or Excel, with domains, confidence grades, evidence and source links.` },
+  { q: 'Can I download the full list?', a: `Yes — the full list is free on this page. Download it instantly as CSV, or as Excel after entering your work email, with domains, confidence grades, evidence and source links.` },
+  { q: `How is this different from a technographic database like BuiltWith or Enlyft?`, a: `Every company here is backed by a linked public source — a case study, trust page, job posting or named review — not just a tracking-script detection. Only grade C rows come from technographic databases, and they are labelled as such.` },
 ];
+if (notable.length) {
+  faqs.splice(1, 0, { q: `Who are the most notable companies using ${competitor.name}?`, a: `High-confidence (grade A) verified ${competitor.name} customers include ${notable.join(', ')}. Each has multiple independent public signals behind it.` });
+}
 const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
 const datasetJsonLd = { '@context': 'https://schema.org', '@type': 'Dataset', name: `Companies using ${competitor.name} — ${company_count} verified customers`, description, url: new URL(Astro.url.pathname, Astro.site).toString(), dateModified: generated_at, license: 'https://creativecommons.org/licenses/by/4.0/', creator: { '@type': 'Organization', name: 'CompetitorIQ', url: 'https://competitorcustomer.com' }, keywords: [`${competitor.name} customers`, `companies using ${competitor.name}`, `${competitor.name} customer list`] };
+const itemListJsonLd = { '@context': 'https://schema.org', '@type': 'ItemList', name: `Companies using ${competitor.name}`, numberOfItems: company_count, itemListElement: companies.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c.name, url: c.domain ? `https://${c.domain}` : undefined })) };
 const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, companies });
 ---
 <Base title={title} description={description}>
   <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} slot="head" />
   <script type="application/ld+json" set:html={JSON.stringify(datasetJsonLd)} slot="head" />
+  <script type="application/ld+json" set:html={JSON.stringify(itemListJsonLd)} slot="head" />
 
   <div style="position:relative; overflow:hidden; min-height:100%;">
 
@@ -86,7 +94,8 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
         <span>every row has a public source</span><span style="color:#D0D0D6;">·</span>
         <span style="color:#4B3BFF;">CC BY 4.0</span>
       </div>
-      <p style="font-size:17px; line-height:1.6; color:#54545F; margin:22px 0 0; max-width:52em;">A full, free list of companies verified to use <strong style="color:#0B0B12; font-weight:600;">{competitor.name}</strong> ({competitor.domain}). Unlike technographic databases, every company here is backed by a linked public source — case studies, customer blogs, partner and auditor case studies, job postings and named reviews.</p>
+      <p style="font-size:18px; line-height:1.55; color:#0B0B12; margin:22px 0 0; max-width:54em; font-weight:600;">As of {updated}, {company_count} named companies are verified to use {competitor.name} ({competitor.domain}){notable.length ? `, including ${notable.slice(0, 8).join(', ')}` : ''}. Every company below is backed by a public source.</p>
+      <p style="font-size:16px; line-height:1.6; color:#54545F; margin:12px 0 0; max-width:52em;">This is a full, free list. Unlike technographic databases, every company here is backed by a linked public source — case studies, customer blogs, partner and auditor case studies, job postings and named reviews — and graded A (multiple independent signals), B (one direct piece of evidence) or C (technographic detection only).</p>
       <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:26px;">
         <div style="display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #ECECF1; border-radius:14px; padding:14px 18px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
           <span style="width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">A</span>
