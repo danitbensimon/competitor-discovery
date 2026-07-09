@@ -26,7 +26,6 @@ const notableStr = (notable.length ? notable : companies.slice(0, 10).map((c) =>
 
 const gated = [
   { name: 'OneTrust', sub: 'coming soon' },
-  { name: 'Sprinto', sub: 'coming soon' },
   { name: 'Thoropass', sub: 'coming soon' },
 ];
 
@@ -43,7 +42,7 @@ const faqs = [
   { q: `How many companies use ${competitor.name}?`, a: `CompetitorIQ has verified ${company_count} named companies using ${competitor.name} as of ${updated}. Every company on this page is backed by a public, linked source; the vendor's total customer count is typically much larger.` },
   { q: `How do you know these companies use ${competitor.name}?`, a: `Every row links to a public source: a case study on ${competitor.domain}, the company's own blog or trust page, an auditor or partner case study, a job posting requiring ${competitor.name} experience, or a named review. Rows are graded A (multiple independent signals), B (one direct piece of evidence) or C (technographic databases only).` },
   { q: 'How fresh is this data?', a: `This list was last verified on ${updated}. The discovery pipeline re-runs regularly; companies that switch away are removed and new adopters are added.` },
-  { q: 'Can I download the full list?', a: `Yes — the full list is free on this page. Download it instantly as CSV, or as Excel after entering your work email, with domains, confidence grades, evidence and source links.` },
+  { q: 'Can I download the full list?', a: `Yes, the full list is free to download on this page as CSV or Excel after leaving your work email and LinkedIn, with domains, confidence grades, evidence and source links.` },
   { q: `How is this different from a technographic database like BuiltWith or Enlyft?`, a: `Every company here is backed by a linked public source — a case study, trust page, job posting or named review — not just a tracking-script detection. Only grade C rows come from technographic databases, and they are labelled as such.` },
 ];
 if (notable.length) {

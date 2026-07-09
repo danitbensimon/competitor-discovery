@@ -1,0 +1,339 @@
+{
+  "competitor": {
+    "name": "Sprinto",
+    "slug": "sprinto",
+    "domain": "sprinto.com"
+  },
+  "companies": [
+    {
+      "name": "Axslogic",
+      "domain": "axslogic.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Axslogic",
+      "source_url": "https://sprinto.com/customers/axslogic/",
+      "confidence": "high"
+    },
+    {
+      "name": "Fyle",
+      "domain": "fylehq.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Fyle",
+      "source_url": "https://sprinto.com/customers/fyle/",
+      "confidence": "high"
+    },
+    {
+      "name": "Shipsy",
+      "domain": "shipsy.io",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Shipsy",
+      "source_url": "https://sprinto.com/customers/shipsy/",
+      "confidence": "high"
+    },
+    {
+      "name": "Scribble Data",
+      "domain": "scribbledata.io",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Scribble Data",
+      "source_url": "https://sprinto.com/customers/scribble-data/",
+      "confidence": "high"
+    },
+    {
+      "name": "Nimblebox",
+      "domain": "nimblebox.ai",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Nimblebox",
+      "source_url": "https://sprinto.com/customers/nimblebox/",
+      "confidence": "high"
+    },
+    {
+      "name": "ZapScale",
+      "domain": "zapscale.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Zapscale",
+      "source_url": "https://sprinto.com/customers/zapscale/",
+      "confidence": "high"
+    },
+    {
+      "name": "Infinitedata",
+      "domain": "infinitedata.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Infinitedata",
+      "source_url": "https://sprinto.com/customers/infinitedata/",
+      "confidence": "high"
+    },
+    {
+      "name": "Zipy",
+      "domain": "zipy.ai",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Zipy",
+      "source_url": "https://sprinto.com/customers/zipy/",
+      "confidence": "high"
+    },
+    {
+      "name": "Dassana",
+      "domain": "dassana.io",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Dassana",
+      "source_url": "https://sprinto.com/customers/dassana/",
+      "confidence": "high"
+    },
+    {
+      "name": "Equalture",
+      "domain": "equalture.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Equalture",
+      "source_url": "https://sprinto.com/customers/equalture/",
+      "confidence": "high"
+    },
+    {
+      "name": "Phyllo",
+      "domain": "getphyllo.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Phyllo",
+      "source_url": "https://sprinto.com/customers/phyllo/",
+      "confidence": "high"
+    },
+    {
+      "name": "Happay",
+      "domain": "happay.in",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Happay",
+      "source_url": "https://sprinto.com/customers/happay/",
+      "confidence": "high"
+    },
+    {
+      "name": "Intellect",
+      "domain": "intellect.co",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Intellect",
+      "source_url": "https://sprinto.com/customers/intellect/",
+      "confidence": "high"
+    },
+    {
+      "name": "Atomicwork",
+      "domain": "atomicwork.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Atomicwork",
+      "source_url": "https://sprinto.com/customers/atomicwork/",
+      "confidence": "high"
+    },
+    {
+      "name": "Carestack",
+      "domain": "carestack.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Carestack",
+      "source_url": "https://sprinto.com/customers/carestack/",
+      "confidence": "high"
+    },
+    {
+      "name": "Neopharma",
+      "domain": "neopharma.ae",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Neopharma",
+      "source_url": "https://sprinto.com/customers/neopharma/",
+      "confidence": "high"
+    },
+    {
+      "name": "Kin Analytics",
+      "domain": "kin-analytics.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Kin Analytics",
+      "source_url": "https://sprinto.com/customers/kin-analytics/",
+      "confidence": "high"
+    },
+    {
+      "name": "Bizongo",
+      "domain": "bizongo.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Bizongo",
+      "source_url": "https://sprinto.com/customers/bizongo/",
+      "confidence": "high"
+    },
+    {
+      "name": "Cellpoint Digital",
+      "domain": "cellpointdigital.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Cellpoint Digital",
+      "source_url": "https://sprinto.com/customers/cellpoint-digital/",
+      "confidence": "high"
+    },
+    {
+      "name": "Position2",
+      "domain": "position2.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Position2",
+      "source_url": "https://sprinto.com/customers/position2/",
+      "confidence": "high"
+    },
+    {
+      "name": "Enoah",
+      "domain": "enoah.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Enoah",
+      "source_url": "https://sprinto.com/customers/enoah/",
+      "confidence": "high"
+    },
+    {
+      "name": "Noosa",
+      "domain": "noosa.io",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Noosa",
+      "source_url": "https://sprinto.com/customers/noosa/",
+      "confidence": "high"
+    },
+    {
+      "name": "Kodif",
+      "domain": "kodif.ai",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Kodif",
+      "source_url": "https://sprinto.com/customers/kodif/",
+      "confidence": "high"
+    },
+    {
+      "name": "Uncover",
+      "domain": "uncover.so",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Uncover",
+      "source_url": "https://sprinto.com/customers/uncover/",
+      "confidence": "high"
+    },
+    {
+      "name": "Ferve Tickets",
+      "domain": "fervetickets.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Ferve Tickets X Kantanna",
+      "source_url": "https://sprinto.com/customers/ferve-tickets-x-kantanna/",
+      "confidence": "high"
+    },
+    {
+      "name": "Kantanna",
+      "domain": "kantanna.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Ferve Tickets X Kantanna",
+      "source_url": "https://sprinto.com/customers/ferve-tickets-x-kantanna/",
+      "confidence": "high"
+    },
+    {
+      "name": "Preskale",
+      "domain": "preskale.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Preskale",
+      "source_url": "https://sprinto.com/customers/preskale/",
+      "confidence": "high"
+    },
+    {
+      "name": "Zeto",
+      "domain": "zeto.io",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Zeto",
+      "source_url": "https://sprinto.com/customers/zeto/",
+      "confidence": "high"
+    },
+    {
+      "name": "Hubengage",
+      "domain": "hubengage.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Hubengage",
+      "source_url": "https://sprinto.com/customers/hubengage/",
+      "confidence": "high"
+    },
+    {
+      "name": "Nitropack",
+      "domain": "nitropack.io",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Nitropack",
+      "source_url": "https://sprinto.com/customers/nitropack/",
+      "confidence": "high"
+    },
+    {
+      "name": "Apty",
+      "domain": "apty.io",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Apty",
+      "source_url": "https://sprinto.com/customers/apty/",
+      "confidence": "high"
+    },
+    {
+      "name": "MoveInSync",
+      "domain": "moveinsync.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Moveinsync",
+      "source_url": "https://sprinto.com/customers/moveinsync/",
+      "confidence": "high"
+    },
+    {
+      "name": "Tangelo",
+      "domain": "tangelo.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Tangelo",
+      "source_url": "https://sprinto.com/customers/tangelo/",
+      "confidence": "high"
+    },
+    {
+      "name": "Shellkode",
+      "domain": "shellkode.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Shellkode",
+      "source_url": "https://sprinto.com/customers/shellkode/",
+      "confidence": "high"
+    },
+    {
+      "name": "Superbio",
+      "domain": "superbio.ai",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Superbio",
+      "source_url": "https://sprinto.com/customers/superbio/",
+      "confidence": "high"
+    },
+    {
+      "name": "Transform9",
+      "domain": "transform9.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Transform9",
+      "source_url": "https://sprinto.com/customers/transform9/",
+      "confidence": "high"
+    },
+    {
+      "name": "Omnivista",
+      "domain": "omnivista.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Omnivista",
+      "source_url": "https://sprinto.com/customers/omnivista/",
+      "confidence": "high"
+    },
+    {
+      "name": "Dataplant",
+      "domain": "dataplant.io",
+      "grade": "C",
+      "evidence": "Sprinto customer case study: Dataplant",
+      "source_url": "https://sprinto.com/customers/dataplant/",
+      "confidence": "high"
+    },
+    {
+      "name": "Mesmerise",
+      "domain": "mesmerise.com",
+      "grade": "C",
+      "evidence": "Sprinto customer case study: Mesmerise",
+      "source_url": "https://sprinto.com/customers/mesmerise/",
+      "confidence": "high"
+    },
+    {
+      "name": "Siterocketlabs",
+      "domain": "siterocketlabs.com",
+      "grade": "C",
+      "evidence": "Sprinto customer case study: Siterocketlabs",
+      "source_url": "https://sprinto.com/customers/siterocketlabs/",
+      "confidence": "high"
+    },
+    {
+      "name": "Sensiba",
+      "domain": "sensiba.com",
+      "grade": "C",
+      "evidence": "Sprinto customer case study: Sensiba",
+      "source_url": "https://sprinto.com/customers/sensiba/",
+      "confidence": "high"
+    }
+  ],
+  "generated_at": "2026-07-09T20:13:35Z",
+  "company_count": 41
+}
