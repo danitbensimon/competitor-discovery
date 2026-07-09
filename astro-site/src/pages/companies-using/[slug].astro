@@ -215,9 +215,9 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
       <div style="position:relative; z-index:1; padding:44px 40px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
         <div style="max-width:34em;">
           <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:28px; letter-spacing:-0.02em; color:#fff; margin:0;">Download the <span style="background:linear-gradient(115deg,#8B8BFF,#8FE9F6); -webkit-background-clip:text; background-clip:text; color:transparent;">full list</span></h2>
-          <p style="font-size:16px; color:#B6B6C6; margin:12px 0 0;">Drop a competitor domain and get every company using it, each with a public source. 10 results free, no signup.</p>
+          <p style="font-size:16px; color:#B6B6C6; margin:12px 0 0;">Every company on this page as a formatted Excel file: graded, with the public source behind each row.</p>
         </div>
-        <a href="/#demo" style="height:52px; line-height:52px; padding:0 28px; border-radius:13px; background:#fff; color:#0B0B12; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px; white-space:nowrap; box-shadow:0 18px 40px -16px rgba(0,0,0,.6);">Build your list free →</a>
+        <button id="ciq-xlsx-bottom" style="height:52px; padding:0 28px; border:0; cursor:pointer; border-radius:13px; background:#fff; color:#0B0B12; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px; white-space:nowrap; box-shadow:0 18px 40px -16px rgba(0,0,0,.6);">↓ Download the Excel</button>
       </div>
     </div>
   </div>
@@ -321,12 +321,20 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
       var GATE_KEY = 'ciqExcelEmail';
       var gate = document.getElementById('ciq-gate');
       function openXlsxGate(){
-        if (localStorage.getItem(GATE_KEY)) { doXlsx(); }
-        else { gate.style.display = 'flex'; setTimeout(function(){ var e=document.getElementById('ciq-email'); if(e) e.focus(); }, 50); }
+        // Always show the form. A stored email only prefills the field;
+        // every download still goes through the gate.
+        gate.style.display = 'flex';
+        var e = document.getElementById('ciq-email');
+        var stored = null;
+        try { stored = localStorage.getItem(GATE_KEY); } catch(_){}
+        if (e && stored && !e.value) e.value = stored;
+        setTimeout(function(){ if(e) e.focus(); }, 50);
       }
       document.getElementById('ciq-xlsx').addEventListener('click', openXlsxGate);
       var xlsxSide = document.getElementById('ciq-xlsx-side');
       if (xlsxSide) xlsxSide.addEventListener('click', openXlsxGate);
+      var xlsxBottom = document.getElementById('ciq-xlsx-bottom');
+      if (xlsxBottom) xlsxBottom.addEventListener('click', openXlsxGate);
       document.getElementById('ciq-gate-close').addEventListener('click', function(){ gate.style.display = 'none'; });
       gate.addEventListener('click', function(e){ if (e.target === gate) gate.style.display = 'none'; });
       document.getElementById('ciq-gate-submit').addEventListener('click', function(){
