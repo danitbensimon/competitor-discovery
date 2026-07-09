@@ -186,9 +186,9 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
         <div style="position:relative; overflow:hidden; border-radius:18px; background:#08080F; padding:22px;">
           <div style="position:absolute; inset:0; opacity:.8; pointer-events:none;"><div style="position:absolute; width:320px; height:320px; left:-20%; top:-40%; border-radius:50%; background:radial-gradient(circle,rgba(75,59,255,.5),transparent 60%); filter:blur(16px);"></div></div>
           <div style="position:relative;">
-            <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; color:#fff; margin:0;">Find your own list</h3>
-            <p style="font-size:13.5px; line-height:1.5; color:#B6B6C6; margin:8px 0 16px;">Drop any competitor's domain and get the companies already using them — each with a public source.</p>
-            <a href="/#demo" style="display:block; text-align:center; width:100%; height:44px; line-height:44px; border-radius:11px; background:#fff; color:#0B0B12; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px;">Build your list free →</a>
+            <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; color:#fff; margin:0;">Download the full list</h3>
+            <p style="font-size:13.5px; line-height:1.5; color:#B6B6C6; margin:8px 0 16px;">Get every company on this page as a formatted Excel file: graded, with the public source behind each row. Free, just leave an email.</p>
+            <button id="ciq-xlsx-side" style="display:block; text-align:center; width:100%; height:44px; border:0; cursor:pointer; border-radius:11px; background:#fff; color:#0B0B12; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px;">↓ Download the Excel</button>
           </div>
         </div>
       </aside>
@@ -318,10 +318,13 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
       });
       var GATE_KEY = 'ciqExcelEmail';
       var gate = document.getElementById('ciq-gate');
-      document.getElementById('ciq-xlsx').addEventListener('click', function(){
+      function openXlsxGate(){
         if (localStorage.getItem(GATE_KEY)) { doXlsx(); }
         else { gate.style.display = 'flex'; setTimeout(function(){ var e=document.getElementById('ciq-email'); if(e) e.focus(); }, 50); }
-      });
+      }
+      document.getElementById('ciq-xlsx').addEventListener('click', openXlsxGate);
+      var xlsxSide = document.getElementById('ciq-xlsx-side');
+      if (xlsxSide) xlsxSide.addEventListener('click', openXlsxGate);
       document.getElementById('ciq-gate-close').addEventListener('click', function(){ gate.style.display = 'none'; });
       gate.addEventListener('click', function(e){ if (e.target === gate) gate.style.display = 'none'; });
       document.getElementById('ciq-gate-submit').addEventListener('click', function(){
