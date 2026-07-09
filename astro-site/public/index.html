@@ -24,7 +24,11 @@
   .ciq-src{flex:none;font-family:'JetBrains Mono',monospace;font-size:12px;color:#4A4A55;border:1px solid #E0E0E7;background:rgba(255,255,255,.7);border-radius:999px;padding:6px 13px;white-space:nowrap;}
   @media (prefers-reduced-motion:reduce){.ciq-marquee-track{animation:none;}}
   .ciq-card:hover{transform:translateY(-4px);box-shadow:0 26px 52px -30px rgba(75,59,255,.35);}
-  .ciq-listcard:hover{transform:translateY(-4px);border-color:rgba(75,59,255,.6)!important;}
+  .ciq-listcard:hover{transform:translateY(-6px);border-color:rgba(139,92,246,.7)!important;box-shadow:0 26px 54px -24px rgba(75,59,255,.55);}
+  .ciq-listcard .ciq-lc-arrow{display:inline-block;transition:transform .25s;}
+  .ciq-listcard:hover .ciq-lc-arrow{transform:translateX(5px);}
+  .ciq-listcard .ciq-lc-icon{transition:transform .25s;}
+  .ciq-listcard:hover .ciq-lc-icon{transform:scale(1.1) rotate(-4deg);}
   @media(max-width:960px){#searchSection .ciq-hero{grid-template-columns:1fr!important;} #searchSection .ciq-2{grid-template-columns:1fr!important;} #searchSection .ciq-3{grid-template-columns:1fr!important;} #searchSection .ciq-4{grid-template-columns:1fr 1fr!important;}}
 </style>
 <style>
@@ -744,11 +748,14 @@
         var nm = x.name ? x.name.charAt(0).toUpperCase()+x.name.slice(1) : x.slug;
         var mono = nm.slice(0,2);
         var g = grads[n % grads.length];
-        return '<a class="ciq-listcard" href="/companies-using/'+x.slug+'/" style="text-decoration:none; position:relative; background:linear-gradient(180deg,#1B1B28,#13131D); border:1px solid rgba(255,255,255,.16); border-radius:18px; padding:26px; display:flex; flex-direction:column; gap:6px; transition:transform .2s, border-color .2s;">'
-          + '<div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;"><span style="width:38px; height:38px; border-radius:10px; background:linear-gradient('+g+'); display:flex; align-items:center; justify-content:center; font-family:\'Space Grotesk\',sans-serif; font-weight:700; font-size:15px; color:#fff;">'+mono+'</span><span style="font-family:\'JetBrains Mono\',monospace; font-size:11px; color:#8FE9F6; background:rgba(34,211,238,.1); border-radius:6px; padding:3px 8px;">verified</span></div>'
-          + '<h3 style="font-family:\'Space Grotesk\',sans-serif; font-weight:600; font-size:19px; color:#fff; margin:0; letter-spacing:-0.01em;">Companies using '+nm+'</h3>'
-          + '<span style="font-family:\'JetBrains Mono\',monospace; font-size:13px; color:#8A8A98;">'+(x.domain||'')+'</span>'
-          + '<span style="margin-top:12px; font-family:\'Space Grotesk\',sans-serif; font-weight:600; font-size:14px; color:#8B8BFF;">View the full list →</span>'
+        var countChip = x.count ? '<span style="font-family:\'JetBrains Mono\',monospace; font-size:11px; color:#C9C9DE; background:rgba(255,255,255,.08); border-radius:6px; padding:3px 8px;">'+x.count+' companies</span>' : '';
+        return '<a class="ciq-listcard" href="/companies-using/'+x.slug+'/" style="text-decoration:none; position:relative; overflow:hidden; background:linear-gradient(180deg,#262637,#1A1A26); border:1px solid rgba(255,255,255,.22); border-radius:18px; padding:26px; display:flex; flex-direction:column; gap:6px; transition:transform .25s, border-color .25s, box-shadow .25s;">'
+          + '<span style="position:absolute; left:0; right:0; top:0; height:3px; background:linear-gradient('+g+');"></span>'
+          + '<span style="position:absolute; width:220px; height:220px; right:-70px; top:-90px; border-radius:50%; background:radial-gradient(circle,rgba(124,58,237,.3),transparent 65%); pointer-events:none;"></span>'
+          + '<div style="position:relative; display:flex; align-items:center; gap:10px; margin-bottom:8px;"><span class="ciq-lc-icon" style="width:38px; height:38px; border-radius:10px; background:linear-gradient('+g+'); display:flex; align-items:center; justify-content:center; font-family:\'Space Grotesk\',sans-serif; font-weight:700; font-size:15px; color:#fff; box-shadow:0 10px 22px -8px rgba(75,59,255,.7);">'+mono+'</span><span style="font-family:\'JetBrains Mono\',monospace; font-size:11px; color:#8FE9F6; background:rgba(34,211,238,.12); border-radius:6px; padding:3px 8px;">verified</span>'+countChip+'</div>'
+          + '<h3 style="position:relative; font-family:\'Space Grotesk\',sans-serif; font-weight:600; font-size:19px; color:#fff; margin:0; letter-spacing:-0.01em;">Companies using '+nm+'</h3>'
+          + '<span style="position:relative; font-family:\'JetBrains Mono\',monospace; font-size:13px; color:#9C9CAC;">'+(x.domain||'')+'</span>'
+          + '<span style="position:relative; margin-top:12px; font-family:\'Space Grotesk\',sans-serif; font-weight:600; font-size:14px; color:#8B8BFF;">View the full list <span class="ciq-lc-arrow">→</span></span>'
           + '</a>';
       }).join('');
     }catch(e){}
