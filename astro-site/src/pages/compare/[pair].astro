@@ -1,0 +1,139 @@
+---
+import Base from '../../layouts/Base.astro';
+
+export async function getStaticPaths() {
+  const files = import.meta.glob('../../data/competitors/*.json', { eager: true });
+  const brands = Object.values(files);
+  const paths = [];
+  for (let i = 0; i < brands.length; i++) {
+    for (let j = i + 1; j < brands.length; j++) {
+      paths.push({ params: { pair: `${brands[i].competitor.slug}-vs-${brands[j].competitor.slug}` }, props: { a: brands[i], b: brands[j] } });
+    }
+  }
+  return paths;
+}
+
+const { a, b } = Astro.props;
+const A = a.competitor, B = b.competitor;
+const aCount = a.company_count, bCount = b.company_count;
+const norm = (d) => (d || '').toLowerCase().replace(/^www\./, '');
+const bByDomain = new Map(b.companies.filter((c) => c.domain).map((c) => [norm(c.domain), c]));
+const overlap = a.companies
+  .filter((c) => c.domain && bByDomain.has(norm(c.domain)))
+  .map((c) => ({ name: c.name, domain: c.domain, gA: c.grade, gB: bByDomain.get(norm(c.domain)).grade }))
+  .sort((x, y) => x.name.localeCompare(y.name));
+const notableA = a.companies.filter((c) => c.grade === 'A').slice(0, 8).map((c) => c.name);
+const notableB = b.companies.filter((c) => c.grade === 'A').slice(0, 8).map((c) => c.name);
+// verified switchers: companies whose evidence names the other tool alongside a choice/switch word
+const sw = (list, other) => list.filter((c) => {
+  const e = (c.evidence || '').toLowerCase();
+  return e.includes(other.name.toLowerCase()) && /(chose|switched|over|migrat|instead of|vs\.? |versus|considered)/.test(e);
+}).map((c) => ({ name: c.name, evidence: c.evidence, source: c.source_url }));
+const switchToA = sw(a.companies, B);
+const switchToB = sw(b.companies, A);
+
+const updated = new Date(a.generated_at) > new Date(b.generated_at) ? a.generated_at : b.generated_at;
+const updatedStr = new Date(updated).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+
+const title = `${A.name} vs ${B.name}: which companies use each (${aCount} vs ${bCount} verified)`;
+const description = `A side-by-side of verified ${A.name} and ${B.name} customers: ${aCount} companies use ${A.name}, ${bCount} use ${B.name}, and ${overlap.length} are verified to use both. Every company backed by a public source.`;
+
+const faqs = [
+  { q: `Do more companies use ${A.name} or ${B.name}?`, a: `Based on publicly-sourced evidence, CompetitorIQ has verified ${aCount} named companies using ${A.name} and ${bCount} using ${B.name} as of ${updatedStr}. Each figure counts only companies with a linked public source, so both are conservative floors, not the vendors' full customer counts.` },
+  { q: `Which companies use both ${A.name} and ${B.name}?`, a: `${overlap.length} companies are verified to use both${overlap.length ? `, including ${overlap.slice(0, 8).map((o) => o.name).join(', ')}` : ''}. Each appears on both verified customer lists with its own public source.` },
+];
+if (switchToA.length) faqs.push({ q: `Which companies switched from ${B.name} to ${A.name}?`, a: `Companies whose public evidence names ${B.name} while choosing ${A.name} include ${switchToA.slice(0, 6).map((s) => s.name).join(', ')}. See each row's source for the exact quote.` });
+if (switchToB.length) faqs.push({ q: `Which companies switched from ${A.name} to ${B.name}?`, a: `Companies whose public evidence names ${A.name} while choosing ${B.name} include ${switchToB.slice(0, 6).map((s) => s.name).join(', ')}. See each row's source for the exact quote.` });
+
+const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) };
+---
+<Base title={title} description={description}>
+  <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} slot="head" />
+
+  <div style="position:relative; overflow:hidden; min-height:100%;">
+  <div style="border-bottom:1px solid #EDEDF1; background:rgba(255,255,255,.7); backdrop-filter:blur(8px);">
+    <div style="max-width:1100px; margin:0 auto; padding:20px 40px; display:flex; align-items:center; justify-content:space-between;">
+      <a href="/" style="display:flex; align-items:center; gap:11px;"><div style="width:30px; height:30px; border-radius:9px; background:linear-gradient(140deg,#4B3BFF,#8B5CF6);"></div><span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; letter-spacing:-0.02em; color:#0B0B12;">CompetitorIQ</span></a>
+      <div style="display:flex; align-items:center; gap:24px;">
+        <a href="/" style="font-size:14.5px; color:#4A4A55; font-weight:500;">All lists</a>
+        <a href="https://meetings-eu1.hubspot.com/dben-simon" target="_blank" rel="noopener" style="font-size:14.5px; color:#4B3BFF; font-weight:600;">Book a demo</a>
+        <a href="/#demo" style="height:40px; padding:0 18px; border:0; border-radius:11px; background:#0B0B12; color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; display:inline-flex; align-items:center;">Build your list free</a>
+      </div>
+    </div>
+  </div>
+
+  <div style="max-width:1100px; margin:0 auto; padding:40px 40px 80px;">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#8A8A94; margin-bottom:18px;"><a href="/" style="color:#8A8A94;">CompetitorIQ</a> / <span style="color:#4B3BFF;">{A.name} vs {B.name}</span></div>
+    <h1 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:44px; line-height:1.05; letter-spacing:-0.03em; margin:0; max-width:20em;"><span style="background:linear-gradient(115deg,#4B3BFF,#8B5CF6 60%,#22D3EE 120%); -webkit-background-clip:text; background-clip:text; color:transparent;">{A.name}</span> vs <span style="background:linear-gradient(115deg,#4B3BFF,#8B5CF6 60%,#22D3EE 120%); -webkit-background-clip:text; background-clip:text; color:transparent;">{B.name}</span>: which companies use each</h1>
+    <p style="font-size:18px; line-height:1.55; color:#0B0B12; margin:20px 0 0; max-width:54em; font-weight:600;">As of {updatedStr}, {aCount} named companies are verified to use {A.name} and {bCount} to use {B.name}. {overlap.length} companies are verified to use both{overlap.length ? `, including ${overlap.slice(0, 6).map((o) => o.name).join(', ')}` : ''}. Every company below is backed by a public source.</p>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-top:28px;">
+      {[{ c: A, cnt: aCount, data: a, not: notableA }, { c: B, cnt: bCount, data: b, not: notableB }].map((s) => (
+        <div style="background:#fff; border:1px solid #ECECF1; border-radius:16px; padding:22px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:20px; color:#0B0B12;">{s.c.name}</div>
+          <div style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:34px; letter-spacing:-0.02em; margin:6px 0 2px; background:linear-gradient(135deg,#4B3BFF,#7C3AED); -webkit-background-clip:text; background-clip:text; color:transparent;">{s.cnt}</div>
+          <div style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6A6A74;">verified customers · {s.c.domain}</div>
+          <p style="font-size:13.5px; line-height:1.5; color:#54545F; margin:12px 0 14px;">Notable: {s.not.join(', ')}.</p>
+          <a href={`/companies-using/${s.c.slug}/`} style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:#4B3BFF;">View the full {s.c.name} list →</a>
+        </div>
+      ))}
+    </div>
+
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:26px; letter-spacing:-0.02em; margin:44px 0 4px;">Companies using both {A.name} and {B.name}</h2>
+    <p style="font-size:14px; color:#6A6A74; margin:0 0 16px;">{overlap.length} verified on both lists.</p>
+    {overlap.length ? (
+      <div style="border:1px solid #EAEAEF; border-radius:16px; overflow:hidden; background:#fff;">
+        <div style="display:grid; grid-template-columns:1.6fr 1.6fr 1fr; background:#FAFAFC; border-bottom:1px solid #EEEEF2; padding:12px 20px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A6A74; letter-spacing:.04em;"><span>COMPANY</span><span>DOMAIN</span><span>GRADE (A / B)</span></div>
+        {overlap.map((o) => (
+          <div style="display:grid; grid-template-columns:1.6fr 1.6fr 1fr; padding:12px 20px; border-bottom:1px solid #F3F3F5; align-items:center;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:#0B0B12;">{o.name}</span>
+            <a href={`https://${o.domain}`} rel="nofollow noopener" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#4B3BFF;">{o.domain}</a>
+            <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6A6A74;">{A.name.slice(0,3)}: {o.gA} · {B.name.slice(0,3)}: {o.gB}</span>
+          </div>
+        ))}
+      </div>
+    ) : (
+      <p style="font-size:15px; color:#8A8A94;">No companies are currently verified on both lists — the two customer bases don't publicly overlap in our sourced data.</p>
+    )}
+
+    {(switchToA.length || switchToB.length) ? (
+      <div style="margin-top:40px;">
+        <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:26px; letter-spacing:-0.02em; margin:0 0 12px;">Switch signals</h2>
+        {switchToA.map((s) => (
+          <div style="border-left:3px solid #4B3BFF; padding:6px 0 6px 14px; margin-bottom:12px;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px;">{s.name}</span> <span style="font-size:12px; color:#6A6A74;">(chose {A.name})</span>
+            <p style="font-size:13.5px; color:#54545F; margin:4px 0 0;">"{s.evidence}" {s.source ? <a href={s.source} target="_blank" rel="noopener" style="color:#4B3BFF; font-family:'JetBrains Mono',monospace; font-size:12px;">source ↗</a> : null}</p>
+          </div>
+        ))}
+        {switchToB.map((s) => (
+          <div style="border-left:3px solid #7C3AED; padding:6px 0 6px 14px; margin-bottom:12px;">
+            <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px;">{s.name}</span> <span style="font-size:12px; color:#6A6A74;">(chose {B.name})</span>
+            <p style="font-size:13.5px; color:#54545F; margin:4px 0 0;">"{s.evidence}" {s.source ? <a href={s.source} target="_blank" rel="noopener" style="color:#4B3BFF; font-family:'JetBrains Mono',monospace; font-size:12px;">source ↗</a> : null}</p>
+          </div>
+        ))}
+      </div>
+    ) : null}
+
+    <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:26px; letter-spacing:-0.02em; margin:44px 0 16px;">FAQ</h2>
+    {faqs.map((f) => (
+      <details style="border-bottom:1px solid #ECECF1; padding:16px 0;">
+        <summary style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px; color:#0B0B12; list-style:none;">{f.q}</summary>
+        <p style="font-size:15px; line-height:1.6; color:#54545F; margin:12px 0 0;">{f.a}</p>
+      </details>
+    ))}
+
+    <div style="margin-top:44px; border-radius:20px; background:#08080F; padding:40px; text-align:center;">
+      <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:26px; color:#fff; margin:0;">Get your own competitor's customer list</h2>
+      <p style="font-size:15px; color:#B6B6C6; margin:12px auto 20px; max-width:34em;">Drop any competitor's domain and get every company using them, each with a public source. 10 results free.</p>
+      <a href="/#demo" style="display:inline-block; height:50px; line-height:50px; padding:0 26px; border-radius:13px; background:#fff; color:#0B0B12; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px;">Build your list free →</a>
+    </div>
+  </div>
+
+  <div style="background:#08080F; border-top:1px solid rgba(255,255,255,.07);">
+    <div style="max-width:1100px; margin:0 auto; padding:28px 40px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:14px;">
+      <div style="display:flex; align-items:center; gap:10px;"><div style="width:24px; height:24px; border-radius:7px; background:linear-gradient(140deg,#4B3BFF,#8B5CF6);"></div><span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; color:#fff;">CompetitorIQ</span></div>
+      <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6C6C7E;">by Danit Ben Simon · data licensed CC BY 4.0</span>
+    </div>
+  </div>
+  </div>
+</Base>
