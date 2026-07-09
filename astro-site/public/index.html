@@ -744,7 +744,7 @@
         var nm = x.name ? x.name.charAt(0).toUpperCase()+x.name.slice(1) : x.slug;
         var mono = nm.slice(0,2);
         var g = grads[n % grads.length];
-        return '<a class="ciq-listcard" href="/companies-using/'+x.slug+'/" style="text-decoration:none; position:relative; background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,.02)); border:1px solid rgba(255,255,255,.1); border-radius:18px; padding:26px; display:flex; flex-direction:column; gap:6px; transition:transform .2s, border-color .2s;">'
+        return '<a class="ciq-listcard" href="/companies-using/'+x.slug+'/" style="text-decoration:none; position:relative; background:linear-gradient(180deg,#1B1B28,#13131D); border:1px solid rgba(255,255,255,.16); border-radius:18px; padding:26px; display:flex; flex-direction:column; gap:6px; transition:transform .2s, border-color .2s;">'
           + '<div style="display:flex; align-items:center; gap:12px; margin-bottom:8px;"><span style="width:38px; height:38px; border-radius:10px; background:linear-gradient('+g+'); display:flex; align-items:center; justify-content:center; font-family:\'Space Grotesk\',sans-serif; font-weight:700; font-size:15px; color:#fff;">'+mono+'</span><span style="font-family:\'JetBrains Mono\',monospace; font-size:11px; color:#8FE9F6; background:rgba(34,211,238,.1); border-radius:6px; padding:3px 8px;">verified</span></div>'
           + '<h3 style="font-family:\'Space Grotesk\',sans-serif; font-weight:600; font-size:19px; color:#fff; margin:0; letter-spacing:-0.01em;">Companies using '+nm+'</h3>'
           + '<span style="font-family:\'JetBrains Mono\',monospace; font-size:13px; color:#8A8A98;">'+(x.domain||'')+'</span>'
