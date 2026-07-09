@@ -236,8 +236,8 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
 
   <div id="ciq-gate" style="display:none; position:fixed; inset:0; z-index:99; background:rgba(11,11,18,.55); align-items:center; justify-content:center; padding:20px;">
     <div style="background:#fff; border-radius:18px; padding:28px 26px; max-width:400px; width:100%; box-shadow:0 40px 90px -30px rgba(11,11,18,.5);">
-      <span style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:11px; color:#4B3BFF; background:#F2F1FF; border:1px solid #E3E0FF; border-radius:999px; padding:4px 11px;">.XLSX</span>
-      <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:20px; margin:14px 0 6px; color:#0B0B12;">Get the full list as Excel</h3>
+      <span id="ciq-gate-badge" style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:11px; color:#4B3BFF; background:#F2F1FF; border:1px solid #E3E0FF; border-radius:999px; padding:4px 11px;">.XLSX</span>
+      <h3 id="ciq-gate-title" style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:20px; margin:14px 0 6px; color:#0B0B12;">Get the full list as Excel</h3>
       <p style="font-size:14px; color:#6A6A74; margin:0 0 16px; line-height:1.5;">Leave your work email and LinkedIn, and the formatted spreadsheet is yours: domains, grades, evidence and sources.</p>
       <input id="ciq-email" type="email" placeholder="you@company.com" style="width:100%; height:46px; border:1px solid #E6E6EC; border-radius:12px; padding:0 14px; font-size:15px; font-family:'Manrope',sans-serif; color:#0B0B12; outline:none;" />
       <input id="ciq-linkedin" type="url" placeholder="linkedin.com/in/your-profile" style="width:100%; height:46px; margin-top:10px; border:1px solid #E6E6EC; border-radius:12px; padding:0 14px; font-size:15px; font-family:'Manrope',sans-serif; color:#0B0B12; outline:none;" />
@@ -308,7 +308,7 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
         rows.forEach(function(r){ if (r.style.display !== 'none') set[r.getAttribute('data-company')] = true; });
         return DATA.companies.filter(function(c){ return set[c.name]; });
       }
-      document.getElementById('ciq-csv').addEventListener('click', function(){
+      function doCsv(){
         var d = visibleData();
         var esc = function(v){ return '"' + String(v==null?'':v).replace(/"/g,'""') + '"'; };
         var head = ['Company','Domain','Grade','Confidence','Evidence','Source URL'];
@@ -317,12 +317,21 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
         var a = document.createElement('a');
         a.href = URL.createObjectURL(new Blob([csv], {type:'text/csv'}));
         a.download = DATA.slug + '_customers.csv'; a.click(); URL.revokeObjectURL(a.href);
-      });
+      }
       var GATE_KEY = 'ciqExcelEmail';
       var gate = document.getElementById('ciq-gate');
-      function openXlsxGate(){
+      var gateAction = 'xlsx';   // which download runs after a valid submit
+      function openGate(action){
         // Always show the form. A stored email only prefills the field;
         // every download still goes through the gate.
+        gateAction = action || 'xlsx';
+        var isCsv = gateAction === 'csv';
+        var badge = document.getElementById('ciq-gate-badge');
+        var title = document.getElementById('ciq-gate-title');
+        var submit = document.getElementById('ciq-gate-submit');
+        if (badge) badge.textContent = isCsv ? '.CSV' : '.XLSX';
+        if (title) title.textContent = isCsv ? 'Get the full list as CSV' : 'Get the full list as Excel';
+        if (submit) submit.textContent = isCsv ? 'Download CSV →' : 'Download Excel →';
         gate.style.display = 'flex';
         var e = document.getElementById('ciq-email');
         var stored = null;
@@ -330,11 +339,12 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
         if (e && stored && !e.value) e.value = stored;
         setTimeout(function(){ if(e) e.focus(); }, 50);
       }
-      document.getElementById('ciq-xlsx').addEventListener('click', openXlsxGate);
+      document.getElementById('ciq-csv').addEventListener('click', function(){ openGate('csv'); });
+      document.getElementById('ciq-xlsx').addEventListener('click', function(){ openGate('xlsx'); });
       var xlsxSide = document.getElementById('ciq-xlsx-side');
-      if (xlsxSide) xlsxSide.addEventListener('click', openXlsxGate);
+      if (xlsxSide) xlsxSide.addEventListener('click', function(){ openGate('xlsx'); });
       var xlsxBottom = document.getElementById('ciq-xlsx-bottom');
-      if (xlsxBottom) xlsxBottom.addEventListener('click', openXlsxGate);
+      if (xlsxBottom) xlsxBottom.addEventListener('click', function(){ openGate('xlsx'); });
       document.getElementById('ciq-gate-close').addEventListener('click', function(){ gate.style.display = 'none'; });
       gate.addEventListener('click', function(e){ if (e.target === gate) gate.style.display = 'none'; });
       document.getElementById('ciq-gate-submit').addEventListener('click', function(){
@@ -356,7 +366,7 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
           });
         } catch(_){}
         gate.style.display = 'none';
-        doXlsx();
+        if (gateAction === 'csv') { doCsv(); } else { doXlsx(); }
       });
       function doXlsx(){
         var url = '/downloads/' + DATA.slug + '_customers.xlsx';
