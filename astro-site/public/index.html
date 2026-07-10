@@ -531,7 +531,8 @@
         <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:42px; letter-spacing:-0.03em; margin:0; color:#fff;">Explore our verified customer lists</h2>
         <p style="font-size:18px; color:#B6B6C6; margin:0; max-width:38em;">Every company backed by a public source. Free to browse and download, no domain required.</p>
       </div>
-      <div id="ciqLists" class="ciq-3" style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px;"></div>
+      <div id="ciqListsLabel" style="display:none; align-items:center; gap:12px; margin:0 0 16px;"><span style="font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em; color:#8FE9F6;">SECURITY COMPLIANCE AUTOMATION</span><span style="flex:1; height:1px; background:rgba(255,255,255,.12);"></span><span id="ciqListsCount" style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6C6C7E;"></span></div>
+      <div id="ciqLists" class="ciq-3" style="display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:18px;"></div>
     </div>
   </div>
 
@@ -744,6 +745,8 @@
       var idx = await fetch('/lists-index.json').then(function(r){return r.ok?r.json():[];});
       var grid = document.getElementById('ciqLists'); if(!grid) return;
       var grads = ['140deg,#4B3BFF,#7C3AED','140deg,#7C3AED,#22D3EE','140deg,#4B3BFF,#22D3EE','140deg,#8B5CF6,#4B3BFF','140deg,#22D3EE,#4B3BFF'];
+      var lbl = document.getElementById('ciqListsLabel');
+      if (lbl && idx.length) { lbl.style.display = 'flex'; var lc = document.getElementById('ciqListsCount'); if (lc) lc.textContent = idx.length + ' lists'; }
       grid.innerHTML = idx.map(function(x,n){
         var nm = x.name ? x.name.charAt(0).toUpperCase()+x.name.slice(1) : x.slug;
         var mono = nm.slice(0,2);
