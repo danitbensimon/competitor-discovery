@@ -1,0 +1,707 @@
+{
+  "competitor": {
+    "name": "OneTrust",
+    "slug": "onetrust",
+    "domain": "onetrust.com"
+  },
+  "companies": [
+    {
+      "name": "a360media",
+      "domain": "a360media.com",
+      "grade": "B",
+      "evidence": "The two main priorities for a360media were to make privacy more accessible for employees, and to strike a balance between making external-facing processes compliant and as user-friendly as a possible.",
+      "source_url": "https://www.onetrust.com/customers/a360media/",
+      "confidence": "high"
+    },
+    {
+      "name": "Air Canada",
+      "domain": "aircanada.com",
+      "grade": "B",
+      "evidence": "The Air Canada team needed a research platform to strengthen its global privacy compliance efforts and selected OneTrust DataGuidance Regulatory Research as an additional tool to contribute to building and maintaining complex privacy programs.",
+      "source_url": "https://www.onetrust.com/customers/air-canada/",
+      "confidence": "high"
+    },
+    {
+      "name": "Alfred K\u00e4rcher",
+      "domain": "kaercher.com",
+      "grade": "B",
+      "evidence": "Today, K\u00e4rcher maintains a reliable record of processing activities built around OneTrust and an automated system that makes it easier to stay compliant with data privacy laws.",
+      "source_url": "https://www.onetrust.com/customers/alfred-karcher/",
+      "confidence": "high"
+    },
+    {
+      "name": "Allfoye Managementberatung",
+      "domain": "allfoye.com",
+      "grade": "B",
+      "evidence": "Diese Webseite nutzt zur Einholung wirksamer Nutzereinwilligungen f\u00fcr einwilligungspflichtige Cookies und cookie-basierte Anwendungen das Cookie-Consent-Tool \u201eCookiePro\u201c der OneTrust LLC., 1200 Abernathy Rd NE, Sandy Springs, GA 30328, USA (\u201eOneTrust\u201c).",
+      "source_url": "https://www.allfoye.com/de/unternehmen/datenschutz/",
+      "confidence": "high"
+    },
+    {
+      "name": "Alpiq",
+      "domain": "alpiq.com",
+      "grade": "B",
+      "evidence": "\"Legally, process-wise, organizationally and technically speaking, privacy and personal data protection needs must be included in every aspect of a company today.\"",
+      "source_url": "https://www.onetrust.com/customers/alpiq-group/",
+      "confidence": "high"
+    },
+    {
+      "name": "Amgen",
+      "domain": "amgen.com",
+      "grade": "C",
+      "evidence": "<a href=\"javascript:OneTrust.ToggleInfoDisplay();\" class=\"cb-renew gtm-header quantum-link quantum-footer__link\" menu-name=\"Your Cookie Preferences\" menu-type=\"footer\" target=\"\"> Your Cookie Pref",
+      "source_url": "https://www.amgen.com/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Amplifon",
+      "domain": "amplifon.com",
+      "grade": "B",
+      "evidence": "Thanks to the OneTrust ecosystem of solutions, Amplifon has been able to build a privacy management system that ensures compliance and control while maintaining operational efficiency.",
+      "source_url": "https://www.onetrust.com/customers/amplifon/",
+      "confidence": "high"
+    },
+    {
+      "name": "Anthony Nolan",
+      "domain": "anthonynolan.org",
+      "grade": "B",
+      "evidence": "The platform was fresher, more agile, and easier to engage with. We took a holistic approach to choosing a supplier and didn\u2019t just want a product.",
+      "source_url": "https://www.onetrust.com/customers/anthonynolan/",
+      "confidence": "high"
+    },
+    {
+      "name": "Ardoq",
+      "domain": "ardoq.com",
+      "grade": "B",
+      "evidence": "\u201cEssentially, you can model a digital twin of your organization in a graph database,\u201d says Nicholas Murison, Ardoq\u2019s Chief Information Security Officer (CISO).",
+      "source_url": "https://www.onetrust.com/customers/ardoq/",
+      "confidence": "high"
+    },
+    {
+      "name": "Aviva",
+      "domain": "aviva.co.uk",
+      "grade": "C",
+      "evidence": "script src=\"https://cdn-ukwest.onetrust.com/scripttemplates/otSDKStub.js\" crossorigin=\"anonymous\" data-document-language=\"true\" type=\"text/javascript\" charset=\"UTF-8\" data-domain-script=\"4b323e28-b5f2-4564-8d7c-fbb689014cca\"></script><script>((t, i, n, e) => { c",
+      "source_url": "https://www.aviva.co.uk/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Bertelsmann",
+      "domain": "bertelsmann.com",
+      "grade": "B",
+      "evidence": "\"Using a recognised tool like OneTrust instead of a manual, Excel-based solution is really helpful. We can prove we have structure, pre-defined roles, pre-defined documentation and reporting in the tool\".",
+      "source_url": "https://www.onetrust.com/customers/bertelsmann/",
+      "confidence": "high"
+    },
+    {
+      "name": "BitSight",
+      "domain": "bitsight.com",
+      "grade": "B",
+      "evidence": "By leveraging OneTrust and BitSight, the retailer is making third-party management a more fundamental aspect of their business operations.",
+      "source_url": "https://www.onetrust.com/customers/bitsight-security-ratings/",
+      "confidence": "high"
+    },
+    {
+      "name": "Boehringer Ingelheim",
+      "domain": "boehringer-ingelheim.com",
+      "grade": "B",
+      "evidence": "In 2021, Boehringer Ingelheim began implementing OneTrust, focusing first on the Data Mapping and Assessment Automation products to streamline and scale its registry process.",
+      "source_url": "https://www.onetrust.com/customers/boehringer-ingelheim/",
+      "confidence": "high"
+    },
+    {
+      "name": "Bond University",
+      "domain": "bond.edu.au",
+      "grade": "B",
+      "evidence": "\"Transparency and trust are foundational to our relationship with students and the broader university community.\" Lara Saunders, Website Manager, Bond University",
+      "source_url": "https://www.onetrust.com/customers/bond-university/",
+      "confidence": "high"
+    },
+    {
+      "name": "British Council",
+      "domain": "britishcouncil.org",
+      "grade": "B",
+      "evidence": "\"Privacy isn\u2019t a barrier to innovation, it\u2019s a gateway and OneTrust has put privacy back into the hands of the individual\".",
+      "source_url": "https://www.onetrust.com/customers/british-council/",
+      "confidence": "high"
+    },
+    {
+      "name": "BT Group",
+      "domain": "bt.com",
+      "grade": "B",
+      "evidence": "\u201cYou don\u2019t want compliance activity happening in silos. You want to make it simpler for the business and give them one place to go to, to do the right thing when it comes to data.\u201d",
+      "source_url": "https://www.onetrust.com/customers/bt-group/",
+      "confidence": "high"
+    },
+    {
+      "name": "Carrefour Group",
+      "domain": "carrefour.com",
+      "grade": "B",
+      "evidence": "As they aim to deliver a better customer experience and increase their opt-in rates, OneTrust\u2019s CMP consistency has become a competitive advantage for Carrefour Group.",
+      "source_url": "https://www.onetrust.com/customers/carrefour-group/",
+      "confidence": "high"
+    },
+    {
+      "name": "Cemig",
+      "domain": "cemig.com.br",
+      "grade": "B",
+      "evidence": "\u201cAs the project matured, we identified that without a technological platform that would help us to operationalize our privacy and data governance program, it would not be possible to meet all the requirements of the law,\u201d said Douglas.",
+      "source_url": "https://www.onetrust.com/customers/cemig/",
+      "confidence": "high"
+    },
+    {
+      "name": "City of Neuilly-sur-Seine",
+      "domain": "neuillysurseine.fr",
+      "grade": "B",
+      "evidence": "\u201cWe used different tools for data subject requests management, incidents, etc. We started looking for a unique tool to consolidate the management of our entire program. Our Data Manager proceeded to an important benchmark that led to our engagement with OneTrust,\u201d says Stephanie.",
+      "source_url": "https://www.onetrust.com/customers/city-of-neuilly-sur-seine-administration/",
+      "confidence": "high"
+    },
+    {
+      "name": "ClearDATA",
+      "domain": "cleardata.com",
+      "grade": "B",
+      "evidence": "\"The user experience with Assessment Automation and the way it's ingrained to automate our vendor assessments is one of the key things that impressed us about the tool.\"",
+      "source_url": "https://www.onetrust.com/customers/cleardata/",
+      "confidence": "high"
+    },
+    {
+      "name": "cleverbridge",
+      "domain": "cleverbridge.com",
+      "grade": "B",
+      "evidence": "\"The OneTrust implementation was quite easily digestible. That was one of the main reasons we selected OneTrust\u2014the ease of use for everyone no matter their privacy background.\"",
+      "source_url": "https://www.onetrust.com/customers/cleverbridge/",
+      "confidence": "high"
+    },
+    {
+      "name": "Copeland",
+      "domain": "copeland.com",
+      "grade": "B",
+      "evidence": "\u201cOneTrust has almost been like a mentor to my privacy team in Europe, and I'm very grateful for that in bringing them along in their careers and helping them become exceptional privacy professionals,\u201d Sumner notes.",
+      "source_url": "https://www.onetrust.com/customers/copeland/",
+      "confidence": "high"
+    },
+    {
+      "name": "Core Spreads",
+      "domain": "corespreads.com",
+      "grade": "B",
+      "evidence": "\"Initially when I heard about the OneTrust tool I was like, well this is amazing. In the past I've done it all in spreadsheets, so this is an amazing tool that gets you to incorporate everything that you would normally do on spreadsheets into one tool.\"",
+      "source_url": "https://www.onetrust.com/customers/core-spreads/",
+      "confidence": "high"
+    },
+    {
+      "name": "Deloitte",
+      "domain": "deloitte.com",
+      "grade": "B",
+      "evidence": "\u201cThe luxury cosmetics company needed a tool that would grow with their organization, and OneTrust\u2019s customization would allow for that kind of future-proofing,\u201d said Koon-Sang.",
+      "source_url": "https://www.onetrust.com/customers/deloitte/",
+      "confidence": "high"
+    },
+    {
+      "name": "DHL",
+      "domain": "dhl.com",
+      "grade": "B",
+      "evidence": "The team selected OneTrust to address its CMP needs across all websites, while also providing the flexibility to A/B test different banner placements and language.",
+      "source_url": "https://www.onetrust.com/customers/dhl/",
+      "confidence": "high"
+    },
+    {
+      "name": "Diageo",
+      "domain": "diageo.com",
+      "grade": "C",
+      "evidence": "<script type=\"text/javascript\" src=\"https://cdn-ukwest.onetrust.com/consent/ceab42d8-a0d9-407f-9ac4-df8be03f793f/OtAutoBlock.js\"></script> <script src=\"https://cdn-ukwest.onetrust.com/scripttemplates/otSDKStub.js\" type=\"text/jav",
+      "source_url": "https://www.diageo.com/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Drax Group",
+      "domain": "drax.com",
+      "grade": "B",
+      "evidence": "Providing a high standard of data protection is key to Drax\u2019s approach to privacy, and they were working towards GDPR compliance since well before the legal requirement was introduced in 2018.",
+      "source_url": "https://www.onetrust.com/customers/drax-group/",
+      "confidence": "high"
+    },
+    {
+      "name": "Electrolux",
+      "domain": "electrolux.com",
+      "grade": "B",
+      "evidence": "\"As a decentralized organization, one of our major challenges was to gather information and create customized processes that fit into our global operations.\"",
+      "source_url": "https://www.onetrust.com/customers/electrolux/",
+      "confidence": "high"
+    },
+    {
+      "name": "Entain",
+      "domain": "entaingroup.com",
+      "grade": "B",
+      "evidence": "\"As a technology-based company, data is the new oil, it gives you the power to understand and drive your business. Effectively and appropriately leveraging this information can\u2019t be done with spreadsheets. The processes need to be built into centralized technology.\"",
+      "source_url": "https://www.onetrust.com/customers/entain/",
+      "confidence": "high"
+    },
+    {
+      "name": "EOLO",
+      "domain": "eolo.it",
+      "grade": "B",
+      "evidence": "\"The decision to choose OneTrust was determined by a key capability: the ability to use questionnaires in multiple departments, thereby demonstrating accountability and adherence to the Privacy by Design principle.\"",
+      "source_url": "https://www.onetrust.com/customers/eolo-spa/",
+      "confidence": "high"
+    },
+    {
+      "name": "ERGO Group",
+      "domain": "ergo.com",
+      "grade": "B",
+      "evidence": "We use OneTrust as our consent tool. With this privacy management software, we offer you a legally-compliant option for consenting to the storage of cookies and ensuring the withdrawal of consent.",
+      "source_url": "https://www.ergo.com/en/privacy-statement/consent-tool-onetrust",
+      "confidence": "high"
+    },
+    {
+      "name": "EURONICS Deutschland",
+      "domain": "euronics.de",
+      "grade": "B",
+      "evidence": "Using OneTrust, the organization unified consent, preference, and policy management while also connecting, risk, compliance and information security workflows.",
+      "source_url": "https://www.onetrust.com/customers/euronics-deutschland/",
+      "confidence": "high"
+    },
+    {
+      "name": "First Sensor (TE Connectivity company)",
+      "domain": "first-sensor.com",
+      "grade": "B",
+      "evidence": "Wir sammeln diese Einwilligungen und Eingaben durch unser Cookie-Einwilligungsmanagement-Tool (\u201eOneTrust\u201c), des Anbieters OneTrust, LLC [\u2026] OneTrust wird verwendet, um die Cookie Einstellungen f\u00fcr die gesamte Webseite abzuspeichern.",
+      "source_url": "https://www.first-sensor.com/de/datenschutzhinweise/",
+      "confidence": "high"
+    },
+    {
+      "name": "GitLab",
+      "domain": "gitlab.com",
+      "grade": "B",
+      "evidence": "The Digital Experience team uses OneTrust as a tool for cookie consent. This implementation is on about.gitlab.com specifically, but if added to the top-level gitlab.com domain it will propagate down to all subdomains.",
+      "source_url": "https://handbook.gitlab.com/handbook/marketing/digital-experience/engineering/onetrust-cookie-consent/",
+      "confidence": "high"
+    },
+    {
+      "name": "GOL Airlines",
+      "domain": "voegol.com.br",
+      "grade": "B",
+      "evidence": "\u201cCompliance is the central core of our operations,\u201d Bruna explains. \u201cNot only because we are a highly regulated industry, but also because we manage safety, information security, anti-corruption, legal requirements, and data privacy.\u201d",
+      "source_url": "https://www.onetrust.com/customers/gol-airlines/",
+      "confidence": "high"
+    },
+    {
+      "name": "Grant Thornton LLP",
+      "domain": "grantthornton.com",
+      "grade": "B",
+      "evidence": "\"Expertise and experience were what this transportation services company needed. They wanted ongoing support from partners who understood the experiences of others across the industry.\"",
+      "source_url": "https://www.onetrust.com/customers/grant-thornton-llp/",
+      "confidence": "high"
+    },
+    {
+      "name": "Iberia",
+      "domain": "iberia.com",
+      "grade": "B",
+      "evidence": "In 2018, Iberia implemented the OneTrust platform to automate and centralize all processes related to privacy and GDPR compliance. The airline chose OneTrust for its ease of use, flexibility, and because it could be integrated seamlessly with the IAG Group ecosystem",
+      "source_url": "https://www.onetrust.com/customers/iberia/",
+      "confidence": "high"
+    },
+    {
+      "name": "Ingram Micro",
+      "domain": "ingrammicro.com",
+      "grade": "B",
+      "evidence": "With the passage of the GDPR, Ingram Micro understood there was an increasing risk impacting the company\u2019s privacy practices. To prepare its global privacy program for GDPR, Ingram Micro hired Aaron Mendelsohn in 2016 as the Chief Data Privacy Officer.",
+      "source_url": "https://www.onetrust.com/customers/ingram-micro/",
+      "confidence": "high"
+    },
+    {
+      "name": "INTO University Partnerships",
+      "domain": "intoglobal.com",
+      "grade": "B",
+      "evidence": "\"The flexibility of the tool and the way we have been able to integrate other modules has allowed us to build a solid foundation for INTO\u2019s privacy program.\"",
+      "source_url": "https://www.onetrust.com/customers/into/",
+      "confidence": "high"
+    },
+    {
+      "name": "KnitWell Group",
+      "domain": "knitwellgroup.com",
+      "grade": "B",
+      "evidence": "You\u2019ll work closely with cross-functional teams to implement scalable privacy solutions, support compliance initiatives, and enhance our use of platforms like OneTrust.",
+      "source_url": "https://knitwellgroup.wd1.myworkdayjobs.com/en-US/US_Corporate_Jobs/job/Privacy-Tools---Automation-Analyst_R-2028504",
+      "confidence": "medium"
+    },
+    {
+      "name": "L'Or\u00e9al",
+      "domain": "loreal.com",
+      "grade": "C",
+      "evidence": "<!-- OneTrust Cookies Consent Notice start for loreal.com --> <script src=\"https://cdn.cookielaw.org/scripttemplates/otSDKStub.js\" data-document-language=\"true\" type=\"text/javascript\" charset=\"UTF-8\" data-domain-script=\"669766",
+      "source_url": "https://www.loreal.com/en/",
+      "confidence": "medium"
+    },
+    {
+      "name": "LimaCorporate",
+      "domain": "limacorporate.com",
+      "grade": "B",
+      "evidence": "\u201cWhile not working directly with the recipients of our products, as part of the services made available to health professionals, we often come into contact with sensitive data concerning people\u2019s health.",
+      "source_url": "https://www.onetrust.com/customers/limacorporate/",
+      "confidence": "high"
+    },
+    {
+      "name": "Maersk",
+      "domain": "maersk.com",
+      "grade": "B",
+      "evidence": "\"OneTrust DataGuidance is invaluable in the way that it sets out information clearly, saving me hours of research by providing accessible and easily digestible formatting.\"",
+      "source_url": "https://www.onetrust.com/customers/maersk/",
+      "confidence": "high"
+    },
+    {
+      "name": "Make-A-Wish International",
+      "domain": "worldwish.org",
+      "grade": "B",
+      "evidence": "\"With beneficiaries and donors from all around the world, OneTrust\u2019s tools continue to help us work towards a gold standard of privacy.\"",
+      "source_url": "https://www.onetrust.com/customers/make-a-wish-international/",
+      "confidence": "high"
+    },
+    {
+      "name": "Marketo",
+      "domain": "marketo.com",
+      "grade": "B",
+      "evidence": "\"With OneTrust as our privacy management software tool, we are well equipped to demonstrate our compliance to regulators. OneTrust is a value proposition for our privacy program",
+      "source_url": "https://www.onetrust.com/customers/marketo/",
+      "confidence": "high"
+    },
+    {
+      "name": "Match Group",
+      "domain": "matchgroup.com",
+      "grade": "B",
+      "evidence": "\"Our business is based on trust. We want people to know that by using our apps, they will be getting a great service, and their data will be processed securely, ethically, and lawfully.\"",
+      "source_url": "https://www.onetrust.com/customers/match-group/",
+      "confidence": "high"
+    },
+    {
+      "name": "Merck & Co.",
+      "domain": "merck.com",
+      "grade": "C",
+      "evidence": "var one_trust_cookie_panel = document.getElementById(\"onetrust-banner-sdk\"); let wp_admin_bar = document.getElementById('wpadminbar');",
+      "source_url": "https://www.merck.com/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Mews",
+      "domain": "mews.com",
+      "grade": "B",
+      "evidence": "Mews' journey with OneTrust began with small steps, such as implementing policy management and other privacy solutions. Over time, their reliance on OneTrust grew, expanding into third-party vendor checks, and risk management.",
+      "source_url": "https://www.onetrust.com/customers/mews/",
+      "confidence": "high"
+    },
+    {
+      "name": "Microsoft",
+      "domain": "microsoft.com",
+      "grade": "B",
+      "evidence": "Many well-known brands run parts of their compliance and privacy programs on OneTrust, including Microsoft and Pfizer.",
+      "source_url": "https://www.shopify.com/blog/what-is-onetrust",
+      "confidence": "medium"
+    },
+    {
+      "name": "Migros",
+      "domain": "migros.ch",
+      "grade": "B",
+      "evidence": "\u201cPrivacy is a very important element to us,\u201d said Matthias Glatthaar, Head Data Privacy and Digital at Migros. \u201cAlthough we have a diverse group of brands, our loyalty program is at our core, and ensuring that we protect our customer\u2019s personal data is vital for the success of that program.\u201d",
+      "source_url": "https://www.onetrust.com/customers/migros/",
+      "confidence": "high"
+    },
+    {
+      "name": "MillerKnoll",
+      "domain": "millerknoll.com",
+      "grade": "B",
+      "evidence": "To make this statement a reality, MillerKnoll selected OneTrust to manage consent and preferences across all brands globally.",
+      "source_url": "https://www.onetrust.com/customers/miller-knoll/",
+      "confidence": "high"
+    },
+    {
+      "name": "MiTek Industries",
+      "domain": "mii.com",
+      "grade": "B",
+      "evidence": "\"In the race for CCPA compliance the central location that OneTrust provided was absolutely key in delivering on time.\"",
+      "source_url": "https://www.onetrust.com/customers/mitek-industries/",
+      "confidence": "high"
+    },
+    {
+      "name": "MSX International",
+      "domain": "msxi.com",
+      "grade": "B",
+      "evidence": "\"So, there\u2019s a massive requirement for emerging compliance requirements that we have to manage. And OneTrust has been one of the central applications that\u2019s grown up with us over the last few years as we\u2019ve built up the InfoSec.\"",
+      "source_url": "https://www.onetrust.com/customers/msx-international/",
+      "confidence": "high"
+    },
+    {
+      "name": "Natural History Museum",
+      "domain": "nhm.ac.uk",
+      "grade": "B",
+      "evidence": "\"OneTrust has quickly become an important part of our information space.\" Richard Hinton, Head of TS and Enterprise Architecture Planning",
+      "source_url": "https://www.onetrust.com/customers/natural-history-museum/",
+      "confidence": "high"
+    },
+    {
+      "name": "OSC GmbH",
+      "domain": "osc-gmbh.de",
+      "grade": "B",
+      "evidence": "Diese Webseite nutzt zur Einholung wirksamer Nutzereinwilligungen f\u00fcr einwilligungspflichtige Cookies und cookie-basierte Anwendungen das Cookie-Consent-Tool \u201eCookiePro\u201c der OneTrust LLC., 1200 Abernathy Rd NE, Sandy Springs, GA 30328, USA (\u201eOneTrust\u201c).",
+      "source_url": "https://www.osc-gmbh.de/de/datenschutz.html",
+      "confidence": "high"
+    },
+    {
+      "name": "PA Consulting",
+      "domain": "paconsulting.com",
+      "grade": "B",
+      "evidence": "With PA Consulting\u2019s support, the organization deployed OneTrust at scale, putting the right architecture in place across the business.",
+      "source_url": "https://www.onetrust.com/customers/pa-consulting/",
+      "confidence": "high"
+    },
+    {
+      "name": "PageGroup",
+      "domain": "page.com",
+      "grade": "B",
+      "evidence": "\u201cCentralized data, centralized vendors, risk assets, all together in one tool\u2014you are able to really see which is the real risk for your company,\u201d says Lopez.",
+      "source_url": "https://www.onetrust.com/customers/pagegroup/",
+      "confidence": "high"
+    },
+    {
+      "name": "Pearson",
+      "domain": "pearson.com",
+      "grade": "C",
+      "evidence": "<!-- OneTrust Cookies Consent Notice start for www.pearson.com --> <script src=\"https://cdn.cookielaw.org/scripttemplates/otSDKStub.js\" data-document-language=\"true\" type=\"text/javascript\" charset=\"UTF-8\" data-domain-script=\"0d545d3",
+      "source_url": "https://www.pearson.com/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Pfizer",
+      "domain": "pfizer.com",
+      "grade": "B",
+      "evidence": "Many well-known brands run parts of their compliance and privacy programs on OneTrust, including Microsoft and Pfizer.",
+      "source_url": "https://www.shopify.com/blog/what-is-onetrust",
+      "confidence": "medium"
+    },
+    {
+      "name": "Privacy Program Management Copenhagen",
+      "domain": "purposeandmeans.io",
+      "grade": "B",
+      "evidence": "\"I have always had that good relationship with OneTrust, so when DataGuidance became available it was only a matter of time before I became interested.\" Tim Clements, Founder",
+      "source_url": "https://www.onetrust.com/customers/privacy-program-management-copenhagen/",
+      "confidence": "high"
+    },
+    {
+      "name": "Progress Software",
+      "domain": "progress.com",
+      "grade": "B",
+      "evidence": "\u201cInitially we tried to conduct A/B testing on our own, by testing one banner across our sites every two weeks and monitor all acceptance rates. We found this manual process to be very tedious and challenging.\u201d",
+      "source_url": "https://www.onetrust.com/customers/progress-software/",
+      "confidence": "high"
+    },
+    {
+      "name": "Protiviti",
+      "domain": "protiviti.com",
+      "grade": "B",
+      "evidence": "Protiviti\u2019s role involved integrating OneTrust's technology into the client's existing systems, ensuring seamless operation while enhancing functionality.",
+      "source_url": "https://www.onetrust.com/customers/onetrust-and-protiviti-deliver-enhanced-consent-management/",
+      "confidence": "high"
+    },
+    {
+      "name": "PUMA",
+      "domain": "puma.com",
+      "grade": "B",
+      "evidence": "PUMA started with cookie consent and later expanded into vendor risk oversight and Power BI reporting, and Samsung uses OneTrust to manage privacy programs at a global scale.",
+      "source_url": "https://www.shopify.com/blog/what-is-onetrust",
+      "confidence": "medium"
+    },
+    {
+      "name": "Queue Associates",
+      "domain": "queueassoc.com",
+      "grade": "B",
+      "evidence": "Queue Associates are firm believers that every technology business should provide strong privacy protection for their users and clients, said Jeffrey Goldstein, Managing Director at Queue Associates highlights.",
+      "source_url": "https://www.onetrust.com/customers/delivering-returns-on-queue-associates-privacy-investment/",
+      "confidence": "high"
+    },
+    {
+      "name": "Randstad",
+      "domain": "randstad.com",
+      "grade": "B",
+      "evidence": "\u201cPrivacy is critical to Randstad because, in HR services, we are working with the data of millions of people,\u201d said Wouter-Bas van der Vegt, the Global Data Protection and Information Security Officer at Randstad.",
+      "source_url": "https://www.onetrust.com/customers/randstad/",
+      "confidence": "high"
+    },
+    {
+      "name": "Reed Smith LLP",
+      "domain": "reedsmith.com",
+      "grade": "B",
+      "evidence": "\"Reed Smith has a long-established relationship with OneTrust DataGuidance in terms of our lawyers contributing content but also as clients. Other lawyers across our network, not just in Singapore, not just in Asia Pacific, but in the US and Europe all turn to OneTrust DataGuidance.\"",
+      "source_url": "https://www.onetrust.com/customers/reed-smith-llp/",
+      "confidence": "high"
+    },
+    {
+      "name": "ResMed",
+      "domain": "resmed.com",
+      "grade": "B",
+      "evidence": "\u201cPrivacy regulations have picked up momentum since the GDPR went into effect, and we want to build on our existing compliance efforts to prepare for new and impending regulations,\u201d said Frederic Varnieu, Director of Privacy, Europe at ResMed.",
+      "source_url": "https://www.onetrust.com/customers/resmed/",
+      "confidence": "high"
+    },
+    {
+      "name": "Roche",
+      "domain": "roche.com",
+      "grade": "C",
+      "evidence": "<script id=\"oneTrustScriptPlaceholder\"></script><script type=\"text/javascript\">function OptanonWrapper() { window.OneTrust.OnConsentChanged(function() { window.dispatchEvent(new Custo",
+      "source_url": "https://www.roche.com/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Rochester Regional Health",
+      "domain": "rochesterregional.org",
+      "grade": "B",
+      "evidence": "\"There was no comparison between our previous solution and VThird-Party Risk Exchange. Third-Party Risk Exchange uses modern tools and techniques to deliver third-party risk management technology which is critical as we work to secure our patients\u2019 PHI in the most streamlined and automated manner.\"",
+      "source_url": "https://www.onetrust.com/customers/rochester-regional-health/",
+      "confidence": "high"
+    },
+    {
+      "name": "Samsung",
+      "domain": "samsung.com",
+      "grade": "A",
+      "evidence": "\"OneTrust was the clear leader when it came to the end. They were very attentive, approachable, extremely detailed, and stood out compared to the rest of the competition.\" Sam Nicholson, European Head of Privacy at Samsung",
+      "source_url": "https://www.onetrust.com/customers/samsung/",
+      "confidence": "high"
+    },
+    {
+      "name": "Sanofi",
+      "domain": "sanofi.com",
+      "grade": "C",
+      "evidence": "window.clientEnvVars = {\"SITE_KEY\":\"COM\",\"GTM\":\"GTM-N67QVH3\",\"LD_CLIENT_SIDE\":\"63779209b9abad1176b1c8de\",\"ONETRUST\":\"5ba9840f-2af3-4f28-b54d-b9d55e0175d5\"",
+      "source_url": "https://www.sanofi.com/en",
+      "confidence": "medium"
+    },
+    {
+      "name": "Sara Assicurazioni",
+      "domain": "sara.it",
+      "grade": "B",
+      "evidence": "In addition to managing cybersecurity risks, Sara Assicurazioni has adopted the OneTrust platform for managing their privacy processes, assessing risks related to regulatory compliance (e.g. regulations 231 and 262), and overseeing third parties in compliance with DORA.",
+      "source_url": "https://www.onetrust.com/customers/sara-assicurazioni/",
+      "confidence": "high"
+    },
+    {
+      "name": "Scania",
+      "domain": "scania.com",
+      "grade": "B",
+      "evidence": "\u201cPrivacy was embedded in our DNA even before many of today\u2019s regulations existed,\u201d says Manuel Manuel, AI and Data Protection Specialist at Scania.",
+      "source_url": "https://www.onetrust.com/customers/scania/",
+      "confidence": "high"
+    },
+    {
+      "name": "Schindler",
+      "domain": "schindler.com",
+      "grade": "B",
+      "evidence": "\"The convenience of OneTrust being a soft tool is it is very flexible. The development of the tool is swift and always evolving, that\u2019s really the beauty of the platform.\"",
+      "source_url": "https://www.onetrust.com/customers/schindler/",
+      "confidence": "high"
+    },
+    {
+      "name": "Serco",
+      "domain": "serco.com",
+      "grade": "B",
+      "evidence": "\"We operate in a diverse number of sectors and work on many contracts, so we decided to build upon our current information governance framework to most efficiently and effectively manage our privacy operations.\"",
+      "source_url": "https://www.onetrust.com/customers/serco/",
+      "confidence": "high"
+    },
+    {
+      "name": "Smart Pension",
+      "domain": "smartpension.co.uk",
+      "grade": "B",
+      "evidence": "\"Being able to show that OneTrust is our core system for ensuring GDPR and vendor management was a huge help to us. We were able to give confidence that we had the right protocols in place related to assets and processing activities",
+      "source_url": "https://www.onetrust.com/customers/smart-pension/",
+      "confidence": "high"
+    },
+    {
+      "name": "Southern Veterinary Partners",
+      "domain": "southernvetpartners.com",
+      "grade": "B",
+      "evidence": "Before adopting OneTrust, SVP struggled with the lack of a comprehensive inventory of their third parties and vendors, making it difficult to assess their security risks effectively.",
+      "source_url": "https://www.onetrust.com/customers/svp/",
+      "confidence": "high"
+    },
+    {
+      "name": "StormGeo",
+      "domain": "stormgeo.com",
+      "grade": "B",
+      "evidence": "\u201cThe way that OneTrust has onboarded StormGeo has actually been looking at our needs, looking at where we want to be - figuring out our knowledge at the moment and starting there,\u201d says Roger Ison-Haug",
+      "source_url": "https://www.onetrust.com/customers/stormgeo/",
+      "confidence": "high"
+    },
+    {
+      "name": "SuccessKPI",
+      "domain": "successkpi.com",
+      "grade": "B",
+      "evidence": "Working with some of the world's largest government, financial, healthcare, and technology contact centers, SuccessKPI has established security policies that meet the highest industry regulations, including PCI DSS, ISO 27001, SOC 2, GDPR, and more.",
+      "source_url": "https://www.onetrust.com/customers/successkpi/",
+      "confidence": "high"
+    },
+    {
+      "name": "Vanquis Banking Group",
+      "domain": "vanquisbankinggroup.com",
+      "grade": "B",
+      "evidence": "\"We believe that taking responsibility for what we do with personal data and demonstrating the steps we\u2019ve taken to protect people\u2019s rights not only results in better legal compliance, but also offers the business a competitive edge.\"",
+      "source_url": "https://www.onetrust.com/customers/vanquis-banking-group/",
+      "confidence": "high"
+    },
+    {
+      "name": "VFS Global",
+      "domain": "vfsglobal.com",
+      "grade": "B",
+      "evidence": "\"OneTrust accounts for between two to three additional staff, and it\u2019s a very good ROI.\" Barry Cook, Privacy and Group Data Protection Officer",
+      "source_url": "https://www.onetrust.com/customers/vfs-global/",
+      "confidence": "high"
+    },
+    {
+      "name": "Viaplay Group",
+      "domain": "viaplaygroup.com",
+      "grade": "B",
+      "evidence": "Viaplay was looking for a tool that could offer greater visibility and control from a regulatory and operational lens. They wanted a centralized platform that could enable process efficiencies and time savings, in order to reallocate time to more value-added tasks.",
+      "source_url": "https://www.onetrust.com/customers/viaplay/",
+      "confidence": "high"
+    },
+    {
+      "name": "W. L. Gore & Associates",
+      "domain": "gore.com",
+      "grade": "B",
+      "evidence": "Gore, widely recognized for its innovative medical devices and Gore-Tex fabrics, has successfully built a robust data privacy and compliance program through its partnership with OneTrust.",
+      "source_url": "https://www.onetrust.com/customers/wl-gore/",
+      "confidence": "high"
+    },
+    {
+      "name": "Web.com",
+      "domain": "web.com",
+      "grade": "B",
+      "evidence": "\"We don\u2019t view this as a vendor/customer relationship, we see our work with OneTrust as a true partnership.\"",
+      "source_url": "https://www.onetrust.com/customers/web-com/",
+      "confidence": "high"
+    },
+    {
+      "name": "WestRock",
+      "domain": "westrock.com",
+      "grade": "B",
+      "evidence": "\"OneTrust helped us bring our program to the next level. We felt like OneTrust not only had the most products, but also the best value for what we were looking for and our budget.\"",
+      "source_url": "https://www.onetrust.com/customers/westrock/",
+      "confidence": "high"
+    },
+    {
+      "name": "Wipro",
+      "domain": "wipro.com",
+      "grade": "B",
+      "evidence": "\"Customization to meet requirements was key to the success of this project, the OneTrust team helped us customize various elements of the solution, from a custom sandbox to the final output, resulting in a great fit-for-purpose bespoke implementation.\"",
+      "source_url": "https://www.onetrust.com/customers/wipro/",
+      "confidence": "high"
+    },
+    {
+      "name": "WPP",
+      "domain": "wpp.com",
+      "grade": "C",
+      "evidence": "ript><script>(self.__next_s=self.__next_s||[]).push([0,{\"children\":\"\\nfunction OptanonWrapper() {}\\n \",\"id\":\"onetrust-cookie-consent\"}])</script><script src=\"/_next/static/",
+      "source_url": "https://www.wpp.com/cookies",
+      "confidence": "medium"
+    }
+  ],
+  "generated_at": "2026-07-10T15:29:25Z",
+  "company_count": 87
+}
