@@ -6,243 +6,19 @@
   },
   "companies": [
     {
-      "name": "Axslogic",
-      "domain": "axslogic.com",
+      "name": "AltiusHub",
+      "domain": "altiushub.com",
       "grade": "B",
-      "evidence": "Sprinto customer case study: Axslogic",
-      "source_url": "https://sprinto.com/customers/axslogic/",
+      "evidence": "With Sprinto, we have continuous visibility and far less manual overhead. That gives us the confidence to stay focused on business-critical priorities while remaining audit-ready.",
+      "source_url": "https://sprinto.com/customers/altiushub/",
       "confidence": "high"
     },
     {
-      "name": "Fyle",
-      "domain": "fylehq.com",
+      "name": "Anaconda",
+      "domain": "anaconda.com",
       "grade": "B",
-      "evidence": "Sprinto customer case study: Fyle",
-      "source_url": "https://sprinto.com/customers/fyle/",
-      "confidence": "high"
-    },
-    {
-      "name": "Shipsy",
-      "domain": "shipsy.io",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Shipsy",
-      "source_url": "https://sprinto.com/customers/shipsy/",
-      "confidence": "high"
-    },
-    {
-      "name": "Scribble Data",
-      "domain": "scribbledata.io",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Scribble Data",
-      "source_url": "https://sprinto.com/customers/scribble-data/",
-      "confidence": "high"
-    },
-    {
-      "name": "Nimblebox",
-      "domain": "nimblebox.ai",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Nimblebox",
-      "source_url": "https://sprinto.com/customers/nimblebox/",
-      "confidence": "high"
-    },
-    {
-      "name": "ZapScale",
-      "domain": "zapscale.com",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Zapscale",
-      "source_url": "https://sprinto.com/customers/zapscale/",
-      "confidence": "high"
-    },
-    {
-      "name": "Infinitedata",
-      "domain": "infinitedata.com",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Infinitedata",
-      "source_url": "https://sprinto.com/customers/infinitedata/",
-      "confidence": "high"
-    },
-    {
-      "name": "Zipy",
-      "domain": "zipy.ai",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Zipy",
-      "source_url": "https://sprinto.com/customers/zipy/",
-      "confidence": "high"
-    },
-    {
-      "name": "Dassana",
-      "domain": "dassana.io",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Dassana",
-      "source_url": "https://sprinto.com/customers/dassana/",
-      "confidence": "high"
-    },
-    {
-      "name": "Equalture",
-      "domain": "equalture.com",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Equalture",
-      "source_url": "https://sprinto.com/customers/equalture/",
-      "confidence": "high"
-    },
-    {
-      "name": "Phyllo",
-      "domain": "getphyllo.com",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Phyllo",
-      "source_url": "https://sprinto.com/customers/phyllo/",
-      "confidence": "high"
-    },
-    {
-      "name": "Happay",
-      "domain": "happay.in",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Happay",
-      "source_url": "https://sprinto.com/customers/happay/",
-      "confidence": "high"
-    },
-    {
-      "name": "Intellect",
-      "domain": "intellect.co",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Intellect",
-      "source_url": "https://sprinto.com/customers/intellect/",
-      "confidence": "high"
-    },
-    {
-      "name": "Atomicwork",
-      "domain": "atomicwork.com",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Atomicwork",
-      "source_url": "https://sprinto.com/customers/atomicwork/",
-      "confidence": "high"
-    },
-    {
-      "name": "Carestack",
-      "domain": "carestack.com",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Carestack",
-      "source_url": "https://sprinto.com/customers/carestack/",
-      "confidence": "high"
-    },
-    {
-      "name": "Neopharma",
-      "domain": "neopharma.ae",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Neopharma",
-      "source_url": "https://sprinto.com/customers/neopharma/",
-      "confidence": "high"
-    },
-    {
-      "name": "Kin Analytics",
-      "domain": "kin-analytics.com",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Kin Analytics",
-      "source_url": "https://sprinto.com/customers/kin-analytics/",
-      "confidence": "high"
-    },
-    {
-      "name": "Bizongo",
-      "domain": "bizongo.com",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Bizongo",
-      "source_url": "https://sprinto.com/customers/bizongo/",
-      "confidence": "high"
-    },
-    {
-      "name": "Cellpoint Digital",
-      "domain": "cellpointdigital.com",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Cellpoint Digital",
-      "source_url": "https://sprinto.com/customers/cellpoint-digital/",
-      "confidence": "high"
-    },
-    {
-      "name": "Position2",
-      "domain": "position2.com",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Position2",
-      "source_url": "https://sprinto.com/customers/position2/",
-      "confidence": "high"
-    },
-    {
-      "name": "Enoah",
-      "domain": "enoah.com",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Enoah",
-      "source_url": "https://sprinto.com/customers/enoah/",
-      "confidence": "high"
-    },
-    {
-      "name": "Noosa",
-      "domain": "noosa.io",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Noosa",
-      "source_url": "https://sprinto.com/customers/noosa/",
-      "confidence": "high"
-    },
-    {
-      "name": "Kodif",
-      "domain": "kodif.ai",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Kodif",
-      "source_url": "https://sprinto.com/customers/kodif/",
-      "confidence": "high"
-    },
-    {
-      "name": "Uncover",
-      "domain": "uncover.so",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Uncover",
-      "source_url": "https://sprinto.com/customers/uncover/",
-      "confidence": "high"
-    },
-    {
-      "name": "Ferve Tickets",
-      "domain": "fervetickets.com",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Ferve Tickets X Kantanna",
-      "source_url": "https://sprinto.com/customers/ferve-tickets-x-kantanna/",
-      "confidence": "high"
-    },
-    {
-      "name": "Kantanna",
-      "domain": "kantanna.com",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Ferve Tickets X Kantanna",
-      "source_url": "https://sprinto.com/customers/ferve-tickets-x-kantanna/",
-      "confidence": "high"
-    },
-    {
-      "name": "Preskale",
-      "domain": "preskale.com",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Preskale",
-      "source_url": "https://sprinto.com/customers/preskale/",
-      "confidence": "high"
-    },
-    {
-      "name": "Zeto",
-      "domain": "zeto.io",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Zeto",
-      "source_url": "https://sprinto.com/customers/zeto/",
-      "confidence": "high"
-    },
-    {
-      "name": "Hubengage",
-      "domain": "hubengage.com",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Hubengage",
-      "source_url": "https://sprinto.com/customers/hubengage/",
-      "confidence": "high"
-    },
-    {
-      "name": "Nitropack",
-      "domain": "nitropack.io",
-      "grade": "B",
-      "evidence": "Sprinto customer case study: Nitropack",
-      "source_url": "https://sprinto.com/customers/nitropack/",
+      "evidence": "Sprinto, as opposed to some other partners in the space, has been very flexible from an implementation and account management perspective. It\u2019s a true partnership where we solve problems together. That makes a big difference,",
+      "source_url": "https://sprinto.com/customers/anaconda/",
       "confidence": "high"
     },
     {
@@ -254,51 +30,83 @@
       "confidence": "high"
     },
     {
-      "name": "MoveInSync",
-      "domain": "moveinsync.com",
+      "name": "Atomicwork",
+      "domain": "atomicwork.com",
       "grade": "B",
-      "evidence": "Sprinto customer case study: Moveinsync",
-      "source_url": "https://sprinto.com/customers/moveinsync/",
+      "evidence": "Sprinto customer case study: Atomicwork",
+      "source_url": "https://sprinto.com/customers/atomicwork/",
       "confidence": "high"
     },
     {
-      "name": "Tangelo",
-      "domain": "tangelo.com",
+      "name": "Axslogic",
+      "domain": "axslogic.com",
       "grade": "B",
-      "evidence": "Sprinto customer case study: Tangelo",
-      "source_url": "https://sprinto.com/customers/tangelo/",
+      "evidence": "Sprinto customer case study: Axslogic",
+      "source_url": "https://sprinto.com/customers/axslogic/",
       "confidence": "high"
     },
     {
-      "name": "Shellkode",
-      "domain": "shellkode.com",
+      "name": "Bizongo",
+      "domain": "bizongo.com",
       "grade": "B",
-      "evidence": "Sprinto customer case study: Shellkode",
-      "source_url": "https://sprinto.com/customers/shellkode/",
+      "evidence": "Sprinto customer case study: Bizongo",
+      "source_url": "https://sprinto.com/customers/bizongo/",
       "confidence": "high"
     },
     {
-      "name": "Superbio",
-      "domain": "superbio.ai",
+      "name": "Carestack",
+      "domain": "carestack.com",
       "grade": "B",
-      "evidence": "Sprinto customer case study: Superbio",
-      "source_url": "https://sprinto.com/customers/superbio/",
+      "evidence": "Sprinto customer case study: Carestack",
+      "source_url": "https://sprinto.com/customers/carestack/",
       "confidence": "high"
     },
     {
-      "name": "Transform9",
-      "domain": "transform9.com",
+      "name": "CargoAi",
+      "domain": "cargoai.co",
       "grade": "B",
-      "evidence": "Sprinto customer case study: Transform9",
-      "source_url": "https://sprinto.com/customers/transform9/",
+      "evidence": "We now have an efficient platform that automatically monitors compliance across our entire tech stack daily,",
+      "source_url": "https://sprinto.com/customers/cargoai/",
       "confidence": "high"
     },
     {
-      "name": "Omnivista",
-      "domain": "omnivista.com",
+      "name": "Cellpoint Digital",
+      "domain": "cellpointdigital.com",
       "grade": "B",
-      "evidence": "Sprinto customer case study: Omnivista",
-      "source_url": "https://sprinto.com/customers/omnivista/",
+      "evidence": "Sprinto customer case study: Cellpoint Digital",
+      "source_url": "https://sprinto.com/customers/cellpoint-digital/",
+      "confidence": "high"
+    },
+    {
+      "name": "Clara",
+      "domain": "clara.com",
+      "grade": "B",
+      "evidence": "Sprinto is part of our compliance backbone. Outside of helping us maintain continuous audit readiness we use the platform to manage third-party risks, align with evolving regulatory expectations, and as a driver of efficiency in compliance management,",
+      "source_url": "https://sprinto.com/customers/clara/",
+      "confidence": "high"
+    },
+    {
+      "name": "CodeAnt AI",
+      "domain": "codeant.ai",
+      "grade": "B",
+      "evidence": "CodeAnt AI, Inc.'s Trust Center for compliance, data security, and privacy. See how we protect your data and meet regulatory standards. Powered by Sprinto.",
+      "source_url": "https://codeantai.trustcenter.sprinto.com/",
+      "confidence": "high"
+    },
+    {
+      "name": "CustomGPT",
+      "domain": "customgpt.ai",
+      "grade": "B",
+      "evidence": "Trust Center's Trust Center for compliance, data security, and privacy. See how we protect your data and meet regulatory standards. Powered by Sprinto. (page title in search index: \"CustomGPT - Trust Center - Security & Privacy\")",
+      "source_url": "https://customgpt.trustcenter.sprinto.com/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Dassana",
+      "domain": "dassana.io",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Dassana",
+      "source_url": "https://sprinto.com/customers/dassana/",
       "confidence": "high"
     },
     {
@@ -310,11 +118,387 @@
       "confidence": "high"
     },
     {
+      "name": "DNIF",
+      "domain": "dnif.it",
+      "grade": "B",
+      "evidence": "Documentation alone hinders the quantum of work done toward getting certification. I checked with some of my peers, and they spent around 4 to 5 months just creating the documentation. With Sprinto, we got done in 24 hours.",
+      "source_url": "https://sprinto.com/customers/dnif/",
+      "confidence": "high"
+    },
+    {
+      "name": "Enoah",
+      "domain": "enoah.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Enoah",
+      "source_url": "https://sprinto.com/customers/enoah/",
+      "confidence": "high"
+    },
+    {
+      "name": "Equalture",
+      "domain": "equalture.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Equalture",
+      "source_url": "https://sprinto.com/customers/equalture/",
+      "confidence": "high"
+    },
+    {
+      "name": "Fantacode",
+      "domain": "fantacode.com",
+      "grade": "B",
+      "evidence": "Fantacode's Trust Center for compliance, data security, and privacy. See how we protect your data and meet regulatory standards. Powered by Sprinto.",
+      "source_url": "https://app.sprinto.com/trust-center/view/57a46252-a09a-4d49-864b-52db43cfee6e",
+      "confidence": "medium"
+    },
+    {
+      "name": "Ferve Tickets",
+      "domain": "fervetickets.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Ferve Tickets X Kantanna",
+      "source_url": "https://sprinto.com/customers/ferve-tickets-x-kantanna/",
+      "confidence": "high"
+    },
+    {
+      "name": "Fini AI",
+      "domain": "usefini.com",
+      "grade": "B",
+      "evidence": "We wouldn\u2019t have been able to scale the way we have if we were still on spreadsheets. Right from when we onboard someone new, Sprinto continuously tracks compliance and alerts key tasks to complete, so everyone has a security-first mindset and there\u2019s a clear structure in place.",
+      "source_url": "https://sprinto.com/customers/fini-ai/",
+      "confidence": "high"
+    },
+    {
+      "name": "Fresha",
+      "domain": "fresha.com",
+      "grade": "B",
+      "evidence": "Sprinto provides a lot more guidance and better visibility. Our IT team now has a clear protocol for everything, including provisioning access,",
+      "source_url": "https://sprinto.com/customers/fresha/",
+      "confidence": "high"
+    },
+    {
+      "name": "Fyle",
+      "domain": "fylehq.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Fyle",
+      "source_url": "https://sprinto.com/customers/fyle/",
+      "confidence": "high"
+    },
+    {
+      "name": "Fyxer",
+      "domain": "fyxer.com",
+      "grade": "B",
+      "evidence": "Sprinto provides everything we need\u2014but in a way where I don\u2019t need to recruit three or four compliance people to keep updating documents or managing audits.",
+      "source_url": "https://sprinto.com/customers/fyxer/",
+      "confidence": "high"
+    },
+    {
+      "name": "GeoIQ",
+      "domain": "geoiq.io",
+      "grade": "B",
+      "evidence": "Sprinto fills competency gaps. Many of our processes now follow a structured, compliant approach, whether it\u2019s onboarding, offboarding, or matters related to asset management,",
+      "source_url": "https://sprinto.com/customers/geoiq/",
+      "confidence": "high"
+    },
+    {
+      "name": "Giift",
+      "domain": "giift.com",
+      "grade": "B",
+      "evidence": "I spoke to a lot of vendors. But no one gave us the kind of confidence that Sprinto did. The choice to work with the platform and the team was easy and immediate.",
+      "source_url": "https://sprinto.com/customers/giift/",
+      "confidence": "high"
+    },
+    {
+      "name": "HackerRank",
+      "domain": "hackerrank.com",
+      "grade": "B",
+      "evidence": "We didn\u2019t know a lot about SOC2 but it was easy to follow Sprinto\u2019s guided implementation plan. A bi-weekly call of 30 minutes is all I ended up spending on my part.",
+      "source_url": "https://sprinto.com/customers/hackerrank/",
+      "confidence": "high"
+    },
+    {
+      "name": "Happay",
+      "domain": "happay.in",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Happay",
+      "source_url": "https://sprinto.com/customers/happay/",
+      "confidence": "high"
+    },
+    {
+      "name": "Hubengage",
+      "domain": "hubengage.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Hubengage",
+      "source_url": "https://sprinto.com/customers/hubengage/",
+      "confidence": "high"
+    },
+    {
+      "name": "Induced",
+      "domain": "induced.ai",
+      "grade": "B",
+      "evidence": "Induced's Trust Center for compliance, data security, and privacy. See how we protect your data and meet regulatory standards. Powered by Sprinto.",
+      "source_url": "https://induced.trustcenter.sprinto.com/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Infinitedata",
+      "domain": "infinitedata.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Infinitedata",
+      "source_url": "https://sprinto.com/customers/infinitedata/",
+      "confidence": "high"
+    },
+    {
+      "name": "Intellect",
+      "domain": "intellect.co",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Intellect",
+      "source_url": "https://sprinto.com/customers/intellect/",
+      "confidence": "high"
+    },
+    {
+      "name": "Journeybee",
+      "domain": "journeybee.io",
+      "grade": "B",
+      "evidence": "By cutting down admin time, unblocking enterprise deals, and helping us reach our security goals before the end of the year, Sprinto became a core part of how we scale.",
+      "source_url": "https://sprinto.com/customers/journeybee/",
+      "confidence": "high"
+    },
+    {
+      "name": "Kantanna",
+      "domain": "kantanna.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Ferve Tickets X Kantanna",
+      "source_url": "https://sprinto.com/customers/ferve-tickets-x-kantanna/",
+      "confidence": "high"
+    },
+    {
+      "name": "Kin Analytics",
+      "domain": "kin-analytics.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Kin Analytics",
+      "source_url": "https://sprinto.com/customers/kin-analytics/",
+      "confidence": "high"
+    },
+    {
+      "name": "Kodif",
+      "domain": "kodif.ai",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Kodif",
+      "source_url": "https://sprinto.com/customers/kodif/",
+      "confidence": "high"
+    },
+    {
+      "name": "Makeforms",
+      "domain": "makeforms.io",
+      "grade": "B",
+      "evidence": "Sprinto kept giving us more and more. It was a combination of the right time and the right platform; that\u2019s how we were able to unlock 11 frameworks.",
+      "source_url": "https://sprinto.com/customers/makeforms/",
+      "confidence": "high"
+    },
+    {
       "name": "Mesmerise",
       "domain": "mesmerise.com",
       "grade": "C",
       "evidence": "Sprinto customer case study: Mesmerise",
       "source_url": "https://sprinto.com/customers/mesmerise/",
+      "confidence": "high"
+    },
+    {
+      "name": "Mode",
+      "domain": "mode.io",
+      "grade": "B",
+      "evidence": "Mode's Trust Center for compliance, data security, and privacy. See how we protect your data and meet regulatory standards. Powered by Sprinto.",
+      "source_url": "https://mode.trustcenter.sprinto.com/",
+      "confidence": "high"
+    },
+    {
+      "name": "MoveInSync",
+      "domain": "moveinsync.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Moveinsync",
+      "source_url": "https://sprinto.com/customers/moveinsync/",
+      "confidence": "high"
+    },
+    {
+      "name": "Neopharma",
+      "domain": "neopharma.ae",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Neopharma",
+      "source_url": "https://sprinto.com/customers/neopharma/",
+      "confidence": "high"
+    },
+    {
+      "name": "Neurosynaptic",
+      "domain": "neurosynaptic.com",
+      "grade": "B",
+      "evidence": "Sprinto ensures compliance tasks are assigned to the right person and completed in time,",
+      "source_url": "https://sprinto.com/customers/neurosynaptic/",
+      "confidence": "high"
+    },
+    {
+      "name": "Nimblebox",
+      "domain": "nimblebox.ai",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Nimblebox",
+      "source_url": "https://sprinto.com/customers/nimblebox/",
+      "confidence": "high"
+    },
+    {
+      "name": "Nitropack",
+      "domain": "nitropack.io",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Nitropack",
+      "source_url": "https://sprinto.com/customers/nitropack/",
+      "confidence": "high"
+    },
+    {
+      "name": "Nium",
+      "domain": "nium.com",
+      "grade": "A",
+      "evidence": "The best thing about using Sprinto for our audit preparation was that the technology team didn\u2019t even realize we had an audit occurring because they didn\u2019t receive a single request from us.",
+      "source_url": "https://sprinto.com/customers/nium/",
+      "confidence": "high"
+    },
+    {
+      "name": "Noosa",
+      "domain": "noosa.io",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Noosa",
+      "source_url": "https://sprinto.com/customers/noosa/",
+      "confidence": "high"
+    },
+    {
+      "name": "Office Beacon",
+      "domain": "officebeacon.com",
+      "grade": "B",
+      "evidence": "No other tool gave us the confidence that Sprinto did. Just by looking at the dashboard, I could tell that the platform is comprehensive.",
+      "source_url": "https://sprinto.com/customers/officebeacon/",
+      "confidence": "high"
+    },
+    {
+      "name": "Omnivista",
+      "domain": "omnivista.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Omnivista",
+      "source_url": "https://sprinto.com/customers/omnivista/",
+      "confidence": "high"
+    },
+    {
+      "name": "Phyllo",
+      "domain": "getphyllo.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Phyllo",
+      "source_url": "https://sprinto.com/customers/phyllo/",
+      "confidence": "high"
+    },
+    {
+      "name": "Position2",
+      "domain": "position2.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Position2",
+      "source_url": "https://sprinto.com/customers/position2/",
+      "confidence": "high"
+    },
+    {
+      "name": "Prescient Security & Assurance",
+      "domain": "prescientsecurity.com",
+      "grade": "B",
+      "evidence": "Sprinto is a great tool to kind of help the process \u2013 instead of having to have numerous meetings and documents all over, we get a well-defined screenshot repository. This makes the process much faster and smoother for auditors.",
+      "source_url": "https://sprinto.com/customers/prescient/",
+      "confidence": "high"
+    },
+    {
+      "name": "Preskale",
+      "domain": "preskale.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Preskale",
+      "source_url": "https://sprinto.com/customers/preskale/",
+      "confidence": "high"
+    },
+    {
+      "name": "Project36",
+      "domain": "project36.io",
+      "grade": "B",
+      "evidence": "Project36's Trust Center for compliance, data security, and privacy. See how we protect your data and meet regulatory standards. Powered by Sprinto.",
+      "source_url": "https://app.sprinto.com/trust-center/view/7dd0a254-ec61-4fb0-8eb0-607ef2e85fab",
+      "confidence": "medium"
+    },
+    {
+      "name": "Prometeia",
+      "domain": "prometeia.com",
+      "grade": "B",
+      "evidence": "Continuous monitoring helps from day one. It connects all the pieces and helps delegate tasks to specific roles and accounts without losing track or control. When it comes to applying compliance principles, automation is a gamechanger,",
+      "source_url": "https://sprinto.com/customers/prometeia/",
+      "confidence": "high"
+    },
+    {
+      "name": "Recruit CRM",
+      "domain": "recruitcrm.io",
+      "grade": "B",
+      "evidence": "Within an hour of the first call, admin users were decided, alerts for potential spikes were set up and a slack channel was created for communicating with the Sprinto team",
+      "source_url": "https://sprinto.com/customers/recruitcrm/",
+      "confidence": "high"
+    },
+    {
+      "name": "Ripl",
+      "domain": "ripl.com",
+      "grade": "B",
+      "evidence": "Chiefly, Sprinto\u2019s real-time dashboard made compliance tasks visible and pointed a direction forward.",
+      "source_url": "https://sprinto.com/customers/ripl/",
+      "confidence": "high"
+    },
+    {
+      "name": "RisingWave Labs",
+      "domain": "risingwave.com",
+      "grade": "B",
+      "evidence": "Rising Wave Labs's Trust Center for compliance, data security, and privacy. See how we protect your data and meet regulatory standards. Powered by Sprinto.",
+      "source_url": "https://risingwave.trustcenter.sprinto.com/",
+      "confidence": "high"
+    },
+    {
+      "name": "risr/",
+      "domain": "risr.global",
+      "grade": "B",
+      "evidence": "Sprinto is a purpose-built platform for cloud-hosted companies like ours, and it has been a game-changer for our business,",
+      "source_url": "https://sprinto.com/customers/risr/",
+      "confidence": "high"
+    },
+    {
+      "name": "Rocketlane",
+      "domain": "rocketlane.com",
+      "grade": "A",
+      "evidence": "Sprinto integrates with everything that we use, and collects evidence automatically. Centralizing evidence in one place is critical for us, so it\u2019s nice that Sprinto does this out-of-the-box,",
+      "source_url": "https://sprinto.com/customers/rocketlane/",
+      "confidence": "high"
+    },
+    {
+      "name": "Scribble Data",
+      "domain": "scribbledata.io",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Scribble Data",
+      "source_url": "https://sprinto.com/customers/scribble-data/",
+      "confidence": "high"
+    },
+    {
+      "name": "Sensiba",
+      "domain": "sensiba.com",
+      "grade": "C",
+      "evidence": "Sprinto customer case study: Sensiba",
+      "source_url": "https://sprinto.com/customers/sensiba/",
+      "confidence": "high"
+    },
+    {
+      "name": "Shellkode",
+      "domain": "shellkode.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Shellkode",
+      "source_url": "https://sprinto.com/customers/shellkode/",
+      "confidence": "high"
+    },
+    {
+      "name": "Shipsy",
+      "domain": "shipsy.io",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Shipsy",
+      "source_url": "https://sprinto.com/customers/shipsy/",
       "confidence": "high"
     },
     {
@@ -326,14 +510,142 @@
       "confidence": "high"
     },
     {
-      "name": "Sensiba",
-      "domain": "sensiba.com",
-      "grade": "C",
-      "evidence": "Sprinto customer case study: Sensiba",
-      "source_url": "https://sprinto.com/customers/sensiba/",
+      "name": "Spendflo",
+      "domain": "spendflo.com",
+      "grade": "B",
+      "evidence": "Sprinto has a comprehensive suite of features that allow us to automate tasks, track progress over time, and make necessary changes quickly and accurately. We knew Sprinto could hand-hold us through the whole thing.",
+      "source_url": "https://sprinto.com/customers/spendflo/",
+      "confidence": "high"
+    },
+    {
+      "name": "StepSecurity",
+      "domain": "stepsecurity.io",
+      "grade": "B",
+      "evidence": "Compared to other platforms, Sprinto made sense because of Ignite \u2013 it was so much more affordable. As a startup we appreciated the pricing,",
+      "source_url": "https://sprinto.com/customers/stepsecurity/",
+      "confidence": "high"
+    },
+    {
+      "name": "Superbio",
+      "domain": "superbio.ai",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Superbio",
+      "source_url": "https://sprinto.com/customers/superbio/",
+      "confidence": "high"
+    },
+    {
+      "name": "SuprSend",
+      "domain": "suprsend.com",
+      "grade": "B",
+      "evidence": "SuprSend's Trust Center for compliance, data security, and privacy. See how we protect your data and meet regulatory standards. Powered by Sprinto.",
+      "source_url": "https://suprsend.trustcenter.sprinto.com/",
+      "confidence": "high"
+    },
+    {
+      "name": "Tangelo",
+      "domain": "tangelo.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Tangelo",
+      "source_url": "https://sprinto.com/customers/tangelo/",
+      "confidence": "high"
+    },
+    {
+      "name": "The Boxoffice Company",
+      "domain": "boxoffice.com",
+      "grade": "B",
+      "evidence": "The PCI audit was very easy and fast, Sprinto pre-prepares everything, and auditors get their own dashboard to check evidence. They just went down the list, saw all the green check marks, and it was done.",
+      "source_url": "https://sprinto.com/customers/the-boxoffice-company/",
+      "confidence": "high"
+    },
+    {
+      "name": "Transform9",
+      "domain": "transform9.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Transform9",
+      "source_url": "https://sprinto.com/customers/transform9/",
+      "confidence": "high"
+    },
+    {
+      "name": "Truto",
+      "domain": "truto.one",
+      "grade": "B",
+      "evidence": "Yin Yang, Inc.'s Trust Center for compliance, data security, and privacy. See how we protect your data and meet regulatory standards. Powered by Sprinto. (page links to truto.one privacy/ToS; search-indexed title: \"Truto - Trust Center\")",
+      "source_url": "https://app.sprinto.com/trust-center/view/4a07bb7e-78e8-4783-b588-ec6f82846ac2",
+      "confidence": "high"
+    },
+    {
+      "name": "Turtlemint",
+      "domain": "turtlemint.com",
+      "grade": "B",
+      "evidence": "It was important to us that the compliance partner we chose could speak our language and simplify compliance so we could understand it in our context. That\u2019s why we went with Sprinto.",
+      "source_url": "https://sprinto.com/customers/turtlemint/",
+      "confidence": "high"
+    },
+    {
+      "name": "Uncover",
+      "domain": "uncover.so",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Uncover",
+      "source_url": "https://sprinto.com/customers/uncover/",
+      "confidence": "high"
+    },
+    {
+      "name": "Vivantio",
+      "domain": "vivantio.com",
+      "grade": "B",
+      "evidence": "Big thanks to our partners at Sprinto, whose compliance automation platform helped us streamline evidence collection and ongoing monitoring (Vivantio LinkedIn post announcing SOC 2 Type II completion)",
+      "source_url": "https://www.linkedin.com/posts/vivantio_vivantio-soc2-trust-activity-7318611226870104064-9Y12",
+      "confidence": "high"
+    },
+    {
+      "name": "WarpBuild",
+      "domain": "warpbuild.com",
+      "grade": "B",
+      "evidence": "I chose Sprinto because of their hands on support and they were the cheapest option. (from WarpBuild's own SOC 2 blog post; post also details Sprinto's Slack Connect support during their audit)",
+      "source_url": "https://www.warpbuild.com/blog/soc2",
+      "confidence": "high"
+    },
+    {
+      "name": "WebEngage",
+      "domain": "webengage.com",
+      "grade": "B",
+      "evidence": "Most of the controls we used for ISO 27001 and 27701 overlapped with Sprinto\u2019s, making it easier for us to make the switch to platform-led management. Earlier, we had to manage compliances in three different places, but it\u2019s all consolidated within Sprinto.",
+      "source_url": "https://sprinto.com/customers/webengage/",
+      "confidence": "high"
+    },
+    {
+      "name": "Writesonic",
+      "domain": "writesonic.com",
+      "grade": "B",
+      "evidence": "Writesonic's Trust Center for compliance, data security, and privacy. See how we protect your data and meet regulatory standards. Powered by Sprinto.",
+      "source_url": "https://writesonic.trustcenter.sprinto.com/",
+      "confidence": "high"
+    },
+    {
+      "name": "ZapScale",
+      "domain": "zapscale.com",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Zapscale",
+      "source_url": "https://sprinto.com/customers/zapscale/",
+      "confidence": "high"
+    },
+    {
+      "name": "Zeto",
+      "domain": "zeto.io",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Zeto",
+      "source_url": "https://sprinto.com/customers/zeto/",
+      "confidence": "high"
+    },
+    {
+      "name": "Zipy",
+      "domain": "zipy.ai",
+      "grade": "B",
+      "evidence": "Sprinto customer case study: Zipy",
+      "source_url": "https://sprinto.com/customers/zipy/",
       "confidence": "high"
     }
   ],
-  "generated_at": "2026-07-09T20:13:35Z",
-  "company_count": 41
+  "generated_at": "2026-07-10T08:03:22Z",
+  "company_count": 80
 }
