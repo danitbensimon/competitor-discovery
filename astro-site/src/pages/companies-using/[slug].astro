@@ -24,9 +24,7 @@ const nC = companies.filter((c) => c.grade === 'C').length;
 const notable = companies.filter((c) => c.grade === 'A').slice(0, 10).map((c) => c.name);
 const notableStr = (notable.length ? notable : companies.slice(0, 10).map((c) => c.name)).join(', ');
 
-const gated = [
-  { name: 'Thoropass', sub: 'coming soon' },
-];
+const gated = [];
 
 function gradeStyle(g) {
   if (g === 'A') return 'background:linear-gradient(135deg,#4B3BFF,#7C3AED);color:#fff;border:none;';

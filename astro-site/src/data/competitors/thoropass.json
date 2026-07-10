@@ -1,0 +1,555 @@
+{
+  "competitor": {
+    "name": "Thoropass",
+    "slug": "thoropass",
+    "domain": "thoropass.com"
+  },
+  "companies": [
+    {
+      "name": "1up",
+      "domain": "1up.ai",
+      "grade": "B",
+      "evidence": "We had an enterprise prospect who was giving us a hard time because we had not achieved compliance yet, and the Thoropass team came through with an engagement letter.",
+      "source_url": "https://www.thoropass.com/customers/1up",
+      "confidence": "high"
+    },
+    {
+      "name": "AcuityMD",
+      "domain": "acuitymd.com",
+      "grade": "B",
+      "evidence": "Thoropass was super, super helpful in educating us and making sure we had our bases covered.",
+      "source_url": "https://www.thoropass.com/customers/acuitymd",
+      "confidence": "high"
+    },
+    {
+      "name": "Alaffia Health",
+      "domain": "alaffiahealth.com",
+      "grade": "B",
+      "evidence": "We were initially focused on SOC 2, but Thoropass enabled us to get a head start on HITRUST i1, an entire year before we planned to begin,",
+      "source_url": "https://www.thoropass.com/customers/alaffia-health-revolutionizing-healthcare-with-responsible-innovation",
+      "confidence": "high"
+    },
+    {
+      "name": "Allison",
+      "domain": "askallison.ai",
+      "grade": "B",
+      "evidence": "Overall, Thoropass has exceeded our expectations and has been a trusted partner in our compliance efforts.",
+      "source_url": "https://www.thoropass.com/customers/allison",
+      "confidence": "high"
+    },
+    {
+      "name": "Arpio",
+      "domain": "arpio.io",
+      "grade": "B",
+      "evidence": "This webinar is going to be my journey, Arpio's journey, pursuing SOC 2 in collaboration with Laika. ... We signed the contract with Laika, the next day we were getting the onboarding emails.",
+      "source_url": "https://arpio.io/soc-2-compliance-can-it-be-done-in-6-weeks/",
+      "confidence": "high"
+    },
+    {
+      "name": "Array Behavioral Care",
+      "domain": "arraybc.com",
+      "grade": "B",
+      "evidence": "The thought of going through your first HITRUST attestation without Thoropass sounds impossible.",
+      "source_url": "https://www.thoropass.com/customers/beyond-automation-how-array-behavioral-care-found-a-true-audit-partner-in-thoropass",
+      "confidence": "high"
+    },
+    {
+      "name": "BeHome247",
+      "domain": "behome247.com",
+      "grade": "B",
+      "evidence": "The lack of accessibility and the resulting frustration made us realize the need for a more streamlined and user-friendly solution, which we found in Thoropass.",
+      "source_url": "https://www.thoropass.com/customers/behome247",
+      "confidence": "high"
+    },
+    {
+      "name": "Belong For Me",
+      "domain": "belongforme.com",
+      "grade": "B",
+      "evidence": "The Belong For Me team estimates Thoropass helped save 30-50% of the team\u2019s time, given the platform provides a substantial amount of the artifacts requested by the auditors to verify compliance.",
+      "source_url": "https://www.thoropass.com/customers/belong-for-me",
+      "confidence": "high"
+    },
+    {
+      "name": "Benefix",
+      "domain": "benefix.us",
+      "grade": "B",
+      "evidence": "Thoropass and being compliant ended up helping us close our second-largest customer.",
+      "source_url": "https://www.thoropass.com/customers/benefix",
+      "confidence": "high"
+    },
+    {
+      "name": "Berkshire Grey",
+      "domain": "berkshiregrey.com",
+      "grade": "B",
+      "evidence": "Once we had our policies nailed down, we had a lot of the evidence already taken care of, and we\u2019re able to map it from SOC 2 over to the GDPR-specific controls,",
+      "source_url": "https://www.thoropass.com/customers/berkshire-grey",
+      "confidence": "high"
+    },
+    {
+      "name": "Boreas Monitoring Solutions",
+      "domain": "boreasmonitoring.com",
+      "grade": "B",
+      "evidence": "Their hands-on approach and audit and security services integration into the Thoropass platform made the process manageable.",
+      "source_url": "https://www.thoropass.com/customers/boreas",
+      "confidence": "high"
+    },
+    {
+      "name": "BrightScale",
+      "domain": "brightscale.com",
+      "grade": "B",
+      "evidence": "With Thoropass's service partner, BrightScale, overseeing much of the strategy and execution, they were able to get to the implementation stage much faster, allowing them to focus on their core business and win enterprise deals with millions in ARR.",
+      "source_url": "https://www.prnewswire.com/news-releases/thoropasss-new-partner-ecosystem-bridges-gaps-for-in-house-teams-seeking-compliance-301833773.html",
+      "confidence": "medium"
+    },
+    {
+      "name": "Bytescale",
+      "domain": "bytescale.com",
+      "grade": "B",
+      "evidence": "The impact that SOC 2 and Thoropass has had on Bytescale has been significant. We\u2019ve achieved a 400% ROI on our contract with Thoropass through retaining enterprise customers",
+      "source_url": "https://www.thoropass.com/customers/bytescale",
+      "confidence": "high"
+    },
+    {
+      "name": "CallFinder",
+      "domain": "mycallfinder.com",
+      "grade": "B",
+      "evidence": "The efficiency of Thoropass\u2019s platform, combined with Muscatek\u2019s expertise, has made our SOC 2 process smoother and faster.",
+      "source_url": "https://www.thoropass.com/customers/callfinder",
+      "confidence": "high"
+    },
+    {
+      "name": "Capitalize",
+      "domain": "hicapitalize.com",
+      "grade": "A",
+      "evidence": "The best part about working with Thoropass was that it\u2019s the perfect blend of technology and people to take a complicated process and make it accessible and easy.",
+      "source_url": "https://www.thoropass.com/customers/capitalize",
+      "confidence": "high"
+    },
+    {
+      "name": "Cardo AI",
+      "domain": "cardoai.com",
+      "grade": "B",
+      "evidence": "Thoropass had an immediate commercial impact for us. Whenever you bring up the fact that you\u2019re SOC 2 certified, it erases a lot of doubts in the eyes of customers.",
+      "source_url": "https://www.thoropass.com/customers/cardo-ai",
+      "confidence": "high"
+    },
+    {
+      "name": "Cigo Tracker",
+      "domain": "cigotracker.com",
+      "grade": "B",
+      "evidence": "I felt like the Thoropass team was more willing to answer and quickly help, versus the other vendors that I had spoken with There was a bit more of a human touch.",
+      "source_url": "https://www.thoropass.com/customers/cigo",
+      "confidence": "high"
+    },
+    {
+      "name": "Cinchy",
+      "domain": "cinchy.com",
+      "grade": "B",
+      "evidence": "Thoropass has a really clear way of seeing all our big objectives and tasks. It helped me understand the bigger picture and what exact documents we needed to upload as evidence. That was a really helpful piece of Thoropass",
+      "source_url": "https://www.thoropass.com/customers/cinchy",
+      "confidence": "high"
+    },
+    {
+      "name": "CLEARGOALS",
+      "domain": "cleargoals.com",
+      "grade": "B",
+      "evidence": "We did an RFP process and based on the results, the complexity and personalization of our compliance framework, we believed that Thoropass was the best-suited partner to get us where we wanted to go.",
+      "source_url": "https://www.thoropass.com/customers/cleargoals-part-2",
+      "confidence": "high"
+    },
+    {
+      "name": "Clearway Health",
+      "domain": "clearwayhealth.com",
+      "grade": "B",
+      "evidence": "Thoropass is a force multiplier. It makes all the folks involved in operating the technology at Clearway Health more effective,",
+      "source_url": "https://www.thoropass.com/customers/clearway-health",
+      "confidence": "high"
+    },
+    {
+      "name": "Code Climate",
+      "domain": "codeclimate.com",
+      "grade": "C",
+      "evidence": "Who uses Thoropass? Some of the companies that use Thoropass include: Company Code Climate Website codeclimate.com Country United States Revenue 10M-50M Company Size 10-50",
+      "source_url": "https://enlyft.com/tech/products/thoropass",
+      "confidence": "low"
+    },
+    {
+      "name": "CoEnterprise",
+      "domain": "coenterprise.com",
+      "grade": "B",
+      "evidence": "I wanted a tool that would make my life easier. When I was reviewing other platforms and systems, Thoropass was the obvious choice,",
+      "source_url": "https://www.thoropass.com/customers/coenterprise",
+      "confidence": "high"
+    },
+    {
+      "name": "Cycore Secure",
+      "domain": "cycoresecure.com",
+      "grade": "B",
+      "evidence": "From initial Thoropass setup and configuration to ongoing management and audit support, our team turns the platform into a fully managed compliance engine so your team stays focused on product and growth.",
+      "source_url": "https://www.cycoresecure.com/frameworks/thoropass-implementation-services",
+      "confidence": "high"
+    },
+    {
+      "name": "Dealcloser",
+      "domain": "dealcloser.com",
+      "grade": "B",
+      "evidence": "I can\u2019t say enough about our compliance experts. We talked to them every single week and their knowledge was so invaluable. It was helpful to have someone that I could run my ideas off of and project manage this entire undertaking.",
+      "source_url": "https://www.thoropass.com/customers/dealcloser",
+      "confidence": "high"
+    },
+    {
+      "name": "ELEKS",
+      "domain": "eleks.com",
+      "grade": "B",
+      "evidence": "we agreed on the timeline while we were signing the agreement. It was very straightforward, clear, and all of the tasks were definite. We never had a situation where we were waiting on something from Thoropass that wasn\u2019t delivered in time.",
+      "source_url": "https://www.thoropass.com/customers/eleks",
+      "confidence": "high"
+    },
+    {
+      "name": "Elestio",
+      "domain": "elest.io",
+      "grade": "B",
+      "evidence": "Thanks to the platform and our Customer Success Manager, most of the steps were really easy. We were guided at every step by the platform and by humans. Thoropass probably saved us six months",
+      "source_url": "https://www.thoropass.com/customers/elestio",
+      "confidence": "high"
+    },
+    {
+      "name": "Elpha Secure",
+      "domain": "elphasecure.com",
+      "grade": "B",
+      "evidence": "If I\u2019m interested in SOC 2 compliance, I\u2019m probably going to be involved with GDPR or HIPAA compliance someday. Thoropass identifies those overlaps, so I can lean on the work we\u2019ve done on certification X to save time with certification Y.",
+      "source_url": "https://www.thoropass.com/customers/elpha-secure",
+      "confidence": "high"
+    },
+    {
+      "name": "Flare",
+      "domain": "flare.io",
+      "grade": "B",
+      "evidence": "Onboarding with Thoropass was as simple as following the step-by-step process and checking the boxes.",
+      "source_url": "https://www.thoropass.com/customers/flare",
+      "confidence": "high"
+    },
+    {
+      "name": "Forage",
+      "domain": "joinforage.com",
+      "grade": "B",
+      "evidence": "If I had to gather every single piece of evidence for the SOC 2 audit manually, it would have delayed my PCI audit significantly. It would not have been possible without working with the same auditor for both frameworks.",
+      "source_url": "https://www.thoropass.com/customers/forage",
+      "confidence": "high"
+    },
+    {
+      "name": "Fugo",
+      "domain": "fugo.ai",
+      "grade": "B",
+      "evidence": "So it was good to meet with the Thoropass testers, plan the pen testing more rigorously, and watch them execute it in a week or two.",
+      "source_url": "https://www.thoropass.com/customers/fugo",
+      "confidence": "high"
+    },
+    {
+      "name": "Fundraise Up",
+      "domain": "fundraiseup.com",
+      "grade": "B",
+      "evidence": "Compliance is a major differentiator for us. And with Thoropass, we cut the time and resources needed in half.",
+      "source_url": "https://www.thoropass.com/customers/fundraise-up",
+      "confidence": "high"
+    },
+    {
+      "name": "GitClear",
+      "domain": "gitclear.com",
+      "grade": "B",
+      "evidence": "our CSM was able to get a decent amount of evidence transferred over, which saved us a lot of time. Thoropass provided helpful information security policy templates that we customized to our specific needs.",
+      "source_url": "https://www.thoropass.com/customers/gitclear",
+      "confidence": "high"
+    },
+    {
+      "name": "Glean.ai",
+      "domain": "glean.ai",
+      "grade": "B",
+      "evidence": "Thanks to Muscatek\u2019s guidance and Thoropass\u2019 platform, they completed their SOC 2 attestation in just 3.5 months\u2014significantly quicker than initially anticipated.",
+      "source_url": "https://www.thoropass.com/customers/glean-ai",
+      "confidence": "high"
+    },
+    {
+      "name": "HalcyonFT",
+      "domain": "halcyonft.com",
+      "grade": "B",
+      "evidence": "while HalcyonFT already maintained best-in-class information security and data governance, attaining these certifications differentiated us from some of our competitors and is a heavy checkmark on our existing and future client regulatory compliance requirements.",
+      "source_url": "https://www.thoropass.com/customers/halcyonft",
+      "confidence": "high"
+    },
+    {
+      "name": "HealthSnap",
+      "domain": "healthsnap.io",
+      "grade": "B",
+      "evidence": "We picked Thoropass because it provides an assessor and a platform. A lot of other companies have only a platform and bring in a third-party assessor. Thoropass is a one-stop shop, which makes things much easier.",
+      "source_url": "https://www.thoropass.com/customers/healthsnap",
+      "confidence": "high"
+    },
+    {
+      "name": "Hippo Technologies",
+      "domain": "myhippo.life",
+      "grade": "B",
+      "evidence": "I would say [the internal audit was] exceptionally good. We thought we had it nailed, and we didn\u2019t. They were able to highlight areas where we missed the mark or didn\u2019t have the right evidence,",
+      "source_url": "https://www.thoropass.com/customers/hippo",
+      "confidence": "high"
+    },
+    {
+      "name": "interVal",
+      "domain": "inter-val.ai",
+      "grade": "B",
+      "evidence": "Thoropass\u2019s platform and team of experts have helped us reduce the amount of time spent navigating those questions by about 90%, allowing us to focus our time on helping our customers and building an impactful business.",
+      "source_url": "https://www.thoropass.com/customers/interval",
+      "confidence": "high"
+    },
+    {
+      "name": "Kado",
+      "domain": "kado.money",
+      "grade": "B",
+      "evidence": "The extra expert eyes helped ensure a smooth and efficient audit experience, and Thoropass\u2019s platform provided a centralized hub where they could manage their entire compliance journey from one place.",
+      "source_url": "https://www.thoropass.com/customers/kado",
+      "confidence": "high"
+    },
+    {
+      "name": "LoanStreet",
+      "domain": "loan-street.com",
+      "grade": "C",
+      "evidence": "Who uses Thoropass? Some of the companies that use Thoropass include: ... Company LoanStreet Website loan-street.com Country United States Revenue 10M-50M Company Size 50-200",
+      "source_url": "https://enlyft.com/tech/products/thoropass",
+      "confidence": "low"
+    },
+    {
+      "name": "Long Tail Health Solutions",
+      "domain": "longtailhealth.com",
+      "grade": "B",
+      "evidence": "having an expert maintain an updated set of policies and controls for compliance frameworks over time is super helpful. It saves a ton of time to go to one place rather than sourcing it ourselves.",
+      "source_url": "https://www.thoropass.com/customers/long-tail",
+      "confidence": "high"
+    },
+    {
+      "name": "MedCall",
+      "domain": "medcalladvisors.com",
+      "grade": "B",
+      "evidence": "The comprehensive roadmap, detailed dashboard, and integration of resources offered by Thoropass were standout features, saving time and proving to be highly useful.",
+      "source_url": "https://www.thoropass.com/customers/medcall",
+      "confidence": "high"
+    },
+    {
+      "name": "Medmo",
+      "domain": "medmo.com",
+      "grade": "B",
+      "evidence": "They fully understood what our application was, what our stacks were, what the breadth of each application was. I was really impressed by their organization and professionalism in terms of all their communications,",
+      "source_url": "https://www.thoropass.com/customers/medmo",
+      "confidence": "high"
+    },
+    {
+      "name": "Mersive",
+      "domain": "mersive.com",
+      "grade": "C",
+      "evidence": "Who uses Thoropass? Some of the companies that use Thoropass include: ... Company Mersive Website mersive.com Country United States Revenue 50M-100M Company Size 50-200",
+      "source_url": "https://enlyft.com/tech/products/thoropass",
+      "confidence": "low"
+    },
+    {
+      "name": "Monit",
+      "domain": "monitapp.io",
+      "grade": "B",
+      "evidence": "We approached the idea of other frameworks, but after speaking with our prospects, we quickly realized how important a SOC 2 certification was. It\u2019s the gold standard that would address all the concerns prospects could have in regards to our security measures,",
+      "source_url": "https://www.thoropass.com/customers/monit",
+      "confidence": "high"
+    },
+    {
+      "name": "Nord Security",
+      "domain": "nordsecurity.com",
+      "grade": "B",
+      "evidence": "we decided to stay with Thoropass for continuity, because everything was already in the platform. We also love that the platform constantly improves. If we have suggestions, we are really listened to.",
+      "source_url": "https://www.thoropass.com/customers/nord-security",
+      "confidence": "high"
+    },
+    {
+      "name": "O3 Solutions",
+      "domain": "o3.solutions",
+      "grade": "B",
+      "evidence": "O3 Solutions effectively addressed its compliance challenges without sacrificing our agility with the help of Thoropass, leading to improved efficiency, enhanced credibility, and greater opportunities for growth in the industry.",
+      "source_url": "https://www.thoropass.com/customers/o3-solutions",
+      "confidence": "high"
+    },
+    {
+      "name": "OpenVPN",
+      "domain": "openvpn.net",
+      "grade": "C",
+      "evidence": "Who uses Thoropass? Some of the companies that use Thoropass include: ... Company OpenVPN Website openvpn.net Country United States Revenue 10M-50M Company Size 50-200",
+      "source_url": "https://enlyft.com/tech/products/thoropass",
+      "confidence": "low"
+    },
+    {
+      "name": "Opstream",
+      "domain": "opstream.ai",
+      "grade": "B",
+      "evidence": "With its holistic approach to security and compliance, a seamless platform, and hands-on support, Thoropass was the partner Opstream needed.",
+      "source_url": "https://www.thoropass.com/customers/opstream",
+      "confidence": "high"
+    },
+    {
+      "name": "Pagos",
+      "domain": "pagos.ai",
+      "grade": "B",
+      "evidence": "Our Thoropass partner, Muscatek, made the process digestible and achievable\u2014transforming compliance into something we could confidently manage long-term.",
+      "source_url": "https://www.thoropass.com/customers/pagos",
+      "confidence": "high"
+    },
+    {
+      "name": "Peach Finance",
+      "domain": "peachfinance.com",
+      "grade": "B",
+      "evidence": "With a forward-thinking organization that works diligently to take every measure to prevent potential risks and threats, Peach worked towards their SOC 1, SOC 2, and HIPAA for all the right reasons, while being amazing partners during the process,",
+      "source_url": "https://www.thoropass.com/customers/peach",
+      "confidence": "high"
+    },
+    {
+      "name": "Percipience",
+      "domain": "percipience.com",
+      "grade": "B",
+      "evidence": "The company partnered with Thoropass, a compliance automation and audit readiness platform, to streamline the SOC 2 process and support ongoing security governance.",
+      "source_url": "https://www.globenewswire.com/news-release/2026/01/21/3223057/0/en/Percipience-Achieves-SOC-2-Type-I-Compliance.html",
+      "confidence": "high"
+    },
+    {
+      "name": "PhysicsX",
+      "domain": "physicsx.ai",
+      "grade": "B",
+      "evidence": "The seamless audit process, combined with Thoropass\u2019s internal audit services and intuitive platform, transformed what could have been a stressful endeavor into a smooth, streamlined experience.",
+      "source_url": "https://www.thoropass.com/customers/physicsx",
+      "confidence": "high"
+    },
+    {
+      "name": "Prefect",
+      "domain": "prefect.io",
+      "grade": "B",
+      "evidence": "Their dedicated Thoropass representative added the perfect human touch to augment the AI-infused technology and ensure they were more than ready for their SOC 2 audit.",
+      "source_url": "https://www.thoropass.com/customers/prefect",
+      "confidence": "high"
+    },
+    {
+      "name": "Rimidi",
+      "domain": "rimidi.com",
+      "grade": "B",
+      "evidence": "It\u2019s definitely worth the money. Compliance is not cheap, but we\u2019ve been able to get these two certifications and keep up with our customer needs with a one-man compliance team. There\u2019s no way we would have been able to do that without Thoropass,",
+      "source_url": "https://www.thoropass.com/customers/rimidi",
+      "confidence": "high"
+    },
+    {
+      "name": "Routal",
+      "domain": "routal.com",
+      "grade": "B",
+      "evidence": "We\u2019ve been able to get some new opportunities because of this certification. With only a couple of new customers, we can say that the investment in SOC 2 has already had its return.",
+      "source_url": "https://www.thoropass.com/customers/routals",
+      "confidence": "high"
+    },
+    {
+      "name": "Sperity Health",
+      "domain": "sperityhealth.com",
+      "grade": "B",
+      "evidence": "With the combined support of Muscatek and Thoropass, Sperity Health achieved HIPAA compliance in just two months\u2014a timeline that would have been difficult to meet without expert guidance.",
+      "source_url": "https://www.thoropass.com/customers/sperity-health",
+      "confidence": "high"
+    },
+    {
+      "name": "Squirro",
+      "domain": "squirro.com",
+      "grade": "C",
+      "evidence": "Who uses Thoropass? Some of the companies that use Thoropass include: ... Company Squirro Website squirro.com Country Switzerland Revenue 1M-10M Company Size 50-200",
+      "source_url": "https://enlyft.com/tech/products/thoropass",
+      "confidence": "low"
+    },
+    {
+      "name": "Storeroom Logix",
+      "domain": "storeroomlogix.com",
+      "grade": "A",
+      "evidence": "We were reluctant to start our SOC 2 journey until we saw how easy it could be with Thoropass. Thoropass helped define and simplify our journey, and the BrightScale team provided the resources and expertise to execute our journey.",
+      "source_url": "https://www.thoropass.com/customers/storeroom-logix",
+      "confidence": "high"
+    },
+    {
+      "name": "Stylo",
+      "domain": "askstylo.com",
+      "grade": "B",
+      "evidence": "The Thoropass team is exceptional I\u2019ve never worked with a group of people that clearly care so much about my success.",
+      "source_url": "https://www.thoropass.com/customers/stylo",
+      "confidence": "high"
+    },
+    {
+      "name": "TalkHealth.ai",
+      "domain": "talkhealth.ai",
+      "grade": "B",
+      "evidence": "The implementation process was notably smooth, thanks to the proactive assistance from the Muscatek team and Thoropass\u2019s integrated technology.",
+      "source_url": "https://www.thoropass.com/customers/talkhealth-ai",
+      "confidence": "high"
+    },
+    {
+      "name": "Telecom Networks Outsourcing",
+      "domain": "tnoutsourcing.com",
+      "grade": "B",
+      "evidence": "We are hopeful that having Thoropass backing will enhance our credibility and trustworthiness, helping us attract new clients and expand our business opportunities,",
+      "source_url": "https://www.thoropass.com/customers/telecom-networks-outsourcing",
+      "confidence": "high"
+    },
+    {
+      "name": "Tellescope",
+      "domain": "tellescope.com",
+      "grade": "B",
+      "evidence": "Thoropass\u2019s pricing, software, and customer success team were everything we needed rather than trying to figure it out ourselves,",
+      "source_url": "https://www.thoropass.com/customers/tellescope",
+      "confidence": "high"
+    },
+    {
+      "name": "Ternary",
+      "domain": "ternary.app",
+      "grade": "B",
+      "evidence": "Our team put in the work to follow all the instructions from Thoropass, and I\u2019m pleasantly surprised that it worked out in such a phenomenal way.",
+      "source_url": "https://www.thoropass.com/customers/ternary",
+      "confidence": "high"
+    },
+    {
+      "name": "The Access Group",
+      "domain": "theaccessgroup.com",
+      "grade": "B",
+      "evidence": "Generally, a SOC audit could have taken us 12 months from beginning to end, and now we\u2019re probably doing it in six or seven months,",
+      "source_url": "https://www.thoropass.com/customers/access-group",
+      "confidence": "high"
+    },
+    {
+      "name": "ThriveLink",
+      "domain": "thrivelink.ai",
+      "grade": "B",
+      "evidence": "Thoropass has exceeded our expectations and has proven to be a trusted partner in our compliance efforts, helping us achieve and maintain the high standards necessary to grow and succeed in our industry.",
+      "source_url": "https://www.thoropass.com/customers/thrivelink",
+      "confidence": "high"
+    },
+    {
+      "name": "Twentyeight Health",
+      "domain": "twentyeighthealth.com",
+      "grade": "B",
+      "evidence": "Without the expertise and guidance of both Thoropass and NoName IT, our compliance journey would have been exponentially more lengthy and challenging.",
+      "source_url": "https://www.thoropass.com/customers/twentyeight-health",
+      "confidence": "high"
+    },
+    {
+      "name": "Wayleadr",
+      "domain": "wayleadr.com",
+      "grade": "B",
+      "evidence": "The audit process was absolutely painless, and Thoropass made our three weeks less of a headache. Once we kicked off the audit, there was one technical follow up call and a draft report meeting. We were incredibly impressed and satisfied with the entire process.",
+      "source_url": "https://www.thoropass.com/customers/wayleadr",
+      "confidence": "high"
+    },
+    {
+      "name": "Winware",
+      "domain": "winware.ai",
+      "grade": "B",
+      "evidence": "After looking into a few compliance solutions, Winware chose Thoropass (formerly Laika) as the most comprehensive solution at the most affordable price.",
+      "source_url": "https://www.thoropass.com/customers/winware",
+      "confidence": "high"
+    }
+  ],
+  "generated_at": "2026-07-10T16:22:42Z",
+  "company_count": 68
+}
