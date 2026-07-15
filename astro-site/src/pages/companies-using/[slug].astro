@@ -1,15 +1,17 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { normalizeData, confStyle } from '../../lib/normalize.js';
 
 export async function getStaticPaths() {
   const files = import.meta.glob('../../data/competitors/*.json', { eager: true });
-  const all = Object.values(files).map((d) => ({
-    name: d.competitor.name,
-    slug: d.competitor.slug,
-    domain: d.competitor.domain,
-    count: d.company_count,
+  const datas = Object.values(files).map((d) => normalizeData(d.default ?? d));
+  const all = datas.map((n) => ({
+    name: n.competitor.name,
+    slug: n.competitor.slug,
+    domain: n.competitor.domain,
+    count: n.company_count,
   }));
-  return Object.values(files).map((data) => ({
+  return datas.map((data) => ({
     params: { slug: data.competitor.slug },
     props: { data, others: all.filter((b) => b.slug !== data.competitor.slug) },
   }));
@@ -17,30 +19,27 @@ export async function getStaticPaths() {
 
 const { data, others } = Astro.props;
 const { competitor, companies, generated_at, company_count } = data;
+const preview = data.preview;
+const signalReport = data.signal_group_report;
+const coreIcp = data.core_icp;
 const updated = new Date(generated_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
-const nA = companies.filter((c) => c.grade === 'A').length;
-const nB = companies.filter((c) => c.grade === 'B').length;
-const nC = companies.filter((c) => c.grade === 'C').length;
-const notable = companies.filter((c) => c.grade === 'A').slice(0, 10).map((c) => c.name);
+const nVerifiedPlus = companies.filter((c) => c.confidence === 'Verified+').length;
+const nVerified = companies.filter((c) => c.confidence === 'Verified').length;
+const nLikely = companies.filter((c) => c.confidence === 'Likely').length;
+const notable = companies.filter((c) => (c.confidence || '').startsWith('Verified')).slice(0, 10).map((c) => c.name);
 const notableStr = (notable.length ? notable : companies.slice(0, 10).map((c) => c.name)).join(', ');
 
 const gated = [];
-
-function gradeStyle(g) {
-  if (g === 'A') return 'background:linear-gradient(135deg,#4B3BFF,#7C3AED);color:#fff;border:none;';
-  if (g === 'B') return 'background:#EEF0FF;color:#4B3BFF;border:1px solid #DBE0FF;';
-  return 'background:#F1F1F4;color:#6A6A74;border:1px solid #E4E4EA;';
-}
 
 const title = `Companies using ${competitor.name}: ${company_count} verified customers (${updated})`;
 const description = `${company_count} named companies verified to use ${competitor.name} (${competitor.domain}), each with a public evidence source: case studies, customer blogs, partner case studies, job postings and reviews. Updated ${updated}.`;
 
 const faqs = [
   { q: `How many companies use ${competitor.name}?`, a: `CompetitorIQ has verified ${company_count} named companies using ${competitor.name} as of ${updated}. Every company on this page is backed by a public, linked source; the vendor's total customer count is typically much larger.` },
-  { q: `How do you know these companies use ${competitor.name}?`, a: `Every row links to a public source: a case study on ${competitor.domain}, the company's own blog or trust page, an auditor or partner case study, a job posting requiring ${competitor.name} experience, or a named review. Rows are graded A (multiple independent signals), B (one direct piece of evidence) or C (technographic databases only).` },
+  { q: `How do you know these companies use ${competitor.name}?`, a: `Every row links to a public source: a case study on ${competitor.domain}, the company's own blog or trust page, an auditor or partner case study, a job posting requiring ${competitor.name} experience, or a named review. Rows are labelled Verified+ (multiple independent signals agree), Verified (one direct, sourced piece of evidence) or Likely (technographic databases only).` },
   { q: 'How fresh is this data?', a: `This list was last verified on ${updated}. The discovery pipeline re-runs regularly; companies that switch away are removed and new adopters are added.` },
   { q: 'Can I download the full list?', a: `Yes, the full list is free to download on this page as CSV or Excel after leaving your work email and LinkedIn, with domains, confidence grades, evidence and source links.` },
-  { q: `How is this different from a technographic database like BuiltWith or Enlyft?`, a: `Every company here is backed by a linked public source — a case study, trust page, job posting or named review — not just a tracking-script detection. Only grade C rows come from technographic databases, and they are labelled as such.` },
+  { q: `How is this different from a technographic database like BuiltWith or Enlyft?`, a: `Every company here is backed by a linked public source — a case study, trust page, job posting or named review — not just a tracking-script detection. Only Likely rows come from technographic databases, and they are labelled as such.` },
 ];
 if (notable.length) {
   faqs.splice(1, 0, { q: `Who are the most notable companies using ${competitor.name}?`, a: `High-confidence (grade A) verified ${competitor.name} customers include ${notable.join(', ')}. Each has multiple independent public signals behind it.` });
@@ -94,17 +93,23 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
       <p style="font-size:16px; line-height:1.6; color:#54545F; margin:12px 0 0; max-width:52em;">This is a full, free list. Unlike technographic databases, every company here is backed by a linked public source — case studies, customer blogs, partner and auditor case studies, job postings and named reviews — and graded A (multiple independent signals), B (one direct piece of evidence) or C (technographic detection only).</p>
       <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:26px;">
         <div style="display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #ECECF1; border-radius:14px; padding:14px 18px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
-          <span style="width:34px; height:34px; border-radius:9px; background:linear-gradient(135deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">A</span>
-          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.01em;">{nA}</span><span style="font-size:12px; color:#6A6A74;">multiple signals</span></div>
+          <span style="width:auto; min-width:34px; padding:0 9px; height:34px; border-radius:9px; background:linear-gradient(135deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">V+</span>
+          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.01em;">{nVerifiedPlus}</span><span style="font-size:12px; color:#6A6A74;">2+ signals</span></div>
         </div>
         <div style="display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #ECECF1; border-radius:14px; padding:14px 18px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
-          <span style="width:34px; height:34px; border-radius:9px; background:#EEF0FF; color:#4B3BFF; border:1px solid #DBE0FF; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">B</span>
-          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.01em;">{nB}</span><span style="font-size:12px; color:#6A6A74;">direct evidence</span></div>
+          <span style="width:auto; min-width:34px; padding:0 9px; height:34px; border-radius:9px; background:#EEF0FF; color:#4B3BFF; border:1px solid #DBE0FF; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">V</span>
+          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.01em;">{nVerified}</span><span style="font-size:12px; color:#6A6A74;">named + source</span></div>
         </div>
         <div style="display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #ECECF1; border-radius:14px; padding:14px 18px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
-          <span style="width:34px; height:34px; border-radius:9px; background:#F1F1F4; color:#6A6A74; border:1px solid #E4E4EA; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; display:flex; align-items:center; justify-content:center;">C</span>
-          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.01em;">{nC}</span><span style="font-size:12px; color:#6A6A74;">technographic only</span></div>
+          <span style="width:auto; min-width:34px; padding:0 9px; height:34px; border-radius:9px; background:#F1F1F4; color:#6A6A74; border:1px solid #E4E4EA; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">~</span>
+          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.01em;">{nLikely}</span><span style="font-size:12px; color:#6A6A74;">technographic only</span></div>
         </div>
+        {coreIcp != null && (
+        <div style="display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #D7F0E3; border-radius:14px; padding:14px 18px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
+          <span style="width:auto; min-width:34px; padding:0 9px; height:34px; border-radius:9px; background:#0E8F5B; color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; display:flex; align-items:center; justify-content:center;">◎</span>
+          <div style="display:flex; flex-direction:column;"><span style="font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:20px; letter-spacing:-0.01em;">{coreIcp}</span><span style="font-size:12px; color:#6A6A74;">core ICP fit</span></div>
+        </div>
+        )}
       </div>
     </div>
   </div>
@@ -119,10 +124,10 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
             <input id="ciq-q" type="search" placeholder="Search company, domain or evidence…" aria-label="Filter companies" style="width:100%; height:46px; border:1px solid #E6E6EC; border-radius:12px; background:#fff; padding:0 14px 0 34px; font-size:14.5px; font-family:'Manrope',sans-serif; color:#0B0B12; outline:none; box-shadow:0 1px 2px rgba(11,11,18,.04);" />
           </div>
           <div id="ciq-tabs" style="display:flex; background:#fff; border:1px solid #E6E6EC; border-radius:12px; padding:4px; gap:2px;">
-            <button data-grade="all" class="ciq-tab" style="height:38px; padding:0 15px; border:0; border-radius:9px; background:linear-gradient(135deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">All</button>
-            <button data-grade="A" class="ciq-tab" style="height:38px; padding:0 15px; border:0; border-radius:9px; background:transparent; color:#4A4A55; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">A</button>
-            <button data-grade="B" class="ciq-tab" style="height:38px; padding:0 15px; border:0; border-radius:9px; background:transparent; color:#4A4A55; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">B</button>
-            <button data-grade="C" class="ciq-tab" style="height:38px; padding:0 15px; border:0; border-radius:9px; background:transparent; color:#4A4A55; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">C</button>
+            <button data-conf="all" class="ciq-tab" style="height:38px; padding:0 15px; border:0; border-radius:9px; background:linear-gradient(135deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">All</button>
+            <button data-conf="Verified+" class="ciq-tab" style="height:38px; padding:0 13px; border:0; border-radius:9px; background:transparent; color:#4A4A55; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">Verified+</button>
+            <button data-conf="Verified" class="ciq-tab" style="height:38px; padding:0 13px; border:0; border-radius:9px; background:transparent; color:#4A4A55; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">Verified</button>
+            <button data-conf="Likely" class="ciq-tab" style="height:38px; padding:0 13px; border:0; border-radius:9px; background:transparent; color:#4A4A55; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:13.5px;">Likely</button>
           </div>
           <button id="ciq-csv" style="height:46px; padding:0 18px; border:1px solid #E6E6EC; border-radius:12px; background:#fff; color:#0B0B12; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; display:flex; align-items:center; gap:8px; box-shadow:0 1px 2px rgba(11,11,18,.04);"><span style="color:#4B3BFF;">↓</span> Download CSV</button>
           <button id="ciq-xlsx" style="height:46px; padding:0 18px; border:0; border-radius:12px; background:linear-gradient(135deg,#4B3BFF,#7C3AED); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; display:flex; align-items:center; gap:8px; box-shadow:0 14px 30px -14px rgba(75,59,255,.7);"><span>↓</span> Download Excel</button>
@@ -130,21 +135,22 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
 
         <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px; flex-wrap:wrap; gap:8px;">
           <span style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#6A6A74;"><span id="ciq-shown">{company_count}</span> of {company_count} companies</span>
-          <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#8A8A94;">Grade A: multiple independent signals · B: direct evidence · C: technographic databases</span>
+          <span style="font-family:'JetBrains Mono',monospace; font-size:11.5px; color:#8A8A94;">Verified+: 2+ independent signals · Verified: named + source + quote · Likely: technographic only</span>
         </div>
 
         <div style="border:1px solid #EAEAEF; border-radius:18px; overflow:hidden; background:#fff; box-shadow:0 24px 60px -44px rgba(75,59,255,.28), 0 2px 8px rgba(11,11,18,.04);">
-          <div style="display:grid; grid-template-columns:1.5fr 1.2fr 72px 3fr 90px; background:#FAFAFC; border-bottom:1px solid #EEEEF2; padding:14px 22px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A6A74; letter-spacing:.04em;">
-            <button id="ciq-sort" style="text-align:left; border:0; background:transparent; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A6A74; letter-spacing:.04em; padding:0; display:flex; align-items:center; gap:5px;">COMPANY <span id="ciq-arrow" style="color:#4B3BFF;">↑</span></button>
-            <span>DOMAIN</span><span>GRADE</span><span>EVIDENCE</span><span>SOURCE</span>
+          <div style="display:grid; grid-template-columns:1.4fr 1fr 66px 104px 2.4fr 78px; background:#FAFAFC; border-bottom:1px solid #EEEEF2; padding:14px 22px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A6A74; letter-spacing:.04em;">
+            <button id="ciq-sort" style="text-align:left; border:0; background:transparent; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A6A74; letter-spacing:.04em; padding:0; display:flex; align-items:center; gap:5px;">COMPANY <span id="ciq-arrow" style="color:#4B3BFF;">↕</span></button>
+            <span>DOMAIN</span><span>EMPLOYEES</span><span>CONFIDENCE</span><span>EVIDENCE</span><span>SOURCE</span>
           </div>
           <div id="ciq-rows">
             {companies.map((c) => (
-              <div class="ciq-row" data-company={c.name} data-grade={c.grade} data-search={`${c.name} ${c.domain} ${c.evidence}`.toLowerCase()} style="display:grid; grid-template-columns:1.5fr 1.2fr 72px 3fr 90px; padding:15px 22px; border-bottom:1px solid #F3F3F5; align-items:center; gap:10px;">
+              <div class="ciq-row" data-company={c.name} data-conf={c.confidence} data-search={`${c.name} ${c.domain} ${c.industry} ${c.quote}`.toLowerCase()} style="display:grid; grid-template-columns:1.4fr 1fr 66px 104px 2.4fr 78px; padding:15px 22px; border-bottom:1px solid #F3F3F5; align-items:center; gap:10px;">
                 <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14.5px; color:#0B0B12;">{c.name}</span>
                 {c.domain ? <a href={`https://${c.domain}`} rel="nofollow noopener" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#4B3BFF; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">{c.domain}</a> : <span style="color:#9A9AA2;">—</span>}
-                <span style={`display:inline-flex; align-items:center; justify-content:center; width:28px; height:28px; border-radius:8px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:13px; ${gradeStyle(c.grade)}`} title={c.confidence}>{c.grade}</span>
-                <span style="font-size:13px; line-height:1.45; color:#54545F; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">{c.evidence}</span>
+                <span style="font-family:'JetBrains Mono',monospace; font-size:12.5px; color:#54545F;" title={c.employees_evidence || ''}>{c.employees ? c.employees : ''}</span>
+                <span style={`display:inline-flex; align-items:center; justify-content:center; padding:0 10px; height:24px; border-radius:999px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:11.5px; white-space:nowrap; ${confStyle(c.confidence)}`} title={c.signal_group ? `Signals: ${c.signal_group}` : c.confidence}>{c.confidence}</span>
+                <span style="font-size:13px; line-height:1.45; color:#54545F; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">{c.quote}</span>
                 {c.source_url && c.source_url.startsWith('http') ? <a href={c.source_url} rel="noopener" target="_blank" style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#4B3BFF; display:inline-flex; align-items:center; gap:3px;">source ↗</a> : <span style="color:#9A9AA2;">—</span>}
               </div>
             ))}
@@ -179,11 +185,26 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
           </div>
         </div>
 
+        {signalReport.length > 0 && (
+        <details style="background:#fff; border:1px solid #ECECF1; border-radius:18px; padding:16px 18px; box-shadow:0 1px 2px rgba(11,11,18,.04);">
+          <summary style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:15px; color:#0B0B12; cursor:pointer; list-style:none;">Signal coverage <span style="font-family:'JetBrains Mono',monospace; font-size:12px; color:#6A6A74;">— {signalReport.filter((g) => g.status === 'done').length}/{signalReport.length} ran</span></summary>
+          <p style="font-size:12px; color:#8A8A94; margin:8px 0 12px; line-height:1.5;">All groups run every time. A group returning 0 is a finding, not a gap.</p>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            {signalReport.map((g) => (
+              <div style="display:flex; align-items:center; justify-content:space-between; gap:8px; font-family:'JetBrains Mono',monospace; font-size:11.5px;">
+                <span style={`color:${g.status === 'done' ? '#54545F' : '#D8422A'};`}>{g.group}</span>
+                <span style={`color:${g.status === 'done' ? '#6A6A74' : '#D8422A'};`} title={g.status}>{g.status === 'done' ? g.found : '⚠'}</span>
+              </div>
+            ))}
+          </div>
+        </details>
+        )}
+
         <div style="position:relative; overflow:hidden; border-radius:18px; background:#08080F; padding:22px;">
           <div style="position:absolute; inset:0; opacity:.8; pointer-events:none;"><div style="position:absolute; width:320px; height:320px; left:-20%; top:-40%; border-radius:50%; background:radial-gradient(circle,rgba(75,59,255,.5),transparent 60%); filter:blur(16px);"></div></div>
           <div style="position:relative;">
             <h3 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:18px; color:#fff; margin:0;">Download the full list</h3>
-            <p style="font-size:13.5px; line-height:1.5; color:#B6B6C6; margin:8px 0 16px;">Get every company on this page as a formatted Excel file: graded, with the public source behind each row. Free, just leave an email.</p>
+            <p style="font-size:13.5px; line-height:1.5; color:#B6B6C6; margin:8px 0 16px;">Get every company on this page as a formatted Excel file: confidence-labelled, with the public source behind each row. Free, just leave an email.</p>
             <button id="ciq-xlsx-side" style="display:block; text-align:center; width:100%; height:44px; border:0; cursor:pointer; border-radius:11px; background:#fff; color:#0B0B12; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px;">↓ Download the Excel</button>
           </div>
         </div>
@@ -199,7 +220,7 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
           <p style="font-size:15px; line-height:1.6; color:#54545F; margin:12px 0 0;">{f.a}</p>
         </details>
       ))}
-      <p style="font-size:13px; line-height:1.6; color:#8A8A94; margin:24px 0 0;">This list is generated by the CompetitorIQ deep-search pipeline across 12 signal groups and graded A (multiple independent signals), B (one direct piece of evidence) or C (technographic detection only). Found an error? <a href="mailto:hello@competitorcustomer.com">Report it</a>.</p>
+      <p style="font-size:13px; line-height:1.6; color:#8A8A94; margin:24px 0 0;">This list is generated by the CompetitorIQ deep-search pipeline across 12 signal groups and labelled Verified+ (multiple independent signals), Verified (one direct piece of evidence) or Likely (technographic detection only). Found an error? <a href="mailto:hello@competitorcustomer.com">Report it</a>.</p>
     </div>
 
     <!-- BOTTOM CTA -->
@@ -211,7 +232,7 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
       <div style="position:relative; z-index:1; padding:44px 40px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
         <div style="max-width:34em;">
           <h2 style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:28px; letter-spacing:-0.02em; color:#fff; margin:0;">Download the <span style="background:linear-gradient(115deg,#8B8BFF,#8FE9F6); -webkit-background-clip:text; background-clip:text; color:transparent;">full list</span></h2>
-          <p style="font-size:16px; color:#B6B6C6; margin:12px 0 0;">Every company on this page as a formatted Excel file: graded, with the public source behind each row.</p>
+          <p style="font-size:16px; color:#B6B6C6; margin:12px 0 0;">Every company on this page as a formatted Excel file: confidence-labelled, with the public source behind each row.</p>
         </div>
         <button id="ciq-xlsx-bottom" style="height:52px; padding:0 28px; border:0; cursor:pointer; border-radius:13px; background:#fff; color:#0B0B12; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:16px; white-space:nowrap; box-shadow:0 18px 40px -16px rgba(0,0,0,.6);">↓ Download the Excel</button>
       </div>
@@ -234,7 +255,7 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
     <div style="background:#fff; border-radius:18px; padding:28px 26px; max-width:400px; width:100%; box-shadow:0 40px 90px -30px rgba(11,11,18,.5);">
       <span id="ciq-gate-badge" style="display:inline-block; font-family:'JetBrains Mono',monospace; font-size:11px; color:#4B3BFF; background:#F2F1FF; border:1px solid #E3E0FF; border-radius:999px; padding:4px 11px;">.XLSX</span>
       <h3 id="ciq-gate-title" style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:20px; margin:14px 0 6px; color:#0B0B12;">Get the full list as Excel</h3>
-      <p style="font-size:14px; color:#6A6A74; margin:0 0 16px; line-height:1.5;">Leave your work email and LinkedIn, and the formatted spreadsheet is yours: domains, grades, evidence and sources.</p>
+      <p style="font-size:14px; color:#6A6A74; margin:0 0 16px; line-height:1.5;">Leave your work email and LinkedIn, and the formatted spreadsheet is yours: domains, confidence, evidence and sources.</p>
       <input id="ciq-email" type="email" placeholder="you@company.com" style="width:100%; height:46px; border:1px solid #E6E6EC; border-radius:12px; padding:0 14px; font-size:15px; font-family:'Manrope',sans-serif; color:#0B0B12; outline:none;" />
       <input id="ciq-linkedin" type="url" placeholder="linkedin.com/in/your-profile" style="width:100%; height:46px; margin-top:10px; border:1px solid #E6E6EC; border-radius:12px; padding:0 14px; font-size:15px; font-family:'Manrope',sans-serif; color:#0B0B12; outline:none;" />
       <p id="ciq-gate-err" style="display:none; color:#D8422A; font-size:13px; margin:8px 0 0;">Please enter a valid email.</p>
@@ -261,13 +282,13 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
       var empty = document.getElementById('ciq-empty');
       var shown = document.getElementById('ciq-shown');
       var arrow = document.getElementById('ciq-arrow');
-      var grade = 'all', sortDir = 'asc';
+      var conf = 'all', sortDir = 'desc';
 
       function apply(){
         var term = (q.value||'').trim().toLowerCase();
         var n = 0;
         rows.forEach(function(r){
-          var okG = grade === 'all' || r.getAttribute('data-grade') === grade;
+          var okG = conf === 'all' || r.getAttribute('data-conf') === conf;
           var okQ = !term || r.getAttribute('data-search').indexOf(term) !== -1;
           var vis = okG && okQ;
           r.style.display = vis ? '' : 'none';
@@ -287,7 +308,7 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
       q.addEventListener('input', apply);
       document.querySelectorAll('.ciq-tab').forEach(function(t){
         t.addEventListener('click', function(){
-          grade = t.getAttribute('data-grade');
+          conf = t.getAttribute('data-conf');
           document.querySelectorAll('.ciq-tab').forEach(function(x){ x.style.background='transparent'; x.style.color='#4A4A55'; });
           t.style.background='linear-gradient(135deg,#4B3BFF,#7C3AED)'; t.style.color='#fff';
           apply();
@@ -298,6 +319,8 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
         arrow.textContent = sortDir === 'asc' ? '↑' : '↓';
         sort(); apply();
       });
+      // No sort() on load: rows are server-rendered strongest-first
+      // (ICP fit, then confidence). The button re-sorts A–Z on demand.
 
       function visibleData(){
         var set = {};
@@ -307,8 +330,8 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
       function doCsv(){
         var d = visibleData();
         var esc = function(v){ return '"' + String(v==null?'':v).replace(/"/g,'""') + '"'; };
-        var head = ['Company','Domain','Grade','Confidence','Evidence','Source URL'];
-        var body = d.map(function(c){ return [c.name,c.domain,c.grade,c.confidence,c.evidence,c.source_url].map(esc).join(','); });
+        var head = ['Company','Domain','Employees','Confidence','ICP fit','Industry','Signal Group','Evidence','Source URL'];
+        var body = d.map(function(c){ return [c.name,c.domain,(c.employees||''),c.confidence,(c.icp_fit||''),(c.industry||''),(c.signal_group||''),c.quote,c.source_url].map(esc).join(','); });
         var csv = [head.join(','), body.join('\n')].join('\n');
         var a = document.createElement('a');
         a.href = URL.createObjectURL(new Blob([csv], {type:'text/csv'}));
@@ -374,11 +397,10 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
       function buildXlsx(){
         if (typeof XLSX === 'undefined') return;
         var d = visibleData();
-        var aoa = [['Company','Domain','Grade','Confidence','Evidence','Source URL']].concat(d.map(function(c){ return [c.name,c.domain,c.grade,c.confidence,c.evidence,c.source_url]; }));
+        var aoa = [['Company','Domain','Employees','Confidence','ICP fit','Industry','Signal Group','Evidence','Source URL']].concat(d.map(function(c){ return [c.name,c.domain,(c.employees||''),c.confidence,(c.icp_fit||''),(c.industry||''),(c.signal_group||''),c.quote,c.source_url]; }));
         var ws = XLSX.utils.aoa_to_sheet(aoa); var wb = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(wb, ws, 'Companies'); XLSX.writeFile(wb, DATA.slug + '_customers.xlsx');
       }
-      sort();
     })();
   </script>
 </Base>

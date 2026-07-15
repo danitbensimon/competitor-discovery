@@ -1,9 +1,10 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { normalizeData } from '../../lib/normalize.js';
 
 export async function getStaticPaths() {
   const files = import.meta.glob('../../data/competitors/*.json', { eager: true });
-  const brands = Object.values(files);
+  const brands = Object.values(files).map((d) => normalizeData(d.default ?? d));
   const paths = [];
   for (let i = 0; i < brands.length; i++) {
     for (let j = i + 1; j < brands.length; j++) {
@@ -17,13 +18,14 @@ const { a, b } = Astro.props;
 const A = a.competitor, B = b.competitor;
 const aCount = a.company_count, bCount = b.company_count;
 const norm = (d) => (d || '').toLowerCase().replace(/^www\./, '');
+const shortConf = (c) => (c === 'Verified+' ? 'V+' : c === 'Verified' ? 'V' : c === 'Likely' ? '~' : '');
 const bByDomain = new Map(b.companies.filter((c) => c.domain).map((c) => [norm(c.domain), c]));
 const overlap = a.companies
   .filter((c) => c.domain && bByDomain.has(norm(c.domain)))
-  .map((c) => ({ name: c.name, domain: c.domain, gA: c.grade, gB: bByDomain.get(norm(c.domain)).grade }))
+  .map((c) => ({ name: c.name, domain: c.domain, gA: shortConf(c.confidence), gB: shortConf(bByDomain.get(norm(c.domain)).confidence) }))
   .sort((x, y) => x.name.localeCompare(y.name));
-const notableA = a.companies.filter((c) => c.grade === 'A').slice(0, 8).map((c) => c.name);
-const notableB = b.companies.filter((c) => c.grade === 'A').slice(0, 8).map((c) => c.name);
+const notableA = a.companies.filter((c) => (c.confidence || '').startsWith('Verified')).slice(0, 8).map((c) => c.name);
+const notableB = b.companies.filter((c) => (c.confidence || '').startsWith('Verified')).slice(0, 8).map((c) => c.name);
 // verified switchers: companies whose evidence names the other tool alongside a choice/switch word
 const sw = (list, other) => list.filter((c) => {
   const e = (c.evidence || '').toLowerCase();
@@ -83,7 +85,7 @@ const faqJsonLd = { '@context': 'https://schema.org', '@type': 'FAQPage', mainEn
     <p style="font-size:14px; color:#6A6A74; margin:0 0 16px;">{overlap.length} verified on both lists.</p>
     {overlap.length ? (
       <div style="border:1px solid #EAEAEF; border-radius:16px; overflow:hidden; background:#fff;">
-        <div style="display:grid; grid-template-columns:1.6fr 1.6fr 1fr; background:#FAFAFC; border-bottom:1px solid #EEEEF2; padding:12px 20px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A6A74; letter-spacing:.04em;"><span>COMPANY</span><span>DOMAIN</span><span>GRADE (A / B)</span></div>
+        <div style="display:grid; grid-template-columns:1.6fr 1.6fr 1fr; background:#FAFAFC; border-bottom:1px solid #EEEEF2; padding:12px 20px; font-family:'JetBrains Mono',monospace; font-size:11px; color:#6A6A74; letter-spacing:.04em;"><span>COMPANY</span><span>DOMAIN</span><span>CONFIDENCE</span></div>
         {overlap.map((o) => (
           <div style="display:grid; grid-template-columns:1.6fr 1.6fr 1fr; padding:12px 20px; border-bottom:1px solid #F3F3F5; align-items:center;">
             <span style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:14px; color:#0B0B12;">{o.name}</span>
