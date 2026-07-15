@@ -1,0 +1,27 @@
+{
+  "product": "Anaplan",
+  "domain": "anaplan.com",
+  "slug": "anaplan",
+  "generated": "2026-07-15",
+  "elapsed_seconds": 24.3,
+  "total": 3,
+  "verified": 2,
+  "core_icp": 1,
+  "est_cost_usd": 0.25,
+  "signal_group_report": [
+    {"group": "partners_si", "queries": 3, "found": 2, "status": "done"},
+    {"group": "own_site", "queries": 2, "found": 1, "status": "done"},
+    {"group": "job_postings", "queries": 3, "found": 1, "status": "done"},
+    {"group": "events_awards", "queries": 2, "found": 0, "status": "ERROR: RateLimitError"}
+  ],
+  "preview": [
+    {"company": "Monzo", "domain": "monzo.com", "country": "UK", "employees": "2,500", "employees_evidence": "2,500 employees on LinkedIn", "industry": "Fintech", "signal_group": "job_postings + partners_si", "confidence": "Verified+", "quote": "Hiring an Anaplan model builder to scale FP&A.", "source_url": "https://monzo.com/careers/anaplan", "icp_fit": "core", "date_found": "2026-07-15"},
+    {"company": "Huel", "domain": "huel.com", "country": "UK", "employees": null, "employees_evidence": null, "industry": "Food", "signal_group": "partners_si", "confidence": "Verified", "quote": "Huel selects Anaplan for demand planning.", "source_url": "https://partner.example.com/huel-anaplan", "icp_fit": "unknown", "date_found": "2026-07-15"},
+    {"company": "Globex", "domain": "globex.example", "country": "US", "employees": "12,000", "employees_evidence": "12,000 employees", "industry": "Manufacturing", "signal_group": "tech_stack", "confidence": "Likely", "quote": "Listed as Anaplan user on Enlyft.", "source_url": "https://enlyft.com/anaplan/globex", "icp_fit": "outside", "date_found": "2026-07-15"}
+  ],
+  "companies": [
+    {"company": "Monzo", "domain": "monzo.com", "country": "UK", "employees": "2,500", "employees_evidence": "2,500 employees on LinkedIn", "industry": "Fintech", "signal_group": "job_postings + partners_si", "confidence": "Verified+", "quote": "Hiring an Anaplan model builder to scale FP&A.", "source_url": "https://monzo.com/careers/anaplan", "icp_fit": "core", "date_found": "2026-07-15"},
+    {"company": "Huel", "domain": "huel.com", "country": "UK", "employees": null, "employees_evidence": null, "industry": "Food", "signal_group": "partners_si", "confidence": "Verified", "quote": "Huel selects Anaplan for demand planning.", "source_url": "https://partner.example.com/huel-anaplan", "icp_fit": "unknown", "date_found": "2026-07-15"},
+    {"company": "Globex", "domain": "globex.example", "country": "US", "employees": "12,000", "employees_evidence": "12,000 employees", "industry": "Manufacturing", "signal_group": "tech_stack", "confidence": "Likely", "quote": "Listed as Anaplan user on Enlyft.", "source_url": "https://enlyft.com/anaplan/globex", "icp_fit": "outside", "date_found": "2026-07-15"}
+  ]
+}
