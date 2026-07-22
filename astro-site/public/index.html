@@ -638,7 +638,7 @@
           <div class="results-headline">10 companies <span>free</span>, unlock more below</div>
           <div id="freeNote" style="margin-top:8px;font-size:13px;color:var(--muted);display:none;"></div>
           <div id="freeTierBanner" style="display:none;margin-top:12px;background:rgba(0,194,255,0.06);border:1px solid rgba(0,194,255,0.2);border-radius:10px;padding:10px 16px;font-size:13px;color:var(--text);">
-            🔍 <strong>This is a free preview.</strong> The full search scans <strong>12 signal sources</strong> including G2, LinkedIn, job boards, tech stack databases & more, and typically uncovers <strong>30–100+ companies</strong>. Unlock the full list below.
+            🔍 <strong>This is a free preview.</strong> The full search scans <strong>13 signal sources</strong> including customer logo walls, case studies, G2, LinkedIn, job boards and tech stack databases. How much it finds depends on how much the company publishes. Unlock the full list below.
           </div>
         </div>
         <button class="new-search-btn" onclick="resetToHome()">← New Search</button>
@@ -652,6 +652,7 @@
               <th>Company</th>
               <th>Website</th>
               <th>Industry</th>
+              <th>Relationship</th>
               <th>Source</th>
             </tr>
           </thead>
@@ -923,6 +924,14 @@
       const sig = signalStrength(c.signal_group);
       const icpFit = c.icp_fit || 'LOW';
       const icpCls = icpFit === 'HIGH' ? 'icp-high' : icpFit === 'MEDIUM' ? 'icp-medium' : 'icp-low';
+      const REL_STYLE = {
+        customer: ['Customer', 'var(--green)', 'rgba(0,229,160,0.12)'],
+        partner:  ['Partner',  '#FFB347',     'rgba(255,179,71,0.12)'],
+        investor: ['Investor', '#C08CFF',     'rgba(192,140,255,0.12)'],
+        unclear:  ['Unverified','var(--muted)','rgba(255,255,255,0.06)'],
+      };
+      const rel = REL_STYLE[(c.relationship||'unclear').toLowerCase()] || REL_STYLE.unclear;
+      const relHtml = `<span class="tag" style="color:${rel[1]};background:${rel[2]};border-color:${rel[1]}33">${rel[0]}</span>`;
       const sourceHtml = c.source_url
         ? `<a href="${escHtml(c.source_url)}" target="_blank" style="color:var(--accent);font-size:11px;text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block;max-width:220px">${escHtml(c.source_url.replace(/^https?:\/\//, ''))}</a>`
         : '—';
@@ -932,6 +941,7 @@
         <td class="td-company">${escHtml(c.company_name||'Unknown')}</td>
         <td class="td-domain"><a href="https://${escHtml(c.company_domain)}" target="_blank">${escHtml(c.company_domain)}</a></td>
         <td>${c.industry&&c.industry!=='Unknown'?`<span class="tag tag-industry">${escHtml(c.industry)}</span>`:'<span style="color:var(--muted)">—</span>'}</td>
+        <td>${relHtml}</td>
         <td>${sourceHtml}</td>
       `;
       tbody.appendChild(tr);
@@ -1092,8 +1102,8 @@
     var bg,brd,icon,ttl,bdy;
     if (ownOnly){
       bg='rgba(0,194,255,0.05)';brd='rgba(0,194,255,0.25)';icon='🔍';
-      ttl='Found '+tot+' compan'+(tot===1?'y':'ies')+': all from '+brand+'’s own website';
-      bdy='The other 11 signal groups (own site, job boards, LinkedIn, G2, tech databases, partners, events, communities, filings & more) returned nothing. This is normal for <strong style="color:var(--muted2)">early-stage or niche tools</strong> — not yet indexed by third-party databases.<br><br>The companies listed are <strong style="color:var(--green)">real verified customers</strong>. This is the complete public list '+brand+' has chosen to publish.';
+      ttl='Found '+tot+' compan'+(tot===1?'y':'ies')+': all published by '+brand+' itself';
+      bdy='These came from '+brand+'’s own site: its customer logo wall, case studies and customer stories. Third-party sources (job boards, LinkedIn, G2, tech stack databases, press) returned nothing, which is normal for <strong style="color:var(--muted2)">early-stage or niche tools</strong> that aren’t indexed yet.<br><br>Every company here is named publicly by '+brand+', so each one is verifiable at the source link. Check the relationship label: a company in a partner or integration band is not necessarily a customer.';
     } else {
       bg='rgba(0,229,160,0.04)';brd='rgba(0,229,160,0.2)';icon='📊';
       var gl=sgs.map(function(s){return '<code style="font-size:11px;background:rgba(255,255,255,0.07);padding:1px 5px;border-radius:3px">'+escHtml(s)+'</code>';}).join(' ');

@@ -201,11 +201,22 @@ labelling one as the other makes the whole list untrustworthy.
 - investor  — investor, backer, accelerator, or the company funded {brand}
 - unclear   — the page shows the logo or name but gives no basis to tell which
 
-Judge from the page's own words. Headings like "Trusted by", "Our customers" or
-"Case study" mean customer. Headings like "Our partners", "Integrations",
-"Backed by", or a contact/about page listing organisations mean partner or
-investor. When the page gives you nothing to go on, say unclear — do not guess
-customer.
+Judge from the page's own words, and commit to a judgement. "unclear" is for
+pages that genuinely say nothing about the relationship, not for ordinary
+uncertainty. If a company's logo sits in a band the site itself labels "Trusted
+by", "Our customers", "Powering", "Used by" or "Join N teams", that IS the site
+claiming them as a customer — answer customer. A case study, success story or
+customer quote is a customer. A named reviewer is a customer.
+
+Answer partner when the band or page is labelled partners, integrations,
+resellers, "works with" or "available on", or when the named entity is itself a
+software product rather than a company that would buy one. Answer investor for
+investors, backers and accelerators. Answer unclear only when a name appears
+with no surrounding label at all.
+
+A logo band's label applies to every logo in that band. If the page shows more
+than one band, use the label nearest the company, and where the context lists
+several labels, pick the one that fits that specific company.
 
 Return one line per company in this exact format:
 COMPANY: <name> | DOMAIN: <domain> | RELATIONSHIP: <customer|partner|investor|unclear> | SOURCE: <url>

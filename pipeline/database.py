@@ -75,8 +75,15 @@ def get_result(result_id: str):
     return dict(row) if row else None
 
 
-def get_cached_companies(competitor_domain: str):
-    """Return the most recent saved company list for a domain (any previous search)."""
+def get_cached_companies(competitor_domain: str, min_created_at: str = ""):
+    """
+    Most recent saved company list for a domain.
+
+    `min_created_at` ignores results saved before a given ISO timestamp. When the
+    discovery pipeline gains a new source, every result saved by the old pipeline
+    is wrong-but-not-expired: it would keep being served for 90 days and hide the
+    improvement. Callers pass the ship date to force those to re-run.
+    """
     conn = get_db()
     row = conn.execute(
         """SELECT full_companies FROM search_results
@@ -85,8 +92,9 @@ def get_cached_companies(competitor_domain: str):
              AND full_companies != '[]'
              AND full_companies != ''
              AND created_at >= datetime('now', '-90 days')
+             AND created_at >= ?
            ORDER BY created_at DESC LIMIT 1""",
-        (competitor_domain,)
+        (competitor_domain, min_created_at or '0000-01-01')
     ).fetchone()
     conn.close()
     if row and row["full_companies"]:

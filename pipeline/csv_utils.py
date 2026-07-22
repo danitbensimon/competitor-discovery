@@ -6,6 +6,7 @@ import io
 EXPORT_FIELDS = [
     "company_name",
     "company_domain",
+    "relationship",
     "icp_fit",
     "grade",
     "score",

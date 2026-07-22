@@ -53,6 +53,12 @@ db.init_db()
 # In-memory job store (maps job_id → job state while running)
 jobs: dict = {}
 
+# Results saved before this timestamp came from a pipeline that could not see
+# customer logo walls, so they under-report badly. Ignoring them makes the next
+# search for each domain re-run once, then cache normally. Bump this date
+# whenever discovery gains a source; override with CACHE_EPOCH to force a flush.
+CACHE_EPOCH = os.environ.get("CACHE_EPOCH", "2026-07-22T09:00:00")
+
 
 # ── Request / Response models ─────────────────────────────────────────────────
 
@@ -290,7 +296,7 @@ def _run_job(job_id: str, result_id: str, domain: str, tier: str, mode: str,
 
         if mode == "live" and not force:
             # 1. Check SQLite first — persists across restarts, shared across all users
-            db_companies = db.get_cached_companies(domain)
+            db_companies = db.get_cached_companies(domain, min_created_at=CACHE_EPOCH)
             if db_companies:
                 log.info(f"[job {job_id}] DB cache hit for {domain} ({len(db_companies)} companies)")
                 companies = filter_unknown_companies(db_companies)
@@ -306,7 +312,7 @@ def _run_job(job_id: str, result_id: str, domain: str, tier: str, mode: str,
                 return
 
             # 2. Fallback: JSON file cache (same instance, same session)
-            cached = load_cache(domain)
+            cached = load_cache(domain, min_saved_at=CACHE_EPOCH)
             if cached and cached.get("companies"):
                 log.info(f"[job {job_id}] file cache hit for {domain}")
                 companies = cached["companies"]

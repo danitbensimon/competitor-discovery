@@ -18,7 +18,9 @@ def get_cache_path(competitor: str) -> str:
     return os.path.join("data", competitor_to_filename(competitor))
 
 
-def load_cache(competitor: str) -> Optional[Dict[str, Any]]:
+def load_cache(competitor: str, min_saved_at: str = "") -> Optional[Dict[str, Any]]:
+    """`min_saved_at`: ISO timestamp. Entries written before it count as a miss,
+    so a pipeline upgrade invalidates stale results. See database.get_cached_companies."""
     path = get_cache_path(competitor)
 
     if not os.path.exists(path):
@@ -42,6 +44,9 @@ def load_cache(competitor: str) -> Optional[Dict[str, Any]]:
 
         # 90-day TTL: treat expired cache as a miss
         saved_at_str = data.get("saved_at", "")
+        if min_saved_at and saved_at_str.rstrip("Z") < min_saved_at:
+            print(f"[cache] Pre-upgrade entry for {competitor} (saved {saved_at_str}) — ignoring")
+            return None
         if saved_at_str:
             try:
                 saved_at = datetime.fromisoformat(saved_at_str.rstrip("Z"))
