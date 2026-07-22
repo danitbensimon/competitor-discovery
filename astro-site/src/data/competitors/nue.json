@@ -1,0 +1,243 @@
+{
+  "competitor": {
+    "name": "Nue",
+    "slug": "nue",
+    "domain": "nue.io"
+  },
+  "companies": [
+    {
+      "name": "Bench Accounting",
+      "domain": "bench.co",
+      "grade": "A",
+      "evidence": "\"Nue is one of the most robust, thoughtful, end-to-end billing and quoting solutions we've seen.\" — Jake Romphf, Director of Business Technology",
+      "source_url": "https://www.businesswire.com/news/home/20240529988091/en",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Betterworks",
+      "domain": "betterworks.com",
+      "grade": "A",
+      "evidence": "\"Nue's Lifecycle Manager has been a game changer for our team.\" — Elise Fujimoto, Customer Success Operations Manager",
+      "source_url": "https://www.nue.io/customers/betterworks/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Chili Piper",
+      "domain": "chilipiper.com",
+      "grade": "A",
+      "evidence": "\"Trusted by leaders like OpenAI, Glean, Jasper, Chili Piper\" (G2 About + Nue homepage logo wall)",
+      "source_url": "https://www.g2.com/products/nue-io-nue/reviews",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Glean",
+      "domain": "glean.com",
+      "grade": "A",
+      "evidence": "\"It counts AI startup Glean Technologies Inc. and data management provider Instabase Inc. among its customers.\" (also on Nue's 'Trusted by' wall)",
+      "source_url": "https://siliconangle.com/2025/01/28/nue-reels-20m-revenue-management-platform/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Jasper",
+      "domain": "jasper.ai",
+      "grade": "A",
+      "evidence": "\"Trusted by leaders like OpenAI, Glean, Jasper, Chili Piper\" (G2 About + Nue homepage logo wall)",
+      "source_url": "https://www.g2.com/products/nue-io-nue/reviews",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Merlyn Mind",
+      "domain": "merlyn.org",
+      "grade": "A",
+      "evidence": "\"From quoting to RevRec, this is hands down one of the easiest platforms.\" — Mike Kwak, Director of GTM Systems Engineering (also on Nue logo wall)",
+      "source_url": "https://www.nue.io/customers/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "OpenAI",
+      "domain": "openai.com",
+      "grade": "A",
+      "evidence": "\"I can honestly say that we could not have accomplished this with any system other than Nue.\" — Keith Jones, Head of GTM Systems, OpenAI",
+      "source_url": "https://www.nue.io/customers/openai/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Procurify",
+      "domain": "procurify.com",
+      "grade": "A",
+      "evidence": "\"Nue helps organizations enact what they want to do and breaks down silos between teams.\" — Julian Hannabuss, Director of RevOps",
+      "source_url": "https://www.nue.io/customers/procurify/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "SCLogic",
+      "domain": "sclogic.com",
+      "grade": "A",
+      "evidence": "\"I would work with Nue again in a heartbeat.\" — Trent Walklett, former CFO, SCLogic",
+      "source_url": "https://www.nue.io/customers/sclogic/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Sonar",
+      "domain": "sonar.software",
+      "grade": "A",
+      "evidence": "\"...the fact that it is natively built into Salesforce makes it 100x easier.\" — Brad Smith, Founder/CEO, Sonar (G2 review; also on Nue logo wall)",
+      "source_url": "https://www.g2.com/products/nue-io-nue/reviews",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "The Arbinger Institute",
+      "domain": "arbinger.com",
+      "grade": "A",
+      "evidence": "\"Investing in Nue gave us a ton of advantages over what Salesforce CPQ could provide.\" — Aaron Hill, SVP of Growth Strategy",
+      "source_url": "https://www.nue.io/customers/arbinger/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Census",
+      "domain": "getcensus.com",
+      "grade": "B",
+      "evidence": "On Nue homepage 'Trusted by' logo wall (logo file census.svg)",
+      "source_url": "https://www.nue.io/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Flywheel",
+      "domain": "flywheel.io",
+      "grade": "B",
+      "evidence": "\"Customers include high-growth tech companies like OpenAI, Glean, Flywheel, Betterworks, and LeafLink.\" (also on Nue homepage logo wall; domain tentative)",
+      "source_url": "https://www.nue.io/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Forma",
+      "domain": "joinforma.com",
+      "grade": "B",
+      "evidence": "On Nue homepage 'Trusted by' logo wall (logo file forma.svg)",
+      "source_url": "https://www.nue.io/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Glia",
+      "domain": "glia.com",
+      "grade": "B",
+      "evidence": "On Nue homepage 'Trusted by' logo wall (logo file glia.svg)",
+      "source_url": "https://www.nue.io/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "GridX",
+      "domain": "gridx.com",
+      "grade": "B",
+      "evidence": "On Nue homepage 'Trusted by' logo wall (logo file gridx.svg)",
+      "source_url": "https://www.nue.io/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Hootsuite",
+      "domain": "hootsuite.com",
+      "grade": "B",
+      "evidence": "\"Notable Customer Logos … OpenAI, Glean, HootSuite, Chilipiper, Mews\" (aggregator citing Nue's customer logos)",
+      "source_url": "https://www.clientcues.com/competitors/compare/turnstile-vs-nue-io-vs-subskribe-2026-05/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "i3 Verticals",
+      "domain": "i3verticals.com",
+      "grade": "B",
+      "evidence": "\"...public and private companies such as Procurify, Iodine, Mews, and i3 Verticals.\"",
+      "source_url": "https://www.nue.io/company/press/series-a-raise/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "iCapital",
+      "domain": "icapital.com",
+      "grade": "B",
+      "evidence": "On Nue homepage 'Trusted by' logo wall (logo file icapital.svg)",
+      "source_url": "https://www.nue.io/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Instabase",
+      "domain": "instabase.com",
+      "grade": "B",
+      "evidence": "\"It counts AI startup Glean Technologies Inc. and data management provider Instabase Inc. among its customers.\"",
+      "source_url": "https://siliconangle.com/2025/01/28/nue-reels-20m-revenue-management-platform/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Iodine Software",
+      "domain": "iodinesoftware.com",
+      "grade": "B",
+      "evidence": "\"...public and private companies such as Procurify, Iodine, Mews, and i3 Verticals.\"",
+      "source_url": "https://www.nue.io/company/press/series-a-raise/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "LeafLink",
+      "domain": "leaflink.com",
+      "grade": "B",
+      "evidence": "\"Customers include high-growth tech companies like OpenAI, Glean, Flywheel, Betterworks, and LeafLink.\"",
+      "source_url": "https://www.nue.io/customers/betterworks/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Mews",
+      "domain": "mews.com",
+      "grade": "B",
+      "evidence": "\"In 2024, Nue experienced three-fold year-over-year sales growth with public and private companies such as Procurify, Iodine, Mews, and i3 Verticals.\"",
+      "source_url": "https://www.nue.io/company/press/series-a-raise/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Obsidian Security",
+      "domain": "obsidiansecurity.com",
+      "grade": "B",
+      "evidence": "On Nue homepage 'Trusted by' logo wall (logo file obsidian.svg; domain tentative)",
+      "source_url": "https://www.nue.io/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "QuotaPath",
+      "domain": "quotapath.com",
+      "grade": "B",
+      "evidence": "On Nue homepage 'Trusted by' logo wall (logo file quotapath.svg)",
+      "source_url": "https://www.nue.io/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Recast Software",
+      "domain": "recastsoftware.com",
+      "grade": "B",
+      "evidence": "On Nue homepage 'Trusted by' logo wall (logo file recast-software.svg)",
+      "source_url": "https://www.nue.io/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Superhuman",
+      "domain": "superhuman.com",
+      "grade": "B",
+      "evidence": "On Nue homepage 'Trusted by' logo wall (logo file superhuman.svg)",
+      "source_url": "https://www.nue.io/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "TRM Labs",
+      "domain": "trmlabs.com",
+      "grade": "B",
+      "evidence": "On Nue homepage 'Trusted by' logo wall (logo file trm.svg)",
+      "source_url": "https://www.nue.io/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Anthropic",
+      "domain": "anthropic.com",
+      "grade": "C",
+      "evidence": "\"Early design partners include OpenAI and Anthropic. Nue AI is powered by ChatGPT, Claude, and Gemini...\" (Nue AI design partner; not confirmed quote-to-cash customer)",
+      "source_url": "https://www.nue.io/company/press/nue-ai-announcement/",
+      "confidence": "Likely"
+    }
+  ],
+  "generated_at": "2026-07-22T08:52:17Z",
+  "company_count": 29
+}

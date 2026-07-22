@@ -1,4 +1,4 @@
-name: Weekly brand page draft
+name: Weekly brand page (auto-publish)
 
 on:
   schedule:
@@ -7,10 +7,9 @@ on:
 
 permissions:
   contents: write
-  pull-requests: write
 
 jobs:
-  draft:
+  publish:
     runs-on: ubuntu-latest
     env:
       ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -27,22 +26,22 @@ jobs:
       - name: Install Python deps (Excel builder)
         run: pip install --quiet openpyxl
 
-      - name: Run brand-page-research-agent (draft only)
+      - name: Run brand-page-research-agent
         run: |
-          claude -p "Use the brand-page-research-agent to research this week's new competitor brand. Write the draft files into the repo: astro-site/src/data/competitors/<slug>.json and astro-site/public/downloads/<slug>.xlsx. DRAFT ONLY — do not commit, push, or deploy. At the end, print the full review report (brand chosen and why, total verified companies, A/B/C breakdown, 8-10 notable customers, switched-from findings) and the exact one-line lists-index.json entry to add." \
+          claude -p "Use the brand-page-research-agent to research this week's new competitor brand and write all output files into the repo per its instructions: astro-site/src/data/competitors/<slug>.json, astro-site/public/downloads/<slug>_customers.xlsx, and append the brand to astro-site/public/lists-index.json. Then print the review report." \
             --permission-mode dontAsk \
             --allowedTools "Agent(brand-page-research-agent),Bash,Read,Write,Edit,WebSearch,WebFetch,Skill,Task" \
             | tee agent-report.txt
 
-      - name: Open draft PR for review
-        uses: peter-evans/create-pull-request@v6
-        with:
-          branch: brand-page/weekly-draft
-          delete-branch: true
-          draft: true
-          title: "Draft: weekly competitor brand page"
-          body-path: agent-report.txt
-          commit-message: "Draft weekly competitor brand page (auto)"
-          add-paths: |
-            astro-site/src/data/competitors/*.json
-            astro-site/public/downloads/*.xlsx
+      - name: Publish to main (commit + push)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add astro-site/src/data/competitors/*.json astro-site/public/lists-index.json
+          git add -f astro-site/public/downloads/*_customers.xlsx
+          if git diff --cached --quiet; then
+            echo "No new page to publish this run."
+          else
+            git commit -m "Publish weekly competitor brand page (auto)"
+            git push
+          fi
