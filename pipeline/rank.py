@@ -1,7 +1,7 @@
 from urllib.parse import urlparse
 
 TIER_LIMITS = {
-    "lite": 20,
+    "lite": 45,
     "pro": 200,
     "advanced": 400,
 }
@@ -50,6 +50,11 @@ def score_result(page: dict, brand: str) -> int:
 
     if any(x in url for x in ["/case-study", "/customers", "/customer", "/success", "/clients"]):
         score += 4
+
+    # Logo-wall rows are the strongest signal a site publishes about itself —
+    # never let them fall off the shortlist behind generic blog chatter.
+    if page.get("logo_wall"):
+        score += 8
 
     if brand.lower() in combined:
         score += 2

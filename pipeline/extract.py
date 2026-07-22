@@ -93,10 +93,14 @@ def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: boo
         url_lower = page["url"].lower()
         signal_group = page.get("signal_group", "") or page.get("group", "")
 
-        if any(seg in url_lower for seg in ("/case-study/", "/case-studies/", "/case_study/", "/customer-stor", "/customers/", "/clients/")):
+        if page.get("logo_wall"):
+            confidence = "high"
+        elif any(seg in url_lower for seg in ("/case-study/", "/case-studies/", "/case_study/", "/customer-stor", "/customers/", "/clients/")):
             confidence = "high"
         elif signal_group in ("own_site", "customer_signals"):
             confidence = "high"
+        elif signal_group == "partners":
+            confidence = "low"
         elif signal_group in ("job_postings", "linkedin", "review_sites", "tech_stack", "blog_press"):
             confidence = "medium"
         else:
@@ -109,7 +113,7 @@ def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: boo
                 "confidence": confidence,
             })
 
-    qualified_pages = qualified_pages[:40]   # was 25 — let more customer-page links through
+    qualified_pages = qualified_pages[:70]   # was 40 — logo-wall rows are 1 page per company
 
     print(f"\n  {len(qualified_pages)} pages passed confidence filter. Extracting companies...")
 
@@ -148,7 +152,7 @@ def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: boo
                         seen_sources[src] = seen_sources.get(src, 0) + 1
 
     print(f"  Extracted {len(companies)} company evidence rows.")
-    return companies[:50]   # was 30 — leave headroom; ICP + source validation trim later
+    return companies[:80]   # was 50 — leave headroom; ICP + source validation trim later
 
 
 def extract_from_batch(pages: list[dict], brand: str) -> list[dict]:
@@ -187,8 +191,24 @@ Rules:
 - Use the source URL to help identify the company's domain when possible
 - If no clear company can be identified from a page, skip it
 
+Then judge the RELATIONSHIP between that company and {brand}. This matters more
+than the company name — a partner listed on a website is not a customer, and
+labelling one as the other makes the whole list untrustworthy.
+- customer  — evidence the company USES {brand}: a case study, "trusted by", a
+  customer story, a review they wrote, a job ad asking for {brand} experience
+- partner   — reseller, integration partner, channel partner, technology partner,
+  distributor, logistics or fulfilment partner, "works with", "available on"
+- investor  — investor, backer, accelerator, or the company funded {brand}
+- unclear   — the page shows the logo or name but gives no basis to tell which
+
+Judge from the page's own words. Headings like "Trusted by", "Our customers" or
+"Case study" mean customer. Headings like "Our partners", "Integrations",
+"Backed by", or a contact/about page listing organisations mean partner or
+investor. When the page gives you nothing to go on, say unclear — do not guess
+customer.
+
 Return one line per company in this exact format:
-COMPANY: <name> | DOMAIN: <domain> | SOURCE: <url>
+COMPANY: <name> | DOMAIN: <domain> | RELATIONSHIP: <customer|partner|investor|unclear> | SOURCE: <url>
 
 Pages:
 {combined}
@@ -241,13 +261,18 @@ Pages:
 
     for line in raw.splitlines():
         match = re.match(
-            r"COMPANY:\s*(.+?)\s*\|\s*DOMAIN:\s*(.+?)\s*\|\s*SOURCE:\s*(.+)",
+            r"COMPANY:\s*(.+?)\s*\|\s*DOMAIN:\s*(.+?)"
+            r"(?:\s*\|\s*RELATIONSHIP:\s*(\w+))?"
+            r"\s*\|\s*SOURCE:\s*(.+)",
             line,
         )
         if match:
             company_name = match.group(1).strip()
             company_domain = match.group(2).strip().lower()
-            model_source = match.group(3).strip()
+            relationship = (match.group(3) or "unclear").strip().lower()
+            if relationship not in ("customer", "partner", "investor", "unclear"):
+                relationship = "unclear"
+            model_source = match.group(4).strip()
 
             source_url = _snap_source(model_source)
             if not source_url:
@@ -261,6 +286,7 @@ Pages:
                 "domain": company_domain,
                 "company_name": company_name,
                 "company_domain": company_domain,
+                "relationship": relationship,
                 "source_url": source_url,
                 "signal_group": original_page.get("signal_group") or original_page.get("group", ""),
                 "rank_score": original_page.get("rank_score", 0),

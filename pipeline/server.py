@@ -98,6 +98,21 @@ def filter_by_icp(companies: list, icp_industries: list, icp_size: str, icp_regi
     return filtered
 
 
+_RELATIONSHIP_ORDER = {"customer": 0, "unclear": 1, "partner": 2, "investor": 3}
+
+
+def sort_customers_first(companies: list) -> list:
+    """Confirmed customers lead the list; partners and investors still appear,
+    labelled, rather than being silently passed off as customers."""
+    return sorted(
+        companies,
+        key=lambda c: (
+            _RELATIONSHIP_ORDER.get((c.get("relationship") or "unclear").lower(), 1),
+            -int(c.get("score") or 0),
+        ),
+    )
+
+
 def filter_unknown_companies(companies: list) -> list:
     """Remove entries with no real company name — e.g. 'Unknown', empty, or
     vague descriptions like 'Unknown Europe-based company (600+ employees)'."""
@@ -314,6 +329,7 @@ def _run_job(job_id: str, result_id: str, domain: str, tier: str, mode: str,
             save_cache(domain, companies, tier=tier)
 
         filtered = filter_by_icp(companies, icp_industries, icp_size, icp_region)
+        filtered = sort_customers_first(filtered)
         preview = filtered[:10]
 
         # Persist to DB
@@ -431,6 +447,7 @@ async def get_results(job_id: str):
         return {
             "company_name":  c.get("company_name", ""),
             "company_domain": c.get("company_domain", ""),
+            "relationship":  c.get("relationship", "unclear"),
             "industry":      c.get("industry", "Unknown"),
             "region":        c.get("region", "Unknown"),
             "company_size":  c.get("company_size", "Unknown"),
@@ -656,6 +673,7 @@ async def get_results_by_token(unlock_token: str):
         return {
             "company_name":  c.get("company_name", ""),
             "company_domain": c.get("company_domain", ""),
+            "relationship":  c.get("relationship", "unclear"),
             "industry":      c.get("industry", "Unknown"),
             "region":        c.get("region", "Unknown"),
             "company_size":  c.get("company_size", "Unknown"),
