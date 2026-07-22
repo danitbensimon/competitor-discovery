@@ -141,6 +141,7 @@ def aggregate_company_records(records):
         signal_groups = []
         rank_scores = []
         confidence_values = []
+        relationships = []
 
         titles = []
         snippets = []
@@ -167,6 +168,10 @@ def aggregate_company_records(records):
             signal_group = item.get("signal_group")
             if signal_group and signal_group not in signal_groups:
                 signal_groups.append(str(signal_group))
+
+            rel = (item.get("relationship") or "").strip().lower()
+            if rel:
+                relationships.append(rel)
 
             title = item.get("title")
             if title and title not in titles:
@@ -259,6 +264,10 @@ def aggregate_company_records(records):
             "evidence_count": evidence_count,
             "signal_groups": " | ".join(signal_groups[:5]),
             "signal_group": signal_groups[0] if signal_groups else "",
+            "relationship": next(
+                (r for r in ("customer", "partner", "investor") if r in relationships),
+                "unclear",
+            ),
             "max_rank_score": max_rank_score,
             "avg_rank_score": avg_rank_score,
             "targets_marketing": targets_marketing_found,
