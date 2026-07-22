@@ -1,0 +1,48 @@
+name: Weekly brand page draft
+
+on:
+  schedule:
+    - cron: "0 8 * * 1"      # every Monday 08:00 UTC
+  workflow_dispatch:          # manual "Run workflow" button
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  draft:
+    runs-on: ubuntu-latest
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install Claude Code
+        run: npm install -g @anthropic-ai/claude-code
+
+      - name: Install Python deps (Excel builder)
+        run: pip install --quiet openpyxl
+
+      - name: Run brand-page-research-agent (draft only)
+        run: |
+          claude -p "Use the brand-page-research-agent to research this week's new competitor brand. Write the draft files into the repo: astro-site/src/data/competitors/<slug>.json and astro-site/public/downloads/<slug>.xlsx. DRAFT ONLY — do not commit, push, or deploy. At the end, print the full review report (brand chosen and why, total verified companies, A/B/C breakdown, 8-10 notable customers, switched-from findings) and the exact one-line lists-index.json entry to add." \
+            --permission-mode dontAsk \
+            --allowedTools "Agent(brand-page-research-agent),Bash,Read,Write,Edit,WebSearch,WebFetch,Skill,Task" \
+            | tee agent-report.txt
+
+      - name: Open draft PR for review
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: brand-page/weekly-draft
+          delete-branch: true
+          draft: true
+          title: "Draft: weekly competitor brand page"
+          body-path: agent-report.txt
+          commit-message: "Draft weekly competitor brand page (auto)"
+          add-paths: |
+            astro-site/src/data/competitors/*.json
+            astro-site/public/downloads/*.xlsx
