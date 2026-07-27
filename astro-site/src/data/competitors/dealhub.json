@@ -1,0 +1,515 @@
+{
+  "competitor": {
+    "name": "DealHub",
+    "slug": "dealhub",
+    "domain": "dealhub.io"
+  },
+  "companies": [
+    {
+      "name": "Gong",
+      "domain": "gong.io",
+      "grade": "A",
+      "evidence": "\"Just in terms of turnaround time of quotes, DealHub has made a huge difference, especially at quarter-end.\" — Shantanu Shekhar, Senior Director, GTM Operations (case study + Deal Desk job posting listing DealHub)",
+      "source_url": "https://dealhub.io/customers/case-study-gong/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Socure",
+      "domain": "socure.com",
+      "grade": "A",
+      "evidence": "\"With our larger deals, we're seeing time cut in half… we've reduced our quote-to-order cycle time by over 70 percent.\" — Evan Morgan (case study + Ashby job posting to own DealHub CPQ)",
+      "source_url": "https://dealhub.io/customers/case-study-socure/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Deel",
+      "domain": "deel.com",
+      "grade": "A",
+      "evidence": "\"80% Reduced Quote Processing Time, 10min To Generate Simple Deals, 75% Faster Implementation.\" (case study + FeaturedCustomers reference)",
+      "source_url": "https://dealhub.io/customers/case-study-deel/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Asure Software",
+      "domain": "asuresoftware.com",
+      "grade": "A",
+      "evidence": "\"After spending $750K and two years failing to connect Salesforce CPQ, Conga, and DocuSign, we switched to DealHub.\" — Bruce Harris (case study + G2 review)",
+      "source_url": "https://dealhub.io/customers/case-study-asure/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Tipalti",
+      "domain": "tipalti.com",
+      "grade": "A",
+      "evidence": "\"Reporting on that was a complete nightmare… what stood out about DealHub was managing it ourselves.\" (case study logo + FeaturedCustomers reference)",
+      "source_url": "https://dealhub.io/customers/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Intuit",
+      "domain": "intuit.com",
+      "grade": "B",
+      "evidence": "\"We explored several CPQ solutions, but only DealHub felt truly modern, market leading, refreshing, quick to deploy.\" — Thomas Horton, VP of Global Commercial Operations",
+      "source_url": "https://dealhub.io/customers/case-study-intuit/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Trintech",
+      "domain": "trintech.com",
+      "grade": "B",
+      "evidence": "\"It wasn't a single breaking point. It was a slow degradation, every update added more complexity.\" — Kellen McGuar (switched from Salesforce CPQ)",
+      "source_url": "https://dealhub.io/customers/case-study-trintech/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Built In",
+      "domain": "builtin.com",
+      "grade": "B",
+      "evidence": "\"With the old CPQ, I'd need six months. With DealHub? Two weeks. I'm a yes person now.\" — Ali Andrew, VP of Ops (switched from Salesforce CPQ)",
+      "source_url": "https://dealhub.io/customers/case-study-built-in/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "SpotOn",
+      "domain": "spoton.com",
+      "grade": "B",
+      "evidence": "\"We launched a new retail product fast and it was the first time no one could mess up the quote.\" — Marc Sansome (switched from Salesforce CPQ)",
+      "source_url": "https://dealhub.io/customers/case-study-spoton/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Unit4",
+      "domain": "unit4.com",
+      "grade": "B",
+      "evidence": "\"The quoting process is much easier with DealHub. The user flow is far more intuitive compared to our previous CPQ.\" — Eran Zeevi (switched from prior CPQ)",
+      "source_url": "https://dealhub.io/customers/case-study-unit4/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "MoEngage",
+      "domain": "moengage.com",
+      "grade": "B",
+      "evidence": "\"We thought Salesforce CPQ was the obvious choice, but it lacked speed and flexibility.\" — Manohar Nandigam (switched from Salesforce CPQ)",
+      "source_url": "https://dealhub.io/customers/case-study-moengage/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Powerfleet",
+      "domain": "powerfleet.com",
+      "grade": "B",
+      "evidence": "\"DealHub's approval workflows are critical to maintaining SOX compliance and streamlining audits.\" — Leeann Russell (consolidated Salesforce CPQ + Experlogix)",
+      "source_url": "https://dealhub.io/customers/case-study-powerfleet/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Verbit",
+      "domain": "verbit.ai",
+      "grade": "B",
+      "evidence": "\"What used to take weeks in Salesforce now takes hours.\" — Omer Goldman, Senior Business Operations Manager (switched from native Salesforce)",
+      "source_url": "https://dealhub.io/customers/case-study-verbit/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "LifeRaft",
+      "domain": "liferaftinc.com",
+      "grade": "B",
+      "evidence": "\"We used to have 3–5 calls just to explain quotes. But with DealRoom, buyers understand immediately.\" — Colin Tanner (switched from Salesforce CPQ)",
+      "source_url": "https://dealhub.io/customers/case-study-liferaft/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Level Data",
+      "domain": "leveldata.com",
+      "grade": "B",
+      "evidence": "\"Our July renewal season is massive with 900 to 1,200 quotes in a single month.\" — Mercedes Befus, Customer Success Operations Manager",
+      "source_url": "https://dealhub.io/customers/case-study-level-data/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Contentsquare",
+      "domain": "contentsquare.com",
+      "grade": "B",
+      "evidence": "\"With DealHub, approvers now see margin details in real-time, significantly improving decision-making.\" — Justin Fogel-Conception",
+      "source_url": "https://dealhub.io/customers/case-study-contentsquare/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Braze",
+      "domain": "braze.com",
+      "grade": "B",
+      "evidence": "\"By putting our pricing into a system, it helps us stick to pricing guidelines and become more compliant.\" — Katie Zinman, Director, Global Deal Desk",
+      "source_url": "https://dealhub.io/customers/case-study-braze/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Redis",
+      "domain": "redis.io",
+      "grade": "B",
+      "evidence": "\"We've seen huge benefits just in the usability and the ability to jump into the tool on day one.\" — Phoenix Moomaw, Director, GTM Systems and Data Operations",
+      "source_url": "https://dealhub.io/customers/case-study-redis/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Camunda",
+      "domain": "camunda.com",
+      "grade": "B",
+      "evidence": "\"Now we generate, approve, and produce order forms in one system, often within a day.\" — Courtney Jones",
+      "source_url": "https://dealhub.io/customers/case-study-camunda/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "PlexTrac",
+      "domain": "plextrac.com",
+      "grade": "B",
+      "evidence": "\"DealHub replaced our manual quoting process with clear pricing and standardized approvals, enabling our reps to create quotes 40% faster.\" — Ayelet Germanski, VP Revenue Operations",
+      "source_url": "https://dealhub.io/customers/case-study-plextrac/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Darwinbox",
+      "domain": "darwinbox.com",
+      "grade": "B",
+      "evidence": "\"This has been one of the greatest achievements for our Revenue Operations team.\"",
+      "source_url": "https://dealhub.io/customers/case-study-darwinbox/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Yotpo",
+      "domain": "yotpo.com",
+      "grade": "B",
+      "evidence": "\"It gives a better user experience and minimizes the mistakes dramatically.\" — Jonathan Cohen, Salesforce & Delivery Team Leader",
+      "source_url": "https://dealhub.io/customers/case-study-yotpo/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "MotorK",
+      "domain": "motork.io",
+      "grade": "B",
+      "evidence": "\"We reduced the number of invoices by 45% in the first half of 2025 by consolidating product lines into a single billing cycle.\" — Giovanni Zonta",
+      "source_url": "https://dealhub.io/customers/case-study-motork/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Intersection",
+      "domain": "intersection.com",
+      "grade": "B",
+      "evidence": "\"We used to pull pricing and product details from ten different sources. Now, everything lives in one place.\" — Kristan Escobar",
+      "source_url": "https://dealhub.io/customers/case-study-intersection/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Inkcups",
+      "domain": "inkcups.com",
+      "grade": "B",
+      "evidence": "\"Before DealHub, updating pricing meant editing 30 Word documents. Now we make one change and it's instantly reflected everywhere.\" — Riley Mann",
+      "source_url": "https://dealhub.io/customers/case-study-inkcups/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Rove",
+      "domain": "rovetravel.com",
+      "grade": "B",
+      "evidence": "\"We were able to go live in three to four weeks… I'm non-technical… I was able to build everything myself.\" — Sam Swansen, Chief of Staff",
+      "source_url": "https://dealhub.io/customers/case-study-rove/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "SecurityMetrics",
+      "domain": "securitymetrics.com",
+      "grade": "B",
+      "evidence": "\"We were live in about three months… we started from a barren place, seeing results immediately.\"",
+      "source_url": "https://dealhub.io/customers/case-study-securitymetrics/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Brock USA",
+      "domain": "brockusa.com",
+      "grade": "B",
+      "evidence": "\"Before DealHub, we were managing quotes across shared drives and email. Now everything happens in HubSpot.\"",
+      "source_url": "https://dealhub.io/customers/case-study-brock-usa/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Appgate",
+      "domain": "appgate.com",
+      "grade": "B",
+      "evidence": "\"When we needed changes before, legal edited PDFs manually. Now it's all done in DealHub.\"",
+      "source_url": "https://dealhub.io/customers/case-study-appgate/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "SourceScrub",
+      "domain": "sourcescrub.com",
+      "grade": "B",
+      "evidence": "\"DealHub saves time, money, and drives productivity by simplifying quote creation.\"",
+      "source_url": "https://dealhub.io/customers/case-study-source-scrub/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Zensai",
+      "domain": "zensai.com",
+      "grade": "B",
+      "evidence": "\"You helped me get a quote sent, signed, and processed in under three hours.\"",
+      "source_url": "https://dealhub.io/customers/case-study-zensai/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Factorial HR",
+      "domain": "factorialhr.com",
+      "grade": "B",
+      "evidence": "\"With DealHub, approvals are clear before we even publish the quote. Most SLAs within 24 hours.\"",
+      "source_url": "https://dealhub.io/customers/case-study-factorial-hr/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Intellect",
+      "domain": "intellect.co",
+      "grade": "B",
+      "evidence": "DealHub customer case study published at dealhub.io/customers/case-study-intellect/",
+      "source_url": "https://dealhub.io/customers/case-study-intellect/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Canunda",
+      "domain": "canunda.com",
+      "grade": "B",
+      "evidence": "\"Before DealHub, quotes and order forms were manual and legal carried too much burden.\"",
+      "source_url": "https://dealhub.io/customers/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Tripleseat",
+      "domain": "tripleseat.com",
+      "grade": "B",
+      "evidence": "\"When they onboard, they always say that it is one of the easiest CPQ tools they've used.\"",
+      "source_url": "https://dealhub.io/customers/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "OrderGroove",
+      "domain": "ordergroove.com",
+      "grade": "B",
+      "evidence": "\"Everything the reps enter in DealHub maps into Salesforce. Eliminated hours of admin work.\"",
+      "source_url": "https://dealhub.io/customers/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Digitate",
+      "domain": "digitate.com",
+      "grade": "B",
+      "evidence": "\"From Two-Month Delays to GTM Agility with DealHub CPQ\" — 90% faster pricing deployment, 50% faster quotes",
+      "source_url": "https://dealhub.io/customers/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "SYSPRO",
+      "domain": "syspro.com",
+      "grade": "B",
+      "evidence": "\"50% Reduction in Sales Admin Errors, 5 Regions Using One CPQ, 90%+ Self-sufficiency.\"",
+      "source_url": "https://dealhub.io/customers/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Zapier",
+      "domain": "zapier.com",
+      "grade": "B",
+      "evidence": "\"8hr Approval Cycles Cut from Days, 50% Faster GTM Rollout, 60% Reduction in Manual Steps.\"",
+      "source_url": "https://dealhub.io/customers/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Cofense",
+      "domain": "cofense.com",
+      "grade": "B",
+      "evidence": "\"It was initially scary for me to take something new on… but you guys made it easier.\"",
+      "source_url": "https://dealhub.io/customers/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Bitmovin",
+      "domain": "bitmovin.com",
+      "grade": "B",
+      "evidence": "\"Our quotes are so much better. Underwriting told me they see way fewer mistakes now.\"",
+      "source_url": "https://dealhub.io/customers/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Quilt",
+      "domain": "quilt.com",
+      "grade": "B",
+      "evidence": "\"The aha moment was realizing, oh, we need a CPQ tool, and this will solve all of it.\"",
+      "source_url": "https://dealhub.io/customers/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "HP",
+      "domain": "hp.com",
+      "grade": "B",
+      "evidence": "\"1 hour To Update Pricing & Products, 500+ SKUs with Complex Logic, 2min updates vs 3 Months.\"",
+      "source_url": "https://dealhub.io/customers/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "BDR Thermea Group",
+      "domain": "bdrthermeagroup.com",
+      "grade": "B",
+      "evidence": "\"All customer information is synchronized automatically to sales contracts, ensuring accuracy and quicker quote turnaround.\"",
+      "source_url": "https://www.featuredcustomers.com/vendor/dealhub",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Namogoo",
+      "domain": "namogoo.com",
+      "grade": "B",
+      "evidence": "\"The system breathes with the business. It can flex and change in-sight. Nothing is set in stone.\"",
+      "source_url": "https://www.featuredcustomers.com/vendor/dealhub",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Tines",
+      "domain": "tines.com",
+      "grade": "B",
+      "evidence": "\"Improve tooling. Help support and improve our CPQ tool, DealHub, and the associated workflows.\" (careers job posting)",
+      "source_url": "https://job-boards.greenhouse.io/tines/jobs/6112668004",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Culture Amp",
+      "domain": "cultureamp.com",
+      "grade": "B",
+      "evidence": "\"Direct experience implementing or operating DealHub CPQ and DocuSign CLM in a subscription-management context.\" (job posting)",
+      "source_url": "https://job-boards.greenhouse.io/cultureamp/jobs/8051414",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Osano",
+      "domain": "osano.com",
+      "grade": "B",
+      "evidence": "\"CPQ management and administration experience including consumption pricing model management — DealHub preferred.\" (job posting)",
+      "source_url": "https://job-boards.greenhouse.io/osano/jobs/5367793008",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Customer.io",
+      "domain": "customer.io",
+      "grade": "B",
+      "evidence": "\"Proficiency with CRM systems (Salesforce required) and CPQ tools (DealHub).\" (Deal Desk Analyst job posting)",
+      "source_url": "https://job-boards.greenhouse.io/customerio/jobs/7779202",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Cyara",
+      "domain": "cyara.com",
+      "grade": "B",
+      "evidence": "\"Hands-on experience leading CPQ implementations (e.g., Salesforce CPQ/Revenue Cloud, Conga, DealHub).\" (job posting)",
+      "source_url": "https://jobs.lever.co/cyara/95fb86c6-4fce-4cc7-9403-31724023df87",
+      "confidence": "Verified"
+    },
+    {
+      "name": "AvePoint",
+      "domain": "avepoint.com",
+      "grade": "B",
+      "evidence": "\"We use DealHub.io for our quoting process, syncing data back into Salesforce and reporting.\" (TrustRadius review)",
+      "source_url": "https://www.trustradius.com/products/dealhub/reviews/all",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Reprise",
+      "domain": "reprise.com",
+      "grade": "B",
+      "evidence": "\"We use DealHub.io for all customer contract generation.\" (TrustRadius review)",
+      "source_url": "https://www.trustradius.com/reviews/dealhub-io-2023-01-24-07-05-19",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Grammarly",
+      "domain": "grammarly.com",
+      "grade": "C",
+      "evidence": "Deal Desk Analyst job posting listing proficiency with CPQ tools \"with DealHub listed as a plus\"",
+      "source_url": "https://job-boards.greenhouse.io/grammarly/jobs/7490276",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Ataccama",
+      "domain": "ataccama.com",
+      "grade": "C",
+      "evidence": "Job posting: \"exposure to CPQ (Dealhub.io) is preferred\" (posting has since rotated)",
+      "source_url": "https://jobs.lever.co/ataccama/d814bd3e-e0b7-4611-8652-07ef7e09af5b",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Blend",
+      "domain": "blend.com",
+      "grade": "C",
+      "evidence": "Job posting listing \"Experience with CPQ (Configure, Price, Quote) tools - DealHub.io\" as a plus",
+      "source_url": "https://job-boards.greenhouse.io/blend/jobs/5710231004",
+      "confidence": "Likely"
+    },
+    {
+      "name": "AssetWatch",
+      "domain": "assetwatch.com",
+      "grade": "C",
+      "evidence": "Job posting: \"experience with CPQ tools (Salesforce CPQ, DealHub, or similar) strongly preferred\"",
+      "source_url": "https://job-boards.greenhouse.io/assetwatch/jobs/4680709005",
+      "confidence": "Likely"
+    },
+    {
+      "name": "ThoughtSpot",
+      "domain": "thoughtspot.com",
+      "grade": "C",
+      "evidence": "Listed among DealHub customers on FeaturedCustomers vendor reference page",
+      "source_url": "https://www.featuredcustomers.com/vendor/dealhub",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Salesloft",
+      "domain": "salesloft.com",
+      "grade": "C",
+      "evidence": "Listed among DealHub customers on FeaturedCustomers vendor reference page",
+      "source_url": "https://www.featuredcustomers.com/vendor/dealhub",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Sisense",
+      "domain": "sisense.com",
+      "grade": "C",
+      "evidence": "Listed among DealHub customers on FeaturedCustomers vendor reference page",
+      "source_url": "https://www.featuredcustomers.com/vendor/dealhub",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Rubrik",
+      "domain": "rubrik.com",
+      "grade": "C",
+      "evidence": "Listed among DealHub customers on FeaturedCustomers vendor reference page",
+      "source_url": "https://www.featuredcustomers.com/vendor/dealhub",
+      "confidence": "Likely"
+    },
+    {
+      "name": "AlgoSec",
+      "domain": "algosec.com",
+      "grade": "C",
+      "evidence": "Listed among DealHub customers on FeaturedCustomers vendor reference page",
+      "source_url": "https://www.featuredcustomers.com/vendor/dealhub",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Infinidat",
+      "domain": "infinidat.com",
+      "grade": "C",
+      "evidence": "Listed among DealHub customers on FeaturedCustomers vendor reference page",
+      "source_url": "https://www.featuredcustomers.com/vendor/dealhub",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Dynamic Yield",
+      "domain": "dynamicyield.com",
+      "grade": "C",
+      "evidence": "Listed among DealHub customers on FeaturedCustomers vendor reference page",
+      "source_url": "https://www.featuredcustomers.com/vendor/dealhub",
+      "confidence": "Likely"
+    }
+  ],
+  "generated_at": "2026-07-27T11:08:19Z",
+  "company_count": 63
+}
