@@ -1,0 +1,71 @@
+{
+  "competitor": { "name": "Sensos", "slug": "sensos", "domain": "sensos.io" },
+  "companies": [
+    {
+      "name": "Bayer",
+      "domain": "bayer.com",
+      "grade": "A",
+      "evidence": "Implementing Sensos improved the transparency of our supply chain and inventory channel, which enabled precise production planning and significantly reduced losses during shipments from France to Eastern Europe.",
+      "source_url": "https://sensos.io/resources/customer-stories/revolutionizing-supply-chain-visibility-for-global-leaders-like-bayer/",
+      "confidence": "high"
+    },
+    {
+      "name": "Textron Aviation",
+      "domain": "txtav.com",
+      "grade": "A",
+      "evidence": "By incorporating Sensos Smart Labels into our logistics network, we are providing customers the option to have an even greater confidence and control over their parts shipments.",
+      "source_url": "https://www.businesswire.com/news/home/20251010471925/en/Textron-Aviation-Enhances-Parts-Shipment-Visibility-With-Sensos-Smart-Labels-Technology",
+      "confidence": "high"
+    },
+    {
+      "name": "DB Schenker",
+      "domain": "dbschenker.com",
+      "grade": "A",
+      "evidence": "DB Schenker First European Logistics Provider to Offer Global Tracking with Sensos' Ultra-Thin Label.",
+      "source_url": "https://www.rcrwireless.com/20230317/internet-of-things-4/db-schenker-deploys-iot-smart-label-from-sony-semicon-for-global-tracking",
+      "confidence": "high"
+    },
+    {
+      "name": "Airpharm Pharma Logistics",
+      "domain": "airpharm.com",
+      "grade": "B",
+      "evidence": "Airpharm adopts Sensos' AIoT System of Action to enable real-time, compliant, and autonomous pharma logistics from warehouse to delivery.",
+      "source_url": "https://www.einpresswire.com/article/867679787/sensos-and-airpharm-partner-to-revolutionize-pharma-logistics-with-aiot-supply-chain-system-of-action",
+      "confidence": "high"
+    },
+    {
+      "name": "UPS Healthcare",
+      "domain": "ups.com",
+      "grade": "B",
+      "evidence": "Sensos was the first provider to integrate its advanced technology, and UPS Premier customers can now access Sensos Cellular Smart Labels, pre-configured to link to UPS Premier Shipments.",
+      "source_url": "https://www.ups.com/kr/en/healthcare/learning-center/articles/premier-sensos-benefits",
+      "confidence": "high"
+    },
+    {
+      "name": "Unilog (ICL Group)",
+      "domain": "icl-group.com",
+      "grade": "B",
+      "evidence": "Unilog, a subsidiary of ICL Group, is currently piloting the joint solution at multiple sites in the US and Europe.",
+      "source_url": "https://www.cointrust.com/market-news/vodafone-sumitomo-owned-pairpoint-partners-with-sensos-to-fight-supply-chain-fraud-using-blockchain-and-iot",
+      "confidence": "medium"
+    },
+    {
+      "name": "Lufthansa Cargo",
+      "domain": "lufthansa-cargo.com",
+      "grade": "C",
+      "evidence": "Lufthansa has approved both the Sensos Tracking Label Gen 2.0 and the Sensos Smart Label Gen 1.0 for use on their cargo operations.",
+      "source_url": "https://clawandtalon.capital/startup-sensos",
+      "confidence": "medium"
+    },
+    {
+      "name": "Oak Ridge National Laboratory",
+      "domain": "ornl.gov",
+      "grade": "C",
+      "evidence": "ORNL evaluated the Sensos Smart Label Gen 2.0 for package tracking, running a round-trip Oak Ridge, TN to Seattle, WA shipment to assess location, sensing, alerts and battery.",
+      "source_url": "https://www.osti.gov/biblio/3013453",
+      "confidence": "low"
+    }
+  ],
+  "generated_at": "2026-07-27T12:00:00Z",
+  "company_count": 8
+}
