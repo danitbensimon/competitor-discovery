@@ -644,6 +644,15 @@
         <button class="new-search-btn" onclick="resetToHome()">← New Search</button>
       </div>
 
+      <!-- FULL-LIST BOOKING CTA (above table) -->
+      <div id="fullListCtaTop" style="margin:16px 0 22px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; background:linear-gradient(135deg, rgba(0,194,255,0.09), rgba(26,111,255,0.09)); border:1px solid rgba(0,194,255,0.28); border-radius:14px; padding:18px 22px;">
+        <div style="max-width:36em;">
+          <div style="font-size:16px; font-weight:700; color:var(--text); margin-bottom:4px;">These 10 are a free preview. For the full result, book a time with Danit.</div>
+          <div style="font-size:13px; color:var(--muted2); line-height:1.6;">You get the complete customer list plus a 1:1 to turn it into pipeline: the ICP, the angle, the sequence.</div>
+        </div>
+        <a href="https://meetings-eu1.hubspot.com/dben-simon" target="_blank" rel="noopener" style="flex-shrink:0; height:48px; line-height:48px; padding:0 24px; border:0; border-radius:12px; background:linear-gradient(135deg, var(--accent2), var(--accent)); color:#fff; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:15px; text-decoration:none; box-shadow:0 8px 24px -8px rgba(0,194,255,0.5); white-space:nowrap;">Book a time with Danit →</a>
+      </div>
+
       <div class="table-wrap">
         <table>
           <thead>
@@ -675,7 +684,7 @@
         <div class="unlock-banner">
           <div class="unlock-eyebrow">Unlock the Full List Here</div>
           <div class="unlock-title">Turn Competitor Customers into Your Pipeline</div>
-          <div class="unlock-sub" id="lockWallSub">Book your 1:1 strategy session with Danit to build your campaign.</div>
+          <div class="unlock-sub" id="lockWallSub">To get the full list, book a time with Danit below. You get every verified company plus a 1:1 to build the outbound around it.</div>
 
           <div class="unlock-value-bar">
             <div class="uvb-item">
@@ -1002,15 +1011,18 @@
     }
 
     const lockWallEl = document.getElementById('lockWall');
+    const topCtaEl = document.getElementById('fullListCtaTop');
     if (data.unlocked) {
-      // Paid — hide the lockWall paywall but keep the calendar visible
+      // Paid — hide the lockWall paywall and the top booking CTA, keep the calendar visible
       if (lockWallEl) lockWallEl.style.display = 'none';
+      if (topCtaEl) topCtaEl.style.display = 'none';
       document.getElementById('exportBar').classList.add('visible');
       document.getElementById('exportCount').textContent = total;
       const mc = document.getElementById('meetingEmbed');
       if (mc) { mc.style.display = 'block'; mc.scrollIntoView({behavior:'smooth', block:'start'}); }
     } else {
       if (lockWallEl) lockWallEl.style.display = 'block';
+      if (topCtaEl) topCtaEl.style.display = 'flex';
       document.getElementById('exportBar').classList.remove('visible');
     }
     updateSignalsFromData(data);
