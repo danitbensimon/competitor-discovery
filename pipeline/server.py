@@ -133,6 +133,11 @@ def filter_unknown_companies(companies: list) -> list:
             continue
         if name_lower in ("n/a", "none", "unnamed", "-", "company"):
             continue
+        # Funding announcements enumerate INVESTORS ("raised $X from A, B, C"),
+        # which the extractor correctly tags relationship=investor. They are not
+        # customers, so they must never appear on a "companies using X" list.
+        if (c.get("relationship") or "").lower() == "investor":
+            continue
         result.append(c)
     return result
 
