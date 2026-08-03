@@ -1,0 +1,99 @@
+{
+  "competitor": {
+    "name": "Alta",
+    "slug": "alta",
+    "domain": "altahq.com"
+  },
+  "generated_at": "2026-08-03T09:40:00Z",
+  "company_count": 11,
+  "companies": [
+    {
+      "name": "Snowflake",
+      "domain": "snowflake.com",
+      "grade": "A",
+      "evidence": "\"Its platform is already being used by Snowflake, Deel, Atlassian, and Atoms\" / \"customers include revenue teams at Snowflake, Deel, Atlassian, Atoms, Riverside, and Sabio Group.\"",
+      "source_url": "https://www.prnewswire.com/news-releases/alta-raises-25m-to-redefine-the-go-to-market-architecture-for-revenue-teams-302820618.html",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Deel",
+      "domain": "deel.com",
+      "grade": "A",
+      "evidence": "\"Its platform is already being used by Snowflake, Deel, Atlassian, and Atoms, as well as hundreds of businesses, from Fortune 500 companies to SMBs.\"",
+      "source_url": "https://www.prnewswire.com/news-releases/alta-raises-25m-to-redefine-the-go-to-market-architecture-for-revenue-teams-302820618.html",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "monday.com",
+      "domain": "monday.com",
+      "grade": "A",
+      "evidence": "\"We tried other AI sales tools, but Alta's agents are the most precise and natural, like an extension of our team. Our SDR productivity has increased by 40%.\" — Tanya Didio, Sales Dev. Team Manager",
+      "source_url": "https://www.altahq.com/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Mesh Payments",
+      "domain": "meshpayments.com",
+      "grade": "A",
+      "evidence": "\"Alta's AI agents drove more pipeline and higher conversion rates while saving our reps hours every week.\" — Daniel Khayat, VP Sales",
+      "source_url": "https://www.altahq.com/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Riverside",
+      "domain": "riverside.fm",
+      "grade": "A",
+      "evidence": "\"Too many leads, not enough hands. Alta handles 30% of our inbound now and replaced one SDR entirely.\" — Raz Navon, Head of Acquisition (also named as a customer in Alta's $25M funding release)",
+      "source_url": "https://www.altahq.com/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Atlassian",
+      "domain": "atlassian.com",
+      "grade": "B",
+      "evidence": "\"Its platform is already being used by Snowflake, Deel, Atlassian, and Atoms\" (Alta $25M funding announcement).",
+      "source_url": "https://www.prnewswire.com/news-releases/alta-raises-25m-to-redefine-the-go-to-market-architecture-for-revenue-teams-302820618.html",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Sabio Group",
+      "domain": "sabiogroup.com",
+      "grade": "B",
+      "evidence": "\"customers include revenue teams at Snowflake, Deel, Atlassian, Atoms, Riverside, and Sabio Group.\"",
+      "source_url": "https://www.prnewswire.com/news-releases/alta-raises-25m-to-redefine-the-go-to-market-architecture-for-revenue-teams-302820618.html",
+      "confidence": "Verified"
+    },
+    {
+      "name": "PayPal",
+      "domain": "paypal.com",
+      "grade": "B",
+      "evidence": "\"Before Alta, extracting reports from various systems was time-consuming. Now, all business metrics are easily accessible.\" — Daniel Kretzmer, Business Operations",
+      "source_url": "https://www.altahq.com/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "CloudKitchens",
+      "domain": "cloudkitchens.com",
+      "grade": "B",
+      "evidence": "\"Alta's capabilities have exceeded our expectations, and the team's support makes all the difference.\" — Giuseppe Gulizzi, Head of RevOps",
+      "source_url": "https://www.altahq.com/about-us",
+      "confidence": "Verified"
+    },
+    {
+      "name": "GForce Life Sciences",
+      "domain": "gforcelifesciences.com",
+      "grade": "B",
+      "evidence": "\"Before Alta, prospecting was manual and results were poor. Now we're running signal-based outbound at scale.\" — John Webber, CEO",
+      "source_url": "https://www.altahq.com/about-us",
+      "confidence": "Verified"
+    },
+    {
+      "name": "BetterPros",
+      "domain": "betterpros.com",
+      "grade": "B",
+      "evidence": "\"Alta's inbound system revolutionized our outreach, helping us identify and connect with the right talent more efficiently than ever before.\" — Peter Whitehead, Co-Founder",
+      "source_url": "https://www.altahq.com/about-us",
+      "confidence": "Verified"
+    }
+  ]
+}
