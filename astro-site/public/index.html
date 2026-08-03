@@ -33,6 +33,7 @@
   .ciq-listcard .ciq-lc-icon{transition:transform .25s;}
   .ciq-listcard:hover .ciq-lc-icon{transform:scale(1.1) rotate(-4deg);}
   @media(max-width:960px){#searchSection .ciq-hero{grid-template-columns:1fr!important;} #searchSection .ciq-2{grid-template-columns:1fr!important;} #searchSection .ciq-3{grid-template-columns:1fr!important;} #searchSection .ciq-4{grid-template-columns:1fr 1fr!important;}}
+  @media(max-width:760px){#danitCtaImg{display:none!important;} #fullListCtaTop{margin-top:16px!important; padding-left:22px!important;}}
 </style>
 <style>
   :root {
@@ -645,7 +646,8 @@
       </div>
 
       <!-- FULL-LIST BOOKING CTA (above table) -->
-      <div id="fullListCtaTop" style="margin:16px 0 22px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; background:linear-gradient(135deg, rgba(0,194,255,0.09), rgba(26,111,255,0.09)); border:1px solid rgba(0,194,255,0.28); border-radius:14px; padding:18px 22px;">
+      <div id="fullListCtaTop" style="position:relative; overflow:visible; margin:68px 0 22px; display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:16px; background:linear-gradient(135deg, rgba(0,194,255,0.09), rgba(26,111,255,0.09)); border:1px solid rgba(0,194,255,0.28); border-radius:14px; padding:18px 22px 18px 220px;">
+        <img id="danitCtaImg" src="/danit-cta.webp" alt="Danit Ben Simon" style="position:absolute; left:16px; bottom:0; height:160px; width:auto; pointer-events:none; filter:drop-shadow(0 10px 22px rgba(0,0,0,0.45));" />
         <div style="max-width:36em;">
           <div style="font-size:16px; font-weight:700; color:var(--text); margin-bottom:4px;">These 10 are a free preview. For the full result, book a time with Danit.</div>
           <div style="font-size:13px; color:var(--muted2); line-height:1.6;">You get the complete customer list plus a 1:1 to turn it into pipeline: the ICP, the angle, the sequence.</div>
