@@ -1,0 +1,675 @@
+{
+  "competitor": {
+    "name": "Qualys",
+    "slug": "qualys",
+    "domain": "qualys.com"
+  },
+  "companies": [
+    {
+      "name": "Aflac Incorporated",
+      "domain": "aflac.com",
+      "grade": "A",
+      "evidence": "Aflac selected Qualys VMDR in 2021 with the major objective of accelerating vulnerability management and compliance.",
+      "source_url": "https://blog.qualys.com/qualys-insights/2022/07/26/aflac-completes-successful-poc-of-qualys-vmdr-2-0-with-trurisk",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Cintas",
+      "domain": "cintas.com",
+      "grade": "A",
+      "evidence": "With Qualys Patch Management, we can leverage our existing Qualys Cloud Agent deployments to automatically patch our endpoints.",
+      "source_url": "https://www.qualys.com/customers/success-stories/cintas-replaces-manual-patching-tasks-with-risk-based-from-qualys-enterprise-trurisk-platform",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Cisco",
+      "domain": "cisco.com",
+      "grade": "A",
+      "evidence": "The great thing about Qualys is that it's as much into the development part as it is into the security side.",
+      "source_url": "https://blog.qualys.com/product-tech/2017/11/01/case-study-cisco-group-bakes-security-into-web-app-dev-process",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Microsoft",
+      "domain": "microsoft.com",
+      "grade": "A",
+      "evidence": "We found Qualys WAS ideal for our need to assess thousands of websites with limited resources.",
+      "source_url": "https://www.qualys.com/customers/success-stories/reining-in-global-web-application-security-risk-at-microsoft/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Armor",
+      "domain": "armor.com",
+      "grade": "B",
+      "evidence": "Qualys VMDR is a real game changer for us, as it integrates several critical security solutions into one.",
+      "source_url": "https://www.qualys.com/company/newsroom/news-releases/usa/qualys-vmdr-now-shipping/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Associated British Foods",
+      "domain": "abf.co.uk",
+      "grade": "B",
+      "evidence": "We needed a platform that could scale across geolocations to translate risk insights in a common dashboard.",
+      "source_url": "https://blog.qualys.com/qualys-insights/qualys-security-conference/2023/11/09/de-risking-in-practice-how-qualys-customers-are-driving-value-in-their-organizations",
+      "confidence": "Verified"
+    },
+    {
+      "name": "British Heart Foundation",
+      "domain": "bhf.org.uk",
+      "grade": "B",
+      "evidence": "What sold us on Qualys was the management tools.",
+      "source_url": "https://www.qualys.com/customers/success-stories/british-heart-foundation-cure-security-vulnerabilities-regulatory-compliance/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "CaixaBank",
+      "domain": "caixabank.com",
+      "grade": "B",
+      "evidence": "Qualys VM tells us precisely what the problem is, as well as where it lies.",
+      "source_url": "https://www.qualys.com/customers/success-stories/caixabank-relies-qualys-deal-security-threats-strengthen-customer-trust/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Catholic Health System",
+      "domain": "chsbuffalo.org",
+      "grade": "B",
+      "evidence": "Used Qualys Vulnerability Management to tag and categorize systems according to risk.",
+      "source_url": "https://www.qualys.com/customers/success-stories/catholic-health-system-delivers-vulnerability-management-cure/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "CEC Bank",
+      "domain": "cec.ro",
+      "grade": "B",
+      "evidence": "QualysGuard has helped us to bring a higher level of governance to our risk management program.",
+      "source_url": "https://www.featuredcustomers.com/vendor/qualys",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Cegedim",
+      "domain": "cegedim.com",
+      "grade": "B",
+      "evidence": "The Enterprise TruRisk Platform supports the work of our security teams and reinforces security in real time.",
+      "source_url": "https://www.qualys.com/customers/success-stories/cegedim-tackles-vulnerability-management-compliance",
+      "confidence": "Verified"
+    },
+    {
+      "name": "City of Miami Beach",
+      "domain": "miamibeachfl.gov",
+      "grade": "B",
+      "evidence": "The scans are set up. If something is found, we will know immediately.",
+      "source_url": "https://www.qualys.com/customers/success-stories/automating-security-it-risk-management-miami-beach/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Commercial Bank of Dubai",
+      "domain": "cbd.ae",
+      "grade": "B",
+      "evidence": "Qualys customer case study: Commercial Bank Dubai Automates Vulnerability Management.",
+      "source_url": "https://www.qualys.com/customers/success-stories/commercial-bank-dubai-automates-vulnerability-management",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Deloitte",
+      "domain": "deloitte.com",
+      "grade": "B",
+      "evidence": "Qualys has given us visibility to all of our endpoints and servers, especially through the Qualys Cloud Agent.",
+      "source_url": "https://www.qualys.com/customers/testimonials/deloitte/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "EmbedIT",
+      "domain": "embedit.sk",
+      "grade": "B",
+      "evidence": "The Qualys VM scan reports are very comprehensive; we can see at a glance which servers are vulnerable.",
+      "source_url": "https://www.qualys.com/customers/success-stories/embedit-keeps-highly-sensitive-financial-information-safe-from-cyber-attacks-with-cloud-based-continuous-security",
+      "confidence": "Verified"
+    },
+    {
+      "name": "EPAM Systems",
+      "domain": "epam.com",
+      "grade": "B",
+      "evidence": "Qualys offers the best agents I've ever used; they never cause us any trouble.",
+      "source_url": "https://www.qualys.com/customers/success-stories/epam-systems-delivers-secure-foundation-cutting-edge-digital-projects",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Eurasian Bank",
+      "domain": "eubank.kz",
+      "grade": "B",
+      "evidence": "The Qualys solutions scan our entire network for vulnerabilities and display the results from a simple dashboard.",
+      "source_url": "https://www.qualys.com/customers/success-stories/eurasian-bank-keeps-digital-services-safe-secure-against-cybercriminals/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Eurobank",
+      "domain": "eurobank.gr",
+      "grade": "B",
+      "evidence": "Qualys customer case study: Euro Bank Optimizes Vulnerability Management.",
+      "source_url": "https://www.qualys.com/customers/success-stories/euro-bank-optimizes-vulnerability-management",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Euronet Worldwide",
+      "domain": "euronetworldwide.com",
+      "grade": "B",
+      "evidence": "Euronet Worldwide has embedded Qualys VMDR into its global cyber security processes.",
+      "source_url": "https://blog.qualys.com/qualys-insights/2021/11/22/euronet-worldwide-speedy-global-response-to-threats-reduces-risk",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Falkirk Council",
+      "domain": "falkirk.gov.uk",
+      "grade": "B",
+      "evidence": "Qualys has detected and remediated malware on many student desktops.",
+      "source_url": "https://www.qualys.com/customers/success-stories/falkirk-council-switches-from-a-standalone-legacy-endpoint-security-solution-to-qualys-endpoint-protection",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Fiducia",
+      "domain": "fiducia.de",
+      "grade": "B",
+      "evidence": "Qualys customer case study: Certified Security Management Benefits Fiducia Customers.",
+      "source_url": "https://www.qualys.com/customers/success-stories/certified-security-management-benefits-fiducia-customers",
+      "confidence": "Verified"
+    },
+    {
+      "name": "First Bank & Trust",
+      "domain": "fbtonline.com",
+      "grade": "B",
+      "evidence": "Now we have direct control over assessment and remediation -- and a truer picture of security.",
+      "source_url": "https://www.qualys.com/customers/success-stories/first-bank-and-trust/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Florida Department of Health",
+      "domain": "floridahealth.gov",
+      "grade": "B",
+      "evidence": "Qualys has helped us reduce vulnerabilities, especially by identifying where automated patch processes are not working.",
+      "source_url": "https://www.featuredcustomers.com/vendor/qualys",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Fortrex Technologies",
+      "domain": "fortrex.com",
+      "grade": "B",
+      "evidence": "It's great to be able to go to one place and manage all of our network vulnerability scans and web application assessments.",
+      "source_url": "https://www.qualys.com/customers/success-stories/web-application-security-fortrex-formula-success/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Generali",
+      "domain": "generali.com",
+      "grade": "B",
+      "evidence": "The user-friendliness of the Qualys solutions immediately stood out, and that was a major element.",
+      "source_url": "https://www.featuredcustomers.com/vendor/qualys/testimonials",
+      "confidence": "Verified"
+    },
+    {
+      "name": "HBOR",
+      "domain": "hbor.hr",
+      "grade": "B",
+      "evidence": "With the insight we get from our Qualys solution, we can focus on the vulnerabilities that are actually relevant.",
+      "source_url": "https://www.qualys.com/customers/success-stories/hbor-improves-security-posture-through-comprehensive-vm",
+      "confidence": "Verified"
+    },
+    {
+      "name": "HCA Healthcare",
+      "domain": "hcahealthcare.com",
+      "grade": "B",
+      "evidence": "The biggest thing we see with Qualys is the level of support that we have.",
+      "source_url": "https://www.qualys.com/customers/testimonials/hca-healthcare/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Highlights for Children",
+      "domain": "highlights.com",
+      "grade": "B",
+      "evidence": "Everything's scheduled, and scans are conducted within biweekly processes.",
+      "source_url": "https://www.qualys.com/customers/success-stories/highlights-solves-vulnerability-management-puzzle/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "IDB Bank",
+      "domain": "idbny.com",
+      "grade": "B",
+      "evidence": "Our environment was becoming so complex, we really needed to look at cyber security as a business enabler.",
+      "source_url": "https://blog.qualys.com/qualys-insights/qualys-security-conference/2023/11/09/de-risking-in-practice-how-qualys-customers-are-driving-value-in-their-organizations",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Ignite Media Solutions",
+      "domain": "ignitemediasolutions.com",
+      "grade": "B",
+      "evidence": "Qualys just pulls it all together; one doesn't have to be an information security expert to attain PCI compliance.",
+      "source_url": "https://www.qualys.com/customers/success-stories/ignite-media-solutions-simplified-pci-compliance/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Internal Revenue Service",
+      "domain": "irs.gov",
+      "grade": "B",
+      "evidence": "Qualys vulnerability management detection and remediation (VMDR) software subscriptions.",
+      "source_url": "https://orangeslices.ai/contract-award-5m-irs-qualys-vulnerability-management-detection-and-remediation-vmdr-software/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Jacadis",
+      "domain": "jacadis.com",
+      "grade": "B",
+      "evidence": "It takes care of updates automatically and we don't have to invest in any additional infrastructure.",
+      "source_url": "https://www.qualys.com/customers/success-stories/jacadis-llc-on-demand-vulnerability-management/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "JG Summit Holdings",
+      "domain": "jgsummit.com.ph",
+      "grade": "B",
+      "evidence": "With Qualys VMDR, we gain full visibility of our critical assets and an instant understanding of their exposure.",
+      "source_url": "https://www.qualys.com/customers/success-stories/jg-summit-holdings-inc-protects-diversified-group-against-cyber-threats/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Kcell",
+      "domain": "kcell.kz",
+      "grade": "B",
+      "evidence": "With one toolset we can scan both web servers and web sites and get comprehensive, accurate reports.",
+      "source_url": "https://www.qualys.com/customers/success-stories/kcell-makes-right-call-information-security",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Lithuanian Centre of Registers",
+      "domain": "registrucentras.lt",
+      "grade": "B",
+      "evidence": "Qualys VM enables us to understand where the most critical issues are and how to mitigate them.",
+      "source_url": "https://www.qualys.com/customers/success-stories/centre-of-registers-keeping-top-priority-legal-data-safe-from-unauthorised-access/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "MHR",
+      "domain": "mhrglobal.com",
+      "grade": "B",
+      "evidence": "Initial scans with the Qualys VM tool automatically found over 80% of our known vulnerabilities.",
+      "source_url": "https://www.qualys.com/customers/success-stories/midlandhr-gives-further-boost-security-processes",
+      "confidence": "Verified"
+    },
+    {
+      "name": "NCR Atleos",
+      "domain": "ncratleos.com",
+      "grade": "B",
+      "evidence": "NCR Atleos protects its expanded asset base using Qualys VMDR with Software Composition Analysis.",
+      "source_url": "https://www.qualys.com/customers/success-stories/ncr-atleos-protects-its-expanded-asset-base-using-qualys-vmdr-with-software-composition-analysis",
+      "confidence": "Verified"
+    },
+    {
+      "name": "New Orleans Saints",
+      "domain": "neworleanssaints.com",
+      "grade": "B",
+      "evidence": "Qualys is an integral part of the New Orleans Saints cybersecurity program.",
+      "source_url": "https://www.qualys.com/customers/testimonials/new-orleans-saints/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Northern Arizona University",
+      "domain": "nau.edu",
+      "grade": "B",
+      "evidence": "Uses Qualys to provide control of the entire vulnerability management life cycle.",
+      "source_url": "https://www.qualys.com/customers/success-stories/northern-arizona-university-sets-new-standard-vulnerability-management/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Orange Cyberdefense",
+      "domain": "orangecyberdefense.com",
+      "grade": "B",
+      "evidence": "Qualys' industry-leading capabilities such as VMDR will be included in Orange Cyberdefense's managed Vulnerability Intelligence Service.",
+      "source_url": "https://www.stocktitan.net/news/QLYS/orange-cyberdefense-expands-partnership-with-qualys-strengthening-wd8n3rdvbo52.html",
+      "confidence": "Verified"
+    },
+    {
+      "name": "OSCE",
+      "domain": "osce.org",
+      "grade": "B",
+      "evidence": "Provision of subscription-based service to the Vulnerability Management Platform by Qualys.",
+      "source_url": "https://procurement.osce.org/tenders/vulnerability-management-platform",
+      "confidence": "Verified"
+    },
+    {
+      "name": "OTP Bank Ukraine",
+      "domain": "otpbank.com.ua",
+      "grade": "B",
+      "evidence": "We can manage many more systems and do so much more efficiently with Qualys VM.",
+      "source_url": "https://www.qualys.com/customers/success-stories/otp-bank-ukraine-automates-vulnerability-risk-management/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Pakistan Telecommunication Company",
+      "domain": "ptcl.com.pk",
+      "grade": "B",
+      "evidence": "Qualys has given us a level of insight into our network that we simply did not have before.",
+      "source_url": "https://www.qualys.com/customers/success-stories/pakistan-telecommunication-adopts-approach-securing-it-assets-security-posture",
+      "confidence": "Verified"
+    },
+    {
+      "name": "R.R. Donnelley",
+      "domain": "rrd.com",
+      "grade": "B",
+      "evidence": "We moved to Qualys and our reporting has gotten 100% better.",
+      "source_url": "https://www.qualys.com/customers/?id=rrdonnelley",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Saudi Telecom Company",
+      "domain": "stc.com.sa",
+      "grade": "B",
+      "evidence": "Saudi Telecom Company Modernises Vulnerability Management, increasing visibility of digital risks.",
+      "source_url": "https://www.qualys.com/customers/success-stories/saudi-telecom-company-modernises-vulnerability-management-increasing-visibility-digital-risks",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Scutum",
+      "domain": "scutum.eu",
+      "grade": "B",
+      "evidence": "With the help of Qualys, we can continue improving the speed at which we address vulnerabilities.",
+      "source_url": "https://www.featuredcustomers.com/vendor/qualys/testimonials",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Sodexo",
+      "domain": "sodexo.com",
+      "grade": "B",
+      "evidence": "Qualys customer case study: Sodexo Securing Enterprise Automated Vulnerability Management.",
+      "source_url": "https://www.qualys.com/customers/success-stories/sodexo-securing-enterprise-automated-vulnerability-management",
+      "confidence": "Verified"
+    },
+    {
+      "name": "South African Tourism",
+      "domain": "southafrica.net",
+      "grade": "B",
+      "evidence": "Supply, implement, and licensing of Qualys Vulnerability Management Software.",
+      "source_url": "https://www.southafrica.net/gl/en/corporate/tender/request-for-quotation-procurement-of-qualys-vulnerability-management-software",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Teleperformance",
+      "domain": "teleperformance.com",
+      "grade": "B",
+      "evidence": "Qualys helps us to consistently maintain our security. Every time we reduce vulnerabilities, we are reducing risk.",
+      "source_url": "https://www.qualys.com/customers/success-stories/teleperformance-colombia-optimizes-vulnerability-management",
+      "confidence": "Verified"
+    },
+    {
+      "name": "The Home Depot",
+      "domain": "homedepot.com",
+      "grade": "B",
+      "evidence": "Qualys solutions make my job easier because I am able to provide stakeholders with a detailed profile of their assets.",
+      "source_url": "https://www.qualys.com/customers/testimonials/home-depot/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "TiVo",
+      "domain": "tivo.com",
+      "grade": "B",
+      "evidence": "Getting that visibility in one Qualys dashboard to see everything and take action quickly has helped us.",
+      "source_url": "https://www.qualys.com/customers/testimonials/tivo/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "TOIN Corporation",
+      "domain": "toin.co.jp",
+      "grade": "B",
+      "evidence": "Qualys Cloud Agents deliver all this information and more automatically, every four hours.",
+      "source_url": "https://www.qualys.com/customers/success-stories/toin-corporation-helps-protect-clients-sensitive-intellectual-property",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Toyota Financial Services",
+      "domain": "toyotafinancial.com",
+      "grade": "B",
+      "evidence": "VMDR raises the maturity of our Vulnerability Management program to its next level.",
+      "source_url": "https://www.qualys.com/company/newsroom/news-releases/usa/qualys-vmdr-now-shipping/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "UCLA",
+      "domain": "ucla.edu",
+      "grade": "B",
+      "evidence": "UCLA utilizes Qualys to regularly scan the campus network for known vulnerabilities.",
+      "source_url": "https://www.dts.ucla.edu/service/vulnerability-management",
+      "confidence": "Verified"
+    },
+    {
+      "name": "University of Chicago",
+      "domain": "uchicago.edu",
+      "grade": "B",
+      "evidence": "Qualys makes my life easier because I can set up a scan, let it run, and then interpret the results.",
+      "source_url": "https://www.qualys.com/customers/testimonials/university-chicago/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "University of Chicago Medical Center",
+      "domain": "uchicagomedicine.org",
+      "grade": "B",
+      "evidence": "Now that we have Qualys in place, we can provide all of the different audiences with the exact information they need.",
+      "source_url": "https://www.qualys.com/customers/success-stories/diagnosing-security-compliance-risk-university-chicago-medical-center",
+      "confidence": "Verified"
+    },
+    {
+      "name": "University of Idaho",
+      "domain": "uidaho.edu",
+      "grade": "B",
+      "evidence": "Qualys provides us the objective measure we need on how well we are performing.",
+      "source_url": "https://www.qualys.com/customers/success-stories/it-security-university-of-idaho-raises-grade/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "University of Miami",
+      "domain": "miami.edu",
+      "grade": "B",
+      "evidence": "We moved to Qualys and our reporting has gotten 100% better.",
+      "source_url": "https://www.qualys.com/customers/testimonials/university-miami/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "University of Westminster",
+      "domain": "westminster.ac.uk",
+      "grade": "B",
+      "evidence": "I think of Qualys VM as a crystal ball that offers visibility into every part of the infrastructure.",
+      "source_url": "https://www.qualys.com/customers/success-stories/university-westminster-maintaining-security-protecting-infrastructure-assets/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "UPS",
+      "domain": "ups.com",
+      "grade": "B",
+      "evidence": "I've been able to identify high risk assets on outlier boxes and get them patched.",
+      "source_url": "https://www.qualys.com/customers/testimonials/ups/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Vertiv",
+      "domain": "vertiv.com",
+      "grade": "B",
+      "evidence": "It has increased the efficiency of our engineering teams and allowed them to eliminate risks.",
+      "source_url": "https://blog.qualys.com/qualys-insights/qualys-security-conference/2023/11/09/de-risking-in-practice-how-qualys-customers-are-driving-value-in-their-organizations",
+      "confidence": "Verified"
+    },
+    {
+      "name": "3M",
+      "domain": "3m.com",
+      "grade": "C",
+      "evidence": "We manage AWS and on-premises accounts using Qualys VMDR for vulnerability management.",
+      "source_url": "https://www.peerspot.com/products/qualys-vmdr-reviews",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Amazon",
+      "domain": "amazon.com",
+      "grade": "C",
+      "evidence": "We use Qualys VMDR for effective vulnerability management, benefiting from automated patching and compliance tracking.",
+      "source_url": "https://www.g2.com/products/qualys-vmdr/reviews",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Celonis",
+      "domain": "celonis.com",
+      "grade": "C",
+      "evidence": "Premium vulnerability scanning tools such as Qualys, Nessus, or similar.",
+      "source_url": "https://job-boards.greenhouse.io/celonis/jobs/7733064003",
+      "confidence": "Likely"
+    },
+    {
+      "name": "CIM Group",
+      "domain": "cimgroup.com",
+      "grade": "C",
+      "evidence": "Vulnerability Management Platforms such as Rapid7 and Qualys.",
+      "source_url": "https://jobs.lever.co/cimgroup/bb8e1bbd-06ff-4a69-9352-8b87eb9d98a4",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Cloudflare",
+      "domain": "cloudflare.com",
+      "grade": "C",
+      "evidence": "Deploying and operating vulnerability scanners, such as Qualys, Rapid7, OpenVAS.",
+      "source_url": "https://job-boards.greenhouse.io/cloudflare/jobs/6619259",
+      "confidence": "Likely"
+    },
+    {
+      "name": "DLH",
+      "domain": "dlhcorp.com",
+      "grade": "C",
+      "evidence": "Vulnerability scanners (e.g., Tenable, Qualys), and endpoint protection platforms.",
+      "source_url": "https://job-boards.greenhouse.io/dlhcorporation/jobs/5175211007",
+      "confidence": "Likely"
+    },
+    {
+      "name": "GuidePoint Security",
+      "domain": "guidepointsecurity.com",
+      "grade": "C",
+      "evidence": "Perform vulnerability scanning with the Qualys VMDR.",
+      "source_url": "https://builtin.com/job/vulnerability-management-engineer-qualys-mid-atlantic-region-remote/8903620",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Lightning AI",
+      "domain": "lightning.ai",
+      "grade": "C",
+      "evidence": "Vulnerability scanners (e.g., Nessus, Qualys), and endpoint protection.",
+      "source_url": "https://job-boards.greenhouse.io/lightningai/jobs/7690402003",
+      "confidence": "Likely"
+    },
+    {
+      "name": "New Era Technology",
+      "domain": "neweratech.com",
+      "grade": "C",
+      "evidence": "Vulnerability management tools such as Tenable or Qualys.",
+      "source_url": "https://job-boards.greenhouse.io/neweratechph/jobs/8646676002",
+      "confidence": "Likely"
+    },
+    {
+      "name": "NICE",
+      "domain": "nice.com",
+      "grade": "C",
+      "evidence": "Vulnerability scanning platforms such as Rapid7, Tenable, Qualys, or similar tools.",
+      "source_url": "https://job-boards.greenhouse.io/nice/jobs/4879862101",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Nike",
+      "domain": "nike.com",
+      "grade": "C",
+      "evidence": "Vulnerability management tools such as Tenable, Rapid7, or Qualys, Twistlock.",
+      "source_url": "https://www.livehire.com/careers/nikeinc/job/18997658/NGDP7PVNX0/senior-vulnerability-management-automation-engineer",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Okta",
+      "domain": "okta.com",
+      "grade": "C",
+      "evidence": "Tools like OSQuery, Splunk, Chronicle, Nessus, or Qualys/CrowdStrike to monitor system health.",
+      "source_url": "https://www.okta.com/company/careers/opportunity/6671260?gh_jid=6671260",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Paytm",
+      "domain": "paytm.com",
+      "grade": "C",
+      "evidence": "Lead enterprise vulnerability management program leveraging: Qualys.",
+      "source_url": "https://jobs.lever.co/paytm/84dc34f4-55c5-446a-a868-0a5ca9dce915",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Persistent Systems",
+      "domain": "persistent.com",
+      "grade": "C",
+      "evidence": "I navigate through the Qualys portal, and I only use CSAM and Qualys VMDR.",
+      "source_url": "https://www.peerspot.com/products/qualys-vmdr-reviews",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Redapt",
+      "domain": "redapt.com",
+      "grade": "C",
+      "evidence": "Security compliance remediation - Qualys vulnerability management.",
+      "source_url": "https://job-boards.greenhouse.io/redapt/jobs/5247707008",
+      "confidence": "Likely"
+    },
+    {
+      "name": "RP Sanjiv Goenka Group",
+      "domain": "rpsg.in",
+      "grade": "C",
+      "evidence": "I find Qualys VMDR valuable for server vulnerability and patch management.",
+      "source_url": "https://www.peerspot.com/products/qualys-vmdr-reviews",
+      "confidence": "Likely"
+    },
+    {
+      "name": "ServiceNow",
+      "domain": "servicenow.com",
+      "grade": "C",
+      "evidence": "Vulnerability and detection management platforms (Tenable, Qualys, Rapid7, Wiz).",
+      "source_url": "https://jobs.smartrecruiters.com/ServiceNow/744000139287539-ps-solution-architect",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Shawbrook Bank",
+      "domain": "shawbrook.co.uk",
+      "grade": "C",
+      "evidence": "Utilize Qualys and other patch management tools for up-to-date security.",
+      "source_url": "https://jobs.smartrecruiters.com/Shawbrook/744000124597859-application-security-engineer",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Sony Interactive Entertainment",
+      "domain": "playstation.com",
+      "grade": "C",
+      "evidence": "Vulnerability remediation and patching using tools such as KACE, Qualys and Domo.",
+      "source_url": "https://job-boards.greenhouse.io/sonyinteractiveentertainmentglobal/jobs/6110746004",
+      "confidence": "Likely"
+    },
+    {
+      "name": "TrellisWare Technologies",
+      "domain": "trellisware.com",
+      "grade": "C",
+      "evidence": "Cybersecurity scanning tools; Nessus, Qualys VMDR, Trivy, or Rapid7.",
+      "source_url": "https://job-boards.greenhouse.io/trelliswaretechnologies/jobs/4250058009",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Wipro",
+      "domain": "wipro.com",
+      "grade": "C",
+      "evidence": "A Manager at Wipro noted they have hands-on experience with Qualys VMDR.",
+      "source_url": "https://www.peerspot.com/products/qualys-vmdr-reviews",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Zscaler",
+      "domain": "zscaler.com",
+      "grade": "C",
+      "evidence": "Proficiency in platforms like Tenable, Qualys, Wiz, CrowdStrike, or Burp Suite.",
+      "source_url": "https://job-boards.greenhouse.io/zscaler/jobs/5014895007",
+      "confidence": "Likely"
+    }
+  ],
+  "generated_at": "2026-08-03T11:23:31Z",
+  "company_count": 83
+}
