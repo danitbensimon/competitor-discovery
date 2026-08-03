@@ -299,10 +299,26 @@ _LOGO_STRIP = re.compile(r"^(partner|client|customer|brand|company)?\s*logos?$",
 
 
 def _clean_logo_name(raw: str) -> str:
-    """Turn 'Giesecke-logo.webp' or 'sony_logo_grey' into 'Giesecke' / 'Sony'."""
+    """Turn 'Giesecke-logo.webp' or 'sony_logo_grey' into 'Giesecke' / 'Sony'.
+
+    Also strips the hex hash prefixes that CDNs (Webflow, etc.) prepend to
+    uploaded logo files: '6889f637076b290e05b20b57_workiz-1.avif' -> 'workiz'.
+    Without this the leftover hash rides along in the name, which (a) forces the
+    downstream model to guess the real company and (b) inflates two-hash uploads
+    like '<hash>_<hash>_PayPal.svg' past the 40-char plausibility cap — which is
+    exactly how PayPal and tabs were being dropped from Alta's logo wall.
+    """
     s = re.sub(r"\.(svg|png|webp|jpe?g|gif|avif)$", "", raw.strip(), flags=re.I)
+    # Strip one or more leading CDN hash segments ('<12+ hex>_' or '-').
+    s = re.sub(r"^(?:[0-9a-f]{12,}[_-])+", "", s, flags=re.I)
+    # Drop any remaining standalone long-hex tokens (a real name is never 12+ hex).
+    s = re.sub(r"\b[0-9a-f]{12,}\b", " ", s, flags=re.I)
     s = re.sub(r"[-_+]+", " ", s)
     s = _LOGO_NOISE.sub(" ", s)
+    # Trailing Webflow variant markers ('ElevenLabs p 500', 'workiz 1', 'monday 2')
+    # left by responsive/dupe uploads -> drop them so variants of one logo collapse
+    # to a single company instead of surfacing as duplicate rows.
+    s = re.sub(r"(?:\s+(?:p|\d{1,4}))+$", "", s, flags=re.I)
     s = re.sub(r"\s+", " ", s).strip(" -_|·,")
     return s
 
@@ -625,6 +641,14 @@ def search_customer_mentions(domain: str, brand: str = None, mode: str = "live",
     all_results = []
 
     print(f"Brand: {brand} | Queries: {len(queries)} | Tier: {tier}")
+    if not BRAVE_API_KEY:
+        print(
+            "!! BRAVE_API_KEY is not set — every web-search source "
+            "(customer signals, job postings, tech-stack DBs, review sites, "
+            "LinkedIn, blog/press) will return ZERO. Only the key-free page "
+            "probes (logo wall, /customers, sitemap) will run. "
+            "Set BRAVE_API_KEY to enable the full 12-source search."
+        )
 
     # Run all search queries IN PARALLEL instead of one by one
     import threading
