@@ -57,7 +57,11 @@ def _fetch_one(page: dict, fetch_content: bool) -> dict:
     # Probe sub-links already have a company name hint in title â no fetch needed
     if page.get("probe_sublink"):
         text = f"{page.get('title', '')} {page.get('snippet', '')}"
-    elif fetch_content and signal_group in ("own_site", "customer_signals"):
+    # own_site, customer_signals AND blog_press get the FULL page. blog_press is
+    # where press releases / funding posts / "customers include X, Y, Z" articles
+    # land - the customer names live in the body, not the 2-line search snippet,
+    # so snippet-only extraction was silently dropping every name past the first.
+    elif fetch_content and signal_group in ("own_site", "customer_signals", "blog_press"):
         content = fetch_page_text(page["url"])
         text = content if content else f"{page.get('title', '')} {page.get('snippet', '')}"
     else:
@@ -146,7 +150,11 @@ def extract_companies(pages: list[dict], brand: str = "Deel", fetch_content: boo
                     # Customer index pages (/customers, /case-studies, /clients) can yield
                     # many real companies â allow up to 30 per source instead of 5
                     is_index = any(p in src for p in ['/customers', '/case-studies', '/clients', '/success-stories'])
-                    per_source_limit = 30 if is_index else 5
+                    # Press releases / funding posts enumerate many customers in one
+                    # page, so let them yield more than the default 5 too.
+                    is_press = any(p in src for p in ['prnewswire.com', 'businesswire.com',
+                                   'globenewswire.com', 'press-release', '/news/', '/press/'])
+                    per_source_limit = 30 if (is_index or is_press) else 5
                     if seen_sources.get(src, 0) < per_source_limit:
                         companies.append(row)
                         seen_sources[src] = seen_sources.get(src, 0) + 1
@@ -179,12 +187,18 @@ Below are web pages that mention {brand}. Each page has:
 - RANK_SCORE
 - CONFIDENCE
 
-For each page, identify the company that is a {brand} customer or user.
+For each page, identify EVERY company that is a {brand} customer or user — a
+single page often names several, and you must return them ALL.
 
 Rules:
 - Extract only real companies
 - Do not extract {brand} itself
 - Do not extract media sites, directories, or review platforms as the company
+  (e.g. G2, Capterra, BuiltWith, ZoomInfo, PRNewswire, TechCrunch are the SOURCE,
+  never the customer — pull the customer names OUT of those pages instead)
+- ENUMERATIONS: when a page says "customers include A, B, C and D", "trusted by
+  A, B, C", "used by A, B, C" or "companies like A, B, C use {brand}", return a
+  SEPARATE line for EACH named company. Do not stop at the first one.
 - For job postings: extract the company posting the job
 - For LinkedIn: extract the company the person works at, or the company mentioned as using {brand}
 - For review sites: extract the reviewing company if identifiable
