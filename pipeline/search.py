@@ -140,6 +140,16 @@ def _build_queries(domain: str, brand: str, tier: str) -> list[tuple[str, str]]:
         (f'"{b} review" "company"', "blog_press"),
         (f'site:reddit.com "{b}"', "blog_press"),
         (f'"{b}" "we switched" OR "we moved" OR "we chose"', "blog_press"),
+        # Customer-NAMING pages: press releases, funding posts and "customers
+        # include / trusted by" copy enumerate real customer names in one page —
+        # far higher yield than G2/BuiltWith product pages that name nobody.
+        (f'"{b} customers include"', "blog_press"),
+        (f'"{b}" "trusted by" OR "used by" OR "our customers"', "blog_press"),
+        (f'"companies using {b}"', "blog_press"),
+        (f'site:prnewswire.com "{b}"', "blog_press"),
+        (f'site:businesswire.com "{b}"', "blog_press"),
+        (f'site:globenewswire.com "{b}"', "blog_press"),
+        (f'"{b}" ("raises" OR "raised" OR "series") customers', "blog_press"),
     ]
 
     if tier == "lite":
