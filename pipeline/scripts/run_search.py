@@ -36,6 +36,8 @@ SCRIPT_DIR = Path(__file__).resolve().parent
 PIPELINE_DIR = SCRIPT_DIR.parent
 sys.path.insert(0, str(PIPELINE_DIR))
 
+from verify import verify_domains  # noqa: E402  (needs PIPELINE_DIR on sys.path)
+
 
 # ---------------------------------------------------------------- helpers
 
@@ -355,6 +357,9 @@ def main():
         run_builtwith(domain, brand, cfg, report),
     ]
     companies = merge_companies(groups, int(cfg.get("max_companies", 200)))
+    # Blank guessed website domains that don't resolve over HTTPS before writing
+    # the site JSON, so pages link a real site or nothing (never a broken guess).
+    companies = verify_domains(companies)
 
     json_path = export_json(companies, domain, brand, slug, report, out_dir)
     xlsx_path = export_excel(companies, slug, out_dir)

@@ -23,6 +23,7 @@ from extract import extract_companies
 from classify import classify_companies
 from score import aggregate_company_records
 from enrich import enrich_companies
+from verify import verify_domains
 from validate import validate_sources
 from pricing import apply_tier_limit
 
@@ -305,6 +306,7 @@ def _run_job(job_id: str, result_id: str, domain: str, tier: str, mode: str,
             if db_companies:
                 log.info(f"[job {job_id}] DB cache hit for {domain} ({len(db_companies)} companies)")
                 companies = filter_unknown_companies(db_companies)
+                companies = verify_domains(companies)  # clean guessed domains cached before this fix
                 filtered = filter_by_icp(companies, icp_industries, icp_size, icp_region)
                 preview = filtered[:10]
                 db.save_companies(result_id, preview=preview, full=filtered)
@@ -322,6 +324,7 @@ def _run_job(job_id: str, result_id: str, domain: str, tier: str, mode: str,
                 log.info(f"[job {job_id}] file cache hit for {domain}")
                 companies = cached["companies"]
                 companies = filter_unknown_companies(companies)
+                companies = verify_domains(companies)  # clean guessed domains cached before this fix
                 filtered = filter_by_icp(companies, icp_industries, icp_size, icp_region)
                 preview = filtered[:10]
                 db.save_companies(result_id, preview=preview, full=filtered)
@@ -335,6 +338,10 @@ def _run_job(job_id: str, result_id: str, domain: str, tier: str, mode: str,
 
         companies = run_pipeline(domain, brand, mode, tier)
         companies = filter_unknown_companies(companies)
+        # Blank guessed website domains that don't actually resolve over HTTPS,
+        # so the UI falls back to the verified source link. Done before caching
+        # so the cache never stores a fabricated domain.
+        companies = verify_domains(companies)
 
         if companies and mode == "live":
             save_cache(domain, companies, tier=tier)

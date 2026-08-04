@@ -950,7 +950,7 @@
       tr.innerHTML = `
         <td style="color:var(--muted);font-size:11px">${String(i+1).padStart(2,'0')}</td>
         <td class="td-company">${escHtml(c.company_name||'Unknown')}</td>
-        <td class="td-domain"><a href="https://${escHtml(c.company_domain)}" target="_blank">${escHtml(c.company_domain)}</a></td>
+        <td class="td-domain">${c.company_domain ? `<a href="https://${escHtml(c.company_domain)}" target="_blank">${escHtml(c.company_domain)}</a>` : '<span style="color:var(--muted)">&mdash;</span>'}</td>
         <td>${c.industry&&c.industry!=='Unknown'?`<span class="tag tag-industry">${escHtml(c.industry)}</span>`:'<span style="color:var(--muted)">—</span>'}</td>
         <td>${relHtml}</td>
         <td>${sourceHtml}</td>
