@@ -1,0 +1,955 @@
+{
+  "competitor": {
+    "name": "HubSpot",
+    "slug": "hubspot",
+    "domain": "hubspot.com"
+  },
+  "companies": [
+    {
+      "name": "Sticos",
+      "domain": "sticos.no",
+      "grade": "A",
+      "evidence": "Sticos, a Visma company, used HubSpot's Customer Agent and Service Hub to automate 41% of incoming support inquiries.",
+      "source_url": "https://www.hubspot.com/case-studies/sticos",
+      "confidence": "high"
+    },
+    {
+      "name": "Morehouse College",
+      "domain": "morehouse.edu",
+      "grade": "A",
+      "evidence": "Morehouse College built a new admissions blog on Content Hub—powered by Mr. Tiger, a custom assistant created in Breeze Studio.",
+      "source_url": "https://www.hubspot.com/case-studies/morehouse-college",
+      "confidence": "high"
+    },
+    {
+      "name": "Motorola Solutions",
+      "domain": "motorolasolutions.com",
+      "grade": "A",
+      "evidence": "With HubSpot's Data Hub and Data studio, Motorola Solutions unified 123,000+ customer records and gave its marketing team real-time access to trusted data.",
+      "source_url": "https://www.hubspot.com/case-studies/motorola-solutions",
+      "confidence": "high"
+    },
+    {
+      "name": "DoorDash",
+      "domain": "doordash.com",
+      "grade": "A",
+      "evidence": "DoorDash Shortens Time to Produce Email Campaigns by 3 Days With HubSpot.",
+      "source_url": "https://www.hubspot.com/case-studies/doordash",
+      "confidence": "high"
+    },
+    {
+      "name": "Crunch Fitness",
+      "domain": "crunch.com",
+      "grade": "A",
+      "evidence": "How Crunch Fitness Scales Human-Centered Marketing to Fuel Member Growth with Marketing Hub.",
+      "source_url": "https://www.hubspot.com/case-studies/crunch-fitness",
+      "confidence": "high"
+    },
+    {
+      "name": "Kelly Services",
+      "domain": "kellyservices.com",
+      "grade": "A",
+      "evidence": "Kelly Services Boosts Site Traffic 32% by Unifying Marketing with HubSpot's Platform.",
+      "source_url": "https://www.hubspot.com/case-studies/kelly-services",
+      "confidence": "high"
+    },
+    {
+      "name": "WeightWatchers",
+      "domain": "weightwatchers.com",
+      "grade": "A",
+      "evidence": "WeightWatchers Completely Revamped their Enterprise Sales Process with HubSpot.",
+      "source_url": "https://www.hubspot.com/case-studies/weightwatchers",
+      "confidence": "high"
+    },
+    {
+      "name": "Airstream",
+      "domain": "airstream.com",
+      "grade": "A",
+      "evidence": "Airstream Generates 78% More Leads at Scale With HubSpot.",
+      "source_url": "https://www.hubspot.com/case-studies/airstream",
+      "confidence": "high"
+    },
+    {
+      "name": "InSinkErator",
+      "domain": "insinkerator.com",
+      "grade": "A",
+      "evidence": "InSinkErator Taps Into 27% More Revenue With HubSpot.",
+      "source_url": "https://www.hubspot.com/case-studies/insinkerator",
+      "confidence": "high"
+    },
+    {
+      "name": "Casio",
+      "domain": "casio.com",
+      "grade": "A",
+      "evidence": "Casio grows eCommerce customers 27% in a year with HubSpot CRM.",
+      "source_url": "https://www.hubspot.com/case-studies/casio",
+      "confidence": "high"
+    },
+    {
+      "name": "Strategic IC",
+      "domain": "strategic-ic.co.uk",
+      "grade": "A",
+      "evidence": "Strategic IC Increases Revenue by 50% with HubSpot.",
+      "source_url": "https://www.hubspot.com/case-studies/strategic-ic",
+      "confidence": "high"
+    },
+    {
+      "name": "Flight Centre Travel Academy",
+      "domain": "flightcentre.com",
+      "grade": "A",
+      "evidence": "Flight Centre Travel Academy Supercharges Leads by 150% with HubSpot Growth Stack.",
+      "source_url": "https://www.hubspot.com/case-studies/flight-centre-travel-academy",
+      "confidence": "high"
+    },
+    {
+      "name": "University of Wyoming",
+      "domain": "uwyo.edu",
+      "grade": "A",
+      "evidence": "The University of Wyoming increased lead volume by 26% with HubSpot.",
+      "source_url": "https://www.hubspot.com/case-studies/university-of-wyoming",
+      "confidence": "high"
+    },
+    {
+      "name": "Insights",
+      "domain": "insights.com",
+      "grade": "A",
+      "evidence": "Insights Transforms Its Marketing with HubSpot ... 562% increase in website traffic in two years.",
+      "source_url": "https://www.hubspot.com/case-studies/insights",
+      "confidence": "high"
+    },
+    {
+      "name": "Bitdefender",
+      "domain": "bitdefender.com",
+      "grade": "A",
+      "evidence": "HubSpot Customer Spotlight: Bitdefender.",
+      "source_url": "https://www.hubspot.com/case-studies/bitdefender",
+      "confidence": "high"
+    },
+    {
+      "name": "AIIM",
+      "domain": "aiim.org",
+      "grade": "A",
+      "evidence": "AIIM.org Sees 87% Customer Growth Through Inbound Marketing.",
+      "source_url": "https://www.hubspot.com/case-studies/aiim.org",
+      "confidence": "high"
+    },
+    {
+      "name": "CommunicorpUK",
+      "domain": "communicorpuk.com",
+      "grade": "A",
+      "evidence": "CommunicorpUK Enhances Its Customer Experience with HubSpot.",
+      "source_url": "https://www.hubspot.com/case-studies/communicorpuk",
+      "confidence": "high"
+    },
+    {
+      "name": "Map My Customers",
+      "domain": "mapmycustomers.com",
+      "grade": "A",
+      "evidence": "Map My Customers ... 13% increase in qualified leads (HubSpot case study).",
+      "source_url": "https://www.hubspot.com/case-studies/map-my-customers",
+      "confidence": "high"
+    },
+    {
+      "name": "Ving",
+      "domain": "vingapp.com",
+      "grade": "A",
+      "evidence": "Ving Increases Revenue by 96% With HubSpot.",
+      "source_url": "https://www.hubspot.com/case-studies/ving",
+      "confidence": "high"
+    },
+    {
+      "name": "SPOC Automation",
+      "domain": "spocautomation.com",
+      "grade": "A",
+      "evidence": "SPOC Automation Increased Total Video Views by 968%.",
+      "source_url": "https://www.hubspot.com/case-studies/spoc-automation",
+      "confidence": "high"
+    },
+    {
+      "name": "Advance B2B",
+      "domain": "advanceb2b.com",
+      "grade": "A",
+      "evidence": "Advance B2B Embraces Inbound to Increase Leads by 267%.",
+      "source_url": "https://www.hubspot.com/case-studies/advance-b2b",
+      "confidence": "high"
+    },
+    {
+      "name": "Stella",
+      "domain": "stella.eu",
+      "grade": "A",
+      "evidence": "Since signing up in 2018, Stella increased its organic website traffic by 48% ... helping grow company revenue by over 10 million.",
+      "source_url": "https://www.hubspot.com/case-studies/stella",
+      "confidence": "high"
+    },
+    {
+      "name": "Eastridge",
+      "domain": "eastridge.com",
+      "grade": "A",
+      "evidence": "Eastridge Aligns Sales and Marketing Operations with Operations Hub ... They chose HubSpot, which they knew mostly as a CRM.",
+      "source_url": "https://www.hubspot.com/case-studies/eastridge",
+      "confidence": "high"
+    },
+    {
+      "name": "G2",
+      "domain": "g2.com",
+      "grade": "A",
+      "evidence": "G2 decreases cost per lead by 25% with HubSpot.",
+      "source_url": "https://www.hubspot.com/case-studies/g2",
+      "confidence": "high"
+    },
+    {
+      "name": "Checkwriters",
+      "domain": "checkwriters.com",
+      "grade": "A",
+      "evidence": "Once Checkwriters migrated from Salesforce to the HubSpot CRM platform, its revenue increased 20%.",
+      "source_url": "https://www.hubspot.com/case-studies/checkwriters",
+      "confidence": "high"
+    },
+    {
+      "name": "Mobilize.net",
+      "domain": "mobilize.net",
+      "grade": "A",
+      "evidence": "Why Mobilize.net and Metrie Migrated to HubSpot CRM from Salesforce.",
+      "source_url": "https://www.hubspot.com/case-studies/mobilize.net-and-metrie",
+      "confidence": "high"
+    },
+    {
+      "name": "Metrie",
+      "domain": "metrie.com",
+      "grade": "A",
+      "evidence": "Why Mobilize.net and Metrie Migrated to HubSpot CRM from Salesforce.",
+      "source_url": "https://www.hubspot.com/case-studies/mobilize.net-and-metrie",
+      "confidence": "high"
+    },
+    {
+      "name": "Marq",
+      "domain": "marq.com",
+      "grade": "A",
+      "evidence": "Marq Migrates From Salesforce, Marketo, and Other Tools to the HubSpot CRM Platform.",
+      "source_url": "https://www.hubspot.com/case-studies/marq",
+      "confidence": "high"
+    },
+    {
+      "name": "PRECISION",
+      "domain": "",
+      "grade": "A",
+      "evidence": "PRECISION | Successfully migrates to HubSpot and gets better results.",
+      "source_url": "https://www.hubspot.com/case-studies/precision",
+      "confidence": "high"
+    },
+    {
+      "name": "Pennylane",
+      "domain": "pennylane.com",
+      "grade": "A",
+      "evidence": "How HubSpot and AWS Helped Pennylane Scale to a 100,000 Customers.",
+      "source_url": "https://www.hubspot.com/startups/stories/customers/pennylane",
+      "confidence": "high"
+    },
+    {
+      "name": "Wayflyer",
+      "domain": "wayflyer.com",
+      "grade": "A",
+      "evidence": "How HubSpot Helped Wayflyer Scale to a Unicorn of over 500 Employees.",
+      "source_url": "https://www.hubspot.com/startups/stories/customers/wayflyer",
+      "confidence": "high"
+    },
+    {
+      "name": "Papaya Global",
+      "domain": "papayaglobal.com",
+      "grade": "A",
+      "evidence": "Papaya Global reached unicorn status in 2021 with a $3+ billion valuation, with HubSpot and AWS being two key parts of their tech stack.",
+      "source_url": "https://www.hubspot.com/startups/stories/customers",
+      "confidence": "high"
+    },
+    {
+      "name": "FINN",
+      "domain": "finn.com",
+      "grade": "A",
+      "evidence": "FINN auto scaling to 20K customers and $160M ARR in four years with HubSpot.",
+      "source_url": "https://www.hubspot.com/startups/stories/customers",
+      "confidence": "high"
+    },
+    {
+      "name": "Clara",
+      "domain": "clara.com",
+      "grade": "A",
+      "evidence": "Clara, the fastest growing company in LATAM, has driven impressive growth and expanded to three countries in less than one year, all powered by HubSpot & AWS.",
+      "source_url": "https://www.hubspot.com/startups/stories/customers",
+      "confidence": "high"
+    },
+    {
+      "name": "Greenly",
+      "domain": "greenly.earth",
+      "grade": "A",
+      "evidence": "Paris-based Greenly uses HubSpot to streamline revenue operations with universal access to all employees.",
+      "source_url": "https://www.hubspot.com/startups/stories/customers",
+      "confidence": "high"
+    },
+    {
+      "name": "PushPress",
+      "domain": "pushpress.com",
+      "grade": "A",
+      "evidence": "PushPress grew the company to 1,000 clients and > $1M ARR.",
+      "source_url": "https://www.hubspot.com/startups/customers/pushpress",
+      "confidence": "high"
+    },
+    {
+      "name": "Global Startup Awards",
+      "domain": "globalstartupawards.com",
+      "grade": "A",
+      "evidence": "Global Startup Awards uses HubSpot to manage 50,000+ applications across 154 countries, boosting email rates up to 43% and cutting support time 90%.",
+      "source_url": "https://www.hubspot.com/startups/stories/customers",
+      "confidence": "high"
+    },
+    {
+      "name": "RevenueWell",
+      "domain": "revenuewell.com",
+      "grade": "A",
+      "evidence": "RevenueWell saw a 28% increase in total meetings booked after replacing sequences with Prospecting Agent.",
+      "source_url": "https://www.hubspot.com/products/artificial-intelligence/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "The Knowledge Society",
+      "domain": "tks.world",
+      "grade": "A",
+      "evidence": "The Knowledge Society resolved 70 to 80 percent of email tickets with HubSpot's Customer Agent, dropping time to close from more than 16 hours to less than 10.",
+      "source_url": "https://www.hubspot.com/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Camp Network",
+      "domain": "camp.network",
+      "grade": "A",
+      "evidence": "Camp Network deflects 70% of support tickets with AI, no training required.",
+      "source_url": "https://www.hubspot.com/products/artificial-intelligence/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Aerotech",
+      "domain": "aerotech.com",
+      "grade": "A",
+      "evidence": "Aerotech boosted win rates by 66% using AI to prioritize the right deals, faster.",
+      "source_url": "https://www.hubspot.com/products/artificial-intelligence/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Sandler",
+      "domain": "sandler.com",
+      "grade": "A",
+      "evidence": "Sandler unified Sales and Marketing using AI for consistent, tailored outreach.",
+      "source_url": "https://www.hubspot.com/products/artificial-intelligence/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Handled",
+      "domain": "handled.com",
+      "grade": "A",
+      "evidence": "The company's President and CEO, Seth Waite, chose HubSpot as their CRM of choice ... scale Handled from zero to 121 locations.",
+      "source_url": "https://blog.hubspot.com/marketing/case-study-examples",
+      "confidence": "high"
+    },
+    {
+      "name": "Higher Logic",
+      "domain": "higherlogic.com",
+      "grade": "A",
+      "evidence": "After analyzing marketing automation software, they chose HubSpot to create an inbound marketing program. Higher Logic improved lead conversion by using forms that relied on HubSpot's progressive profiling.",
+      "source_url": "https://blog.hubspot.com/marketing/case-study-examples",
+      "confidence": "high"
+    },
+    {
+      "name": "PrestaShop",
+      "domain": "prestashop.com",
+      "grade": "A",
+      "evidence": "Since PrestaShop chose HubSpot to improve its sales processes and optimize its lead generation strategy, its growth has been clearly reflected ... an average revenue increase of 35% between 2019 and 2020.",
+      "source_url": "https://blog.hubspot.com/marketing/case-study-examples",
+      "confidence": "high"
+    },
+    {
+      "name": "Typeform",
+      "domain": "typeform.com",
+      "grade": "A",
+      "evidence": "Typeform + HubSpot Integration Case Study.",
+      "source_url": "https://www.hubspot.com/integrations/typeform/case-study",
+      "confidence": "high"
+    },
+    {
+      "name": "Global Plastic Sheeting",
+      "domain": "globalplasticsheeting.com",
+      "grade": "A",
+      "evidence": "Global Plastic Sheeting used HubSpot's all-in-one marketing software to increase web traffic by 86%, increase leads by 92%, and increase sales by 100%.",
+      "source_url": "https://www.youtube.com/watch?v=j3muvq4WB0E",
+      "confidence": "high"
+    },
+    {
+      "name": "ClassPass",
+      "domain": "classpass.com",
+      "grade": "A",
+      "evidence": "52% Increase in Lead Conversion Rate | ClassPass x HubSpot's Customer Success Story.",
+      "source_url": "https://www.youtube.com/watch?v=y4ek9w5bVDk",
+      "confidence": "high"
+    },
+    {
+      "name": "me&u",
+      "domain": "meandu.com",
+      "grade": "A",
+      "evidence": "me&u (formerly Mr Yum) now serves over 6,000 venues with over 13 million users.",
+      "source_url": "https://www.hubspot.com/startups/stories/customers",
+      "confidence": "high"
+    },
+    {
+      "name": "Make Influence",
+      "domain": "makeinfluence.com",
+      "grade": "A",
+      "evidence": "Make Influence used HubSpot for Startups to get a scalable CRM that helped them identify ICPs, increase pricing, and optimize operations to expand into new regions.",
+      "source_url": "https://www.hubspot.com/startups/case-studies/make-influence",
+      "confidence": "high"
+    },
+    {
+      "name": "Vendr",
+      "domain": "vendr.com",
+      "grade": "A",
+      "evidence": "Ryan Neu, YCombinator alum and founder/CEO of Vendr, shares how leveraging HubSpot since their time in YCombinator has been instrumental in their success.",
+      "source_url": "https://www.hubspot.com/startups/customers",
+      "confidence": "high"
+    },
+    {
+      "name": "Better.co.uk",
+      "domain": "better.co.uk",
+      "grade": "A",
+      "evidence": "Better.co.uk created 15 personalised user journeys for leads with HubSpot and doubled their lead to sale conversion rate.",
+      "source_url": "https://www.hubspot.com/case-studies/trussle",
+      "confidence": "high"
+    },
+    {
+      "name": "Huify",
+      "domain": "huify.com",
+      "grade": "A",
+      "evidence": "Marketing Agency Huify Grows Revenue 6X in 12 months using HubSpot CRM.",
+      "source_url": "https://www.hubspot.com/case-studies/huify",
+      "confidence": "high"
+    },
+    {
+      "name": "New Home Star",
+      "domain": "newhomestar.com",
+      "grade": "B",
+      "evidence": "The strategy generated approximately 350 leads within a year ... By leveraging HubSpot's tools, New Breed facilitated seamless collaboration between New Home Star's marketing and sales teams.",
+      "source_url": "https://www.newbreedrevenue.com/case-studies/new-home-star",
+      "confidence": "high"
+    },
+    {
+      "name": "Ashling Partners",
+      "domain": "ashlingpartners.com",
+      "grade": "B",
+      "evidence": "At the event's close, Ashling Partners saw a 7x increase in booth visits year over year, 183 new MQLs, and 18 new demo requests.",
+      "source_url": "https://www.smartbugmedia.com/client-success",
+      "confidence": "medium"
+    },
+    {
+      "name": "Learning Matters Educational Group",
+      "domain": "lmeg.com",
+      "grade": "B",
+      "evidence": "SmartBug Media helped Learning Matters Educational Group (LMEG) streamline marketing operations and exceed enrollment goals through HubSpot implementation.",
+      "source_url": "https://www.smartbugmedia.com/client-success",
+      "confidence": "medium"
+    },
+    {
+      "name": "CFO Centre",
+      "domain": "cfocentre.com",
+      "grade": "B",
+      "evidence": "CFO Centre partnered with Six & Flow to implement HubSpot to enhance client engagement and streamline operations.",
+      "source_url": "https://www.sixandflow.com/case-studies/tag/six-flow",
+      "confidence": "medium"
+    },
+    {
+      "name": "Medavie Blue Cross",
+      "domain": "medaviebc.ca",
+      "grade": "B",
+      "evidence": "Medavie Blue Cross was looking for a HubSpot partner agency to help implement HubSpot and integrate the platform with their existing CRM, Salesforce.",
+      "source_url": "https://www.sixandflow.com/case-studies/medavie-blue-cross",
+      "confidence": "high"
+    },
+    {
+      "name": "Airswift",
+      "domain": "airswift.com",
+      "grade": "B",
+      "evidence": "They enlisted Six & Flow to create an entire inbound marketing strategy with them.",
+      "source_url": "https://www.sixandflow.com/case-studies/airswift-case-study",
+      "confidence": "high"
+    },
+    {
+      "name": "Inkpact",
+      "domain": "inkpact.com",
+      "grade": "B",
+      "evidence": "Inkpact, a London based start-up ... marries together tech with a community of human scribes.",
+      "source_url": "https://www.sixandflow.com/case-studies/tag/six-flow",
+      "confidence": "medium"
+    },
+    {
+      "name": "uLaw",
+      "domain": "ulaw.io",
+      "grade": "B",
+      "evidence": "Huble's HubSpot implementation and inbound marketing strategy brought 49 leads and 41 justice demands for uLaw.",
+      "source_url": "https://huble.com/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "GGMS Coaching",
+      "domain": "ggmscoaching.com",
+      "grade": "B",
+      "evidence": "Huble Digital worked with GGMS Coaching ... helped GGMS adopt HubSpot Payments, making them one of the first companies in the world to do so.",
+      "source_url": "https://huble.com/case-studies/ggms",
+      "confidence": "high"
+    },
+    {
+      "name": "iCONN Systems",
+      "domain": "iconnsystems.com",
+      "grade": "B",
+      "evidence": "Kuno's HubSpot SEO strategies helped iCONN achieve more Featured Snippets, improve keyword rankings and ultimately increase traffic to the website.",
+      "source_url": "https://www.kunocreative.com/hubspot-seo-case-study",
+      "confidence": "high"
+    },
+    {
+      "name": "White Cup",
+      "domain": "whitecupsolutions.com",
+      "grade": "B",
+      "evidence": "Kuno executed targeted email campaigns, resulting in a 13% increase in email sends and improved engagement rates.",
+      "source_url": "https://www.kunocreative.com/marketing-foundation-case-study",
+      "confidence": "medium"
+    },
+    {
+      "name": "GoStudent",
+      "domain": "gostudent.org",
+      "grade": "B",
+      "evidence": "GoStudent, one of the world's leading providers of online tuition, established in Vienna in 2016 ... operating in more than 20 countries.",
+      "source_url": "https://www.hubspot.com/startups/stories/customers",
+      "confidence": "medium"
+    },
+    {
+      "name": "Darwinbox",
+      "domain": "darwinbox.com",
+      "grade": "B",
+      "evidence": "Darwinbox ... with HubSpot has had a meteoric rise, scaling faster, smarter, and more efficiently than their competitors.",
+      "source_url": "https://www.hubspot.com/startups/stories/customers",
+      "confidence": "medium"
+    },
+    {
+      "name": "Stan",
+      "domain": "stan.store",
+      "grade": "B",
+      "evidence": "Stan is a $30MM ARR creator economy platform.",
+      "source_url": "https://www.hubspot.com/startups/customers",
+      "confidence": "medium"
+    },
+    {
+      "name": "Uber Freight",
+      "domain": "uberfreight.com",
+      "grade": "B",
+      "evidence": "Their case studies include work with companies like Uber Freight, HubSpot INBOUND, Marq, and Capacity Interactive.",
+      "source_url": "https://aptitude8.com/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "Capacity Interactive",
+      "domain": "capacityinteractive.com",
+      "grade": "B",
+      "evidence": "Their case studies include work with companies like Uber Freight, HubSpot INBOUND, Marq, and Capacity Interactive.",
+      "source_url": "https://aptitude8.com/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "YouEarnedIt",
+      "domain": "youearnedit.com",
+      "grade": "B",
+      "evidence": "HubSpot felt right on a gut-level, they felt more trustworthy, credible based on their success and customer reviews. - Tim Ryan, YouEarnedIt's Director of Marketing.",
+      "source_url": "https://www.featuredcustomers.com/vendor/hubspot",
+      "confidence": "medium"
+    },
+    {
+      "name": "Mamut Rojo",
+      "domain": "",
+      "grade": "B",
+      "evidence": "Prospecting Agent allowed us to replace our traditional BDR function and turn outbound from a team activity into an always-on revenue system - Pedro Jose Pabon, CEO and Founder.",
+      "source_url": "https://www.hubspot.com/products/artificial-intelligence/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "AddVision",
+      "domain": "",
+      "grade": "B",
+      "evidence": "AddVision achieved an 800% increase in monthly leads using centralized marketing automation.",
+      "source_url": "https://huble.com/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "ParFab Companies",
+      "domain": "parfab.com",
+      "grade": "B",
+      "evidence": "After migrating from Salesforce to HubSpot, the data plays a critical role in enabling ParFab to better understand and engage with their customers.",
+      "source_url": "https://www.vested.marketing/blog/case-study-salesforce-to-hubspot-migration-and-onboarding",
+      "confidence": "medium"
+    },
+    {
+      "name": "Merge eClinical",
+      "domain": "",
+      "grade": "B",
+      "evidence": "HubSpot recognized customer award winners including Merge eClinical for their ROI achievements.",
+      "source_url": "https://www.hubspot.com/company-news/hubspot-names-winners-of-the-first-annual-hubspot-customer-awards",
+      "confidence": "medium"
+    },
+    {
+      "name": "WorkflowMax",
+      "domain": "workflowmax.com",
+      "grade": "B",
+      "evidence": "HubSpot recognized customer award winners including WorkflowMax from New Zealand for product adoption success.",
+      "source_url": "https://www.hubspot.com/company-news/hubspot-names-winners-of-the-first-annual-hubspot-customer-awards",
+      "confidence": "medium"
+    },
+    {
+      "name": "Datanyze",
+      "domain": "datanyze.com",
+      "grade": "B",
+      "evidence": "Datanyze increased their organic search traffic by 135%, generated a 5X increase in leads.",
+      "source_url": "https://www.hubspot.com/case-studies/directory",
+      "confidence": "medium"
+    },
+    {
+      "name": "EZ Texting",
+      "domain": "eztexting.com",
+      "grade": "B",
+      "evidence": "EZ Texting - HubSpot Customer Success Story.",
+      "source_url": "https://www.youtube.com/watch?v=PNrnO31OD5M",
+      "confidence": "medium"
+    },
+    {
+      "name": "Neat",
+      "domain": "neat.no",
+      "grade": "B",
+      "evidence": "Neat & HubSpot Customer Story.",
+      "source_url": "https://www.youtube.com/watch?v=bwNSJOLcElE",
+      "confidence": "medium"
+    },
+    {
+      "name": "Ubits",
+      "domain": "ubits.com",
+      "grade": "B",
+      "evidence": "Ubits + AWS x HubSpot for Startups [Colombia].",
+      "source_url": "https://www.hubspot.com/startups/stories/customers",
+      "confidence": "medium"
+    },
+    {
+      "name": "Unify",
+      "domain": "unifygtm.com",
+      "grade": "B",
+      "evidence": "Unify x AWS x HubSpot - HubSpot for Startups Video Stories.",
+      "source_url": "https://www.hubspot.com/startups/stories/customers",
+      "confidence": "medium"
+    },
+    {
+      "name": "Bitly",
+      "domain": "bitly.com",
+      "grade": "B",
+      "evidence": "Trusted by 268,000+ customers worldwide (Bitly featured customer logo).",
+      "source_url": "https://www.hubspot.com/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "Henry Schein",
+      "domain": "henryschein.com",
+      "grade": "B",
+      "evidence": "Trusted by 268,000+ customers worldwide (Henry Schein featured customer logo).",
+      "source_url": "https://www.hubspot.com/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "Rakuten Advertising",
+      "domain": "rakutenadvertising.com",
+      "grade": "B",
+      "evidence": "Trusted by 268,000+ customers worldwide (Rakuten Advertising featured customer logo).",
+      "source_url": "https://www.hubspot.com/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "Gold's Gym",
+      "domain": "goldsgym.com",
+      "grade": "B",
+      "evidence": "Trusted by 268,000+ customers worldwide (Gold's Gym featured customer logo).",
+      "source_url": "https://www.hubspot.com/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "Aunt Flow",
+      "domain": "goauntflow.com",
+      "grade": "B",
+      "evidence": "Aunt Flow featured logo among HubSpot Breeze customer success stories.",
+      "source_url": "https://www.hubspot.com/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "Clearwing",
+      "domain": "clearwing.com",
+      "grade": "B",
+      "evidence": "Clearwing featured logo among HubSpot Breeze customer success stories.",
+      "source_url": "https://www.hubspot.com/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "Hostelworld",
+      "domain": "hostelworld.com",
+      "grade": "B",
+      "evidence": "Hostelworld featured logo among HubSpot Breeze customer success stories.",
+      "source_url": "https://www.hubspot.com/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "Seeking Alpha",
+      "domain": "seekingalpha.com",
+      "grade": "B",
+      "evidence": "Seeking Alpha featured logo among HubSpot Breeze customer success stories.",
+      "source_url": "https://www.hubspot.com/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "Siemens",
+      "domain": "siemens.com",
+      "grade": "C",
+      "evidence": "Siemens - global industrial manufacturer running HubSpot across its Additive Manufacturing Network.",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "FedEx",
+      "domain": "fedex.com",
+      "grade": "C",
+      "evidence": "FedEx - logistics giant using HubSpot for its custom boxes division.",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "NVIDIA",
+      "domain": "nvidia.com",
+      "grade": "C",
+      "evidence": "NVIDIA - AI and GPU leader with HubSpot on its main domain.",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "KPMG",
+      "domain": "kpmg.com",
+      "grade": "C",
+      "evidence": "KPMG - Big Four accounting firm using HubSpot in the US market.",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "McKinsey",
+      "domain": "mckinsey.com",
+      "grade": "C",
+      "evidence": "McKinsey - management consulting firm running HubSpot for client engagement.",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Novartis",
+      "domain": "novartis.com",
+      "grade": "C",
+      "evidence": "Novartis - pharmaceutical company using HubSpot for virtual event platforms.",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "DHL Express",
+      "domain": "dhl.com",
+      "grade": "C",
+      "evidence": "DHL Express - international shipping company with HubSpot on its Latin America operations.",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Delivery Hero",
+      "domain": "deliveryhero.com",
+      "grade": "C",
+      "evidence": "Delivery Hero - food delivery platform using HubSpot for its careers portal.",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Edelman",
+      "domain": "edelman.com",
+      "grade": "C",
+      "evidence": "Edelman - world's largest PR firm running HubSpot on its main site.",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Randstad",
+      "domain": "randstad.com",
+      "grade": "C",
+      "evidence": "Randstad - staffing leader using HubSpot for global recruitment marketing.",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Adecco",
+      "domain": "adecco.com",
+      "grade": "C",
+      "evidence": "We track 121,300 companies currently using HubSpot, including Siemens, DHL Express, FedEx, Adecco, RTX, Novartis, NVIDIA and KPMG.",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "RTX",
+      "domain": "rtx.com",
+      "grade": "C",
+      "evidence": "We track 121,300 companies currently using HubSpot, including Siemens, DHL Express, FedEx, Adecco, RTX, Novartis, NVIDIA and KPMG.",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "CGI Group",
+      "domain": "cgi.com",
+      "grade": "C",
+      "evidence": "Verified list of companies and websites using HubSpot - sorted by company size (CGI Group listed).",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "AECOM",
+      "domain": "aecom.com",
+      "grade": "C",
+      "evidence": "Verified list of companies and websites using HubSpot - sorted by company size (AECOM listed).",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Fujitsu",
+      "domain": "fujitsu.com",
+      "grade": "C",
+      "evidence": "Verified list of companies and websites using HubSpot - sorted by company size (Fujitsu listed).",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Aramark",
+      "domain": "aramark.com",
+      "grade": "C",
+      "evidence": "Verified list of companies and websites using HubSpot - sorted by company size (Aramark listed).",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Wolters Kluwer",
+      "domain": "wolterskluwer.com",
+      "grade": "C",
+      "evidence": "Verified list of companies and websites using HubSpot - sorted by company size (Wolters Kluwer listed).",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Synopsys",
+      "domain": "synopsys.com",
+      "grade": "C",
+      "evidence": "Verified list of companies and websites using HubSpot - sorted by company size (Synopsys listed).",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Kantar",
+      "domain": "kantar.com",
+      "grade": "C",
+      "evidence": "Verified list of companies and websites using HubSpot - sorted by company size (Kantar listed).",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Analog Devices",
+      "domain": "analog.com",
+      "grade": "C",
+      "evidence": "Verified list of companies and websites using HubSpot - sorted by company size (Analog Devices listed).",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "TELUS",
+      "domain": "telus.com",
+      "grade": "C",
+      "evidence": "Verified list of companies and websites using HubSpot - sorted by company size (TELUS listed).",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Denso",
+      "domain": "denso.com",
+      "grade": "C",
+      "evidence": "Verified list of companies and websites using HubSpot - sorted by company size (Denso listed).",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "British Council",
+      "domain": "britishcouncil.org",
+      "grade": "C",
+      "evidence": "Verified list of companies and websites using HubSpot - sorted by company size (British Council listed).",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Goodwill Industries",
+      "domain": "goodwill.org",
+      "grade": "C",
+      "evidence": "Verified list of companies and websites using HubSpot - sorted by company size (Goodwill Industries listed).",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Ramboll",
+      "domain": "ramboll.com",
+      "grade": "C",
+      "evidence": "Verified list of companies and websites using HubSpot - sorted by company size (Ramboll listed).",
+      "source_url": "https://technologychecker.io/technology/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "uShip",
+      "domain": "uship.com",
+      "grade": "C",
+      "evidence": "Some of the companies that use HubSpot include: uShip.",
+      "source_url": "https://enlyft.com/tech/products/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Level Set Consulting",
+      "domain": "levelsetconsulting.com",
+      "grade": "C",
+      "evidence": "Some of the companies that use HubSpot include: Level Set Consulting.",
+      "source_url": "https://enlyft.com/tech/products/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Mohawk Industries",
+      "domain": "mohawkind.com",
+      "grade": "C",
+      "evidence": "Some of the companies that use HubSpot include: Mohawk Industries, Inc.",
+      "source_url": "https://enlyft.com/tech/products/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Pure Storage",
+      "domain": "purestorage.com",
+      "grade": "C",
+      "evidence": "Some of the companies that use HubSpot include: Pure Storage.",
+      "source_url": "https://enlyft.com/tech/products/hubspot",
+      "confidence": "low"
+    },
+    {
+      "name": "Vydia",
+      "domain": "vydia.com",
+      "grade": "C",
+      "evidence": "Some of the companies that use HubSpot include: Vydia.",
+      "source_url": "https://enlyft.com/tech/products/hubspot",
+      "confidence": "low"
+    }
+  ],
+  "generated_at": "2026-08-10T09:57:50Z",
+  "company_count": 118
+}
