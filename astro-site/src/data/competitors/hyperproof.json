@@ -1,0 +1,267 @@
+{
+  "competitor": {
+    "name": "Hyperproof",
+    "slug": "hyperproof",
+    "domain": "hyperproof.io"
+  },
+  "companies": [
+    {
+      "name": "Appian",
+      "domain": "appian.com",
+      "grade": "A",
+      "evidence": "With Hyperproof, we're ready for an audit at any given moment.",
+      "source_url": "https://hyperproof.io/case-studies/how-appian-used-hyperproof-to-streamline-grc-for-28-frameworks/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Outreach",
+      "domain": "outreach.io",
+      "grade": "A",
+      "evidence": "With Hyperproof, we stood up 5 different programs, nearly 1,000 controls, multiple Labels, used Hyperproof to manage 1,500 pieces of evidence.",
+      "source_url": "https://hyperproof.io/case-studies/outreach/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Highspot",
+      "domain": "highspot.com",
+      "grade": "A",
+      "evidence": "Hyperproof has made it much easier for me to conduct security reviews of new vendors.",
+      "source_url": "https://hyperproof.io/case-studies/highspot-builds-continuous-compliance-program-with-hyperproof/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Pythian",
+      "domain": "pythian.com",
+      "grade": "A",
+      "evidence": "In a month, I had Hyperproof stood up, my controls all in there and I've started my audit.",
+      "source_url": "https://hyperproof.io/case-studies/pythian-improves-risk-management-maturity/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "AppLovin",
+      "domain": "applovin.com",
+      "grade": "A",
+      "evidence": "Hyperproof was the right platform for us. It's easy to use, powerful, and will scale with us as we grow.",
+      "source_url": "https://hyperproof.io/case-studies/how-applovin-built-a-strategic-risk-program-with-hyperproof-to-keep-pace-with-company-growth/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Nutanix",
+      "domain": "nutanix.com",
+      "grade": "A",
+      "evidence": "our customer list has evolved to include industry-leading companies like Outreach Motorola, Nutanix, Applovin, and Veeva Systems",
+      "source_url": "https://hyperproof.io/about/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Veeva Systems",
+      "domain": "veeva.com",
+      "grade": "A",
+      "evidence": "Hyperproof is the most comprehensive compliance operations platform out there.",
+      "source_url": "https://www.featuredcustomers.com/vendor/hyperproof",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "AGDATA",
+      "domain": "agdata.com",
+      "grade": "B",
+      "evidence": "Hyperproof is game-changing. It's exactly what I need for managing our audits.",
+      "source_url": "https://hyperproof.io/case-studies/how-agdata-uses-hyperproof-and-grant-thornton-to-scale-audits-and-achieve-iso-27001-certification/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "OutSystems",
+      "domain": "outsystems.com",
+      "grade": "B",
+      "evidence": "We are all in, and everyone at the company knows Hyperproof.",
+      "source_url": "https://hyperproof.io/case-studies/how-outsystems-uses-hyperproof-and-aprio-to-scale-compliance-operations/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Acuity International",
+      "domain": "acuityinternational.com",
+      "grade": "B",
+      "evidence": "With Hyperproof, we spend about one-third of the time that we used to on prior work, such as managing our governance packages and performing our audits.",
+      "source_url": "https://hyperproof.io/case-studies/acuity-international-reduced-grc-workload/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Thales",
+      "domain": "thalesgroup.com",
+      "grade": "B",
+      "evidence": "Hyperproof is an easy-to-use, control-centric compliance operations software that helps us gain compliance visibility and realize efficiencies.",
+      "source_url": "https://hyperproof.io/case-studies/thales-grc-compliance/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Strada Education Network",
+      "domain": "stradaeducation.org",
+      "grade": "B",
+      "evidence": "Having a tool like Hyperproof is important because it is really hard to keep track of where you are in your compliance journey.",
+      "source_url": "https://hyperproof.io/case-studies/strada-education-network-automated-evidence-collection/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Glance Networks",
+      "domain": "glance.net",
+      "grade": "B",
+      "evidence": "We wanted a compliance platform that helps us reduce the manual work required to maintain and manage our compliance program.",
+      "source_url": "https://hyperproof.io/case-studies/glance-networks-uses-hyperproofs-compliance-solution-to-supports-its-growth-plan/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "The Bonadio Group",
+      "domain": "bonadio.com",
+      "grade": "B",
+      "evidence": "With Hyperproof, the Information Risk Management division is set up for long-term sustainable growth.",
+      "source_url": "https://hyperproof.io/case-studies/bonadio/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Omnistruct",
+      "domain": "omnistruct.com",
+      "grade": "B",
+      "evidence": "Our consultants don't have to update spreadsheets and process word documents sent via email anymore.",
+      "source_url": "https://hyperproof.io/case-studies/omnistruct/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Clarifire",
+      "domain": "eclarifire.com",
+      "grade": "B",
+      "evidence": "Managing the evidence centrally in Hyperproof, controlling freshness with the built-in freshness tracking feature, and reusing the evidence for multiple frameworks allowed Clarifire to reduce audit preparation time by 50%.",
+      "source_url": "https://hyperproof.io/case-studies/clarifire/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Prime 8 Consulting",
+      "domain": "prime8consulting.com",
+      "grade": "B",
+      "evidence": "As soon as I saw a demo of Hyperproof, I knew it was what I wanted.",
+      "source_url": "https://hyperproof.io/case-studies/case-study-prime-8-consulting/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "DigiCert",
+      "domain": "digicert.com",
+      "grade": "B",
+      "evidence": "Hyperproof is providing a solution that makes evidence management much easier.",
+      "source_url": "https://hyperproof.io/case-studies/digicert/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "QorusDocs",
+      "domain": "qorusdocs.com",
+      "grade": "B",
+      "evidence": "Hyperproof's out-of-the-box SOC 2 template was structured in a way that immediately reduced the complexity involved in preparing for the audit.",
+      "source_url": "https://hyperproof.io/case-studies/qorus/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Risk/Response",
+      "domain": "riskandresponse.com",
+      "grade": "B",
+      "evidence": "With Hyperproof, I am able to help my client manage their compliance program more effectively on an ongoing basis.",
+      "source_url": "https://hyperproof.io/case-studies/case-study-risk-response/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Guidacent",
+      "domain": "guidacent.com",
+      "grade": "B",
+      "evidence": "Hyperproof offers a cost-effective way to quickly mature your compliance programs.",
+      "source_url": "https://hyperproof.io/case-studies/case-study-guidacent/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "American Technology Services",
+      "domain": "networkats.com",
+      "grade": "B",
+      "evidence": "Hyperproof comes out-of-the-box with a robust set of compliance frameworks.",
+      "source_url": "https://hyperproof.io/case-studies/ats/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Artemis Health",
+      "domain": "nomihealth.com",
+      "grade": "B",
+      "evidence": "Streamlining HITRUST Compliance with Hyperproof: Case Study with Artemis Health",
+      "source_url": "https://hitrustalliance.net/webinars/hitrust_psd-hyperproof",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Reddit",
+      "domain": "reddit.com",
+      "grade": "C",
+      "evidence": "Reddit appears in the \"Trusted By\" logo band on Hyperproof's homepage.",
+      "source_url": "https://hyperproof.io/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Fortinet",
+      "domain": "fortinet.com",
+      "grade": "C",
+      "evidence": "Fortinet appears in the \"Trusted By\" logo band on Hyperproof's homepage.",
+      "source_url": "https://hyperproof.io/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Motorola",
+      "domain": "motorolasolutions.com",
+      "grade": "C",
+      "evidence": "our customer list has evolved to include industry-leading companies like Outreach Motorola, Nutanix, Applovin, and Veeva Systems",
+      "source_url": "https://hyperproof.io/about/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Instacart",
+      "domain": "instacart.com",
+      "grade": "C",
+      "evidence": "Unlocking growth for GRC companies like: (Instacart appears in the logo band)",
+      "source_url": "https://hyperproof.io/product/technology-compliance/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Experian",
+      "domain": "experian.com",
+      "grade": "C",
+      "evidence": "Unlocking growth for GRC companies like: (Experian appears in the logo band)",
+      "source_url": "https://hyperproof.io/product/technology-compliance/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "CockroachDB Labs",
+      "domain": "cockroachlabs.com",
+      "grade": "C",
+      "evidence": "Unlocking growth for GRC companies like: (CockroachDB Labs appears in the logo band)",
+      "source_url": "https://hyperproof.io/product/technology-compliance/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Red Hat",
+      "domain": "redhat.com",
+      "grade": "C",
+      "evidence": "Unlocking growth for GRC companies like: (Red Hat appears in the logo band)",
+      "source_url": "https://hyperproof.io/product/technology-compliance/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Synopsys",
+      "domain": "synopsys.com",
+      "grade": "C",
+      "evidence": "Unlocking growth for GRC companies like: (Synopsys appears in the logo band)",
+      "source_url": "https://hyperproof.io/product/technology-compliance/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Zuora",
+      "domain": "zuora.com",
+      "grade": "C",
+      "evidence": "Unlocking growth for GRC companies like: (Zuora appears in the logo band)",
+      "source_url": "https://hyperproof.io/product/technology-compliance/",
+      "confidence": "Likely"
+    }
+  ],
+  "generated_at": "2026-08-10T09:12:34Z",
+  "company_count": 32
+}
