@@ -1,0 +1,763 @@
+{
+  "competitor": {
+    "name": "Notion",
+    "slug": "notion",
+    "domain": "notion.so"
+  },
+  "companies": [
+    {
+      "name": "Baseten",
+      "domain": "baseten.co",
+      "grade": "A",
+      "evidence": "The one singular source of truth where we pull it all together is Notion.",
+      "source_url": "https://www.notion.com/customers/baseten",
+      "confidence": "high"
+    },
+    {
+      "name": "Buffer",
+      "domain": "buffer.com",
+      "grade": "A",
+      "evidence": "Our company handbook was a mess of Dropbox Paper documents... until we introduced Notion.",
+      "source_url": "https://www.notion.com/customers/buffer",
+      "confidence": "high"
+    },
+    {
+      "name": "Capgemini",
+      "domain": "capgemini.com",
+      "grade": "A",
+      "evidence": "Before Notion, a lot of the team's knowledge was bottlenecked in the minds of a few.",
+      "source_url": "https://www.notion.com/customers/capgemini",
+      "confidence": "high"
+    },
+    {
+      "name": "Clay",
+      "domain": "clay.com",
+      "grade": "A",
+      "evidence": "With Notion, we're always just one question away from being on the same page.",
+      "source_url": "https://www.notion.com/customers/clay",
+      "confidence": "high"
+    },
+    {
+      "name": "Crafty",
+      "domain": "craftydelivers.com",
+      "grade": "A",
+      "evidence": "Notion helped us lower the barrier to entry while staying organized.",
+      "source_url": "https://www.notion.com/customers/crafty",
+      "confidence": "high"
+    },
+    {
+      "name": "Cursor",
+      "domain": "cursor.com",
+      "grade": "A",
+      "evidence": "It's really important for the people that are building to have a lot of time to build.",
+      "source_url": "https://www.notion.com/customers/cursor",
+      "confidence": "high"
+    },
+    {
+      "name": "Deel",
+      "domain": "deel.com",
+      "grade": "A",
+      "evidence": "Anything that exists in anyone's brain is also recorded in Notion.",
+      "source_url": "https://www.notion.com/customers/deel",
+      "confidence": "high"
+    },
+    {
+      "name": "Demodesk",
+      "domain": "demodesk.com",
+      "grade": "A",
+      "evidence": "Notion is a great entry point into the company.",
+      "source_url": "https://www.notion.com/customers/demodesk",
+      "confidence": "high"
+    },
+    {
+      "name": "Dojo",
+      "domain": "dojo.tech",
+      "grade": "A",
+      "evidence": "Notion is the linchpin of our planning processes and collaboration.",
+      "source_url": "https://www.notion.com/customers/dojo",
+      "confidence": "high"
+    },
+    {
+      "name": "Faire",
+      "domain": "faire.com",
+      "grade": "A",
+      "evidence": "We have seven years of work in Notion. It's our workspace for essentially everything.",
+      "source_url": "https://www.notion.com/customers/faire",
+      "confidence": "high"
+    },
+    {
+      "name": "Figma",
+      "domain": "figma.com",
+      "grade": "A",
+      "evidence": "Notion brings product, operations, HR, and customer support together in one shared space.",
+      "source_url": "https://www.notion.com/customers/figma",
+      "confidence": "high"
+    },
+    {
+      "name": "Headspace",
+      "domain": "headspace.com",
+      "grade": "A",
+      "evidence": "Notion encourages an open and collaborative environment for multiple people to contribute in one space.",
+      "source_url": "https://www.notion.com/customers/headspace",
+      "confidence": "high"
+    },
+    {
+      "name": "Mangopay",
+      "domain": "mangopay.com",
+      "grade": "A",
+      "evidence": "Being able to be a member of any team that you want has opened up transparency.",
+      "source_url": "https://www.notion.com/customers/mangopay",
+      "confidence": "high"
+    },
+    {
+      "name": "Match Group",
+      "domain": "mtch.com",
+      "grade": "A",
+      "evidence": "Notion has been the most powerful and impactful way to streamline our workflow.",
+      "source_url": "https://www.notion.com/customers/match",
+      "confidence": "high"
+    },
+    {
+      "name": "Mixpanel",
+      "domain": "mixpanel.com",
+      "grade": "A",
+      "evidence": "Notion democratizes project feedback loops into one page.",
+      "source_url": "https://www.notion.com/customers/mixpanel",
+      "confidence": "high"
+    },
+    {
+      "name": "Monumental Labs",
+      "domain": "monumentallabs.co",
+      "grade": "A",
+      "evidence": "Everything is tracked in Notion. It's our single source of truth.",
+      "source_url": "https://www.notion.com/customers/monumental-labs",
+      "confidence": "high"
+    },
+    {
+      "name": "OpenAI",
+      "domain": "openai.com",
+      "grade": "A",
+      "evidence": "Notion has become an integral part of our entire research flow and product development process.",
+      "source_url": "https://www.notion.com/customers/openai",
+      "confidence": "high"
+    },
+    {
+      "name": "Pitch",
+      "domain": "pitch.com",
+      "grade": "A",
+      "evidence": "It's always clear what's on anyone's plate, the scope of the project, or deadlines.",
+      "source_url": "https://www.notion.com/customers/pitch",
+      "confidence": "high"
+    },
+    {
+      "name": "Pleo",
+      "domain": "pleo.io",
+      "grade": "A",
+      "evidence": "Notion allows us to achieve a level of nuance we couldn't have achieved before.",
+      "source_url": "https://www.notion.com/customers/pleo",
+      "confidence": "high"
+    },
+    {
+      "name": "Qonto",
+      "domain": "qonto.com",
+      "grade": "A",
+      "evidence": "Notion's flexibility lets us build a system that supports our Lean principles.",
+      "source_url": "https://www.notion.com/customers/qonto",
+      "confidence": "high"
+    },
+    {
+      "name": "Ramp",
+      "domain": "ramp.com",
+      "grade": "A",
+      "evidence": "Ramp runs on Notion: how they built an AI operating system for work.",
+      "source_url": "https://www.notion.com/customers/ramp",
+      "confidence": "high"
+    },
+    {
+      "name": "Remote",
+      "domain": "remote.com",
+      "grade": "A",
+      "evidence": "Notion started as knowledge management, but it's become our HQ.",
+      "source_url": "https://www.notion.com/customers/remote",
+      "confidence": "high"
+    },
+    {
+      "name": "Taxfix",
+      "domain": "taxfix.de",
+      "grade": "A",
+      "evidence": "Notion is our knowledge-management system, our task-tracking system, our source of truth.",
+      "source_url": "https://www.notion.com/customers/taxfix",
+      "confidence": "high"
+    },
+    {
+      "name": "Vercel",
+      "domain": "vercel.com",
+      "grade": "A",
+      "evidence": "Workers let us connect directly to other tools' APIs and automate what used to be manual hand-offs.",
+      "source_url": "https://www.notion.com/customers/vercel",
+      "confidence": "high"
+    },
+    {
+      "name": "Wealthsimple",
+      "domain": "wealthsimple.com",
+      "grade": "A",
+      "evidence": "Nearly 70% of users found it difficult to find data across our various systems.",
+      "source_url": "https://www.notion.com/customers/wealthsimple",
+      "confidence": "high"
+    },
+    {
+      "name": "AngelList",
+      "domain": "angellist.com",
+      "grade": "B",
+      "evidence": "Day one, the first thing a new hire gets is their custom onboarding page in Notion.",
+      "source_url": "https://www.notion.com/customers/angellist",
+      "confidence": "medium"
+    },
+    {
+      "name": "Apploi",
+      "domain": "apploi.com",
+      "grade": "B",
+      "evidence": "Nothing's come close to this in terms of power.",
+      "source_url": "https://www.notion.com/customers/apploi",
+      "confidence": "medium"
+    },
+    {
+      "name": "Argyle",
+      "domain": "argyle.com",
+      "grade": "B",
+      "evidence": "Notion has helped us tell a richer story about what we do and why it matters.",
+      "source_url": "https://www.notion.com/customers/argyle",
+      "confidence": "medium"
+    },
+    {
+      "name": "Axios",
+      "domain": "axios.com",
+      "grade": "B",
+      "evidence": "Notion makes it incredibly easy to see what we have on tap for the following day's newsletter.",
+      "source_url": "https://www.notion.com/customers/axios-sports",
+      "confidence": "medium"
+    },
+    {
+      "name": "Base10 Partners",
+      "domain": "base10.vc",
+      "grade": "B",
+      "evidence": "I run my investor life in Notion.",
+      "source_url": "https://www.notion.com/customers/base10",
+      "confidence": "medium"
+    },
+    {
+      "name": "Blinkist",
+      "domain": "blinkist.com",
+      "grade": "B",
+      "evidence": "Notion helps us make sure our processes are all set up and available in one place.",
+      "source_url": "https://www.notion.com/customers/blinkist",
+      "confidence": "medium"
+    },
+    {
+      "name": "Branch",
+      "domain": "branch.io",
+      "grade": "B",
+      "evidence": "Keeping everything in Notion means the team only has to learn one tool.",
+      "source_url": "https://www.notion.com/customers/branch",
+      "confidence": "medium"
+    },
+    {
+      "name": "Chipper Cash",
+      "domain": "chippercash.com",
+      "grade": "B",
+      "evidence": "Notion has reduced meetings by 15%. Across 100 people, that's a significant saving.",
+      "source_url": "https://www.notion.com/customers/chipper-cash",
+      "confidence": "medium"
+    },
+    {
+      "name": "Cocoon",
+      "domain": "cocoon.com",
+      "grade": "B",
+      "evidence": "Every time we had something new we needed to document, we kept putting it on Notion.",
+      "source_url": "https://www.notion.com/blog/cocoon-runs-on-notion",
+      "confidence": "medium"
+    },
+    {
+      "name": "Codecademy",
+      "domain": "codecademy.com",
+      "grade": "B",
+      "evidence": "We use Notion as a way to rally around what we want to get out of a particular project.",
+      "source_url": "https://www.notion.com/customers/codecademy",
+      "confidence": "medium"
+    },
+    {
+      "name": "Cohere",
+      "domain": "cohere.com",
+      "grade": "B",
+      "evidence": "Notion bridges the gap between our high-level product vision and the nitty-gritty details.",
+      "source_url": "https://www.notion.com/customers/cohere",
+      "confidence": "medium"
+    },
+    {
+      "name": "Crowdcast",
+      "domain": "crowdcast.io",
+      "grade": "B",
+      "evidence": "In Notion, all the work lives side by side.",
+      "source_url": "https://www.notion.com/customers/crowdcast",
+      "confidence": "medium"
+    },
+    {
+      "name": "DANA Indonesia",
+      "domain": "dana.id",
+      "grade": "B",
+      "evidence": "If it's not in Notion, it doesn't exist.",
+      "source_url": "https://www.notion.com/customers/dana-indonesia",
+      "confidence": "medium"
+    },
+    {
+      "name": "dbt Labs",
+      "domain": "getdbt.com",
+      "grade": "B",
+      "evidence": "Notion became their centralized, single source-of-truth for everyone to contribute to.",
+      "source_url": "https://www.notion.com/customers/dbt-labs",
+      "confidence": "medium"
+    },
+    {
+      "name": "Descript",
+      "domain": "descript.com",
+      "grade": "B",
+      "evidence": "Descript runs on Notion; it's the operating system for how they think, work, and grow together.",
+      "source_url": "https://www.notion.com/customers/descript",
+      "confidence": "medium"
+    },
+    {
+      "name": "Edge Esmeralda",
+      "domain": "edgeesmeralda.com",
+      "grade": "B",
+      "evidence": "Now we have a really good system in place to help manage it.",
+      "source_url": "https://www.notion.com/customers/edge-esmeralda",
+      "confidence": "medium"
+    },
+    {
+      "name": "Equals Money",
+      "domain": "equalsmoney.com",
+      "grade": "B",
+      "evidence": "With Custom Agents, it maintains itself.",
+      "source_url": "https://www.notion.com/customers/equals-money",
+      "confidence": "medium"
+    },
+    {
+      "name": "Every",
+      "domain": "every.to",
+      "grade": "B",
+      "evidence": "We needed an agent-native knowledge hub, somewhere we could point agents at our docs.",
+      "source_url": "https://www.notion.com/customers/every",
+      "confidence": "medium"
+    },
+    {
+      "name": "Foolproof",
+      "domain": "foolproof.co.uk",
+      "grade": "B",
+      "evidence": "If you don't know where a piece of information lived, you had to ask a colleague.",
+      "source_url": "https://www.notion.com/customers/foolproof",
+      "confidence": "medium"
+    },
+    {
+      "name": "Formo",
+      "domain": "formo.bio",
+      "grade": "B",
+      "evidence": "We really love the database with subtasks.",
+      "source_url": "https://www.notion.com/customers/formo",
+      "confidence": "medium"
+    },
+    {
+      "name": "Genially",
+      "domain": "genially.com",
+      "grade": "B",
+      "evidence": "We can embed everything into tasks on Notion, documents, videos, files, everything!",
+      "source_url": "https://www.notion.com/customers/genially",
+      "confidence": "medium"
+    },
+    {
+      "name": "GoSquared",
+      "domain": "gosquared.com",
+      "grade": "B",
+      "evidence": "As a general rule for meetings, if it's not in Notion, it's not happening.",
+      "source_url": "https://www.gosquared.com/blog/how-we-use-notion-to-work-together-at-gosquared",
+      "confidence": "medium"
+    },
+    {
+      "name": "Heidi Health",
+      "domain": "heidihealth.com",
+      "grade": "B",
+      "evidence": "Notion is saving us 200+ hours every month we used to waste hunting for answers.",
+      "source_url": "https://www.notion.com/customers/heidi",
+      "confidence": "medium"
+    },
+    {
+      "name": "ImmigrationHelp.org",
+      "domain": "immigrationhelp.org",
+      "grade": "B",
+      "evidence": "Notion has been a lifesaver for managing our team's knowledge.",
+      "source_url": "https://www.notion.com/customers/immigrationhelp",
+      "confidence": "medium"
+    },
+    {
+      "name": "iTech Media",
+      "domain": "itechmedia.com",
+      "grade": "B",
+      "evidence": "Everything hangs off our company OKRs.",
+      "source_url": "https://www.notion.com/customers/itech",
+      "confidence": "medium"
+    },
+    {
+      "name": "Karrot",
+      "domain": "karrotmarket.com",
+      "grade": "B",
+      "evidence": "Notion shrank the learning curve.",
+      "source_url": "https://www.notion.com/customers/karrot",
+      "confidence": "medium"
+    },
+    {
+      "name": "Levels",
+      "domain": "levelshealth.com",
+      "grade": "B",
+      "evidence": "Onboarding is interactive, you can check things off as you complete them.",
+      "source_url": "https://www.notion.com/customers/levels-health",
+      "confidence": "medium"
+    },
+    {
+      "name": "Linktree",
+      "domain": "linktr.ee",
+      "grade": "B",
+      "evidence": "We used Notion to integrate our teams and consolidate information into a single, connected space.",
+      "source_url": "https://www.notion.com/customers/linktree",
+      "confidence": "medium"
+    },
+    {
+      "name": "Lyka",
+      "domain": "lyka.com.au",
+      "grade": "B",
+      "evidence": "Everything starts and lives in Notion now.",
+      "source_url": "https://www.notion.com/customers/lyka",
+      "confidence": "medium"
+    },
+    {
+      "name": "MetaLab",
+      "domain": "metalab.com",
+      "grade": "B",
+      "evidence": "We got rid of nearly a dozen different tools because of what Notion does for us.",
+      "source_url": "https://www.notion.com/customers/metalab",
+      "confidence": "medium"
+    },
+    {
+      "name": "Multiverse",
+      "domain": "multiverse.io",
+      "grade": "B",
+      "evidence": "I just screenshare the Notion page and link to other docs.",
+      "source_url": "https://www.notion.com/customers/multiverse",
+      "confidence": "medium"
+    },
+    {
+      "name": "Nvidia",
+      "domain": "nvidia.com",
+      "grade": "B",
+      "evidence": "Featured as a named enterprise customer on Notion's official customers page.",
+      "source_url": "https://www.notion.com/customers",
+      "confidence": "medium"
+    },
+    {
+      "name": "Optemization",
+      "domain": "optemization.com",
+      "grade": "B",
+      "evidence": "You can effortlessly make pages look good in Notion. Its design system is a great framework.",
+      "source_url": "https://www.featuredcustomers.com/vendor/notion",
+      "confidence": "medium"
+    },
+    {
+      "name": "Oyster",
+      "domain": "oysterhr.com",
+      "grade": "B",
+      "evidence": "Notion is a center of gravity for our company.",
+      "source_url": "https://www.notion.com/customers/oyster",
+      "confidence": "medium"
+    },
+    {
+      "name": "Paper",
+      "domain": "paper.co",
+      "grade": "B",
+      "evidence": "If something isn't written down, it's folklore.",
+      "source_url": "https://www.notion.com/customers/paper",
+      "confidence": "medium"
+    },
+    {
+      "name": "Parloa",
+      "domain": "parloa.com",
+      "grade": "B",
+      "evidence": "Notion is the workspace we trust to deliver on the promise of AI.",
+      "source_url": "https://www.notion.com/customers/parloa",
+      "confidence": "medium"
+    },
+    {
+      "name": "Partiful",
+      "domain": "partiful.com",
+      "grade": "B",
+      "evidence": "If Partiful wasn't using Notion, we'd be spread across different software.",
+      "source_url": "https://www.notion.com/customers/partiful",
+      "confidence": "medium"
+    },
+    {
+      "name": "PartnerStack",
+      "domain": "partnerstack.com",
+      "grade": "B",
+      "evidence": "We point people to a project page, right in Notion.",
+      "source_url": "https://www.notion.com/customers/partnerstack",
+      "confidence": "medium"
+    },
+    {
+      "name": "Pinecone",
+      "domain": "pinecone.io",
+      "grade": "B",
+      "evidence": "Notion serves as our internal source of truth.",
+      "source_url": "https://www.notion.com/customers/pinecone",
+      "confidence": "medium"
+    },
+    {
+      "name": "Planful",
+      "domain": "planful.com",
+      "grade": "B",
+      "evidence": "It was about creating a centralized workspace that was easy to navigate and trusted by everyone.",
+      "source_url": "https://www.notion.com/customers/planful",
+      "confidence": "medium"
+    },
+    {
+      "name": "Primer",
+      "domain": "primer.io",
+      "grade": "B",
+      "evidence": "The more functions we have in one place, the better, about using Notion.",
+      "source_url": "https://www.notion.com/customers/primer",
+      "confidence": "medium"
+    },
+    {
+      "name": "Qwilr",
+      "domain": "qwilr.com",
+      "grade": "B",
+      "evidence": "With Notion as our central hub, teams can instantly access information and stay aligned.",
+      "source_url": "https://www.notion.com/customers/qwilr",
+      "confidence": "medium"
+    },
+    {
+      "name": "Raise",
+      "domain": "raise.work",
+      "grade": "B",
+      "evidence": "Our goals used to live in peoples' heads. Now they're transparent and easy to access.",
+      "source_url": "https://www.notion.com/customers/raise",
+      "confidence": "medium"
+    },
+    {
+      "name": "Rakuten France",
+      "domain": "fr.shopping.rakuten.com",
+      "grade": "B",
+      "evidence": "Because Rakuten France already works in Notion, their Custom Agents don't operate in a vacuum.",
+      "source_url": "https://www.notion.com/customers/rakuten-france",
+      "confidence": "medium"
+    },
+    {
+      "name": "Raw Studio",
+      "domain": "raw.studio",
+      "grade": "B",
+      "evidence": "Notion makes our workflows so much more efficient and intuitive.",
+      "source_url": "https://www.notion.com/customers/raw-studio",
+      "confidence": "medium"
+    },
+    {
+      "name": "Sendbird",
+      "domain": "sendbird.com",
+      "grade": "B",
+      "evidence": "We use our homepages in Notion to organize our thoughts.",
+      "source_url": "https://www.notion.com/customers/sendbird",
+      "confidence": "medium"
+    },
+    {
+      "name": "SmartNews",
+      "domain": "smartnews.com",
+      "grade": "B",
+      "evidence": "Notion helps us keep everyone connected and moving forward as one unit.",
+      "source_url": "https://www.notion.com/customers/smartnews",
+      "confidence": "medium"
+    },
+    {
+      "name": "SOCAR",
+      "domain": "socar.kr",
+      "grade": "B",
+      "evidence": "Notion makes it easy to put all kinds of information side by side.",
+      "source_url": "https://www.notion.com/customers/socar",
+      "confidence": "medium"
+    },
+    {
+      "name": "Sourcegraph",
+      "domain": "sourcegraph.com",
+      "grade": "B",
+      "evidence": "Public Sourcegraph Handbook hosted on Notion; how we communicate at Sourcegraph lives in Notion.",
+      "source_url": "https://sourcegraph.notion.site/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Synctera",
+      "domain": "synctera.com",
+      "grade": "B",
+      "evidence": "We could build everything we needed on Notion.",
+      "source_url": "https://www.notion.com/customers/synctera",
+      "confidence": "medium"
+    },
+    {
+      "name": "TheFork",
+      "domain": "thefork.com",
+      "grade": "B",
+      "evidence": "Notion is our go-to tool for capturing and managing knowledge.",
+      "source_url": "https://www.notion.com/customers/thefork",
+      "confidence": "medium"
+    },
+    {
+      "name": "Toyota",
+      "domain": "toyota.com",
+      "grade": "B",
+      "evidence": "Featured customer on Notion's official customers page: Not only do our streamlined workflows in Notion save us time.",
+      "source_url": "https://www.notion.com/customers",
+      "confidence": "medium"
+    },
+    {
+      "name": "Typeform",
+      "domain": "typeform.com",
+      "grade": "B",
+      "evidence": "Templates in Notion ensure we're applying the same framework to every problem.",
+      "source_url": "https://www.notion.com/customers/typeform",
+      "confidence": "medium"
+    },
+    {
+      "name": "Viva",
+      "domain": "execviva.com",
+      "grade": "B",
+      "evidence": "Our EAs use Notion as their main tool, which helps customers see its value firsthand.",
+      "source_url": "https://www.notion.com/customers/viva",
+      "confidence": "medium"
+    },
+    {
+      "name": "Volvo",
+      "domain": "volvo.com",
+      "grade": "B",
+      "evidence": "Featured as a named enterprise customer on Notion's official customers page.",
+      "source_url": "https://www.notion.com/customers",
+      "confidence": "medium"
+    },
+    {
+      "name": "Agora",
+      "domain": "agora.io",
+      "grade": "C",
+      "evidence": "Listed as a paying Notion customer in the bloomberry tech-stack database.",
+      "source_url": "https://bloomberry.com/data/notion/",
+      "confidence": "low"
+    },
+    {
+      "name": "Akeneo",
+      "domain": "akeneo.com",
+      "grade": "C",
+      "evidence": "Listed as a company using Notion in the TheirStack technology database.",
+      "source_url": "https://theirstack.com/en/technology/notion",
+      "confidence": "low"
+    },
+    {
+      "name": "Antler",
+      "domain": "antler.co",
+      "grade": "C",
+      "evidence": "Listed as a company using Notion in the TheirStack technology database.",
+      "source_url": "https://theirstack.com/en/technology/notion",
+      "confidence": "low"
+    },
+    {
+      "name": "Cronometer",
+      "domain": "cronometer.com",
+      "grade": "C",
+      "evidence": "Listed as a paying Notion customer in the bloomberry tech-stack database.",
+      "source_url": "https://bloomberry.com/data/notion/",
+      "confidence": "low"
+    },
+    {
+      "name": "Funko",
+      "domain": "funko.com",
+      "grade": "C",
+      "evidence": "Listed as a paying Notion customer in the bloomberry tech-stack database.",
+      "source_url": "https://bloomberry.com/data/notion/",
+      "confidence": "low"
+    },
+    {
+      "name": "HackerRank",
+      "domain": "hackerrank.com",
+      "grade": "C",
+      "evidence": "Listed as a company using Notion in the Enlyft technology database.",
+      "source_url": "https://enlyft.com/tech/products/notion",
+      "confidence": "low"
+    },
+    {
+      "name": "Handshake",
+      "domain": "joinhandshake.com",
+      "grade": "C",
+      "evidence": "Listed as a company using Notion in the TheirStack technology database.",
+      "source_url": "https://theirstack.com/en/technology/notion",
+      "confidence": "low"
+    },
+    {
+      "name": "Mediavine",
+      "domain": "mediavine.com",
+      "grade": "C",
+      "evidence": "Listed as a company using Notion in the Enlyft technology database.",
+      "source_url": "https://enlyft.com/tech/products/notion",
+      "confidence": "low"
+    },
+    {
+      "name": "OneDigital",
+      "domain": "onedigital.com",
+      "grade": "C",
+      "evidence": "Listed as a paying Notion customer in the bloomberry tech-stack database.",
+      "source_url": "https://bloomberry.com/data/notion/",
+      "confidence": "low"
+    },
+    {
+      "name": "Productboard",
+      "domain": "productboard.com",
+      "grade": "C",
+      "evidence": "Listed as a company using Notion in the Enlyft technology database.",
+      "source_url": "https://enlyft.com/tech/products/notion",
+      "confidence": "low"
+    },
+    {
+      "name": "Prolific",
+      "domain": "prolific.com",
+      "grade": "C",
+      "evidence": "Listed as a company using Notion in the TheirStack technology database.",
+      "source_url": "https://theirstack.com/en/technology/notion",
+      "confidence": "low"
+    },
+    {
+      "name": "STATION F",
+      "domain": "stationf.co",
+      "grade": "C",
+      "evidence": "Listed as a company using Notion in the TheirStack technology database.",
+      "source_url": "https://theirstack.com/en/technology/notion",
+      "confidence": "low"
+    },
+    {
+      "name": "Strava",
+      "domain": "strava.com",
+      "grade": "C",
+      "evidence": "Listed as a paying Notion customer in the bloomberry tech-stack database.",
+      "source_url": "https://bloomberry.com/data/notion/",
+      "confidence": "low"
+    },
+    {
+      "name": "Upwork",
+      "domain": "upwork.com",
+      "grade": "C",
+      "evidence": "Listed as a company using Notion in the Enlyft technology database.",
+      "source_url": "https://enlyft.com/tech/products/notion",
+      "confidence": "low"
+    }
+  ],
+  "generated_at": "2026-08-17T08:34:49Z",
+  "company_count": 94
+}
