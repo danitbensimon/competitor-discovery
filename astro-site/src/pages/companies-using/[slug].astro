@@ -338,6 +338,8 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
         if (title) title.textContent = isCsv ? 'Get the full list as CSV' : 'Get the full list as Excel';
         if (submit) submit.textContent = isCsv ? 'Download CSV →' : 'Download Excel →';
         gate.style.display = 'flex';
+        // GA4: gate opened - download intent. Compare with file_download to see abandonment.
+        try { if (typeof gtag === 'function') gtag('event', 'gate_open', { list_slug: DATA.slug, file_extension: gateAction }); } catch(_){}
         var e = document.getElementById('ciq-email');
         var stored = null;
         try { stored = localStorage.getItem(GATE_KEY); } catch(_){}
@@ -371,6 +373,8 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
           });
         } catch(_){}
         gate.style.display = 'none';
+          // GA4: gated download completed - this is the conversion event
+          try { if (typeof gtag === 'function') gtag('event', 'file_download', { file_name: DATA.slug + '_customers.' + gateAction, file_extension: gateAction, list_slug: DATA.slug, method: 'email_gate' }); } catch(_){}
         if (gateAction === 'csv') { doCsv(); } else { doXlsx(); }
       });
       function doXlsx(){
