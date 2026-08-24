@@ -1,0 +1,603 @@
+{
+  "competitor": {
+    "name": "AuditBoard",
+    "slug": "auditboard",
+    "domain": "auditboard.com"
+  },
+  "companies": [
+    {
+      "name": "BNY Mellon",
+      "domain": "bny.com",
+      "grade": "A",
+      "evidence": "It really was built for purpose. It didn't require much, if any, customization off the shelf.",
+      "source_url": "https://optro.ai/blog/bny-mellon-sox-controls-success-story",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Commerce Bank",
+      "domain": "commercebank.com",
+      "grade": "A",
+      "evidence": "I can't say enough about AuditBoard - I enjoy getting in there every day.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/case-studies",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Edgewell Personal Care",
+      "domain": "edgewell.com",
+      "grade": "A",
+      "evidence": "AuditBoard is a simplification and automation engine that makes me a partner to most departments.",
+      "source_url": "https://optro.ai/blog/success-story-edgewell",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Estée Lauder",
+      "domain": "elcompanies.com",
+      "grade": "A",
+      "evidence": "We were using prior audit software that was limiting us as a team.",
+      "source_url": "https://auditboard.com/blog/estee-lauder-success-story",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Humana",
+      "domain": "humana.com",
+      "grade": "A",
+      "evidence": "How Humana Breaks Down Silos to Collaborate on Key Risks",
+      "source_url": "https://auditboard.com/blog/success-story-humana",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Lennar",
+      "domain": "lennar.com",
+      "grade": "A",
+      "evidence": "Prior to AuditBoard, we were primarily in Excel, and that brought a whole host of issues from version control.",
+      "source_url": "https://optro.ai/blog/lennar-homes-success-story",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Lionsgate",
+      "domain": "lionsgate.com",
+      "grade": "A",
+      "evidence": "I was so pleasantly surprised when I saw AuditBoard. It was just what we needed.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/testimonials",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "PACCAR",
+      "domain": "paccar.com",
+      "grade": "A",
+      "evidence": "Thanks to AuditBoard's commitment to its customers, our team has been able to focus on high-priority tasks.",
+      "source_url": "https://optro.ai/blog/over-50-percent-of-fortune-500-now-use-auditboards-modern-connected-risk-platform",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "PetSmart",
+      "domain": "petsmart.com",
+      "grade": "A",
+      "evidence": "Our stakeholders have really embraced AuditBoard. They appreciate how easy it is to use the system.",
+      "source_url": "https://optro.ai/blog/petsmart-audit-success-story",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Snowflake",
+      "domain": "snowflake.com",
+      "grade": "A",
+      "evidence": "How Snowflake Uses Continuous Monitoring to Proactively Identify Risk",
+      "source_url": "https://auditboard.com/blog/snowflake-success-story",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "SPX FLOW",
+      "domain": "spxflow.com",
+      "grade": "A",
+      "evidence": "We come from an organization where the AuditBoard instance was fairly mature.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/testimonials",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Teradata",
+      "domain": "teradata.com",
+      "grade": "A",
+      "evidence": "How Teradata Connects Relevant Risk Insights Across the Enterprise",
+      "source_url": "https://auditboard.com/blog/success-story-teradata",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "A-Mark Precious Metals",
+      "domain": "amark.com",
+      "grade": "B",
+      "evidence": "The company is growing rapidly and we are international.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/testimonials",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Altra Motion",
+      "domain": "altramotion.com",
+      "grade": "B",
+      "evidence": "How Altra Motion's Internal Audit Team Leverages Tech to Get Ahead During a Crisis",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/case-studies",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Amsted Industries",
+      "domain": "amsted.com",
+      "grade": "B",
+      "evidence": "How Amsted Industries Cut Hundreds of Hours From Its SOX Process",
+      "source_url": "https://auditboard.com/blog/success-story-amsted-industries",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Berkadia",
+      "domain": "berkadia.com",
+      "grade": "B",
+      "evidence": "How Berkadia Collaborates Across Functions to Manage Risk",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/case-studies",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Carrier",
+      "domain": "carrier.com",
+      "grade": "B",
+      "evidence": "We needed a solution that gave us the flexibility to redefine what our internal audit processes were.",
+      "source_url": "https://optro.ai/blog/carrier-success-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Constellium",
+      "domain": "constellium.com",
+      "grade": "B",
+      "evidence": "What used to take several days of effort now requires only a few hours.",
+      "source_url": "https://optro.ai/blog/success-story-constellium",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Cornerstone OnDemand",
+      "domain": "cornerstoneondemand.com",
+      "grade": "B",
+      "evidence": "SOXHUB empowers teams to scale their SOX compliance operations.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/testimonials",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Darling Ingredients",
+      "domain": "darlingii.com",
+      "grade": "B",
+      "evidence": "Darling Ingredients has over 10,000 employees across five continents.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Dayforce",
+      "domain": "dayforce.com",
+      "grade": "B",
+      "evidence": "We don't get that anymore - we get timely responses. The workflow makes it easy to provide evidence.",
+      "source_url": "https://optro.ai/blog/success-story-ceridian/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Deckers Brands",
+      "domain": "deckers.com",
+      "grade": "B",
+      "evidence": "The biggest pain point SOXHUB resolved was organization.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/testimonials",
+      "confidence": "Verified"
+    },
+    {
+      "name": "EPAM Systems",
+      "domain": "epam.com",
+      "grade": "B",
+      "evidence": "The efficiency that we sought to gain - and ultimately did gain - with the solution was significant.",
+      "source_url": "https://optro.ai/blog/success-story-epam",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Exelon",
+      "domain": "exeloncorp.com",
+      "grade": "B",
+      "evidence": "Its customers include TripAdvisor, Lionsgate, Lululemon, HD Supply, Exelon, TrueCar, Express Scripts and Spirit Airlines.",
+      "source_url": "https://www.accountingtoday.com/news/auditboard-raises-40m-in-series-b-funding",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Express Scripts",
+      "domain": "express-scripts.com",
+      "grade": "B",
+      "evidence": "The company counts major clients like TripAdvisor, Lululemon, HD Supply, Express Scripts and Spirit Airlines.",
+      "source_url": "https://techcrunch.com/2018/08/15/with-40-million-for-auditboards-risk-and-compliance-toolkit-las-enterprise-startups-notch-another-win/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Falcon Bank",
+      "domain": "falconbank.com",
+      "grade": "B",
+      "evidence": "If you're considering software, you definitely want to consider AuditBoard.",
+      "source_url": "https://optro.ai/blog/falcon-bank-audit-success-story/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Figure Technologies",
+      "domain": "figure.com",
+      "grade": "B",
+      "evidence": "I'm really glad I implemented it because it does streamline my entire process.",
+      "source_url": "https://optro.ai/blog/success-story-figure",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Finastra",
+      "domain": "finastra.com",
+      "grade": "B",
+      "evidence": "How Finastra Turns Risk Insights Into a Competitive Advantage",
+      "source_url": "https://www.auditboard.com/auditboard-tv/spotlight-on-success/how-finastra-turns-risk-insights-into-a-competitive-advantage/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Gulf Coast Bank and Trust",
+      "domain": "gulfbank.com",
+      "grade": "B",
+      "evidence": "It checked all the boxes we were looking for and helped us develop specific changes for reporting.",
+      "source_url": "https://optro.ai/blog/success-story-gulf-coast/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "HD Supply",
+      "domain": "hdsupply.com",
+      "grade": "B",
+      "evidence": "The company counts major clients like TripAdvisor, Lululemon, HD Supply, Express Scripts and Spirit Airlines.",
+      "source_url": "https://techcrunch.com/2018/08/15/with-40-million-for-auditboards-risk-and-compliance-toolkit-las-enterprise-startups-notch-another-win/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "InComm Payments",
+      "domain": "incomm.com",
+      "grade": "B",
+      "evidence": "How InComm Payments Automates Critical Processes with AuditBoard",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/case-studies",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Intel",
+      "domain": "intel.com",
+      "grade": "B",
+      "evidence": "Application is logical and well thought out functionality.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/testimonials",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Lululemon",
+      "domain": "lululemon.com",
+      "grade": "B",
+      "evidence": "The company counts major clients like TripAdvisor, Lululemon, HD Supply, Express Scripts and Spirit Airlines.",
+      "source_url": "https://techcrunch.com/2018/08/15/with-40-million-for-auditboards-risk-and-compliance-toolkit-las-enterprise-startups-notch-another-win/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Mad Mobile",
+      "domain": "madmobile.com",
+      "grade": "B",
+      "evidence": "The enemy of a successful GRC program is this silo mentality.",
+      "source_url": "https://optro.ai/blog/success-story-mad-mobile",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Mailchimp",
+      "domain": "mailchimp.com",
+      "grade": "B",
+      "evidence": "Mailchimp boosted ERM efficiency by 300% with AuditBoard.",
+      "source_url": "https://auditboard.com/blog/mailchimp-risk-success-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Marmon Holdings",
+      "domain": "marmon.com",
+      "grade": "B",
+      "evidence": "The audit team finds AuditBoard very simple to use and intuitive.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard",
+      "confidence": "Verified"
+    },
+    {
+      "name": "MDA",
+      "domain": "mda.space",
+      "grade": "B",
+      "evidence": "It has exceeded my expectations on ease of use, being able to customize the exports you need for reporting.",
+      "source_url": "https://optro.ai/blog/success-story-mda",
+      "confidence": "Verified"
+    },
+    {
+      "name": "National Storage Affiliates",
+      "domain": "nsareit.net",
+      "grade": "B",
+      "evidence": "It was developed by people who have sat in our seats and done the work that we're doing.",
+      "source_url": "https://optro.ai/blog/success-story-national-storage-affiliates",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Open Dealer Exchange",
+      "domain": "opendealerexchange.com",
+      "grade": "B",
+      "evidence": "We were doing control testing, third party risk assessments, corporate risk management.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/testimonials",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Party City",
+      "domain": "partycity.com",
+      "grade": "B",
+      "evidence": "AuditBoard saved us 30-40% of the hours we used to spend on administrative activities.",
+      "source_url": "https://optro.ai/blog/success-story-party-city",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Population Services International",
+      "domain": "psi.org",
+      "grade": "B",
+      "evidence": "How PSI Boosted Management Action Plan Implementation by 30%",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/case-studies",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Primerica",
+      "domain": "primerica.com",
+      "grade": "B",
+      "evidence": "I was mostly influenced by its simplicity and how easy it was to integrate.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/testimonials",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Procore Technologies",
+      "domain": "procore.com",
+      "grade": "B",
+      "evidence": "My favorite feature was the IPE listing.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/testimonials",
+      "confidence": "Verified"
+    },
+    {
+      "name": "PSI (Talent Assessment)",
+      "domain": "psionline.com",
+      "grade": "B",
+      "evidence": "Our job is to deliver results with integrity, transparency, and accountability.",
+      "source_url": "https://optro.ai/blog/success-story-psi",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Quiksilver",
+      "domain": "quiksilver.com",
+      "grade": "B",
+      "evidence": "We all love using the tool. It has been easy to transition consultants to work in SOXHUB.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/testimonials",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Revlon",
+      "domain": "revlon.com",
+      "grade": "B",
+      "evidence": "Without AuditBoard, we couldn't do the same amount of work globally.",
+      "source_url": "https://optro.ai/blog/success-story-revlon",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Ruiz Foods",
+      "domain": "ruizfoods.com",
+      "grade": "B",
+      "evidence": "How Ruiz Foods's CAE and Co-Source Partner RSM Collaborate Effectively Using AuditBoard",
+      "source_url": "https://auditboard.com/auditboard-tv/spotlight-on-success/how-ruiz-foodss-cae-and-co-source-partner-rsm-collaborate-effectively-using-auditboard",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Semtech",
+      "domain": "semtech.com",
+      "grade": "B",
+      "evidence": "It felt like I was working with peers on an IA team.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/testimonials",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Spirit Airlines",
+      "domain": "spirit.com",
+      "grade": "B",
+      "evidence": "The company counts major clients like TripAdvisor, Lululemon, HD Supply, Express Scripts and Spirit Airlines.",
+      "source_url": "https://techcrunch.com/2018/08/15/with-40-million-for-auditboards-risk-and-compliance-toolkit-las-enterprise-startups-notch-another-win/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Stellar Bank",
+      "domain": "stellar.bank",
+      "grade": "B",
+      "evidence": "It has been invaluable as a streamlined, automated change management program as we move forward.",
+      "source_url": "https://optro.ai/blog/success-story-stellar-bank",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Syniverse",
+      "domain": "syniverse.com",
+      "grade": "B",
+      "evidence": "I don't really feel like they see us as customers, but as partners - and that's huge.",
+      "source_url": "https://optro.ai/blog/success-story-syniverse",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Tennant",
+      "domain": "tennantco.com",
+      "grade": "B",
+      "evidence": "The first year that I spent at Tennant, it was hard to understand where we were at.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/testimonials",
+      "confidence": "Verified"
+    },
+    {
+      "name": "The Cooper Companies",
+      "domain": "coopercos.com",
+      "grade": "B",
+      "evidence": "Compared to other implementations of SOX and audit tools that I've been a part of - it is unbelievably simple.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard",
+      "confidence": "Verified"
+    },
+    {
+      "name": "The Toro Company",
+      "domain": "thetorocompany.com",
+      "grade": "B",
+      "evidence": "It allows us to go further with the same hours. Our staff are more efficient.",
+      "source_url": "https://optro.ai/blog/success-story-the-toro-company",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Thryv",
+      "domain": "thryv.com",
+      "grade": "B",
+      "evidence": "We've found, time and time again, that AuditBoard just makes sense.",
+      "source_url": "https://optro.ai/blog/success-story-thryv-inc",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Tripadvisor",
+      "domain": "tripadvisor.com",
+      "grade": "B",
+      "evidence": "SOXHUB is user friendly. With the dashboard, it's a very seamless process.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/testimonials",
+      "confidence": "Verified"
+    },
+    {
+      "name": "TrueCar",
+      "domain": "truecar.com",
+      "grade": "B",
+      "evidence": "Its customers include TripAdvisor, Lionsgate, Lululemon, HD Supply, Exelon, TrueCar, Express Scripts and Spirit Airlines.",
+      "source_url": "https://www.accountingtoday.com/news/auditboard-raises-40m-in-series-b-funding",
+      "confidence": "Verified"
+    },
+    {
+      "name": "U.S. Xpress",
+      "domain": "usxpress.com",
+      "grade": "B",
+      "evidence": "They've threatened to leave if we ever get rid of it, so, that's not happening!",
+      "source_url": "https://optro.ai/blog/success-story-us-xpress",
+      "confidence": "Verified"
+    },
+    {
+      "name": "United Bankshares",
+      "domain": "ubsi-inc.com",
+      "grade": "B",
+      "evidence": "How United Bankshares, Inc. Drove 35% Cost Savings",
+      "source_url": "https://auditboard.com/blog/united-bankshares-success-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Virginia Tech",
+      "domain": "vt.edu",
+      "grade": "B",
+      "evidence": "AuditBoard is automatically tying all that together for us.",
+      "source_url": "https://www.featuredcustomers.com/vendor/auditboard/case-studies",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Vulcan Materials",
+      "domain": "vulcanmaterials.com",
+      "grade": "B",
+      "evidence": "The decision to use AuditBoard was really about several issues we were experiencing with our previous solution.",
+      "source_url": "https://optro.ai/blog/success-story-vulcan-materials",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Wise",
+      "domain": "wise.com",
+      "grade": "B",
+      "evidence": "Now we're at a stage where we have more than 500 monthly users.",
+      "source_url": "https://optro.ai/blog/spotlight-on-success-wise",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Adidas",
+      "domain": "adidas.com",
+      "grade": "C",
+      "evidence": "The platform has also been adopted by companies like PwC, Lyft, Snowflake, and Adidas.",
+      "source_url": "https://www.viewpointanalysis.com/post/who-are-auditboard",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Amgen",
+      "domain": "amgen.com",
+      "grade": "C",
+      "evidence": "Notable customers include companies like PACCAR, Cisco, Amgen, Lennar, Dunkin' Donuts, Columbia, and Priceline.",
+      "source_url": "https://www.viewpointanalysis.com/post/who-are-auditboard",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Cisco",
+      "domain": "cisco.com",
+      "grade": "C",
+      "evidence": "Notable customers include companies like PACCAR, Cisco, Amgen, Lennar, Dunkin' Donuts, Columbia, and Priceline.",
+      "source_url": "https://www.viewpointanalysis.com/post/who-are-auditboard",
+      "confidence": "Likely"
+    },
+    {
+      "name": "CNA Financial",
+      "domain": "cna.com",
+      "grade": "C",
+      "evidence": "Loews Corporation (CNA Financial Corporation) implementing AuditBoard for Governance, Risk and Compliance.",
+      "source_url": "https://www.appsruntheworld.com/customers-database/products/view/auditboard",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Columbia Sportswear",
+      "domain": "columbia.com",
+      "grade": "C",
+      "evidence": "Notable customers include companies like PACCAR, Cisco, Amgen, Lennar, Dunkin' Donuts, Columbia, and Priceline.",
+      "source_url": "https://www.viewpointanalysis.com/post/who-are-auditboard",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Dunkin'",
+      "domain": "dunkindonuts.com",
+      "grade": "C",
+      "evidence": "Notable customers include companies like PACCAR, Cisco, Amgen, Lennar, Dunkin' Donuts, Columbia, and Priceline.",
+      "source_url": "https://www.viewpointanalysis.com/post/who-are-auditboard",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Lyft",
+      "domain": "lyft.com",
+      "grade": "C",
+      "evidence": "The platform has also been adopted by companies like PwC, Lyft, Snowflake, and Adidas.",
+      "source_url": "https://www.viewpointanalysis.com/post/who-are-auditboard",
+      "confidence": "Likely"
+    },
+    {
+      "name": "McDermott International",
+      "domain": "mcdermott.com",
+      "grade": "C",
+      "evidence": "McDermott listed as a recorded AuditBoard GRC user.",
+      "source_url": "https://www.appsruntheworld.com/customers-database/products/view/auditboard",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Priceline",
+      "domain": "priceline.com",
+      "grade": "C",
+      "evidence": "Notable customers include companies like PACCAR, Cisco, Amgen, Lennar, Dunkin' Donuts, Columbia, and Priceline.",
+      "source_url": "https://www.viewpointanalysis.com/post/who-are-auditboard",
+      "confidence": "Likely"
+    },
+    {
+      "name": "PTC",
+      "domain": "ptc.com",
+      "grade": "C",
+      "evidence": "PTC listed as a recorded AuditBoard GRC user.",
+      "source_url": "https://www.appsruntheworld.com/customers-database/products/view/auditboard",
+      "confidence": "Likely"
+    },
+    {
+      "name": "PwC",
+      "domain": "pwc.com",
+      "grade": "C",
+      "evidence": "The platform has also been adopted by companies like PwC, Lyft, Snowflake, and Adidas.",
+      "source_url": "https://www.viewpointanalysis.com/post/who-are-auditboard",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Visteon",
+      "domain": "visteon.com",
+      "grade": "C",
+      "evidence": "Visteon listed as a recorded AuditBoard GRC user.",
+      "source_url": "https://www.appsruntheworld.com/customers-database/products/view/auditboard",
+      "confidence": "Likely"
+    }
+  ],
+  "generated_at": "2026-08-24T08:44:57Z",
+  "company_count": 74
+}
