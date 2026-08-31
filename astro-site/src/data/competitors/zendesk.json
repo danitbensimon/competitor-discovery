@@ -1,0 +1,4235 @@
+{
+  "competitor": {
+    "name": "Zendesk",
+    "slug": "zendesk",
+    "domain": "zendesk.com"
+  },
+  "companies": [
+    {
+      "name": "ABBYY",
+      "domain": "abbyy.com",
+      "grade": "A",
+      "evidence": "ABBYY + Zendesk: Sophisticated products, global clientele, quality B2B & B2C support",
+      "source_url": "https://www.zendesk.com/customer/abbyy/",
+      "confidence": "high"
+    },
+    {
+      "name": "AboitizPower",
+      "domain": "aboitizpower.com",
+      "grade": "A",
+      "evidence": "AboitizPower amps up efficiency and shines light on customers with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/aboitizpower/",
+      "confidence": "high"
+    },
+    {
+      "name": "Absorb Software",
+      "domain": "absorblms.com",
+      "grade": "A",
+      "evidence": "Absorb LMS + best-in-class CX = happier customers",
+      "source_url": "https://www.zendesk.com/customer/absorb-software/",
+      "confidence": "high"
+    },
+    {
+      "name": "Accent Group",
+      "domain": "accentgr.com.au",
+      "grade": "A",
+      "evidence": "Accent Group elevates CX with Zendesk messaging",
+      "source_url": "https://www.zendesk.com/customer/accent-group-messaging/",
+      "confidence": "high"
+    },
+    {
+      "name": "Accor Plus",
+      "domain": "accorplus.com",
+      "grade": "A",
+      "evidence": "Accor Plus drives more revenue with a conversational strategy",
+      "source_url": "https://www.zendesk.com/customer/accor-plus/",
+      "confidence": "high"
+    },
+    {
+      "name": "ACLU",
+      "domain": "aclu.org",
+      "grade": "A",
+      "evidence": "ACLU finds new efficiency and help protecting donor data with Zendesk CX",
+      "source_url": "https://www.zendesk.com/customer/aclu/",
+      "confidence": "high"
+    },
+    {
+      "name": "Action Property Management",
+      "domain": "actionlife.com",
+      "grade": "A",
+      "evidence": "Zendesk AI helps Action Property Management homeowners love where they live",
+      "source_url": "https://www.zendesk.com/customer/action-property-management/",
+      "confidence": "high"
+    },
+    {
+      "name": "Agoda",
+      "domain": "agoda.com",
+      "grade": "A",
+      "evidence": "Agoda connects travel partners and employees with effective service",
+      "source_url": "https://www.zendesk.com/customer/agoda/",
+      "confidence": "high"
+    },
+    {
+      "name": "All About Food",
+      "domain": "allaboutfood.co.uk",
+      "grade": "A",
+      "evidence": "All About Food teamed up with Route 101 to implement the Zendesk Suite Professional.",
+      "source_url": "https://www.route101.com/customer-stories/all-about-food",
+      "confidence": "high"
+    },
+    {
+      "name": "AMBOSS",
+      "domain": "amboss.com",
+      "grade": "A",
+      "evidence": "How Zendesk helps AMBOSS serve as THE reference tool for medical professionals",
+      "source_url": "https://www.zendesk.com/customer/amboss/",
+      "confidence": "high"
+    },
+    {
+      "name": "Arajet",
+      "domain": "arajet.com",
+      "grade": "A",
+      "evidence": "Arajet scales customer and employee service with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/arajet/",
+      "confidence": "high"
+    },
+    {
+      "name": "Arbor Education",
+      "domain": "arbor-education.com",
+      "grade": "A",
+      "evidence": "Arbor Education learns that Zendesk AI is the right answer",
+      "source_url": "https://www.zendesk.com/customer/arbor-education/",
+      "confidence": "high"
+    },
+    {
+      "name": "ATG Entertainment",
+      "domain": "atg.co.uk",
+      "grade": "A",
+      "evidence": "How Zendesk QA helps to perfect ATG's support",
+      "source_url": "https://www.zendesk.com/customer/atg-qa/",
+      "confidence": "high"
+    },
+    {
+      "name": "Auctane",
+      "domain": "auctane.com",
+      "grade": "A",
+      "evidence": "Auctane building personalized customer journeys",
+      "source_url": "https://www.zendesk.com/customer/auctane/",
+      "confidence": "high"
+    },
+    {
+      "name": "Audacy",
+      "domain": "audacy.com",
+      "grade": "A",
+      "evidence": "Audacy ups productivity with Zendesk's AI-powered IT service",
+      "source_url": "https://www.zendesk.com/customer/audacy/",
+      "confidence": "high"
+    },
+    {
+      "name": "Automattic",
+      "domain": "automattic.com",
+      "grade": "A",
+      "evidence": "How remote company Automattic makes peer reviews work",
+      "source_url": "https://www.zendesk.com/customer/automattic-qa/",
+      "confidence": "high"
+    },
+    {
+      "name": "Avianca",
+      "domain": "avianca.com",
+      "grade": "A",
+      "evidence": "Avianca lifts CX delivery with Zendesk AI & QA",
+      "source_url": "https://www.zendesk.com/customer/avianca/",
+      "confidence": "high"
+    },
+    {
+      "name": "Avon",
+      "domain": "avon.com",
+      "grade": "A",
+      "evidence": "Avon's century-old legacy embraces the future of employee service with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/avon/",
+      "confidence": "high"
+    },
+    {
+      "name": "Azerbaijan Airlines",
+      "domain": "azal.az",
+      "grade": "A",
+      "evidence": "Azerbaijan Airlines + Zendesk: Maintaining a 10 point lead in amazing customer service",
+      "source_url": "https://www.zendesk.com/customer/azerbaijan-airlines/",
+      "confidence": "high"
+    },
+    {
+      "name": "Aéroports de Lyon",
+      "domain": "lyonaeroports.com",
+      "grade": "A",
+      "evidence": "Aéroports de Lyon delivers top-flight CX with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/aeroports-de-lyon/",
+      "confidence": "high"
+    },
+    {
+      "name": "Babbel",
+      "domain": "babbel.com",
+      "grade": "A",
+      "evidence": "Zendesk AI speaks Babbel's language",
+      "source_url": "https://www.zendesk.com/customer/babbel/",
+      "confidence": "high"
+    },
+    {
+      "name": "Baleària",
+      "domain": "balearia.com",
+      "grade": "A",
+      "evidence": "Baleària + Zendesk: Serving passengers safely with seamless messaging",
+      "source_url": "https://www.zendesk.com/customer/balearia/",
+      "confidence": "high"
+    },
+    {
+      "name": "Bally's",
+      "domain": "ballys.com",
+      "grade": "A",
+      "evidence": "Bally's differentiates itself in a crowded market with evolved CX",
+      "source_url": "https://www.zendesk.com/customer/ballys/",
+      "confidence": "high"
+    },
+    {
+      "name": "Banc Sabadell",
+      "domain": "bancsabadell.com",
+      "grade": "A",
+      "evidence": "Banc Sabadell sees chat as an ally in customer service strategy",
+      "source_url": "https://www.zendesk.com/customer/banc-sabadell/",
+      "confidence": "high"
+    },
+    {
+      "name": "Beloit College",
+      "domain": "beloit.edu",
+      "grade": "A",
+      "evidence": "Beloit College + Zendesk: How a school's IT team transformed its workflow",
+      "source_url": "https://www.zendesk.com/customer/beloit/",
+      "confidence": "high"
+    },
+    {
+      "name": "Benevity",
+      "domain": "benevity.com",
+      "grade": "A",
+      "evidence": "Benevity transforms ticket triaging with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/benevity/",
+      "confidence": "high"
+    },
+    {
+      "name": "Best Egg",
+      "domain": "bestegg.com",
+      "grade": "A",
+      "evidence": "Best Egg uses Zendesk AI to automate 80% of chat inquiries",
+      "source_url": "https://www.zendesk.com/customer/best-egg/",
+      "confidence": "high"
+    },
+    {
+      "name": "Bethel School District",
+      "domain": "bethelsd.org",
+      "grade": "A",
+      "evidence": "Bethel Schools streamlines employee IT service with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/bethel-schools/",
+      "confidence": "high"
+    },
+    {
+      "name": "BetMGM Brasil",
+      "domain": "betmgm.com.br",
+      "grade": "A",
+      "evidence": "BetMGM Brasil doubles down on the player experience with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/betmgm-brasil/",
+      "confidence": "high"
+    },
+    {
+      "name": "BetterBro",
+      "domain": "",
+      "grade": "A",
+      "evidence": "Zendesk has optimized our help desk operations, automated key processes, and enabled us to deliver fast, efficient customer support.",
+      "source_url": "https://cloudfresh.com/en/case-category/zendesk-case-studies/",
+      "confidence": "high"
+    },
+    {
+      "name": "Bilt",
+      "domain": "biltrewards.com",
+      "grade": "A",
+      "evidence": "Bilt powers operational visibility with Zendesk and Qvasa",
+      "source_url": "https://www.zendesk.com/customer/bilt/",
+      "confidence": "high"
+    },
+    {
+      "name": "Bitly",
+      "domain": "bitly.com",
+      "grade": "A",
+      "evidence": "Bitly boosts productivity with Agent Workspace and AI agents",
+      "source_url": "https://www.zendesk.com/customer/bitly/",
+      "confidence": "high"
+    },
+    {
+      "name": "Blue Style",
+      "domain": "blue-style.cz",
+      "grade": "A",
+      "evidence": "For now, we have been using Zendesk for a long time and continue improving our customer service",
+      "source_url": "https://cloudfresh.com/en/case-category/zendesk-case-studies/",
+      "confidence": "high"
+    },
+    {
+      "name": "Boll & Branch",
+      "domain": "bollandbranch.com",
+      "grade": "A",
+      "evidence": "Boll & Branch uses AI to maintain 'unreasonable hospitality'",
+      "source_url": "https://www.zendesk.com/customer/boll-branch/",
+      "confidence": "high"
+    },
+    {
+      "name": "BombBomb",
+      "domain": "bombbomb.com",
+      "grade": "A",
+      "evidence": "BombBomb improves CSAT with video support",
+      "source_url": "https://www.zendesk.com/customer/bombbomb/",
+      "confidence": "high"
+    },
+    {
+      "name": "Box",
+      "domain": "box.com",
+      "grade": "A",
+      "evidence": "Box sees positive CX results from Zendesk's API and Apps Framework",
+      "source_url": "https://www.zendesk.com/customer/box/",
+      "confidence": "high"
+    },
+    {
+      "name": "BRITA",
+      "domain": "brita.com",
+      "grade": "A",
+      "evidence": "BRITA Iberia optimizes its customer service with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/brita-iberia/",
+      "confidence": "high"
+    },
+    {
+      "name": "BritBox",
+      "domain": "britbox.com",
+      "grade": "A",
+      "evidence": "How BritBox maintains white glove CX with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/britbox/",
+      "confidence": "high"
+    },
+    {
+      "name": "Calendly",
+      "domain": "calendly.com",
+      "grade": "A",
+      "evidence": "Calendly doubles IT service productivity",
+      "source_url": "https://www.zendesk.com/customer/calendly/",
+      "confidence": "high"
+    },
+    {
+      "name": "Calvert County",
+      "domain": "calvertcountymd.gov",
+      "grade": "A",
+      "evidence": "Calvert County improves citizen engagement with Zendesk and SweetHawk",
+      "source_url": "https://www.zendesk.com/customer/calvert-county-2/",
+      "confidence": "high"
+    },
+    {
+      "name": "Canva",
+      "domain": "canva.com",
+      "grade": "A",
+      "evidence": "Canva turns customer insights into product innovation with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/canva/",
+      "confidence": "high"
+    },
+    {
+      "name": "CARET",
+      "domain": "caret.com",
+      "grade": "A",
+      "evidence": "CARET elevates its brand with customer-first experiences",
+      "source_url": "https://www.zendesk.com/customer/caret/",
+      "confidence": "high"
+    },
+    {
+      "name": "Cargas Systems",
+      "domain": "cargas.com",
+      "grade": "A",
+      "evidence": "Cargas + Zendesk: A partnership driving innovation in CX",
+      "source_url": "https://www.zendesk.com/customer/cargas-systems/",
+      "confidence": "high"
+    },
+    {
+      "name": "Carousell",
+      "domain": "carousell.com",
+      "grade": "A",
+      "evidence": "Carousell expands with multilingual self-service",
+      "source_url": "https://www.zendesk.com/customer/carousell/",
+      "confidence": "high"
+    },
+    {
+      "name": "Carsales",
+      "domain": "carsales.com.au",
+      "grade": "A",
+      "evidence": "Carsales finds more agility, better data and 30:1 deflection by moving to Zendesk",
+      "source_url": "https://www.zendesk.com/customer/carsales/",
+      "confidence": "high"
+    },
+    {
+      "name": "Catapult",
+      "domain": "catapult.com",
+      "grade": "A",
+      "evidence": "Catapult offers elite CX performance with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/catapult/",
+      "confidence": "high"
+    },
+    {
+      "name": "Caudalie",
+      "domain": "caudalie.com",
+      "grade": "A",
+      "evidence": "Caudalie elevates its customer experience with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/caudalie/",
+      "confidence": "high"
+    },
+    {
+      "name": "Cebuana Lhuillier",
+      "domain": "cebuanalhuillier.com",
+      "grade": "A",
+      "evidence": "Cebuana Lhuillier achieves 90% CSAT and 70% NPS with Zendesk Suite",
+      "source_url": "https://www.zendesk.com/customer/cebuana-lhuillier/",
+      "confidence": "high"
+    },
+    {
+      "name": "Chiltern Railways",
+      "domain": "chilternrailways.co.uk",
+      "grade": "A",
+      "evidence": "How Chiltern Railways worked with Zendesk Premier Partner Appamondo to help agents use Copilot and QA",
+      "source_url": "https://www.zendesk.com/customer/chiltern-railways/",
+      "confidence": "high"
+    },
+    {
+      "name": "City of Hampton",
+      "domain": "hampton.gov",
+      "grade": "A",
+      "evidence": "The City of Hampton uses Zendesk Support to Increase internal engagement",
+      "source_url": "https://www.zendesk.com/customer/city-hampton/",
+      "confidence": "high"
+    },
+    {
+      "name": "City of Portland",
+      "domain": "portland.gov",
+      "grade": "A",
+      "evidence": "The City of Portland drives end-to-end digital services",
+      "source_url": "https://www.zendesk.com/customer/city-of-portland/",
+      "confidence": "high"
+    },
+    {
+      "name": "City of Saint Paul",
+      "domain": "stpaul.gov",
+      "grade": "A",
+      "evidence": "City of Saint Paul: Driving transparency in government with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/city-of-saint-paul/",
+      "confidence": "high"
+    },
+    {
+      "name": "City of Seattle SDCI",
+      "domain": "seattle.gov",
+      "grade": "A",
+      "evidence": "City of Seattle modernizes applicant support",
+      "source_url": "https://www.zendesk.com/customer/city-of-seattle-sdci/",
+      "confidence": "high"
+    },
+    {
+      "name": "CityGo",
+      "domain": "",
+      "grade": "A",
+      "evidence": "Quality over satisfaction: CityGo's strategic use of Zendesk QA",
+      "source_url": "https://www.zendesk.com/customer/citygo/",
+      "confidence": "high"
+    },
+    {
+      "name": "ClassPass",
+      "domain": "classpass.com",
+      "grade": "A",
+      "evidence": "ClassPass levels up 24/7 global support with Zendesk Messaging",
+      "source_url": "https://www.zendesk.com/customer/classpass-msg/",
+      "confidence": "high"
+    },
+    {
+      "name": "Coco Republic",
+      "domain": "cocorepublic.com.au",
+      "grade": "A",
+      "evidence": "Coco Republic elevates luxury service with Contact Center",
+      "source_url": "https://www.zendesk.com/customer/coco-republic/",
+      "confidence": "high"
+    },
+    {
+      "name": "Cognite",
+      "domain": "cognite.com",
+      "grade": "A",
+      "evidence": "Cognite drives operational excellence and superior CX with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/cognite/",
+      "confidence": "high"
+    },
+    {
+      "name": "Compass",
+      "domain": "compass.com",
+      "grade": "A",
+      "evidence": "Compass delivers white glove customer service at scale",
+      "source_url": "https://www.zendesk.com/customer/compass/",
+      "confidence": "high"
+    },
+    {
+      "name": "Concept2",
+      "domain": "concept2.com",
+      "grade": "A",
+      "evidence": "Concept2 takes exceptional CX to extraordinary with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/concept2/",
+      "confidence": "high"
+    },
+    {
+      "name": "Conrad Electronic",
+      "domain": "conrad.com",
+      "grade": "A",
+      "evidence": "Conrad Electronic's customer care: the digital pioneer for techies",
+      "source_url": "https://www.zendesk.com/customer/conrad-electronic/",
+      "confidence": "high"
+    },
+    {
+      "name": "Conservice",
+      "domain": "conservice.com",
+      "grade": "A",
+      "evidence": "Conservice ups service quality and cuts costs with Zendesk workforce tools",
+      "source_url": "https://www.zendesk.com/customer/conservice/",
+      "confidence": "high"
+    },
+    {
+      "name": "CoreLogic",
+      "domain": "corelogic.com",
+      "grade": "A",
+      "evidence": "CoreLogic powers CX by unifying communication channels",
+      "source_url": "https://www.zendesk.com/customer/corelogic/",
+      "confidence": "high"
+    },
+    {
+      "name": "Cotton On Group",
+      "domain": "cottonon.com",
+      "grade": "A",
+      "evidence": "Cotton On Group + Zendesk: 1700 stores, 20 countries, one CX platform",
+      "source_url": "https://www.zendesk.com/customer/cotton-on-group/",
+      "confidence": "high"
+    },
+    {
+      "name": "Coursera",
+      "domain": "coursera.org",
+      "grade": "A",
+      "evidence": "Everything from Zendesk Chat to Help Center to the core Support ticketing APIs has been tremendous for us.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=9",
+      "confidence": "high"
+    },
+    {
+      "name": "Decathlon",
+      "domain": "decathlon.com",
+      "grade": "A",
+      "evidence": "Decathlon enhances HR operations with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/decathlon/",
+      "confidence": "high"
+    },
+    {
+      "name": "Degreed",
+      "domain": "degreed.com",
+      "grade": "A",
+      "evidence": "Degreed sees $1M in cost savings by switching to Zendesk",
+      "source_url": "https://www.zendesk.com/customer/degreed/",
+      "confidence": "high"
+    },
+    {
+      "name": "Deputy",
+      "domain": "deputy.com",
+      "grade": "A",
+      "evidence": "Deputy uses data to take CX to the next level",
+      "source_url": "https://www.zendesk.com/customer/deputy/",
+      "confidence": "high"
+    },
+    {
+      "name": "Digidentity",
+      "domain": "digidentity.com",
+      "grade": "A",
+      "evidence": "Digidentity delivers secure, scalable support with Zendesk AI—achieving 67% automation",
+      "source_url": "https://www.zendesk.com/customer/digidentity/",
+      "confidence": "high"
+    },
+    {
+      "name": "Discord",
+      "domain": "discord.com",
+      "grade": "A",
+      "evidence": "url: https://hammerandchisel.zendesk.com/api/v2/help_center/en-us/categories/115000193752.json",
+      "source_url": "https://support.discord.com/api/v2/help_center/en-us/categories.json?per_page=1",
+      "confidence": "high"
+    },
+    {
+      "name": "DiscoverCars",
+      "domain": "discovercars.com",
+      "grade": "A",
+      "evidence": "DiscoverCars saves $138K annually with generative AI",
+      "source_url": "https://www.zendesk.com/customer/discovercars/",
+      "confidence": "high"
+    },
+    {
+      "name": "DistroKid",
+      "domain": "distrokid.com",
+      "grade": "A",
+      "evidence": "DistroKid steps up agility and efficiency with Zendesk pro services",
+      "source_url": "https://www.zendesk.com/customer/distrokid/",
+      "confidence": "high"
+    },
+    {
+      "name": "Docebo",
+      "domain": "docebo.com",
+      "grade": "A",
+      "evidence": "Docebo enhances B2B CX with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/docebo/",
+      "confidence": "high"
+    },
+    {
+      "name": "Dorm Room Movers",
+      "domain": "dormroommovers.com",
+      "grade": "A",
+      "evidence": "Dorm Room Movers scales and optimizes support for a digital generation",
+      "source_url": "https://www.zendesk.com/customer/dorm-room-movers-ai/",
+      "confidence": "high"
+    },
+    {
+      "name": "Dovetail Games",
+      "domain": "dovetailgames.com",
+      "grade": "A",
+      "evidence": "The award-winning simulation game developer migrated its Freshdesk data to Zendesk using the Standard plan.",
+      "source_url": "https://help-desk-migration.com/zendesk-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "DPG Media",
+      "domain": "dpgmedia.be",
+      "grade": "A",
+      "evidence": "The Facility department of DPG Media relies on Zendesk to ensure an optimal (internal) service",
+      "source_url": "https://premiumplus.io/customer-stories/page/2",
+      "confidence": "high"
+    },
+    {
+      "name": "DrFirst",
+      "domain": "drfirst.com",
+      "grade": "A",
+      "evidence": "DrFirst uses Zendesk Assist to simplify the complex",
+      "source_url": "https://www.zendesk.com/customer/drfirst/",
+      "confidence": "high"
+    },
+    {
+      "name": "Dunlop Sports",
+      "domain": "dunlopsports.com",
+      "grade": "A",
+      "evidence": "Dunlop Sports elevates its game with omnichannel CX",
+      "source_url": "https://www.zendesk.com/customer/dunlop-sports/",
+      "confidence": "high"
+    },
+    {
+      "name": "DuPage County",
+      "domain": "dupagecounty.gov",
+      "grade": "A",
+      "evidence": "DuPage County modernizes employee support and CX with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/dupage-county/",
+      "confidence": "high"
+    },
+    {
+      "name": "Dutch Bros",
+      "domain": "dutchbros.com",
+      "grade": "A",
+      "evidence": "Dutch Bros brews up major employee service success",
+      "source_url": "https://www.zendesk.com/customer/dutch-bros/",
+      "confidence": "high"
+    },
+    {
+      "name": "easyfundraising",
+      "domain": "easyfundraising.org.uk",
+      "grade": "A",
+      "evidence": "How easyfundraising's six-person team supports millions with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/easyfundraising/",
+      "confidence": "high"
+    },
+    {
+      "name": "Edenred",
+      "domain": "edenred.com",
+      "grade": "A",
+      "evidence": "How Zendesk-Aircall Integration Enhanced Edenred's Customer Service",
+      "source_url": "https://premiumplus.io/customer-stories",
+      "confidence": "high"
+    },
+    {
+      "name": "Eight Eleven Group",
+      "domain": "eightelevengroup.com",
+      "grade": "A",
+      "evidence": "Eight Eleven Group supports internal teams with Zendesk and AssetSonar",
+      "source_url": "https://www.zendesk.com/customer/eight-eleven-group/",
+      "confidence": "high"
+    },
+    {
+      "name": "Element Electronics",
+      "domain": "elementelectronics.com",
+      "grade": "A",
+      "evidence": "Element Electronics earns awards for CX success",
+      "source_url": "https://www.zendesk.com/customer/element-electronics/",
+      "confidence": "high"
+    },
+    {
+      "name": "emmy",
+      "domain": "emmy-sharing.de",
+      "grade": "A",
+      "evidence": "For the integration and setup of the Zendesk solutions, emmy brought on board Leafworks' IT consultants",
+      "source_url": "https://leafworks.de/en/our-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "END.",
+      "domain": "endclothing.com",
+      "grade": "A",
+      "evidence": "END. maximizes CX efficiency with Zendesk AI and Appamondo",
+      "source_url": "https://www.zendesk.com/customer/end/",
+      "confidence": "high"
+    },
+    {
+      "name": "enercity",
+      "domain": "enercity.de",
+      "grade": "A",
+      "evidence": "How enercity powered up its support with a 40% automation rate",
+      "source_url": "https://www.zendesk.com/customer/enercity/",
+      "confidence": "high"
+    },
+    {
+      "name": "Envato",
+      "domain": "envato.com",
+      "grade": "A",
+      "evidence": "Envato cuts first reply time with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/envato/",
+      "confidence": "high"
+    },
+    {
+      "name": "eoStar",
+      "domain": "eostar.com",
+      "grade": "A",
+      "evidence": "eoStar optimizes Zendesk for the ultimate CX solution",
+      "source_url": "https://www.zendesk.com/customer/eostar/",
+      "confidence": "high"
+    },
+    {
+      "name": "Equisoft",
+      "domain": "equisoft.com",
+      "grade": "A",
+      "evidence": "Equisoft + Zendesk: Digital transformation pioneer reimagines client support",
+      "source_url": "https://www.zendesk.com/customer/equisoft/",
+      "confidence": "high"
+    },
+    {
+      "name": "Esusu",
+      "domain": "esusurent.com",
+      "grade": "A",
+      "evidence": "Esusu moves to Zendesk for faster, AI-driven experiences",
+      "source_url": "https://www.zendesk.com/customer/esusu/",
+      "confidence": "high"
+    },
+    {
+      "name": "Eurail",
+      "domain": "eurail.com",
+      "grade": "A",
+      "evidence": "Eurail races along the tracks with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/eurail/",
+      "confidence": "high"
+    },
+    {
+      "name": "Events DC",
+      "domain": "eventsdc.com",
+      "grade": "A",
+      "evidence": "Events DC brings efficiency and insights to CX and internal teams",
+      "source_url": "https://www.zendesk.com/customer/events-dc/",
+      "confidence": "high"
+    },
+    {
+      "name": "Expedia",
+      "domain": "expedia.com",
+      "grade": "A",
+      "evidence": "we're not using Zendesk Support purely as a support tool. It is helping us manage more efficient launches",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=9",
+      "confidence": "high"
+    },
+    {
+      "name": "FABRIC TOKYO",
+      "domain": "fabric-tokyo.com",
+      "grade": "A",
+      "evidence": "FABRIC TOKYO leverages Zendesk proactive messaging to improve their customer experience",
+      "source_url": "https://www.zendesk.com/customer/fabric-tokyo/",
+      "confidence": "high"
+    },
+    {
+      "name": "FairPrice Group",
+      "domain": "fairprice.com.sg",
+      "grade": "A",
+      "evidence": "FairPrice Group + Zendesk: Breaking down silos at scale",
+      "source_url": "https://www.zendesk.com/customer/fairprice-group/",
+      "confidence": "high"
+    },
+    {
+      "name": "Federal Communications Commission",
+      "domain": "fcc.gov",
+      "grade": "A",
+      "evidence": "FCC saving taxpayers 85% with Zendesk CX solution",
+      "source_url": "https://www.zendesk.com/customer/fcc/",
+      "confidence": "high"
+    },
+    {
+      "name": "Fender",
+      "domain": "fender.com",
+      "grade": "A",
+      "evidence": "Fender uses Zendesk for main stage CX and business support",
+      "source_url": "https://www.zendesk.com/customer/fender/",
+      "confidence": "high"
+    },
+    {
+      "name": "Figma",
+      "domain": "figma.com",
+      "grade": "A",
+      "evidence": "url: https://figma.zendesk.com/api/v2/help_center/en-us/categories/360002051613.json",
+      "source_url": "https://help.figma.com/api/v2/help_center/en-us/categories.json?per_page=1",
+      "confidence": "high"
+    },
+    {
+      "name": "FirstKey Homes",
+      "domain": "firstkeyhomes.com",
+      "grade": "A",
+      "evidence": "FirstKey Homes leans on Zendesk AI and QA to set new standards",
+      "source_url": "https://www.zendesk.com/customer/firstkey-homes/",
+      "confidence": "high"
+    },
+    {
+      "name": "Five Iron Golf",
+      "domain": "fiveirongolf.com",
+      "grade": "A",
+      "evidence": "Five Iron Golf unifies customer conversations with Zendesk Contact Center",
+      "source_url": "https://www.zendesk.com/customer/five-iron-golf/",
+      "confidence": "high"
+    },
+    {
+      "name": "Fiverr",
+      "domain": "fiverr.com",
+      "grade": "A",
+      "evidence": "See how Fiverr uses Zendesk Support to serve its thriving marketplace",
+      "source_url": "https://www.zendesk.com/customer/fiverr/",
+      "confidence": "high"
+    },
+    {
+      "name": "Flywire",
+      "domain": "flywire.com",
+      "grade": "A",
+      "evidence": "Zendesk for Financial Services: EBP and Flywire",
+      "source_url": "https://www.zendesk.com/customer/emea-zendesk-financial-services/",
+      "confidence": "high"
+    },
+    {
+      "name": "Fortnox",
+      "domain": "fortnox.se",
+      "grade": "A",
+      "evidence": "How Fortnox and Zendesk make every interaction count",
+      "source_url": "https://www.zendesk.com/customer/fortnox/",
+      "confidence": "high"
+    },
+    {
+      "name": "Fortnum & Mason",
+      "domain": "fortnumandmason.com",
+      "grade": "A",
+      "evidence": "How Fortnum & Mason uses Zendesk AI to elevate service",
+      "source_url": "https://www.zendesk.com/customer/fortnum-mason/",
+      "confidence": "high"
+    },
+    {
+      "name": "Foundant Technologies",
+      "domain": "foundant.com",
+      "grade": "A",
+      "evidence": "Foundant: Growth powered by great client relationships",
+      "source_url": "https://www.zendesk.com/customer/foundant/",
+      "confidence": "high"
+    },
+    {
+      "name": "Four Winds Casinos",
+      "domain": "fourwindscasino.com",
+      "grade": "A",
+      "evidence": "Four Winds Casinos meets online gaming demands amid high growth",
+      "source_url": "https://www.zendesk.com/customer/four-winds-casinos/",
+      "confidence": "high"
+    },
+    {
+      "name": "Foursquare",
+      "domain": "foursquare.com",
+      "grade": "A",
+      "evidence": "We would not have been able to scale customer service without Zendesk Support.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=9",
+      "confidence": "high"
+    },
+    {
+      "name": "FOX Sports Mexico",
+      "domain": "foxsports.com.mx",
+      "grade": "A",
+      "evidence": "FOX Sports Mexico integrates Zendesk into the FOX Sports MX app",
+      "source_url": "https://www.zendesk.com/customer/fox-sports-mexico/",
+      "confidence": "high"
+    },
+    {
+      "name": "Fred IT Group",
+      "domain": "fredit.com.au",
+      "grade": "A",
+      "evidence": "Fred IT Group enjoys easy migration plus 360-degree customer views",
+      "source_url": "https://www.zendesk.com/customer/fred-it-group/",
+      "confidence": "high"
+    },
+    {
+      "name": "Freedom Furniture",
+      "domain": "freedom.com.au",
+      "grade": "A",
+      "evidence": "Freedom Furniture sees efficiency and CSAT skyrocket with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/freedom-furniture/",
+      "confidence": "high"
+    },
+    {
+      "name": "Freese and Nichols",
+      "domain": "freese.com",
+      "grade": "A",
+      "evidence": "Freese and Nichols sees Advanced AI as a game changer",
+      "source_url": "https://www.zendesk.com/customer/freese-and-nichols/",
+      "confidence": "high"
+    },
+    {
+      "name": "FreshBooks",
+      "domain": "freshbooks.com",
+      "grade": "A",
+      "evidence": "FreshBooks relies on Zendesk AI to optimize agent support",
+      "source_url": "https://www.zendesk.com/customer/freshbooks/",
+      "confidence": "high"
+    },
+    {
+      "name": "Furnished Finder",
+      "domain": "furnishedfinder.com",
+      "grade": "A",
+      "evidence": "Inside Furnished Finder's human-centered approach to AI in customer support",
+      "source_url": "https://www.zendesk.com/customer/furnished-finder/",
+      "confidence": "high"
+    },
+    {
+      "name": "Fútbol Emotion",
+      "domain": "futbolemotion.com",
+      "grade": "A",
+      "evidence": "Fútbol Emotion: Messaging is a winning strategy for growth",
+      "source_url": "https://www.zendesk.com/customer/futbol-emotion/",
+      "confidence": "high"
+    },
+    {
+      "name": "GCash",
+      "domain": "gcash.com",
+      "grade": "A",
+      "evidence": "GCash empowers mobile wallet customers through CX innovation",
+      "source_url": "https://www.zendesk.com/customer/gcash/",
+      "confidence": "high"
+    },
+    {
+      "name": "Geckoboard",
+      "domain": "geckoboard.com",
+      "grade": "A",
+      "evidence": "How Geckoboard elevates customer support with peer reviews",
+      "source_url": "https://www.zendesk.com/customer/geckoboard/",
+      "confidence": "high"
+    },
+    {
+      "name": "Genial Investimentos",
+      "domain": "genialinvestimentos.com.br",
+      "grade": "A",
+      "evidence": "Genial invests in Zendesk CX to serve a growing financial market",
+      "source_url": "https://www.zendesk.com/customer/genial-investimentos/",
+      "confidence": "high"
+    },
+    {
+      "name": "GetGo",
+      "domain": "getgo.sg",
+      "grade": "A",
+      "evidence": "GetGo + Zendesk: Driving sustainable mobility with efficiency and visibility",
+      "source_url": "https://www.zendesk.com/customer/getgo/",
+      "confidence": "high"
+    },
+    {
+      "name": "GitHub",
+      "domain": "github.com",
+      "grade": "A",
+      "evidence": "GitHub makes Zendesk the foundation of elevated employee service",
+      "source_url": "https://www.zendesk.com/customer/github-es/",
+      "confidence": "high"
+    },
+    {
+      "name": "GiveDirectly",
+      "domain": "givedirectly.org",
+      "grade": "A",
+      "evidence": "GiveDirectly speeds up disaster response with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/givedirectly/",
+      "confidence": "high"
+    },
+    {
+      "name": "GLL",
+      "domain": "gll.org",
+      "grade": "A",
+      "evidence": "How GLL is transforming CX with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/gll/",
+      "confidence": "high"
+    },
+    {
+      "name": "GoFundMe",
+      "domain": "gofundme.com",
+      "grade": "A",
+      "evidence": "GoFundMe strives for uber-fast first response times",
+      "source_url": "https://www.zendesk.com/customer/gofundme/",
+      "confidence": "high"
+    },
+    {
+      "name": "Going",
+      "domain": "going.com",
+      "grade": "A",
+      "evidence": "Going's journey with Zendesk delivers efficiency and cost savings",
+      "source_url": "https://www.zendesk.com/customer/going/",
+      "confidence": "high"
+    },
+    {
+      "name": "Grammarly",
+      "domain": "grammarly.com",
+      "grade": "A",
+      "evidence": "url: https://grammarly.zendesk.com/api/v2/help_center/en-us/categories/115000018611.json",
+      "source_url": "https://support.grammarly.com/api/v2/help_center/en-us/categories.json?per_page=1",
+      "confidence": "high"
+    },
+    {
+      "name": "Grapevine-Colleyville ISD",
+      "domain": "gcisd.net",
+      "grade": "A",
+      "evidence": "Zendesk + Grapevine Colleyville ISD: Increasing efficiency amid a pandemic",
+      "source_url": "https://www.zendesk.com/customer/grapevine-colleyville-isd/",
+      "confidence": "high"
+    },
+    {
+      "name": "Grill'd",
+      "domain": "grilld.com.au",
+      "grade": "A",
+      "evidence": "Grill'd + Zendesk: Ready to scale with an agile customer support system",
+      "source_url": "https://www.zendesk.com/customer/grilld/",
+      "confidence": "high"
+    },
+    {
+      "name": "Grove Collaborative",
+      "domain": "grove.co",
+      "grade": "A",
+      "evidence": "Grove boosts operational efficiency with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/grove/",
+      "confidence": "high"
+    },
+    {
+      "name": "Grubhub",
+      "domain": "grubhub.com",
+      "grade": "A",
+      "evidence": "Grubhub + Zendesk: Built-in resilience results in more opportunity",
+      "source_url": "https://www.zendesk.com/customer/grubhub/",
+      "confidence": "high"
+    },
+    {
+      "name": "Grupo Corripio",
+      "domain": "",
+      "grade": "A",
+      "evidence": "Grupo Corripio elevates employee service with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/grupo-corripio-video/",
+      "confidence": "high"
+    },
+    {
+      "name": "Grupo SOMA",
+      "domain": "somagrupo.com.br",
+      "grade": "A",
+      "evidence": "Grupo SOMA transforms the experience of external and internal customers",
+      "source_url": "https://www.zendesk.com/customer/grupo-soma/",
+      "confidence": "high"
+    },
+    {
+      "name": "Guesty",
+      "domain": "guesty.com",
+      "grade": "A",
+      "evidence": "How Guesty revamped support with Wix Answers and Zendesk QA",
+      "source_url": "https://www.zendesk.com/customer/guesty/",
+      "confidence": "high"
+    },
+    {
+      "name": "Hancocks Cash and Carry",
+      "domain": "hancocks.co.uk",
+      "grade": "A",
+      "evidence": "The business has been using Zendesk for some time but felt the platform was not being utilised to its full potential.",
+      "source_url": "https://www.route101.com/customer-stories/hancocks",
+      "confidence": "high"
+    },
+    {
+      "name": "HealthJoy",
+      "domain": "healthjoy.com",
+      "grade": "A",
+      "evidence": "HealthJoy doubles support capacity and cuts ticket volume by 25%",
+      "source_url": "https://www.zendesk.com/customer/healthjoy/",
+      "confidence": "high"
+    },
+    {
+      "name": "HeliosX",
+      "domain": "heliosx.com",
+      "grade": "A",
+      "evidence": "HeliosX + Zendesk: Streamlining support and driving revenue",
+      "source_url": "https://www.zendesk.com/customer/heliosx/",
+      "confidence": "high"
+    },
+    {
+      "name": "Hello Sugar",
+      "domain": "hellosugar.com",
+      "grade": "A",
+      "evidence": "How Hello Sugar reached a 66% automation rate with Zendesk's hybrid solution",
+      "source_url": "https://www.zendesk.com/customer/hello-sugar/",
+      "confidence": "high"
+    },
+    {
+      "name": "HiBob",
+      "domain": "hibob.com",
+      "grade": "A",
+      "evidence": "HiBob delivers flexible CX for a global roster of HR clients",
+      "source_url": "https://www.zendesk.com/customer/hibob/",
+      "confidence": "high"
+    },
+    {
+      "name": "Higher Logic",
+      "domain": "higherlogic.com",
+      "grade": "A",
+      "evidence": "Higher Logic elevates CX with Zendesk analytics and QA tools",
+      "source_url": "https://www.zendesk.com/customer/higher-logic/",
+      "confidence": "high"
+    },
+    {
+      "name": "HMS Networks",
+      "domain": "hms-networks.com",
+      "grade": "A",
+      "evidence": "HMS: where machines talk and support scales with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/hms-networks/",
+      "confidence": "high"
+    },
+    {
+      "name": "Hoag Health",
+      "domain": "hoag.org",
+      "grade": "A",
+      "evidence": "Hoag Health reduces resolution time by 86% with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/hoag-health/",
+      "confidence": "high"
+    },
+    {
+      "name": "Homebridge",
+      "domain": "",
+      "grade": "A",
+      "evidence": "Homebridge generates 158% higher ROI with Zendesk CX",
+      "source_url": "https://www.zendesk.com/customer/homebridge/",
+      "confidence": "high"
+    },
+    {
+      "name": "Homeday",
+      "domain": "homeday.de",
+      "grade": "A",
+      "evidence": "Homeday uses integrated data to enhance the customer experience",
+      "source_url": "https://www.zendesk.com/customer/homeday/",
+      "confidence": "high"
+    },
+    {
+      "name": "Honeylove",
+      "domain": "honeylove.com",
+      "grade": "A",
+      "evidence": "Honeylove shapes its success with CX data and SMS innovation",
+      "source_url": "https://www.zendesk.com/customer/honeylove/",
+      "confidence": "high"
+    },
+    {
+      "name": "Hotmart",
+      "domain": "hotmart.com",
+      "grade": "A",
+      "evidence": "Hotmart leverages Zendesk for customer and employee support",
+      "source_url": "https://www.zendesk.com/customer/hotmart/",
+      "confidence": "high"
+    },
+    {
+      "name": "ICANHELPHOST",
+      "domain": "",
+      "grade": "A",
+      "evidence": "For us, the experience with Zendesk was new. We learned a lot in a short time.",
+      "source_url": "https://cloudfresh.com/en/case-category/zendesk-case-studies/",
+      "confidence": "high"
+    },
+    {
+      "name": "iCard",
+      "domain": "icard.com",
+      "grade": "A",
+      "evidence": "Better service, better products: How Zendesk helps iCard grow its customer base",
+      "source_url": "https://www.zendesk.com/customer/icard/",
+      "confidence": "high"
+    },
+    {
+      "name": "Impossible Foods",
+      "domain": "impossiblefoods.com",
+      "grade": "A",
+      "evidence": "Impossible Foods taps Zendesk to help grow business with limited resources",
+      "source_url": "https://www.zendesk.com/customer/impossible-foods/",
+      "confidence": "high"
+    },
+    {
+      "name": "InExchange",
+      "domain": "inexchange.se",
+      "grade": "A",
+      "evidence": "Zendesk AI helps InExchange enhance and streamline its service desk",
+      "source_url": "https://www.zendesk.com/customer/inexchange/",
+      "confidence": "high"
+    },
+    {
+      "name": "Ingersoll Rand",
+      "domain": "irco.com",
+      "grade": "A",
+      "evidence": "Ingersoll Rand sends CSAT soaring with self-service",
+      "source_url": "https://www.zendesk.com/customer/ingersoll-rand/",
+      "confidence": "high"
+    },
+    {
+      "name": "Ingram Content Group",
+      "domain": "ingramcontent.com",
+      "grade": "A",
+      "evidence": "Ingram Content boosts customer service with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/ingram-content-group/",
+      "confidence": "high"
+    },
+    {
+      "name": "INSHUR",
+      "domain": "inshur.com",
+      "grade": "A",
+      "evidence": "The policy behind the promise: INSHUR's CX transformation with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/inshur/",
+      "confidence": "high"
+    },
+    {
+      "name": "International Rescue Committee",
+      "domain": "rescue.org",
+      "grade": "A",
+      "evidence": "International Rescue Committee transforms crisis response with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/irc-video/",
+      "confidence": "high"
+    },
+    {
+      "name": "Jabra",
+      "domain": "jabra.com",
+      "grade": "A",
+      "evidence": "Jabra builds global voice support with Zendesk and Amazon Connect",
+      "source_url": "https://www.zendesk.com/customer/jabra/",
+      "confidence": "high"
+    },
+    {
+      "name": "Jaycar",
+      "domain": "jaycar.com.au",
+      "grade": "A",
+      "evidence": "Jaycar boosts NPS from 1 to 62 by unifying support with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/jaycar/",
+      "confidence": "high"
+    },
+    {
+      "name": "Jelmoli AG",
+      "domain": "jelmoli.ch",
+      "grade": "A",
+      "evidence": "The cooperation with Zendesk and Leafworks was characterized by the greatest professionalism and reliability",
+      "source_url": "https://leafworks.de/en/our-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "JetBrains",
+      "domain": "jetbrains.com",
+      "grade": "A",
+      "evidence": "JetBrains develops custom support for its developer community",
+      "source_url": "https://www.zendesk.com/customer/jetbrains/",
+      "confidence": "high"
+    },
+    {
+      "name": "Jigsaw",
+      "domain": "jigsaw-online.com",
+      "grade": "A",
+      "evidence": "Jigsaw achieves double-digit CX improvements with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/jigsaw/",
+      "confidence": "high"
+    },
+    {
+      "name": "JobAdder",
+      "domain": "jobadder.com",
+      "grade": "A",
+      "evidence": "JobAdder empowers agents to focus on complex queries with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/jobadder/",
+      "confidence": "high"
+    },
+    {
+      "name": "John Lewis Partnership",
+      "domain": "johnlewispartnership.co.uk",
+      "grade": "A",
+      "evidence": "John Lewis Partnership continues to support its partners with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/john-lewis-partnership/",
+      "confidence": "high"
+    },
+    {
+      "name": "JustPark",
+      "domain": "justpark.com",
+      "grade": "A",
+      "evidence": "JustPark accelerates customer success with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/justpark/",
+      "confidence": "high"
+    },
+    {
+      "name": "Kahoot!",
+      "domain": "kahoot.com",
+      "grade": "A",
+      "evidence": "How Kahoot! builds a quality-first support culture",
+      "source_url": "https://www.zendesk.com/customer/kahoot/",
+      "confidence": "high"
+    },
+    {
+      "name": "Kaizen Gaming",
+      "domain": "kaizengaming.com",
+      "grade": "A",
+      "evidence": "Kaizen Gaming bets on fast omnichannel support + 360 degree views",
+      "source_url": "https://www.zendesk.com/customer/kaizen-gaming/",
+      "confidence": "high"
+    },
+    {
+      "name": "Khan Academy",
+      "domain": "khanacademy.org",
+      "grade": "A",
+      "evidence": "Khan Academy + Zendesk: Helping remote learners during a global pandemic",
+      "source_url": "https://www.zendesk.com/customer/khan-academy/",
+      "confidence": "high"
+    },
+    {
+      "name": "Konecta",
+      "domain": "konecta.com",
+      "grade": "A",
+      "evidence": "Avec Zendesk, Konecta gagne le marathon des J.O. de Paris 2024",
+      "source_url": "https://www.zendesk.com/customer/konecta/",
+      "confidence": "high"
+    },
+    {
+      "name": "KRAFTON",
+      "domain": "krafton.com",
+      "grade": "A",
+      "evidence": "KRAFTON satisfies 1 million annual inquiries with Zendesk automation",
+      "source_url": "https://www.zendesk.com/customer/krafton/",
+      "confidence": "high"
+    },
+    {
+      "name": "LATAM Airlines",
+      "domain": "latamairlines.com",
+      "grade": "A",
+      "evidence": "LATAM Airlines achieves 90% employee satisfaction with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/latam-airlines/",
+      "confidence": "high"
+    },
+    {
+      "name": "Latitude Financial",
+      "domain": "latitudefinancial.com.au",
+      "grade": "A",
+      "evidence": "Latitude Financial + Zendesk: Three days, endless solutions",
+      "source_url": "https://www.zendesk.com/customer/latitude-financial/",
+      "confidence": "high"
+    },
+    {
+      "name": "LendingClub",
+      "domain": "lendingclub.com",
+      "grade": "A",
+      "evidence": "LendingClub + Zendesk: Providing a better customer experience with a help center",
+      "source_url": "https://www.zendesk.com/customer/lendingclub/",
+      "confidence": "high"
+    },
+    {
+      "name": "Liberty London",
+      "domain": "libertylondon.com",
+      "grade": "A",
+      "evidence": "Liberty London leans on Zendesk AI to automatically classify and route incoming CX tickets",
+      "source_url": "https://www.zendesk.com/customer/liberty-london/",
+      "confidence": "high"
+    },
+    {
+      "name": "Life Fitness",
+      "domain": "lifefitness.com",
+      "grade": "A",
+      "evidence": "Life Fitness and Zendesk join forces to create a unified, global B2B experience",
+      "source_url": "https://www.zendesk.com/customer/life-fitness/",
+      "confidence": "high"
+    },
+    {
+      "name": "Lightspeed",
+      "domain": "lightspeedhq.com",
+      "grade": "A",
+      "evidence": "Lightspeed sees cost savings and new efficiencies with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/lightspeed/",
+      "confidence": "high"
+    },
+    {
+      "name": "Lime",
+      "domain": "li.me",
+      "grade": "A",
+      "evidence": "LimeBike scales through high-growth cycles with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/limebike/",
+      "confidence": "high"
+    },
+    {
+      "name": "Limeade",
+      "domain": "limeade.com",
+      "grade": "A",
+      "evidence": "Limeade facilitates global expansion with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/limeade/",
+      "confidence": "high"
+    },
+    {
+      "name": "Linkly",
+      "domain": "linkly.com.au",
+      "grade": "A",
+      "evidence": "Linkly serves customers faster with more visibility through Zendesk",
+      "source_url": "https://www.zendesk.com/customer/linkly/",
+      "confidence": "high"
+    },
+    {
+      "name": "Loggi",
+      "domain": "loggi.com",
+      "grade": "A",
+      "evidence": "Loggi humanizes the employee journey with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/loggi/",
+      "confidence": "high"
+    },
+    {
+      "name": "London Mutual Credit Union",
+      "domain": "creditunion.co.uk",
+      "grade": "A",
+      "evidence": "London Mutual elevates member care with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/london-mutual/",
+      "confidence": "high"
+    },
+    {
+      "name": "Love, Bonito",
+      "domain": "lovebonito.com",
+      "grade": "A",
+      "evidence": "Love, Bonito delivers exceptional service with strong understanding of Asian women",
+      "source_url": "https://www.zendesk.com/customer/love-bonito/",
+      "confidence": "high"
+    },
+    {
+      "name": "Lovevery",
+      "domain": "lovevery.com",
+      "grade": "A",
+      "evidence": "Lovevery creates personalized service to drive retention",
+      "source_url": "https://www.zendesk.com/customer/lovevery/",
+      "confidence": "high"
+    },
+    {
+      "name": "Lucid Software",
+      "domain": "lucid.co",
+      "grade": "A",
+      "evidence": "Lucid Software scales support for 100 million users with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/lucid-software-ai/",
+      "confidence": "high"
+    },
+    {
+      "name": "Lush",
+      "domain": "lush.com",
+      "grade": "A",
+      "evidence": "Zendesk AI aids Lush in its drive to grow through ethical values and positivity",
+      "source_url": "https://www.zendesk.com/customer/lush/",
+      "confidence": "high"
+    },
+    {
+      "name": "MadeiraMadeira",
+      "domain": "madeiramadeira.com.br",
+      "grade": "A",
+      "evidence": "MadeiraMadeira embraces Zendesk AI to transform CX",
+      "source_url": "https://www.zendesk.com/customer/madeiramadeira-videos/",
+      "confidence": "high"
+    },
+    {
+      "name": "Magazine Luiza",
+      "domain": "magazineluiza.com.br",
+      "grade": "A",
+      "evidence": "Magazine Luiza taps Zendesk for agile CX and efficiency gains",
+      "source_url": "https://www.zendesk.com/customer/magazine-luiza/",
+      "confidence": "high"
+    },
+    {
+      "name": "Manatee County Tax Collector's Office",
+      "domain": "taxcollector.com",
+      "grade": "A",
+      "evidence": "Manatee County Tax Collector's Office sets a high bar for government efficiency",
+      "source_url": "https://www.zendesk.com/customer/manatee-county/",
+      "confidence": "high"
+    },
+    {
+      "name": "Match Group",
+      "domain": "mtch.com",
+      "grade": "A",
+      "evidence": "Match Group taps innovation through conversational messaging",
+      "source_url": "https://www.zendesk.com/customer/match-group/",
+      "confidence": "high"
+    },
+    {
+      "name": "mattilda",
+      "domain": "mattilda.io",
+      "grade": "A",
+      "evidence": "Startup mattilda scales with Zendesk to support 2X annual growth",
+      "source_url": "https://www.zendesk.com/customer/mattilda/",
+      "confidence": "high"
+    },
+    {
+      "name": "Medbridge",
+      "domain": "medbridge.com",
+      "grade": "A",
+      "evidence": "Medbridge's new AI agent helps agents and users alike",
+      "source_url": "https://www.zendesk.com/customer/medbridge/",
+      "confidence": "high"
+    },
+    {
+      "name": "Mediaocean",
+      "domain": "mediaocean.com",
+      "grade": "A",
+      "evidence": "Mediaocean ramps up B2B self-service for 100K+ global users",
+      "source_url": "https://www.zendesk.com/customer/mediaocean/",
+      "confidence": "high"
+    },
+    {
+      "name": "Medline Industries",
+      "domain": "medline.com",
+      "grade": "A",
+      "evidence": "Medline sees Zendesk as mission critical for global business",
+      "source_url": "https://www.zendesk.com/customer/medline-industries-l-p/",
+      "confidence": "high"
+    },
+    {
+      "name": "Mendelics",
+      "domain": "mendelics.com.br",
+      "grade": "A",
+      "evidence": "Mendelics integrates CX for both B2B and B2C customers",
+      "source_url": "https://www.zendesk.com/customer/mendelics/",
+      "confidence": "high"
+    },
+    {
+      "name": "Mercury",
+      "domain": "mercury.com",
+      "grade": "A",
+      "evidence": "Mercury enhances CX with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/mercury/",
+      "confidence": "high"
+    },
+    {
+      "name": "Mercuryo",
+      "domain": "mercuryo.io",
+      "grade": "A",
+      "evidence": "Global fintech Mercuryo moves to Zendesk for a pillar of operations",
+      "source_url": "https://www.zendesk.com/customer/mercuryo/",
+      "confidence": "high"
+    },
+    {
+      "name": "Miko",
+      "domain": "miko.ai",
+      "grade": "A",
+      "evidence": "Miko uses AI to scale CX for high growth and assist busy agents",
+      "source_url": "https://www.zendesk.com/customer/miko/",
+      "confidence": "high"
+    },
+    {
+      "name": "Mimecast",
+      "domain": "mimecast.com",
+      "grade": "A",
+      "evidence": "Mimecast transforms customer support with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/mimecast/",
+      "confidence": "high"
+    },
+    {
+      "name": "Minor Hotels",
+      "domain": "minorhotels.com",
+      "grade": "A",
+      "evidence": "Minor Hotels leverages Zendesk data and automation to deliver bespoke, world-class service",
+      "source_url": "https://www.zendesk.com/customer/minor-hotels/",
+      "confidence": "high"
+    },
+    {
+      "name": "Miro",
+      "domain": "miro.com",
+      "grade": "A",
+      "evidence": "url: https://realtimeboardhelp.zendesk.com/api/v2/help_center/en-us/categories/360001415214.json",
+      "source_url": "https://help.miro.com/api/v2/help_center/en-us/categories.json?per_page=1",
+      "confidence": "high"
+    },
+    {
+      "name": "Mizuno USA",
+      "domain": "mizunousa.com",
+      "grade": "A",
+      "evidence": "Mizuno USA teams with Zendesk for integrated and agile CX",
+      "source_url": "https://www.zendesk.com/customer/mizuno/",
+      "confidence": "high"
+    },
+    {
+      "name": "MongoDB",
+      "domain": "mongodb.com",
+      "grade": "A",
+      "evidence": "MongoDB shapes its CX success through data and automation",
+      "source_url": "https://www.zendesk.com/customer/mongodb/",
+      "confidence": "high"
+    },
+    {
+      "name": "MOO",
+      "domain": "moo.com",
+      "grade": "A",
+      "evidence": "MOO designs a CX strategy with 360° views and cost savings",
+      "source_url": "https://www.zendesk.com/customer/moo/",
+      "confidence": "high"
+    },
+    {
+      "name": "Motel Rocks",
+      "domain": "motelrocks.com",
+      "grade": "A",
+      "evidence": "Motel sees self-service climb by 3X and faster ticket handling with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/motel-rocks/",
+      "confidence": "high"
+    },
+    {
+      "name": "MTData",
+      "domain": "mtdata.com.au",
+      "grade": "A",
+      "evidence": "MTData transforms customer support with Zendesk, achieving 97% CSAT peak",
+      "source_url": "https://www.zendesk.com/customer/mtdata/",
+      "confidence": "high"
+    },
+    {
+      "name": "MTN Ghana",
+      "domain": "mtn.com.gh",
+      "grade": "A",
+      "evidence": "MTN Ghana boosts Net Promoter Score by 17% with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/mtn-ghana/",
+      "confidence": "high"
+    },
+    {
+      "name": "myenergi",
+      "domain": "myenergi.com",
+      "grade": "A",
+      "evidence": "Data over instinct: myenergi's 50% faster customer support with Zendesk and Premium Plus",
+      "source_url": "https://www.zendesk.com/customer/myenergi/",
+      "confidence": "high"
+    },
+    {
+      "name": "MYOB",
+      "domain": "myob.com",
+      "grade": "A",
+      "evidence": "MYOB boosts self-service capabilities, automation, and scalability to its team with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/myob/",
+      "confidence": "high"
+    },
+    {
+      "name": "Neon One",
+      "domain": "neonone.com",
+      "grade": "A",
+      "evidence": "With Zendesk, Neon One turns CX into a revenue driver",
+      "source_url": "https://www.zendesk.com/customer/neon-one/",
+      "confidence": "high"
+    },
+    {
+      "name": "Netwealth",
+      "domain": "netwealth.com.au",
+      "grade": "A",
+      "evidence": "Netwealth fast tracks Zendesk and attains industry-leading call wait times",
+      "source_url": "https://www.zendesk.com/customer/netwealth/",
+      "confidence": "high"
+    },
+    {
+      "name": "New Look",
+      "domain": "newlook.com",
+      "grade": "A",
+      "evidence": "New Look cuts FRT by 99.5% with Zendesk AI agents",
+      "source_url": "https://www.zendesk.com/customer/new-look/",
+      "confidence": "high"
+    },
+    {
+      "name": "NEXT",
+      "domain": "next.co.uk",
+      "grade": "A",
+      "evidence": "Global retailer NEXT boosts efficiency and savings using Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/next/",
+      "confidence": "high"
+    },
+    {
+      "name": "NOBULL",
+      "domain": "nobullproject.com",
+      "grade": "A",
+      "evidence": "How NOBULL leverages AI as a revenue engine",
+      "source_url": "https://www.zendesk.com/customer/nobull/",
+      "confidence": "high"
+    },
+    {
+      "name": "Novo",
+      "domain": "novo.co",
+      "grade": "A",
+      "evidence": "Novo + Zendesk: The power of a seamless, unified support platform",
+      "source_url": "https://www.zendesk.com/customer/bank-novo/",
+      "confidence": "high"
+    },
+    {
+      "name": "o9 Solutions",
+      "domain": "o9solutions.com",
+      "grade": "A",
+      "evidence": "o9 + Zendesk: Saving time & simplifying support in supply planning",
+      "source_url": "https://www.zendesk.com/customer/o9/",
+      "confidence": "high"
+    },
+    {
+      "name": "ODEON Cinemas",
+      "domain": "odeon.co.uk",
+      "grade": "A",
+      "evidence": "ODEON Cinemas delivers boffo results with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/odeon-cinemas/",
+      "confidence": "high"
+    },
+    {
+      "name": "Omada Health",
+      "domain": "omadahealth.com",
+      "grade": "A",
+      "evidence": "Omada Health taps Zendesk for internal and external support",
+      "source_url": "https://www.zendesk.com/customer/omada-health/",
+      "confidence": "high"
+    },
+    {
+      "name": "One Medical",
+      "domain": "onemedical.com",
+      "grade": "A",
+      "evidence": "One Medical uses Zendesk's cutting-edge CX to improve productivity and compliance",
+      "source_url": "https://www.zendesk.com/customer/one-medical/",
+      "confidence": "high"
+    },
+    {
+      "name": "OneSkin",
+      "domain": "oneskin.co",
+      "grade": "A",
+      "evidence": "OneSkin increases retention with data-driven CX",
+      "source_url": "https://www.zendesk.com/customer/oneskin/",
+      "confidence": "high"
+    },
+    {
+      "name": "Open LMS",
+      "domain": "openlms.net",
+      "grade": "A",
+      "evidence": "Open LMS uplevels customer success with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/open-lms-video/",
+      "confidence": "high"
+    },
+    {
+      "name": "Openly",
+      "domain": "openly.com",
+      "grade": "A",
+      "evidence": "Insurance startup Openly taps Zendesk to help outpace competition",
+      "source_url": "https://www.zendesk.com/customer/openly/",
+      "confidence": "high"
+    },
+    {
+      "name": "OpenTable",
+      "domain": "opentable.com",
+      "grade": "A",
+      "evidence": "OpenTable serves up seamless global support with Zendesk + Jira",
+      "source_url": "https://www.zendesk.com/customer/opentable/",
+      "confidence": "high"
+    },
+    {
+      "name": "Optimizely",
+      "domain": "optimizely.com",
+      "grade": "A",
+      "evidence": "Optimizely tailors support with custom objects and APIs",
+      "source_url": "https://www.zendesk.com/customer/optimizely/",
+      "confidence": "high"
+    },
+    {
+      "name": "Orgadata",
+      "domain": "orgadata.com",
+      "grade": "A",
+      "evidence": "Orgadata unites global CX teams with Zendesk and babelforce",
+      "source_url": "https://www.zendesk.com/customer/orgadata/",
+      "confidence": "high"
+    },
+    {
+      "name": "Orica",
+      "domain": "orica.com",
+      "grade": "A",
+      "evidence": "Orica + Zendesk: Expert help in every corner of the globe",
+      "source_url": "https://www.zendesk.com/customer/orica/",
+      "confidence": "high"
+    },
+    {
+      "name": "Papier",
+      "domain": "papier.com",
+      "grade": "A",
+      "evidence": "How an AI agent paved the way for Papier's US expansion",
+      "source_url": "https://www.zendesk.com/customer/papier/",
+      "confidence": "high"
+    },
+    {
+      "name": "PatientFi",
+      "domain": "patientfi.com",
+      "grade": "A",
+      "evidence": "PatientFi uses Zendesk AI to deliver human connections at scale",
+      "source_url": "https://www.zendesk.com/customer/patientfi/",
+      "confidence": "high"
+    },
+    {
+      "name": "Paysend",
+      "domain": "paysend.com",
+      "grade": "A",
+      "evidence": "Global money firm Paysend matches agent quality and efficiency with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/paysend/",
+      "confidence": "high"
+    },
+    {
+      "name": "Personify Health",
+      "domain": "personifyhealth.com",
+      "grade": "A",
+      "evidence": "Self-service and motivated employees help Personify Health handle growth",
+      "source_url": "https://www.zendesk.com/customer/personify-health/",
+      "confidence": "high"
+    },
+    {
+      "name": "Pet Lovers Centre",
+      "domain": "petloverscentre.com",
+      "grade": "A",
+      "evidence": "Pet Lovers Centre exceeds customer expectations for the love of pets",
+      "source_url": "https://www.zendesk.com/customer/pet-lovers-centre/",
+      "confidence": "high"
+    },
+    {
+      "name": "Phonero",
+      "domain": "phonero.no",
+      "grade": "A",
+      "evidence": "Phonero achieves 59% automation with Zendesk AI agents",
+      "source_url": "https://www.zendesk.com/customer/phonero/",
+      "confidence": "high"
+    },
+    {
+      "name": "Photobucket",
+      "domain": "photobucket.com",
+      "grade": "A",
+      "evidence": "Photobucket delivers 24/7 member support with messaging",
+      "source_url": "https://www.zendesk.com/customer/photobucket/",
+      "confidence": "high"
+    },
+    {
+      "name": "Playtomic",
+      "domain": "playtomic.io",
+      "grade": "A",
+      "evidence": "Playtomic ups its CX game with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/playtomic/",
+      "confidence": "high"
+    },
+    {
+      "name": "Plum",
+      "domain": "plumhq.com",
+      "grade": "A",
+      "evidence": "Plum redefines insurance, serving customers at lightning speed with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/plum/",
+      "confidence": "high"
+    },
+    {
+      "name": "Polaris",
+      "domain": "polaris.com",
+      "grade": "A",
+      "evidence": "Polaris + Zendesk: How a rapidly scaling team supports 30% more accounts per agent",
+      "source_url": "https://www.zendesk.com/customer/polaris-customer-story/",
+      "confidence": "high"
+    },
+    {
+      "name": "Polywood",
+      "domain": "polywood.com",
+      "grade": "A",
+      "evidence": "Polywood achieves a 30% deflection rate with Zendesk Answer Bot",
+      "source_url": "https://www.zendesk.com/customer/polywood/",
+      "confidence": "high"
+    },
+    {
+      "name": "Portland Bureau of Transportation",
+      "domain": "portland.gov",
+      "grade": "A",
+      "evidence": "The Portland Bureau of Transportation transforms employee service",
+      "source_url": "https://www.zendesk.com/customer/portland-bureau-of-transportation/",
+      "confidence": "high"
+    },
+    {
+      "name": "Prince William County Public Schools",
+      "domain": "pwcs.edu",
+      "grade": "A",
+      "evidence": "PWCS lowers IT service request resolution times by 81%",
+      "source_url": "https://www.zendesk.com/customer/pwcs/",
+      "confidence": "high"
+    },
+    {
+      "name": "Privy",
+      "domain": "privy.com",
+      "grade": "A",
+      "evidence": "Privy scales customer service with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/privy/",
+      "confidence": "high"
+    },
+    {
+      "name": "Prodege",
+      "domain": "prodege.com",
+      "grade": "A",
+      "evidence": "Prodege earns 20X ROI using AI and machine learning",
+      "source_url": "https://www.zendesk.com/customer/prodege/",
+      "confidence": "high"
+    },
+    {
+      "name": "Propelus",
+      "domain": "propelus.com",
+      "grade": "A",
+      "evidence": "Propelus speeds down the automation highway",
+      "source_url": "https://www.zendesk.com/customer/propelus/",
+      "confidence": "high"
+    },
+    {
+      "name": "Prosper",
+      "domain": "prosper.com",
+      "grade": "A",
+      "evidence": "Prosper chooses Zendesk for innovation, fast deployment and time to value",
+      "source_url": "https://www.zendesk.com/customer/prosper/",
+      "confidence": "high"
+    },
+    {
+      "name": "PURE Insurance",
+      "domain": "pureinsurance.com",
+      "grade": "A",
+      "evidence": "How PURE Insurance scales internal support to 16+ teams with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/pure-insurance/",
+      "confidence": "high"
+    },
+    {
+      "name": "Purple Innovation",
+      "domain": "purple.com",
+      "grade": "A",
+      "evidence": "Purple streamlines CX and empowers agents with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/purple-innovation-video/",
+      "confidence": "high"
+    },
+    {
+      "name": "Qantas Loyalty",
+      "domain": "qantas.com",
+      "grade": "A",
+      "evidence": "Qantas Loyalty soars past automation goals with Zendesk AI Agents",
+      "source_url": "https://www.zendesk.com/customer/qantas-loyalty/",
+      "confidence": "high"
+    },
+    {
+      "name": "Qualia",
+      "domain": "qualia.com",
+      "grade": "A",
+      "evidence": "How Qualia uses GenAI to radically elevate its CX",
+      "source_url": "https://www.zendesk.com/customer/qualia/",
+      "confidence": "high"
+    },
+    {
+      "name": "QuickMD",
+      "domain": "quickmd.com",
+      "grade": "A",
+      "evidence": "QuickMD achieves faster resolutions with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/quickmd/",
+      "confidence": "high"
+    },
+    {
+      "name": "RapidG",
+      "domain": "",
+      "grade": "A",
+      "evidence": "RapidG saves over AU$35k annually with a fully integrated CX platform",
+      "source_url": "https://www.zendesk.com/customer/rapidg/",
+      "confidence": "high"
+    },
+    {
+      "name": "Ratioparts",
+      "domain": "ratioparts.de",
+      "grade": "A",
+      "evidence": "Ratioparts CX helps drive profit with Zendesk and babelforce",
+      "source_url": "https://www.zendesk.com/customer/ratioparts/",
+      "confidence": "high"
+    },
+    {
+      "name": "REA Group",
+      "domain": "rea-group.com",
+      "grade": "A",
+      "evidence": "REA Group uses customer insights to drive service and product innovation",
+      "source_url": "https://www.zendesk.com/customer/rea-group/",
+      "confidence": "high"
+    },
+    {
+      "name": "Recharge Payments",
+      "domain": "rechargepayments.com",
+      "grade": "A",
+      "evidence": "Recharge Payments elevates support with strong data and smart routing",
+      "source_url": "https://www.zendesk.com/customer/recharge-payments/",
+      "confidence": "high"
+    },
+    {
+      "name": "RED Digital Cinema",
+      "domain": "red.com",
+      "grade": "A",
+      "evidence": "RED migrated around 3,000 customers and 7,000 tickets from CSV files into Zendesk using Help Desk Migration.",
+      "source_url": "https://help-desk-migration.com/zendesk-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "Redfin",
+      "domain": "redfin.com",
+      "grade": "A",
+      "evidence": "Redfin improves efficiency and CSAT by deploying Zendesk across 11+ teams",
+      "source_url": "https://www.zendesk.com/customer/redfin/",
+      "confidence": "high"
+    },
+    {
+      "name": "Reprise",
+      "domain": "reprise.com",
+      "grade": "A",
+      "evidence": "Reprise rolls out Zendesk CX to ensure personalized B2B service",
+      "source_url": "https://www.zendesk.com/customer/reprise/",
+      "confidence": "high"
+    },
+    {
+      "name": "Reverb",
+      "domain": "reverb.com",
+      "grade": "A",
+      "evidence": "Reverb's proactive support drives 10X increase in self-service",
+      "source_url": "https://www.zendesk.com/customer/reverb/",
+      "confidence": "high"
+    },
+    {
+      "name": "Reward Gateway",
+      "domain": "rewardgateway.com",
+      "grade": "A",
+      "evidence": "Reward Gateway taps Zendesk to scale growth with faster service",
+      "source_url": "https://www.zendesk.com/customer/reward-gateway/",
+      "confidence": "high"
+    },
+    {
+      "name": "Riot Games",
+      "domain": "riotgames.com",
+      "grade": "A",
+      "evidence": "Riot Games pairs custom apps with Zendesk AI and spikes deflection rates with bot",
+      "source_url": "https://www.zendesk.com/customer/riot-games/",
+      "confidence": "high"
+    },
+    {
+      "name": "Roland Corporation",
+      "domain": "roland.com",
+      "grade": "A",
+      "evidence": "Roland needed to consolidate customer service data from a regional Zendesk instance into a central global one",
+      "source_url": "https://help-desk-migration.com/zendesk-to-zendesk-migration/",
+      "confidence": "high"
+    },
+    {
+      "name": "Rozetka",
+      "domain": "rozetka.com.ua",
+      "grade": "A",
+      "evidence": "Zendesk has opened up new opportunities for Rozetka and helped bring the company's ideas to life quickly",
+      "source_url": "https://cloudfresh.com/en/case-category/zendesk-case-studies/",
+      "confidence": "high"
+    },
+    {
+      "name": "Ryanair",
+      "domain": "ryanair.com",
+      "grade": "A",
+      "evidence": "Ryanair uses Zendesk to manage millions of requests from passengers and speed up response times, saving €2.5 million a year.",
+      "source_url": "https://help-desk-migration.com/zendesk-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "Salling Group",
+      "domain": "sallinggroup.com",
+      "grade": "A",
+      "evidence": "Nordic retailer Salling Group scales CX with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/salling-group/",
+      "confidence": "high"
+    },
+    {
+      "name": "Satrdé",
+      "domain": "",
+      "grade": "A",
+      "evidence": "Satrdé reduces service costs with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/satrde/",
+      "confidence": "high"
+    },
+    {
+      "name": "SB Finance",
+      "domain": "sbfinance.com.ph",
+      "grade": "A",
+      "evidence": "SB Finance cuts social media tickets by 52% with AI agent",
+      "source_url": "https://www.zendesk.com/customer/sb-finance/",
+      "confidence": "high"
+    },
+    {
+      "name": "Sealy of Australia",
+      "domain": "sealy.com.au",
+      "grade": "A",
+      "evidence": "Sealy of Australia scales CX with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/sealy-of-australia/",
+      "confidence": "high"
+    },
+    {
+      "name": "Sense Bank",
+      "domain": "sensebank.com.ua",
+      "grade": "A",
+      "evidence": "The transition to the Zendesk platform will allow us to improve the customer experience of online communication with the bank",
+      "source_url": "https://cloudfresh.com/en/case-category/zendesk-case-studies/",
+      "confidence": "high"
+    },
+    {
+      "name": "Serko",
+      "domain": "serko.com",
+      "grade": "A",
+      "evidence": "Serko scales global travel support with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/serko-ai/",
+      "confidence": "high"
+    },
+    {
+      "name": "ShearComfort",
+      "domain": "shearcomfort.com",
+      "grade": "A",
+      "evidence": "ShearComfort finds AI to be a perfect fit for exceptional CX",
+      "source_url": "https://www.zendesk.com/customer/shearcomfort/",
+      "confidence": "high"
+    },
+    {
+      "name": "Shopmonkey",
+      "domain": "shopmonkey.io",
+      "grade": "A",
+      "evidence": "Shopmonkey revs up customer support with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/shopmonkey/",
+      "confidence": "high"
+    },
+    {
+      "name": "Siemens",
+      "domain": "siemens.com",
+      "grade": "A",
+      "evidence": "Siemens builds CX relationship with Zendesk to expand into AI integration",
+      "source_url": "https://www.zendesk.com/customer/siemens-ai/",
+      "confidence": "high"
+    },
+    {
+      "name": "Siemens Financial Services",
+      "domain": "siemens.com",
+      "grade": "A",
+      "evidence": "With Zendesk, more than 600 agents now work from one shared platform, seeing every customer interaction in one view.",
+      "source_url": "https://help-desk-migration.com/zendesk-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "Skyscanner",
+      "domain": "skyscanner.net",
+      "grade": "A",
+      "evidence": "With Guide, Skyscanner saw an 18 percentage point increase in CSAT",
+      "source_url": "https://www.zendesk.com/customer/skyscanner/",
+      "confidence": "high"
+    },
+    {
+      "name": "SodaStream",
+      "domain": "sodastream.com",
+      "grade": "A",
+      "evidence": "How SodaStream's customer service sparkles with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/sodastream/",
+      "confidence": "high"
+    },
+    {
+      "name": "SOFACOMPANY",
+      "domain": "sofacompany.com",
+      "grade": "A",
+      "evidence": "How SOFACOMPANY reimagines CX and ES with Zendesk AI agents and babelforce",
+      "source_url": "https://www.zendesk.com/customer/sofacompany/",
+      "confidence": "high"
+    },
+    {
+      "name": "SoundCloud",
+      "domain": "soundcloud.com",
+      "grade": "A",
+      "evidence": "Zendesk harmonizes SoundCloud's link to better customer experience and community support",
+      "source_url": "https://www.zendesk.com/customer/soundcloud/",
+      "confidence": "high"
+    },
+    {
+      "name": "South Western Railway",
+      "domain": "southwesternrailway.com",
+      "grade": "A",
+      "evidence": "Route 101 has successfully deployed Zendesk Suite Enterprise and SweetHawk SuperSuite with South Western Railway",
+      "source_url": "https://directorsclub.news/2025/10/28/south-western-railway-transforms-customer-support-with-route-101/",
+      "confidence": "high"
+    },
+    {
+      "name": "Spartan Race",
+      "domain": "spartan.com",
+      "grade": "A",
+      "evidence": "Spartan Race champions messaging for scaling support",
+      "source_url": "https://www.zendesk.com/customer/spartan-race/",
+      "confidence": "high"
+    },
+    {
+      "name": "Spoonflower",
+      "domain": "spoonflower.com",
+      "grade": "A",
+      "evidence": "Spoonflower ups efficiency and self-service with smart integrations",
+      "source_url": "https://www.zendesk.com/customer/spoonflower/",
+      "confidence": "high"
+    },
+    {
+      "name": "Squarespace",
+      "domain": "squarespace.com",
+      "grade": "A",
+      "evidence": "Squarespace builds a stellar customer journey for millions",
+      "source_url": "https://www.zendesk.com/customer/squarespace/",
+      "confidence": "high"
+    },
+    {
+      "name": "Staffbase",
+      "domain": "staffbase.com",
+      "grade": "A",
+      "evidence": "The Top of Customer Service – Staffbase achieves CSAT of 97% thanks to Zendesk",
+      "source_url": "https://leafworks.de/en/our-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "Staples Canada",
+      "domain": "staples.ca",
+      "grade": "A",
+      "evidence": "Staples Canada pairs Zendesk with MaestroQA to empower agent success",
+      "source_url": "https://www.zendesk.com/customer/staples-canada/",
+      "confidence": "high"
+    },
+    {
+      "name": "Starshipit",
+      "domain": "starshipit.com",
+      "grade": "A",
+      "evidence": "Starshipit delivers smarter CX with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/starshipit/",
+      "confidence": "high"
+    },
+    {
+      "name": "State of Tennessee",
+      "domain": "tn.gov",
+      "grade": "A",
+      "evidence": "State of Tennessee + Zendesk: Seamless citizen support",
+      "source_url": "https://www.zendesk.com/customer/state-tennessee/",
+      "confidence": "high"
+    },
+    {
+      "name": "STATION F",
+      "domain": "stationf.co",
+      "grade": "A",
+      "evidence": "STATION F taps Zendesk for CX and internal efficiencies",
+      "source_url": "https://www.zendesk.com/customer/station-f/",
+      "confidence": "high"
+    },
+    {
+      "name": "Superbet",
+      "domain": "superbet.com",
+      "grade": "A",
+      "evidence": "How Superbet accelerated first response times by 74% with AI agents",
+      "source_url": "https://www.zendesk.com/customer/superbet/",
+      "confidence": "high"
+    },
+    {
+      "name": "Swiss Casinos",
+      "domain": "swisscasinos.ch",
+      "grade": "A",
+      "evidence": "Swiss Casinos bets on Zendesk AI to meet CX challenges",
+      "source_url": "https://www.zendesk.com/customer/swiss-casinos/",
+      "confidence": "high"
+    },
+    {
+      "name": "Syfe",
+      "domain": "syfe.com",
+      "grade": "A",
+      "evidence": "Syfe + Zendesk: Building trust and loyalty through customer support",
+      "source_url": "https://www.zendesk.com/customer/syfe/",
+      "confidence": "high"
+    },
+    {
+      "name": "Taskrabbit",
+      "domain": "taskrabbit.com",
+      "grade": "A",
+      "evidence": "Taskrabbit optimizes support and workforce management with intuitive AI solutions",
+      "source_url": "https://www.zendesk.com/customer/taskrabbit/",
+      "confidence": "high"
+    },
+    {
+      "name": "TBAuctions",
+      "domain": "tbauctions.com",
+      "grade": "A",
+      "evidence": "TBAuctions speeds customer support with Zendesk Advanced AI",
+      "source_url": "https://www.zendesk.com/customer/tbauctions/",
+      "confidence": "high"
+    },
+    {
+      "name": "TeamSystem",
+      "domain": "teamsystem.com",
+      "grade": "A",
+      "evidence": "TeamSystem automates up to 80% of repetitive queries with AI Agents",
+      "source_url": "https://www.zendesk.com/customer/teamsystem/",
+      "confidence": "high"
+    },
+    {
+      "name": "TechSmith",
+      "domain": "techsmith.com",
+      "grade": "A",
+      "evidence": "TechSmith optimizes engagements with Zendesk AI and Messaging",
+      "source_url": "https://www.zendesk.com/customer/techsmith/",
+      "confidence": "high"
+    },
+    {
+      "name": "TeleClinic",
+      "domain": "teleclinic.com",
+      "grade": "A",
+      "evidence": "How TeleClinic future-proofed its support with AI-powered automation",
+      "source_url": "https://www.zendesk.com/customer/teleclinic/",
+      "confidence": "high"
+    },
+    {
+      "name": "TELUS",
+      "domain": "telus.com",
+      "grade": "A",
+      "evidence": "TELUS revolutionizes CX with 24/7 asynchronous support",
+      "source_url": "https://www.zendesk.com/customer/telus/",
+      "confidence": "high"
+    },
+    {
+      "name": "Tembici",
+      "domain": "tembici.com.br",
+      "grade": "A",
+      "evidence": "Tembici sees 30% cost savings with Zendesk WFM",
+      "source_url": "https://www.zendesk.com/customer/tembici/",
+      "confidence": "high"
+    },
+    {
+      "name": "Tesco",
+      "domain": "tesco.com",
+      "grade": "A",
+      "evidence": "Tesco boosts self-service rate for employees from 30% to 73%",
+      "source_url": "https://www.zendesk.com/customer/tesco/",
+      "confidence": "high"
+    },
+    {
+      "name": "The Good Meal Co",
+      "domain": "thegoodmealco.com.au",
+      "grade": "A",
+      "evidence": "The Good Meal Co serves up an AI-powered voice and CCaaS solution",
+      "source_url": "https://www.zendesk.com/customer/the-good-meal-co/",
+      "confidence": "high"
+    },
+    {
+      "name": "The Quality Group",
+      "domain": "the-quality-group.com",
+      "grade": "A",
+      "evidence": "The Quality Group significantly reduces first response time with automation and Zendesk",
+      "source_url": "https://leafworks.de/en/our-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "The Salvation Army",
+      "domain": "salvationarmy.org",
+      "grade": "A",
+      "evidence": "The Salvation Army's IT team delivers scalable support with 99% employee CSAT",
+      "source_url": "https://www.zendesk.com/customer/salvation-army/",
+      "confidence": "high"
+    },
+    {
+      "name": "The Smith Family",
+      "domain": "thesmithfamily.com.au",
+      "grade": "A",
+      "evidence": "The Smith Family builds trust with Zendesk Contact Center",
+      "source_url": "https://www.zendesk.com/customer/the-smith-family/",
+      "confidence": "high"
+    },
+    {
+      "name": "The Wharton School",
+      "domain": "wharton.upenn.edu",
+      "grade": "A",
+      "evidence": "Zendesk Support's iPad app allows Wharton Computing's team to answer tickets on the go",
+      "source_url": "https://www.zendesk.com/customer/wharton/",
+      "confidence": "high"
+    },
+    {
+      "name": "Thermomix",
+      "domain": "thermomix.com",
+      "grade": "A",
+      "evidence": "Thermomix lowers first response time by 63% with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/thermomix-video/",
+      "confidence": "high"
+    },
+    {
+      "name": "Thinkific",
+      "domain": "thinkific.com",
+      "grade": "A",
+      "evidence": "Thinkific sees instant ROI with migration to Zendesk CX",
+      "source_url": "https://www.zendesk.com/customer/thinkific/",
+      "confidence": "high"
+    },
+    {
+      "name": "Thirdfort",
+      "domain": "thirdfort.com",
+      "grade": "A",
+      "evidence": "Thirdfort replaces three tools with Zendesk for unified CX",
+      "source_url": "https://www.zendesk.com/customer/thirdfort/",
+      "confidence": "high"
+    },
+    {
+      "name": "Thomas Edison State University",
+      "domain": "tesu.edu",
+      "grade": "A",
+      "evidence": "TESU transforms student support with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/tesu/",
+      "confidence": "high"
+    },
+    {
+      "name": "Thrasio",
+      "domain": "thrasio.com",
+      "grade": "A",
+      "evidence": "Data-driven CX at Thrasio supports revenue growth and innovation",
+      "source_url": "https://www.zendesk.com/customer/thrasio/",
+      "confidence": "high"
+    },
+    {
+      "name": "Thunes",
+      "domain": "thunes.com",
+      "grade": "A",
+      "evidence": "Fintech Thunes drives better service with empowered agents",
+      "source_url": "https://www.zendesk.com/customer/thunes/",
+      "confidence": "high"
+    },
+    {
+      "name": "thyssenkrupp Rasselstein",
+      "domain": "thyssenkrupp-steel.com",
+      "grade": "A",
+      "evidence": "thyssenkrupp creates efficient and transparent customer service with Zendesk",
+      "source_url": "https://leafworks.de/en/our-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "Timely",
+      "domain": "gettimely.com",
+      "grade": "A",
+      "evidence": "Timely directs 40% of phone queries to Help Center and boosts CSAT with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/timely/",
+      "confidence": "high"
+    },
+    {
+      "name": "TNG Digital",
+      "domain": "tngdigital.com.my",
+      "grade": "A",
+      "evidence": "TNG Digital serves 16 million users with greater insights and efficiency",
+      "source_url": "https://www.zendesk.com/customer/tng-digital/",
+      "confidence": "high"
+    },
+    {
+      "name": "tonies",
+      "domain": "tonies.com",
+      "grade": "A",
+      "evidence": "How tonies® scales joyful CX with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/tonies/",
+      "confidence": "high"
+    },
+    {
+      "name": "Toolden",
+      "domain": "toolden.co.uk",
+      "grade": "A",
+      "evidence": "Route 101 restructured and optimised our Zendesk environment, including macros, triggers, and SLAs",
+      "source_url": "https://www.callcentrehelper.com/route-101-implements-zendesk-toolden-272279.htm",
+      "confidence": "high"
+    },
+    {
+      "name": "Topfibra",
+      "domain": "",
+      "grade": "A",
+      "evidence": "Zendesk gave us one place to manage 24/7 production support. Tickets move faster, knowledge is put to work",
+      "source_url": "https://cloudfresh.com/en/case-category/zendesk-case-studies/",
+      "confidence": "high"
+    },
+    {
+      "name": "Trade Me",
+      "domain": "trademe.co.nz",
+      "grade": "A",
+      "evidence": "No trading on a great customer experience: How Trade Me puts its customers first",
+      "source_url": "https://www.zendesk.com/customer/trade/",
+      "confidence": "high"
+    },
+    {
+      "name": "TransferGo",
+      "domain": "transfergo.com",
+      "grade": "A",
+      "evidence": "TransferGo scales CX for global money transfers with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/transfergo/",
+      "confidence": "high"
+    },
+    {
+      "name": "TravelPerk",
+      "domain": "travelperk.com",
+      "grade": "A",
+      "evidence": "TravelPerk taps Zendesk AI in CX to transform business travel",
+      "source_url": "https://www.zendesk.com/customer/travelperk/",
+      "confidence": "high"
+    },
+    {
+      "name": "Trodo",
+      "domain": "",
+      "grade": "A",
+      "evidence": "Trodo drives the future of automated CX with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/trodo/",
+      "confidence": "high"
+    },
+    {
+      "name": "TuneCore",
+      "domain": "tunecore.com",
+      "grade": "A",
+      "evidence": "TuneCore uses omnichannel support to assist rising artists",
+      "source_url": "https://www.zendesk.com/customer/tunecore/",
+      "confidence": "high"
+    },
+    {
+      "name": "Twilio",
+      "domain": "twilio.com",
+      "grade": "A",
+      "evidence": "Twilio drives efficient CX and customer retention with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/twilio/",
+      "confidence": "high"
+    },
+    {
+      "name": "TwinSpires",
+      "domain": "twinspires.com",
+      "grade": "A",
+      "evidence": "TwinSpires sees a 70% increase in self-service with Zendesk Messaging",
+      "source_url": "https://www.zendesk.com/customer/twinspires/",
+      "confidence": "high"
+    },
+    {
+      "name": "Uber",
+      "domain": "uber.com",
+      "grade": "A",
+      "evidence": "Uber + Zendesk: Scaling through millions of trips since 2010",
+      "source_url": "https://www.zendesk.com/customer/uber/",
+      "confidence": "high"
+    },
+    {
+      "name": "Udemy",
+      "domain": "udemy.com",
+      "grade": "A",
+      "evidence": "url: https://udemysupport.zendesk.com/api/v2/help_center/en-us/categories/204119628.json",
+      "source_url": "https://support.udemy.com/api/v2/help_center/en-us/categories.json?per_page=1",
+      "confidence": "high"
+    },
+    {
+      "name": "Unity",
+      "domain": "unity.com",
+      "grade": "A",
+      "evidence": "Unity saves $1.3 million with Zendesk automations + self-service",
+      "source_url": "https://www.zendesk.com/customer/unity/",
+      "confidence": "high"
+    },
+    {
+      "name": "Universal Store",
+      "domain": "universalstore.com",
+      "grade": "A",
+      "evidence": "Universal Store's omnichannel journey: revamping customer experience",
+      "source_url": "https://www.zendesk.com/customer/universal-store/",
+      "confidence": "high"
+    },
+    {
+      "name": "Unéo",
+      "domain": "groupe-uneo.fr",
+      "grade": "A",
+      "evidence": "Zendesk delivers a 360° customer experience for Unéo",
+      "source_url": "https://www.zendesk.com/customer/uneo/",
+      "confidence": "high"
+    },
+    {
+      "name": "Upwork",
+      "domain": "upwork.com",
+      "grade": "A",
+      "evidence": "Upwork scales global support with robust APIs and self-service",
+      "source_url": "https://www.zendesk.com/customer/upwork/",
+      "confidence": "high"
+    },
+    {
+      "name": "UrbanYou",
+      "domain": "urbanyou.com.au",
+      "grade": "A",
+      "evidence": "UrbanYou needed to transfer over 200,000 historical tickets, contacts, attachments, notes, and KB content from an old Zendesk account",
+      "source_url": "https://help-desk-migration.com/zendesk-to-zendesk-migration/",
+      "confidence": "high"
+    },
+    {
+      "name": "USC Annenberg School for Communication and Journalism",
+      "domain": "annenberg.usc.edu",
+      "grade": "A",
+      "evidence": "The TechOps team at USC Annenberg maintains a CSAT of 98%",
+      "source_url": "https://www.zendesk.com/customer/usc-annenberg/",
+      "confidence": "high"
+    },
+    {
+      "name": "Utila Dive Center",
+      "domain": "utiladivecenter.com",
+      "grade": "A",
+      "evidence": "Utila Dive Center drives more sales with Zendesk messaging",
+      "source_url": "https://www.zendesk.com/customer/utila-dive-center/",
+      "confidence": "high"
+    },
+    {
+      "name": "Vagaro",
+      "domain": "vagaro.com",
+      "grade": "A",
+      "evidence": "Vagaro redefines CX excellence and efficiency with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/vagaro/",
+      "confidence": "high"
+    },
+    {
+      "name": "Veeva Systems",
+      "domain": "veeva.com",
+      "grade": "A",
+      "evidence": "Zendesk helps Veeva handle 35K tickets each month",
+      "source_url": "https://www.zendesk.com/customer/veeva/",
+      "confidence": "high"
+    },
+    {
+      "name": "Vestwell",
+      "domain": "vestwell.com",
+      "grade": "A",
+      "evidence": "Vestwell empowers human agents to do their best work",
+      "source_url": "https://www.zendesk.com/customer/vestwell-video/",
+      "confidence": "high"
+    },
+    {
+      "name": "Vimeo",
+      "domain": "vimeo.com",
+      "grade": "A",
+      "evidence": "Vimeo taps Zendesk pro services for enterprise-level CX solution",
+      "source_url": "https://www.zendesk.com/customer/vimeo-services/",
+      "confidence": "high"
+    },
+    {
+      "name": "Virgin Red",
+      "domain": "virgin.com",
+      "grade": "A",
+      "evidence": "How Virgin Red built support for millions",
+      "source_url": "https://www.zendesk.com/customer/virgin-red/",
+      "confidence": "high"
+    },
+    {
+      "name": "Wargaming",
+      "domain": "wargaming.net",
+      "grade": "A",
+      "evidence": "Wargaming conquers its KPIs with consolidated support and integrations",
+      "source_url": "https://www.zendesk.com/customer/wargaming/",
+      "confidence": "high"
+    },
+    {
+      "name": "Washington State Department of Enterprise Services",
+      "domain": "des.wa.gov",
+      "grade": "A",
+      "evidence": "Washington State DES sees Zendesk as a game changer",
+      "source_url": "https://www.zendesk.com/customer/washington-state-des/",
+      "confidence": "high"
+    },
+    {
+      "name": "Weatherford",
+      "domain": "weatherford.com",
+      "grade": "A",
+      "evidence": "No time for downtime—Weatherford uses Zendesk to keep oilfield operations running",
+      "source_url": "https://www.zendesk.com/customer/weatherford/",
+      "confidence": "high"
+    },
+    {
+      "name": "Wellhub",
+      "domain": "wellhub.com",
+      "grade": "A",
+      "evidence": "Wellhub scales with Zendesk and sees 20% increase in productivity",
+      "source_url": "https://www.zendesk.com/customer/wellhub/",
+      "confidence": "high"
+    },
+    {
+      "name": "WeRoad",
+      "domain": "weroad.com",
+      "grade": "A",
+      "evidence": "WeRoad powers CX and speeds responses with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/weroad/",
+      "confidence": "high"
+    },
+    {
+      "name": "WhiteWall",
+      "domain": "whitewall.com",
+      "grade": "A",
+      "evidence": "Zendesk AI helps WhiteWall mesh quality and innovation",
+      "source_url": "https://www.zendesk.com/customer/whitewall/",
+      "confidence": "high"
+    },
+    {
+      "name": "Wintec",
+      "domain": "wintec.ac.nz",
+      "grade": "A",
+      "evidence": "Wintec drives 97% customer satisfaction across multiple departments",
+      "source_url": "https://www.zendesk.com/customer/wintec/",
+      "confidence": "high"
+    },
+    {
+      "name": "Wireless Logic",
+      "domain": "wirelesslogic.com",
+      "grade": "A",
+      "evidence": "Wireless Logic uses Zendesk to deliver standout service worldwide",
+      "source_url": "https://www.zendesk.com/customer/wireless-logic/",
+      "confidence": "high"
+    },
+    {
+      "name": "Workrise",
+      "domain": "workrise.com",
+      "grade": "A",
+      "evidence": "Workrise creates custom CX solution for internal and external support",
+      "source_url": "https://www.zendesk.com/customer/workrise/",
+      "confidence": "high"
+    },
+    {
+      "name": "WP Engine",
+      "domain": "wpengine.com",
+      "grade": "A",
+      "evidence": "WP Engine elevates CX with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/wp-engine-video/",
+      "confidence": "high"
+    },
+    {
+      "name": "Wyze Labs",
+      "domain": "wyze.com",
+      "grade": "A",
+      "evidence": "Wyze Labs swaps Freshdesk for Zendesk to meet 10X growth",
+      "source_url": "https://www.zendesk.com/customer/wyze-labs/",
+      "confidence": "high"
+    },
+    {
+      "name": "Xendit",
+      "domain": "xendit.co",
+      "grade": "A",
+      "evidence": "Xendit is building trust in fintech with exceptional customer service",
+      "source_url": "https://www.zendesk.com/customer/xendit/",
+      "confidence": "high"
+    },
+    {
+      "name": "Xerox",
+      "domain": "xerox.com",
+      "grade": "A",
+      "evidence": "Xerox streamlines internal workflows to support 140K employees",
+      "source_url": "https://www.zendesk.com/customer/xerox/",
+      "confidence": "high"
+    },
+    {
+      "name": "XP Health",
+      "domain": "xphealth.co",
+      "grade": "A",
+      "evidence": "XP Health brings support into focus with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/xp-health/",
+      "confidence": "high"
+    },
+    {
+      "name": "Yape",
+      "domain": "yape.com.pe",
+      "grade": "A",
+      "evidence": "Yape enhances CX with Zendesk Copilot for faster and more efficient resolutions",
+      "source_url": "https://www.zendesk.com/customer/yape/",
+      "confidence": "high"
+    },
+    {
+      "name": "Yext",
+      "domain": "yext.com",
+      "grade": "A",
+      "evidence": "Through rapid growth, Yext's customer support evolves to meet and anticipate its clients' needs",
+      "source_url": "https://www.zendesk.com/customer/yext/",
+      "confidence": "high"
+    },
+    {
+      "name": "ZEAL",
+      "domain": "",
+      "grade": "A",
+      "evidence": "ZEAL boosts AI and self-service efficiency with Zendesk Assist",
+      "source_url": "https://www.zendesk.com/customer/zeal/",
+      "confidence": "high"
+    },
+    {
+      "name": "Zeppelin University",
+      "domain": "zu.de",
+      "grade": "A",
+      "evidence": "Zeppelin University embraces employee service innovation with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/zeppelin-university/",
+      "confidence": "high"
+    },
+    {
+      "name": "ZeroFox",
+      "domain": "zerofox.com",
+      "grade": "A",
+      "evidence": "ZeroFox: New CX solutions to support hypergrowth",
+      "source_url": "https://www.zendesk.com/customer/zerofox/",
+      "confidence": "high"
+    },
+    {
+      "name": "Zipcar",
+      "domain": "zipcar.com",
+      "grade": "A",
+      "evidence": "Zipcar drives 95% CSAT with Zendesk messaging",
+      "source_url": "https://www.zendesk.com/customer/zipcar/",
+      "confidence": "high"
+    },
+    {
+      "name": "Zuora",
+      "domain": "zuora.com",
+      "grade": "A",
+      "evidence": "Learn how Zuora's beating the industry benchmark with their multichannel support",
+      "source_url": "https://www.zendesk.com/customer/zuora/",
+      "confidence": "high"
+    },
+    {
+      "name": "Accor",
+      "domain": "accor.com",
+      "grade": "B",
+      "evidence": "How Accor Simplified Operations and Boosted Efficiency with Zendesk Copilot",
+      "source_url": "https://premiumplus.io/customer-stories",
+      "confidence": "high"
+    },
+    {
+      "name": "Acquia",
+      "domain": "acquia.com",
+      "grade": "B",
+      "evidence": "Acquia saw improvements in CSAT, SLA adherence, and agent productivity with Zendesk Support",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=4",
+      "confidence": "high"
+    },
+    {
+      "name": "American Support",
+      "domain": "americansupport.com",
+      "grade": "B",
+      "evidence": "The transparency that Zendesk affords is fantastic.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials",
+      "confidence": "high"
+    },
+    {
+      "name": "Animoto",
+      "domain": "animoto.com",
+      "grade": "B",
+      "evidence": "With Zendesk, we realized we could run our entire help desk and knowledge base without pulling development resources away from our product",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials",
+      "confidence": "high"
+    },
+    {
+      "name": "Annanow Group AG",
+      "domain": "annanow.com",
+      "grade": "B",
+      "evidence": "Leafworks supported us efficiently and effectively in the restructuring and optimisation of Zendesk.",
+      "source_url": "https://leafworks.de/en/our-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "Aurora Fashions",
+      "domain": "",
+      "grade": "B",
+      "evidence": "That's customer understanding and, in a nutshell, that's Zendesk.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=9",
+      "confidence": "medium"
+    },
+    {
+      "name": "Australian Taxation Office",
+      "domain": "ato.gov.au",
+      "grade": "B",
+      "evidence": "Dairy Farmers of America, the Australian Taxation Office, the State of Missouri, and the French Ministry of Justice",
+      "source_url": "https://bloomberry.com/data/zendesk/",
+      "confidence": "high"
+    },
+    {
+      "name": "Booz Allen Hamilton",
+      "domain": "boozallen.com",
+      "grade": "B",
+      "evidence": "Zendesk is used by 150,000+ organizations across 160 countries including Hilton, Booz Allen Hamilton, Hitachi Energy",
+      "source_url": "https://bloomberry.com/data/zendesk/",
+      "confidence": "high"
+    },
+    {
+      "name": "Brightidea",
+      "domain": "brightidea.com",
+      "grade": "B",
+      "evidence": "Great Customer Service Extends Beyond The Support Team",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "BrightLocal",
+      "domain": "brightlocal.com",
+      "grade": "B",
+      "evidence": "Zendesk AI Chatbot: BrightLocal's Journey to 46% Automation Rate",
+      "source_url": "https://premiumplus.io/customer-stories",
+      "confidence": "high"
+    },
+    {
+      "name": "Brussels Airport",
+      "domain": "brusselsairport.be",
+      "grade": "B",
+      "evidence": "How to scale your workflow using chatbots, WhatsApp and SunCo: the Brussels Airport story",
+      "source_url": "https://premiumplus.io/customer-stories/page/2",
+      "confidence": "medium"
+    },
+    {
+      "name": "BuiltLean",
+      "domain": "builtlean.com",
+      "grade": "B",
+      "evidence": "We use Zendesk to communicate with everyone – customers, business partners, even advertisers",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials",
+      "confidence": "high"
+    },
+    {
+      "name": "Catawiki",
+      "domain": "catawiki.com",
+      "grade": "B",
+      "evidence": "Global, online auctions run smoothly with Zendesk",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "Channel Master",
+      "domain": "channelmaster.com",
+      "grade": "B",
+      "evidence": "We can keep up with our customers with Zendesk and take our support to the next level",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "charity: water",
+      "domain": "charitywater.org",
+      "grade": "B",
+      "evidence": "charity water Using Zendesk Guide to redefine the user experience",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Cineplex",
+      "domain": "cineplex.com",
+      "grade": "B",
+      "evidence": "including Hilton, Booz Allen Hamilton, Hitachi Energy, IPG Mediabrands, Cineplex, Dairy Farmers of America",
+      "source_url": "https://bloomberry.com/data/zendesk/",
+      "confidence": "high"
+    },
+    {
+      "name": "Cognition AI",
+      "domain": "cognition.ai",
+      "grade": "B",
+      "evidence": "In 2025, Cognition AI implemented Zendesk Service on their website to provide a centralized customer support channel.",
+      "source_url": "https://www.appsruntheworld.com/customers-database/products/view/zendesk-service",
+      "confidence": "high"
+    },
+    {
+      "name": "crowdSPRING",
+      "domain": "crowdspring.com",
+      "grade": "B",
+      "evidence": "CrowdSPRING - Customer Case Study",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Cubic Telecom",
+      "domain": "cubictelecom.com",
+      "grade": "B",
+      "evidence": "Telecom Pioneer Dials Up Support Agent Productivity With Zendesk Customer Support Software",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Dairy Farmers of America",
+      "domain": "dfamilk.com",
+      "grade": "B",
+      "evidence": "IPG Mediabrands, Cineplex, Dairy Farmers of America, the Australian Taxation Office, the State of Missouri",
+      "source_url": "https://bloomberry.com/data/zendesk/",
+      "confidence": "high"
+    },
+    {
+      "name": "Denver Broncos",
+      "domain": "denverbroncos.com",
+      "grade": "B",
+      "evidence": "Building A Help Desk In Less Than An Hour",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Domiserve",
+      "domain": "domiserve.com",
+      "grade": "B",
+      "evidence": "Implementing Zendesk with Premium Plus turns complexity into efficiency for Domiserve",
+      "source_url": "https://premiumplus.io/customer-stories",
+      "confidence": "high"
+    },
+    {
+      "name": "Easy Taxi",
+      "domain": "easytaxi.com",
+      "grade": "B",
+      "evidence": "Zendesk believes that relationships are key to the business, and I think that's what we feel from the partnership",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=9",
+      "confidence": "medium"
+    },
+    {
+      "name": "Edmunds.com",
+      "domain": "edmunds.com",
+      "grade": "B",
+      "evidence": "Chat provides a great, simple experience for our website visitors, and makes it easy for us to provide excellent service",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=9",
+      "confidence": "medium"
+    },
+    {
+      "name": "Etsy",
+      "domain": "etsy.com",
+      "grade": "B",
+      "evidence": "big names like Shopify, Uber, and Etsy are among the companies that use Zendesk",
+      "source_url": "https://help-desk-migration.com/zendesk-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "Forever New",
+      "domain": "forevernew.com.au",
+      "grade": "B",
+      "evidence": "First response time to 250 stores improved by 73%",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "Four Seasons Hotels and Resorts",
+      "domain": "fourseasons.com",
+      "grade": "B",
+      "evidence": "Trusted companies use Zendesk",
+      "source_url": "https://www.zendesk.com/customer/",
+      "confidence": "medium"
+    },
+    {
+      "name": "French Ministry of Justice",
+      "domain": "justice.gouv.fr",
+      "grade": "B",
+      "evidence": "the Australian Taxation Office, the State of Missouri, and the French Ministry of Justice",
+      "source_url": "https://bloomberry.com/data/zendesk/",
+      "confidence": "high"
+    },
+    {
+      "name": "Gilt Groupe",
+      "domain": "gilt.com",
+      "grade": "B",
+      "evidence": "Zendesk gives our support team a lot of freedom to operate in a way that best serves our customers.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "Groupon",
+      "domain": "groupon.com",
+      "grade": "B",
+      "evidence": "Groupon fired up Zendesk Support to save money and support the explosive growth of their global business",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "Hilton",
+      "domain": "hilton.com",
+      "grade": "B",
+      "evidence": "Zendesk is used by 150,000+ organizations across 160 countries including Hilton, Booz Allen Hamilton, Hitachi Energy",
+      "source_url": "https://bloomberry.com/data/zendesk/",
+      "confidence": "high"
+    },
+    {
+      "name": "Hitachi Energy",
+      "domain": "hitachienergy.com",
+      "grade": "B",
+      "evidence": "Zendesk is used by 150,000+ organizations across 160 countries including Hilton, Booz Allen Hamilton, Hitachi Energy",
+      "source_url": "https://bloomberry.com/data/zendesk/",
+      "confidence": "high"
+    },
+    {
+      "name": "Hitachi-Johnson Controls Air Conditioning",
+      "domain": "",
+      "grade": "B",
+      "evidence": "Organizations such as Toyota, Shell, Hitachi-Johnson Control Air Conditioning and Samsung Electronics South Korea are recorded users",
+      "source_url": "https://www.appsruntheworld.com/customers-database/products/view/zendesk-service",
+      "confidence": "high"
+    },
+    {
+      "name": "HomeShop18",
+      "domain": "homeshop18.com",
+      "grade": "B",
+      "evidence": "Since we introduced Zendesk we have streamlined the way we manage our customer service.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "Instacart",
+      "domain": "instacart.com",
+      "grade": "B",
+      "evidence": "Zendesk provides a vast collection of integrations and opportunities for customization as part of our subscription.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials",
+      "confidence": "high"
+    },
+    {
+      "name": "Intravis GmbH",
+      "domain": "intravis.de",
+      "grade": "B",
+      "evidence": "Leafworks helped us very well with the initial setup of our ZenDesk instance",
+      "source_url": "https://leafworks.de/en/our-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "IPG Mediabrands",
+      "domain": "ipgmediabrands.com",
+      "grade": "B",
+      "evidence": "organizations across 160 countries including Hilton, Booz Allen Hamilton, Hitachi Energy, IPG Mediabrands, Cineplex",
+      "source_url": "https://bloomberry.com/data/zendesk/",
+      "confidence": "high"
+    },
+    {
+      "name": "ISGUS",
+      "domain": "isgus.de",
+      "grade": "B",
+      "evidence": "The cooperation with Leafworks during the introduction of Zendesk in company group was consistently positive.",
+      "source_url": "https://leafworks.de/en/our-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "itsme",
+      "domain": "itsme-id.com",
+      "grade": "B",
+      "evidence": "itsme® relies on Zendesk and Premium Plus to realize their international ambitions",
+      "source_url": "https://premiumplus.io/customer-stories/page/2",
+      "confidence": "high"
+    },
+    {
+      "name": "Jims",
+      "domain": "jims.be",
+      "grade": "B",
+      "evidence": "Transforming Customer and Employee Experience at Jims with Zendesk",
+      "source_url": "https://premiumplus.io/customer-stories/page/2",
+      "confidence": "high"
+    },
+    {
+      "name": "JobCloud AG",
+      "domain": "jobcloud.ch",
+      "grade": "B",
+      "evidence": "with Leafworks and Zendesk, JobCloud's complex support structure was transformed into a lean, efficient system",
+      "source_url": "https://leafworks.de/en/our-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "Jules",
+      "domain": "jules.com",
+      "grade": "B",
+      "evidence": "Jules, a leading fashion retailer, has always prioritised customer experience (CX)",
+      "source_url": "https://premiumplus.io/customer-stories",
+      "confidence": "medium"
+    },
+    {
+      "name": "JustGiving",
+      "domain": "justgiving.com",
+      "grade": "B",
+      "evidence": "Supporting the world's largest online fundraising community with Zendesk Support",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "L'Oréal",
+      "domain": "loreal.com",
+      "grade": "B",
+      "evidence": "L'Oréal Deutschland monitors trends across the business using Zendesk Support",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "Le Tote",
+      "domain": "letote.com",
+      "grade": "B",
+      "evidence": "With help from Zendesk Support, we have really been able to scale customer service.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=9",
+      "confidence": "high"
+    },
+    {
+      "name": "leboncoin",
+      "domain": "leboncoin.fr",
+      "grade": "B",
+      "evidence": "Zendesk is on the move in the mobility market",
+      "source_url": "https://www.zendesk.com/customer/leboncoin-2/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Livera",
+      "domain": "livera.nl",
+      "grade": "B",
+      "evidence": "Livera delivers an optimal online customer experience thanks to Zendesk and Premium Plus",
+      "source_url": "https://premiumplus.io/customer-stories/page/2",
+      "confidence": "high"
+    },
+    {
+      "name": "Lonely Planet",
+      "domain": "lonelyplanet.com",
+      "grade": "B",
+      "evidence": "Lonely Planet can now easily access all user-generated content in one place",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "Lucidchart",
+      "domain": "lucidchart.com",
+      "grade": "B",
+      "evidence": "We considered another solution along with Zendesk in our search for a new tool.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=4",
+      "confidence": "high"
+    },
+    {
+      "name": "Luma Health",
+      "domain": "lumahealth.io",
+      "grade": "B",
+      "evidence": "Luma Health + Zendesk Healthcare communication in a new world",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Mailchimp",
+      "domain": "mailchimp.com",
+      "grade": "B",
+      "evidence": "Major companies like Stanley Black & Decker, Shopify, Uber, Mailchimp, Four Seasons Hotels and Resorts, Tesco, Siemens, and Grubhub use Zendesk.",
+      "source_url": "https://www.zendesk.com/why-zendesk/zendesk-reviews/",
+      "confidence": "high"
+    },
+    {
+      "name": "Medidata",
+      "domain": "medidata.com",
+      "grade": "B",
+      "evidence": "Working with Zendesk has been like working with a partner that thought like I did, and worked like I wanted to work.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=9",
+      "confidence": "high"
+    },
+    {
+      "name": "ModCloth",
+      "domain": "modcloth.com",
+      "grade": "B",
+      "evidence": "Striving To Be The Best E-Retail Service Center On The Planet",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "Moonfruit",
+      "domain": "moonfruit.com",
+      "grade": "B",
+      "evidence": "Moonfruit - Customer Case Study",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "MTV",
+      "domain": "mtv.com",
+      "grade": "B",
+      "evidence": "Having Zendesk has absolutely been really important to us during the Artist.MTV launch.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials",
+      "confidence": "high"
+    },
+    {
+      "name": "New Zealand Post",
+      "domain": "nzpost.co.nz",
+      "grade": "B",
+      "evidence": "New Zealand Post - Customer Case Study",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "News Digital Media",
+      "domain": "news.com.au",
+      "grade": "B",
+      "evidence": "Zendesk has really proven itself in a large corporate enterprise environment.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=4",
+      "confidence": "high"
+    },
+    {
+      "name": "NHS England",
+      "domain": "england.nhs.uk",
+      "grade": "B",
+      "evidence": "Zendesk Licences and Consultancy. This contract was awarded to 1 supplier. Route 101 Limited",
+      "source_url": "https://www.contractsfinder.service.gov.uk/Notice/39cb5394-0a34-4232-9575-abb8901b2d56",
+      "confidence": "high"
+    },
+    {
+      "name": "NHS Greater Glasgow and Clyde",
+      "domain": "nhsggc.org.uk",
+      "grade": "B",
+      "evidence": "there is no doubt Zendesk Support has helped streamline our workflow a great deal.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=4",
+      "confidence": "high"
+    },
+    {
+      "name": "Nitro",
+      "domain": "gonitro.com",
+      "grade": "B",
+      "evidence": "We love Zendesk because it follows our no bullshit mantra.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=5",
+      "confidence": "high"
+    },
+    {
+      "name": "Nottingham Trent University",
+      "domain": "ntu.ac.uk",
+      "grade": "B",
+      "evidence": "Nottingham Trent University transforms IT process with Zendesk CX",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "NovaStor",
+      "domain": "novastor.com",
+      "grade": "B",
+      "evidence": "Migration from Zendesk Insights to Zendesk Explore Professional",
+      "source_url": "https://leafworks.de/en/our-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "NSW Government Licensing Service",
+      "domain": "service.nsw.gov.au",
+      "grade": "B",
+      "evidence": "NSW Government Licensing Service - Customer Case Study",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=2",
+      "confidence": "medium"
+    },
+    {
+      "name": "Ohio Wesleyan University",
+      "domain": "owu.edu",
+      "grade": "B",
+      "evidence": "Ohio Wesleyan University - Customer Case Study",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "Opportunity Bank of Montana",
+      "domain": "opportunitybank.com",
+      "grade": "B",
+      "evidence": "Optimizing internal service workflows with Zendesk and Myndbend",
+      "source_url": "https://www.zendesk.com/customer/opportunity-bank-montana/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Out of Milk",
+      "domain": "outofmilk.com",
+      "grade": "B",
+      "evidence": "Speed is king, and Zendesk is the key to our customer support success.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=5",
+      "confidence": "high"
+    },
+    {
+      "name": "Ozonics LLC",
+      "domain": "ozonicshunting.com",
+      "grade": "B",
+      "evidence": "By morning, Zendesk was fully functional with all historical data, eliminating downtime and manual re-entry.",
+      "source_url": "https://help-desk-migration.com/zendesk-to-zendesk-migration/",
+      "confidence": "high"
+    },
+    {
+      "name": "Parakar",
+      "domain": "parakar.eu",
+      "grade": "B",
+      "evidence": "How Parakar Improved Operational Efficiency and Collaboration with Zendesk and Premium Plus",
+      "source_url": "https://premiumplus.io/customer-stories",
+      "confidence": "high"
+    },
+    {
+      "name": "Parkmobile",
+      "domain": "parkmobile.io",
+      "grade": "B",
+      "evidence": "Zendesk gave us the ability to improve our support performance and deliver consistent results.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=5",
+      "confidence": "high"
+    },
+    {
+      "name": "Peak Financial Group",
+      "domain": "",
+      "grade": "B",
+      "evidence": "I highly recommend anyone who struggles with Zendesk to reach out to Leafworks.",
+      "source_url": "https://leafworks.de/en/our-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "Postbox",
+      "domain": "postbox-inc.com",
+      "grade": "B",
+      "evidence": "Postbox - Customer Case Study",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "Prezi",
+      "domain": "prezi.com",
+      "grade": "B",
+      "evidence": "Prezi + Zendesk A culture of customer-centric collaboration",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "Proxima Research",
+      "domain": "proximaresearch.com",
+      "grade": "B",
+      "evidence": "Volodymyr Klopkov Head of Customer Support, Proxima Research",
+      "source_url": "https://cloudfresh.com/en/case-category/zendesk-case-studies/",
+      "confidence": "high"
+    },
+    {
+      "name": "Q8",
+      "domain": "q8.be",
+      "grade": "B",
+      "evidence": "Q8 reduces call centre costs and increases customer satisfaction thanks to Zendesk and Premium Plus",
+      "source_url": "https://premiumplus.io/customer-stories/page/2",
+      "confidence": "high"
+    },
+    {
+      "name": "Raddish Kids",
+      "domain": "raddishkids.com",
+      "grade": "B",
+      "evidence": "I don't think we could ever outgrow Zendesk as there are so many options and integrations.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials",
+      "confidence": "high"
+    },
+    {
+      "name": "Samsung Electronics South Korea",
+      "domain": "samsung.com",
+      "grade": "B",
+      "evidence": "Toyota, Shell, Hitachi-Johnson Control Air Conditioning and Samsung Electronics South Korea are recorded users of Zendesk Service",
+      "source_url": "https://www.appsruntheworld.com/customers-database/products/view/zendesk-service",
+      "confidence": "high"
+    },
+    {
+      "name": "San Bernardino County ATC",
+      "domain": "sbcounty.gov",
+      "grade": "B",
+      "evidence": "Largest U.S. county modernizes citizen services with Zendesk AI",
+      "source_url": "https://www.zendesk.com/customer/san-bernardino-county-atc/",
+      "confidence": "medium"
+    },
+    {
+      "name": "School Loop",
+      "domain": "schoolloop.com",
+      "grade": "B",
+      "evidence": "School Loop - Customer Case Study",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=3",
+      "confidence": "medium"
+    },
+    {
+      "name": "Scribd",
+      "domain": "scribd.com",
+      "grade": "B",
+      "evidence": "Scribd - Customer Case Study",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "Shell",
+      "domain": "shell.com",
+      "grade": "B",
+      "evidence": "Organizations such as Toyota, Shell, Hitachi-Johnson Control Air Conditioning and Samsung Electronics South Korea are recorded users",
+      "source_url": "https://www.appsruntheworld.com/customers-database/products/view/zendesk-service",
+      "confidence": "high"
+    },
+    {
+      "name": "Shopify",
+      "domain": "shopify.com",
+      "grade": "B",
+      "evidence": "Shopify rolls out Zendesk to create more upsell and cross-sell opportunities",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=4",
+      "confidence": "high"
+    },
+    {
+      "name": "Sinch",
+      "domain": "sinch.com",
+      "grade": "B",
+      "evidence": "Leading cloud comms company sees major CX gains with Zendesk",
+      "source_url": "https://www.zendesk.com/customer/sinch-engage/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Sircle Collection",
+      "domain": "sirclecollection.com",
+      "grade": "B",
+      "evidence": "Sircle Collection replaced Outlook with Zendesk, supported by Premium Plus",
+      "source_url": "https://premiumplus.io/customer-stories",
+      "confidence": "high"
+    },
+    {
+      "name": "Smiles",
+      "domain": "smiles.com.br",
+      "grade": "B",
+      "evidence": "we were able to handle large volumes of incoming requests extremely well; there was no instability with the Zendesk platform.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials",
+      "confidence": "high"
+    },
+    {
+      "name": "Sony Music",
+      "domain": "sonymusic.com",
+      "grade": "B",
+      "evidence": "Sony Music - Customer Case Study",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "Standaard Boekhandel",
+      "domain": "standaardboekhandel.be",
+      "grade": "B",
+      "evidence": "Standaard Boekhandel Group Reaches a CX Breakthrough with Premium Plus and Zendesk",
+      "source_url": "https://premiumplus.io/customer-stories",
+      "confidence": "high"
+    },
+    {
+      "name": "Stanley Black & Decker",
+      "domain": "stanleyblackanddecker.com",
+      "grade": "B",
+      "evidence": "Trusted companies use Zendesk",
+      "source_url": "https://www.zendesk.com/customer/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Star Stable Entertainment",
+      "domain": "starstable.com",
+      "grade": "B",
+      "evidence": "How Zendesk Audit Helped Cut Star Stable's Ticket Backlog by 63%",
+      "source_url": "https://premiumplus.io/customer-stories",
+      "confidence": "high"
+    },
+    {
+      "name": "State of Missouri",
+      "domain": "mo.gov",
+      "grade": "B",
+      "evidence": "the Australian Taxation Office, the State of Missouri, and the French Ministry of Justice",
+      "source_url": "https://bloomberry.com/data/zendesk/",
+      "confidence": "high"
+    },
+    {
+      "name": "Super Payments",
+      "domain": "superpayments.com",
+      "grade": "B",
+      "evidence": "In 2022, Super Payments deployed Zendesk Service as its Customer Support application on the corporate website.",
+      "source_url": "https://www.appsruntheworld.com/customers-database/products/view/zendesk-service",
+      "confidence": "high"
+    },
+    {
+      "name": "SupportZebra",
+      "domain": "supportzebra.com",
+      "grade": "B",
+      "evidence": "BPO innovates with CCaaS for better customer experiences",
+      "source_url": "https://www.zendesk.com/customer/support-zebra/",
+      "confidence": "medium"
+    },
+    {
+      "name": "The Bread Factory",
+      "domain": "",
+      "grade": "B",
+      "evidence": "The Bread Factory's CX Transformation with Zendesk and Premium Plus",
+      "source_url": "https://premiumplus.io/customer-stories",
+      "confidence": "high"
+    },
+    {
+      "name": "The Royal Children's Hospital Melbourne",
+      "domain": "rch.org.au",
+      "grade": "B",
+      "evidence": "Zendesk Support helps make support more collaborative and effective",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "Tile",
+      "domain": "tile.com",
+      "grade": "B",
+      "evidence": "Tile + Zendesk Perfecting workflows to boost the customer experience",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Tony Bianco",
+      "domain": "tonybianco.com",
+      "grade": "B",
+      "evidence": "Before Zendesk Support, Guide, Chat, and Talk, there were many missed opportunities.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "Toyota",
+      "domain": "toyota.com",
+      "grade": "B",
+      "evidence": "Organizations such as Toyota, Shell, Hitachi-Johnson Control Air Conditioning and Samsung Electronics South Korea are recorded users",
+      "source_url": "https://www.appsruntheworld.com/customers-database/products/view/zendesk-service",
+      "confidence": "high"
+    },
+    {
+      "name": "trivago",
+      "domain": "trivago.com",
+      "grade": "B",
+      "evidence": "Trivago - Customer Case Study",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "University of California, Los Angeles",
+      "domain": "ucla.edu",
+      "grade": "B",
+      "evidence": "UCLA - Customer Case Study",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "University of Lincoln",
+      "domain": "lincoln.ac.uk",
+      "grade": "B",
+      "evidence": "What the university's focus group thought of Zendesk Support",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=4",
+      "confidence": "high"
+    },
+    {
+      "name": "VanMeijel",
+      "domain": "vanmeijel.nl",
+      "grade": "B",
+      "evidence": "VanMeijel + Zendesk Tackling support times in spite of rising ticket volume",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=4",
+      "confidence": "high"
+    },
+    {
+      "name": "Vend",
+      "domain": "vendhq.com",
+      "grade": "B",
+      "evidence": "Vend improved response time by more than 300%",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=4",
+      "confidence": "high"
+    },
+    {
+      "name": "Vodafone",
+      "domain": "vodafone.com",
+      "grade": "B",
+      "evidence": "Vodafone reduced ticket volume from 15k employees by 70% with Zendesk Support",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=4",
+      "confidence": "high"
+    },
+    {
+      "name": "WePay",
+      "domain": "wepay.com",
+      "grade": "B",
+      "evidence": "How built-in CSAT ratings with Zendesk's customer service software show WePay where they stand",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=4",
+      "confidence": "high"
+    },
+    {
+      "name": "YOTEL",
+      "domain": "yotel.com",
+      "grade": "B",
+      "evidence": "YOTEL's Customer Service Transformation with Premium Plus and Zendesk",
+      "source_url": "https://premiumplus.io/customer-stories",
+      "confidence": "high"
+    },
+    {
+      "name": "Yuma GmbH",
+      "domain": "",
+      "grade": "B",
+      "evidence": "Leafworks carried out the complete set-up of Zendesk for us, including the connection of all our online shops",
+      "source_url": "https://leafworks.de/en/our-customers/",
+      "confidence": "high"
+    },
+    {
+      "name": "Zip",
+      "domain": "zip.co",
+      "grade": "B",
+      "evidence": "With Zendesk, agents focus on the customer, not the software",
+      "source_url": "https://www.zendesk.com/customer/zip/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Zoosk",
+      "domain": "zoosk.com",
+      "grade": "B",
+      "evidence": "Zendesk Support empowered Zoosk's agents and doubled their productivity",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=4",
+      "confidence": "high"
+    },
+    {
+      "name": "Aesop",
+      "domain": "aesop.com",
+      "grade": "C",
+      "evidence": "Aēsop | Australia | Personal Care Services | 2.2k | $537M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/au",
+      "confidence": "low"
+    },
+    {
+      "name": "AlayaCare",
+      "domain": "alayacare.com",
+      "grade": "C",
+      "evidence": "AlayaCare | Canada | Software Development | 629 | $19M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/ca",
+      "confidence": "low"
+    },
+    {
+      "name": "AllSaints",
+      "domain": "allsaints.com",
+      "grade": "C",
+      "evidence": "Our ultimate goal is to resolve all customer cases within 24 hours, and always deliver a luxury brand experience.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=9",
+      "confidence": "low"
+    },
+    {
+      "name": "Ardex",
+      "domain": "ardex.com",
+      "grade": "C",
+      "evidence": "Revolutionizing customer request management at Ardex",
+      "source_url": "https://premiumplus.io/customer-stories",
+      "confidence": "low"
+    },
+    {
+      "name": "Axi",
+      "domain": "axi.com",
+      "grade": "C",
+      "evidence": "Axi | Australia | Financial Services | 626 | $35M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/au",
+      "confidence": "low"
+    },
+    {
+      "name": "BaubleBar",
+      "domain": "baublebar.com",
+      "grade": "C",
+      "evidence": "If they can't, then it's a missed opportunity. It's the same thing online.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=9",
+      "confidence": "low"
+    },
+    {
+      "name": "BigTent",
+      "domain": "",
+      "grade": "C",
+      "evidence": "BigTent - Customer Case Study",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "CALE Parking",
+      "domain": "cale.se",
+      "grade": "C",
+      "evidence": "CALE Parking - Customer Case Study",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "Cambridge University Press & Assessment",
+      "domain": "cambridge.org",
+      "grade": "C",
+      "evidence": "Cambridge University Press & Assessment | United Kingdom | Education | 13k | $1.1B | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/gb",
+      "confidence": "low"
+    },
+    {
+      "name": "Carbon Guerrilla",
+      "domain": "",
+      "grade": "C",
+      "evidence": "Helping Customers Think Green, Save Green",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "Carrefour",
+      "domain": "carrefour.com",
+      "grade": "C",
+      "evidence": "Carrefour fine-tunes customer centricity",
+      "source_url": "https://premiumplus.io/customer-stories/page/2",
+      "confidence": "low"
+    },
+    {
+      "name": "Cassis Paprika",
+      "domain": "cassis-paprika.com",
+      "grade": "C",
+      "evidence": "Cassis Paprika: a single platform to support a heterogeneous team and several brands",
+      "source_url": "https://premiumplus.io/customer-stories/page/2",
+      "confidence": "low"
+    },
+    {
+      "name": "Cinch Cars",
+      "domain": "cinch.co.uk",
+      "grade": "C",
+      "evidence": "Cinch Cars | United Kingdom | Technology, Information and Internet | 500 | $82M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/gb",
+      "confidence": "low"
+    },
+    {
+      "name": "Clio",
+      "domain": "clio.com",
+      "grade": "C",
+      "evidence": "Clio | Canada | Software Development | 2.7k | $100M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/ca",
+      "confidence": "low"
+    },
+    {
+      "name": "Club Brugge",
+      "domain": "clubbrugge.be",
+      "grade": "C",
+      "evidence": "Club Brugge and Premium Plus make the Club ID launch a smooth user experience",
+      "source_url": "https://premiumplus.io/customer-stories/page/2",
+      "confidence": "low"
+    },
+    {
+      "name": "Compete, Inc.",
+      "domain": "compete.com",
+      "grade": "C",
+      "evidence": "Compete, Inc. - Customer Case Study",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "Culture Amp",
+      "domain": "cultureamp.com",
+      "grade": "C",
+      "evidence": "Culture Amp | Australia | Software Development | 1.1k | $58M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/au",
+      "confidence": "low"
+    },
+    {
+      "name": "Cyber-Duck",
+      "domain": "cyber-duck.co.uk",
+      "grade": "C",
+      "evidence": "in reality most client support requests came through via email.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=2",
+      "confidence": "low"
+    },
+    {
+      "name": "DAZN",
+      "domain": "dazn.com",
+      "grade": "C",
+      "evidence": "DAZN | United Kingdom | Spectator Sports | 3.3k | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/gb",
+      "confidence": "low"
+    },
+    {
+      "name": "De Lijn",
+      "domain": "delijn.be",
+      "grade": "C",
+      "evidence": "De Lijn centralises, integrates and reduces the workload of helpdesks in several departments",
+      "source_url": "https://premiumplus.io/customer-stories/page/2",
+      "confidence": "low"
+    },
+    {
+      "name": "Detector Inspector",
+      "domain": "detectorinspector.com.au",
+      "grade": "C",
+      "evidence": "Detector Inspector | Australia | Repair and Maintenance | 348 | $1.2M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/au",
+      "confidence": "low"
+    },
+    {
+      "name": "DICE",
+      "domain": "dice.fm",
+      "grade": "C",
+      "evidence": "Premium Plus takes DICE to new heights of fan service",
+      "source_url": "https://premiumplus.io/customer-stories",
+      "confidence": "low"
+    },
+    {
+      "name": "Edinburgh Airport",
+      "domain": "edinburghairport.com",
+      "grade": "C",
+      "evidence": "Premium Plus helps Edinburgh Airport enhance passenger satisfaction",
+      "source_url": "https://premiumplus.io/customer-stories/page/2",
+      "confidence": "low"
+    },
+    {
+      "name": "EMU Australia",
+      "domain": "emuaustralia.com",
+      "grade": "C",
+      "evidence": "We are pleased to share the results achieved for clients such as The Bart Group and EMU Australia.",
+      "source_url": "https://gravity.cx/blog/guides/zendesk-implementation-partner/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Eucalyptus",
+      "domain": "eucalyptus.health",
+      "grade": "C",
+      "evidence": "Eucalyptus | Australia | Health and Human Services | 915 | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/au",
+      "confidence": "low"
+    },
+    {
+      "name": "Eurabo",
+      "domain": "eurabo.be",
+      "grade": "C",
+      "evidence": "Eurabo uses enhanced customer experience as a competitive edge, thanks to Premium Plus",
+      "source_url": "https://premiumplus.io/customer-stories/page/2",
+      "confidence": "low"
+    },
+    {
+      "name": "Facilicom",
+      "domain": "facilicom.com",
+      "grade": "C",
+      "evidence": "Optimisation of its own facilities department inspires Facilicom to introduce a new business model",
+      "source_url": "https://premiumplus.io/customer-stories/page/2",
+      "confidence": "low"
+    },
+    {
+      "name": "Five Below",
+      "domain": "fivebelow.com",
+      "grade": "C",
+      "evidence": "Five Below | United States | Retail | 15k | $3.1B | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk",
+      "confidence": "low"
+    },
+    {
+      "name": "Fullscript",
+      "domain": "fullscript.com",
+      "grade": "C",
+      "evidence": "Fullscript | Canada | Health and Human Services | 794 | $300M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/ca",
+      "confidence": "low"
+    },
+    {
+      "name": "Gawker Media",
+      "domain": "",
+      "grade": "C",
+      "evidence": "Gawker - Customer Case Study",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=2",
+      "confidence": "medium"
+    },
+    {
+      "name": "Gengo",
+      "domain": "gengo.com",
+      "grade": "C",
+      "evidence": "we've never had a customer complaining about our customer support system.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=3",
+      "confidence": "low"
+    },
+    {
+      "name": "GeoComply",
+      "domain": "geocomply.com",
+      "grade": "C",
+      "evidence": "GeoComply | Canada | Software Development | 513 | $60M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/ca",
+      "confidence": "low"
+    },
+    {
+      "name": "Globetrotter Ausrüstung",
+      "domain": "globetrotter.de",
+      "grade": "C",
+      "evidence": "The switch to a new support system was a big step for us.",
+      "source_url": "https://leafworks.de/en/our-customers/",
+      "confidence": "low"
+    },
+    {
+      "name": "Griffin Technology",
+      "domain": "griffintechnology.com",
+      "grade": "C",
+      "evidence": "We're always trying to respond more quickly to their technical issues.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=3",
+      "confidence": "low"
+    },
+    {
+      "name": "Grover",
+      "domain": "grovercorp.com",
+      "grade": "C",
+      "evidence": "Grover | grovercorp.com | United States | 1M-10M | 50-200",
+      "source_url": "https://enlyft.com/tech/products/zendesk",
+      "confidence": "low"
+    },
+    {
+      "name": "Hartree Partners",
+      "domain": "hartreepartners.com",
+      "grade": "C",
+      "evidence": "Uniting global support at Hartree Partners",
+      "source_url": "https://premiumplus.io/customer-stories",
+      "confidence": "low"
+    },
+    {
+      "name": "Hightail",
+      "domain": "hightail.com",
+      "grade": "C",
+      "evidence": "ultimately we want customers to leave saying 'that company was awesome' with a smile on their faces.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=3",
+      "confidence": "low"
+    },
+    {
+      "name": "Hootsuite",
+      "domain": "hootsuite.com",
+      "grade": "C",
+      "evidence": "Hootsuite | Canada | IT Services and IT Consulting | 1.8k | $200M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/ca",
+      "confidence": "low"
+    },
+    {
+      "name": "IDEA Public Schools",
+      "domain": "ideapublicschools.org",
+      "grade": "C",
+      "evidence": "IDEA Public Schools | United States | Education Administration Programs | 5.9k | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk",
+      "confidence": "low"
+    },
+    {
+      "name": "Impermo",
+      "domain": "impermo.be",
+      "grade": "C",
+      "evidence": "Premium Plus supports Impermo during major customer service reorganisation",
+      "source_url": "https://premiumplus.io/customer-stories/page/2",
+      "confidence": "low"
+    },
+    {
+      "name": "Intolaw",
+      "domain": "intolaw.be",
+      "grade": "C",
+      "evidence": "Intolaw: a chatbot that predicts your liability",
+      "source_url": "https://premiumplus.io/customer-stories/page/2",
+      "confidence": "low"
+    },
+    {
+      "name": "KashFlow",
+      "domain": "kashflow.com",
+      "grade": "C",
+      "evidence": "We were using another SaaS help desk solution previously but it was rather limited",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=3",
+      "confidence": "low"
+    },
+    {
+      "name": "Keywords Studios",
+      "domain": "keywordsstudios.com",
+      "grade": "C",
+      "evidence": "Keywords Studios | Ireland | Computer Games | 12k | $580M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk",
+      "confidence": "low"
+    },
+    {
+      "name": "Klaviyo",
+      "domain": "klaviyo.com",
+      "grade": "C",
+      "evidence": "Klaviyo | United States | Marketing Services | 3k | $150M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk",
+      "confidence": "low"
+    },
+    {
+      "name": "Kwik Kopy",
+      "domain": "kwikkopy.com.au",
+      "grade": "C",
+      "evidence": "With so many queries coming into the team, but no way of tracking them, we realised we had no visibility",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=3",
+      "confidence": "low"
+    },
+    {
+      "name": "Ledarna",
+      "domain": "ledarna.se",
+      "grade": "C",
+      "evidence": "We are seeing enormous productivity benefits. We are getting more tickets from our users because it's more accessible",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=4",
+      "confidence": "low"
+    },
+    {
+      "name": "Liantis",
+      "domain": "liantis.be",
+      "grade": "C",
+      "evidence": "Optimizing Liantis FAQ for maximum content accessibility",
+      "source_url": "https://premiumplus.io/customer-stories",
+      "confidence": "low"
+    },
+    {
+      "name": "LJ Hooker",
+      "domain": "ljhooker.com.au",
+      "grade": "C",
+      "evidence": "Only help desk agents had access to tickets and knowledge base articles, which meant that finding and sharing information was slow",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=4",
+      "confidence": "low"
+    },
+    {
+      "name": "Mediavine",
+      "domain": "mediavine.com",
+      "grade": "C",
+      "evidence": "Mediavine | mediavine.com | United States | 10M-50M | 200-500",
+      "source_url": "https://enlyft.com/tech/products/zendesk",
+      "confidence": "low"
+    },
+    {
+      "name": "Merlin Information Systems",
+      "domain": "",
+      "grade": "C",
+      "evidence": "We have always been very forward-looking in terms of the technology we use to support our clients and their customers.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=4",
+      "confidence": "low"
+    },
+    {
+      "name": "ModSquad",
+      "domain": "modsquad.com",
+      "grade": "C",
+      "evidence": "ModSquad | United States | Technology, Information and Internet | 1.5k | $75M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/us",
+      "confidence": "low"
+    },
+    {
+      "name": "Motorway",
+      "domain": "motorway.co.uk",
+      "grade": "C",
+      "evidence": "Motorway | United Kingdom | Technology, Information and Internet | 463 | $420M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/gb",
+      "confidence": "low"
+    },
+    {
+      "name": "Netflix",
+      "domain": "netflix.com",
+      "grade": "C",
+      "evidence": "Netflix | United States | Entertainment Providers | 19k | $32B | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/us",
+      "confidence": "low"
+    },
+    {
+      "name": "Orell Füssli",
+      "domain": "orellfuessli.ch",
+      "grade": "C",
+      "evidence": "Consulting for the introduction of a pilot project by Zendesk in eCommerce",
+      "source_url": "https://leafworks.de/en/our-customers/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Patch",
+      "domain": "patch.com",
+      "grade": "C",
+      "evidence": "When we have a site issue that's happening on 800 different communities, multiply that by the number of people",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=5",
+      "confidence": "low"
+    },
+    {
+      "name": "Pure Storage",
+      "domain": "purestorage.com",
+      "grade": "C",
+      "evidence": "Pure Storage | purestorage.com | United States | 1B-5B | 5000-10000",
+      "source_url": "https://enlyft.com/tech/products/zendesk",
+      "confidence": "low"
+    },
+    {
+      "name": "Rackspace Technology",
+      "domain": "rackspace.com",
+      "grade": "C",
+      "evidence": "When we launched our cloud hosting offering, we wanted to keep this distinction from other vendors by delivering a higher level of support.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=6",
+      "confidence": "low"
+    },
+    {
+      "name": "ReverbNation",
+      "domain": "reverbnation.com",
+      "grade": "C",
+      "evidence": "Email worked ok when we were small and only had a few of us in support.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=6",
+      "confidence": "low"
+    },
+    {
+      "name": "Samsara",
+      "domain": "samsara.com",
+      "grade": "C",
+      "evidence": "Samsara | United States | Software Development | 5.7k | $428M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk",
+      "confidence": "low"
+    },
+    {
+      "name": "School of Rock",
+      "domain": "schoolofrock.com",
+      "grade": "C",
+      "evidence": "Ensuring they are supported and can deliver the highest quality programming is one of our top priorities.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=6",
+      "confidence": "low"
+    },
+    {
+      "name": "Solink",
+      "domain": "solink.com",
+      "grade": "C",
+      "evidence": "Solink | Canada | Software Development | 390 | $5M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/ca",
+      "confidence": "low"
+    },
+    {
+      "name": "SwitchEasy",
+      "domain": "switcheasy.com",
+      "grade": "C",
+      "evidence": "We knew that we needed to change our approach to support but couldn't find an alternative solution.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=6",
+      "confidence": "low"
+    },
+    {
+      "name": "Telador",
+      "domain": "telador.nl",
+      "grade": "C",
+      "evidence": "Premium Plus helps Telador make the lives of partners and helpdesk staff easier",
+      "source_url": "https://premiumplus.io/customer-stories/page/2",
+      "confidence": "low"
+    },
+    {
+      "name": "TELUS Digital",
+      "domain": "telusdigital.com",
+      "grade": "C",
+      "evidence": "TELUS Digital | Canada | IT Services and IT Consulting | 45k | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/ca",
+      "confidence": "low"
+    },
+    {
+      "name": "TerraCycle",
+      "domain": "terracycle.com",
+      "grade": "C",
+      "evidence": "As our company grows, our support requests are increasing exponentially.",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/testimonials?p=7",
+      "confidence": "low"
+    },
+    {
+      "name": "Tesco Technology",
+      "domain": "tesco-careers.com",
+      "grade": "C",
+      "evidence": "Tesco Technology | United Kingdom | Retail | 1.2k | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/gb",
+      "confidence": "low"
+    },
+    {
+      "name": "The Bart Group",
+      "domain": "",
+      "grade": "C",
+      "evidence": "We are pleased to share the results achieved for clients such as The Bart Group and EMU Australia.",
+      "source_url": "https://gravity.cx/blog/guides/zendesk-implementation-partner/",
+      "confidence": "medium"
+    },
+    {
+      "name": "TUI",
+      "domain": "tui.com",
+      "grade": "C",
+      "evidence": "Unlocking success with TUI: A seamless knowledge base solution",
+      "source_url": "https://premiumplus.io/customer-stories",
+      "confidence": "low"
+    },
+    {
+      "name": "Tungle.me",
+      "domain": "",
+      "grade": "C",
+      "evidence": "Tungle.me - Customer Case Study",
+      "source_url": "https://www.featuredcustomers.com/vendor/zendesk/case-studies?p=3",
+      "confidence": "medium"
+    },
+    {
+      "name": "uShip",
+      "domain": "uship.com",
+      "grade": "C",
+      "evidence": "uShip | uship.com | United States | 50M-100M | 50-200",
+      "source_url": "https://enlyft.com/tech/products/zendesk",
+      "confidence": "low"
+    },
+    {
+      "name": "VGW",
+      "domain": "vgw.co",
+      "grade": "C",
+      "evidence": "VGW | Australia | Entertainment Providers | 1.1k | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/au",
+      "confidence": "low"
+    },
+    {
+      "name": "Vydia",
+      "domain": "vydia.com",
+      "grade": "C",
+      "evidence": "Vydia | vydia.com | United States | 50M-100M | 50-200",
+      "source_url": "https://enlyft.com/tech/products/zendesk",
+      "confidence": "low"
+    },
+    {
+      "name": "Whatnot",
+      "domain": "whatnot.com",
+      "grade": "C",
+      "evidence": "Whatnot | United States | Technology, Information and Internet | 2.1k | $6.5M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/us",
+      "confidence": "low"
+    },
+    {
+      "name": "Wise",
+      "domain": "wise.com",
+      "grade": "C",
+      "evidence": "Wise | United Kingdom | Financial Services | 12k | $387M | Zendesk",
+      "source_url": "https://theirstack.com/en/technology/zendesk/gb",
+      "confidence": "low"
+    }
+  ],
+  "generated_at": "2026-08-31T06:57:15.170761Z",
+  "company_count": 528
+}
