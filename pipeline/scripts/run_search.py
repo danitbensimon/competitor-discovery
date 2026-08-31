@@ -1,376 +1,307 @@
 #!/usr/bin/env python3
 """
-run_search.py — CompetitorIQ orchestrator.
+CompetitorIQ v3 — parallel pipeline.
 
-Finds companies using a competitor's product via multiple signal groups:
-  - web_search   (Brave + Claude extraction, via the existing pipeline)
-  - apify        (your published Apify actors: LinkedIn Engagement Lead Finder,
-                  LinkedIn Hashtag Scraper)
-  - theirstack   (optional, needs theirstack_api_key)
-  - builtwith    (optional, needs builtwith_api_key)
+WHY THIS EXISTS
+  The chat version runs ~40 searches one at a time (~2 min) and, because a human
+  is rationing them, tends to stop at 7 of 12 groups. This runs all 12 groups
+  concurrently and never rations. ~20-30s.
 
-Exports:
-  <out>/<slug>.json            (consumed by the Astro site)
-  <out>/<slug>_companies.xlsx  (full Excel export)
+  Batched 5 at a time on purpose: firing all 12 at once rate-limits (learned the
+  hard way in the May artifact run).
 
-Usage:
-  python3 pipeline/scripts/run_search.py --domain gong.io --name "Gong" \
-      --out astro-site/src/data/competitors
+USAGE
+  export ANTHROPIC_API_KEY=sk-ant-...
+  python run_search.py anaplan.com "Anaplan"
+  python run_search.py anaplan.com "Anaplan" --out ./data --icp-country UK
 
-Credentials live in pipeline/scripts/config.json (gitignored).
-Copy config.example.json → config.json and fill in keys.
-Groups with missing keys are skipped and reported, never fatal.
+OUTPUT
+  <out>/<brand>.json   -> for the Astro site (/companies-using/[slug])
+  <out>/<brand>.xlsx   -> for humans
 """
 
-import argparse
-import json
 import os
-import re
 import sys
-from datetime import datetime, timezone
-from pathlib import Path
+import json
+import re
+import time
+import argparse
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from datetime import date
 
-import requests
+try:
+    import anthropic
+except ImportError:
+    sys.exit("pip install anthropic")
 
-SCRIPT_DIR = Path(__file__).resolve().parent
-PIPELINE_DIR = SCRIPT_DIR.parent
-sys.path.insert(0, str(PIPELINE_DIR))
+# ----- config -------------------------------------------------------------
+MODEL = os.environ.get("COMPETITORIQ_MODEL", "claude-haiku-4-5-20251001")
+SEARCH_TOOL = {"type": "web_search_20250305", "name": "web_search", "max_uses": 4}
+BATCH_SIZE = 5          # concurrent groups. >5 rate-limits.
+PAUSE_BETWEEN_BATCHES = 2.0
+TODAY = date.today().isoformat()
+
+# ----- the 12 signal groups ----------------------------------------------
+# Ordered by measured yield per query (see SKILL.md). partners_si first:
+# partner/SI sites name the MID-MARKET customers the vendor's own site omits.
+SIGNAL_GROUPS = [
+    ("partners_si", [
+        '"{p} implementation" case study -site:{d}',
+        '"{p} partner" client success story',
+        '{p} consulting partner customers list',
+    ]),
+    ("own_site", [
+        'site:{d} customer story OR case study',
+        '{p} customer stories page',
+    ]),
+    ("job_postings", [
+        '"experience with {p}" jobs',
+        '"{p} model builder" OR "{p} administrator" hiring',
+        '{p} site:theirstack.com',
+    ]),
+    ("review_sites", [
+        'site:g2.com {p} reviews',
+        'site:capterra.com {p}',
+        '{p} review "we switched"',
+    ]),
+    ("blog_press", [
+        '"selects {p}" OR "chooses {p}" press release',
+        '"goes live with {p}" OR "migrates to {p}"',
+    ]),
+    ("tech_stack", [
+        'site:enlyft.com {p}',
+        '"companies using {p}" list',
+        'site:appsruntheworld.com {p}',
+    ]),
+    ("linkedin", [
+        'site:linkedin.com "we chose {p}" OR "migrated to {p}"',
+        'site:linkedin.com/posts {p} customer story',
+    ]),
+    ("video", [
+        '{p} customer story site:youtube.com',
+        '{p} testimonial video case study',
+    ]),
+    ("customer_signals", [
+        '"powered by {p}" OR "we use {p}"',
+    ]),
+    ("communities", [
+        'site:reddit.com "we use {p}"',
+    ]),
+    ("events_awards", [
+        '{p} customer awards winners',
+        '{p} user conference customer speakers',
+    ]),
+    ("filings_docs", [
+        '{p} annual report vendor',
+    ]),
+]
+
+# Groups where a naive read produces false positives. Warn the model explicitly.
+GROUP_TRAPS = {
+    "events_awards": (
+        "CRITICAL: vendor conferences pay CELEBRITY KEYNOTES (authors, athletes, "
+        "negotiation coaches). They are NOT customers. Only count speakers whose "
+        "EMPLOYER is presenting their own use of the product, and award winners."
+    ),
+    "communities": (
+        "Reddit posters usually do NOT name their employer. Only include a company "
+        "if the poster explicitly names it. Do not infer."
+    ),
+    "tech_stack": (
+        "Database listings have no second source. Mark every row from here as "
+        "'Likely', never 'Verified'."
+    ),
+    "job_postings": (
+        "The HIRING company is the user - not the recruitment agency posting the ad. "
+        "If the ad is posted by a consultancy hiring for unnamed clients, skip it."
+    ),
+}
+
+PROMPT = """Find companies that are CUSTOMERS of {product} (domain: {domain}).
+
+Run these searches:
+{queries}
+
+RULES
+- Only NAMED companies. Never "a Fortune 500 retailer".
+- Every row needs a real source URL and a short verbatim quote proving usage.
+- Exclude {product} itself, and exclude resellers/partners unless they state they
+  use it internally.
+- If a source states the company's employee count, capture it VERBATIM. If it does
+  not, use null. NEVER estimate, infer, or recall headcount from memory.
+- confidence: "Verified" = named + URL + quote proving use.
+                "Likely"  = database listing only, no second source.
+{trap}
+
+Return ONLY a raw JSON array. No markdown, no preamble, no code fences.
+[{{"company":"","domain":"","country":"","employees":null,"employees_evidence":null,"industry":"","confidence":"Verified","quote":"","source_url":""}}]
+Return [] if nothing found."""
 
 
-# ---------------------------------------------------------------- helpers
-
-def slugify(name: str) -> str:
-    s = name.lower().strip()
-    s = re.sub(r"[^a-z0-9]+", "-", s)
-    return s.strip("-")
-
-
-def normalize_domain(d: str) -> str:
-    if not d:
-        return ""
-    d = str(d).lower().strip()
-    d = re.sub(r"^https?://", "", d)
-    d = d.replace("www.", "").split("/")[0]
-    return d
-
-
-def load_config() -> dict:
-    cfg_path = SCRIPT_DIR / "config.json"
-    if not cfg_path.exists():
-        print("[warn] config.json not found — copy config.example.json and fill keys")
-        return {}
-    with open(cfg_path) as f:
-        return json.load(f)
-
-
-# ---------------------------------------------------------------- signal groups
-
-def run_web_search(domain: str, brand: str, cfg: dict, report: dict) -> list:
-    """Existing pipeline: Brave search → rank → Claude extract/classify → score."""
-    brave = cfg.get("brave_api_key") or os.environ.get("BRAVE_API_KEY", "")
-    anthropic_key = cfg.get("anthropic_api_key") or os.environ.get("ANTHROPIC_API_KEY", "")
-    missing = [k for k, v in [("brave_api_key", brave), ("anthropic_api_key", anthropic_key)] if not v]
-    if missing:
-        report["web_search"] = f"skipped — missing {', '.join(missing)}"
-        return []
-    os.environ["BRAVE_API_KEY"] = brave
-    os.environ["ANTHROPIC_API_KEY"] = anthropic_key
+def run_group(client, group, queries, product, domain):
+    """One API call per group. Claude searches AND judges in the same call."""
+    q = "\n".join("- " + t.format(p=product, d=domain) for t in queries)
+    prompt = PROMPT.format(
+        product=product, domain=domain, queries=q,
+        trap=GROUP_TRAPS.get(group, ""),
+    )
     try:
-        from search import search_customer_mentions
-        from rank import rank_candidates
-        from extract import extract_companies
-        from classify import classify_companies
-        from score import aggregate_company_records
-
-        tier = cfg.get("web_search_tier", "lite")
-        pages = search_customer_mentions(domain, brand, mode="live", tier=tier)
-        if not pages:
-            report["web_search"] = "ran — 0 pages found"
-            return []
-        ranked = rank_candidates(pages, brand, tier=tier)
-        ranked = [p if "url" in p else {**p, "url": p.get("link", "")} for p in ranked]
-        ranked = [p for p in ranked if p.get("url")]
-        extracted = extract_companies(ranked, brand=brand)
-        classified = classify_companies(extracted)
-        scored = aggregate_company_records(classified)
-        for c in scored:
-            c["signal_group"] = c.get("signal_group") or "web_search"
-        report["web_search"] = f"ran — {len(scored)} companies"
-        return scored
+        resp = client.messages.create(
+            model=MODEL,
+            max_tokens=4096,
+            messages=[{"role": "user", "content": prompt}],
+            tools=[SEARCH_TOOL],
+        )
     except Exception as e:
-        report["web_search"] = f"error — {e}"
-        return []
+        return group, [], len(queries), f"ERROR: {type(e).__name__}"
 
-
-def run_apify_actor(token: str, actor_id: str, run_input: dict, timeout: int = 300) -> list:
-    actor_slug = actor_id.replace("/", "~")
-    url = f"https://api.apify.com/v2/acts/{actor_slug}/run-sync-get-dataset-items"
-    r = requests.post(url, params={"token": token, "timeout": timeout},
-                      json=run_input, timeout=timeout + 30)
-    r.raise_for_status()
-    return r.json()
-
-
-def run_apify_group(domain: str, brand: str, cfg: dict, report: dict) -> list:
-    token = cfg.get("apify_token", "")
-    actors = cfg.get("apify_actors", {})
-    if not token or token == "YOUR_APIFY_TOKEN":
-        report["apify"] = "skipped — missing apify_token"
-        return []
-
-    li_at = cfg.get("linkedin_li_at", "")
-    slug = slugify(brand)
+    text = "".join(b.text for b in resp.content if getattr(b, "type", "") == "text")
+    m = re.search(r"\[[\s\S]*\]", text)
+    if not m:
+        return group, [], len(queries), "no JSON returned"
+    try:
+        rows = json.loads(m.group(0))
+    except json.JSONDecodeError:
+        return group, [], len(queries), "bad JSON"
 
     out = []
-    for key, spec in actors.items():
-        if not spec.get("enabled", True):
+    for r in rows:
+        if not isinstance(r, dict) or not r.get("company"):
             continue
-        actor_id = spec.get("actor_id", "")
-        if not actor_id or actor_id.startswith("YOUR_"):
-            report[f"apify:{key}"] = "skipped — actor_id not set"
-            continue
-        if not li_at and "li_at" not in spec.get("input_overrides", {}):
-            report[f"apify:{key}"] = "skipped — missing linkedin_li_at cookie in config.json (both actors log into LinkedIn)"
-            continue
-
-        # Defaults matching the actors' INPUT_SCHEMA
-        if "hashtag" in key:
-            base_input = {"hashtag": brand.lower().replace(" ", ""), "li_at": li_at,
-                          "maxPosts": 25, "peopleOnly": True}
-        else:  # engagement lead finder — scan the competitor's company page posts
-            base_input = {"mode": "company",
-                          "companyUrl": f"https://www.linkedin.com/company/{slug}",
-                          "li_at": li_at, "maxPosts": 10, "peopleOnly": True}
-        base_input.update(spec.get("input_overrides", {}))
-
-        try:
-            items = run_apify_actor(token, actor_id, base_input)
-            found = 0
-            for it in items:
-                if it.get("_debug"):
-                    continue
-                # Actors return people; the company signal is the employer parsed
-                # from their LinkedIn headline.
-                company = (it.get("company") or "").strip()
-                if not company:
-                    continue
-                found += 1
-                out.append({
-                    "company_name": company,
-                    "company_domain": "",
-                    "signal_group": f"apify_{key}",
-                    "source_url": it.get("profileUrl", ""),
-                    "snippet": (it.get("headline") or "")[:300],
-                    "confidence": "medium",
-                    "evidence_count": 1,
-                    "score": 60,
-                    "grade": "B",
-                })
-            report[f"apify:{key}"] = f"ran — {len(items)} leads, {found} with company"
-        except Exception as e:
-            report[f"apify:{key}"] = f"error — {e}"
-    return out
+        if not r.get("source_url") or not r.get("quote"):
+            continue                      # no proof -> no row. Non-negotiable.
+        r["signal_group"] = group
+        if group == "tech_stack":
+            r["confidence"] = "Likely"
+        r["date_found"] = TODAY
+        out.append(r)
+    return group, out, len(queries), "done"
 
 
-def run_theirstack(domain: str, brand: str, cfg: dict, report: dict) -> list:
-    key = cfg.get("theirstack_api_key", "")
+def norm(name):
+    n = (name or "").lower().strip()
+    for suf in (" inc.", " inc", " ltd", " limited", " plc", " llc", " corp",
+                " group", " gmbh", " s.a.", " co."):
+        if n.endswith(suf):
+            n = n[: -len(suf)]
+    return re.sub(r"[^a-z0-9]", "", n)
+
+
+def dedupe(rows):
+    """One row per company. Multi-source companies get Verified+."""
+    by = {}
+    for r in rows:
+        k = norm(r.get("domain") or "") or norm(r["company"])
+        if k in by:
+            prev = by[k]
+            groups = set(prev["signal_group"].split(" + ")) | {r["signal_group"]}
+            prev["signal_group"] = " + ".join(sorted(groups))
+            if len(groups) > 1:
+                prev["confidence"] = "Verified+"      # corroborated = strongest
+            if not prev.get("employees") and r.get("employees"):
+                prev["employees"] = r["employees"]
+                prev["employees_evidence"] = r.get("employees_evidence")
+            if prev["confidence"] == "Likely" and r["confidence"] == "Verified":
+                prev.update({k2: r[k2] for k2 in ("confidence", "quote", "source_url")})
+        else:
+            by[k] = dict(r)
+    return list(by.values())
+
+
+def icp_fit(row, country="UK", lo=200, hi=2000):
+    """Only scorable when a SOURCE stated the size. Otherwise: unknown."""
+    emp = row.get("employees")
+    if not emp:
+        return "unknown"
+    nums = [int(x.replace(",", "")) for x in re.findall(r"[\d,]+", str(emp))]
+    if not nums:
+        return "unknown"
+    n = max(nums)
+    geo = country.lower() in (row.get("country") or "").lower()
+    size = lo <= n <= hi
+    if geo and size:
+        return "core"
+    if size:
+        return "size_only"
+    return "outside"
+
+
+def run(domain, product, out_dir, icp_country):
+    key = os.environ.get("ANTHROPIC_API_KEY")
     if not key:
-        report["theirstack"] = "skipped — missing theirstack_api_key (unlocks job-posting tech signals)"
-        return []
-    try:
-        r = requests.post(
-            "https://api.theirstack.com/v1/companies/search",
-            headers={"Authorization": f"Bearer {key}"},
-            json={"technology_slug_or": [slugify(brand)], "limit": 100,
-                  "order_by": [{"field": "confidence", "desc": True}]},
-            timeout=60,
-        )
-        r.raise_for_status()
-        data = r.json().get("data", [])
-        out = []
-        for c in data:
-            out.append({
-                "company_name": c.get("name", ""),
-                "company_domain": normalize_domain(c.get("domain", "")),
-                "industry": c.get("industry", ""),
-                "signal_group": "theirstack",
-                "source_url": c.get("url", ""),
-                "confidence": "high",
-                "evidence_count": c.get("jobs_count", 1) or 1,
-                "score": 75,
-                "grade": "A",
-            })
-        report["theirstack"] = f"ran — {len(out)} companies"
-        return out
-    except Exception as e:
-        report["theirstack"] = f"error — {e}"
-        return []
+        sys.exit("ANTHROPIC_API_KEY not set.\n  export ANTHROPIC_API_KEY=sk-ant-...")
+    client = anthropic.Anthropic(api_key=key)
 
+    print(f"\nCompetitorIQ v3 — {product} ({domain})")
+    print(f"  {len(SIGNAL_GROUPS)} groups | batches of {BATCH_SIZE} | {MODEL}\n")
 
-def run_builtwith(domain: str, brand: str, cfg: dict, report: dict) -> list:
-    key = cfg.get("builtwith_api_key", "")
-    if not key:
-        report["builtwith"] = "skipped — missing builtwith_api_key (unlocks tech-stack detection signals)"
-        return []
-    try:
-        tech = brand.replace(" ", "+")
-        r = requests.get(
-            "https://api.builtwith.com/lists11/api.json",
-            params={"KEY": key, "TECH": tech, "META": "yes"},
-            timeout=60,
-        )
-        r.raise_for_status()
-        results = r.json().get("Results", []) or []
-        out = []
-        for c in results:
-            dom = normalize_domain(c.get("D", ""))
-            if not dom:
-                continue
-            meta = c.get("META") or {}
-            out.append({
-                "company_name": meta.get("CompanyName") or dom,
-                "company_domain": dom,
-                "industry": (meta.get("Vertical") or ""),
-                "signal_group": "builtwith",
-                "source_url": f"https://builtwith.com/{dom}",
-                "confidence": "high",
-                "evidence_count": 1,
-                "score": 75,
-                "grade": "A",
-            })
-        report["builtwith"] = f"ran — {len(out)} companies"
-        return out
-    except Exception as e:
-        report["builtwith"] = f"error — {e}"
-        return []
+    all_rows, report = [], []
+    t0 = time.time()
 
+    for i in range(0, len(SIGNAL_GROUPS), BATCH_SIZE):
+        batch = SIGNAL_GROUPS[i:i + BATCH_SIZE]
+        with ThreadPoolExecutor(max_workers=BATCH_SIZE) as ex:
+            futs = {ex.submit(run_group, client, g, q, product, domain): g
+                    for g, q in batch}
+            for f in as_completed(futs):
+                g, rows, nq, status = f.result()
+                print(f"  {g:<18} {len(rows):>3} found   ({status})")
+                all_rows += rows
+                report.append({"group": g, "queries": nq,
+                               "found": len(rows), "status": status})
+        if i + BATCH_SIZE < len(SIGNAL_GROUPS):
+            time.sleep(PAUSE_BETWEEN_BATCHES)
 
-# ---------------------------------------------------------------- merge + export
-
-def merge_companies(groups: list, limit: int) -> list:
-    by_key = {}
-    for group in groups:
-        for c in group:
-            key = c.get("company_domain") or c.get("company_name", "").lower()
-            if not key:
-                continue
-            if key in by_key:
-                existing = by_key[key]
-                existing["evidence_count"] = int(existing.get("evidence_count", 1) or 1) + int(c.get("evidence_count", 1) or 1)
-                sgs = set(str(existing.get("signal_groups", existing.get("signal_group", ""))).split(",")) | {c.get("signal_group", "")}
-                existing["signal_groups"] = ",".join(sorted(g for g in sgs if g))
-                existing["score"] = max(int(existing.get("score", 0) or 0), int(c.get("score", 0) or 0)) + 5
-                if existing["score"] >= 80:
-                    existing["grade"] = "A"
-            else:
-                c.setdefault("signal_groups", c.get("signal_group", ""))
-                by_key[key] = dict(c)
-    merged = sorted(by_key.values(), key=lambda x: -int(x.get("score", 0) or 0))
-    return merged[:limit]
-
-
-def export_json(companies: list, domain: str, brand: str, slug: str,
-                report: dict, out_dir: Path) -> Path:
-    payload = {
-        "competitor": {"name": brand, "domain": domain, "slug": slug},
-        "generated_at": datetime.now(timezone.utc).isoformat(),
-        "signal_report": report,
-        "company_count": len(companies),
-        "companies": [
-            {
-                "name": c.get("company_name", ""),
-                "domain": c.get("company_domain", ""),
-                "industry": c.get("industry", ""),
-                "grade": c.get("grade", ""),
-                "score": c.get("score", 0),
-                "confidence": c.get("confidence", ""),
-                "signal_groups": c.get("signal_groups", c.get("signal_group", "")),
-                "evidence_count": c.get("evidence_count", 0),
-                "source_url": c.get("source_url", ""),
-                "snippet": c.get("snippet", ""),
-            }
-            for c in companies
-        ],
-    }
-    out = out_dir / f"{slug}.json"
-    with open(out, "w") as f:
-        json.dump(payload, f, indent=2, ensure_ascii=False)
-    return out
-
-
-def export_excel(companies: list, slug: str, out_dir: Path):
-    try:
-        from openpyxl import Workbook
-        from openpyxl.styles import Font, PatternFill
-    except ImportError:
-        print("[warn] openpyxl not installed — skipping Excel (pip install openpyxl)")
-        return None
-    wb = Workbook()
-    ws = wb.active
-    ws.title = "Companies"
-    headers = ["Company", "Domain", "Industry", "Grade", "Score", "Confidence",
-               "Signal groups", "Evidence count", "Source URL", "Snippet"]
-    ws.append(headers)
-    for cell in ws[1]:
-        cell.font = Font(bold=True, color="FFFFFF")
-        cell.fill = PatternFill("solid", fgColor="1F2937")
+    companies = dedupe(all_rows)
     for c in companies:
-        ws.append([
-            c.get("company_name", ""), c.get("company_domain", ""),
-            c.get("industry", ""), c.get("grade", ""), c.get("score", 0),
-            c.get("confidence", ""), c.get("signal_groups", c.get("signal_group", "")),
-            c.get("evidence_count", 0), c.get("source_url", ""),
-            (c.get("snippet", "") or "")[:500],
-        ])
-    for col, width in zip("ABCDEFGHIJ", [28, 24, 20, 8, 8, 12, 24, 14, 50, 60]):
-        ws.column_dimensions[col].width = width
-    out = out_dir / f"{slug}_companies.xlsx"
-    wb.save(out)
-    return out
+        c["icp_fit"] = icp_fit(c, icp_country)
 
+    rank = {"Verified+": 0, "Verified": 1, "Likely": 2}
+    fitrank = {"core": 0, "size_only": 1, "unknown": 2, "outside": 3}
+    companies.sort(key=lambda c: (fitrank[c["icp_fit"]],
+                                  rank.get(c["confidence"], 3),
+                                  c["company"]))
 
-# ---------------------------------------------------------------- main
+    elapsed = round(time.time() - t0, 1)
+    searches = sum(r["queries"] for r in report)
 
-def main():
-    ap = argparse.ArgumentParser(description="CompetitorIQ search")
-    ap.add_argument("--domain", required=True, help="Competitor domain, e.g. gong.io")
-    ap.add_argument("--name", required=True, help="Competitor name, e.g. Gong")
-    ap.add_argument("--out", required=True, help="Output dir for <slug>.json + Excel")
-    args = ap.parse_args()
+    payload = {
+        "product": product,
+        "domain": domain,
+        "slug": re.sub(r"[^a-z0-9]+", "-", product.lower()).strip("-"),
+        "generated": TODAY,
+        "elapsed_seconds": elapsed,
+        "total": len(companies),
+        "verified": sum(1 for c in companies if c["confidence"].startswith("Verified")),
+        "core_icp": sum(1 for c in companies if c["icp_fit"] == "core"),
+        "est_cost_usd": round(searches * 0.01, 2),   # $10/1k searches + tokens
+        "signal_group_report": report,
+        # the site shows the BEST 15, not the first 15 — already sorted
+        "preview": companies[:15],
+        "companies": companies,
+    }
 
-    domain = normalize_domain(args.domain)
-    brand = args.name
-    slug = slugify(brand)
-    out_dir = Path(args.out)
-    out_dir.mkdir(parents=True, exist_ok=True)
+    os.makedirs(out_dir, exist_ok=True)
+    jpath = os.path.join(out_dir, f"{payload['slug']}.json")
+    with open(jpath, "w") as f:
+        json.dump(payload, f, indent=2)
 
-    cfg = load_config()
-    report = {}
-
-    print(f"==== CompetitorIQ: {brand} ({domain}) ====")
-    groups = [
-        run_web_search(domain, brand, cfg, report),
-        run_apify_group(domain, brand, cfg, report),
-        run_theirstack(domain, brand, cfg, report),
-        run_builtwith(domain, brand, cfg, report),
-    ]
-    companies = merge_companies(groups, int(cfg.get("max_companies", 200)))
-
-    json_path = export_json(companies, domain, brand, slug, report, out_dir)
-    xlsx_path = export_excel(companies, slug, out_dir)
-
-    print("\n---- signal report ----")
-    for k, v in report.items():
-        print(f"  {k}: {v}")
-    print(f"\ncompanies: {len(companies)}")
-    print(f"json:  {json_path}")
-    print(f"excel: {xlsx_path or 'skipped'}")
-    if len(companies) < 10:
-        print("\n[thin results] add keys to config.json to unlock more signal groups:")
-        for k, v in report.items():
-            if "skipped" in str(v):
-                print(f"  - {k}: {v}")
+    skipped = [r["group"] for r in report if r["found"] == 0 and r["status"] != "done"]
+    print(f"\n  {len(companies)} companies | {payload['core_icp']} core ICP "
+          f"| {elapsed}s | ~${payload['est_cost_usd']} in searches")
+    if skipped:
+        print(f"  groups with errors: {', '.join(skipped)}")
+    print(f"  -> {jpath}")
+    return payload, jpath
 
 
 if __name__ == "__main__":
-    main()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("domain")
+    ap.add_argument("product", nargs="?")
+    ap.add_argument("--out", default="./data")
+    ap.add_argument("--icp-country", default="UK")
+    a = ap.parse_args()
+    d = re.sub(r"^https?://(www\.)?", "", a.domain).strip("/")
+    p = a.product or d.split(".")[0].title()
+    run(d, p, a.out, a.icp_country)
