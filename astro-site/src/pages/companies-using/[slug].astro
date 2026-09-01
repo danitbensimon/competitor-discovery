@@ -365,11 +365,11 @@ const ciqData = JSON.stringify({ slug: competitor.slug, name: competitor.name, c
         errLi.style.display = liOk ? 'none' : 'block';
         if (!emailOk || !liOk) return;
         if (!/^https?:\/\//i.test(linkedin)) linkedin = 'https://' + linkedin;
-        try { localStorage.setItem(GATE_KEY, email); } catch(_){}
+        try { localStorage.setItem(GATE_KEY, email); } catch(_){} var _hutk = (document.cookie.match(/(?:^|;\s*)hubspotutk=([^;]*)/) || [])[1]; var hsContext = { pageUri: location.href, pageName: document.title }; if (_hutk) hsContext.hutk = _hutk;
         try {
           fetch('https://api.hsforms.com/submissions/v3/integration/submit/147616801/1642d998-a0e2-493f-8e8b-2a6538736043', {
             method:'POST', headers:{'Content-Type':'application/json'},
-            body: JSON.stringify({ fields:[{name:'email', value:email},{name:'hs_linkedin_url', value:linkedin}], context:{ pageUri: location.href, pageName: document.title } })
+            body: JSON.stringify({ fields:[{name:'email', value:email},{name:'hs_linkedin_url', value:linkedin}], context: hsContext })
           });
         } catch(_){}
         gate.style.display = 'none';
