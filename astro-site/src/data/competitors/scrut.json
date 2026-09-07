@@ -1,0 +1,427 @@
+{
+  "competitor": {
+    "name": "Scrut Automation",
+    "slug": "scrut",
+    "domain": "scrut.io"
+  },
+  "companies": [
+    {
+      "name": "airpay",
+      "domain": "airpay.co.in",
+      "grade": "A",
+      "evidence": "Navigating complex regulations is not just a challenge; with Scrut’s structured approach to compliance management, it has become a manageable part of our daily operations.",
+      "source_url": "https://www.scrut.io/case-study/airpay",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "AllCloud",
+      "domain": "allcloud.io",
+      "grade": "A",
+      "evidence": "\"With Scrut Teammates, we upload the questionnaire, get the answers, and review them in an hour. This has reduced the time spent on lengthy questionnaires from weeks to a single day, and the confidence we’ve gained with prospects has been immense.\"Ashish Khadloya, Co-founder, AllCloud",
+      "source_url": "https://www.scrut.io/case-study/allcloud",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Athenium",
+      "domain": "athenium.com",
+      "grade": "A",
+      "evidence": "“Once we started using Scrut Teammates, it cut down more than 80% of the delay in understanding what we were looking for and getting the evidence submitted.”— Ken Haugen, IT Manager, Athenium",
+      "source_url": "https://www.scrut.io/case-study/athenium",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Balboa Travel",
+      "domain": "balboatravel.com",
+      "grade": "A",
+      "evidence": "Adoption of Scrut enabled us to build GRC processes according to best practices in the industry.",
+      "source_url": "https://www.scrut.io/case-study/balboa",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Bookandlink",
+      "domain": "bookandlink.com",
+      "grade": "A",
+      "evidence": "“We were using another third-party platform before, but Scrut felt more detailed and advanced—especially the dashboards are definitely better.” ~ Wayan Sukerta Mudita, Chief Technology Officer, Bookandlink",
+      "source_url": "https://www.scrut.io/case-study/bookandlink",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Bright Security",
+      "domain": "brightsec.com",
+      "grade": "A",
+      "evidence": "“Even though previously we were with a well-known GRC company, we ran into limitations. We wanted a compliance tool that actively strengthens our security posture, and that’s what Scrut does. Scrut helped us move beyond the ‘check-the-box’ mentality to something that truly supports security.”‍Loris ",
+      "source_url": "https://www.scrut.io/case-study/bright",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "CargoFL",
+      "domain": "cargofl.com",
+      "grade": "A",
+      "evidence": "We have a go-to place now to discuss new certifications and how to get them. It’s much easier with Scrut.",
+      "source_url": "https://www.scrut.io/case-study/cargofl",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Choozle",
+      "domain": "choozle.com",
+      "grade": "A",
+      "evidence": "If we had to run this from the ground up, I’d have had to hire about 2 consultants or 3 full-time employees to help us through the program.",
+      "source_url": "https://www.scrut.io/case-study/choozle",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "CogniQuest",
+      "domain": "cogniquest.ai",
+      "grade": "A",
+      "evidence": "Scrut made it super easy to track and remediate even the minor issues around evidences",
+      "source_url": "https://www.scrut.io/case-study/cogniquest",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Consark",
+      "domain": "consark.ai",
+      "grade": "A",
+      "evidence": "“Scrut unified our multi-cloud security approach, significantly reducing our risk exposure and audit stress. The automated remediation keeps our cloud environments secure without constant firefighting—peace of mind for us and our customers.”Anand Krishna KumarCo-Founder & CISO, Consark",
+      "source_url": "https://www.scrut.io/case-study/consark",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Cortico",
+      "domain": "cortico.health",
+      "grade": "A",
+      "evidence": "Defining all processes for ISO would have been intractable without Scrut’s help",
+      "source_url": "https://www.scrut.io/case-study/cortico",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Diesta",
+      "domain": "diesta.co.uk",
+      "grade": "A",
+      "evidence": "“At Diesta, consolidating every framework under one roof transformed compliance into a genuine growth enabler.”Verified employeeDiesta",
+      "source_url": "https://www.scrut.io/case-study/diesta",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Disprz",
+      "domain": "disprz.ai",
+      "grade": "A",
+      "evidence": "“Scrut makes working with auditors so much smoother through the Audit Center, speeding up the whole auditing process. It also connects with a wide range of tools for continuous monitoring, which is a huge plus. Scrut makes compliance easy to manage.”Alban KhalfeSenior Information Technology Executiv",
+      "source_url": "https://www.scrut.io/case-study/disprz",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Edmingle",
+      "domain": "edmingle.com",
+      "grade": "A",
+      "evidence": "“Scaling multiple frameworks was becoming a challenge – both on the platform and commercially. What we needed was a more scalable way to operate it and Scrut helped us achieve that.”‍– Harshit Sharaff, Co-Founder and CTO",
+      "source_url": "https://www.scrut.io/case-study/edmingle",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Gomobi",
+      "domain": "gomobi.io",
+      "grade": "A",
+      "evidence": "“We were building from scratch. Scrut gave us the playbook to roll out compliance operations across teams without the chaos. Everything from policy to evidence to even security trainings were streamlined to an extent we did not think was possible”Nandakumar RangasamyEngineering Lead & India Site Lea",
+      "source_url": "https://www.scrut.io/case-study/gomobi",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Increff",
+      "domain": "increff.com",
+      "grade": "A",
+      "evidence": "“With Scrut, we have a proper structure on prioritizing tasks for each external audit. Internal audits helped us identify gaps before the external audit so that we could fix them in advance.\"Vaibhav Krishna Bandla, Senior DevOps Engineer, Increff",
+      "source_url": "https://www.scrut.io/case-study/increff",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Keka",
+      "domain": "keka.com",
+      "grade": "A",
+      "evidence": "Aptitude and reliability go hand in hand. While there are a lot of namesake tools in the market, Scrut’s efficiency is driven by a combination of the platform and their solid infosec expertise.",
+      "source_url": "https://www.scrut.io/case-study/keka",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "M&C Aero",
+      "domain": "mnc.aero",
+      "grade": "A",
+      "evidence": "To tackle all these challenges, M&C considered many GRC automation tools on the market. However, most of them, apart from Scrut, couldn’t commit to a timeline of less than 12 months, which was double what was expected.",
+      "source_url": "https://www.scrut.io/case-study/mc-aero",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Monthio",
+      "domain": "monthio.com",
+      "grade": "A",
+      "evidence": "Pen-test as part of the package is a significant advantage over their competitors",
+      "source_url": "https://www.scrut.io/case-study/monthio",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Nintex",
+      "domain": "nintex.com",
+      "grade": "A",
+      "evidence": "“Scrut was with us every step of the way, helping to offer technical guidance, helping to offer changes that we needed at the last minute. Hats off to the Scrut team. Quite responsive to our request, including giving us updates and timelines that were quite reasonable for what we’re looking for.”— A",
+      "source_url": "https://www.scrut.io/case-study/nintex",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Orca",
+      "domain": "orcaaudit.com",
+      "grade": "A",
+      "evidence": "The risk management features of Scrut, including inherent and residual risk tracking, have proven to be highly useful for our organization.",
+      "source_url": "https://www.scrut.io/case-study/orca",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Pluto Security",
+      "domain": "pluto.security",
+      "grade": "A",
+      "evidence": "\"The process is really streamlined. You know what steps you need to be doing. The timeline is pretty clear. And for a startup, that's really important.\" ‍– Gil Maman, CEO, Pluto Security",
+      "source_url": "https://www.scrut.io/case-study/pluto",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Toddle",
+      "domain": "toddleapp.com",
+      "grade": "A",
+      "evidence": "The Trust Vault was a game changer for us. It allowed our customers to access all the information they needed in one place, saving us countless hours in back-and-forth communication.",
+      "source_url": "https://www.scrut.io/case-study/toddle",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "UptimeAI",
+      "domain": "uptimeai.com",
+      "grade": "A",
+      "evidence": "I now have peace of mind and greater confidence in our operations, thanks to proactive monitoring.",
+      "source_url": "https://www.scrut.io/case-study/uptimeai",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Avarni",
+      "domain": "avarni.co",
+      "grade": "B",
+      "evidence": "How Avarni Built Audit-Ready Compliance With a Lean Team",
+      "source_url": "https://www.scrut.io/case-study/avarni",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Bureau",
+      "domain": "bureau.id",
+      "grade": "B",
+      "evidence": "How Bureau built client trust & accelerated deals with Scrut",
+      "source_url": "https://www.scrut.io/case-study/bureau",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Cashfree Payments",
+      "domain": "cashfree.com",
+      "grade": "B",
+      "evidence": "Cashfree Payments Excels in Fintech Compliance with GRC",
+      "source_url": "https://www.scrut.io/case-study/cashfree-payments",
+      "confidence": "Verified"
+    },
+    {
+      "name": "CloudFiles",
+      "domain": "cloudfiles.io",
+      "grade": "B",
+      "evidence": "Cloudfiles: Automate Infosec Compliance & Risk",
+      "source_url": "https://www.scrut.io/case-study/cloudfiles",
+      "confidence": "Verified"
+    },
+    {
+      "name": "CometChat",
+      "domain": "cometchat.com",
+      "grade": "B",
+      "evidence": "How CometChat Built a Compliance Program Its Customers Actually Trust",
+      "source_url": "https://www.scrut.io/case-study/cometchat",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Duality Technologies",
+      "domain": "dualitytech.com",
+      "grade": "B",
+      "evidence": "How Duality Tech Rebuilt Their ISO 27001 Program Without a Compliance Team",
+      "source_url": "https://www.scrut.io/case-study/duality",
+      "confidence": "Verified"
+    },
+    {
+      "name": "e6data",
+      "domain": "e6data.com",
+      "grade": "B",
+      "evidence": "e6data: Simplifying SOC 2 & ISO with GRC Automation",
+      "source_url": "https://www.scrut.io/case-study/e6data",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Freight Tiger",
+      "domain": "freighttiger.com",
+      "grade": "B",
+      "evidence": "Freight Tiger Automates Cloud Risk for 200+ Controls",
+      "source_url": "https://www.scrut.io/case-study/freight-tiger",
+      "confidence": "Verified"
+    },
+    {
+      "name": "iMocha",
+      "domain": "imocha.io",
+      "grade": "B",
+      "evidence": "iMocha Boosts SOC 2 Compliance with GRC Automation",
+      "source_url": "https://www.scrut.io/case-study/imocha",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Insightly Analytics",
+      "domain": "insightlyanalytics.com",
+      "grade": "B",
+      "evidence": "Insightly Analytics Achieves SOC 2 with Scrut",
+      "source_url": "https://www.scrut.io/case-study/insightly",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Kissht",
+      "domain": "kissht.com",
+      "grade": "B",
+      "evidence": "Kissht Boosts Agility & Trust with Scrut Automation",
+      "source_url": "https://www.scrut.io/case-study/kissht",
+      "confidence": "Verified"
+    },
+    {
+      "name": "NextBillion.ai",
+      "domain": "nextbillion.ai",
+      "grade": "B",
+      "evidence": "NextBillion.ai Automates GCP Cloud Monitoring",
+      "source_url": "https://www.scrut.io/case-study/nextbillion-ai",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Pando",
+      "domain": "pando.ai",
+      "grade": "B",
+      "evidence": "Pando Customer Story - Scrut Automation",
+      "source_url": "https://www.scrut.io/case-study/pando",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Prozo",
+      "domain": "prozo.com",
+      "grade": "B",
+      "evidence": "Prozo Boosts Cloud Monitoring & ISO Compliance",
+      "source_url": "https://www.scrut.io/case-study/prozo",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Qapita",
+      "domain": "qapita.com",
+      "grade": "B",
+      "evidence": "Qapita Enhances GDPR Compliance with Scrut smartGRC",
+      "source_url": "https://www.scrut.io/case-study/qapita",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Quickwork",
+      "domain": "quickwork.co",
+      "grade": "B",
+      "evidence": "Quickwork accelerates SOC 2 with GRC automation - Scrut Automation",
+      "source_url": "https://www.scrut.io/case-study/quickwork",
+      "confidence": "Verified"
+    },
+    {
+      "name": "SplitMetrics",
+      "domain": "splitmetrics.com",
+      "grade": "B",
+      "evidence": "Market expansion with a security-first approach - Scrut Automation",
+      "source_url": "https://www.scrut.io/case-study/splitmetrics",
+      "confidence": "Verified"
+    },
+    {
+      "name": "TraceX",
+      "domain": "tracextech.com",
+      "grade": "B",
+      "evidence": "TraceX Boosts GDPR Compliance with Cloud Risk Tools",
+      "source_url": "https://www.scrut.io/case-study/tracex",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Treebo",
+      "domain": "treebo.com",
+      "grade": "B",
+      "evidence": "Treebo Adopts GRC Tool for ISO 27001 Compliance",
+      "source_url": "https://www.scrut.io/case-study/treebo",
+      "confidence": "Verified"
+    },
+    {
+      "name": "TurboHire",
+      "domain": "turbohire.co",
+      "grade": "B",
+      "evidence": "Turbohire Customer Story - Scrut Automation",
+      "source_url": "https://www.scrut.io/case-study/turbohire",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Typesense",
+      "domain": "typesense.org",
+      "grade": "B",
+      "evidence": "Typesense Customer Story - Scrut Automation",
+      "source_url": "https://www.scrut.io/case-study/typesense",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Uneecops",
+      "domain": "uneecops.com",
+      "grade": "B",
+      "evidence": "Uneecops Customer Story - Scrut Automation",
+      "source_url": "https://www.scrut.io/case-study/uneecops",
+      "confidence": "Verified"
+    },
+    {
+      "name": "UXArmy",
+      "domain": "uxarmy.com",
+      "grade": "B",
+      "evidence": "UXArmy Achieves SOC 2, ISO 27001 & GDPR Compliance",
+      "source_url": "https://www.scrut.io/case-study/uxarmy",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Xeno",
+      "domain": "xeno.in",
+      "grade": "B",
+      "evidence": "Xeno Automates ISO 27001 & SOC 2 Compliance",
+      "source_url": "https://www.scrut.io/case-study/xeno",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Zipstack",
+      "domain": "zipstack.io",
+      "grade": "B",
+      "evidence": "Zipstack Boosts Infosec with GRC Automation",
+      "source_url": "https://www.scrut.io/case-study/zipstack",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Anyword",
+      "domain": "anyword.com",
+      "grade": "C",
+      "evidence": "Anyword appears in a customer logo band on Scrut’s homepage",
+      "source_url": "https://www.scrut.io/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Fleak",
+      "domain": "fleak.ai",
+      "grade": "C",
+      "evidence": "Fleak appears in a customer logo band on Scrut’s homepage",
+      "source_url": "https://www.scrut.io/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Immuneering",
+      "domain": "immuneering.com",
+      "grade": "C",
+      "evidence": "Immuneering appears in a customer logo band on Scrut’s homepage",
+      "source_url": "https://www.scrut.io/",
+      "confidence": "Likely"
+    }
+  ],
+  "generated_at": "2026-09-07T13:50:11Z",
+  "company_count": 52
+}
