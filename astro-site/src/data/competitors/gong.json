@@ -1,0 +1,1899 @@
+{
+  "competitor": {
+    "name": "Gong",
+    "slug": "gong",
+    "domain": "gong.io"
+  },
+  "companies": [
+    {
+      "name": "Absorb Software",
+      "domain": "absorblms.com",
+      "grade": "B",
+      "evidence": "Absorb Software sees 30% revenue boost by adopting gen AI for productivity gains and improving buyer experience",
+      "source_url": "https://www.gong.io/customers/case-studies/absorb-software-sees-30-revenue-boost-by-adopting-gen-ai-for-productivity-gains-and-improving-buyer-experience",
+      "confidence": "high"
+    },
+    {
+      "name": "Acceldata",
+      "domain": "acceldata.io",
+      "grade": "B",
+      "evidence": "Tech stack fluency: Salesforce, LinkedIn Sales Navigator, Outreach, Gong, Perplexity, Dripify, AI-driven sales tools, and Storylane.",
+      "source_url": "https://jobs.lever.co/acceldata/09c46d0d-1e92-4be2-b89d-f8750c788c7a",
+      "confidence": "high"
+    },
+    {
+      "name": "Act-On Software",
+      "domain": "act-on.com",
+      "grade": "B",
+      "evidence": "its customer base, which includes Act-On, SalesLoft, Sisense, Greenhouse, and Zywave",
+      "source_url": "https://techcrunch.com/2017/07/12/gong-an-ai-based-language-tool-to-help-sales-and-customer-service-reps-nabs-20m/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Addepar",
+      "domain": "addepar.com",
+      "grade": "B",
+      "evidence": "Addepar leaders increase sales efficiency with Gong - Jamin Fochtman, Head of Sales Enablement",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=4",
+      "confidence": "high"
+    },
+    {
+      "name": "ADP",
+      "domain": "adp.com",
+      "grade": "B",
+      "evidence": "How ADP boosted its enterprise win rate and increased ACLV with Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/how-adp-boosted-its-enterprise-win-rate-and-increased-aclv-with-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "ADT",
+      "domain": "adt.com",
+      "grade": "B",
+      "evidence": "Companies including ADT, Indeed, LinkedIn, Snowflake, and Zillow rely on Gong to generate and accelerate pipeline",
+      "source_url": "https://www.gong.io/press/gong-surpasses-4000-customers",
+      "confidence": "high"
+    },
+    {
+      "name": "Advantive",
+      "domain": "advantive.com",
+      "grade": "B",
+      "evidence": "RevOps Leader of the Year: Chad Boersma, Advantive - Achieved a significant increase in conversion rates and improved forecasting accuracy with Gong.",
+      "source_url": "https://www.gong.io/press/gong-announces-2024-golden-gong-winners",
+      "confidence": "high"
+    },
+    {
+      "name": "Adyen",
+      "domain": "adyen.com",
+      "grade": "B",
+      "evidence": "Evelina Petrova - VP Revenue Operations, Adyen (Celebrate 2026 Speakers)",
+      "source_url": "https://www.gong.io/events/celebrate/speakers",
+      "confidence": "medium"
+    },
+    {
+      "name": "Aircall",
+      "domain": "aircall.io",
+      "grade": "B",
+      "evidence": "Gong for BDRs: How Aircall boosted qualified pipeline by 35% in EMEA",
+      "source_url": "https://www.gong.io/customers/case-studies/gong-for-bdrs-how-aircall-boosted-qualified-pipeline-by-35-in-emea",
+      "confidence": "high"
+    },
+    {
+      "name": "Allbound",
+      "domain": "allbound.com",
+      "grade": "C",
+      "evidence": "Allbound - Customer Case Study - Greg Reffner, Director of Sales (listed among 149 Gong case studies)",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "Allvue Systems",
+      "domain": "allvuesystems.com",
+      "grade": "B",
+      "evidence": "Allvue shortens sales cycles by 14% and boosts qualified close rates by 44% with the Gong Revenue AI OS",
+      "source_url": "https://www.gong.io/customers/case-studies/allvue-shortens-sales-cycles-boosts-qualified-close-rates-with-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Alpine IQ",
+      "domain": "alpineiq.com",
+      "grade": "A",
+      "evidence": "Gong is a pivotal part in Alpine IQ's day to day operations.",
+      "source_url": "https://www.gong.io/press/2023-golden-gong-awards",
+      "confidence": "high"
+    },
+    {
+      "name": "Altrata",
+      "domain": "altrata.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... Altrata | 1,001-5,000 | Information Services | United States",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "Ambassador",
+      "domain": "getambassador.com",
+      "grade": "C",
+      "evidence": "Ambassador - Customer Case Study - Zach Taylor, Vice President Sales (listed among 149 Gong case studies)",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies",
+      "confidence": "low"
+    },
+    {
+      "name": "Andela",
+      "domain": "andela.com",
+      "grade": "A",
+      "evidence": "Andela ... leaned in heavily to its use of Gong in 2022, and saw its go-to-market organization transformed.",
+      "source_url": "https://www.gong.io/press/2023-golden-gong-awards",
+      "confidence": "high"
+    },
+    {
+      "name": "Anrok",
+      "domain": "anrok.com",
+      "grade": "B",
+      "evidence": "Own and administer our core GTM technology stack (Salesforce, Gong, Outreach, Chili Piper)",
+      "source_url": "https://jobs.ashbyhq.com/anrok/c7c202e0-77c3-4195-b769-821c1cf3f7f9",
+      "confidence": "high"
+    },
+    {
+      "name": "AnswerLab",
+      "domain": "answerlab.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... AnswerLab | 51-200 | Business Consulting and Services | United States",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "Anthropic",
+      "domain": "anthropic.com",
+      "grade": "B",
+      "evidence": "Anthropic's 64% productivity gain: Combining revenue AI with a customer-centric GTM strategy",
+      "source_url": "https://www.gong.io/customers/case-studies/anthropics-64-productivity-gain-combining-revenue-ai-with-a-customer-centric-gtm-strategy",
+      "confidence": "high"
+    },
+    {
+      "name": "Appen",
+      "domain": "appen.com",
+      "grade": "B",
+      "evidence": "Watch Appen use Gong to onboard CSMs 4 months faster",
+      "source_url": "https://www.gong.io/case-studies/gong-for-cs-appen-wants-it-loves-it-needs-it/",
+      "confidence": "high"
+    },
+    {
+      "name": "Apptio",
+      "domain": "apptio.com",
+      "grade": "B",
+      "evidence": "How Gong Helps Apptio Keep Their Field Sales Team Engaged - Mitchell Matsuo, Revenue Enablement Consultant",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "AT&T",
+      "domain": "att.com",
+      "grade": "B",
+      "evidence": "Carissa Cassin - Head of Advanced Analytics, AT&T (Celebrate 2026 Speakers)",
+      "source_url": "https://www.gong.io/events/celebrate/speakers",
+      "confidence": "medium"
+    },
+    {
+      "name": "Atlan",
+      "domain": "atlan.com",
+      "grade": "B",
+      "evidence": "How fast growing data and AI governance platform, Atlan, accelerated growth and improved forecasting with Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/how-fast-growing-data-and-ai-governance-platform-atlan-accelerated-growth-and-improved-forecasting-with-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Atlassian",
+      "domain": "atlassian.com",
+      "grade": "C",
+      "evidence": "List of companies using Gong ... | Atlassian | Australia | Software Development | 20k | $3.2B | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong",
+      "confidence": "low"
+    },
+    {
+      "name": "Attentive",
+      "domain": "attentive.com",
+      "grade": "B",
+      "evidence": "said Karine Terzibachi, Chief Business Officer at Attentive. Gong helps us capture the voice of the customer at scale and share those insights across the company.",
+      "source_url": "https://www.prnewswire.com/news-releases/gong-launches-mission-big-dipper-unveils-industry-first-revenue-harness-302808677.html",
+      "confidence": "high"
+    },
+    {
+      "name": "Autodesk",
+      "domain": "autodesk.com",
+      "grade": "C",
+      "evidence": "List of companies using Gong ... | Autodesk | United States | Software Development | 16k | $4.9B | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong",
+      "confidence": "low"
+    },
+    {
+      "name": "Auvik Networks",
+      "domain": "auvik.com",
+      "grade": "B",
+      "evidence": "How auvik created its a-team with gong - Rob Auld, SVP Sales",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "Babbel",
+      "domain": "babbel.com",
+      "grade": "B",
+      "evidence": "How Gong Helps Babbel's Multilingual Sales Team Achieve Their Goals",
+      "source_url": "https://www.gong.io/customers/case-studies/how-gong-helps-babbels-multilingual-sales-team-achieve-their-goals",
+      "confidence": "high"
+    },
+    {
+      "name": "BairesDev",
+      "domain": "bairesdev.com",
+      "grade": "B",
+      "evidence": "BairesDev is 7x more productive at strategic decision-making with Gong.",
+      "source_url": "https://www.gong.io/customers/case-studies/bairesdev-is-7x-more-productive-at-strategic-decision-making-with-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Basis",
+      "domain": "usebasis.co",
+      "grade": "C",
+      "evidence": "Evaluate and integrate tools like Clay, Gong, and Apollo into a coherent, non-redundant stack.",
+      "source_url": "https://jobs.ashbyhq.com/basis-ai/9023c508-8681-4af5-96e4-491ce5ff3e00",
+      "confidence": "low"
+    },
+    {
+      "name": "Bazaarvoice",
+      "domain": "bazaarvoice.com",
+      "grade": "B",
+      "evidence": "The Captain Award... goes to Bazaarvoice's Client Success team, which used Gong as a means to jumpstart executive engagement and optimize the experience for Enterprise clients.",
+      "source_url": "https://www.prnewswire.com/news-releases/gong-recognizes-revenue-intelligence-pioneers-with-2020-golden-gong-awards-301167107.html",
+      "confidence": "high"
+    },
+    {
+      "name": "BlackLine",
+      "domain": "blackline.com",
+      "grade": "B",
+      "evidence": "CRO of the Year: Mark Woodhams, Blackline - Increased win rate and improved revenue with Gong.",
+      "source_url": "https://www.gong.io/press/gong-announces-2024-golden-gong-winners",
+      "confidence": "high"
+    },
+    {
+      "name": "BlueCat Networks",
+      "domain": "bluecatnetworks.com",
+      "grade": "B",
+      "evidence": "Bluecat Empowers Their Field Team To Understand Their Pipeline - Jason Van Ravenswaay, Head Of Global Sales Operations",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "BlueGrace Logistics",
+      "domain": "mybluegrace.com",
+      "grade": "B",
+      "evidence": "How BlueGrace's reps got an 88% lift in reply rates using Gong Engage",
+      "source_url": "https://www.gong.io/customers/case-studies/how-bluegraces-reps-got-an-88-lift-in-reply-rates-using-gong-engage",
+      "confidence": "high"
+    },
+    {
+      "name": "Boomi",
+      "domain": "boomi.com",
+      "grade": "B",
+      "evidence": "said Andrea Jones, Commercial Sales Planning & Strategy Lead at Boomi. Gong's AI agents, built specifically for revenue teams, will give us a competitive edge",
+      "source_url": "https://www.prnewswire.com/news-releases/gong-redefines-ai-agents-to-deliver-real-revenue-impact-302429811.html",
+      "confidence": "high"
+    },
+    {
+      "name": "Bottomline Technologies",
+      "domain": "bottomline.com",
+      "grade": "B",
+      "evidence": "The Visionary Award... goes to Bottomline Technologies, who was previously using another provider for basic call recording. The implementation of Gong was part of a greater digital transformation project",
+      "source_url": "https://www.prnewswire.com/news-releases/revenue-intelligence-pioneers-recognized-at-2021-golden-gong-awards-301441274.html",
+      "confidence": "high"
+    },
+    {
+      "name": "BrainStation",
+      "domain": "brainstation.io",
+      "grade": "C",
+      "evidence": "List of companies using Gong ... | BrainStation | United States | Education | 928 | $25M | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong",
+      "confidence": "low"
+    },
+    {
+      "name": "Brex",
+      "domain": "brex.com",
+      "grade": "A",
+      "evidence": "Their reps using Gong saw 3x higher win rates, which increased adoption around the org. Since adopting Gong, win rates have increased for 7 quarters in a row.",
+      "source_url": "https://www.gong.io/blog/how-revenue-teams-are-winning-more-with-the-gong-revenue-ai-os-highlights-from-celebrate-25",
+      "confidence": "high"
+    },
+    {
+      "name": "Brightwell",
+      "domain": "brightwell.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... Brightwell | 51-200 | Financial Services | United States",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "BruntWork",
+      "domain": "bruntwork.co",
+      "grade": "B",
+      "evidence": "How BruntWork boosted revenue per agent by 100% and scaled to 8,000 agents globally",
+      "source_url": "https://www.gong.io/customers/case-studies/how-bruntwork-boosted-revenue-per-agent-scaled",
+      "confidence": "high"
+    },
+    {
+      "name": "Canva",
+      "domain": "canva.com",
+      "grade": "B",
+      "evidence": "Increase in revenue - Canva",
+      "source_url": "https://www.gong.io/customers/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Chainalysis",
+      "domain": "chainalysis.com",
+      "grade": "C",
+      "evidence": "Some of the companies that use Gong include: ... | Chainalysis | chainalysis.com | Switzerland | 200M-1000M | 500-1000 |",
+      "source_url": "https://enlyft.com/tech/products/gong",
+      "confidence": "low"
+    },
+    {
+      "name": "Chime",
+      "domain": "chime.com",
+      "grade": "B",
+      "evidence": "Chime accelerates B2B growth with Gong, achieving streamlined efficiency, accurate forecasting, and AI-powered insights",
+      "source_url": "https://www.gong.io/customers/case-studies/chime-b2b-growth-gong-efficiency-forecasting",
+      "confidence": "high"
+    },
+    {
+      "name": "Cisco",
+      "domain": "cisco.com",
+      "grade": "A",
+      "evidence": "Honored for the strategic initiative to unify its large, distributed global sales force onto the Gong operating system, building efficiency, alignment, and greater forecasting accuracy.",
+      "source_url": "https://www.gong.io/press/leading-companies-drive-measurable-business-impact-with-gong-s-ai-operating-system-for-revenue",
+      "confidence": "high"
+    },
+    {
+      "name": "Clearbit",
+      "domain": "clearbit.com",
+      "grade": "B",
+      "evidence": "How Gong empowers Clearbit to be more proactive around customer needs",
+      "source_url": "https://www.gong.io/customers/case-studies/how-gong-empowers-clearbit-to-be-more-proactive-around-customer-needs",
+      "confidence": "high"
+    },
+    {
+      "name": "Clio",
+      "domain": "clio.com",
+      "grade": "C",
+      "evidence": "List of companies using Gong ... | Clio | Canada | Software Development | 2.7k | $100M | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong",
+      "confidence": "low"
+    },
+    {
+      "name": "Cloudinary",
+      "domain": "cloudinary.com",
+      "grade": "B",
+      "evidence": "Cloudinary Speeds up New Rep Ramp-Up with Gong - Brittany Caulfield, Vice President of Sales",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Coder",
+      "domain": "coder.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... Coder | 51-200 | Software Development | United States",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "CodeScience",
+      "domain": "codescience.com",
+      "grade": "B",
+      "evidence": "CodeScience Maintains Visibility With Remote Sales Team Using Gong.Io - Jeff Goree, Director of Sales",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Cognism",
+      "domain": "cognism.com",
+      "grade": "B",
+      "evidence": "Cognism improves org-wide visibility using Gong - Jonathon Ilett, Global Head of Sales",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=4",
+      "confidence": "high"
+    },
+    {
+      "name": "ComplyAdvantage",
+      "domain": "complyadvantage.com",
+      "grade": "B",
+      "evidence": "ComplyAdvantage uses Gong to decrease ramp time by 50%",
+      "source_url": "https://www.gong.io/customers/case-studies/complyadvantage-uses-gong-to-decrease-ramp-time-by-50",
+      "confidence": "high"
+    },
+    {
+      "name": "Conga",
+      "domain": "conga.com",
+      "grade": "B",
+      "evidence": "CS Leader of the Year: Erin Bowers, Conga Customer Success - Elevated customer engagements and renewal health through scalable coaching, enablement, and initiatives.",
+      "source_url": "https://www.gong.io/press/gong-announces-2024-golden-gong-winners",
+      "confidence": "high"
+    },
+    {
+      "name": "ConnectWise",
+      "domain": "connectwise.com",
+      "grade": "B",
+      "evidence": "Austin Reichart - Sales Enablement Manager, ConnectWise (Celebrate 2026 Speakers)",
+      "source_url": "https://www.gong.io/events/celebrate/speakers",
+      "confidence": "medium"
+    },
+    {
+      "name": "Corporate Traveler",
+      "domain": "corporatetraveler.com",
+      "grade": "B",
+      "evidence": "Sky's the limit: how Corporate Traveler uses Gong to refine their customer journey",
+      "source_url": "https://www.gong.io/customers/case-studies/skys-the-limit-how-corporate-traveler-uses-gong-to-refine-their-customer-journey",
+      "confidence": "high"
+    },
+    {
+      "name": "Crayon",
+      "domain": "crayon.co",
+      "grade": "B",
+      "evidence": "How Gong Forecast helps Crayon create accurate and reliable forecasting",
+      "source_url": "https://www.gong.io/customers/case-studies/how-gong-forecast-helps-crayon-create-accurate-and-reliable-forecasting",
+      "confidence": "high"
+    },
+    {
+      "name": "Culture Amp",
+      "domain": "cultureamp.com",
+      "grade": "B",
+      "evidence": "How Culture Amp improved forecast accuracy and scaled global sales training with Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/culture-amp-forecast-accuracy-scaled-global-sales-training",
+      "confidence": "high"
+    },
+    {
+      "name": "Databricks",
+      "domain": "databricks.com",
+      "grade": "B",
+      "evidence": "Enablement Leader of the Year: Nate Vogel, Databricks - Helped double the team's win rate.",
+      "source_url": "https://www.gong.io/press/gong-announces-2024-golden-gong-winners",
+      "confidence": "high"
+    },
+    {
+      "name": "Datarails",
+      "domain": "datarails.com",
+      "grade": "A",
+      "evidence": "Datarails put Gong data at the center of its unique marketing campaign",
+      "source_url": "https://www.gong.io/press/2023-golden-gong-awards",
+      "confidence": "high"
+    },
+    {
+      "name": "Datto",
+      "domain": "datto.com",
+      "grade": "B",
+      "evidence": "In the short time Datto has implemented Gong in North America, deal sizes have increased considerably as Gong has helped them closely analyze individual deals.",
+      "source_url": "https://www.prnewswire.com/news-releases/revenue-intelligence-pioneers-recognized-at-2021-golden-gong-awards-301441274.html",
+      "confidence": "high"
+    },
+    {
+      "name": "Demandbase",
+      "domain": "demandbase.com",
+      "grade": "A",
+      "evidence": "Demandbase's enablement team recently began hosting bi-weekly knowledge-sharing sessions they affectionately call, \"Gong GOATs Live\"",
+      "source_url": "https://www.gong.io/press/2023-golden-gong-awards",
+      "confidence": "high"
+    },
+    {
+      "name": "DemandScience",
+      "domain": "demandscience.com",
+      "grade": "B",
+      "evidence": "DemandScience uses Gong to tie their revenue intelligence all together.",
+      "source_url": "https://www.gong.io/press/2023-golden-gong-awards",
+      "confidence": "high"
+    },
+    {
+      "name": "Dialogue Health Technologies",
+      "domain": "dialogue.co",
+      "grade": "B",
+      "evidence": "How Dialogue Health Technologies accelerated onboarding and boosted message adoption with Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/dialogue-health-onboarding-boosted-message-adoption",
+      "confidence": "high"
+    },
+    {
+      "name": "Diligent",
+      "domain": "diligent.com",
+      "grade": "B",
+      "evidence": "How Gong Became Diligent's MVP by Increasing Close Rates by 7.4%",
+      "source_url": "https://www.gong.io/customers/case-studies/how-gong-became-diligents-mvp-by-increasing-close-rates",
+      "confidence": "high"
+    },
+    {
+      "name": "Docebo",
+      "domain": "docebo.com",
+      "grade": "B",
+      "evidence": "How Gong helped Docebo become an efficient revenue team",
+      "source_url": "https://www.gong.io/customers/case-studies/how-gong-helped-docebo-become-an-efficient-revenue-team",
+      "confidence": "high"
+    },
+    {
+      "name": "Docusign",
+      "domain": "docusign.com",
+      "grade": "A",
+      "evidence": "Our revenue organization has seen 60% time savings, Paula said. As a result, Docusign 2.0 is the fastest-growing product in the company's history.",
+      "source_url": "https://www.gong.io/blog/how-revenue-teams-are-winning-more-with-the-gong-revenue-ai-os-highlights-from-celebrate-25",
+      "confidence": "high"
+    },
+    {
+      "name": "Dojo",
+      "domain": "dojo.tech",
+      "grade": "C",
+      "evidence": "List of companies using Gong in United Kingdom ... | Dojo | United Kingdom | Financial Services | 1.9k | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong/gb",
+      "confidence": "low"
+    },
+    {
+      "name": "Dolby Laboratories",
+      "domain": "dolby.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... Dolby Laboratories | 1,001-5,000 | Computers and Electronics Manufacturing | United States",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "Dreamdata",
+      "domain": "dreamdata.io",
+      "grade": "B",
+      "evidence": "How Dreamdata scaled onboarding and increased average deal sizes by 50% with Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/dreamdata-scaled-onboarding-increased-average-deal-sizes",
+      "confidence": "high"
+    },
+    {
+      "name": "Drift",
+      "domain": "drift.com",
+      "grade": "B",
+      "evidence": "Drift Uses Gong's Goldmine Of Data To Increase Sales Productivity - Armen Zildjian, Vice President of Sales",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "Drip",
+      "domain": "drip.com",
+      "grade": "B",
+      "evidence": "How Gong Enables Drip To see What's Going On And Close More Deals - Geoff Prince, Director of Sales",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "Easyship",
+      "domain": "easyship.com",
+      "grade": "B",
+      "evidence": "Easyship boosts forecast accuracy to 90% and lifts win rates by 15% using Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/easyship-boosts-forecast-accuracy-to-90-and-lifts-win-rates-by-15-using-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "EcoOnline",
+      "domain": "ecoonline.com",
+      "grade": "C",
+      "evidence": "List of companies using Gong in United Kingdom ... | EcoOnline | United Kingdom | Software Development | 603 | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong/gb",
+      "confidence": "low"
+    },
+    {
+      "name": "EdgePetrol",
+      "domain": "edgepetrol.com",
+      "grade": "B",
+      "evidence": "EdgePetrol boosts their pipe feed by 300% with Gong - Gideon Carroll, Chief Executive Officer",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=4",
+      "confidence": "high"
+    },
+    {
+      "name": "Egnyte",
+      "domain": "egnyte.com",
+      "grade": "B",
+      "evidence": "Egnyte - Customer Case Study - Tammy Baxter, Customer Success Manager (listed among 149 Gong case studies)",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=2",
+      "confidence": "medium"
+    },
+    {
+      "name": "Elsevier",
+      "domain": "elsevier.com",
+      "grade": "B",
+      "evidence": "How Elsevier lands 45% larger deals using Gong across its NOAM sales team",
+      "source_url": "https://www.gong.io/customers/case-studies/how-elsevier-lands-45-larger-deals-using-gong-across-its-noam-sales-team",
+      "confidence": "high"
+    },
+    {
+      "name": "Epicor Software",
+      "domain": "epicor.com",
+      "grade": "B",
+      "evidence": "Becca Openshaw - RevOps Enablement Consultant, Epicor Software (Celebrate 2026 Speakers)",
+      "source_url": "https://www.gong.io/events/celebrate/speakers",
+      "confidence": "medium"
+    },
+    {
+      "name": "EverCommerce",
+      "domain": "evercommerce.com",
+      "grade": "C",
+      "evidence": "Some of the companies that use Gong include: ... | EverCommerce | evercommerce.com | United States | 200M-1000M | 1000-5000 |",
+      "source_url": "https://enlyft.com/tech/products/gong",
+      "confidence": "low"
+    },
+    {
+      "name": "Evotix",
+      "domain": "evotix.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... Evotix | 201-500 | Software Development | United Kingdom | Europe",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "Exclaimer",
+      "domain": "exclaimer.com",
+      "grade": "B",
+      "evidence": "Exclaimer Increases Forecast Accuracy and Streamlines Sales Team Performance with Gong",
+      "source_url": "https://www.gong.io/press/exclaimer-increases-forecast-accuracy-and-streamlines-sales-team-performance-with-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Experian",
+      "domain": "experian.com",
+      "grade": "A",
+      "evidence": "How Experian boosted win rates by 25% and achieved sustainable growth with Gong's AI Insights",
+      "source_url": "https://www.gong.io/customers/case-studies/how-experian-boosted-win-rates-by-25-and-achieved-sustainable-growth-with-gong-s-ai-insights",
+      "confidence": "high"
+    },
+    {
+      "name": "Exterro",
+      "domain": "exterro.com",
+      "grade": "B",
+      "evidence": "How Exterro increased its BDR-sourced pipeline by 2X using Gong Engage",
+      "source_url": "https://www.gong.io/customers/case-studies/how-exterro-increased-pipeline-using-gong-engage",
+      "confidence": "high"
+    },
+    {
+      "name": "F12.net",
+      "domain": "f12.net",
+      "grade": "B",
+      "evidence": "F12 boosts pipeline by 53% and ARR by 34% using Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/f12-boosts-pipeline-by-53-and-arr-by-34-using-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "fal",
+      "domain": "fal.ai",
+      "grade": "B",
+      "evidence": "Provide daily systems support, user management, and front-line issue resolution across the GTM stack: Salesforce, Gong, Outreach, Apollo, Clay, Common Room, etc",
+      "source_url": "https://jobs.ashbyhq.com/fal-ai/11aa0f95-8496-4362-98f7-6b2b948f9597",
+      "confidence": "high"
+    },
+    {
+      "name": "Filtered",
+      "domain": "filtered.com",
+      "grade": "B",
+      "evidence": "A focused forecast: How Filtered increased its ACV by 62%",
+      "source_url": "https://www.gong.io/customers/case-studies/a-focused-forecast-how-filtered-increased-its-acv-by-62",
+      "confidence": "high"
+    },
+    {
+      "name": "Fireblocks",
+      "domain": "fireblocks.com",
+      "grade": "B",
+      "evidence": "The Bar Raiser: Fireblocks - Increased deal capacity per sales rep by 20 percent, along with an increase in new logo win rate.",
+      "source_url": "https://www.gong.io/press/gong-announces-2024-golden-gong-winners",
+      "confidence": "high"
+    },
+    {
+      "name": "Fireworks AI",
+      "domain": "fireworks.ai",
+      "grade": "B",
+      "evidence": "Build and maintain integrations across Salesforce, HubSpot, Gong, Clay, Harmonic, LeadGenius, LeadIQ, and Zapier",
+      "source_url": "https://jobs.ashbyhq.com/fireworks/01166f87-1b1f-4e2e-8b7d-be6708566434",
+      "confidence": "high"
+    },
+    {
+      "name": "FiscalNote",
+      "domain": "fiscalnote.com",
+      "grade": "B",
+      "evidence": "You will be the primary owner and administrator for our core sales tech stack, including, but not limited to Gong Engage, ZoomInfo, LinkedIn Sales Navigator, Nooks, and Chili Piper.",
+      "source_url": "https://jobs.lever.co/fiscalnote/08ead1e7-2634-40da-9fde-f0d584d3f2e6",
+      "confidence": "high"
+    },
+    {
+      "name": "Fivetran",
+      "domain": "fivetran.com",
+      "grade": "C",
+      "evidence": "List of companies using Gong ... | Fivetran | United States | Software Development | 1.9k | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong",
+      "confidence": "low"
+    },
+    {
+      "name": "Forcura",
+      "domain": "forcura.com",
+      "grade": "B",
+      "evidence": "How Forcura accelerated its growth in healthcare using Gong's AI insights - Kelly Witt, Senior Manager of Provider Engagement",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Frontify",
+      "domain": "frontify.com",
+      "grade": "B",
+      "evidence": "Gong reports that customers like SpotOn and Frontify have seen double-digit gains in revenue, win rates and deal sizes.",
+      "source_url": "https://www.demandgenreport.com/financial-news/gong-surpasses-300m-in-annual-recurring-revenue-sees-customer-growth-beyond-tech/48961/",
+      "confidence": "high"
+    },
+    {
+      "name": "Frontline Education",
+      "domain": "frontlineeducation.com",
+      "grade": "B",
+      "evidence": "Frontline Education accelerates pipeline growth by 60% in one quarter with the Gong Revenue AI OS",
+      "source_url": "https://www.gong.io/customers/case-studies/frontline-accelerates-pipeline-growth-60-percent-with-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Funding Circle",
+      "domain": "fundingcircle.com",
+      "grade": "B",
+      "evidence": "Business financing leader Funding Circle credits Gong with more successful customer interactions",
+      "source_url": "https://www.gong.io/case-studies/business-financing-leader-funding-circle-credits-gong-with-more-successful-customer-interactions/",
+      "confidence": "high"
+    },
+    {
+      "name": "Gainsight",
+      "domain": "gainsight.com",
+      "grade": "B",
+      "evidence": "Gainsight's CEO uses Gong to better understand the true market",
+      "source_url": "https://www.gong.io/case-studies/gainsights-ceo-uses-gong-to-better-understand-the-true-market/",
+      "confidence": "high"
+    },
+    {
+      "name": "Genesys",
+      "domain": "genesys.com",
+      "grade": "B",
+      "evidence": "Gong Gives Genesys Sales Managers The Ability To ride Shotgun With Any Deal - Alex Ball, VP of Mid-Market & Velocity Sales",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Global Healthcare Exchange (GHX)",
+      "domain": "ghx.com",
+      "grade": "B",
+      "evidence": "How GHX reduced rep ramp time by 85% with Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/ghx-reduced-rep-ramp-time-by-85-with-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "GlobalData",
+      "domain": "globaldata.com",
+      "grade": "C",
+      "evidence": "List of companies using Gong in United Kingdom ... | GlobalData Plc | United Kingdom | Information Services | 3.2k | $293M | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong/gb",
+      "confidence": "low"
+    },
+    {
+      "name": "GoComet",
+      "domain": "gocomet.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... GoComet | 201-500 | Software Development | Singapore | Asia",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "Google",
+      "domain": "google.com",
+      "grade": "A",
+      "evidence": "How a Google sales team got hours of its time back using Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/how-a-google-sales-team-got-hours-of-its-time-back-using-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "GoTo",
+      "domain": "goto.com",
+      "grade": "B",
+      "evidence": "How Gong enables sales leaders at GoTo to coach at scale",
+      "source_url": "https://www.gong.io/customers/case-studies/how-gong-enables-sales-leaders-at-goto-to-coach-at-scale",
+      "confidence": "high"
+    },
+    {
+      "name": "Gourmet Ads",
+      "domain": "gourmetads.com",
+      "grade": "B",
+      "evidence": "Gourmet Ads is using Gong's new generative AI feature Call Spotlight to increase sales rep productivity and efficiency.",
+      "source_url": "https://www.prnewswire.com/news-releases/gong-introduces-proprietary-generative-ai-models-built-for-revenue-teams-301846084.html",
+      "confidence": "medium"
+    },
+    {
+      "name": "Grammarly",
+      "domain": "grammarly.com",
+      "grade": "B",
+      "evidence": "Gong helped Grammarly to achieve triple-digit growth in ASP, win rates for large deals, and sales sourced pipeline.",
+      "source_url": "https://www.prnewswire.com/news-releases/revenue-intelligence-pioneers-recognized-at-2021-golden-gong-awards-301441274.html",
+      "confidence": "high"
+    },
+    {
+      "name": "Greenhouse Software",
+      "domain": "greenhouse.io",
+      "grade": "A",
+      "evidence": "Greenhouse Software used Gong to help reinforce the training for its sales force",
+      "source_url": "https://www.gong.io/press/2023-golden-gong-awards",
+      "confidence": "high"
+    },
+    {
+      "name": "Hack The Box",
+      "domain": "hackthebox.com",
+      "grade": "C",
+      "evidence": "List of companies using Gong in United Kingdom ... | Hack The Box | United Kingdom | Computer and Network Security | 2.3k | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong/gb",
+      "confidence": "low"
+    },
+    {
+      "name": "HackerEarth",
+      "domain": "hackerearth.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... HackerEarth | 51-200 | Software Development | United States",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "Handshake",
+      "domain": "joinhandshake.com",
+      "grade": "B",
+      "evidence": "You'll own the execution of AI-driven automation across our GTM stack, using tools like Salesforce, Gainsight, Gong, Nooks, Clay, and BigQuery.",
+      "source_url": "https://jobs.ashbyhq.com/handshake/bb7eeb0b-5114-496f-925e-a790b162c3e4",
+      "confidence": "high"
+    },
+    {
+      "name": "Health & Safety Institute",
+      "domain": "hsi.com",
+      "grade": "B",
+      "evidence": "Health & Safety Institute drives 4x forecasting efficiency with Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/health-and-safety-institute-4x-forecasting-efficiency-with-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "hear.com",
+      "domain": "hear.com",
+      "grade": "B",
+      "evidence": "Hear.com Improves High Volume Sales Call Effectiveness With Gong - Veit Albert, Vice President of Sales",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Hearst Newspapers",
+      "domain": "hearst.com",
+      "grade": "B",
+      "evidence": "Revenue Team of the Year: Hearst Newspapers - Boosted its win rate by nearly one-third.",
+      "source_url": "https://www.gong.io/press/gong-announces-2024-golden-gong-winners",
+      "confidence": "high"
+    },
+    {
+      "name": "Helpside",
+      "domain": "helpside.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... Helpside | 51-200 | Human Resources Services | United States",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "Highbeam",
+      "domain": "highbeam.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... Highbeam | 11-50 | Financial Services | United States",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "HireVue",
+      "domain": "hirevue.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... Hirevue | 201-500 | Software Development | United States",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "Hive",
+      "domain": "hive.com",
+      "grade": "B",
+      "evidence": "How Hive's Revenue Strategy Evolved to Achieve 30% Growth in Pipeline Opportunities With Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/how-hives-revenue-strategy-evolved-to-achieve-30-growth-in-pipeline-opportunities-with-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "HubSpot",
+      "domain": "hubspot.com",
+      "grade": "A",
+      "evidence": "Gong Lets HubSpot Sales Reps \"Go Back and Watch the Game Tapes\"",
+      "source_url": "https://www.gong.io/customers/case-studies/gong-lets-hubspot-sales-reps-to-go-back-and-watch-the-game-tapes",
+      "confidence": "high"
+    },
+    {
+      "name": "impact.com",
+      "domain": "impact.com",
+      "grade": "B",
+      "evidence": "Impact Cultivates A Sales Culture Of Collaboration And Improvement (Gong case study)",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=2",
+      "confidence": "medium"
+    },
+    {
+      "name": "Indeed",
+      "domain": "indeed.com",
+      "grade": "A",
+      "evidence": "Indeed - the #1 job site worldwide - decided to roll out Gong globally",
+      "source_url": "https://www.gong.io/press/2023-golden-gong-awards",
+      "confidence": "high"
+    },
+    {
+      "name": "inSided",
+      "domain": "insided.com",
+      "grade": "C",
+      "evidence": "Some of the companies that use Gong include: | Company | inSided | Website | insided.com | Country | Netherlands",
+      "source_url": "https://enlyft.com/tech/products/gong",
+      "confidence": "low"
+    },
+    {
+      "name": "Intelex Technologies",
+      "domain": "intelex.com",
+      "grade": "B",
+      "evidence": "Intelex Enhances Onboarding And Collaboration To Strengthen Sales Strategy - Jennifer Boudreau, Director of Revenue Operations (Gong case study)",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "Intercom",
+      "domain": "intercom.com",
+      "grade": "C",
+      "evidence": "Customer story: Implementing Intercom's PLS Motion - featured on Go Nimbly's Gong Services page (750+ implementations across Gong's core products)",
+      "source_url": "https://www.gonimbly.com/gong-services",
+      "confidence": "medium"
+    },
+    {
+      "name": "Intrinsic Digital",
+      "domain": "intrinsicdigital.com",
+      "grade": "B",
+      "evidence": "We use Gong for revenue tracking and to gather insights for training purposes. - Ryan Osiniak, Operations Specialist at Intrinsic Digital",
+      "source_url": "https://www.trustradius.com/reviews/gong-2026-08-10-14-34-07",
+      "confidence": "high"
+    },
+    {
+      "name": "InvestorFlow",
+      "domain": "investorflow.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... InvestorFlow | 51-200 | Software Development | United States",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "Iron Mountain",
+      "domain": "ironmountain.com",
+      "grade": "A",
+      "evidence": "Ascending the peak: how Gong helped new hires at Iron Mountain hit their ramp targets",
+      "source_url": "https://www.gong.io/customers/case-studies/ascending-the-peak-how-gong-helped-new-hires-at-iron-mountain-hit-their-ramp-targets",
+      "confidence": "high"
+    },
+    {
+      "name": "Ironclad",
+      "domain": "ironcladapp.com",
+      "grade": "B",
+      "evidence": "Ironclad Selects Gong Revenue AI Platform to Improve Customer Retention",
+      "source_url": "https://www.gong.io/press/ironclad-selects-gong-revenue-ai-platform-to-improve-customer-retention",
+      "confidence": "high"
+    },
+    {
+      "name": "Jellyvision",
+      "domain": "jellyvision.com",
+      "grade": "B",
+      "evidence": "How Jellyvision Uses Gong To Keep Its Team Enabled And Engaged - Brian Collins, Director of Revenue Strategy & Enablement",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "join.com",
+      "domain": "join.com",
+      "grade": "C",
+      "evidence": "List of companies using Gong in Germany ... | join.com | Germany | Software Development | 270 | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong/de",
+      "confidence": "low"
+    },
+    {
+      "name": "Kareo",
+      "domain": "kareo.com",
+      "grade": "B",
+      "evidence": "Kareo-Case-Study.pdf hosted on gong.io documenting Kareo's use of Gong",
+      "source_url": "https://www.gong.io/wp-content/uploads/2018/01/Kareo-Case-Study.pdf",
+      "confidence": "medium"
+    },
+    {
+      "name": "Kelly Services",
+      "domain": "kellyservices.com",
+      "grade": "A",
+      "evidence": "How Temp Staffing Firm Kelly Services Got a 36% Lift in Placement Rates and 50% Faster Ramp",
+      "source_url": "https://www.gong.io/customers/case-studies/how-temp-staffing-firm-kelly-services-got-a-36-lift-in-placement-rates-and-50-faster-ramp",
+      "confidence": "high"
+    },
+    {
+      "name": "Kustomer",
+      "domain": "kustomer.com",
+      "grade": "B",
+      "evidence": "Visibility, insights, and outcomes: the secret sauce to sustainable growth at Kustomer",
+      "source_url": "https://www.gong.io/customers/case-studies/visibility-insights-and-outcomes-the-secret-sauce-to-sustainable-growth-at-kustomer",
+      "confidence": "high"
+    },
+    {
+      "name": "LabWare",
+      "domain": "labware.com",
+      "grade": "B",
+      "evidence": "Elevating LabWare's sales strategy to new heights - Mike Learner, Managing Director (Gong case study)",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "Leapsome",
+      "domain": "leapsome.com",
+      "grade": "C",
+      "evidence": "List of companies using Gong in Germany ... | Leapsome GmbH | Germany | IT Services and IT Consulting | 200 | $3.7M | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong/de",
+      "confidence": "low"
+    },
+    {
+      "name": "LexisNexis Legal & Professional",
+      "domain": "lexisnexis.com",
+      "grade": "B",
+      "evidence": "Anthony Muljadi - General Manager of the Large Law segment at LexisNexis Legal & Professional (Celebrate 2026 Speakers)",
+      "source_url": "https://www.gong.io/events/celebrate/speakers",
+      "confidence": "medium"
+    },
+    {
+      "name": "LinkedIn",
+      "domain": "linkedin.com",
+      "grade": "A",
+      "evidence": "LinkedIn Achieves Revenue Success with Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/linkedin-achieves-revenue-success-with-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Loop",
+      "domain": "loopreturns.com",
+      "grade": "B",
+      "evidence": "Own and optimize Loop's GTM tech stack, including Salesforce and adjacent tools such as Gong, Replit, Lovable, Hex, Looker, Notion",
+      "source_url": "https://jobs.lever.co/loopreturns/c3adfa1c-daab-4ef4-9441-b649d6216fae",
+      "confidence": "high"
+    },
+    {
+      "name": "Lucanet",
+      "domain": "lucanet.com",
+      "grade": "C",
+      "evidence": "List of companies using Gong in Germany ... | Lucanet | Germany | Software Development | 931 | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong/de",
+      "confidence": "low"
+    },
+    {
+      "name": "MasterClass",
+      "domain": "masterclass.com",
+      "grade": "B",
+      "evidence": "The Strategist - Best Gong for Strategy Story: MasterClass",
+      "source_url": "https://www.gong.io/press/2023-golden-gong-awards",
+      "confidence": "high"
+    },
+    {
+      "name": "Mimecast",
+      "domain": "mimecast.com",
+      "grade": "A",
+      "evidence": "Mimecast has deployed Gong in nine different countries, all of which have a high adoption rate of the platform.",
+      "source_url": "https://www.gong.io/press/2023-golden-gong-awards",
+      "confidence": "high"
+    },
+    {
+      "name": "Mintel",
+      "domain": "mintel.com",
+      "grade": "A",
+      "evidence": "Since adopting Gong, Mintel has increased its win rates by 34%. The good news is that we now use Gong on every client call.",
+      "source_url": "https://www.gong.io/customers/case-studies/research-recommendations-and-reality-how-gong-helped-mintel-increase-win-rates-by-34",
+      "confidence": "high"
+    },
+    {
+      "name": "Mirakl",
+      "domain": "mirakl.com",
+      "grade": "B",
+      "evidence": "How Mirakl reduced ramp time, boosted global collaboration, and unlocked new revenue opportunities with Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/mirakl-reduced-ramp-time-boosted-collaboration",
+      "confidence": "high"
+    },
+    {
+      "name": "Momentive",
+      "domain": "momentive.ai",
+      "grade": "B",
+      "evidence": "How the customer success team at Momentive used Gong to shape high-quality customer conversations",
+      "source_url": "https://www.gong.io/customers/case-studies/how-the-customer-success-team-at-momentive-used-gong-to-shape-high-quality-customer-conversations",
+      "confidence": "high"
+    },
+    {
+      "name": "monday.com",
+      "domain": "monday.com",
+      "grade": "B",
+      "evidence": "How monday.com used Gong to align revenue teams around customers",
+      "source_url": "https://www.gong.io/customers/case-studies/how-monday-com-used-gong-to-align-revenue-teams-around-customers",
+      "confidence": "high"
+    },
+    {
+      "name": "Morningstar",
+      "domain": "morningstar.com",
+      "grade": "B",
+      "evidence": "More than 3,500 innovative companies like Morningstar Inc., Paychex, LinkedIn, Shopify, Slack, Sprout Social, Twilio, and Zillow trust Gong",
+      "source_url": "https://www.gong.io/press/2023-golden-gong-awards",
+      "confidence": "high"
+    },
+    {
+      "name": "Multiverse",
+      "domain": "multiverse.io",
+      "grade": "C",
+      "evidence": "List of companies using Gong in United Kingdom ... | Multiverse | United Kingdom | Technology, Information and Internet | 1.3k | $23M | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong/gb",
+      "confidence": "low"
+    },
+    {
+      "name": "n8n",
+      "domain": "n8n.io",
+      "grade": "C",
+      "evidence": "List of companies using Gong in Germany ... | n8n | Germany | Software Development | 1.3k | $1.2M | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong/de",
+      "confidence": "low"
+    },
+    {
+      "name": "Narmi",
+      "domain": "narmi.com",
+      "grade": "B",
+      "evidence": "How Narmi streamlined revenue operations, improved pipeline visibility, and drove revenue growth using Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/how-narmidrove-revenue-growth-using-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Nasdaq",
+      "domain": "nasdaq.com",
+      "grade": "B",
+      "evidence": "The future of Fintech: Nasdaq uses Gong to make bullish bets",
+      "source_url": "https://www.gong.io/customers/case-studies/the-future-of-fintech-nasdaq-uses-gong-to-make-bullish-bets",
+      "confidence": "high"
+    },
+    {
+      "name": "OneStream Software",
+      "domain": "onestream.com",
+      "grade": "B",
+      "evidence": "Linsay Miller - VP of Revenue Operations, OneStream (Celebrate 2026 Speakers)",
+      "source_url": "https://www.gong.io/events/celebrate/speakers",
+      "confidence": "medium"
+    },
+    {
+      "name": "Opkey",
+      "domain": "opkey.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... Opkey | 201-500 | Software Development | United States",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "OutSolve",
+      "domain": "outsolve.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... OutSolve - HR Compliance | 51-200 | Human Resources Services | United States",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "OutSystems",
+      "domain": "outsystems.com",
+      "grade": "B",
+      "evidence": "OutSystems - Customer Case Study - Mike Lambert, Chief Revenue Officer (listed among Gong case studies)",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies",
+      "confidence": "medium"
+    },
+    {
+      "name": "PandaDoc",
+      "domain": "pandadoc.com",
+      "grade": "B",
+      "evidence": "Jennifer Nguyen - Sr. Director, Account Management, PandaDoc (Celebrate 2026 Speakers)",
+      "source_url": "https://www.gong.io/events/celebrate/speakers",
+      "confidence": "medium"
+    },
+    {
+      "name": "Paraform",
+      "domain": "paraform.com",
+      "grade": "C",
+      "evidence": "Experience with GTM tools like Apollo, Clay, Gong, Nooks, Unify, Zoominfo",
+      "source_url": "https://jobs.ashbyhq.com/paraform/9d6bfcc7-5348-44c8-8412-076761509ad8",
+      "confidence": "low"
+    },
+    {
+      "name": "Paychex",
+      "domain": "paychex.com",
+      "grade": "B",
+      "evidence": "More than 3,500 innovative companies like Morningstar Inc., Paychex, LinkedIn, Shopify, Slack, Sprout Social, Twilio, and Zillow trust Gong",
+      "source_url": "https://www.gong.io/press/2023-golden-gong-awards",
+      "confidence": "high"
+    },
+    {
+      "name": "Paycor",
+      "domain": "paycor.com",
+      "grade": "A",
+      "evidence": "Gong's revenue intelligence fuels a 141% surge in Paycor's client sales success",
+      "source_url": "https://www.gong.io/customers/case-studies/gongs-revenue-intelligence-fuels-a-141-surge-in-paycors-client-sales-success",
+      "confidence": "high"
+    },
+    {
+      "name": "PayPal",
+      "domain": "paypal.com",
+      "grade": "A",
+      "evidence": "Expanded the use of Gong across its sales teams to enhance productivity, visibility, and revenue growth. This resulted in over 7,600 hours saved annually",
+      "source_url": "https://www.gong.io/press/leading-companies-drive-measurable-business-impact-with-gong-s-ai-operating-system-for-revenue",
+      "confidence": "high"
+    },
+    {
+      "name": "Pendo",
+      "domain": "pendo.io",
+      "grade": "A",
+      "evidence": "Pendo Implements Methodologies To Improve Win Rates Using Gong - Michael Hoy, Director of Sales Excellence",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "Peregrine.ai",
+      "domain": "peregrine.ai",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... Peregrine.ai | 11-50 | Software Development | Germany | Europe",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "Personio",
+      "domain": "personio.com",
+      "grade": "B",
+      "evidence": "Personio boosts forecast accuracy to within 1% and frees 30% more time for customer engagement",
+      "source_url": "https://www.gong.io/customers/case-studies/personio-boosts-forecast-accuracy-to-within-1-and-frees-30-more-time-for-customer-engagement",
+      "confidence": "high"
+    },
+    {
+      "name": "Piano",
+      "domain": "piano.io",
+      "grade": "B",
+      "evidence": "Locking in predictable revenue: Gong takes Piano's forecast accuracy to 90%",
+      "source_url": "https://www.gong.io/customers/case-studies/locking-in-predictable-revenue-gong-takes-pianos-forecast-accuracy-to-90",
+      "confidence": "high"
+    },
+    {
+      "name": "PitchBook",
+      "domain": "pitchbook.com",
+      "grade": "B",
+      "evidence": "Global capital market research firm PitchBook is 10x more efficient with Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/winning-whats-next-global-capital-market-research-firm-pitchbook-is-10x-more-efficient-with-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Plate IQ",
+      "domain": "plateiq.com",
+      "grade": "B",
+      "evidence": "Plate IQ shrinks ramp-up time from a year to a few weeks",
+      "source_url": "https://www.gong.io/customers/case-studies/plate-iq-shrinks-ramp-up-time-from-a-year-to-a-few-weeks",
+      "confidence": "high"
+    },
+    {
+      "name": "Pocus",
+      "domain": "pocus.com",
+      "grade": "B",
+      "evidence": "Oscar Cannon of Cisco, Alexis Grabell of Pocus, and Erika Morris of Sprout Social joined our own Kyle Groff to talk about how complexity can hurt ROI.",
+      "source_url": "https://www.gong.io/blog/how-revenue-teams-are-winning-more-with-the-gong-revenue-ai-os-highlights-from-celebrate-25",
+      "confidence": "medium"
+    },
+    {
+      "name": "PolyAI",
+      "domain": "poly.ai",
+      "grade": "C",
+      "evidence": "List of companies using Gong in United Kingdom ... | PolyAI | United Kingdom | Software Development | 369 | $3.5M | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong/gb",
+      "confidence": "low"
+    },
+    {
+      "name": "Procore Technologies",
+      "domain": "procore.com",
+      "grade": "A",
+      "evidence": "Pradeep Konduru talked about how Procore Technologies used Gong to accelerate growth and drive transformational results.",
+      "source_url": "https://www.gong.io/blog/how-revenue-teams-are-winning-more-with-the-gong-revenue-ai-os-highlights-from-celebrate-25",
+      "confidence": "high"
+    },
+    {
+      "name": "Proposify",
+      "domain": "proposify.com",
+      "grade": "B",
+      "evidence": "How Proposify cut its time spent on forecasting by 25% with help from Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/how-gong-helped-proposify-cut-their-sales-cycle-in-half",
+      "confidence": "high"
+    },
+    {
+      "name": "Prosci",
+      "domain": "prosci.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... Prosci | 201-500 | Business Consulting and Services | United States",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "PwC",
+      "domain": "pwc.com",
+      "grade": "C",
+      "evidence": "Brandon Fisher - Sr. Client Director - Commercial, PWC (Celebrate 2026 Speakers)",
+      "source_url": "https://www.gong.io/events/celebrate/speakers",
+      "confidence": "low"
+    },
+    {
+      "name": "Qargo TMS",
+      "domain": "qargo.com",
+      "grade": "C",
+      "evidence": "List of companies using Gong in United Kingdom ... | Qargo TMS | United Kingdom | Software Development | 208 | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong/gb",
+      "confidence": "low"
+    },
+    {
+      "name": "Quotient Technology",
+      "domain": "quotient.com",
+      "grade": "B",
+      "evidence": "Gong's Real Time Customer Feedback Drives Quotient's Results",
+      "source_url": "https://www.gong.io/customers/case-studies/gongs-real-time-customer-feedback-drives-quotients-results",
+      "confidence": "high"
+    },
+    {
+      "name": "Rapid7",
+      "domain": "rapid7.com",
+      "grade": "A",
+      "evidence": "How Rapid7 secured an increase in win rates using Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/how-rapid7-secured-an-increase-in-win-rates-using-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Reachdesk",
+      "domain": "reachdesk.com",
+      "grade": "B",
+      "evidence": "Gong gives Reachdesk the gift of alignment during rapid international growth",
+      "source_url": "https://www.gong.io/customers/case-studies/gong-gives-reachdesk-the-gift-of-alignment-during-rapid-international-growth",
+      "confidence": "high"
+    },
+    {
+      "name": "Recurly",
+      "domain": "recurly.com",
+      "grade": "B",
+      "evidence": "The Visionary Award, which recognizes a customer that upgraded to Gong from another solution, goes to Recurly, who was drawn to the platform in 2020 due to Gong's Deal Intelligence capabilities.",
+      "source_url": "https://www.prnewswire.com/news-releases/gong-recognizes-revenue-intelligence-pioneers-with-2020-golden-gong-awards-301167107.html",
+      "confidence": "high"
+    },
+    {
+      "name": "Reddit",
+      "domain": "reddit.com",
+      "grade": "B",
+      "evidence": "more than 4,700 companies now using the platform, including Google, Reddit, Dolby and ADP",
+      "source_url": "https://www.forbes.com/companies/gong/",
+      "confidence": "medium"
+    },
+    {
+      "name": "RELX",
+      "domain": "relx.com",
+      "grade": "C",
+      "evidence": "List of companies using Gong in United Kingdom ... | RELX | United Kingdom | Technology, Information and Media | 38k | $10B | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong/gb",
+      "confidence": "low"
+    },
+    {
+      "name": "Rippling",
+      "domain": "rippling.com",
+      "grade": "A",
+      "evidence": "Rippling lifts win rates 13% and increases LTV 15% using Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/rippling-lifts-win-rates-13-and-increases-ltv-15-using-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "RMS",
+      "domain": "rmscloud.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... RMS | 201-500 | Software Development | Australia | Oceania",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "RollWorks",
+      "domain": "rollworks.com",
+      "grade": "B",
+      "evidence": "With Gong, we have seen an increase in productivity and a 57% increase in average contract value in 6 months.",
+      "source_url": "https://www.gong.io/press/2023-golden-gong-awards",
+      "confidence": "high"
+    },
+    {
+      "name": "Rootly",
+      "domain": "rootly.com",
+      "grade": "B",
+      "evidence": "Fast-growing Rootly sees 67% increase in rep productivity thanks to early investment in Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/fast-growing-rootly-sees-67-increase-in-rep-productivity-thanks-to-early-investment-in-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Saifr",
+      "domain": "saifr.ai",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... Saifr | 51-200 | Software Development | United States",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "Salesloft",
+      "domain": "salesloft.com",
+      "grade": "B",
+      "evidence": "its customer base, which includes Act-On, SalesLoft, Sisense, Greenhouse, and Zywave",
+      "source_url": "https://techcrunch.com/2017/07/12/gong-an-ai-based-language-tool-to-help-sales-and-customer-service-reps-nabs-20m/",
+      "confidence": "medium"
+    },
+    {
+      "name": "Samsara",
+      "domain": "samsara.com",
+      "grade": "A",
+      "evidence": "Connor Ashenbrucker - Senior Manager, GTM Quality Programs, Samsara (Celebrate 2026 Speakers)",
+      "source_url": "https://www.gong.io/events/celebrate/speakers",
+      "confidence": "high"
+    },
+    {
+      "name": "Sendoso",
+      "domain": "sendoso.com",
+      "grade": "A",
+      "evidence": "How Gong \"Forever Changed\" Sendoso's Customer Experience Team",
+      "source_url": "https://www.gong.io/customers/case-studies/all-paths-lead-to-retention-how-gong-forever-changed-sendosos-customer-experience-team",
+      "confidence": "high"
+    },
+    {
+      "name": "ServiceTitan",
+      "domain": "servicetitan.com",
+      "grade": "B",
+      "evidence": "Servicetitan Gains Higher Close Rates With Deal Intelligence - Billy Stein, Sales Strategy and Operations Manager",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "ServiceTrade",
+      "domain": "servicetrade.com",
+      "grade": "B",
+      "evidence": "Travis Chichester - GTM Engineer, ServiceTrade (Celebrate 2026 Speakers)",
+      "source_url": "https://www.gong.io/events/celebrate/speakers",
+      "confidence": "medium"
+    },
+    {
+      "name": "Shopify",
+      "domain": "shopify.com",
+      "grade": "B",
+      "evidence": "More than 3,500 innovative companies like Morningstar Inc., Paychex, LinkedIn, Shopify, Slack, Sprout Social, Twilio, and Zillow trust Gong",
+      "source_url": "https://www.gong.io/press/2023-golden-gong-awards",
+      "confidence": "high"
+    },
+    {
+      "name": "Showpad",
+      "domain": "showpad.com",
+      "grade": "B",
+      "evidence": "How Showpad increased quota attainment and forecast accuracy with Gong's Revenue AI OS",
+      "source_url": "https://www.gong.io/customers/case-studies/how-showpad-increased-quota-attainment-and-forecast-accuracy-with-gong-s-revenue-ai-os",
+      "confidence": "high"
+    },
+    {
+      "name": "Similarweb",
+      "domain": "similarweb.com",
+      "grade": "B",
+      "evidence": "The Strategist Award, which recognizes the best Market Intelligence story, goes to SimilarWeb, for their ability to stay ahead of the competition by using Gong.",
+      "source_url": "https://www.prnewswire.com/news-releases/gong-recognizes-revenue-intelligence-pioneers-with-2020-golden-gong-awards-301167107.html",
+      "confidence": "high"
+    },
+    {
+      "name": "Simpro",
+      "domain": "simprogroup.com",
+      "grade": "B",
+      "evidence": "simPRO Empowers Hybrid Sales and a Culture of Accountability in a Global Workforce - Ricky Sevta, Global Chief Revenue Officer",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=4",
+      "confidence": "high"
+    },
+    {
+      "name": "Sisense",
+      "domain": "sisense.com",
+      "grade": "A",
+      "evidence": "The Deal Maker Award, which celebrates the best Deal Intelligence story, goes to Sisense's EMEA team which used Gong's Deal Intelligence",
+      "source_url": "https://www.prnewswire.com/news-releases/gong-recognizes-revenue-intelligence-pioneers-with-2020-golden-gong-awards-301167107.html",
+      "confidence": "high"
+    },
+    {
+      "name": "SiteDocs",
+      "domain": "sitedocs.com",
+      "grade": "B",
+      "evidence": "SiteDocs, a safety compliance software provider, has been using Gong Engage in beta to consolidate all of its sales team's operations on Gong.",
+      "source_url": "https://www.prnewswire.com/news-releases/gong-launches-gong-engage-sales-engagement-reimagined-with-customer-centric-ai-301846087.html",
+      "confidence": "high"
+    },
+    {
+      "name": "Slack",
+      "domain": "slack.com",
+      "grade": "B",
+      "evidence": "More than 3,500 innovative companies like Morningstar Inc., Paychex, LinkedIn, Shopify, Slack, Sprout Social, Twilio, and Zillow trust Gong",
+      "source_url": "https://www.gong.io/press/2023-golden-gong-awards",
+      "confidence": "high"
+    },
+    {
+      "name": "Snowflake",
+      "domain": "snowflake.com",
+      "grade": "B",
+      "evidence": "Companies including ADT, Indeed, LinkedIn, Snowflake, and Zillow rely on Gong to generate and accelerate pipeline",
+      "source_url": "https://www.gong.io/press/gong-surpasses-4000-customers",
+      "confidence": "high"
+    },
+    {
+      "name": "Sparrow",
+      "domain": "trysparrow.com",
+      "grade": "A",
+      "evidence": "Thanks to Gong, Sparrow's sales and marketing team leverages technology to have better conversations and work smarter and more effectively.",
+      "source_url": "https://www.gong.io/customers/case-studies/leveraging-revenue-intelligence-to-drive-conversions-and-build-a-growth-mindset",
+      "confidence": "high"
+    },
+    {
+      "name": "SpotOn",
+      "domain": "spoton.com",
+      "grade": "B",
+      "evidence": "How SpotOn increased win rates by 16% through productivity gains",
+      "source_url": "https://www.gong.io/customers/case-studies/how-spoton-increased-win-rates-by-16-through-productivity-gains",
+      "confidence": "high"
+    },
+    {
+      "name": "Sprout Social",
+      "domain": "sproutsocial.com",
+      "grade": "A",
+      "evidence": "our customer-facing teams rely on conversational insights to understand the impact of our strategic initiatives, said Dan Summers ... Sprout Social",
+      "source_url": "https://www.gong.io/press/gong-surpasses-4000-customers",
+      "confidence": "high"
+    },
+    {
+      "name": "Staffbase",
+      "domain": "staffbase.com",
+      "grade": "C",
+      "evidence": "List of companies using Gong in Germany ... | Staffbase | Germany | Software Development | 943 | $17M | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong/de",
+      "confidence": "low"
+    },
+    {
+      "name": "Stansberry Research",
+      "domain": "stansberryresearch.com",
+      "grade": "B",
+      "evidence": "How Stansberry Research finally got the info it needed (Hint: Gong)",
+      "source_url": "https://www.gong.io/customers/case-studies/how-stansberry-research-finally-got-the-info-it-needed-hint-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Submittable",
+      "domain": "submittable.com",
+      "grade": "B",
+      "evidence": "We utilize Gong as our hub to record sales calls, track forecast and pipeline... - Joe Giordano, Mid Market Account Executive in Sales at Submittable",
+      "source_url": "https://www.trustradius.com/reviews/gong-2026-08-05-15-55-51",
+      "confidence": "high"
+    },
+    {
+      "name": "SurveyMonkey",
+      "domain": "surveymonkey.com",
+      "grade": "B",
+      "evidence": "SurveyMonkey Takes Coaching for Customer Success to the Next Level - Jeffrey Coleman, VP of Customer Success (Gong case study)",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "Syndigo",
+      "domain": "syndigo.com",
+      "grade": "B",
+      "evidence": "Alex Gohl, Sr. Director of Client Development at Syndigo, gave Gong a perfect 10 out of 10 score (TrustRadius verified review)",
+      "source_url": "https://www.trustradius.com/products/gong-io/reviews",
+      "confidence": "medium"
+    },
+    {
+      "name": "Tackle.io",
+      "domain": "tackle.io",
+      "grade": "B",
+      "evidence": "How Gong Forecast is helping Tackle.io shave 40% off forecasting time",
+      "source_url": "https://www.gong.io/customers/case-studies/how-gong-forecast-is-helping-tackle-io-shave-40-off-forecasting-time",
+      "confidence": "high"
+    },
+    {
+      "name": "Talon.One",
+      "domain": "talon.one",
+      "grade": "C",
+      "evidence": "List of companies using Gong in Germany ... | Talon.One | Germany | Software Development | 355 | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong/de",
+      "confidence": "low"
+    },
+    {
+      "name": "TaxJar",
+      "domain": "taxjar.com",
+      "grade": "B",
+      "evidence": "How Taxjar Uses Gong To Make The Most Out Of Every Opportunity - Matthew Grattan, VP of Sales & Account Management",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=2",
+      "confidence": "high"
+    },
+    {
+      "name": "TeamDynamix",
+      "domain": "teamdynamix.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... TeamDynamix | 51-200 | Software Development | United States",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "TeamViewer",
+      "domain": "teamviewer.com",
+      "grade": "C",
+      "evidence": "List of companies using Gong in Germany ... | TeamViewer | Germany | Software Development | 2.8k | $567M | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong/de",
+      "confidence": "low"
+    },
+    {
+      "name": "TEKsystems",
+      "domain": "teksystems.com",
+      "grade": "B",
+      "evidence": "TEKsystems is using Gong to deliver more value faster for their customers. Since implementing Gong, TEKsystems reduced the time between capturing customer requirements and mobilizing the team",
+      "source_url": "https://www.prnewswire.com/news-releases/revenue-intelligence-pioneers-recognized-at-2021-golden-gong-awards-301441274.html",
+      "confidence": "high"
+    },
+    {
+      "name": "Terminus",
+      "domain": "terminus.com",
+      "grade": "B",
+      "evidence": "said Kevin Heraly, Senior Director of GTM Revenue Operations at Terminus. Gong's Ask Anything feature empowers our sales leaders and reps alike",
+      "source_url": "https://www.prnewswire.com/news-releases/gong-introduces-industrys-first-ai-ask-anything-solution-for-individual-contacts-to-help-revenue-teams-gain-more-complete-insights-and-boost-efficiency-302099525.html",
+      "confidence": "high"
+    },
+    {
+      "name": "Thomson Reuters",
+      "domain": "thomsonreuters.com",
+      "grade": "A",
+      "evidence": "We rolled out Gong a couple of years ago, and the company has realized that we are sitting on a goldmine of data, Kristal said.",
+      "source_url": "https://www.gong.io/blog/how-revenue-teams-are-winning-more-with-the-gong-revenue-ai-os-highlights-from-celebrate-25",
+      "confidence": "high"
+    },
+    {
+      "name": "ThoughtSpot",
+      "domain": "thoughtspot.com",
+      "grade": "B",
+      "evidence": "Thoughtspot Leaves Behind the Telephone Game With Gong - Patrick Clement, Enterprise Account Executive",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "TIBCO Software",
+      "domain": "tibco.com",
+      "grade": "B",
+      "evidence": "Tibco has mastered the art of closing huge deals faster thanks to Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/tibco-has-mastered-the-art-of-closing-huge-deals-faster-thanks-to-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Tinuiti",
+      "domain": "tinuiti.com",
+      "grade": "B",
+      "evidence": "Tinuiti uses Gong to identify cross-selling opportunities by leveraging Gong Trackers, which identify keywords mentioned in sales conversations, along with Gong's Salesforce API.",
+      "source_url": "https://www.prnewswire.com/news-releases/gong-recognizes-revenue-intelligence-pioneers-with-2020-golden-gong-awards-301167107.html",
+      "confidence": "high"
+    },
+    {
+      "name": "TouchBistro",
+      "domain": "touchbistro.com",
+      "grade": "C",
+      "evidence": "Some of the companies that use Gong include: ... | TouchBistro | touchbistro.com | United States | 100M-200M | 500-1000 |",
+      "source_url": "https://enlyft.com/tech/products/gong",
+      "confidence": "low"
+    },
+    {
+      "name": "Tray.ai",
+      "domain": "tray.ai",
+      "grade": "B",
+      "evidence": "Tray.io Increases Booked Meetings By 40% Using Gong - David Hershenson, Director of Sales Development and Productivity",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "Trimble",
+      "domain": "trimble.com",
+      "grade": "B",
+      "evidence": "How Trimble boosted pipeline and tripled deal sizes with Gong's Revenue AI Operating System",
+      "source_url": "https://www.gong.io/customers/case-studies/how-trimble-boosted-pipeline-and-tripled-deal-sizes-with-gong-s-revenue-ai-operating-system",
+      "confidence": "high"
+    },
+    {
+      "name": "TriNet",
+      "domain": "trinet.com",
+      "grade": "B",
+      "evidence": "Colleen Haupt - DVP, Revenue Enablement, Trinet (Celebrate 2026 Speakers)",
+      "source_url": "https://www.gong.io/events/celebrate/speakers",
+      "confidence": "medium"
+    },
+    {
+      "name": "Twilio",
+      "domain": "twilio.com",
+      "grade": "B",
+      "evidence": "More than 3,500 innovative companies like Morningstar Inc., Paychex, LinkedIn, Shopify, Slack, Sprout Social, Twilio, and Zillow trust Gong",
+      "source_url": "https://www.gong.io/press/2023-golden-gong-awards",
+      "confidence": "high"
+    },
+    {
+      "name": "Uber for Business",
+      "domain": "uber.com",
+      "grade": "B",
+      "evidence": "Uber for Business used Gong's agents to lift response rates 32%",
+      "source_url": "https://www.prnewswire.com/news-releases/gong-growth-accelerates-past-55-yoy-as-enterprises-adopt-revenue-ai-arr-tops-500m-302769127.html",
+      "confidence": "high"
+    },
+    {
+      "name": "Uber Freight",
+      "domain": "uberfreight.com",
+      "grade": "B",
+      "evidence": "Uber Freight drives standardized MEDDPICC adoption and improves deal outcomes with Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/uber-freight-drives-standardized-meddpicc-adoption-and-improves-deal-outcomes-with-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Uberflip",
+      "domain": "uberflip.com",
+      "grade": "B",
+      "evidence": "How Uberflip uses Gong to create winning outcomes and look to the future",
+      "source_url": "https://www.gong.io/customers/case-studies/how-uberflip-uses-gong-to-create-winning-outcomes-and-look-to-the-future",
+      "confidence": "high"
+    },
+    {
+      "name": "Udemy",
+      "domain": "udemy.com",
+      "grade": "B",
+      "evidence": "I can't imagine being in Sales Development with Gong, it's in the DNA. - Christopher Lopez, Sr. Account Development Representative in Sales at Udemy",
+      "source_url": "https://www.trustradius.com/reviews/gong-2026-08-14-09-25-24",
+      "confidence": "high"
+    },
+    {
+      "name": "UPSTACK",
+      "domain": "upstack.com",
+      "grade": "C",
+      "evidence": "We detected 1,610 companies using Gong. ... UPSTACK | 201-500 | IT Services and IT Consulting | United States",
+      "source_url": "https://bloomberry.com/data/gong/",
+      "confidence": "low"
+    },
+    {
+      "name": "Upwork",
+      "domain": "upwork.com",
+      "grade": "B",
+      "evidence": "Upwork's RevOps team rockets to 95% sales forecast accuracy using Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/upworks-revops-team-rockets-to-95-sales-forecast-accuracy-using-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Vercara",
+      "domain": "vercara.com",
+      "grade": "B",
+      "evidence": "Gong Agents give our sales teams back their most valuable asset - time, said Stephanie Richman, VP of Sales Operations at Vercara.",
+      "source_url": "https://www.prnewswire.com/news-releases/gong-redefines-ai-agents-to-deliver-real-revenue-impact-302429811.html",
+      "confidence": "high"
+    },
+    {
+      "name": "Verse.ai",
+      "domain": "verse.ai",
+      "grade": "B",
+      "evidence": "Verse.ai drives 76% revenue growth and 25% more accurate forecasting with Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/verse-ai-drives-76-revenue-growth-and-25-more-accurate-forecasting-with-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Virgin Pulse",
+      "domain": "virginpulse.com",
+      "grade": "B",
+      "evidence": "Achieving double digit lift across the sales pipeline: how Virgin Pulse used Gong to navigate economic uncertainty",
+      "source_url": "https://www.gong.io/customers/case-studies/achieving-double-digit-lift-across-the-sales-pipeline-how-virgin-pulse-used-gong-to-navigate-economic-uncertainty",
+      "confidence": "high"
+    },
+    {
+      "name": "WalkMe",
+      "domain": "walkme.com",
+      "grade": "A",
+      "evidence": "The Transformer: WalkMe - Improved its win rates and forecast accuracy using Gong.",
+      "source_url": "https://www.gong.io/press/gong-announces-2024-golden-gong-winners",
+      "confidence": "high"
+    },
+    {
+      "name": "Wayfair",
+      "domain": "wayfair.com",
+      "grade": "B",
+      "evidence": "Lindsey Catalan of Twilio, Keith Reynolds of Wayfair, and Eitan Saban of PayPal discussed how to create transformational change with our own Craig Hanson.",
+      "source_url": "https://www.gong.io/blog/how-revenue-teams-are-winning-more-with-the-gong-revenue-ai-os-highlights-from-celebrate-25",
+      "confidence": "medium"
+    },
+    {
+      "name": "Wealthsimple",
+      "domain": "wealthsimple.com",
+      "grade": "B",
+      "evidence": "Kim McGoldrick - Manager, Commercial Strategy & Operations, Wealthsimple (Celebrate 2026 Speakers)",
+      "source_url": "https://www.gong.io/events/celebrate/speakers",
+      "confidence": "medium"
+    },
+    {
+      "name": "Wolters Kluwer",
+      "domain": "wolterskluwer.com",
+      "grade": "B",
+      "evidence": "With Gong's real-time analytics and AI insights, the Sales Enablement team transformed how they train and coach sellers.",
+      "source_url": "https://www.gong.io/press/leading-companies-drive-measurable-business-impact-with-gong-s-ai-operating-system-for-revenue",
+      "confidence": "high"
+    },
+    {
+      "name": "Wood Mackenzie",
+      "domain": "woodmac.com",
+      "grade": "C",
+      "evidence": "List of companies using Gong in United Kingdom ... | Wood Mackenzie | United Kingdom | Information Services | 2.7k | $313M | Gong |",
+      "source_url": "https://theirstack.com/en/technology/gong/gb",
+      "confidence": "low"
+    },
+    {
+      "name": "Workato",
+      "domain": "workato.com",
+      "grade": "B",
+      "evidence": "How Gong Insights Helped Workato Pivot During Covid-19 And Hit 102% Of Plan - Bhaskar Roy, Head of Growth and Marketing",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies",
+      "confidence": "high"
+    },
+    {
+      "name": "Yotpo",
+      "domain": "yotpo.com",
+      "grade": "A",
+      "evidence": "How Yotpo unified its revenue teams in one operating system",
+      "source_url": "https://www.gong.io/customers/case-studies/yotpo-unified-revenue-teams",
+      "confidence": "high"
+    },
+    {
+      "name": "YouGov",
+      "domain": "yougov.com",
+      "grade": "B",
+      "evidence": "How YouGov strengthened forecast accuracy and boosted pipeline conversion with Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/how-yougov-strengthened-forecast-accuracy-and-boosted-pipeline-conversion-with-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Zappi",
+      "domain": "zappi.io",
+      "grade": "B",
+      "evidence": "How Gong Helps Zappi Focus And Forecast During An Uncertain Time - Ryan Barry, Chief Revenue Officer",
+      "source_url": "https://www.featuredcustomers.com/vendor/gong/case-studies?p=3",
+      "confidence": "high"
+    },
+    {
+      "name": "Zendesk",
+      "domain": "zendesk.com",
+      "grade": "A",
+      "evidence": "Gong is now an integral part of Zendesk's sales process across all product offerings including Sell and Support.",
+      "source_url": "https://www.prnewswire.com/news-releases/revenue-intelligence-pioneers-recognized-at-2021-golden-gong-awards-301441274.html",
+      "confidence": "high"
+    },
+    {
+      "name": "Zenefits",
+      "domain": "zenefits.com",
+      "grade": "B",
+      "evidence": "How Zenefits increased their win rate by 3-5x using Gong",
+      "source_url": "https://www.gong.io/customers/case-studies/how-zenefits-increased-their-win-rate-using-gong",
+      "confidence": "high"
+    },
+    {
+      "name": "Zillow",
+      "domain": "zillow.com",
+      "grade": "A",
+      "evidence": "Companies including ADT, Indeed, LinkedIn, Snowflake, and Zillow rely on Gong to generate and accelerate pipeline",
+      "source_url": "https://www.gong.io/press/gong-surpasses-4000-customers",
+      "confidence": "high"
+    },
+    {
+      "name": "ZoomInfo",
+      "domain": "zoominfo.com",
+      "grade": "B",
+      "evidence": "ZoomInfo used Gong to drive a conversation funnel ahead of the deal and quoting process. Gong data was ported into their data lake",
+      "source_url": "https://www.prnewswire.com/news-releases/gong-recognizes-revenue-intelligence-pioneers-with-2020-golden-gong-awards-301167107.html",
+      "confidence": "high"
+    },
+    {
+      "name": "Zywave",
+      "domain": "zywave.com",
+      "grade": "B",
+      "evidence": "its customer base, which includes Act-On, SalesLoft, Sisense, Greenhouse, and Zywave",
+      "source_url": "https://techcrunch.com/2017/07/12/gong-an-ai-based-language-tool-to-help-sales-and-customer-service-reps-nabs-20m/",
+      "confidence": "medium"
+    }
+  ],
+  "generated_at": "2026-09-14T06:44:19Z",
+  "company_count": 236
+}
