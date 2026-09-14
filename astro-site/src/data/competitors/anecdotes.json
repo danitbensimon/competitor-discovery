@@ -1,0 +1,211 @@
+{
+  "competitor": {
+    "name": "Anecdotes",
+    "slug": "anecdotes",
+    "domain": "anecdotes.ai"
+  },
+  "companies": [
+    {
+      "name": "North",
+      "domain": "north.com",
+      "grade": "A",
+      "evidence": "We decided on Anecdotes because of the sheer number of integrations that were out of the box. Plus, I liked the interface.",
+      "source_url": "https://www.anecdotes.ai/customer-case-studies/the-best-of-both-worlds-how-platform-integration-streamlined-norths-11-pci-audits",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "WELL Health Technologies",
+      "domain": "well.company",
+      "grade": "A",
+      "evidence": "Our GRC team's technical expertise combined with a modern, enterprise-ready platform like Anecdotes helped us architect a scalable compliance operation.",
+      "source_url": "https://www.anecdotes.ai/customer-case-studies/well-health-cut-manual-work-by-73-with-anecdotes",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Summit Utilities",
+      "domain": "summitutilitiesinc.com",
+      "grade": "A",
+      "evidence": "We had the right policy, but the process wasn't working like we thought... Anecdotes let us see what was really happening.",
+      "source_url": "https://www.anecdotes.ai/customer-case-studies/how-summit-utilities-caught-a-critical-security-gap-with-anecdotes",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Jellyvision",
+      "domain": "jellyvision.com",
+      "grade": "A",
+      "evidence": "Anecdotes makes risk management better and smoother. Having our data connected to our risk register has given the entire organization a full view of our risk posture.",
+      "source_url": "https://www.anecdotes.ai/customer-case-studies/how-jellyvision-consolidated-risk-and-compliance-data-to-take-their-grc-program-to-the-next-level",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Axonius",
+      "domain": "axonius.com",
+      "grade": "A",
+      "evidence": "Anecdotes enabling my team to automate evidence collection and creating a seamless integration with Schellman's preferred audit platform has significantly streamlined our audit processes.",
+      "source_url": "https://www.anecdotes.ai/customer-case-studies/how-axonius-made-audits-with-schellman-more-collaborative-and-over-60-faster-with-anecdotes",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Bitsight",
+      "domain": "bitsight.com",
+      "grade": "A",
+      "evidence": "Anecdotes' flexibility changed the game when it came to customer audits. Being able to redact data and scope what we want to show has taken our ability to build trust with customers to the next level.",
+      "source_url": "https://www.anecdotes.ai/customer-case-studies/how-bitsight-leveraged-anecdotes-proprietary-plugins-and-data-to-boost-their-grc-program",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Hudson River Trading",
+      "domain": "hudsonrivertrading.com",
+      "grade": "A",
+      "evidence": "Anecdotes' unique analysis tools and configurable automation have completely transformed how we track and report compliance across the organization.",
+      "source_url": "https://www.anecdotes.ai/customer-case-studies/hudson-river-trading-streamlines-compliance-with-anecdotes-via-google-cloud-marketplace",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Sourcegraph",
+      "domain": "sourcegraph.com",
+      "grade": "A",
+      "evidence": "Anecdotes' easy and intuitive platform has significantly improved our audit process, saving us time and effort across the organization.",
+      "source_url": "https://www.anecdotes.ai/customer-case-studies/how-anecdotes-helped-sourcegraph-increase-efficiency-in-their-audits-with-geel-norton-without-compromising-quality",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "HiBob",
+      "domain": "hibob.com",
+      "grade": "A",
+      "evidence": "We looked around for a tool that would help us scale compliance as we grew and secure our evidence collection. Anecdotes is the ideal solution for mature companies that need to meet complex business requirements.",
+      "source_url": "https://www.anecdotes.ai/customer-case-studies/how-hibob-retained-control-over-sensitive-data-with-optimal-compliance-management",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Snowflake",
+      "domain": "snowflake.com",
+      "grade": "A",
+      "evidence": "By leveraging Anecdotes' Compliance technology we unlocked data sets... Their platform's ability to bring credible data sets has been invaluable.",
+      "source_url": "https://www.anecdotes.ai/customers",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Similarweb",
+      "domain": "similarweb.com",
+      "grade": "A",
+      "evidence": "anecdotes had everything we needed from a comprehensive Compliance solution. You can tell it's built with fast-growing companies in mind, which is just what we needed here at Similarweb.",
+      "source_url": "https://9105956.fs1.hubspotusercontent-na1.net/hubfs/9105956/Case%20Study/Case%20Study%20-%20Similarweb.pdf",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Silverfort",
+      "domain": "silverfort.com",
+      "grade": "B",
+      "evidence": "Anecdotes streamlines the evidence collection process and the automation is really helpful for managing day-to-day operations.",
+      "source_url": "https://www.anecdotes.ai/case-studies/silverfort",
+      "confidence": "Verified"
+    },
+    {
+      "name": "OVO",
+      "domain": "ovo.com",
+      "grade": "B",
+      "evidence": "OVO, a hyper-growth company in the Fintech industry, overcame the Compliance challenges of a growing company and gained better visibility into their data with the anecdotes Compliance OS.",
+      "source_url": "https://www.anecdotes.ai/case-studies/ovo",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Raftt",
+      "domain": "raftt.io",
+      "grade": "B",
+      "evidence": "anecdotes was the optimal solution for Raftt to establish a robust compliance program powered by automation.",
+      "source_url": "https://www.anecdotes.ai/case-studies/raftt",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Ginzi",
+      "domain": "ginzi.co",
+      "grade": "B",
+      "evidence": "Ginzi CEO Ben Jacobs knew his startup needed a solid Security Compliance Program... anecdotes was the clear choice... Ginzi was able to easily collect evidence for their ISO 27001:2018 certification.",
+      "source_url": "https://www.anecdotes.ai/case-studies/ginzi",
+      "confidence": "Verified"
+    },
+    {
+      "name": "CredCompare",
+      "domain": "credcompare.com",
+      "grade": "B",
+      "evidence": "As CEO of a marketplace for healthcare loans, CredCompare's Asaf Moses knew they'd need to meet certain Security Compliance frameworks... anecdotes as their trusted partner.",
+      "source_url": "https://www.anecdotes.ai/case-studies/credcompare",
+      "confidence": "Verified"
+    },
+    {
+      "name": "LifeLabs",
+      "domain": "lifelabs.com",
+      "grade": "B",
+      "evidence": "US customer base, which now includes prominent names such as Lifelabs, Snowflake, Coinbase, Aristocrat, SoFi, Grafana, Payscale, and more.",
+      "source_url": "https://www.anecdotes.ai/pr-articles/anecdotes-roundb",
+      "confidence": "Verified"
+    },
+    {
+      "name": "SoFi",
+      "domain": "sofi.com",
+      "grade": "B",
+      "evidence": "the platform of choice for enterprises... including companies such as Snowflake, SoFi and Well Health.",
+      "source_url": "https://www.anecdotes.ai/pr-articles/anecdotes-secures-55m-series-b-to-revolutionize-ai-powered-grc-solutions",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Grafana Labs",
+      "domain": "grafana.com",
+      "grade": "B",
+      "evidence": "anecdotes is used by world-class brands including Amplitude, Navan, Grafana, and SimilarWeb.",
+      "source_url": "https://www.linkedin.com/company/anecdotes-ai",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Coinbase",
+      "domain": "coinbase.com",
+      "grade": "C",
+      "evidence": "the US customer base, which now includes prominent names such as Lifelabs, Snowflake, Coinbase, Aristocrat, SoFi, Grafana, Payscale, and more.",
+      "source_url": "https://www.anecdotes.ai/pr-articles/anecdotes-roundb",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Aristocrat",
+      "domain": "aristocrat.com",
+      "grade": "C",
+      "evidence": "now includes prominent names such as Lifelabs, Snowflake, Coinbase, Aristocrat, SoFi, Grafana, Payscale, and more.",
+      "source_url": "https://www.anecdotes.ai/pr-articles/anecdotes-roundb",
+      "confidence": "Likely"
+    },
+    {
+      "name": "PayScale",
+      "domain": "payscale.com",
+      "grade": "C",
+      "evidence": "now includes prominent names such as Lifelabs, Snowflake, Coinbase, Aristocrat, SoFi, Grafana, Payscale, and more.",
+      "source_url": "https://www.anecdotes.ai/pr-articles/anecdotes-roundb",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Amplitude",
+      "domain": "amplitude.com",
+      "grade": "C",
+      "evidence": "anecdotes is used by world-class brands including Amplitude, Navan, Grafana, and SimilarWeb.",
+      "source_url": "https://www.linkedin.com/company/anecdotes-ai",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Navan",
+      "domain": "navan.com",
+      "grade": "C",
+      "evidence": "anecdotes is used by world-class brands including Amplitude, Navan, Grafana, and SimilarWeb.",
+      "source_url": "https://www.linkedin.com/company/anecdotes-ai",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Hunters",
+      "domain": "hunters.security",
+      "grade": "C",
+      "evidence": "Being able to redact data and scope what we want to show has taken our ability to build trust with customers to the next level.",
+      "source_url": "https://www.anecdotes.ai/case-studies/hunters",
+      "confidence": "Likely"
+    }
+  ],
+  "generated_at": "2026-09-14T15:42:10Z",
+  "company_count": 25
+}
