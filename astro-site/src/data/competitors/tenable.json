@@ -1,0 +1,1435 @@
+{
+  "competitor": {
+    "name": "Tenable",
+    "slug": "tenable",
+    "domain": "tenable.com"
+  },
+  "companies": [
+    {
+      "name": "Aidoc",
+      "domain": "aidoc.com",
+      "grade": "A",
+      "evidence": "Aidoc simplifies IAM Risk Management tasks and streamlines remediation with Tenable Cloud Security",
+      "source_url": "https://www.tenable.com/case-studies/aidoc",
+      "confidence": "high"
+    },
+    {
+      "name": "AppsFlyer",
+      "domain": "appsflyer.com",
+      "grade": "A",
+      "evidence": "The AppsFlyer security team deployed Tenable Cloud Security in the staging environment.",
+      "source_url": "https://www.tenable.com/case-studies/appsflyer",
+      "confidence": "high"
+    },
+    {
+      "name": "Bank of Yokohama",
+      "domain": "boy.co.jp",
+      "grade": "A",
+      "evidence": "Bank of Yokohama already used Tenable Security Center for vulnerability management and trusted Tenable's reliability.",
+      "source_url": "https://www.tenable.com/press-releases/tenable-selected-by-bank-of-yokohama-to-secure-its-active-directory-and-eliminate",
+      "confidence": "high"
+    },
+    {
+      "name": "Bitbrains",
+      "domain": "bitbrains.com",
+      "grade": "A",
+      "evidence": "Bitbrains already was using Tenable’s Nessus™ vulnerability scanner in conjunction with another vulnerability management solution.",
+      "source_url": "https://www.tenable.com/case-studies/bitbrains",
+      "confidence": "high"
+    },
+    {
+      "name": "CANCOM",
+      "domain": "cancom.com",
+      "grade": "A",
+      "evidence": "CANCOM relies on Tenable's vulnerability and exposure management solutions to protect its own infrastructure",
+      "source_url": "https://www.tenable.com/case-studies/cancom",
+      "confidence": "high"
+    },
+    {
+      "name": "Catskill Hudson Bank",
+      "domain": "catskillhudson.com",
+      "grade": "A",
+      "evidence": "Tenable.sc has become the voice of truth for our network",
+      "source_url": "https://www.tenable.com/case-studies/catskill-hudson-bank",
+      "confidence": "high"
+    },
+    {
+      "name": "Chubu Electric Power Grid",
+      "domain": "powergrid.chuden.co.jp",
+      "grade": "A",
+      "evidence": "中部電力パワーグリッド株式会社が、サイバー攻撃への対策のため、Tenable OT Security を選択したことを発表しました",
+      "source_url": "https://www.tenable.com/press-releases/chubu-electric-power-deploys-tenable",
+      "confidence": "high"
+    },
+    {
+      "name": "Citizen Watch Co., Ltd.",
+      "domain": "citizen.co.jp",
+      "grade": "A",
+      "evidence": "Since its deployment in June 2023, Tenable Vulnerability Management has empowered CITIZEN to conduct monthly assessments of internal assets within its data center.",
+      "source_url": "https://www.tenable.com/press-releases/tenable-selected-by-citizen-watch-company-to-provide-visibility-into-cyber-risk",
+      "confidence": "high"
+    },
+    {
+      "name": "City of Raleigh",
+      "domain": "raleighnc.gov",
+      "grade": "A",
+      "evidence": "Using Tenable OT Security, the City of Raleigh now has a comprehensive view of their cyber risk across their OT infrastructure.",
+      "source_url": "https://www.tenable.com/case-studies/city-of-raleigh",
+      "confidence": "high"
+    },
+    {
+      "name": "City of San Diego",
+      "domain": "sandiego.gov",
+      "grade": "A",
+      "evidence": "Tenable helped us significantly reduce our threat exposure",
+      "source_url": "https://www.tenable.com/press-releases/san-diego-selects-tenable-network-security-to-protect-its-complex-network-of-smart",
+      "confidence": "high"
+    },
+    {
+      "name": "Clemson University",
+      "domain": "clemson.edu",
+      "grade": "A",
+      "evidence": "deployed new technology solutions, including Tenable's SecurityCenter, Nessus®, and Log Correlation Engine.",
+      "source_url": "https://www.tenable.com/case-studies/clemson-university",
+      "confidence": "high"
+    },
+    {
+      "name": "Compassion International",
+      "domain": "compassion.com",
+      "grade": "A",
+      "evidence": "Tenable has allowed us to leapfrog the maturity of our vulnerability management program.",
+      "source_url": "https://www.tenable.com/case-studies/compassion-international",
+      "confidence": "high"
+    },
+    {
+      "name": "Complete Genomics",
+      "domain": "completegenomics.com",
+      "grade": "A",
+      "evidence": "Since implementing Tenable Vulnerability Management, Complete Genomics has significantly strengthened its security posture",
+      "source_url": "https://www.tenable.com/case-studies/complete-genomics",
+      "confidence": "high"
+    },
+    {
+      "name": "Continental AG",
+      "domain": "continental.com",
+      "grade": "A",
+      "evidence": "unified view of our attack surface via the Tenable One Exposure Management Platform, we would hardly be able to meet the ENX requirements",
+      "source_url": "https://www.tenable.com/case-studies/continental-ag",
+      "confidence": "high"
+    },
+    {
+      "name": "Covenant Health",
+      "domain": "covenanthealth.com",
+      "grade": "A",
+      "evidence": "Covenant Health is implementing Tenable.sc in stages.",
+      "source_url": "https://www.tenable.com/case-studies/covenant-health",
+      "confidence": "high"
+    },
+    {
+      "name": "Demyst",
+      "domain": "demyst.com",
+      "grade": "A",
+      "evidence": "Today, we are using Tenable Cloud Security to deliver temporary access control to a key banking client",
+      "source_url": "https://www.tenable.com/case-studies/demyst",
+      "confidence": "high"
+    },
+    {
+      "name": "Drogaria Araujo",
+      "domain": "araujo.com.br",
+      "grade": "A",
+      "evidence": "Using Tenable One, Araujo has streamlined investment decisions for the board of directors while reducing costs by 25%",
+      "source_url": "https://www.tenable.com/case-studies/drogaria-araujo",
+      "confidence": "high"
+    },
+    {
+      "name": "Fukuoka Hibiki Shinkin Bank",
+      "domain": "fukuokahibiki.co.jp",
+      "grade": "A",
+      "evidence": "Tenable Identity Exposure was chosen as the only agentless solution that configures and continuously monitors Active Directory, reducing costs.",
+      "source_url": "https://www.tenable.com/case-studies/fukuoka-hibiki-shinkin-bank",
+      "confidence": "high"
+    },
+    {
+      "name": "Global Payments (AU/NZ)",
+      "domain": "globalpayments.com",
+      "grade": "A",
+      "evidence": "Tenable.io has unified our vulnerability management program under one tool set.",
+      "source_url": "https://www.tenable.com/case-studies/global-payments-au-nz",
+      "confidence": "high"
+    },
+    {
+      "name": "Hyogo Prefecture",
+      "domain": "web.pref.hyogo.lg.jp",
+      "grade": "A",
+      "evidence": "Since we were already using Nessus for security vulnerability checks, we knew Tenable Active Directory would be the perfect fit for us.",
+      "source_url": "https://www.tenable.com/press-releases/tenable-selected-by-hyogo-prefecture-to-harden-its-active-directory-security",
+      "confidence": "high"
+    },
+    {
+      "name": "Industrias Peñoles",
+      "domain": "penoles.com.mx",
+      "grade": "A",
+      "evidence": "Industrias Peñoles achieves continuous vulnerability detection and rapid remediation with Tenable Networks",
+      "source_url": "https://www.casestudies.com/company/tenable-networks/case-study/industrias-penoles-customer-case-study",
+      "confidence": "high"
+    },
+    {
+      "name": "IntelyCare",
+      "domain": "intelycare.com",
+      "grade": "A",
+      "evidence": "IntelyCare uses Tenable Cloud Security to automate risk remediation and least privilege",
+      "source_url": "https://www.tenable.com/case-studies/intelycare",
+      "confidence": "high"
+    },
+    {
+      "name": "Keio University (Shonan Fujisawa Campus)",
+      "domain": "keio.ac.jp",
+      "grade": "A",
+      "evidence": "Building on their existing use of Tenable Vulnerability Management, Keio SFC opted to complement it with Tenable Attack Surface Management",
+      "source_url": "https://www.tenable.com/press-releases/tenable-selected-by-keio-university-to-gain-visibility-into-its-blindspots",
+      "confidence": "high"
+    },
+    {
+      "name": "KLab",
+      "domain": "klab.com",
+      "grade": "A",
+      "evidence": "It’s for this reason that we chose Tenable as our vulnerability management provider.",
+      "source_url": "https://www.tenable.com/press-releases/tenable-selected-by-klab-to-strengthen-vulnerability-detection-and-cybersecurity",
+      "confidence": "high"
+    },
+    {
+      "name": "Lagardère",
+      "domain": "lagardere.com",
+      "grade": "A",
+      "evidence": "Tenable Identity Exposure (formerly Tenable.ad) integration was not only accomplished in a day",
+      "source_url": "https://www.tenable.com/case-studies/lagardere",
+      "confidence": "high"
+    },
+    {
+      "name": "Latch",
+      "domain": "latch.com",
+      "grade": "A",
+      "evidence": "Latch uses Tenable Cloud Security to automate least privilege for new services in AWS",
+      "source_url": "https://www.tenable.com/case-studies/latch",
+      "confidence": "high"
+    },
+    {
+      "name": "Lion",
+      "domain": "lionco.com",
+      "grade": "A",
+      "evidence": "We have substantially improved the security set up of our Active Directory with Tenable Identity Exposure",
+      "source_url": "https://www.tenable.com/case-studies/lion",
+      "confidence": "high"
+    },
+    {
+      "name": "Nanyang Polytechnic",
+      "domain": "nyp.edu.sg",
+      "grade": "A",
+      "evidence": "Nanyang Polytechnic trains the next generation of cybersecurity professionals with Tenable Nessus",
+      "source_url": "https://www.tenable.com/case-studies/nanyang-polytechnic",
+      "confidence": "high"
+    },
+    {
+      "name": "Nesher Israel Cement Enterprises",
+      "domain": "nesher.co.il",
+      "grade": "A",
+      "evidence": "Thanks to Tenable.ot, Nesher now has a comprehensive view of their cyber risk across their OT network.",
+      "source_url": "https://www.tenable.com/case-studies/nesher-israel-cement-enterprises",
+      "confidence": "high"
+    },
+    {
+      "name": "Netskope",
+      "domain": "netskope.com",
+      "grade": "A",
+      "evidence": "Netskope deployed Tenable.io® and Tenable.sc™ to continuously visualize and analyze the overall Cyber Exposure of the organization.",
+      "source_url": "https://www.tenable.com/case-studies/netskope",
+      "confidence": "high"
+    },
+    {
+      "name": "Oasis Asset Management",
+      "domain": "oasisam.com.au",
+      "grade": "A",
+      "evidence": "Oasis now scans and monitors the entire network and its devices centrally using Tenable.sc.",
+      "source_url": "https://www.tenable.com/case-studies/oasis",
+      "confidence": "high"
+    },
+    {
+      "name": "Orica",
+      "domain": "orica.com",
+      "grade": "A",
+      "evidence": "Ingesting the Tenable.ad alerts into their Security Operations Centre enables Orica to continuously monitor for suspicious activity on AD",
+      "source_url": "https://www.tenable.com/case-studies/orica",
+      "confidence": "high"
+    },
+    {
+      "name": "Public Utility District #1 of Whatcom County",
+      "domain": "pudwhatcom.org",
+      "grade": "A",
+      "evidence": "Tenable OT Security was initially deployed within WPUD’s industrial control system (ICS) network in 2016",
+      "source_url": "https://www.tenable.com/case-studies/public-utility-district-1-of-whatcom-county-wpud",
+      "confidence": "high"
+    },
+    {
+      "name": "Quantiphi",
+      "domain": "quantiphi.com",
+      "grade": "A",
+      "evidence": "Quantiphi relies on Tenable Vulnerability Management to ensure asset-based coverage and reduce cyber risk in the cloud.",
+      "source_url": "https://www.tenable.com/case-studies/quantiphi",
+      "confidence": "high"
+    },
+    {
+      "name": "Rotkäppchen-Mumm",
+      "domain": "rotkaeppchen-mumm.de",
+      "grade": "A",
+      "evidence": "The company adopted Tenable OT Security in early 2024 to ensure the secure, uninterrupted and efficient operation of its highly complex production environment.",
+      "source_url": "https://www.tenable.com/case-studies/rotkappchen-mumm",
+      "confidence": "high"
+    },
+    {
+      "name": "SAI Global",
+      "domain": "saiglobal.com",
+      "grade": "A",
+      "evidence": "With the expertise of Tenable partner Content Security, SAI Global implemented Tenable.sc Continuous View",
+      "source_url": "https://www.tenable.com/case-studies/sai-global",
+      "confidence": "high"
+    },
+    {
+      "name": "Sanofi",
+      "domain": "sanofi.com",
+      "grade": "A",
+      "evidence": "By deploying Tenable on our global perimeter, we gave stakeholders much-needed visibility of corporate cybersecurity risks.",
+      "source_url": "https://www.tenable.com/case-studies/sanofi",
+      "confidence": "high"
+    },
+    {
+      "name": "Snoop",
+      "domain": "snoop.app",
+      "grade": "A",
+      "evidence": "After evaluating several vendors, Snoop selected Tenable Cloud Security, noting its robust least privilege and Just-in-Time access",
+      "source_url": "https://www.tenable.com/case-studies/snoop",
+      "confidence": "high"
+    },
+    {
+      "name": "Somfy",
+      "domain": "somfy.com",
+      "grade": "A",
+      "evidence": "Tenable.ad's dashboards, alerts, and search capabilities fit that purpose entirely.",
+      "source_url": "https://www.tenable.com/case-studies/somfy",
+      "confidence": "high"
+    },
+    {
+      "name": "SOMPO Holdings",
+      "domain": "sompo-hd.com",
+      "grade": "A",
+      "evidence": "SOMPOホールディングスは、Tenable.io® Vulnerability Management の導入によりビジネスリスクに基づいた脆弱性の検出と削減を実行し",
+      "source_url": "https://www.tenable.com/press-releases/sompo-horuteinkusukatenable-wodaorushi",
+      "confidence": "high"
+    },
+    {
+      "name": "SRF Limited",
+      "domain": "srf.com",
+      "grade": "A",
+      "evidence": "We are now extending that confidence into OT with Tenable One, gaining a unified view of our exposure",
+      "source_url": "https://www.tenable.com/case-studies/srf-limited",
+      "confidence": "high"
+    },
+    {
+      "name": "St. Elizabeth Healthcare",
+      "domain": "stelizabeth.com",
+      "grade": "A",
+      "evidence": "St. Elizabeth acquired a 20,000 IP address license for Tenable.sc in 2014.",
+      "source_url": "https://www.tenable.com/case-studies/st-elizabeth-healthcare",
+      "confidence": "high"
+    },
+    {
+      "name": "Stone Pagamentos (StoneCo)",
+      "domain": "stone.com.br",
+      "grade": "A",
+      "evidence": "Stone relies on Tenable.io to dynamically discover digital assets everywhere and quickly detect vulnerabilities and misconfigurations.",
+      "source_url": "https://www.tenable.com/case-studies/stone",
+      "confidence": "high"
+    },
+    {
+      "name": "Study Group",
+      "domain": "studygroup.com",
+      "grade": "A",
+      "evidence": "Tenable’s SecurityCenter CV appeared to be a great choice.",
+      "source_url": "https://www.tenable.com/case-studies/study-group-australia",
+      "confidence": "high"
+    },
+    {
+      "name": "Stupp Corporation",
+      "domain": "stuppcorp.com",
+      "grade": "A",
+      "evidence": "Following a successful proof of concept, Tenable.ot was deployed within Stupp’s ICS network.",
+      "source_url": "https://www.tenable.com/case-studies/stupp-corporation",
+      "confidence": "high"
+    },
+    {
+      "name": "TechMatrix",
+      "domain": "techmatrix.co.jp",
+      "grade": "A",
+      "evidence": "Tenable One was the best solution to drive our exposure management initiative.",
+      "source_url": "https://www.tenable.com/case-studies/techmatrix",
+      "confidence": "high"
+    },
+    {
+      "name": "The Hokkoku Bank, Ltd.",
+      "domain": "hokkokubank.co.jp",
+      "grade": "A",
+      "evidence": "The most significant change—and the greatest benefit—since implementing Tenable Identity Exposure has been the visualization of our Active Directory security posture.",
+      "source_url": "https://www.tenable.com/case-studies/hokkoku-bank",
+      "confidence": "high"
+    },
+    {
+      "name": "Tohoku University",
+      "domain": "tohoku.ac.jp",
+      "grade": "A",
+      "evidence": "Thanks to Tenable Attack Surface Management, we were able to discover these unmanaged servers for the first time",
+      "source_url": "https://www.tenable.com/press-releases/tenable-selected-by-tohoku-university-to-secure-external-facing-assets-amidst",
+      "confidence": "high"
+    },
+    {
+      "name": "University of California, Berkeley",
+      "domain": "berkeley.edu",
+      "grade": "A",
+      "evidence": "We use a number of scanners using Tenable Nessus, along with Tenable's Professional Feed of network vulnerability \"plugins\"",
+      "source_url": "https://security.berkeley.edu/services/campus-wide-network-vulnerability-scanning",
+      "confidence": "high"
+    },
+    {
+      "name": "University of California, Irvine",
+      "domain": "uci.edu",
+      "grade": "A",
+      "evidence": "The Office of Information Technology (OIT) security team runs regular campus-wide vulnerability scans of the network using Tenable SecurityCenter.",
+      "source_url": "https://www.security.uci.edu/services/vmp/",
+      "confidence": "high"
+    },
+    {
+      "name": "Vallourec",
+      "domain": "vallourec.com",
+      "grade": "A",
+      "evidence": "Vallourec chose Tenable Identity Exposure to obtain the visibility and control it needed to effectively secure Active Directory.",
+      "source_url": "https://www.tenable.com/case-studies/vallourec",
+      "confidence": "high"
+    },
+    {
+      "name": "VINCI Energies",
+      "domain": "vinci-energies.com",
+      "grade": "A",
+      "evidence": "The Tenable solution freed us from Active Directory security concerns so that we could focus on new business incorporation.",
+      "source_url": "https://www.tenable.com/case-studies/vinci-energies",
+      "confidence": "high"
+    },
+    {
+      "name": "Volpara Health Technologies",
+      "domain": "volparahealth.com",
+      "grade": "A",
+      "evidence": "Volpara Health Technologies selected Tenable as its vulnerability management partner for several reasons",
+      "source_url": "https://www.tenable.com/case-studies/volpara-health-technologies",
+      "confidence": "high"
+    },
+    {
+      "name": "West Burton Energy",
+      "domain": "westburtonenergy.com",
+      "grade": "A",
+      "evidence": "West Burton Energy reduces threat-detection alerts by 98% and improves efficiency by 87% using Tenable OT Security",
+      "source_url": "https://www.tenable.com/case-studies/west-burton-energy",
+      "confidence": "high"
+    },
+    {
+      "name": "Youngstown State University",
+      "domain": "ysu.edu",
+      "grade": "A",
+      "evidence": "YSU turned to Tenable for its vulnerability management and continuous monitoring solutions and best practices.",
+      "source_url": "https://www.tenable.com/case-studies/youngstown-state-university",
+      "confidence": "high"
+    },
+    {
+      "name": "University of Connecticut",
+      "domain": "uconn.edu",
+      "grade": "A",
+      "evidence": "The Information Security Office maintains an installation of the latest version of Nessus and applicable plug-ins.",
+      "source_url": "https://security.uconn.edu/nessus-vulnerability-scanner/",
+      "confidence": "medium"
+    },
+    {
+      "name": "a.i. solutions",
+      "domain": "ai-solutions.com",
+      "grade": "B",
+      "evidence": "We use Tenable for vulnerability management for our network and virtual machines.",
+      "source_url": "https://www.trustradius.com/products/tenable-nessus/reviews",
+      "confidence": "high"
+    },
+    {
+      "name": "Auckland University of Technology",
+      "domain": "aut.ac.nz",
+      "grade": "B",
+      "evidence": "AUT now enjoys superior workflow automation and vulnerability management with Tenable.sc.",
+      "source_url": "https://www.tenable.com/case-studies/auckland-university-of-technology",
+      "confidence": "high"
+    },
+    {
+      "name": "Banglalink",
+      "domain": "banglalink.net",
+      "grade": "B",
+      "evidence": "We use Tenable Security Center for vulnerability assessment and continuous network monitoring",
+      "source_url": "https://www.peerspot.com/products/tenable-sc-reviews",
+      "confidence": "high"
+    },
+    {
+      "name": "Bernalillo County",
+      "domain": "bernco.gov",
+      "grade": "B",
+      "evidence": "Tenable One gives us a unified, comprehensive view of our entire attack surface, spanning on-premise, cloud, OT, and IoT.",
+      "source_url": "https://www.tenable.com/case-studies/bernalillo-county",
+      "confidence": "high"
+    },
+    {
+      "name": "Bilfinger",
+      "domain": "bilfinger.com",
+      "grade": "B",
+      "evidence": "Bilfinger achieves unified cloud visibility and reduced identity risk with Tenable Networks' Tenable Cloud Security",
+      "source_url": "https://www.casestudies.com/company/tenable-networks/case-study/bilfinger-gains-visibility-into-resource-risk-and-what-to-do-about-it-using-tenable-cloud-security",
+      "confidence": "high"
+    },
+    {
+      "name": "Blue Motor Finance",
+      "domain": "bluemotorfinance.co.uk",
+      "grade": "B",
+      "evidence": "Tenable.io addresses our requirements for vulnerability and web application scanning and is used across our web server and application platforms.",
+      "source_url": "https://www.trustradius.com/products/tenable-vulnerability-management/reviews",
+      "confidence": "high"
+    },
+    {
+      "name": "Catholic Education Western Australia",
+      "domain": "cewa.edu.au",
+      "grade": "B",
+      "evidence": "Tenable makes these conversations easier and helps us understand risk better as an organisation",
+      "source_url": "https://www.tenable.com/press-releases/tenable-selected-by-catholic-education-western-australia-to-secure-student-data",
+      "confidence": "high"
+    },
+    {
+      "name": "Cornell University",
+      "domain": "cornell.edu",
+      "grade": "B",
+      "evidence": "Scan-on-Demand for Devices (Tenable Vulnerability Management)",
+      "source_url": "https://it.cornell.edu/device-scan-demand",
+      "confidence": "high"
+    },
+    {
+      "name": "Defense Information Systems Agency (DISA)",
+      "domain": "disa.mil",
+      "grade": "B",
+      "evidence": "Defense Information Systems Agency (DISA) achieves scalable, real-time continuous vulnerability management with Tenable Networks",
+      "source_url": "https://www.casestudies.com/company/tenable-networks/case-study/defense-information-systems-agency-disa-customer-case-study",
+      "confidence": "high"
+    },
+    {
+      "name": "Defense POW/MIA Accounting Agency",
+      "domain": "dpaa.mil",
+      "grade": "B",
+      "evidence": "Defense POW/MIA Accounting Agency achieves continuous, real-time threat detection and asset visibility with Tenable Networks",
+      "source_url": "https://www.casestudies.com/company/tenable-networks/case-study/defense-powmia-accounting-agency-customer-case-study",
+      "confidence": "high"
+    },
+    {
+      "name": "erex Co., Ltd.",
+      "domain": "erex.co.jp",
+      "grade": "B",
+      "evidence": "With Tenable One, we now have the ability to unify security visibility, insight and action across the attack surface",
+      "source_url": "https://www.tenable.com/press-releases/tenable-empowers-erex-with-continuous-cybersecurity-protection-eliminating-costly",
+      "confidence": "high"
+    },
+    {
+      "name": "Exostar",
+      "domain": "exostar.com",
+      "grade": "B",
+      "evidence": "With Tenable I have a clear, accurate picture of current, past and even anticipated events",
+      "source_url": "https://www.tenable.com/press-releases/exostar-deploys-continuous-network-monitoring-from-tenable-network-security-to",
+      "confidence": "high"
+    },
+    {
+      "name": "Groupe Pasteur Mutualité (GPM)",
+      "domain": "gpm.fr",
+      "grade": "B",
+      "evidence": "Tenable.ad is a pragmatic solution that allows our teams to obtain the necessary visibility and prioritize actions for Active Directory remediation.",
+      "source_url": "https://www.tenable.com/case-studies/gpm",
+      "confidence": "high"
+    },
+    {
+      "name": "Healthdirect Australia",
+      "domain": "healthdirect.gov.au",
+      "grade": "B",
+      "evidence": "HealthDirect Australia achieves continuous vulnerability monitoring and CIS compliance with Tenable Networks",
+      "source_url": "https://www.casestudies.com/company/tenable-networks/case-study/healthdirect-australia-customer-case-study",
+      "confidence": "high"
+    },
+    {
+      "name": "Lattice Engines",
+      "domain": "lattice-engines.com",
+      "grade": "B",
+      "evidence": "Lattice Engines achieves zero network vulnerabilities with Tenable Networks",
+      "source_url": "https://www.casestudies.com/company/tenable-networks/case-study/lattice-engines-customer-case-study",
+      "confidence": "high"
+    },
+    {
+      "name": "Loenbro",
+      "domain": "loenbro.com",
+      "grade": "B",
+      "evidence": "Administer and maintain Tenable vulnerability management platforms.",
+      "source_url": "https://job-boards.greenhouse.io/loenbro/jobs/4366970009",
+      "confidence": "high"
+    },
+    {
+      "name": "Maryland Department of Information Technology",
+      "domain": "doit.maryland.gov",
+      "grade": "B",
+      "evidence": "Provide full administration of the Tenable vulnerability management platform",
+      "source_url": "https://doit.maryland.gov/services/cybersecurity/Documents/DoIT_Service_Agreement_Vulnerability_Management_1_2025.pdf",
+      "confidence": "high"
+    },
+    {
+      "name": "ME Bank",
+      "domain": "mebank.com.au",
+      "grade": "B",
+      "evidence": "ME Bank achieves CIS compliance with Tenable Networks' SecurityCenter",
+      "source_url": "https://www.casestudies.com/company/tenable-networks/case-study/me-bank-uses-tenable-securitycenter-to-maintain-cis-compliance",
+      "confidence": "high"
+    },
+    {
+      "name": "Methodist Healthcare Ministries of South Texas",
+      "domain": "mhm.org",
+      "grade": "B",
+      "evidence": "Methodist Healthcare Ministries of South Texas, Inc achieves HIPAA compliance and streamlined vulnerability management with Tenable Networks",
+      "source_url": "https://www.casestudies.com/company/tenable-networks/case-study/methodist-healthcare-ministries-of-south-texas-inc-customer-case-study",
+      "confidence": "high"
+    },
+    {
+      "name": "MUFG Bank",
+      "domain": "bk.mufg.jp",
+      "grade": "B",
+      "evidence": "MUFG Bank achieves automated, centralized vulnerability management and faster compliance checks with Tenable Networks (Tenable.io)",
+      "source_url": "https://www.casestudies.com/company/tenable-networks/case-study/introduction-of-tenableio-for-vulnerability-management-an-important-measure-to-protect-the-information-assets-of-our-customers",
+      "confidence": "high"
+    },
+    {
+      "name": "NC State University",
+      "domain": "ncsu.edu",
+      "grade": "B",
+      "evidence": "When Nessus Agents are installed and linked to our Tenable.io instance, they are ready to be scanned.",
+      "source_url": "https://cybersecurity.ncsu.edu/services/tenable-io-at-nc-state",
+      "confidence": "high"
+    },
+    {
+      "name": "Nissan Digital",
+      "domain": "nissan-global.com",
+      "grade": "B",
+      "evidence": "I’ve found Tenable Vulnerability Management reliable and easy to use, with strong automated scanning and remediation features",
+      "source_url": "https://www.peerspot.com/products/tenable-vulnerability-management-reviews",
+      "confidence": "high"
+    },
+    {
+      "name": "Northwestern University",
+      "domain": "northwestern.edu",
+      "grade": "B",
+      "evidence": "All University-Owned Endpoint Devices are required to participate in Northwestern’s institutionally-managed exposure and vulnerability management program (Tenable).",
+      "source_url": "https://www.it.northwestern.edu/about/policies/endpoint-security.html",
+      "confidence": "high"
+    },
+    {
+      "name": "OARnet (Ohio Academic Resources Network)",
+      "domain": "oar.net",
+      "grade": "B",
+      "evidence": "participating organizations are leveraging Tenable One Vulnerability Management to gain a unified, continuous view of their cyber exposure.",
+      "source_url": "https://www.tenable.com/case-studies/oarnet",
+      "confidence": "high"
+    },
+    {
+      "name": "Ohio University",
+      "domain": "ohio.edu",
+      "grade": "B",
+      "evidence": "Tenable IO is a vulnerability management tool used by Ohio University.",
+      "source_url": "https://www.ohio.edu/oit/security/secure-university-data/tenable",
+      "confidence": "high"
+    },
+    {
+      "name": "OÖ.LKUF Austria",
+      "domain": "lkuf.at",
+      "grade": "B",
+      "evidence": "OÖ.LKUF Austria achieves automated, scalable vulnerability management and cost savings with Tenable Networks",
+      "source_url": "https://www.casestudies.com/company/tenable-networks/case-study/oolkuf-austria-customer-case-study",
+      "confidence": "high"
+    },
+    {
+      "name": "Penn State University",
+      "domain": "psu.edu",
+      "grade": "B",
+      "evidence": "IS conducts regular vulnerability scans of the Penn State network using Nessus vulnerability scanners and agents.",
+      "source_url": "https://security.psu.edu/services/security-tools/scanning/",
+      "confidence": "high"
+    },
+    {
+      "name": "Randall-Reilly",
+      "domain": "randallreilly.com",
+      "grade": "B",
+      "evidence": "We're using Tenable.io across all IT controlled infrastructure assets to find and patch vulnerabilities.",
+      "source_url": "https://www.trustradius.com/products/tenable-vulnerability-management/reviews",
+      "confidence": "high"
+    },
+    {
+      "name": "Robi Axiata Limited",
+      "domain": "robi.com.bd",
+      "grade": "B",
+      "evidence": "We chose Tenable for its user-friendliness and accuracy.",
+      "source_url": "https://www.peerspot.com/products/tenable-sc-reviews",
+      "confidence": "high"
+    },
+    {
+      "name": "Serta Simmons Bedding",
+      "domain": "sertasimmons.com",
+      "grade": "B",
+      "evidence": "Tenable is our current vulnerability management solution.",
+      "source_url": "https://www.trustradius.com/products/tenable-security-center/reviews",
+      "confidence": "high"
+    },
+    {
+      "name": "SLIIT",
+      "domain": "sliit.lk",
+      "grade": "B",
+      "evidence": "I use Tenable Nessus for vulnerability management, helping to identify and prioritize system vulnerabilities effectively.",
+      "source_url": "https://www.peerspot.com/products/tenable-nessus-reviews",
+      "confidence": "high"
+    },
+    {
+      "name": "South Carolina Department of Education",
+      "domain": "ed.sc.gov",
+      "grade": "B",
+      "evidence": "The South Carolina Department of Education (SCDE) is offering access to Nessus Professional on-premises network vulnerability scanning tools",
+      "source_url": "https://ed.sc.gov/newsroom/school-district-memoranda-archive/network-vulnerability-scanning-initiative-for-school-districts/network-vulnerability-scanning-initiative-for-school-districts-memo/",
+      "confidence": "high"
+    },
+    {
+      "name": "Starr Companies",
+      "domain": "starrcompanies.com",
+      "grade": "B",
+      "evidence": "Own day-to-day operations of the Tenable platform (e.g., scan configuration, scheduling, coverage monitoring, credentials management, and results troubleshooting).",
+      "source_url": "https://starrcompanies.wd1.myworkdayjobs.com/en-US/careers/job/Vulnerability-Management---Response-Engineer_JR4234",
+      "confidence": "high"
+    },
+    {
+      "name": "Starwood Vacation Network",
+      "domain": "starwoodvacationnetwork.com",
+      "grade": "B",
+      "evidence": "Starwood Vacation Network achieves streamlined PCI compliance and real-time network visibility with Tenable Networks",
+      "source_url": "https://www.casestudies.com/company/tenable-networks/case-study/starwood-vacation-network-customer-case-study",
+      "confidence": "high"
+    },
+    {
+      "name": "State Government of Victoria",
+      "domain": "vic.gov.au",
+      "grade": "B",
+      "evidence": "State Government, Victoria achieves scalable, automated vulnerability management and streamlined reporting with Tenable Networks SecurityCenter",
+      "source_url": "https://www.casestudies.com/company/tenable-networks/case-study/victoria-government-agency-deploys-securitycenter-for-vulnerability-management",
+      "confidence": "high"
+    },
+    {
+      "name": "State of Texas",
+      "domain": "texas.gov",
+      "grade": "B",
+      "evidence": "We switched to Tenable from Qualys because of its seamless integration and efficient Nessus Agent",
+      "source_url": "https://www.peerspot.com/products/tenable-vulnerability-management-reviews",
+      "confidence": "high"
+    },
+    {
+      "name": "Texas A&M University",
+      "domain": "tamu.edu",
+      "grade": "B",
+      "evidence": "Agent scans do not have to have that limitation (depending on whether they are reporting to Tenable.io or a Nessus Manager located at TAMU).",
+      "source_url": "https://docs.security.tamu.edu/docs/endpoint-security/endpointSecurityTools/Vulnerability-Assessment/TenableNessusAgentInstallation/",
+      "confidence": "high"
+    },
+    {
+      "name": "The Ohio State University",
+      "domain": "osu.edu",
+      "grade": "B",
+      "evidence": "We utilize Tenable’s Security Center, a recognized leader in the field, for these services.",
+      "source_url": "https://it.osu.edu/security/services/vulnerability-management",
+      "confidence": "high"
+    },
+    {
+      "name": "The University of Queensland",
+      "domain": "uq.edu.au",
+      "grade": "B",
+      "evidence": "We chose Tenable.io because it is the clear market leader in risk-based vulnerability management",
+      "source_url": "https://www.tenable.com/press-releases/the-university-of-queensland-selects-tenable-to-secure-world-leading-ip",
+      "confidence": "high"
+    },
+    {
+      "name": "TUBITAK",
+      "domain": "tubitak.gov.tr",
+      "grade": "B",
+      "evidence": "I use Tenable.sc as the main vulnerability scanner on the system.",
+      "source_url": "https://www.trustradius.com/products/tenable-security-center/reviews",
+      "confidence": "high"
+    },
+    {
+      "name": "U.S. Department of Labor",
+      "domain": "dol.gov",
+      "grade": "B",
+      "evidence": "Perform daily health checks of Tenable.sc, Tenable.io, and Nessus Agents.",
+      "source_url": "https://www.wayup.com/i-j-Vulnerability-Management-Analyst-Tenable-VMD-Corp-288437960060778/",
+      "confidence": "high"
+    },
+    {
+      "name": "University of Delaware",
+      "domain": "udel.edu",
+      "grade": "B",
+      "evidence": "Faculty and staff are required to run the Tenable Agent on any computers owned by the University.",
+      "source_url": "https://www1.udel.edu/security/bestpractices/tenable.html",
+      "confidence": "high"
+    },
+    {
+      "name": "University of Hawaii",
+      "domain": "hawaii.edu",
+      "grade": "B",
+      "evidence": "Tenable (Nessus) functions as our vulnerability management tool, utilizing both agents and scanners to identify security vulnerabilities",
+      "source_url": "https://www.hawaii.edu/infosec/tenable/",
+      "confidence": "high"
+    },
+    {
+      "name": "University of Michigan",
+      "domain": "umich.edu",
+      "grade": "B",
+      "evidence": "In 2022, IA updated the university’s vulnerability management software, to Tenable.io.",
+      "source_url": "https://michigan.it.umich.edu/news/2023/01/25/tenable-io-vulnerability-management-software-is-now-available",
+      "confidence": "high"
+    },
+    {
+      "name": "University of Tennessee, Knoxville",
+      "domain": "utk.edu",
+      "grade": "B",
+      "evidence": "link your agent to the UTK Tenable Security Center Vulnerability Management System",
+      "source_url": "https://help.eecs.utk.edu/knowledge-base/general/nessus-agent-installation",
+      "confidence": "high"
+    },
+    {
+      "name": "University of Texas at Austin",
+      "domain": "utexas.edu",
+      "grade": "B",
+      "evidence": "Daily scanning of every host on campus with a variety of tools: including Tenable.sc Nessus, Nessus Agents and Nmap",
+      "source_url": "https://security.utexas.edu/vmp",
+      "confidence": "high"
+    },
+    {
+      "name": "University of Virginia",
+      "domain": "virginia.edu",
+      "grade": "B",
+      "evidence": "Tenable Scans occur daily, use very minimal system resources, are invisible to the user, and complete in a matter of minutes.",
+      "source_url": "https://security.virginia.edu/node/18596/printable/print",
+      "confidence": "high"
+    },
+    {
+      "name": "Virginia Tech",
+      "domain": "vt.edu",
+      "grade": "B",
+      "evidence": "conduct a vulnerability scan against those assets (using a common Nessus scan template)",
+      "source_url": "https://security.vt.edu/services/vulnerability_scanning/",
+      "confidence": "high"
+    },
+    {
+      "name": "Wärtsilä",
+      "domain": "wartsila.com",
+      "grade": "B",
+      "evidence": "Wärtsilä achieves OT visibility and streamlined compliance with Tenable OT Security",
+      "source_url": "https://www.casestudies.com/company/tenable-networks/case-study/wartsila-saves-7-hours-per-installation-with-tenable-networks",
+      "confidence": "high"
+    },
+    {
+      "name": "Aleph",
+      "domain": "alephholding.com",
+      "grade": "B",
+      "evidence": "Experience conducting vulnerability scans using tools such as Tenable Nessus, Qualys, Rapid7, or similar.",
+      "source_url": "https://jobs.lever.co/aleph/3e87ccca-192b-4559-8911-214b56ad4039",
+      "confidence": "medium"
+    },
+    {
+      "name": "Altera",
+      "domain": "altera.com",
+      "grade": "B",
+      "evidence": "I used Tenable.io for external vulnerability management and perimeter misconfiguration identification.",
+      "source_url": "https://www.peerspot.com/products/tenable-vulnerability-management-reviews",
+      "confidence": "medium"
+    },
+    {
+      "name": "CBTS",
+      "domain": "cbts.com",
+      "grade": "B",
+      "evidence": "I've used Tenable Vulnerability Management for eight years; it's highly stable, scalable, and provides detailed, accurate reports",
+      "source_url": "https://www.peerspot.com/products/tenable-vulnerability-management-reviews",
+      "confidence": "medium"
+    },
+    {
+      "name": "Machinify",
+      "domain": "machinify.com",
+      "grade": "B",
+      "evidence": "Hands-on experience with enterprise vulnerability scanners (Tenable, Qualys, Rapid7, or similar)",
+      "source_url": "https://job-boards.greenhouse.io/machinifyinc/jobs/4231303009",
+      "confidence": "medium"
+    },
+    {
+      "name": "Second Front Systems",
+      "domain": "secondfront.com",
+      "grade": "B",
+      "evidence": "Utilize automated scanning suites (e.g., Anchore, Trivy, Tenable) to identify vulnerabilities",
+      "source_url": "https://jobs.ashbyhq.com/second-front-systems/52da9b7a-d88a-4122-91d2-4bde9b822cc0",
+      "confidence": "medium"
+    },
+    {
+      "name": "State of Maine Office of Information Technology",
+      "domain": "maine.gov",
+      "grade": "B",
+      "evidence": "Examples include Tenable Nessus and HCL/IBM AppScan, among others.",
+      "source_url": "https://www.maine.gov/oit/sites/maine.gov.oit/files/inline-files/VulnerablityScanningProcedure.pdf",
+      "confidence": "medium"
+    },
+    {
+      "name": "Tarro",
+      "domain": "tarro.com",
+      "grade": "B",
+      "evidence": "Security tooling (i.e. Tenable, Wazuh, Crowdstrike, etc.)",
+      "source_url": "https://jobs.ashbyhq.com/tarro/2365114c-b3fd-41e8-a7ae-03c0ebb6b195",
+      "confidence": "medium"
+    },
+    {
+      "name": "UC Davis",
+      "domain": "ucdavis.edu",
+      "grade": "B",
+      "evidence": "Scanning will be managed and conducted through Tenable.sc (formerly SecurityCenter), a vulnerability management console developed by Tenable.",
+      "source_url": "https://servicehub.ucdavis.edu/servicehub?id=ucd_kb_article&sysparm_article=KB0002894&spa=1&sys_id=81e13c7a1b5af5d00e0b2068b04bcb31",
+      "confidence": "medium"
+    },
+    {
+      "name": "UC Santa Barbara",
+      "domain": "ucsb.edu",
+      "grade": "B",
+      "evidence": "Nessus Agent | UC Santa Barbara Information Technology",
+      "source_url": "https://www.it.ucsb.edu/vulnerability-management/nessus-agent",
+      "confidence": "medium"
+    },
+    {
+      "name": "University of Nebraska",
+      "domain": "nebraska.edu",
+      "grade": "B",
+      "evidence": "Tenable Nessus Agent Installation Guide | ITS Services",
+      "source_url": "https://services.nebraska.edu/service/vulnerability-compliance-management/tenable-nessus-agent-installation-guide",
+      "confidence": "medium"
+    },
+    {
+      "name": "University of Nebraska Omaha",
+      "domain": "unomaha.edu",
+      "grade": "B",
+      "evidence": "UNO | Tenable Nessus Agent Installation Guide | ITS Services",
+      "source_url": "https://services.unomaha.edu/service/vulnerability-compliance-management/tenable-nessus-agent-installation-guide",
+      "confidence": "medium"
+    },
+    {
+      "name": "Accenture PLC",
+      "domain": "accenture.com",
+      "grade": "C",
+      "evidence": "Enlyft 'Who uses Tenable.sc?': Accenture PLC | accenture.com | Ireland | >10B | >10000",
+      "source_url": "https://enlyft.com/tech/products/tenable-sc",
+      "confidence": "low"
+    },
+    {
+      "name": "Amazon",
+      "domain": "amazon.com",
+      "grade": "C",
+      "evidence": "Landbase 'Tenable Nessus's sample user list': Amazon | United States | ... | Tenable Nessus; ZoomInfo 'Top Companies Using Tenable' #1 Amazon",
+      "source_url": "https://data.landbase.com/technology/tenable-nessus/",
+      "confidence": "low"
+    },
+    {
+      "name": "Apple",
+      "domain": "apple.com",
+      "grade": "C",
+      "evidence": "Landbase Tenable Nessus sample list: Apple | United States | Computer Equipment & Peripherals | Tenable Nessus; ZoomInfo Tenable #3",
+      "source_url": "https://data.landbase.com/technology/tenable-nessus/",
+      "confidence": "low"
+    },
+    {
+      "name": "ARSIEM",
+      "domain": "arsiem.com",
+      "grade": "C",
+      "evidence": "TheirStack Nessus US list: ARSIEM | United States | IT Services and IT Consulting | 50",
+      "source_url": "https://theirstack.com/en/technology/nessus-vulnerability-scanner/us",
+      "confidence": "low"
+    },
+    {
+      "name": "Avanade",
+      "domain": "avanade.com",
+      "grade": "C",
+      "evidence": "6sense Nessus customers: Avanade | 10,000+ | Seattle | Washington",
+      "source_url": "https://6sense.com/tech/network-security/nessus-vulnerability-scanner-market-share",
+      "confidence": "low"
+    },
+    {
+      "name": "BigBear.ai",
+      "domain": "bigbear.ai",
+      "grade": "C",
+      "evidence": "TheirStack Nessus US list: BigBear.ai | United States | Software Development | 546",
+      "source_url": "https://theirstack.com/en/technology/nessus-vulnerability-scanner/us",
+      "confidence": "low"
+    },
+    {
+      "name": "Booz Allen Hamilton",
+      "domain": "boozallen.com",
+      "grade": "C",
+      "evidence": "TheirStack Tenable.sc list: Booz Allen Hamilton | United States | IT Services and IT Consulting | 40k | $8.1B | Tenable.sc (also on Nessus US list)",
+      "source_url": "https://theirstack.com/en/technology/tenable-sc",
+      "confidence": "low"
+    },
+    {
+      "name": "CACI International Inc",
+      "domain": "caci.com",
+      "grade": "C",
+      "evidence": "6sense Nessus customers: CACI International Inc | 10,000+ | Reston | Virginia",
+      "source_url": "https://6sense.com/tech/network-security/nessus-vulnerability-scanner-market-share",
+      "confidence": "low"
+    },
+    {
+      "name": "Cambridge University Press",
+      "domain": "cambridge.org",
+      "grade": "C",
+      "evidence": "Enlyft 'Who uses Tenable.ad?': Cambridge University Press | cambridge.org | United Kingdom | 1B-5B | 5000-10000",
+      "source_url": "https://enlyft.com/tech/products/tenable-ad",
+      "confidence": "low"
+    },
+    {
+      "name": "Capgemini SE",
+      "domain": "capgemini.com",
+      "grade": "C",
+      "evidence": "Enlyft 'Who uses Tenable.ad?': Capgemini SE | capgemini.com | France | >10B | >10000",
+      "source_url": "https://enlyft.com/tech/products/tenable-ad",
+      "confidence": "low"
+    },
+    {
+      "name": "Cargill",
+      "domain": "cargill.com",
+      "grade": "C",
+      "evidence": "Landbase Tenable Nessus sample list: Cargill | United States | Crops | Tenable Nessus",
+      "source_url": "https://data.landbase.com/technology/tenable-nessus/",
+      "confidence": "low"
+    },
+    {
+      "name": "Cognizant Technology Solutions Corp",
+      "domain": "cognizant.com",
+      "grade": "C",
+      "evidence": "Enlyft 'Who uses Tenable.sc?': Cognizant Technology Solutions Corp | cognizant.com | United States | >10B | >10000",
+      "source_url": "https://enlyft.com/tech/products/tenable-sc",
+      "confidence": "low"
+    },
+    {
+      "name": "COLSA",
+      "domain": "colsa.com",
+      "grade": "C",
+      "evidence": "TheirStack 'Companies that use Nessus Vulnerability Scanner in United States': COLSA | Defense and Space Manufacturing | 1.5k",
+      "source_url": "https://theirstack.com/en/technology/nessus-vulnerability-scanner/us",
+      "confidence": "low"
+    },
+    {
+      "name": "Costco Wholesale",
+      "domain": "costco.com",
+      "grade": "C",
+      "evidence": "ZoomInfo 'Top Companies Using Tenable': 9. Costco Wholesale",
+      "source_url": "https://www.zoominfo.com/tech/35422/tenable-tech-by-revenue",
+      "confidence": "low"
+    },
+    {
+      "name": "CVS Health",
+      "domain": "cvshealth.com",
+      "grade": "C",
+      "evidence": "Landbase Tenable Nessus sample list: CVS Health | United States | Drug Stores & Pharmacies | Tenable Nessus; ZoomInfo Tenable #5",
+      "source_url": "https://data.landbase.com/technology/tenable-nessus/",
+      "confidence": "low"
+    },
+    {
+      "name": "Dell Technologies",
+      "domain": "dell.com",
+      "grade": "C",
+      "evidence": "TheirStack Tenable.io Germany: Dell Technologies | Germany | IT Services and IT Consulting | 10k | Tenable.io (also 6sense Nessus customers: Dell | 10,000+ | Round Rock)",
+      "source_url": "https://theirstack.com/en/technology/tenableio/de",
+      "confidence": "low"
+    },
+    {
+      "name": "Easy Home Finance Limited",
+      "domain": "easyhomefinance.in",
+      "grade": "C",
+      "evidence": "TheirStack Tenable India: Easy Home Finance Limited | India | Banking | 982 | Tenable",
+      "source_url": "https://theirstack.com/en/technology/tenable/in",
+      "confidence": "low"
+    },
+    {
+      "name": "eTRANSERVICES",
+      "domain": "etranservices.com",
+      "grade": "C",
+      "evidence": "TheirStack 'List of companies using Tenable.sc': eTRANSERVICES | United States | IT Services and IT Consulting | 37 | Tenable.sc",
+      "source_url": "https://theirstack.com/en/technology/tenable-sc",
+      "confidence": "low"
+    },
+    {
+      "name": "General Dynamics Information Technology",
+      "domain": "gdit.com",
+      "grade": "C",
+      "evidence": "TheirStack Tenable.sc list: General Dynamics Information Technology | United States | IT Services and IT Consulting | 103k | $7.9B | Tenable.sc",
+      "source_url": "https://theirstack.com/en/technology/tenable-sc",
+      "confidence": "low"
+    },
+    {
+      "name": "GoDaddy Operating Company, LLC.",
+      "domain": "godaddy.com",
+      "grade": "C",
+      "evidence": "Enlyft 'Who uses Tenable Nessus?': GoDaddy Operating Company, LLC. | godaddy.com | United States | 1B-5B | 5000-10000",
+      "source_url": "https://enlyft.com/tech/products/tenable-nessus",
+      "confidence": "low"
+    },
+    {
+      "name": "Google",
+      "domain": "google.com",
+      "grade": "C",
+      "evidence": "ZoomInfo 'Top Companies Using Tenable': 10. Google",
+      "source_url": "https://www.zoominfo.com/tech/35422/tenable-tech-by-revenue",
+      "confidence": "low"
+    },
+    {
+      "name": "GuROO",
+      "domain": "gurooit.com",
+      "grade": "C",
+      "evidence": "TheirStack Nessus US list: GuROO | United States | IT Services and IT Consulting | 36",
+      "source_url": "https://theirstack.com/en/technology/nessus-vulnerability-scanner/us",
+      "confidence": "low"
+    },
+    {
+      "name": "HCLTech",
+      "domain": "hcltech.com",
+      "grade": "C",
+      "evidence": "TheirStack Tenable India: HCLTech | India | IT Services and IT Consulting | 260k | Tenable",
+      "source_url": "https://theirstack.com/en/technology/tenable/in",
+      "confidence": "low"
+    },
+    {
+      "name": "hiberus",
+      "domain": "hiberus.com",
+      "grade": "C",
+      "evidence": "Enlyft 'Who uses Tenable.ad?': hiberus | hiberus.com | Spain | 200M-1000M | 1000-5000",
+      "source_url": "https://enlyft.com/tech/products/tenable-ad",
+      "confidence": "low"
+    },
+    {
+      "name": "Hitachi Energy",
+      "domain": "hitachienergy.com",
+      "grade": "C",
+      "evidence": "6sense 'Customers of Nessus Vulnerability Scanner': Hitachi Energy | 10,000+ | Zurich | Switzerland",
+      "source_url": "https://6sense.com/tech/network-security/nessus-vulnerability-scanner-market-share",
+      "confidence": "low"
+    },
+    {
+      "name": "Huawei",
+      "domain": "huawei.com",
+      "grade": "C",
+      "evidence": "Landbase Tenable Nessus sample list: Huawei | China | Telecommunication Equipment | Tenable Nessus",
+      "source_url": "https://data.landbase.com/technology/tenable-nessus/",
+      "confidence": "low"
+    },
+    {
+      "name": "IBM",
+      "domain": "ibm.com",
+      "grade": "C",
+      "evidence": "Landbase Tenable Nessus sample list: IBM | United States | Custom Software & IT Services | Tenable Nessus",
+      "source_url": "https://data.landbase.com/technology/tenable-nessus/",
+      "confidence": "low"
+    },
+    {
+      "name": "INDUS Technology, Inc.",
+      "domain": "industechnology.com",
+      "grade": "C",
+      "evidence": "TheirStack Nessus US list: INDUS Technology, Inc. | United States | Defense and Space Manufacturing | 442 | $36M",
+      "source_url": "https://theirstack.com/en/technology/nessus-vulnerability-scanner/us",
+      "confidence": "low"
+    },
+    {
+      "name": "Infosys",
+      "domain": "infosys.com",
+      "grade": "C",
+      "evidence": "TheirStack Tenable India: Infosys | India | IT Services and IT Consulting | 374k | $17B | Tenable",
+      "source_url": "https://theirstack.com/en/technology/tenable/in",
+      "confidence": "low"
+    },
+    {
+      "name": "JACK WOLFSKIN",
+      "domain": "jack-wolfskin.com",
+      "grade": "C",
+      "evidence": "TheirStack Tenable.io Germany: JACK WOLFSKIN | Germany | Retail Apparel and Fashion | 690 | Tenable.io",
+      "source_url": "https://theirstack.com/en/technology/tenableio/de",
+      "confidence": "low"
+    },
+    {
+      "name": "KaylaTek",
+      "domain": "kaylatek.com",
+      "grade": "C",
+      "evidence": "TheirStack Nessus US list: KaylaTek | United States | Defense and Space Manufacturing | 15",
+      "source_url": "https://theirstack.com/en/technology/nessus-vulnerability-scanner/us",
+      "confidence": "low"
+    },
+    {
+      "name": "Leidos",
+      "domain": "leidos.com",
+      "grade": "C",
+      "evidence": "TheirStack Tenable.sc list: Leidos | United States | Defense and Space Manufacturing | 37k | $14B | Tenable.sc (also on Nessus US list)",
+      "source_url": "https://theirstack.com/en/technology/tenable-sc",
+      "confidence": "low"
+    },
+    {
+      "name": "Lockheed Martin",
+      "domain": "lockheedmartin.com",
+      "grade": "C",
+      "evidence": "TheirStack Tenable.sc list: Lockheed Martin | United States | Defense and Space Manufacturing | 114k | $66B | Tenable.sc",
+      "source_url": "https://theirstack.com/en/technology/tenable-sc",
+      "confidence": "low"
+    },
+    {
+      "name": "Luxoft",
+      "domain": "luxoft.com",
+      "grade": "C",
+      "evidence": "6sense Nessus customers: Luxoft | 10,000+ | New York City",
+      "source_url": "https://6sense.com/tech/network-security/nessus-vulnerability-scanner-market-share",
+      "confidence": "low"
+    },
+    {
+      "name": "McKesson",
+      "domain": "mckesson.com",
+      "grade": "C",
+      "evidence": "Landbase Tenable Nessus sample list: McKesson | United States | Drug Stores & Pharmacies | Tenable Nessus; ZoomInfo Tenable #6",
+      "source_url": "https://data.landbase.com/technology/tenable-nessus/",
+      "confidence": "low"
+    },
+    {
+      "name": "Microsoft",
+      "domain": "microsoft.com",
+      "grade": "C",
+      "evidence": "Landbase Tenable Nessus sample list: Microsoft | United States | Database & File Management Software | Tenable Nessus; ZoomInfo Tenable #8",
+      "source_url": "https://data.landbase.com/technology/tenable-nessus/",
+      "confidence": "low"
+    },
+    {
+      "name": "Mohawk Industries, Inc.",
+      "domain": "mohawkind.com",
+      "grade": "C",
+      "evidence": "Enlyft 'Who uses Tenable Nessus?': Mohawk Industries, Inc. | mohawkind.com | United States | >10B | >10000 (also listed on Tenable.sc page)",
+      "source_url": "https://enlyft.com/tech/products/tenable-nessus",
+      "confidence": "low"
+    },
+    {
+      "name": "Münchener Verein Versicherungsgruppe",
+      "domain": "muenchener-verein.de",
+      "grade": "C",
+      "evidence": "TheirStack Tenable.io Germany: Münchener Verein Versicherungsgruppe | Germany | Professional Services | 1k | Tenable.io",
+      "source_url": "https://theirstack.com/en/technology/tenableio/de",
+      "confidence": "low"
+    },
+    {
+      "name": "NOAA: National Oceanic & Atmospheric Administration",
+      "domain": "noaa.gov",
+      "grade": "C",
+      "evidence": "6sense Nessus customers: NOAA: National Oceanic & Atmospheric Administration | 10,000+ | Washington, D.C.",
+      "source_url": "https://6sense.com/tech/network-security/nessus-vulnerability-scanner-market-share",
+      "confidence": "low"
+    },
+    {
+      "name": "Northrop Grumman",
+      "domain": "northropgrumman.com",
+      "grade": "C",
+      "evidence": "TheirStack Tenable.sc list: Northrop Grumman | United States | Defense and Space Manufacturing | 88k | $35B | Tenable.sc (also on Nessus US list)",
+      "source_url": "https://theirstack.com/en/technology/tenable-sc",
+      "confidence": "low"
+    },
+    {
+      "name": "NTT",
+      "domain": "ntt.com",
+      "grade": "C",
+      "evidence": "6sense Nessus customers: NTT | 10,000+ | Tokyo | Japan",
+      "source_url": "https://6sense.com/tech/network-security/nessus-vulnerability-scanner-market-share",
+      "confidence": "low"
+    },
+    {
+      "name": "Nykaa",
+      "domain": "nykaa.com",
+      "grade": "C",
+      "evidence": "TheirStack Tenable India: Nykaa | India | Technology, Information and Internet | 6.6k | Tenable",
+      "source_url": "https://theirstack.com/en/technology/tenable/in",
+      "confidence": "low"
+    },
+    {
+      "name": "Persistent Systems",
+      "domain": "persistent.com",
+      "grade": "C",
+      "evidence": "TheirStack Tenable India: Persistent Systems | India | IT Services and IT Consulting | 30k | $978M | Tenable",
+      "source_url": "https://theirstack.com/en/technology/tenable/in",
+      "confidence": "low"
+    },
+    {
+      "name": "PrimeUp GmbH",
+      "domain": "primeup.de",
+      "grade": "C",
+      "evidence": "TheirStack Tenable.io Germany: PrimeUp GmbH | Germany | Broadcast Media Production and Distribution | 22 | Tenable.io",
+      "source_url": "https://theirstack.com/en/technology/tenableio/de",
+      "confidence": "low"
+    },
+    {
+      "name": "Pure Storage",
+      "domain": "purestorage.com",
+      "grade": "C",
+      "evidence": "Enlyft 'Who uses Tenable Nessus?': Pure Storage | purestorage.com | United States | 1B-5B | 5000-10000",
+      "source_url": "https://enlyft.com/tech/products/tenable-nessus",
+      "confidence": "low"
+    },
+    {
+      "name": "PwC",
+      "domain": "pwc.com",
+      "grade": "C",
+      "evidence": "6sense Nessus customers: PwC | 10,000+ | London | United Kingdom",
+      "source_url": "https://6sense.com/tech/network-security/nessus-vulnerability-scanner-market-share",
+      "confidence": "low"
+    },
+    {
+      "name": "Samsung",
+      "domain": "samsung.com",
+      "grade": "C",
+      "evidence": "Landbase Tenable Nessus sample list: Samsung | South Korea | Telecommunication Equipment | Tenable Nessus",
+      "source_url": "https://data.landbase.com/technology/tenable-nessus/",
+      "confidence": "low"
+    },
+    {
+      "name": "SAP SE",
+      "domain": "sap.com",
+      "grade": "C",
+      "evidence": "Enlyft 'Who uses Tenable.sc?': SAP SE | sap.com | Germany | >10B | >10000 (also TheirStack Tenable.io Germany: SAP | Software Development | 147k)",
+      "source_url": "https://enlyft.com/tech/products/tenable-sc",
+      "confidence": "low"
+    },
+    {
+      "name": "Serrala",
+      "domain": "serrala.com",
+      "grade": "C",
+      "evidence": "TheirStack Tenable.io Germany: Serrala | Germany | Software Development | 818 | $100M | Tenable.io",
+      "source_url": "https://theirstack.com/en/technology/tenableio/de",
+      "confidence": "low"
+    },
+    {
+      "name": "Sia (Sia Partners)",
+      "domain": "sia-partners.com",
+      "grade": "C",
+      "evidence": "TheirStack Tenable.sc list: Sia | France | Business Consulting and Services | 3.7k | Tenable.sc",
+      "source_url": "https://theirstack.com/en/technology/tenable-sc",
+      "confidence": "low"
+    },
+    {
+      "name": "Social Security Administration",
+      "domain": "ssa.gov",
+      "grade": "C",
+      "evidence": "ZoomInfo 'Top Companies utilizing Tenable Nessus': 1 Social Security Administration",
+      "source_url": "https://www.zoominfo.com/tech/35422/tenable-tech-by-revenue",
+      "confidence": "low"
+    },
+    {
+      "name": "SoFi",
+      "domain": "sofi.com",
+      "grade": "C",
+      "evidence": "Enlyft 'Who uses Tenable.ad?': SoFi | sofi.com | United States | 1B-5B | 1000-5000",
+      "source_url": "https://enlyft.com/tech/products/tenable-ad",
+      "confidence": "low"
+    },
+    {
+      "name": "Tata Consultancy Services",
+      "domain": "tcs.com",
+      "grade": "C",
+      "evidence": "TheirStack Tenable India: Tata Consultancy Services | India | IT Services and IT Consulting | 729k | $27B | Tenable",
+      "source_url": "https://theirstack.com/en/technology/tenable/in",
+      "confidence": "low"
+    },
+    {
+      "name": "TekSynap",
+      "domain": "teksynap.com",
+      "grade": "C",
+      "evidence": "TheirStack Nessus US list: TekSynap | United States | IT Services and IT Consulting | 946 | $15M",
+      "source_url": "https://theirstack.com/en/technology/nessus-vulnerability-scanner/us",
+      "confidence": "low"
+    },
+    {
+      "name": "UnitedHealth Group",
+      "domain": "unitedhealthgroup.com",
+      "grade": "C",
+      "evidence": "ZoomInfo 'Top Companies Using Tenable' (1,484 companies): 4. UnitedHealth Group",
+      "source_url": "https://www.zoominfo.com/tech/35422/tenable-tech-by-revenue",
+      "confidence": "low"
+    },
+    {
+      "name": "University Health",
+      "domain": "universityhealth.com",
+      "grade": "C",
+      "evidence": "TheirStack Tenable.sc list: University Health | United States | Hospitals and Health Care | 10k | $2.1B | Tenable.sc",
+      "source_url": "https://theirstack.com/en/technology/tenable-sc",
+      "confidence": "low"
+    },
+    {
+      "name": "Volkswagen",
+      "domain": "volkswagen.com",
+      "grade": "C",
+      "evidence": "ZoomInfo 'Top Companies Using Tenable': 7. Volkswagen",
+      "source_url": "https://www.zoominfo.com/tech/35422/tenable-tech-by-revenue",
+      "confidence": "low"
+    },
+    {
+      "name": "Vydia",
+      "domain": "vydia.com",
+      "grade": "C",
+      "evidence": "Enlyft 'Who uses Tenable Nessus?': Vydia | vydia.com | United States | 50M-100M | 50-200",
+      "source_url": "https://enlyft.com/tech/products/tenable-nessus",
+      "confidence": "low"
+    },
+    {
+      "name": "Walmart",
+      "domain": "walmart.com",
+      "grade": "C",
+      "evidence": "Landbase Tenable Nessus sample list: Walmart | United States | Department Stores... | Tenable Nessus; ZoomInfo Tenable #2",
+      "source_url": "https://data.landbase.com/technology/tenable-nessus/",
+      "confidence": "low"
+    },
+    {
+      "name": "Wipro Ltd",
+      "domain": "wipro.com",
+      "grade": "C",
+      "evidence": "Enlyft 'Who uses Tenable.ad?': Wipro Ltd | wipro.com | India | >10B | >10000 (also TheirStack Tenable India list)",
+      "source_url": "https://enlyft.com/tech/products/tenable-ad",
+      "confidence": "low"
+    },
+    {
+      "name": "Wireless Logic mdex GmbH",
+      "domain": "mdex.de",
+      "grade": "C",
+      "evidence": "TheirStack Tenable.io Germany: Wireless Logic mdex GmbH | Germany | Telecommunications | 26 | $15M | Tenable.io",
+      "source_url": "https://theirstack.com/en/technology/tenableio/de",
+      "confidence": "low"
+    },
+    {
+      "name": "Zensar Technologies",
+      "domain": "zensar.com",
+      "grade": "C",
+      "evidence": "TheirStack Tenable India: Zensar Technologies | India | IT Services and IT Consulting | 16k | $480M | Tenable",
+      "source_url": "https://theirstack.com/en/technology/tenable/in",
+      "confidence": "low"
+    }
+  ],
+  "generated_at": "2026-09-28T06:12:34Z",
+  "company_count": 178
+}
