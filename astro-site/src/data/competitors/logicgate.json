@@ -1,0 +1,267 @@
+{
+  "competitor": {
+    "name": "LogicGate",
+    "slug": "logicgate",
+    "domain": "logicgate.com"
+  },
+  "companies": [
+    {
+      "name": "Amount",
+      "domain": "amount.com",
+      "grade": "A",
+      "evidence": "What we achieved is an automated strategy to look at controls throughout the year rather than just at that one checkpoint when the auditor comes in. (Carly Phillips, Operational Risk Manager)",
+      "source_url": "https://www.featuredcustomers.com/vendor/logicgate/testimonials",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "BankProv",
+      "domain": "bankprov.com",
+      "grade": "A",
+      "evidence": "LogicGate just seemed to be the most user-friendly, even on the internal side. (Angelina Milano, VP of Compliance and CRA Officer)",
+      "source_url": "https://www.featuredcustomers.com/vendor/logicgate/testimonials",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "BCU",
+      "domain": "bcu.org",
+      "grade": "A",
+      "evidence": "We initially focused on formalizing our vendor risk, policy, and business continuity management programs. (Stephenie Southard, Chief Security Officer)",
+      "source_url": "https://www.logicgate.com/resources/customer-stories/bcu/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Dignity Funeral Services",
+      "domain": "dignityfunerals.co.uk",
+      "grade": "A",
+      "evidence": "Risk Cloud puts everything at the right level of the organisation, and it all feeds up to the appropriate or responsible owner. (Deb Mallen, Senior Risk Manager)",
+      "source_url": "https://www.featuredcustomers.com/vendor/logicgate/testimonials",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Equiniti",
+      "domain": "equiniti.com",
+      "grade": "A",
+      "evidence": "We have been a partner of LogicGate's since 2021, and have worked in lockstep to grow our ERM program, streamline compliance, and drastically reduce incidence rates.",
+      "source_url": "https://www.logicgate.com/resources/customer-stories/equinitis-journey-to-a-connected-risk-program/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Horizon Media",
+      "domain": "horizonmedia.com",
+      "grade": "A",
+      "evidence": "Horizon Media: Spinning Up a Cyber Risk Program from Square One (named LogicGate case study).",
+      "source_url": "https://www.logicgate.com/customer-stories/horizon-media-spinning-up-a-cyber-risk-program-from-square-one/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Intradiem",
+      "domain": "intradiem.com",
+      "grade": "A",
+      "evidence": "LogicGate cuts down immensely on the time it takes to complete financial and compliance audits. (Kurdeen Karim, Director of DevSecOps)",
+      "source_url": "https://www.logicgate.com/customer-stories/logicgate-and-intradiem-promoting-trust/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Team Select Home Care",
+      "domain": "teamselecthh.com",
+      "grade": "A",
+      "evidence": "Peace of mind. LogicGate rounds out our Compliance Program. (Susan Valocchi, Director of Compliance)",
+      "source_url": "https://www.logicgate.com/customer-stories/case-study-team-select-home-care/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Texas Mutual Insurance Company",
+      "domain": "texasmutual.com",
+      "grade": "A",
+      "evidence": "How Texas Mutual Improved Their Third-Party Risk Management Experience (named LogicGate customer story).",
+      "source_url": "https://www.logicgate.com/explore/customer-stories/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "United Community Bank",
+      "domain": "ucbi.com",
+      "grade": "A",
+      "evidence": "Building a Roadmap for GRC Maturity at United Community Bank (named LogicGate case study).",
+      "source_url": "https://www.logicgate.com/explore/customer-stories/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Uphold",
+      "domain": "uphold.com",
+      "grade": "A",
+      "evidence": "How Uphold Uses Risk Cloud's Slack Integration for Incident Management (named LogicGate case study; Chris Adjei-Ampofo, CIO).",
+      "source_url": "https://www.logicgate.com/customer-stories/how-uphold-uses-risk-clouds-slack-integration-for-incident-management/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Ziff Davis",
+      "domain": "ziffdavis.com",
+      "grade": "A",
+      "evidence": "Risk Cloud is user-friendly and very customizable. (Ken Thommen, Director of Internal Audit)",
+      "source_url": "https://cdn.featuredcustomers.com/CustomerCaseStudy.document/LogicGate_ZiffDavis_CaseStudy.pdf",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Amerisure Insurance",
+      "domain": "amerisure.com",
+      "grade": "B",
+      "evidence": "Experience in Logicgate or another GRC tool. (Senior IT Security Risk Analyst job posting)",
+      "source_url": "https://freehire.me/jobs/senior-it-security-risk-analyst-amerisure-insurance-cegeqxyg",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Arrow Electronics",
+      "domain": "arrow.com",
+      "grade": "B",
+      "evidence": "Arrow appears on LogicGate's site under \"Improved Incident Response & Tracking.\"",
+      "source_url": "https://www.logicgate.com/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Avant",
+      "domain": "avant.com",
+      "grade": "B",
+      "evidence": "LogicGate, SQL, Atlassian (Jira and Confluence), and/or Looker experience a plus (Avant compliance-testing job posting).",
+      "source_url": "https://www.builtinchicago.org/job/associate-compliance-testing/3735037",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Ciena",
+      "domain": "ciena.com",
+      "grade": "B",
+      "evidence": "Ciena appears in LogicGate's \"Trusted by Risk Leaders at\" homepage logo wall.",
+      "source_url": "https://www.logicgate.com/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Cimpress",
+      "domain": "cimpress.com",
+      "grade": "B",
+      "evidence": "LogicGate currently serves hundreds of customers such as SoFi, Zurich Insurance, Memorial Hermann Health and Cimpress.",
+      "source_url": "https://www.prnewswire.com/news-releases/logicgate-secures-113m-series-c-with-the-aim-to-empower-global-enterprises-to-treat-risk-as-a-strategic-advantage-301341443.html",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Hyatt",
+      "domain": "hyatt.com",
+      "grade": "B",
+      "evidence": "Hyatt appears in LogicGate's \"Trusted by Risk Leaders at\" homepage logo wall.",
+      "source_url": "https://www.logicgate.com/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Memorial Hermann Health System",
+      "domain": "memorialhermann.org",
+      "grade": "B",
+      "evidence": "LogicGate currently serves hundreds of customers such as SoFi, Zurich Insurance, Memorial Hermann Health and Cimpress.",
+      "source_url": "https://www.prnewswire.com/news-releases/logicgate-secures-113m-series-c-with-the-aim-to-empower-global-enterprises-to-treat-risk-as-a-strategic-advantage-301341443.html",
+      "confidence": "Verified"
+    },
+    {
+      "name": "SoFi",
+      "domain": "sofi.com",
+      "grade": "B",
+      "evidence": "LogicGate currently serves hundreds of customers such as SoFi, Zurich Insurance, Memorial Hermann Health and Cimpress.",
+      "source_url": "https://www.prnewswire.com/news-releases/logicgate-secures-113m-series-c-with-the-aim-to-empower-global-enterprises-to-treat-risk-as-a-strategic-advantage-301341443.html",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Zurich Insurance",
+      "domain": "zurich.com",
+      "grade": "B",
+      "evidence": "LogicGate currently serves hundreds of customers such as SoFi, Zurich Insurance, Memorial Hermann Health and Cimpress.",
+      "source_url": "https://www.prnewswire.com/news-releases/logicgate-secures-113m-series-c-with-the-aim-to-empower-global-enterprises-to-treat-risk-as-a-strategic-advantage-301341443.html",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Hexaware Technologies",
+      "domain": "hexaware.com",
+      "grade": "C",
+      "evidence": "Listed under companies that use LogicGate Risk Cloud (TheirStack).",
+      "source_url": "https://theirstack.com/en/technology/logicgate-risk-cloud",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Marqeta",
+      "domain": "marqeta.com",
+      "grade": "C",
+      "evidence": "Named in Enlyft's \"companies using LogicGate\" dataset.",
+      "source_url": "https://enlyft.com/tech/products/logicgate",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Medtronic",
+      "domain": "medtronic.com",
+      "grade": "C",
+      "evidence": "Listed among companies using LogicGate in TheirStack technology database.",
+      "source_url": "https://theirstack.com/en/technology/logicgate",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Optum",
+      "domain": "optum.com",
+      "grade": "C",
+      "evidence": "Listed among companies using LogicGate in TheirStack technology database.",
+      "source_url": "https://theirstack.com/en/technology/logicgate",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Persistent Systems",
+      "domain": "persistent.com",
+      "grade": "C",
+      "evidence": "Listed among companies using LogicGate in TheirStack technology database.",
+      "source_url": "https://theirstack.com/en/technology/logicgate",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Relativity",
+      "domain": "relativity.com",
+      "grade": "C",
+      "evidence": "Listed among companies using LogicGate in TheirStack technology database.",
+      "source_url": "https://theirstack.com/en/technology/logicgate",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Relias",
+      "domain": "relias.com",
+      "grade": "C",
+      "evidence": "Listed among companies using LogicGate (job-posting-derived tech database).",
+      "source_url": "https://theirstack.com/en/technology/logicgate",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Roseburg Forest Products",
+      "domain": "roseburg.com",
+      "grade": "C",
+      "evidence": "Listed under companies that use LogicGate Risk Cloud (TheirStack).",
+      "source_url": "https://theirstack.com/en/technology/logicgate-risk-cloud",
+      "confidence": "Likely"
+    },
+    {
+      "name": "SHI International",
+      "domain": "shi.com",
+      "grade": "C",
+      "evidence": "Named in Enlyft's \"companies using LogicGate\" dataset.",
+      "source_url": "https://enlyft.com/tech/products/logicgate",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Sigma Computing",
+      "domain": "sigmacomputing.com",
+      "grade": "C",
+      "evidence": "Listed among companies using LogicGate in TheirStack technology database.",
+      "source_url": "https://theirstack.com/en/technology/logicgate",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Welltower",
+      "domain": "welltower.com",
+      "grade": "C",
+      "evidence": "Listed as a LogicGate customer record in AppsRunTheWorld's customer database.",
+      "source_url": "https://www.appsruntheworld.com/customers-database/vendors/view/logicgate",
+      "confidence": "Likely"
+    }
+  ],
+  "generated_at": "2026-10-05T16:38:00Z",
+  "company_count": 32
+}
