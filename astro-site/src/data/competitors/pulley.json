@@ -1,0 +1,203 @@
+{
+  "competitor": {
+    "name": "Pulley",
+    "slug": "pulley",
+    "domain": "pulley.com"
+  },
+  "companies": [
+    {
+      "name": "LayerZero",
+      "domain": "layerzero.network",
+      "grade": "A",
+      "evidence": "I absolutely love Pulley and recommend it to every client! The pro forma modeling tool can save a startup thousands.",
+      "source_url": "https://pulley.com/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Linear",
+      "domain": "linear.app",
+      "grade": "A",
+      "evidence": "We chose Pulley because they turned that complexity into simplicity \u2013 letting us focus on building our product, not managing our cap table.",
+      "source_url": "https://pulley.com/",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Axoflow",
+      "domain": "axoflow.com",
+      "grade": "B",
+      "evidence": "I like the fact that we can use our own documents, especially for options. Combine that with competitive pricing and you have a win.",
+      "source_url": "https://pulley.com/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Brevy",
+      "domain": "brevy.com",
+      "grade": "B",
+      "evidence": "I've had a great experience with Pulley so far... They have truly embodied the cap table whisperer role.",
+      "source_url": "https://pulley.com/products/cap-table-management",
+      "confidence": "Verified"
+    },
+    {
+      "name": "DataOceans",
+      "domain": "dataoceans.com",
+      "grade": "B",
+      "evidence": "We tried another leading cap table software provider and had to abandon them after 6 months... We are thrilled with the product and the service we have received.",
+      "source_url": "https://pulley.com/blog-posts/dataoceans-modernize-equity-management",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Faye",
+      "domain": "withfaye.com",
+      "grade": "B",
+      "evidence": "The best part for us is that 409A valuation is tightly integrated within Pulley... Whenever we raise new capital, we know we can count on Pulley.",
+      "source_url": "https://pulley.com/blog-posts/faye",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Mentavi Health",
+      "domain": "mentavihealth.com",
+      "grade": "B",
+      "evidence": "mentavihealth appears in a logo band on Pulley's site, under: \"How much does Pulley cost? We're happy to tell you.\" (Tim Gutwald, General Counsel at Mentavi Health, is cited as a customer)",
+      "source_url": "https://pulley.com/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Miraterra",
+      "domain": "miraterrasoil.com",
+      "grade": "B",
+      "evidence": "Pulley was promoting their service with a simpler/faster onboarding process and I can confirm that it was really smooth.",
+      "source_url": "https://pulley.com/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Montgomery Pacific",
+      "domain": "montgomerypacific.com",
+      "grade": "B",
+      "evidence": "Pulley has proven to be a valuable partner in streamlining and managing our token operations on a single platform.",
+      "source_url": "https://pulley.com/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Mysten Labs",
+      "domain": "mystenlabs.com",
+      "grade": "B",
+      "evidence": "We are wrapping up our financial audit. The stock based comp reporting was a snap with Pulley!",
+      "source_url": "https://pulley.com/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Pigeon Loans",
+      "domain": "pigeonloans.com",
+      "grade": "B",
+      "evidence": "I like the simplicity of Pulley, and its ability to mimic most of the hard labor work of keeping track of cap table conversions.",
+      "source_url": "https://www.g2.com/products/pulley-pulley/reviews",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Simetrik",
+      "domain": "simetrik.com",
+      "grade": "B",
+      "evidence": "We've been a happy Pulley customer for years... Pulley has been a great partner for managing our cap table as we've grown.",
+      "source_url": "https://pulley.com/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Standard Metrics",
+      "domain": "standardmetrics.io",
+      "grade": "B",
+      "evidence": "Why Standard Metrics Made the Switch to Pulley for Reliable Cap Table Management",
+      "source_url": "https://pulley.com/blog-posts/standard-metrics",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Appsmith",
+      "domain": "appsmith.com",
+      "grade": "C",
+      "evidence": "Appears in a logo band on Pulley's site, under: \"Trusted by thousands of ambitious companies from seed to scale\"",
+      "source_url": "https://pulley.com/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Bitwise",
+      "domain": "bitwiseinvestments.com",
+      "grade": "C",
+      "evidence": "Appears in a logo band on Pulley's site, under: \"Trusted by thousands of ambitious companies from seed to scale\"",
+      "source_url": "https://pulley.com/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "ColorTokens",
+      "domain": "colortokens.com",
+      "grade": "C",
+      "evidence": "ColorTokens appears in a logo band on Pulley's site, under: \"Trusted by thousands of ambitious companies from seed to scale\"",
+      "source_url": "https://pulley.com/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Coravista Health",
+      "domain": "coravistahealth.com",
+      "grade": "C",
+      "evidence": "Coravista Health appears in a logo band on Pulley's site, under: \"Trusted by thousands of ambitious companies from seed to scale\"",
+      "source_url": "https://pulley.com/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Fathom",
+      "domain": "fathom.video",
+      "grade": "C",
+      "evidence": "Fathom appears in a logo band on Pulley's site, under: \"Trusted by thousands of ambitious companies from seed to scale\"",
+      "source_url": "https://pulley.com/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Guide",
+      "domain": "guide.co",
+      "grade": "C",
+      "evidence": "We didn't have a lot of trust in (Pulley's) advice or compliance. I just viewed Carta as having more expertise. (Former Pulley user, switched to Carta.)",
+      "source_url": "https://carta.com/resources/customer-stories/guide/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Mozart Data",
+      "domain": "mozartdata.com",
+      "grade": "C",
+      "evidence": "Mozart Data appears in a logo band on Pulley's site, under: \"Trusted by thousands of ambitious companies from seed to scale\"",
+      "source_url": "https://pulley.com/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Runway",
+      "domain": "runway.com",
+      "grade": "C",
+      "evidence": "Appears in a logo band on Pulley's site, under: \"Trusted by thousands of ambitious companies from seed to scale\"",
+      "source_url": "https://pulley.com/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Sydecar",
+      "domain": "sydecar.io",
+      "grade": "C",
+      "evidence": "Appears in a logo band on Pulley's site, under: \"Trusted by thousands of ambitious companies from seed to scale\"",
+      "source_url": "https://pulley.com/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Techstars",
+      "domain": "techstars.com",
+      "grade": "C",
+      "evidence": "Appears in a logo band on Pulley's site, under: \"Trusted by thousands of ambitious companies from seed to scale\"",
+      "source_url": "https://pulley.com/",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Umami Bioworks",
+      "domain": "umamibioworks.com",
+      "grade": "C",
+      "evidence": "especially for international businesses, the coverage was not as complete as we'd hoped it would be. (Started on Pulley, moved to Carta.)",
+      "source_url": "https://carta.com/uk/en/resources/customer-stories/umami-bioworks/",
+      "confidence": "Likely"
+    }
+  ],
+  "generated_at": "2026-10-12T17:09:20Z",
+  "company_count": 24
+}
