@@ -1,0 +1,595 @@
+{
+  "competitor": {
+    "name": "Rubrik",
+    "slug": "rubrik",
+    "domain": "rubrik.com"
+  },
+  "companies": [
+    {
+      "name": "Cranfield University",
+      "domain": "cranfield.ac.uk",
+      "grade": "A",
+      "confidence": "Verified+",
+      "evidence": "Sensitive Data Discovery will play its part in our overall strategy to discover what and where personally identifiable information (PII) is stored in order to improve processes.",
+      "source_url": "https://www.rubrik.com/customers/cranfield-university"
+    },
+    {
+      "name": "Goya Foods",
+      "domain": "goya.com",
+      "grade": "A",
+      "confidence": "Verified+",
+      "evidence": "Goya had experienced a cyberattack and was seeking disaster recovery technology to help mitigate the impact of such attacks.",
+      "source_url": "https://cloudwars.com/cybersecurity/goya-foods-cio-suvajit-basu-on-acceleration-economy-top-10-shortlist-company-rubrik/"
+    },
+    {
+      "name": "Grove Bank & Trust",
+      "domain": "grovebank.com",
+      "grade": "A",
+      "confidence": "Verified+",
+      "evidence": "Rubrik helped solve our backup issues and gave us confidence that we're set up for success going forward.",
+      "source_url": "https://www.prnewswire.com/news-releases/grove-bank--trust-standardizes-on-rubrik-for-backup-and-recovery-300639693.html"
+    },
+    {
+      "name": "Omnitracs",
+      "domain": "omnitracs.com",
+      "grade": "A",
+      "confidence": "Verified+",
+      "evidence": "As a lean team, we don't have time to waste on babysitting backups. That's why Rubrik is a big win for us. It truly is a set-it-and-forget solution.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/CUSTOMER-SUCCESS-Rubrik-and-Omnitracs.pdf"
+    },
+    {
+      "name": "Wabash National",
+      "domain": "wabashnational.com",
+      "grade": "A",
+      "confidence": "Verified+",
+      "evidence": "Rubrik has become our de facto platform to deliver automated backup, instant recovery, and site-to-site replication for our mission critical workloads.",
+      "source_url": "https://www.rubrik.com/customers/Wabash-National"
+    },
+    {
+      "name": "WED2B",
+      "domain": "wed2b.com",
+      "grade": "A",
+      "confidence": "Verified+",
+      "evidence": "All of our data, including NAS, is now being protected by Rubrik's Zero Trust Data Security.",
+      "source_url": "https://assured-dp.com/case-studies/wed2b/"
+    },
+    {
+      "name": "Yuba County",
+      "domain": "yuba.org",
+      "grade": "A",
+      "confidence": "Verified+",
+      "evidence": "one of the few moments of satisfaction during weeks of discomfort was knowing that Rubrik was backing up our data and that we wouldn't have to pay the ransom for data recovery.",
+      "source_url": "https://www.rubrik.com/customers/yuba-county"
+    },
+    {
+      "name": "AERTEC Solutions",
+      "domain": "aertecsolutions.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Rubrik allows us to build a strong business continuity plan for disaster recovery and to easily integrate with public cloud, aligning our IT strategy with the business and freeing up our time for innovation.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/Case-Study-AERTEC-Solutions-and-Rubrik.pdf"
+    },
+    {
+      "name": "AMD",
+      "domain": "amd.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "AMD's hardware with Rubrik's data security solutions provide us with the cyber resiliency we need.",
+      "source_url": "https://www.storagenewsletter.com/2024/06/11/four-organisations-honored-with-rubrik-inaugural-cyber-resilience-awards/"
+    },
+    {
+      "name": "ARIA S.p.A",
+      "domain": "ariasanita.it",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "we made the right choice.",
+      "source_url": "https://www.storagenewsletter.com/2024/06/11/four-organisations-honored-with-rubrik-inaugural-cyber-resilience-awards/"
+    },
+    {
+      "name": "Assured Data Protection",
+      "domain": "assured-dp.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "We created Assured DP and partnered with Rubrik to take its innovative cloud data management solution to market.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/Customer-Success-Assured-Data-Protection.pdf"
+    },
+    {
+      "name": "Barclays",
+      "domain": "barclays.co.uk",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Solutions like Rubrik support us in ensuring our technology estate is consistently secure.",
+      "source_url": "https://www.storagenewsletter.com/2024/06/11/four-organisations-honored-with-rubrik-inaugural-cyber-resilience-awards/"
+    },
+    {
+      "name": "Berkeley College",
+      "domain": "berkeleycollege.edu",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "We have the flexibility to spin up applications on Rubrik in a matter of minutes.",
+      "source_url": "https://www.rubrik.com/blog/customers/17/8/berkeley-college-reduces-costs-integrates-microsoft-azure-rubrik"
+    },
+    {
+      "name": "Bioverativ",
+      "domain": "sanofi.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "We chose Rubrik over other solutions because it fit perfectly with our cloud-first mentality.",
+      "source_url": "https://www.prnewswire.com/news-releases/bioverativ-protects-vital-rd-data-with-rubrik-and-microsoft-azure-300818926.html"
+    },
+    {
+      "name": "BMD",
+      "domain": "bmd.com.au",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "A key benefit of having Rubrik is the ability to backup and archive data either on-premise or in the cloud with just one or two clicks.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/Customer-Success-BMD-and-Rubrik.pdf"
+    },
+    {
+      "name": "Brent Council",
+      "domain": "brent.gov.uk",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Now, with Rubrik, we have an immutable, cloud-based file system that is already making me feel better about our data security.",
+      "source_url": "https://www.rubrik.com/customers/brent-council-prioritises-data-security-amid-global-rise-in-ransomware"
+    },
+    {
+      "name": "Brown Family Wine Group",
+      "domain": "brownfamilywinegroup.com.au",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "In an industry where tradition meets innovation, Rubrik gives us peace of mind to focus on what we do best - creating exceptional wines and delivering them reliably to our customers. That's why we trust Rubrik.",
+      "source_url": "https://www.rubrik.com/customers/brown-family-wine-group-ensures-critical-production-continuity-rubrik"
+    },
+    {
+      "name": "CarePoint Health",
+      "domain": "carepointhealth.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Rubrik delivers solutions that allow CarePoint Health to focus more on their patients and less on managing servers.",
+      "source_url": "https://www.rubrik.com/en/customers/carepoint-health"
+    },
+    {
+      "name": "Casey Group",
+      "domain": "thecaseygroup.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Previously, we spent 2 hours per day managing and scheduling backups. With Rubrik, we can set it and forget it.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/Customer-Success-Rubrik-and-Casey-Group.pdf"
+    },
+    {
+      "name": "Castilleja",
+      "domain": "castilleja.org",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Every minute counts. The success of our faculty depends on IT's ability to support instructional time.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/CUSTOMER-SUCCESS-Castilleja-AWS.pdf"
+    },
+    {
+      "name": "Chapters Health System",
+      "domain": "chaptershealth.org",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Rubrik gives us the ability to instantly recover from Ransomware without having to worry about losing any of our data.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/Customer-Success-Rubrik-and-Chapters-Health.pdf"
+    },
+    {
+      "name": "Colchester Institute",
+      "domain": "colchester.ac.uk",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "KHIPU and Rubrik made it really easy to evaluate the solution. We really liked the technology and the driving factor for us was the ransomware protection.",
+      "source_url": "https://www.khipu-networks.com/case-study-colchester-institute/"
+    },
+    {
+      "name": "Compeer Financial",
+      "domain": "compeer.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Rubrik reduced Compeer's restore time down from eight hours to just 30 seconds.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/CUSTOMER-SUCCESS-RUBRIK-and-Compeer-Financial.pdf"
+    },
+    {
+      "name": "Digital River",
+      "domain": "digitalriver.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "native replication does not provide protection from logical data corruption and operator/software errors.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/Customer-Success-Rubrik-and-Digital-River.pdf"
+    },
+    {
+      "name": "EōS Fitness",
+      "domain": "eosfitness.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "It's no longer a matter of if, but when...and Rubrik has fundamentally shifted the cybersecurity paradigm at EōS from a focus on prevention to cyber resilience.",
+      "source_url": "https://www.rubrik.com/customers/stronger-every-day-how-eos-fitness-flexes-its-resiliency-muscle-rubrik"
+    },
+    {
+      "name": "Gannett",
+      "domain": "gannett.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "News never stops, and we cannot allow cyber threats to slow us down. Rubrik gives us peace of mind knowing our data is protected and available.",
+      "source_url": "https://www.rubrik.com/customers/gannett"
+    },
+    {
+      "name": "Insular Life",
+      "domain": "insularlife.com.ph",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "One of the most complex tasks to undertake was to test the prior backup where you'd have to get the tapes and test if they're truly restorable.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/Customer-Success-Rubrik-and-Insular-Life-EN.pdf"
+    },
+    {
+      "name": "Jones-Onslow EMC",
+      "domain": "joemc.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "What used to take 20-30 minutes, we can recover with Rubrik in about one minute. Rubrik has opened our eyes to how it can be a much simpler process. It just works!",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/Customer-Success-Rubrik-and-JOEMC.pdf"
+    },
+    {
+      "name": "Kremsmüller",
+      "domain": "kremsmueller.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Rubrik was everything we were looking for.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/customer-success-rubrik-and-kremsmuller.pdf"
+    },
+    {
+      "name": "Langs Building Supplies",
+      "domain": "langs.com.au",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Rubrik is not just about recovering from ransomware. Rubrik is the difference between survival and non-survival in this new digital age.",
+      "source_url": "https://www.rubrik.com/customers/langs-building-supplies"
+    },
+    {
+      "name": "Mall of America",
+      "domain": "mallofamerica.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Rubrik backup is the same way. The support team is proactive, always responsive and well-educated.",
+      "source_url": "https://www.techtarget.com/data-technologies/news/252464869/Rubrik-backup-Compellent-SAN-power-MoA-data-center"
+    },
+    {
+      "name": "Neath Port Talbot Council",
+      "domain": "npt.gov.uk",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "A solution built on Rubrik technologies would provide all of the functionality, resilience and performance we need going forward.",
+      "source_url": "https://www.softcat.com/about-us/case-studies/rubrik-solution-underpins-transformative-digital-strategy-neath-port-talbot-council"
+    },
+    {
+      "name": "Northumbria Healthcare NHS Foundation Trust",
+      "domain": "northumbria.nhs.uk",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "With Rubrik, we can get our systems back up in literally 5 minutes instead of hours.",
+      "source_url": "https://healthtechdigital.com/northumbria-healthcare-elevates-cyber-resilience-with-rubrik/"
+    },
+    {
+      "name": "Nuvance Health",
+      "domain": "nuvancehealth.org",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Rubrik gave us the exact tool set and ease of management that we needed. It also gives us an easy path to move to a cloud-based solution, which is where we believe the technology is going.",
+      "source_url": "https://healthtechmagazine.net/article/2025/02/updating-backup-and-storage-systems-prepare-healthcares-future"
+    },
+    {
+      "name": "OneMain Financial",
+      "domain": "onemainfinancial.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "It is critical that our services are available to our employees and consumers at all times, which is why we partner with scalable, best-of-breed technologies like Rubrik and Microsoft.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/one-main-financial.pdf"
+    },
+    {
+      "name": "Prater",
+      "domain": "prater.co.uk",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Rubrik had the best technology to address their needs, providing core data protection functions such as backup, replication, and recovery.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/cs-prater.pdf"
+    },
+    {
+      "name": "Renown Health",
+      "domain": "renown.org",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Rubrik Identity Recovery gives us the confidence that we can rapidly restore our entire Active Directory infrastructure, enabling us to bring critical applications back online without paying a ransom or risking reinfection.",
+      "source_url": "https://www.rubrik.com/customers/renownhealth"
+    },
+    {
+      "name": "Seco Tools",
+      "domain": "secotools.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Anything from upgrading our servers to doing an actual live mount was an extremely fast process and only a couple of clicks.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/customer-success-rubrik-and-seco-tools.pdf"
+    },
+    {
+      "name": "Simpson Strong-Tie",
+      "domain": "strongtie.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Rubrik is a long-term strategic partner for Simpson Strong-Tie and gives us confidence in our cyber resiliency.",
+      "source_url": "https://www.storagenewsletter.com/2024/06/11/four-organisations-honored-with-rubrik-inaugural-cyber-resilience-awards/"
+    },
+    {
+      "name": "South Louisiana Community College",
+      "domain": "solacc.edu",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "In two hours, the situation was 100% contained, which I was pleasantly impressed by.",
+      "source_url": "https://www.rubrik.com/customers/slcc"
+    },
+    {
+      "name": "St. Luke's University Health Network",
+      "domain": "slhn.org",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "With Rubrik Security Cloud, we have secured our sensitive data, gained confidence and peace of mind in the resiliency of our operations, and can uphold our commitment to providing outstanding healthcare services even if we face a cyber event.",
+      "source_url": "https://www.storagenewsletter.com/2023/08/21/st-lukes-university-health-network-safeguards-millions-of-patient-records/"
+    },
+    {
+      "name": "SugarCreek",
+      "domain": "sugarcreek.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "SugarCreek achieved 90% management time savings, now only spending one hour per week.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/CUSTOMER-SUCCESS-Rubrik-and-SugarCreek.pdf"
+    },
+    {
+      "name": "Tec-Refresh",
+      "domain": "tec-refresh.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "reduced RPOs from 24 to 4 hours and RTOs from 4 hours to 5 minutes with Rubrik as-a-service solutions.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/Customer-Success-Rubrik-and-Tec-Refresh.pdf"
+    },
+    {
+      "name": "Tecala",
+      "domain": "tecala.com.au",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "We focus on premium componentry from vendors who are leaders in their field, like Rubrik.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/Customer-Success-Rubrik-and-Tecala.pdf"
+    },
+    {
+      "name": "University of St. Thomas",
+      "domain": "stthomas.edu",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Rubrik handles the syncing of backups and replication to AWS S3. With our backups in the cloud, we've been able to easily migrate them from one region to another.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/Customer-Success-Rubrik-and-University-St-Thomas.pdf"
+    },
+    {
+      "name": "University of the Pacific",
+      "domain": "pacific.edu",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Previously, it could take hours to restore a simple VM, which was unacceptable. Restores take seconds with Rubrik.",
+      "source_url": "https://www.rubrik.com/customers/university-of-the-pacific"
+    },
+    {
+      "name": "US Navy (CNIC)",
+      "domain": "cnic.navy.mil",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "It was amazing how quickly we were up-and-running. In just an hour, we had the solution supporting us at an enterprise level.",
+      "source_url": "https://www.rubrik.com/content/dam/rubrik/en/resources/case-study/Customer-Success-Rubrik-and-US-Navy-CNIC-.pdf"
+    },
+    {
+      "name": "Warren CAT",
+      "domain": "warrencat.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "Rubrik came in and changed the way that our company operated. We needed the best Zero Trust Data Security partner, and that is Rubrik.",
+      "source_url": "https://www.rubrik.com/customers/warren-cat-machinery"
+    },
+    {
+      "name": "Zurich U.S.",
+      "domain": "zurich.com",
+      "grade": "B",
+      "confidence": "Verified",
+      "evidence": "We wanted to further strengthen our resilience, that's when we put in Rubrik.",
+      "source_url": "https://www.rubrik.com/customers/zurich-us-scales-agentic-ai-safely-and-protects-multicloud-workflows-rubrik"
+    },
+    {
+      "name": "Accenture",
+      "domain": "accenture.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Listed in Enlyft Who uses Rubrik? table.",
+      "source_url": "https://enlyft.com/tech/products/rubrik"
+    },
+    {
+      "name": "Blue Mantis",
+      "domain": "bluemantis.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Listed among companies using Rubrik.",
+      "source_url": "https://theirstack.com/en/technology/rubrik"
+    },
+    {
+      "name": "Chateau Ste. Michelle Wine Estates",
+      "domain": "ste-michelle.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Listed under Rubrik customers.",
+      "source_url": "https://www.peerspot.com/products/rubrik-reviews"
+    },
+    {
+      "name": "Cognizant",
+      "domain": "cognizant.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Listed in Enlyft Who uses Rubrik? table.",
+      "source_url": "https://enlyft.com/tech/products/rubrik"
+    },
+    {
+      "name": "Cross River",
+      "domain": "crossriver.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Shown among companies detected using Rubrik.",
+      "source_url": "https://bloomberry.com/data/rubrik/"
+    },
+    {
+      "name": "CVS Health",
+      "domain": "cvshealth.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Listed as a Rubrik user (Drug Stores & Pharmacies).",
+      "source_url": "https://data.landbase.com/technology/rubrik/"
+    },
+    {
+      "name": "Dartmouth Health",
+      "domain": "dartmouth-health.org",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Shown among companies using Rubrik.",
+      "source_url": "https://bloomberry.com/data/rubrik/"
+    },
+    {
+      "name": "Databarracks",
+      "domain": "databarracks.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Shown among companies using Rubrik.",
+      "source_url": "https://bloomberry.com/data/rubrik/"
+    },
+    {
+      "name": "Davies Ward Phillips & Vineberg LLP",
+      "domain": "dwpv.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Listed under Rubrik customers.",
+      "source_url": "https://www.peerspot.com/products/rubrik-reviews"
+    },
+    {
+      "name": "Driscoll's",
+      "domain": "driscolls.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Listed under Rubrik customers.",
+      "source_url": "https://www.peerspot.com/products/rubrik-reviews"
+    },
+    {
+      "name": "Engie",
+      "domain": "engie.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Listed as a Rubrik user (Electricity, Oil & Gas).",
+      "source_url": "https://data.landbase.com/technology/rubrik/"
+    },
+    {
+      "name": "Galliker Transport & Logistics",
+      "domain": "galliker.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Listed under Rubrik customers.",
+      "source_url": "https://www.peerspot.com/products/rubrik-reviews"
+    },
+    {
+      "name": "Konica Minolta",
+      "domain": "konicaminolta.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "KONICA MINOLTA, INC. listed among companies using Rubrik.",
+      "source_url": "https://theirstack.com/en/technology/rubrik"
+    },
+    {
+      "name": "KPMG",
+      "domain": "kpmg.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "KPMG US, United States, among companies using Rubrik.",
+      "source_url": "https://theirstack.com/en/technology/rubrik"
+    },
+    {
+      "name": "Lighthouse",
+      "domain": "lighthouseglobal.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "I tested out 12 use cases for infrastructure and DB prospects. (Information Technology Specialist, Lighthouse Document Technologies)",
+      "source_url": "https://www.trustradius.com/products/rubrik/reviews/all"
+    },
+    {
+      "name": "Mazars",
+      "domain": "forvismazars.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Shown among companies using Rubrik.",
+      "source_url": "https://bloomberry.com/data/rubrik/"
+    },
+    {
+      "name": "Orange County Sheriff's Department",
+      "domain": "ocsd.org",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Shown among companies using Rubrik.",
+      "source_url": "https://bloomberry.com/data/rubrik/"
+    },
+    {
+      "name": "PepsiCo",
+      "domain": "pepsico.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Listed as a Rubrik user (Food & Beverage).",
+      "source_url": "https://data.landbase.com/technology/rubrik/"
+    },
+    {
+      "name": "Pure Storage",
+      "domain": "purestorage.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Listed in the Who uses Rubrik? table.",
+      "source_url": "https://enlyft.com/tech/products/rubrik"
+    },
+    {
+      "name": "Red Hawk Casino",
+      "domain": "redhawkcasino.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Listed under Rubrik customers.",
+      "source_url": "https://www.peerspot.com/products/rubrik-reviews"
+    },
+    {
+      "name": "Serva",
+      "domain": "serva.com.mx",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "We are working now on proof of concept to do backups to virtual environments. (CIO, Serva Servicios Especializados Informaticos)",
+      "source_url": "https://www.trustradius.com/products/rubrik/reviews/all"
+    },
+    {
+      "name": "SHI International",
+      "domain": "shi.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Listed in Enlyft Who uses Rubrik? table.",
+      "source_url": "https://enlyft.com/tech/products/rubrik"
+    },
+    {
+      "name": "UnitedHealth Group",
+      "domain": "unitedhealthgroup.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Listed as a Rubrik user (Insurance).",
+      "source_url": "https://data.landbase.com/technology/rubrik/"
+    },
+    {
+      "name": "Wells Fargo",
+      "domain": "wellsfargo.com",
+      "grade": "C",
+      "confidence": "Likely",
+      "evidence": "Listed as a Rubrik user (Banking).",
+      "source_url": "https://data.landbase.com/technology/rubrik/"
+    }
+  ],
+  "generated_at": "2026-10-26T14:46:10Z",
+  "company_count": 73
+}
