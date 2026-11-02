@@ -1,0 +1,708 @@
+{
+ "competitor": {
+  "name": "Wiz",
+  "slug": "wiz",
+  "domain": "wiz.io",
+  "category": "Cloud security (CNAPP)"
+ },
+ "companies": [
+  {
+   "name": "Agoda",
+   "domain": "agoda.com",
+   "grade": "A",
+   "evidence": "\"90% of our reporting comes from Wiz, and it gives us all the context and information we need.\"",
+   "source_url": "https://www.wiz.io/customers/agoda",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Blackstone",
+   "domain": "blackstone.com",
+   "grade": "A",
+   "evidence": "\"Wiz's product was able to consolidate five key capabilities we felt were important to securing our cloud environment using a single platform.\"",
+   "source_url": "https://www.wiz.io/customers/blackstone",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "BMW",
+   "domain": "bmw.com",
+   "grade": "A",
+   "evidence": "\"Within days, Wiz onboarded all of our cloud workloads and gave us complete transparency on where we had vulnerable Log4j instances.\"",
+   "source_url": "https://www.wiz.io/customers/bmw",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Bridgewater Associates",
+   "domain": "bridgewater.com",
+   "grade": "A",
+   "evidence": "\"From the point of engagement to the point of ROI, it was easy to choose Wiz. We hadn't even paid and already got results.\"",
+   "source_url": "https://www.wiz.io/customers/bridgewater",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Colgate-Palmolive",
+   "domain": "colgatepalmolive.com",
+   "grade": "A",
+   "evidence": "\"Wiz agentless scanning now provides one source of truth for Colgate-Palmolive's security posture in the cloud.\"",
+   "source_url": "https://www.wiz.io/customers/colgate-palmolive",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Costco",
+   "domain": "costco.com",
+   "grade": "A",
+   "evidence": "\"corporations that aren't necessarily technology-first like BMW, Blackstone and Costco.\"",
+   "source_url": "https://techcrunch.com/2022/08/10/cloud-security-startup-wiz-reaches-100m-arr-in-just-18-months/",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Cushman & Wakefield",
+   "domain": "cushmanwakefield.com",
+   "grade": "A",
+   "evidence": "\"Wiz sold itself with its ease-of-use, not just to the security team, but also to our development and operations teams.\"",
+   "source_url": "https://www.wiz.io/customers/cushman-wakefield-scales-security",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "DocuSign",
+   "domain": "docusign.com",
+   "grade": "A",
+   "evidence": "\"The instant, out-of-the-box visibility and risk reduction Wiz provides make it one of the best security tools I've seen in a long time.\"",
+   "source_url": "https://www.wiz.io/reviews",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Fox",
+   "domain": "fox.com",
+   "grade": "A",
+   "evidence": "\"Wiz came into the picture to allow us to feel secure and confident in how fast we're moving.\"",
+   "source_url": "https://www.wiz.io/customers/fox",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Genpact",
+   "domain": "genpact.com",
+   "grade": "A",
+   "evidence": "\"Accelerating our cloud migration wouldn't have been possible without the help of Wiz, which provides a collective view of our exposures, identities, and vulnerabilities.\"",
+   "source_url": "https://www.wiz.io/customers/genpact",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Mars",
+   "domain": "mars.com",
+   "grade": "A",
+   "evidence": "\"The cloud went from being our least understood to our most understood space, and that was entirely due to Wiz.\"",
+   "source_url": "https://www.wiz.io/customers/mars",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Morgan Stanley",
+   "domain": "morganstanley.com",
+   "grade": "A",
+   "evidence": "\"35% of Fortune 100 companies, including BMW and Morgan Stanley... use its platform.\"",
+   "source_url": "https://www.calcalistech.com/ctechnews/article/byhwrx9cs",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Priceline",
+   "domain": "priceline.com",
+   "grade": "A",
+   "evidence": "\"What stood out about Wiz for me was it has a very intuitive interface and a really simple dashboard.\"",
+   "source_url": "https://www.wiz.io/customers/priceline",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "PROS",
+   "domain": "pros.com",
+   "grade": "A",
+   "evidence": "\"Put simply, we didn't have visibility at the depth and speed we needed.\"",
+   "source_url": "https://www.wiz.io/customers/pros",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Salesforce",
+   "domain": "salesforce.com",
+   "grade": "A",
+   "evidence": "\"software companies like Salesforce, Snowflake and Slack\" (customers)",
+   "source_url": "https://techcrunch.com/2022/08/10/cloud-security-startup-wiz-reaches-100m-arr-in-just-18-months/",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Slack",
+   "domain": "slack.com",
+   "grade": "A",
+   "evidence": "\"Its customers include Salesforce, Slack, Mars, BMW... among others.\"",
+   "source_url": "https://www.newswire.com/news/wiz-announces-1-billion-funding-round-at-12-billion-valuation-22319111",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Snowflake",
+   "domain": "snowflake.com",
+   "grade": "A",
+   "evidence": "\"software companies like Salesforce, Snowflake and Slack\" (customers)",
+   "source_url": "https://techcrunch.com/2022/08/10/cloud-security-startup-wiz-reaches-100m-arr-in-just-18-months/",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Wolt",
+   "domain": "wolt.com",
+   "grade": "A",
+   "evidence": "\"Wiz was extremely useful with Log4j. It allowed us to evaluate our real attack surface.\"",
+   "source_url": "https://www.wiz.io/customers/wolt",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Amplitude",
+   "domain": "amplitude.com",
+   "grade": "B",
+   "evidence": "\"We turned Wiz on, and it just worked. We were able to find the places where we needed to take action to mitigate risks right away.\"",
+   "source_url": "https://www.wiz.io/customers/amplitude",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Aon",
+   "domain": "aon.com",
+   "grade": "B",
+   "evidence": "\"Aon's journey to the cloud would not be anywhere near as successful if we didn't have Wiz.\"",
+   "source_url": "https://www.wiz.io/customers/aon",
+   "confidence": "Verified"
+  },
+  {
+   "name": "ASOS",
+   "domain": "asos.com",
+   "grade": "B",
+   "evidence": "\"Wiz' agentless solution helped us get 100% coverage quickly and at scale.\"",
+   "source_url": "https://www.wiz.io/customers/asos",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Avery Dennison",
+   "domain": "averydennison.com",
+   "grade": "B",
+   "evidence": "\"it was difficult to piece together solutions from different cloud providers to come up with a good cloud security posture.\" (Jeremy Smith, ISO)",
+   "source_url": "https://www.packaging-gateway.com/features/avery-dennison-takes-leading-role-in-cybersecurity/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Bitvavo",
+   "domain": "bitvavo.com",
+   "grade": "B",
+   "evidence": "\"By deploying Wiz, Bitvavo gained full-spectrum visibility across code, infrastructure and sensitive data.\"",
+   "source_url": "https://www.wiz.io/customers/bitvavo",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Cohere",
+   "domain": "cohere.com",
+   "grade": "B",
+   "evidence": "\"Wiz is excellent at surfacing the toxic combinations of risk factors that create critical attack paths.\"",
+   "source_url": "https://www.wiz.io/customers/cohere",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Cribl",
+   "domain": "cribl.io",
+   "grade": "B",
+   "evidence": "\"We can't compromise on security, especially because we're asking other security teams to trust us.\"",
+   "source_url": "https://www.wiz.io/customers/cribl",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Department for Work and Pensions",
+   "domain": "dwp.gov.uk",
+   "grade": "B",
+   "evidence": "\"With Wiz, we got value pretty much straight away within a 24-hour period.\"",
+   "source_url": "https://www.wiz.io/customers/dwp",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Drata",
+   "domain": "drata.com",
+   "grade": "B",
+   "evidence": "\"With the Blue Agent, investigations start before our security engineers do.\"",
+   "source_url": "https://www.wiz.io/customers/drata",
+   "confidence": "Verified"
+  },
+  {
+   "name": "esure",
+   "domain": "esure.com",
+   "grade": "B",
+   "evidence": "\"We needed a tool to give us visibility and measure risk across all our cloud environments... We found that with Wiz.\"",
+   "source_url": "https://www.wiz.io/customers/esure",
+   "confidence": "Verified"
+  },
+  {
+   "name": "FICO",
+   "domain": "fico.com",
+   "grade": "B",
+   "evidence": "\"Best User Experience I have ever seen, provides full visibility to cloud workloads.\"",
+   "source_url": "https://www.wiz.io/customers/fico",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Fireblocks",
+   "domain": "fireblocks.com",
+   "grade": "B",
+   "evidence": "\"Starting with Wiz was a huge shift for us, giving us a single pane of glass over all our cloud environments.\"",
+   "source_url": "https://www.wiz.io/customers/fireblocks",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Fiverr",
+   "domain": "fiverr.com",
+   "grade": "B",
+   "evidence": "\"We use Wiz to monitor and alert us of changes in our AWS environment that could be security risks.\"",
+   "source_url": "https://www.wiz.io/customers/fiverr",
+   "confidence": "Verified"
+  },
+  {
+   "name": "FullStory",
+   "domain": "fullstory.com",
+   "grade": "B",
+   "evidence": "\"We don't get 200 alerts a day, so when we do get a critical alert, we know we need to fix it immediately.\"",
+   "source_url": "https://www.wiz.io/customers/fullstory",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Grammarly",
+   "domain": "grammarly.com",
+   "grade": "B",
+   "evidence": "\"By streamlining our security operations with Wiz, we've successfully achieved a 0 failure of remediation SLA.\"",
+   "source_url": "https://www.wiz.io/customers/grammarly",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Hearst",
+   "domain": "hearst.com",
+   "grade": "B",
+   "evidence": "\"Wiz provides a single pane of glass to see what is going on in our cloud environments.\"",
+   "source_url": "https://www.wiz.io/customers/hearst-transforms-cloud-security-across-hundreds-of-its-companies-with-wiz",
+   "confidence": "Verified"
+  },
+  {
+   "name": "IHG Hotels & Resorts",
+   "domain": "ihg.com",
+   "grade": "B",
+   "evidence": "\"Having that full visibility across our multi-cloud environment has saved us significant time and resources, reducing the burden on my team.\"",
+   "source_url": "https://www.wiz.io/customers/ihg",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Indiana Secretary of State",
+   "domain": "sos.in.gov",
+   "grade": "B",
+   "evidence": "\"Wiz was deployed and up and running within a couple of hours.\"",
+   "source_url": "https://www.wiz.io/customers/indiana-secretary-of-state",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Konverso",
+   "domain": "konverso.ai",
+   "grade": "B",
+   "evidence": "\"Konverso uses Wiz to manage the cloud environment that supports its GenAI-powered virtual assistant platform.\"",
+   "source_url": "https://www.wiz.io/customers/konverso",
+   "confidence": "Verified"
+  },
+  {
+   "name": "La Centrale",
+   "domain": "lacentrale.fr",
+   "grade": "B",
+   "evidence": "\"We checked Wiz, and there was a big red banner showing exactly which repositories were impacted.\"",
+   "source_url": "https://www.wiz.io/customers/lacentrale",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Ledger",
+   "domain": "ledger.com",
+   "grade": "B",
+   "evidence": "\"All of our developers use Wiz. They access it through both the browser and through the API.\"",
+   "source_url": "https://www.wiz.io/customers/ledger",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Lili",
+   "domain": "lili.co",
+   "grade": "B",
+   "evidence": "\"Wiz is my eyes. Without it, I would be blind.\"",
+   "source_url": "https://www.wiz.io/customers/lili",
+   "confidence": "Verified"
+  },
+  {
+   "name": "MassMutual",
+   "domain": "massmutual.com",
+   "grade": "B",
+   "evidence": "\"from MassMutual to Fox, Blackstone, Salesforce, Slack, The Home Depot, Rivian, DocuSign, and UiPath.\"",
+   "source_url": "https://research.contrary.com/company/wiz",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Monese",
+   "domain": "monese.com",
+   "grade": "B",
+   "evidence": "\"As the CISO, it's nearly impossible to understand all the components that make up our environment.\"",
+   "source_url": "https://www.wiz.io/customers/monese",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Monument Bank",
+   "domain": "monument.co",
+   "grade": "B",
+   "evidence": "\"I said to the CTO, if you don't buy this, I quit, because I can't do my job without it.\"",
+   "source_url": "https://www.wiz.io/customers/monument-bank",
+   "confidence": "Verified"
+  },
+  {
+   "name": "New American Funding",
+   "domain": "newamericanfunding.com",
+   "grade": "B",
+   "evidence": "\"We've become more secure, faster, with fewer resources. Wiz is a necessity.\"",
+   "source_url": "https://www.wiz.io/customers/new-american-funding",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Nipro Digital Technologies Europe",
+   "domain": "nipro-group.com",
+   "grade": "B",
+   "evidence": "\"With WizGo, the biggest value is that we get practical cloud security coverage without too much operational overhead.\"",
+   "source_url": "https://www.wiz.io/customers/nipro",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Northflank",
+   "domain": "northflank.com",
+   "grade": "B",
+   "evidence": "\"Wiz gives us visibility and best-in-class integration with our cloud accounts.\"",
+   "source_url": "https://www.wiz.io/customers/northflank",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Octus",
+   "domain": "octus.com",
+   "grade": "B",
+   "evidence": "\"Prior to implementing Wiz we lacked a single view of oversight into our cloud environments.\"",
+   "source_url": "https://www.wiz.io/customers/octus",
+   "confidence": "Verified"
+  },
+  {
+   "name": "OpenVPN",
+   "domain": "openvpn.net",
+   "grade": "B",
+   "evidence": "\"We chose Wiz because the Security Graph gives us one picture of that risk.\"",
+   "source_url": "https://www.prnewswire.com/news-releases/foresite-launches-managed-services-for-wiz-reaching-premier-tier-in-the-wiz-partner-alliance-services-program-302890968.html",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Owkin",
+   "domain": "owkin.com",
+   "grade": "B",
+   "evidence": "\"I deployed Wiz across our entire estate... in an hour.\"",
+   "source_url": "https://www.wiz.io/customers/owkin",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Plaid",
+   "domain": "plaid.com",
+   "grade": "B",
+   "evidence": "\"Wiz uniquely understands the needs of our engineering and security teams and built a product that has enabled us to successfully shift left.\"",
+   "source_url": "https://www.newswire.com/news/wiz-announces-new-cnapp-capabilities-for-secure-cloud-development-22183195",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Playtech",
+   "domain": "playtech.com",
+   "grade": "B",
+   "evidence": "\"Our IT and development teams needed a greater understanding and prioritization of vulnerabilities.\"",
+   "source_url": "https://www.wiz.io/customers/playtech",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Postman",
+   "domain": "postman.com",
+   "grade": "B",
+   "evidence": "\"I have a CISO dashboard built that I use to look at the health of my entire production environment.\"",
+   "source_url": "https://www.wiz.io/customers/postman",
+   "confidence": "Verified"
+  },
+  {
+   "name": "project44",
+   "domain": "project44.com",
+   "grade": "B",
+   "evidence": "\"Wiz really gave us a good, working solution.\"",
+   "source_url": "https://www.wiz.io/customers/project44",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Redis",
+   "domain": "redis.io",
+   "grade": "B",
+   "evidence": "\"We've shifted away from a multi-platform, multi-technology detection strategy to focusing on Wiz.\"",
+   "source_url": "https://www.wiz.io/customers/redis-unified-cloud-security",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Renaissance Learning",
+   "domain": "renaissance.com",
+   "grade": "B",
+   "evidence": "\"Day one after an acquisition, I can plug Wiz in, sync with the new environment, and see it right away.\"",
+   "source_url": "https://www.wiz.io/customers/renaissance",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Revolut",
+   "domain": "revolut.com",
+   "grade": "B",
+   "evidence": "\"Security is like an immune system of the organization. It needs to evolve with the primary function of the organism.\"",
+   "source_url": "https://www.wiz.io/customers/revolut",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Rivian",
+   "domain": "rivian.com",
+   "grade": "B",
+   "evidence": "\"...Fox, Blackstone, Salesforce, Slack, The Home Depot, Rivian, DocuSign, and UiPath.\"",
+   "source_url": "https://research.contrary.com/company/wiz",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Scalable Capital",
+   "domain": "scalable.capital",
+   "grade": "B",
+   "evidence": "\"Wiz made risk management easier and more tangible for our developers. They now have better tooling and context.\"",
+   "source_url": "https://www.wiz.io/customers/scalable-capital",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Schibsted",
+   "domain": "schibsted.com",
+   "grade": "B",
+   "evidence": "\"Wiz is built for cloud security, whereas other solutions have cloud security as a business case or added feature.\"",
+   "source_url": "https://www.wiz.io/customers/schibsted",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Schrodinger",
+   "domain": "schrodinger.com",
+   "grade": "B",
+   "evidence": "\"My vision is to empower our engineers to own their security management and make remediation more self-service.\"",
+   "source_url": "https://www.wiz.io/customers/schrodinger",
+   "confidence": "Verified"
+  },
+  {
+   "name": "ServiceNow",
+   "domain": "servicenow.com",
+   "grade": "B",
+   "evidence": "\"We want to give our developers the tools they need to succeed while ensuring the projects they're working on are secure.\"",
+   "source_url": "https://www.wiz.io/customers/servicenow",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Siemens",
+   "domain": "siemens.com",
+   "grade": "B",
+   "evidence": "\"With Wiz, we have a way to clearly see and measure our progress.\"",
+   "source_url": "https://www.wiz.io/customers/siemens",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Sixt",
+   "domain": "sixt.com",
+   "grade": "B",
+   "evidence": "\"The deployment experience with Wiz was the smoothest I've encountered.\"",
+   "source_url": "https://www.wiz.io/customers/sixt",
+   "confidence": "Verified"
+  },
+  {
+   "name": "SuperMoney",
+   "domain": "supermoney.com",
+   "grade": "B",
+   "evidence": "\"Within six hours, the team had full visibility across their entire AWS infrastructure.\"",
+   "source_url": "https://www.wiz.io/customers/super",
+   "confidence": "Verified"
+  },
+  {
+   "name": "TeamSystem",
+   "domain": "teamsystem.com",
+   "grade": "B",
+   "evidence": "\"After 10 minutes looking at Wiz, I wanted to start the proof of concept because it was playing in another league compared to the competitors.\"",
+   "source_url": "https://www.wiz.io/customers/teamsystem",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Texas A&M University",
+   "domain": "tamu.edu",
+   "grade": "B",
+   "evidence": "\"Our operations team is in the tool every day... they tackle it themselves.\"",
+   "source_url": "https://www.wiz.io/customers/tamu",
+   "confidence": "Verified"
+  },
+  {
+   "name": "The Home Depot",
+   "domain": "homedepot.com",
+   "grade": "B",
+   "evidence": "\"from MassMutual to Fox, Blackstone, Salesforce, Slack, The Home Depot, Rivian, DocuSign, and UiPath.\"",
+   "source_url": "https://research.contrary.com/company/wiz",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Thoughtworks",
+   "domain": "thoughtworks.com",
+   "grade": "B",
+   "evidence": "\"The security team's role is to support and guide our development teams as they build products with advanced security.\"",
+   "source_url": "https://www.wiz.io/customers/thoughtworks",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Tide",
+   "domain": "tide.co",
+   "grade": "B",
+   "evidence": "\"It's all about figuring out how to customize what you actually care about.\"",
+   "source_url": "https://www.wiz.io/customers/tide",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Twilio",
+   "domain": "twilio.com",
+   "grade": "B",
+   "evidence": "\"The team uses Wiz's dynamic scanner to determine what is actually possible at the network edge, downgrading the priority of non-exploitable issues.\"",
+   "source_url": "https://www.wiz.io/customers/twilio",
+   "confidence": "Verified"
+  },
+  {
+   "name": "UiPath",
+   "domain": "uipath.com",
+   "grade": "B",
+   "evidence": "\"...The Home Depot, Rivian, DocuSign, and UiPath.\"",
+   "source_url": "https://research.contrary.com/company/wiz",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Valiuz",
+   "domain": "valiuz.com",
+   "grade": "B",
+   "evidence": "\"In less than two days, I had a clear map of our biggest risks and was able to launch a remediation plan.\"",
+   "source_url": "https://www.wiz.io/customers/valiuz",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Zendesk",
+   "domain": "zendesk.com",
+   "grade": "B",
+   "evidence": "\"With Wiz, we could see everything across our environment and where we were running Log4Shell.\"",
+   "source_url": "https://www.wiz.io/customers/zendesk",
+   "confidence": "Verified"
+  },
+  {
+   "name": "ZS Associates",
+   "domain": "zs.com",
+   "grade": "B",
+   "evidence": "\"Wiz was pulling in information from many different sources and correlating it into one graph.\"",
+   "source_url": "https://www.wiz.io/customers/zs-associates",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Accenture",
+   "domain": "accenture.com",
+   "grade": "C",
+   "evidence": "\"Companies using wiz.io ... Accenture PLC\" (tech-stack database)",
+   "source_url": "https://enlyft.com/tech/products/wiz-io",
+   "confidence": "Likely"
+  },
+  {
+   "name": "Aristocrat",
+   "domain": "aristocrat.com",
+   "grade": "C",
+   "evidence": "\"Some of the companies that use Wiz include Aristocrat ... Signify, PagerDuty, Finout, GuidePoint Security.\"",
+   "source_url": "https://theirstack.com/en/technology/wiz",
+   "confidence": "Likely"
+  },
+  {
+   "name": "Cognizant",
+   "domain": "cognizant.com",
+   "grade": "C",
+   "evidence": "\"Companies using wiz.io ... Cognizant Technology Solutions Corp\" (tech-stack database)",
+   "source_url": "https://enlyft.com/tech/products/wiz-io",
+   "confidence": "Likely"
+  },
+  {
+   "name": "EPAM Systems",
+   "domain": "epam.com",
+   "grade": "C",
+   "evidence": "\"Companies using wiz.io ... EPAM Systems Inc\" (tech-stack database)",
+   "source_url": "https://enlyft.com/tech/products/wiz-io",
+   "confidence": "Likely"
+  },
+  {
+   "name": "Eventbrite",
+   "domain": "eventbrite.com",
+   "grade": "C",
+   "evidence": "\"unified security graph that brings together configuration, risk, identity, workload vulnerability\" (PeerSpot review)",
+   "source_url": "https://www.peerspot.com/products/wiz-reviews",
+   "confidence": "Likely"
+  },
+  {
+   "name": "Insurance Office of America",
+   "domain": "ioausa.com",
+   "grade": "C",
+   "evidence": "\"Named companies shown as using Wiz ... Insurance Office of America\" (tech-stack database)",
+   "source_url": "https://theirstack.com/en/technology/wiz",
+   "confidence": "Likely"
+  },
+  {
+   "name": "NatWest Group",
+   "domain": "natwest.com",
+   "grade": "C",
+   "evidence": "\"seamless integration with different DevOps tooling like GitHub or Azure DevOps\" (TrustRadius review)",
+   "source_url": "https://www.trustradius.com/products/wiz/reviews",
+   "confidence": "Likely"
+  },
+  {
+   "name": "Pennylane",
+   "domain": "pennylane.com",
+   "grade": "C",
+   "evidence": "\"Named companies shown as using Wiz ... Pennylane\" (tech-stack database)",
+   "source_url": "https://theirstack.com/en/technology/wiz",
+   "confidence": "Likely"
+  },
+  {
+   "name": "Signify",
+   "domain": "signify.com",
+   "grade": "C",
+   "evidence": "\"Named companies shown as using Wiz ... Signify\" (tech-stack database)",
+   "source_url": "https://theirstack.com/en/technology/wiz",
+   "confidence": "Likely"
+  },
+  {
+   "name": "Unanet",
+   "domain": "unanet.com",
+   "grade": "C",
+   "evidence": "\"Companies using wiz.io ... Unanet\" (tech-stack database)",
+   "source_url": "https://enlyft.com/tech/products/wiz-io",
+   "confidence": "Likely"
+  },
+  {
+   "name": "Vanguard",
+   "domain": "vanguard.com",
+   "grade": "C",
+   "evidence": "\"Named companies shown as using Wiz ... Vanguard\" (tech-stack database)",
+   "source_url": "https://theirstack.com/en/technology/wiz",
+   "confidence": "Likely"
+  },
+  {
+   "name": "Wipro",
+   "domain": "wipro.com",
+   "grade": "C",
+   "evidence": "\"proven experience implementing and administering the Wiz Cloud Security Platform; 5-8 years of experience\" (job posting)",
+   "source_url": "https://careers.wipro.com/",
+   "confidence": "Likely"
+  },
+  {
+   "name": "World Wide Technology",
+   "domain": "wwt.com",
+   "grade": "C",
+   "evidence": "\"Named companies shown as using Wiz ... World Wide Technology\" (tech-stack database)",
+   "source_url": "https://theirstack.com/en/technology/wiz",
+   "confidence": "Likely"
+  }
+ ],
+ "generated_at": "2026-11-02T17:43:28Z",
+ "company_count": 87
+}
