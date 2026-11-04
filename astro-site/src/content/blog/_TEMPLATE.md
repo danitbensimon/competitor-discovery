@@ -1,5 +1,5 @@
 ---
-title: "How do I find out who uses [Competitor]?"   # exact question from Search Console / a prospect
+title: "Vanta customers"   # short, says what it is. No who/what/where/why, no marketing
 answer: "Two to three sentences that answer the question directly. Google and ChatGPT quote this."
 description: "Meta description, under 155 characters, with the question's keywords."
 date: 2026-11-04

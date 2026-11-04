@@ -1,5 +1,5 @@
 ---
-title: "How do I find out which companies use my competitor?"
+title: "Finding competitor customers"
 answer: "Look where customers leave public traces: the competitor's case studies, the customer's own trust or security page, job posts that ask for experience with the tool, named reviews on G2 and Capterra, partner and integration pages, and press. Keep the source URL for every company, or it is a guess."
 description: "Where to find companies using a competitor: case studies, job posts, reviews, trust pages and tech-stack data. A step-by-step guide, plus a free search."
 date: 2026-11-04
