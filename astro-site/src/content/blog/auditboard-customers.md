@@ -1,5 +1,5 @@
 ---
-title: "AuditBoard enterprise customers"
+title: "AuditBoard customers"
 answer: "We verified 74 companies using AuditBoard. The 12 with the strongest evidence include BNY Mellon, Humana, Estée Lauder, PACCAR, Lennar, PetSmart, Snowflake and Teradata. Each one is backed by a public case study, customer quote or job post."
 description: "74 verified AuditBoard customers, including BNY Mellon, Humana, Estée Lauder and PACCAR. Every company backed by a public source. Free list."
 date: 2026-11-04

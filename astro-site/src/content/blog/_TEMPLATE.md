@@ -1,5 +1,5 @@
 ---
-title: "Vanta customers"   # short, says what it is. No who/what/where/why, no marketing
+title: "vanta clients"   # the exact query from Search Console or a prospect, as typed (capitalized)
 answer: "Two to three sentences that answer the question directly. Google and ChatGPT quote this."
 description: "Meta description, under 155 characters, with the question's keywords."
 date: 2026-11-04
