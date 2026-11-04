@@ -1,0 +1,19 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => b.data.date - a.data.date);
+---
+<Base title="CompetitorIQ Blog: answers on finding competitor customers" description="Straight answers to the questions B2B teams ask about finding who uses a competitor, building displacement lists and turning them into pipeline.">
+  <div style="max-width:820px; margin:0 auto; padding:48px 24px 80px;">
+    <a href="/" style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#8A8A94;">← CompetitorIQ</a>
+    <h1 style="font-family:'Space Grotesk',sans-serif; font-size:42px; letter-spacing:-0.03em; margin:18px 0 8px;">Blog</h1>
+    <p style="font-size:17px; color:#54545F; margin:0 0 32px;">One question per post. The answer comes first.</p>
+    {posts.length === 0 && <p style="font-size:16px; color:#54545F;">First posts are on the way. Meanwhile, <a href="/#lists">browse the customer lists</a>.</p>}
+    {posts.map((p) => (
+      <a href={`/blog/${p.slug}/`} style="display:block; background:#fff; border:1px solid #ECECF1; border-radius:16px; padding:22px 24px; margin-bottom:14px; color:#0B0B12;">
+        <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:21px;">{p.data.title}</div>
+        <div style="font-size:16px; color:#54545F; margin-top:8px; line-height:1.55;">{p.data.answer}</div>
+      </a>
+    ))}
+  </div>
+</Base>

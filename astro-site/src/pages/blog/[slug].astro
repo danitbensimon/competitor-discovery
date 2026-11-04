@@ -1,0 +1,48 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog', ({ data }) => !data.draft);
+  return posts.map((post) => ({ params: { slug: post.slug }, props: { post } }));
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+const files = import.meta.glob('../../data/competitors/*.json', { eager: true });
+const bySlug = Object.fromEntries(Object.values(files).map((d) => [d.competitor.slug, d]));
+const related = post.data.lists.map((s) => bySlug[s]).filter(Boolean);
+const dateStr = post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const jsonLd = [
+  { '@context': 'https://schema.org', '@type': 'Article', headline: post.data.title, description: post.data.description, datePublished: post.data.date.toISOString(), author: { '@type': 'Person', name: 'Danit Ben Simon' }, publisher: { '@type': 'Organization', name: 'CompetitorIQ', url: 'https://competitorcustomer.com' } },
+  ...(post.data.faqs.length ? [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: post.data.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []),
+];
+---
+<Base title={post.data.title} description={post.data.description}>
+  {jsonLd.map((j) => <script type="application/ld+json" set:html={JSON.stringify(j)} slot="head" />)}
+  <article class="post" style="max-width:760px; margin:0 auto; padding:48px 24px 80px; font-size:17px; line-height:1.7;">
+    <a href="/blog/" style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#8A8A94;">← Blog</a>
+    <h1 style="font-family:'Space Grotesk',sans-serif; font-size:40px; line-height:1.1; letter-spacing:-0.03em; margin:18px 0 10px;">{post.data.title}</h1>
+    <div style="font-size:14px; color:#8A8A94;">Danit Ben Simon · {dateStr}</div>
+    <div style="background:#EEF0FF; border:1px solid #DBE0FF; border-radius:14px; padding:18px 20px; margin:26px 0; font-weight:600;">{post.data.answer}</div>
+    <Content />
+    {related.length > 0 && (
+      <div style="margin-top:36px;">
+        <h2 style="font-family:'Space Grotesk',sans-serif;">Free customer lists</h2>
+        {related.map((d) => <p><a href={`/companies-using/${d.competitor.slug}/`}>Who uses {d.competitor.name}? {d.company_count} verified customers →</a></p>)}
+      </div>
+    )}
+    {post.data.faqs.length > 0 && (
+      <div style="margin-top:36px;">
+        <h2 style="font-family:'Space Grotesk',sans-serif;">FAQ</h2>
+        {post.data.faqs.map((f) => (<details style="border-bottom:1px solid #ECECF1; padding:12px 0;"><summary style="font-weight:600;">{f.q}</summary><p>{f.a}</p></details>))}
+      </div>
+    )}
+    <div style="margin-top:40px; background:#0B0B12; color:#fff; border-radius:18px; padding:26px;">
+      <div style="font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:600;">Get your competitor's customer list</div>
+      <p style="color:#C9C9D4; margin:8px 0 16px;">Enter a competitor's domain and get 10 companies using it free, each with the source behind it.</p>
+      <a href="/#demo" style="display:inline-block; background:#fff; color:#0B0B12; padding:10px 18px; border-radius:11px; font-weight:600;">Run a free search</a>
+      <a href="https://meetings-eu1.hubspot.com/dben-simon" style="margin-left:14px; color:#9D93FF; font-weight:600;">Book a time with Danit</a>
+    </div>
+  </article>
+</Base>
