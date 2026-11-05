@@ -1,19 +1,60 @@
 ---
 import Base from '../../layouts/Base.astro';
+import SiteNav from '../../components/SiteNav.astro';
 import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => b.data.date - a.data.date);
+const files = import.meta.glob('../../data/competitors/*.json', { eager: true });
+const bySlug = Object.fromEntries(Object.values(files).map((d) => [d.competitor.slug, d]));
+// A post gets a count badge when its title names the competitor of its first list.
+const badge = (p) => {
+  const d = bySlug[p.data.lists[0]];
+  return d && p.data.title.toLowerCase().includes(d.competitor.name.toLowerCase()) ? `${d.company_count} verified customers` : 'Playbook';
+};
+const fmt = (d) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 ---
 <Base title="CompetitorIQ Blog: answers on finding competitor customers" description="Straight answers to the questions B2B teams ask about finding who uses a competitor, building displacement lists and turning them into pipeline.">
-  <div style="max-width:820px; margin:0 auto; padding:48px 24px 80px;">
-    <a href="/" style="font-family:'JetBrains Mono',monospace; font-size:18px; color:#33333C;">← CompetitorIQ</a>
-    <h1 style="font-family:'Space Grotesk',sans-serif; font-size:42px; letter-spacing:-0.03em; margin:18px 0 8px;">Blog</h1>
-    <p style="font-size:17px; color:#54545F; margin:0 0 32px;">One question per post. The answer comes first.</p>
-    {posts.length === 0 && <p style="font-size:16px; color:#54545F;">First posts are on the way. Meanwhile, <a href="/#lists">browse the customer lists</a>.</p>}
+  <SiteNav />
+  <header class="bi-hero">
+    <div class="bp-glow" aria-hidden="true"><span></span><span></span></div>
+    <div class="bi-in">
+      <h1>Competitor customer <span class="bp-grad">research</span></h1>
+      <p>Each post answers 1 question with verified data: who uses a competitor, how we know, and how to turn that list into meetings.</p>
+    </div>
+  </header>
+  <div class="bi-grid">
+    {posts.length === 0 && <p>First posts are on the way. Meanwhile, <a href="/#lists">browse the customer lists</a>.</p>}
     {posts.map((p) => (
-      <a href={`/blog/${p.slug}/`} style="display:block; background:#fff; border:1px solid #ECECF1; border-radius:16px; padding:22px 24px; margin-bottom:14px; color:#0B0B12;">
-        <div style="font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:21px;">{p.data.title}</div>
-        <div style="font-size:16px; color:#54545F; margin-top:8px; line-height:1.55;">{p.data.answer}</div>
+      <a href={`/blog/${p.slug}/`} class="bi-card">
+        <div class="bi-top"><span class="bi-badge">{badge(p)}</span><span class="bi-date">{fmt(p.data.date)}</span></div>
+        <div class="bi-title">{p.data.title}</div>
+        <div class="bi-answer">{p.data.answer}</div>
+        <div class="bi-read">Read the answer →</div>
       </a>
     ))}
   </div>
+  <style>
+    .bi-hero { position:relative; overflow:hidden; border-bottom:1px solid #EDEDF1; }
+    .bp-glow { position:absolute; inset:-20% -5% 0; pointer-events:none; }
+    .bp-glow span { position:absolute; width:560px; height:560px; border-radius:50%; filter:blur(12px); animation:ciq-drift 22s ease-in-out infinite; }
+    .bp-glow span:first-child { left:-6%; top:-40%; background:radial-gradient(circle,rgba(75,59,255,.14),transparent 62%); }
+    .bp-glow span:last-child { right:-6%; top:-30%; background:radial-gradient(circle,rgba(34,211,238,.1),transparent 62%); animation-direction:reverse; }
+    .bi-in { position:relative; max-width:1200px; margin:0 auto; padding:56px 40px 52px; }
+    .bi-in h1 { font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:56px; line-height:1.05; letter-spacing:-0.03em; margin:0; }
+    .bp-grad { background:linear-gradient(115deg,#4B3BFF,#8B5CF6 60%,#22D3EE 120%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .bi-in p { font-size:20px; line-height:1.55; color:#1A1A22; margin:18px 0 0; max-width:40em; }
+    .bi-grid { max-width:1200px; margin:0 auto; padding:40px 40px 90px; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+    .bi-card { display:flex; flex-direction:column; gap:12px; background:#fff; border:1px solid #ECECF1; border-radius:20px; padding:28px; color:#0B0B12; box-shadow:0 1px 2px rgba(11,11,18,.04); transition:border-color .15s, box-shadow .15s, transform .15s; }
+    .bi-card:hover { color:#0B0B12; border-color:#C9C2FF; box-shadow:0 24px 60px -36px rgba(75,59,255,.45); transform:translateY(-2px); }
+    .bi-top { display:flex; justify-content:space-between; align-items:center; gap:12px; }
+    .bi-badge { background:#EEF0FF; color:#4B3BFF; border:1px solid #DBE0FF; border-radius:999px; padding:4px 12px; font-weight:700; font-size:16px; }
+    .bi-date { font-size:16px; color:#33333C; }
+    .bi-title { font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:28px; letter-spacing:-0.02em; line-height:1.15; }
+    .bi-answer { font-size:17px; line-height:1.6; color:#1A1A22; }
+    .bi-read { margin-top:auto; padding-top:6px; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; color:#4B3BFF; }
+    @media (max-width: 760px) {
+      .bi-in { padding:36px 16px 32px; } .bi-in h1 { font-size:40px; }
+      .bi-grid { grid-template-columns:1fr; padding:24px 16px 64px; }
+      .bi-card { padding:22px; }
+    }
+  </style>
 </Base>
