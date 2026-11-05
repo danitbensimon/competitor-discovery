@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import SiteNav from '../../components/SiteNav.astro';
 import { getCollection } from 'astro:content';
 
 export async function getStaticPaths() {
@@ -8,11 +9,20 @@ export async function getStaticPaths() {
 }
 
 const { post } = Astro.props;
-const { Content } = await post.render();
+const { Content, headings } = await post.render();
+const toc = headings.filter((h) => h.depth === 2);
 const files = import.meta.glob('../../data/competitors/*.json', { eager: true });
 const bySlug = Object.fromEntries(Object.values(files).map((d) => [d.competitor.slug, d]));
 const related = post.data.lists.map((s) => bySlug[s]).filter(Boolean);
 const dateStr = post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+const words = post.body.split(/\s+/).length;
+const minutes = Math.max(1, Math.round(words / 230));
+
+// Stat cards come from the list data, shown when the post is about that competitor.
+const main = related[0] && post.data.title.toLowerCase().includes(related[0].competitor.name.toLowerCase()) ? related[0] : null;
+const grades = main ? ['A', 'B', 'C'].map((g) => main.companies.filter((c) => c.grade === g).length) : [];
+const titleParts = main ? post.data.title.split(new RegExp(`(${main.competitor.name})`, 'i')) : [];
+
 const jsonLd = [
   { '@context': 'https://schema.org', '@type': 'Article', headline: post.data.title, description: post.data.description, datePublished: post.data.date.toISOString(), author: { '@type': 'Person', name: 'Danit Ben Simon' }, publisher: { '@type': 'Organization', name: 'CompetitorIQ', url: 'https://competitorcustomer.com' } },
   ...(post.data.faqs.length ? [{ '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: post.data.faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) }] : []),
@@ -20,37 +30,170 @@ const jsonLd = [
 ---
 <Base title={post.data.title} description={post.data.description}>
   {jsonLd.map((j) => <script type="application/ld+json" set:html={JSON.stringify(j)} slot="head" />)}
-  <article class="post" style="max-width:760px; margin:0 auto; padding:48px 24px 80px; font-size:17px; line-height:1.7;">
-    <a href="/blog/" style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#8A8A94;">← Blog</a>
-    <h1 style="font-family:'Space Grotesk',sans-serif; font-size:40px; line-height:1.1; letter-spacing:-0.03em; margin:18px 0 10px;">{post.data.title}</h1>
-    <div style="font-size:14px; color:#8A8A94;">Danit Ben Simon · {dateStr}</div>
-    <div style="background:#EEF0FF; border:1px solid #DBE0FF; border-radius:14px; padding:18px 20px; margin:26px 0; font-weight:600;">{post.data.answer}</div>
-    <Content />
-    {related.length > 0 && (
-      <div style="margin-top:36px;">
-        <h2 style="font-family:'Space Grotesk',sans-serif;">Free customer lists</h2>
-        {related.map((d) => <p><a href={`/companies-using/${d.competitor.slug}/`}>Who uses {d.competitor.name}? {d.company_count} verified customers →</a></p>)}
+  <SiteNav />
+
+  <header class="bp-hero">
+    <div class="bp-glow" aria-hidden="true"><span></span><span></span></div>
+    <div class="bp-hero-in">
+      <div class="bp-crumbs"><a href="/">CompetitorIQ</a><span>/</span><a href="/blog/">Blog</a></div>
+      <h1>{titleParts.length === 3 ? <>{titleParts[0]}<span class="bp-grad">{titleParts[1]}</span>{titleParts[2]}</> : post.data.title}</h1>
+      <div class="bp-meta"><span>Danit Ben Simon</span><span class="bp-dot">·</span><span>{dateStr}</span><span class="bp-dot">·</span><span>{minutes} min read</span></div>
+      <div class="bp-answer">
+        <div class="bp-answer-label">Short answer</div>
+        <p>{post.data.answer}</p>
       </div>
-    )}
-    {post.data.faqs.length > 0 && (
-      <div style="margin-top:36px;">
-        <h2 style="font-family:'Space Grotesk',sans-serif;">FAQ</h2>
-        {post.data.faqs.map((f) => (<details style="border-bottom:1px solid #ECECF1; padding:12px 0;"><summary style="font-weight:600;">{f.q}</summary><p>{f.a}</p></details>))}
-      </div>
-    )}
-    <div style="margin-top:40px; background:#0B0B12; color:#fff; border-radius:18px; padding:26px;">
-      <div style="font-family:'Space Grotesk',sans-serif; font-size:22px; font-weight:600;">Get your competitor's customer list</div>
-      <p style="color:#C9C9D4; margin:8px 0 16px;">Enter a competitor's domain and get 10 companies using it free, each with the source behind it.</p>
-      <a href="/#demo" style="display:inline-block; background:#fff; color:#0B0B12; padding:10px 18px; border-radius:11px; font-weight:600;">Run a free search</a>
-      <a href="https://meetings-eu1.hubspot.com/dben-simon" style="margin-left:14px; color:#9D93FF; font-weight:600;">Book a time with Danit</a>
+      {main && (
+        <div class="bp-stats">
+          <div class="bp-stat bp-stat-total"><b>{main.company_count}</b><span>verified {main.competitor.name} customers</span></div>
+          <div class="bp-stat"><i class="g gA">A</i><div><b>{grades[0]}</b><span>multiple signals</span></div></div>
+          <div class="bp-stat"><i class="g gB">B</i><div><b>{grades[1]}</b><span>direct evidence</span></div></div>
+          <div class="bp-stat"><i class="g gC">C</i><div><b>{grades[2]}</b><span>tech-stack data</span></div></div>
+        </div>
+      )}
     </div>
-  </article>
+  </header>
+
+  <div class="bp-wrap">
+    <article class="post">
+      <Content />
+      {post.data.faqs.length > 0 && (
+        <section class="bp-faq">
+          <h2 id="faq">FAQ</h2>
+          {post.data.faqs.map((f) => (<details><summary>{f.q}</summary><p>{f.a}</p></details>))}
+        </section>
+      )}
+      <div class="bp-cta">
+        <div class="bp-cta-title">Get your competitor's customer list</div>
+        <p>Enter a competitor's domain and get 10 companies using it free, each with the source behind it.</p>
+        <div class="bp-cta-row">
+          <a href="/#demo" class="bp-btn">Run a free search</a>
+          <a href="https://meetings-eu1.hubspot.com/dben-simon" target="_blank" rel="noopener" class="bp-link">Book a time with Danit →</a>
+        </div>
+      </div>
+    </article>
+
+    <aside class="bp-side">
+      {toc.length > 0 && (
+        <div class="bp-card">
+          <div class="bp-card-label">In this post</div>
+          <ol class="bp-toc">{toc.map((h) => <li><a href={`#${h.slug}`}>{h.text}</a></li>)}</ol>
+        </div>
+      )}
+      {related.length > 0 && (
+        <div class="bp-card">
+          <div class="bp-card-label">Free customer lists</div>
+          {related.map((d) => (
+            <a class="bp-list" href={`/companies-using/${d.competitor.slug}/`}>
+              <span>{d.competitor.name}</span><b>{d.company_count}</b>
+            </a>
+          ))}
+        </div>
+      )}
+      <a class="bp-side-cta" href="/#demo">Build your list free →</a>
+    </aside>
+  </div>
+
   <style is:global>
-    .post table { width:100%; border-collapse:collapse; margin:18px 0 26px; font-size:15px; background:#fff; border:1px solid #ECECF1; border-radius:12px; overflow:hidden; display:block; overflow-x:auto; }
-    .post th, .post td { text-align:left; padding:10px 14px; border-bottom:1px solid #F0F0F4; vertical-align:top; }
-    .post th { background:#F6F6FA; font-weight:700; }
-    .post h2 { font-family:'Space Grotesk',sans-serif; font-size:27px; letter-spacing:-0.02em; margin:40px 0 10px; }
-    .post blockquote { margin:18px 0; padding:16px 20px; background:#fff; border-left:3px solid #4B3BFF; border-radius:8px; color:#33333C; }
-    .post li { margin:6px 0; }
+    .bp-hero { position:relative; overflow:hidden; border-bottom:1px solid #EDEDF1; }
+    .bp-glow { position:absolute; inset:-20% -5% 0; pointer-events:none; }
+    .bp-glow span { position:absolute; width:560px; height:560px; border-radius:50%; filter:blur(12px); animation:ciq-drift 22s ease-in-out infinite; }
+    .bp-glow span:first-child { left:-6%; top:-40%; background:radial-gradient(circle,rgba(75,59,255,.14),transparent 62%); }
+    .bp-glow span:last-child { right:-6%; top:-30%; background:radial-gradient(circle,rgba(34,211,238,.1),transparent 62%); animation-direction:reverse; }
+    .bp-hero-in { position:relative; max-width:1200px; margin:0 auto; padding:40px 40px 48px; }
+    .bp-crumbs { display:flex; gap:8px; font-family:'JetBrains Mono',monospace; font-size:16px; color:#33333C; margin-bottom:20px; }
+    .bp-crumbs a { color:#33333C; } .bp-crumbs a:hover { color:#4B3BFF; }
+    .bp-hero h1 { font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:52px; line-height:1.05; letter-spacing:-0.03em; margin:0; max-width:18em; }
+    .bp-grad { background:linear-gradient(115deg,#4B3BFF,#8B5CF6 60%,#22D3EE 120%); -webkit-background-clip:text; background-clip:text; color:transparent; }
+    .bp-meta { display:flex; flex-wrap:wrap; gap:12px; margin-top:16px; font-size:18px; color:#33333C; }
+    .bp-dot { color:#B5B5BD; }
+    .bp-answer { margin-top:28px; max-width:820px; background:#fff; border:1px solid #DBE0FF; border-left:4px solid #4B3BFF; border-radius:16px; padding:22px 26px; box-shadow:0 24px 60px -44px rgba(75,59,255,.4); }
+    .bp-answer-label { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:18px; color:#4B3BFF; margin-bottom:6px; }
+    .bp-answer p { margin:0; font-size:20px; line-height:1.55; font-weight:600; color:#0B0B12; }
+    .bp-stats { display:flex; flex-wrap:wrap; gap:14px; margin-top:22px; }
+    .bp-stat { display:flex; align-items:center; gap:12px; background:#fff; border:1px solid #ECECF1; border-radius:14px; padding:14px 20px; box-shadow:0 1px 2px rgba(11,11,18,.04); }
+    .bp-stat div, .bp-stat-total { display:flex; flex-direction:column; }
+    .bp-stat-total { align-items:flex-start; background:linear-gradient(135deg,#4B3BFF,#7C3AED); border:0; color:#fff; }
+    .bp-stat b { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:26px; letter-spacing:-0.01em; line-height:1.1; }
+    .bp-stat span { font-size:16px; color:#33333C; }
+    .bp-stat-total span { color:#fff; }
+    .g { width:36px; height:36px; border-radius:9px; font-style:normal; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:18px; display:flex; align-items:center; justify-content:center; }
+    .gA { background:linear-gradient(135deg,#4B3BFF,#7C3AED); color:#fff; }
+    .gB { background:#EEF0FF; color:#4B3BFF; border:1px solid #DBE0FF; }
+    .gC { background:#F1F1F4; color:#33333C; border:1px solid #E4E4EA; }
+
+    .bp-wrap { max-width:1200px; margin:0 auto; padding:16px 40px 90px; display:grid; grid-template-columns:minmax(0,1fr) 300px; gap:56px; align-items:start; }
+    .post { font-size:18px; line-height:1.75; color:#1A1A22; min-width:0; }
+    .post h2 { font-family:'Space Grotesk',sans-serif; font-size:32px; line-height:1.15; letter-spacing:-0.02em; margin:56px 0 14px; padding-top:28px; border-top:1px solid #ECECF1; scroll-margin-top:90px; }
+    .post > h2:first-child { border-top:0; margin-top:24px; }
+    .post h3 { font-family:'Space Grotesk',sans-serif; font-size:23px; margin:32px 0 8px; }
+    .post p { margin:0 0 18px; }
+    .post strong { color:#0B0B12; }
+    .post ul, .post ol { padding-left:22px; margin:0 0 20px; }
+    .post li { margin:8px 0; }
+    .post li::marker { color:#4B3BFF; font-weight:700; }
+    .post a { text-decoration:underline; text-decoration-color:#C9C2FF; text-underline-offset:3px; }
+
+    .post table { width:100%; border-collapse:separate; border-spacing:0; margin:22px 0 30px; font-size:17px; background:#fff; border:1px solid #ECECF1; border-radius:16px; overflow:hidden; box-shadow:0 24px 60px -48px rgba(75,59,255,.35); }
+    .post th, .post td { text-align:left; padding:14px 18px; border-bottom:1px solid #F0F0F4; vertical-align:top; }
+    .post tr:last-child td { border-bottom:0; }
+    .post th { background:#F6F6FA; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:17px; color:#0B0B12; }
+    .post td:last-child { font-family:'Space Grotesk',sans-serif; font-weight:700; }
+    .post tbody tr:nth-child(even) td { background:#FBFBFD; }
+
+    /* Company tables render as a grid of cards */
+    .post table.co-table { display:block; border:0; background:none; box-shadow:none; border-radius:0; overflow:visible; }
+    .post table.co-table thead { display:none; }
+    .post table.co-table tbody { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px; }
+    .post table.co-table tr { display:flex; flex-direction:column; gap:8px; background:#fff; border:1px solid #ECECF1; border-radius:16px; padding:20px 22px; box-shadow:0 1px 2px rgba(11,11,18,.04); transition:border-color .15s, box-shadow .15s; }
+    .post table.co-table tr:hover { border-color:#C9C2FF; box-shadow:0 18px 40px -28px rgba(75,59,255,.45); }
+    .post table.co-table td { display:block; padding:0; border:0; background:none !important; font-family:'Manrope',sans-serif; font-weight:400; font-size:17px; line-height:1.55; }
+    .post table.co-table td:first-child { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:22px; color:#0B0B12; }
+    .post table.co-table td[data-label="Industry"] { font-size:16px; font-weight:600; color:#4B3BFF; }
+    .post table.co-table td:last-child { margin-top:auto; padding-top:6px; }
+    .post table.co-table td:last-child a { display:inline-flex; align-items:center; gap:6px; background:#EEF0FF; color:#4B3BFF; border-radius:10px; padding:6px 12px; font-weight:600; font-size:16px; text-decoration:none; }
+    .post table.co-table td:last-child a::after { content:'↗'; }
+
+    .post blockquote { margin:22px 0 28px; padding:22px 26px; background:#fff; border:1px solid #ECECF1; border-left:4px solid #4B3BFF; border-radius:14px; color:#1A1A22; box-shadow:0 24px 60px -48px rgba(75,59,255,.35); }
+    .post blockquote p { margin:0 0 12px; } .post blockquote p:last-child { margin:0; }
+
+    .bp-faq details { background:#fff; border:1px solid #ECECF1; border-radius:14px; padding:16px 20px; margin:0 0 10px; }
+    .bp-faq summary { font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:19px; list-style:none; display:flex; justify-content:space-between; gap:16px; }
+    .bp-faq summary::after { content:'+'; color:#4B3BFF; font-size:22px; line-height:1; }
+    .bp-faq details[open] summary::after { content:'−'; }
+    .bp-faq details p { margin:10px 0 0; }
+
+    .bp-cta { margin-top:48px; background:#0B0B12; color:#fff; border-radius:20px; padding:32px; position:relative; overflow:hidden; }
+    .bp-cta::before { content:''; position:absolute; width:420px; height:420px; right:-120px; top:-200px; border-radius:50%; background:radial-gradient(circle,rgba(124,58,237,.45),transparent 62%); }
+    .bp-cta > * { position:relative; }
+    .bp-cta-title { font-family:'Space Grotesk',sans-serif; font-size:28px; font-weight:600; letter-spacing:-0.02em; }
+    .bp-cta p { color:#E4E4EC; margin:10px 0 20px; }
+    .bp-cta-row { display:flex; flex-wrap:wrap; align-items:center; gap:18px; }
+    .post .bp-btn { display:inline-block; background:linear-gradient(135deg,#4B3BFF,#7C3AED); color:#fff; padding:12px 22px; border-radius:12px; font-weight:700; font-size:17px; text-decoration:none; }
+    .post .bp-link { color:#C9C2FF; font-weight:600; font-size:17px; text-decoration:none; }
+
+    .bp-side { position:sticky; top:96px; max-height:calc(100vh - 112px); overflow-y:auto; display:flex; flex-direction:column; gap:16px; margin-top:24px; }
+    .bp-card { background:#fff; border:1px solid #ECECF1; border-radius:16px; padding:20px; }
+    .bp-card-label { font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:18px; margin-bottom:10px; }
+    .bp-toc { margin:0; padding-left:20px; font-size:16px; line-height:1.4; }
+    .bp-toc li { margin:8px 0; } .bp-toc li::marker { color:#4B3BFF; font-weight:700; }
+    .bp-toc a { color:#33333C; } .bp-toc a:hover { color:#4B3BFF; }
+    .bp-list { display:flex; justify-content:space-between; padding:10px 0; border-top:1px solid #F0F0F4; font-size:16px; color:#1A1A22; }
+    .bp-list b { font-family:'Space Grotesk',sans-serif; color:#4B3BFF; }
+    .bp-side-cta { display:block; text-align:center; background:#0B0B12; color:#fff; border-radius:12px; padding:14px; font-family:'Space Grotesk',sans-serif; font-weight:600; font-size:17px; }
+    .bp-side-cta:hover { color:#fff; background:#4B3BFF; }
+
+    @media (max-width: 980px) {
+      .bp-wrap { grid-template-columns:1fr; gap:0; }
+      .bp-side { position:static; margin-top:40px; }
+    }
+    @media (max-width: 640px) {
+      .bp-hero-in { padding:28px 16px 32px; }
+      .bp-hero h1 { font-size:38px; }
+      .bp-answer p { font-size:18px; }
+      .bp-wrap { padding:8px 16px 64px; }
+      .post h2 { font-size:27px; }
+      .post table { display:block; overflow-x:auto; }
+      .post table.co-table tbody { grid-template-columns:1fr; }
+    }
   </style>
 </Base>

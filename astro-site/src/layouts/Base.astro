@@ -30,7 +30,7 @@ const canonical = new URL(Astro.url.pathname, Astro.site);
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-    <style>
+    <style is:global>
       * { box-sizing: border-box; }
       body { margin: 0; background: #FAFAFC; color: #0B0B12; font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
       a { color: #4B3BFF; text-decoration: none; }
