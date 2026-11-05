@@ -3,13 +3,6 @@ import Base from '../../layouts/Base.astro';
 import SiteNav from '../../components/SiteNav.astro';
 import { getCollection } from 'astro:content';
 const posts = (await getCollection('blog', ({ data }) => !data.draft)).sort((a, b) => b.data.date - a.data.date);
-const files = import.meta.glob('../../data/competitors/*.json', { eager: true });
-const bySlug = Object.fromEntries(Object.values(files).map((d) => [d.competitor.slug, d]));
-// A post gets a count badge when its title names the competitor of its first list.
-const badge = (p) => {
-  const d = bySlug[p.data.lists[0]];
-  return d && p.data.title.toLowerCase().includes(d.competitor.name.toLowerCase()) ? `${d.company_count} verified customers` : 'Playbook';
-};
 const fmt = (d) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
 ---
 <Base title="CompetitorIQ Blog: answers on finding competitor customers" description="Straight answers to the questions B2B teams ask about finding who uses a competitor, building displacement lists and turning them into pipeline.">
@@ -25,7 +18,7 @@ const fmt = (d) => d.toLocaleDateString('en-US', { year: 'numeric', month: 'shor
     {posts.length === 0 && <p>First posts are on the way. Meanwhile, <a href="/#lists">browse the customer lists</a>.</p>}
     {posts.map((p) => (
       <a href={`/blog/${p.slug}/`} class="bi-card">
-        <div class="bi-top"><span class="bi-badge">{badge(p)}</span><span class="bi-date">{fmt(p.data.date)}</span></div>
+        <div class="bi-top"><span class="bi-badge">{p.data.tag}</span><span class="bi-date">{fmt(p.data.date)}</span></div>
         <div class="bi-title">{p.data.title}</div>
         <div class="bi-answer">{p.data.answer}</div>
         <div class="bi-read">Read the answer →</div>

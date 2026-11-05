@@ -9,6 +9,7 @@ const blog = defineCollection({
     date: z.coerce.date(),
     lists: z.array(z.string()).default([]), // competitor slugs to link to
     faqs: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
+    tag: z.string().default('Playbook'),   // post type shown on the blog index card
     draft: z.boolean().default(true),
   }),
 });

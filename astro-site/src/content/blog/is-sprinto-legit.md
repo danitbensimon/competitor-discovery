@@ -13,6 +13,7 @@ faqs:
     a: "We verified 80 Sprinto customers and 353 Vanta customers with public sources. Those are the numbers we can prove, not the vendors' total customer counts."
   - q: "Is Sprinto used by large enterprises?"
     a: "Most verified Sprinto customers are growth-stage SaaS and fintech companies. Nium, a global payments company, is one of the largest names with a public Sprinto story."
+tag: "Vendor check"
 draft: false
 ---
 

@@ -13,6 +13,7 @@ faqs:
     a: "Use it for displacement outreach. Name the tool they use, show you understand why teams outgrow it, and ask one direct question."
   - q: "How many sources should I check?"
     a: "All twelve listed in this post. No single source covers more than a fraction of a vendor's customers."
+tag: "Playbook"
 draft: false
 ---
 
