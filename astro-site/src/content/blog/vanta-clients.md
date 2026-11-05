@@ -1,6 +1,7 @@
 ---
 title: "Vanta clients"
 answer: "We verified 353 companies using Vanta, including Anthropic, Atlassian, Clay, Ashby and AssemblyAI. 58 of them have two or more independent public signals. Most are venture-backed SaaS, AI and fintech companies that bought Vanta because an enterprise prospect asked for a SOC 2 report."
+teaser: "353 verified Vanta customers, incl. Anthropic and Atlassian."
 description: "353 verified Vanta customers, incl. Anthropic, Atlassian and Clay, each backed by a case study, trust center or job post. What they have in common and how to reach them."
 date: 2026-11-04
 lists: [vanta, drata, secureframe, sprinto, thoropass]
