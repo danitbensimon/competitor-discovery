@@ -21,9 +21,9 @@ const jsonLd = [
 <Base title={post.data.title} description={post.data.description}>
   {jsonLd.map((j) => <script type="application/ld+json" set:html={JSON.stringify(j)} slot="head" />)}
   <article class="post" style="max-width:760px; margin:0 auto; padding:48px 24px 80px; font-size:17px; line-height:1.7;">
-    <a href="/blog/" style="font-family:'JetBrains Mono',monospace; font-size:14px; color:#8A8A94;">← Blog</a>
+    <a href="/blog/" style="font-family:'JetBrains Mono',monospace; font-size:18px; color:#33333C;">← Blog</a>
     <h1 style="font-family:'Space Grotesk',sans-serif; font-size:40px; line-height:1.1; letter-spacing:-0.03em; margin:18px 0 10px;">{post.data.title}</h1>
-    <div style="font-size:14px; color:#8A8A94;">Danit Ben Simon · {dateStr}</div>
+    <div style="font-size:18px; color:#33333C;">Danit Ben Simon · {dateStr}</div>
     <div style="background:#EEF0FF; border:1px solid #DBE0FF; border-radius:14px; padding:18px 20px; margin:26px 0; font-weight:600;">{post.data.answer}</div>
     <Content />
     {related.length > 0 && (
@@ -46,7 +46,7 @@ const jsonLd = [
     </div>
   </article>
   <style is:global>
-    .post table { width:100%; border-collapse:collapse; margin:18px 0 26px; font-size:15px; background:#fff; border:1px solid #ECECF1; border-radius:12px; overflow:hidden; display:block; overflow-x:auto; }
+    .post table { width:100%; border-collapse:collapse; margin:18px 0 26px; font-size:16px; background:#fff; border:1px solid #ECECF1; border-radius:12px; overflow:hidden; display:block; overflow-x:auto; }
     .post th, .post td { text-align:left; padding:10px 14px; border-bottom:1px solid #F0F0F4; vertical-align:top; }
     .post th { background:#F6F6FA; font-weight:700; }
     .post h2 { font-family:'Space Grotesk',sans-serif; font-size:27px; letter-spacing:-0.02em; margin:40px 0 10px; }
