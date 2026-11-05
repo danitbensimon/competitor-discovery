@@ -1,0 +1,127 @@
+---
+// Data-drawn hero art for blog posts. Same seed, same picture, so builds are stable.
+//   constellation: 1 dot per verified customer, ringed by grade (A inner, C outer)
+//   sources:       clusters sized by how many companies each evidence source found
+//   spy:           customers moving from a competitor to you along the SPY path
+const { post, list, size = 'hero' } = Astro.props;
+const art = post.data.art || (list ? { type: 'constellation' } : { type: 'spy' });
+
+function rng(seed) {
+  let h = 2166136261;
+  for (const c of String(seed)) h = Math.imul(h ^ c.charCodeAt(0), 16777619);
+  return () => {
+    h += 0x6d2b79f5;
+    let t = h;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+const W = 1200, H = 440, cx = 600, cy = 220;
+const r = rng(post.slug);
+const dots = [];   // { x, y, r, c, glow }
+const lines = [];  // { x1, y1, x2, y2, o }
+const orbits = []; // { rx, ry }
+const hubs = [];   // { x, y, r, c }
+const col = { A: 'url(#gA)', B: '#6D5EFF', C: '#5A5A6E', cyan: '#22D3EE', violet: '#A78BFA' };
+
+if (art.type === 'constellation' && list) {
+  const rings = { A: [210, 80, 7.5], B: [385, 142, 4.6], C: [545, 196, 3.2] };
+  for (const g of ['A', 'B', 'C']) {
+    const [rx, ry, size] = rings[g];
+    orbits.push({ rx, ry });
+    const items = list.companies.filter((c) => c.grade === g);
+    items.forEach((c, i) => {
+      const a = (i / Math.max(items.length, 1)) * Math.PI * 2 + r() * 0.35;
+      const k = 0.86 + r() * 0.28;
+      const x = cx + Math.cos(a) * rx * k, y = cy + Math.sin(a) * ry * k;
+      dots.push({ x, y, r: size * (0.8 + r() * 0.4), c: col[g], glow: g === 'A' });
+      if (g === 'A') lines.push({ x1: cx, y1: cy, x2: x, y2: y, o: 0.22 });
+    });
+  }
+  hubs.push({ x: cx, y: cy, r: 34, c: 'url(#gHub)' });
+}
+
+if (art.type === 'sources') {
+  const groups = art.data || [];
+  const max = Math.max(...groups.map((g) => g.n), 1);
+  groups.forEach((g, i) => {
+    const a = (i / groups.length) * Math.PI * 2 - Math.PI / 2;
+    const gx = cx + Math.cos(a) * 400, gy = cy + Math.sin(a) * 150;
+    lines.push({ x1: cx, y1: cy, x2: gx, y2: gy, o: 0.35 });
+    const n = Math.round(g.n / 3);
+    const spread = 30 + (g.n / max) * 60;
+    const c = [col.violet, col.cyan, '#6D5EFF'][i % 3];
+    for (let j = 0; j < n; j++) {
+      const t = r() * Math.PI * 2, d = Math.sqrt(r()) * spread;
+      dots.push({ x: gx + Math.cos(t) * d * 1.3, y: gy + Math.sin(t) * d * 0.7, r: 2.6 + r() * 2.4, c, glow: j === 0 });
+    }
+    hubs.push({ x: gx, y: gy, r: 9 + (g.n / max) * 9, c });
+  });
+  hubs.push({ x: cx, y: cy, r: 34, c: 'url(#gHub)' });
+}
+
+if (art.type === 'spy') {
+  const L = { x: 250, y: 220 }, R = { x: 950, y: 220 };
+  // S: 4 signs orbit the competitor
+  orbits.push({ rx: 120, ry: 120, x: L.x, y: L.y });
+  for (let i = 0; i < 4; i++) {
+    const a = (i / 4) * Math.PI * 2 + Math.PI / 4;
+    hubs.push({ x: L.x + Math.cos(a) * 120, y: L.y + Math.sin(a) * 120, r: 10, c: col.cyan });
+  }
+  // the competitor's customers
+  for (let i = 0; i < 70; i++) {
+    const t = r() * Math.PI * 2, d = 40 + Math.sqrt(r()) * 70;
+    dots.push({ x: L.x + Math.cos(t) * d, y: L.y + Math.sin(t) * d, r: 2.5 + r() * 2, c: col.C, glow: false });
+  }
+  // P and Y: pulled customers travel to you and light up
+  for (let i = 0; i < 16; i++) {
+    const t = (i + 0.5) / 16;
+    const x = L.x + 150 + (R.x - L.x - 260) * t;
+    const y = L.y - Math.sin(t * Math.PI) * 120 + (r() - 0.5) * 40;
+    const c = t < 0.35 ? '#8A8AA0' : t < 0.7 ? '#6D5EFF' : col.violet;
+    dots.push({ x, y, r: 3.5 + t * 4, c, glow: t > 0.7 });
+  }
+  lines.push({ x1: L.x + 130, y1: L.y - 20, x2: R.x - 110, y2: R.y - 20, o: 0, path: `M${L.x + 130} ${L.y - 10} Q ${(L.x + R.x) / 2} ${L.y - 260} ${R.x - 60} ${R.y - 10}` });
+  for (let i = 0; i < 14; i++) {
+    const t = r() * Math.PI * 2, d = 30 + Math.sqrt(r()) * 55;
+    dots.push({ x: R.x + Math.cos(t) * d, y: R.y + Math.sin(t) * d, r: 4 + r() * 3, c: 'url(#gA)', glow: true });
+  }
+  hubs.push({ x: L.x, y: L.y, r: 30, c: '#2A2A3A' });
+  hubs.push({ x: R.x, y: R.y, r: 34, c: 'url(#gHub)' });
+}
+
+// Background stars
+const stars = Array.from({ length: 90 }, () => ({ x: r() * W, y: r() * H, r: r() * 1.3 + 0.3, o: 0.15 + r() * 0.35 }));
+const f = (n) => Math.round(n * 10) / 10;
+---
+<div class={`pa pa-${size}`} aria-hidden="true">
+  <svg viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="xMidYMid slice" role="presentation">
+    <defs>
+      <radialGradient id="gBg" cx="50%" cy="50%" r="70%"><stop offset="0" stop-color="#1A1240" /><stop offset="1" stop-color="#0B0B12" /></radialGradient>
+      <linearGradient id="gA" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8B7BFF" /><stop offset="1" stop-color="#C084FC" /></linearGradient>
+      <radialGradient id="gHub"><stop offset="0" stop-color="#FFFFFF" /><stop offset="0.35" stop-color="#8B5CF6" /><stop offset="1" stop-color="#4B3BFF" /></radialGradient>
+      <filter id="glow" x="-200%" y="-200%" width="500%" height="500%"><feGaussianBlur stdDeviation="5" /></filter>
+    </defs>
+    <rect width={W} height={H} fill="url(#gBg)" />
+    {stars.map((s) => <circle cx={f(s.x)} cy={f(s.y)} r={f(s.r)} fill="#fff" opacity={f(s.o)} />)}
+    {orbits.map((o) => <ellipse cx={o.x ?? cx} cy={o.y ?? cy} rx={o.rx} ry={o.ry} fill="none" stroke="#3A3360" stroke-dasharray="3 7" />)}
+    {lines.map((l) => l.path
+      ? <path d={l.path} fill="none" stroke="#6D5EFF" stroke-width="2" stroke-dasharray="2 10" stroke-linecap="round" opacity="0.7" />
+      : <line x1={f(l.x1)} y1={f(l.y1)} x2={f(l.x2)} y2={f(l.y2)} stroke="#8B7BFF" opacity={l.o} />)}
+    {dots.filter((d) => d.glow).map((d) => <circle cx={f(d.x)} cy={f(d.y)} r={f(d.r * 2.2)} fill="#8B5CF6" opacity="0.45" filter="url(#glow)" />)}
+    {dots.map((d, i) => <circle class={d.glow ? 'pa-tw' : ''} style={d.glow ? `animation-delay:${(i % 9) * 0.4}s` : ''} cx={f(d.x)} cy={f(d.y)} r={f(d.r)} fill={d.c} />)}
+    {hubs.map((h) => <g><circle cx={f(h.x)} cy={f(h.y)} r={f(h.r * 2)} fill="#6D5EFF" opacity="0.25" filter="url(#glow)" /><circle cx={f(h.x)} cy={f(h.y)} r={f(h.r)} fill={h.c} /></g>)}
+    {hubs.slice(-1).map((h) => <rect x={f(h.x - h.r * 0.28)} y={f(h.y - h.r * 0.28)} width={f(h.r * 0.56)} height={f(h.r * 0.56)} rx="3" fill="#fff" />)}
+  </svg>
+</div>
+<style>
+  .pa { position:relative; overflow:hidden; background:#0B0B12; }
+  .pa svg { display:block; width:100%; height:100%; }
+  .pa-hero { border-radius:20px; aspect-ratio:1200/440; box-shadow:0 30px 70px -40px rgba(75,59,255,.6); }
+  .pa-card { border-radius:14px; aspect-ratio:1200/520; }
+  .pa-tw { animation:pa-tw 3.6s ease-in-out infinite; }
+  @keyframes pa-tw { 0%,100% { opacity:1; } 50% { opacity:.45; } }
+  @media (max-width: 640px) { .pa-hero { aspect-ratio:1200/620; border-radius:16px; } }
+</style>

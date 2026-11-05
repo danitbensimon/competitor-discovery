@@ -13,6 +13,16 @@ faqs:
     a: "Use it for displacement outreach. Name the tool they use, show you understand why teams outgrow it, and ask one direct question."
   - q: "How many sources should I check?"
     a: "All twelve listed in this post. No single source covers more than a fraction of a vendor's customers."
+art:
+  type: sources
+  data:
+    - { label: "Customer website or security page", n: 126 }
+    - { label: "Partner and auditor case studies", n: 68 }
+    - { label: "Tech-stack databases", n: 53 }
+    - { label: "Events, awards and speaker lists", n: 46 }
+    - { label: "Trust centers", n: 26 }
+    - { label: "Blogs and press", n: 24 }
+tag: "Playbook"
 draft: false
 ---
 

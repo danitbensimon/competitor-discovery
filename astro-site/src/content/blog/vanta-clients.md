@@ -13,6 +13,7 @@ faqs:
     a: "Open their trust or security page. If it is hosted at app.vanta.com/[company]/trust, they use Vanta. You can also search their job posts for 'Vanta' in security and compliance roles."
   - q: "Who should use a list of Vanta customers?"
     a: "Anyone who sells to companies that just went through SOC 2: competing compliance platforms, auditors, pen testing firms, security tools, cyber insurance and vCISO services."
+tag: "Customer list"
 draft: false
 ---
 

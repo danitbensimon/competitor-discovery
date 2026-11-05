@@ -13,6 +13,7 @@ faqs:
     a: "Internal audit, SOX compliance, enterprise risk and IT risk. Several case studies describe moving off Excel or older audit software."
   - q: "How do you know these companies use AuditBoard?"
     a: "Every row links to its source: an AuditBoard success story, a customer testimonial on FeaturedCustomers, a press article or a job post. Companies with two or more independent signals are graded A."
+tag: "Customer list"
 draft: false
 ---
 
