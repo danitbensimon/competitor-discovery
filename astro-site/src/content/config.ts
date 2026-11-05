@@ -4,7 +4,8 @@ const blog = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),              // the buyer's exact question
-    answer: z.string(),             // 2-3 sentence direct answer, shown first
+    answer: z.string(),
+    teaser: z.string().optional(),  // 1 short line for the blog index card             // 2-3 sentence direct answer, shown first
     description: z.string(),        // meta description
     date: z.coerce.date(),
     lists: z.array(z.string()).default([]), // competitor slugs to link to

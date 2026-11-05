@@ -1,6 +1,7 @@
 ---
 title: "How to find competitor customers"
 answer: "Look where customers leave public traces: the competitor's case studies, the customer's own trust or security page, partner and auditor case studies, job posts that ask for the tool, named reviews, press and events. In our 353-company Vanta list, the customer's own website was the strongest source, not the vendor's logo wall."
+teaser: "12 places where competitor customers leave public proof."
 description: "Where to find companies using a competitor: case studies, trust pages, job posts, reviews, partners and public contracts. From 28 verified customer lists."
 date: 2026-11-04
 lists: [vanta, gong, salesforce, hubspot, zendesk]

@@ -1,6 +1,7 @@
 ---
 title: "Is Sprinto legit"
 answer: "Yes. We verified 80 named companies using Sprinto, including Nium, Rocketlane, Anaconda, CareStack and Clara. 68 of them have a named customer story on sprinto.com, and several run their public trust center on Sprinto, which anyone can check."
+teaser: "80 named Sprinto customers you can check yourself."
 description: "Is Sprinto legit? 80 verified Sprinto customers incl. Nium, Rocketlane and Anaconda, each with a public source you can check. Free list."
 date: 2026-11-04
 lists: [sprinto, vanta, drata, scrut]
