@@ -4,6 +4,7 @@ answer: "Run SPY: Signs, Pull, Yank them over. Pick the competitor with 4 signs,
 description: "Danit Ben Simon's SPY playbook for competitor customer campaigns: 4 signs to pick the competitor, where to pull its customers, and the outreach that converted at 1% vs 0.01% for cold lists."
 date: 2026-11-05
 lists: [vanta, gong, salesforce, hubspot, zendesk]
+art: { type: spy }
 tag: "Playbook"
 faqs:
   - q: "Which competitor should I target first?"
