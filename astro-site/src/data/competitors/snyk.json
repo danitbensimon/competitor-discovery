@@ -1,0 +1,596 @@
+{
+ "competitor": {
+  "name": "Snyk",
+  "slug": "snyk",
+  "domain": "snyk.io",
+  "category": "Developer security (SCA/SAST)"
+ },
+ "companies": [
+  {
+   "name": "Atlassian",
+   "domain": "atlassian.com",
+   "grade": "A",
+   "evidence": "\"We mainly started evaluating Snyk to find a good substitute for our existing container scanning tool.\"",
+   "source_url": "https://snyk.io/case-studies/atlassian/",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Auth0",
+   "domain": "auth0.com",
+   "grade": "A",
+   "evidence": "\"The Auth0 team uses Snyk to make sure we are running on a secure foundation, no matter what.\"",
+   "source_url": "https://snyk.io/case-studies/auth0/",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Labelbox",
+   "domain": "labelbox.com",
+   "grade": "A",
+   "evidence": "\"Once I paired it with the MCP through Snyk Studio and pointed it at the backlog, it just clicked.\"",
+   "source_url": "https://snyk.io/blog/from-two-years-to-two-weeks-how-labelbox-erased-its-security-debt-with-snyks/",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "MongoDB",
+   "domain": "mongodb.com",
+   "grade": "A",
+   "evidence": "\"There's only a few security engineers at the company, but hundreds of developers; we must proactively enable them.\"",
+   "source_url": "https://snyk.io/case-studies/mongodb/",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Okta",
+   "domain": "okta.com",
+   "grade": "A",
+   "evidence": "\"ensure that all of the code we create, whether AI-generated or human-written, is secure\"",
+   "source_url": "https://snyk.io/customers/",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Reddit",
+   "domain": "reddit.com",
+   "grade": "A",
+   "evidence": "\"We like Snyk because of the ability to centralize some of our tooling and being able to touch things at scale.\"",
+   "source_url": "https://snyk.io/case-studies/reddit/",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Revolut",
+   "domain": "revolut.com",
+   "grade": "A",
+   "evidence": "\"By using Snyk, we can say we've secured our open source pipeline.\"",
+   "source_url": "https://snyk.io/case-studies/revolut/",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Salesforce",
+   "domain": "salesforce.com",
+   "grade": "A",
+   "evidence": "\"Snyk is one of the most important tools to scale the security effort across an organization.\"",
+   "source_url": "https://snyk.io/case-studies/salesforce/",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Skyscanner",
+   "domain": "skyscanner.net",
+   "grade": "A",
+   "evidence": "\"Snyk is one of the most important security tools we use at Skyscanner.\"",
+   "source_url": "https://snyk.io/case-studies/skyscanner/",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Spotify",
+   "domain": "spotify.com",
+   "grade": "A",
+   "evidence": "\"With Snyk, Spotify has been able to make the adoption of security scanning as simple and seamless as possible.\"",
+   "source_url": "https://snyk.io/blog/how-spotify-uses-snyk-to-secure-the-sdlc/",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Twilio",
+   "domain": "twilio.com",
+   "grade": "A",
+   "evidence": "\"We use Snyk, a cloud native application security platform, to make sure our code is secure at all stages of design and deployment.\"",
+   "source_url": "https://www.twilio.com/en-us/blog/snyk-watcher-keep-snyk-in-sync",
+   "confidence": "Verified+"
+  },
+  {
+   "name": "Appwrite",
+   "domain": "appwrite.io",
+   "grade": "B",
+   "evidence": "\"This Is How We Use Snyk to Protect Our Open-Source Projects from Bad Dependencies.\"",
+   "source_url": "https://eldadfux.medium.com/this-is-how-we-use-snyk-to-protect-our-open-source-projects-from-evil-dependencies-6ee258ca5815",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Asurion",
+   "domain": "asurion.com",
+   "grade": "B",
+   "evidence": "\"We needed a developer-focused security tool like Snyk.\"",
+   "source_url": "https://snyk.io/case-studies/asurion/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Blue Prism",
+   "domain": "blueprism.com",
+   "grade": "B",
+   "evidence": "\"Adopting Snyk helped us turbo charge our application security.\"",
+   "source_url": "https://snyk.io/case-studies/blue-prism/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Cleo",
+   "domain": "meetcleo.com",
+   "grade": "B",
+   "evidence": "\"Snyk, GitHub Advanced Security, Semgrep, Burp Suite.\"",
+   "source_url": "https://job-boards.greenhouse.io/cleo/jobs/4739273005",
+   "confidence": "Verified"
+  },
+  {
+   "name": "CommerceIQ",
+   "domain": "commerceiq.ai",
+   "grade": "B",
+   "evidence": "\"Familiarity with tools such as SonarQube, Snyk, Trivy, Checkov, Wiz, or equivalent.\"",
+   "source_url": "https://job-boards.greenhouse.io/commerceiq/jobs/8041108003",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Contentsquare",
+   "domain": "contentsquare.com",
+   "grade": "B",
+   "evidence": "\"Hands-on experience with enterprise security tooling, including Snyk\"",
+   "source_url": "https://jobs.lever.co/contentsquare/fc030034-3050-4b3a-9b79-380dd0f5a0f6",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Coveo",
+   "domain": "coveo.com",
+   "grade": "B",
+   "evidence": "\"Snyk allows us to see vulnerabilities before releasing into production.\"",
+   "source_url": "https://snyk.io/case-studies/coveo/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Dark Wolf Solutions",
+   "domain": "darkwolfsolutions.com",
+   "grade": "B",
+   "evidence": "\"Performing vulnerability assessments using automated software, pipeline, and container scanning tools including SonarQube, Snyk, NeuVector, and OWASP ZAP.\"",
+   "source_url": "https://job-boards.greenhouse.io/darkwolfsolutions/jobs/7743216003",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Depop",
+   "domain": "depop.com",
+   "grade": "B",
+   "evidence": "\"Snyk had an immediate impact. We just started fixing lots and lots of issues and making vulnerability management part of our process.\"",
+   "source_url": "https://snyk.io/case-studies/depop/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "DFDS",
+   "domain": "dfds.com",
+   "grade": "B",
+   "evidence": "\"The DFDS team decided to use Snyk Open Source and Code across their development groups.\"",
+   "source_url": "https://snyk.io/case-studies/dfds/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "DigitalOcean",
+   "domain": "digitalocean.com",
+   "grade": "B",
+   "evidence": "\"Snyk's immediate notification on a newly disclosed critical Ruby vulnerability enabled us to react quickly.\"",
+   "source_url": "https://www.featuredcustomers.com/vendor/snyk/testimonials",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Duetto",
+   "domain": "duettocloud.com",
+   "grade": "B",
+   "evidence": "\"You'll lead vulnerability management end-to-end — owning Snyk Pro and Lacework (or equivalents).\"",
+   "source_url": "https://job-boards.greenhouse.io/duettoresearch/jobs/7912299",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Flo Health",
+   "domain": "flo.health",
+   "grade": "B",
+   "evidence": "\"With Snyk we've started doing security checks with each code commit.\"",
+   "source_url": "https://snyk.io/case-studies/flo-health/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Form3",
+   "domain": "form3.tech",
+   "grade": "B",
+   "evidence": "\"Snyk provided a nice CLI tool with the level of configuration we needed, making it easy to integrate with our automated builds.\"",
+   "source_url": "https://snyk.io/case-studies/form-3/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "FormHero",
+   "domain": "formhero.ai",
+   "grade": "B",
+   "evidence": "\"A big part of our focus during the SDLC is managing dependencies and making sure there aren't any vulnerabilities in our Docker containers.\"",
+   "source_url": "https://snyk.io/case-studies/formhero/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "GuidePoint Security",
+   "domain": "guidepointsecurity.com",
+   "grade": "B",
+   "evidence": "\"Static Application Security Testing (SAST) tools such as Semgrep, Snyk, CodeQL, Checkmarx, Veracode, etc.\"",
+   "source_url": "https://job-boards.greenhouse.io/guidepointsecurity/jobs/6094965004",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Handshakes",
+   "domain": "handshakes.com",
+   "grade": "B",
+   "evidence": "\"Snyk became the top-of-mind choice. We know that supply chain activity starting from the source code is now protected.\"",
+   "source_url": "https://snyk.io/case-studies/handshakes/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Helvetia",
+   "domain": "helvetia.com",
+   "grade": "B",
+   "evidence": "\"We couldn't have made it this far without a tool like Snyk.\"",
+   "source_url": "https://snyk.io/case-studies/helvetia/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Intercontinental Exchange",
+   "domain": "ice.com",
+   "grade": "B",
+   "evidence": "Achieved $15.4M net present value over three years and 60% faster remediation for runtime issues with Snyk.",
+   "source_url": "https://snyk.io/customers/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Komatsu",
+   "domain": "komatsu.com.au",
+   "grade": "B",
+   "evidence": "\"We have started to use Snyk quite heavily across various areas of our business.\"",
+   "source_url": "https://snyk.io/case-studies/komatsu/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Kroger",
+   "domain": "kroger.com",
+   "grade": "B",
+   "evidence": "Featured customer on the Snyk homepage logo wall and testimonial section.",
+   "source_url": "https://snyk.io/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Lendi",
+   "domain": "lendi.com.au",
+   "grade": "B",
+   "evidence": "\"Snyk Open Source was the obvious market leader. I've known about Snyk for a long time.\"",
+   "source_url": "https://snyk.io/case-studies/lendi/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Lunar",
+   "domain": "lunar.app",
+   "grade": "B",
+   "evidence": "\"We went from 2,000 high vulnerabilities to a couple of hundred. Snyk provided a lot of value.\"",
+   "source_url": "https://snyk.io/case-studies/lunar/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Mercato Solutions",
+   "domain": "mercato.co.uk",
+   "grade": "B",
+   "evidence": "\"I can integrate it into our DevOps pipeline... see their security status quite quickly.\"",
+   "source_url": "https://snyk.io/blog/how-mercato-solutions-tackles-appsec-flexibility-conundrum-with-Snyk/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Mollie",
+   "domain": "mollie.com",
+   "grade": "B",
+   "evidence": "\"Snyk has helped us make significant strides in shifting security left and increasing developer adoption.\"",
+   "source_url": "https://snyk.io/case-studies/mollie/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Natera",
+   "domain": "natera.com",
+   "grade": "B",
+   "evidence": "\"Snyk has had a big impact on our organization. We truly weren't doing anything like this before.\"",
+   "source_url": "https://snyk.io/case-studies/natera/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "New Era Technology",
+   "domain": "neweratech.com",
+   "grade": "B",
+   "evidence": "\"Familiarity with vulnerability management tools such as Snyk or Dependency-Track.\"",
+   "source_url": "https://job-boards.greenhouse.io/neweratech/jobs/8909862002",
+   "confidence": "Verified"
+  },
+  {
+   "name": "New10",
+   "domain": "new10.com",
+   "grade": "B",
+   "evidence": "\"Snyk fits our technology ecosystem.\"",
+   "source_url": "https://snyk.io/blog/how-sme-lender-new10-uses-aws-and-snyk-to-deliver-quickly-and-securely/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Origo",
+   "domain": "origo.is",
+   "grade": "B",
+   "evidence": "\"What immediately struck me was how easy Snyk is to use, from logging in to setting up integrations with GitHub.\"",
+   "source_url": "https://snyk.io/case-studies/origo/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Overstock",
+   "domain": "overstock.com",
+   "grade": "B",
+   "evidence": "\"The new tagging feature has taken the Snyk API to the next level, just being able to do all these things in bulk now.\"",
+   "source_url": "https://snyk.io/case-studies/overstock/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "PayPay",
+   "domain": "paypay.ne.jp",
+   "grade": "B",
+   "evidence": "\"GitHub, IntelliJ, Gradle, Maven, npm/yarn, Flyway, Jenkins, snyk\"",
+   "source_url": "https://job-boards.greenhouse.io/paypay/jobs/5683668004",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Peak",
+   "domain": "peak.ai",
+   "grade": "B",
+   "evidence": "Peak ensures the security of customer data with Snyk and AWS; procured Snyk through AWS Marketplace.",
+   "source_url": "https://snyk.io/partners/aws/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Pearson",
+   "domain": "pearson.com",
+   "grade": "B",
+   "evidence": "\"it's not practical for us to configure and maintain Snyk for each of these teams\"",
+   "source_url": "https://snyk.io/case-studies/pearson/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Pomelo",
+   "domain": "pomelo.la",
+   "grade": "B",
+   "evidence": "\"The integrations and the API this solution provides help us make all these more visible for everyone.\"",
+   "source_url": "https://snyk.io/case-studies/pomelo/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Quanata",
+   "domain": "quanata.com",
+   "grade": "B",
+   "evidence": "\"Experience with code scanning tools such as CodeQL, Wiz, SonarQube, or Snyk.\"",
+   "source_url": "https://job-boards.greenhouse.io/quanata/jobs/6215700004",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Rally Health",
+   "domain": "rallyhealth.com",
+   "grade": "B",
+   "evidence": "\"Security is really addressed best when it happens before a merge or commit.\"",
+   "source_url": "https://snyk.io/case-studies/rally-health/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Red Ventures",
+   "domain": "redventures.com",
+   "grade": "B",
+   "evidence": "\"We weren't happy with the home-grown tooling that was supposed to give us insight into the security of our container images.\"",
+   "source_url": "https://snyk.io/case-studies/red-ventures/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Relay Network",
+   "domain": "relaynetwork.com",
+   "grade": "B",
+   "evidence": "\"With the MCP server and Snyk, remediation has become much faster.\"",
+   "source_url": "https://snyk.io/blog/relay-network-ai-coding-securely-coagentic-development/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "ROLLER",
+   "domain": "roller.software",
+   "grade": "B",
+   "evidence": "\"Snyk gives all engineers a baseline of what security should be.\"",
+   "source_url": "https://snyk.io/case-studies/roller/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Scout Motors",
+   "domain": "scoutmotors.com",
+   "grade": "B",
+   "evidence": "\"Triage and prioritize vulnerability findings from security scanning tools (e.g., Wiz, Snyk, GHAS etc)\"",
+   "source_url": "https://job-boards.greenhouse.io/scoutmotors/jobs/5193457007",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Segment",
+   "domain": "segment.com",
+   "grade": "B",
+   "evidence": "\"2 days after we purchased, we already had Snyk monitoring 1,200 repositories.\"",
+   "source_url": "https://snyk.io/case-studies/segment/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Seismic",
+   "domain": "seismic.com",
+   "grade": "B",
+   "evidence": "Featured customer testimonial on the Snyk homepage (Snyk Open Source + Container).",
+   "source_url": "https://snyk.io/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Shield AI",
+   "domain": "shield.ai",
+   "grade": "B",
+   "evidence": "\"Experience with tools such as Snyk, Checkmarx, Veracode, GitHub Advanced Security, GitLab security tools, Semgrep, SonarQube.\"",
+   "source_url": "https://jobs.lever.co/shieldai/57461bb3-9853-43d3-b2aa-f4b9e637fd41",
+   "confidence": "Verified"
+  },
+  {
+   "name": "ShopBack",
+   "domain": "shopback.com",
+   "grade": "B",
+   "evidence": "\"With the auto-fix feature, the developer doesn't have to search around and wonder, 'How do I fix this?'\"",
+   "source_url": "https://snyk.io/case-studies/shopback/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Shutterstock",
+   "domain": "shutterstock.com",
+   "grade": "B",
+   "evidence": "\"Snyk has become a foundational part of how we secure software development. Purchasing through AWS Marketplace made procurement simple.\"",
+   "source_url": "https://snyk.io/partners/aws/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Smartsheet",
+   "domain": "smartsheet.com",
+   "grade": "B",
+   "evidence": "\"Snyk enables us to drive developer action by providing the threat intelligence and offering the fixes we need automatically.\"",
+   "source_url": "https://snyk.io/case-studies/smartsheet/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Snowflake",
+   "domain": "snowflake.com",
+   "grade": "B",
+   "evidence": "Relies on Snyk to embed security into development pipelines, enabling proactive vulnerability management.",
+   "source_url": "https://snyk.io/customers/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Solaris",
+   "domain": "solarisgroup.com",
+   "grade": "B",
+   "evidence": "\"Hands-on experience integrating security testing tools into modern CI/CD pipelines (e.g., GitHub Actions, GitLab CI, Jenkins, Snyk, Semgrep).\"",
+   "source_url": "https://job-boards.greenhouse.io/solarisbank/jobs/8596522002-13",
+   "confidence": "Verified"
+  },
+  {
+   "name": "TechnologyOne",
+   "domain": "technologyonecorp.com",
+   "grade": "B",
+   "evidence": "\"With Snyk and the IDE, the developer sees the line, gets the recommendation, changes it in seconds, and moves on.\"",
+   "source_url": "https://snyk.io/case-studies/technologyone/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Telenor",
+   "domain": "telenor.dk",
+   "grade": "B",
+   "evidence": "\"It's one thing to buy the security product, but it's even more important to actually get the developers to embrace it.\"",
+   "source_url": "https://snyk.io/case-studies/telenor/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "The Telegraph",
+   "domain": "telegraph.co.uk",
+   "grade": "B",
+   "evidence": "\"Snyk has also increased the pace that we can detect and minimise any risk exposure for our services.\"",
+   "source_url": "https://snyk.io/case-studies/the-telegraph/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Visma",
+   "domain": "visma.com",
+   "grade": "B",
+   "evidence": "\"Snyk Open Source now enables over 140 development teams to detect and remediate vulnerabilities within the third-party dependencies they use.\"",
+   "source_url": "https://snyk.io/case-studies/visma/",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Wilson Elser",
+   "domain": "wilsonelser.com",
+   "grade": "B",
+   "evidence": "\"Administer and tune Snyk, SonarQube, Azure DevOps, PowerShell scanning tools, and additional AppSec tooling as needed.\"",
+   "source_url": "https://job-boards.greenhouse.io/wilsonelser/jobs/5394020008",
+   "confidence": "Verified"
+  },
+  {
+   "name": "Accenture",
+   "domain": "accenture.com",
+   "grade": "C",
+   "evidence": "Listed as a Snyk user in the Enlyft technology-adoption database.",
+   "source_url": "https://enlyft.com/tech/products/snyk",
+   "confidence": "Likely"
+  },
+  {
+   "name": "Citrix",
+   "domain": "citrix.com",
+   "grade": "C",
+   "evidence": "Observed as a Snyk user (usedby.ai tech-stack listing).",
+   "source_url": "https://www.usedby.ai/tools/snyk",
+   "confidence": "Likely"
+  },
+  {
+   "name": "Cognizant",
+   "domain": "cognizant.com",
+   "grade": "C",
+   "evidence": "Listed as a Snyk user in the Enlyft technology-adoption database.",
+   "source_url": "https://enlyft.com/tech/products/snyk",
+   "confidence": "Likely"
+  },
+  {
+   "name": "EPAM Systems",
+   "domain": "epam.com",
+   "grade": "C",
+   "evidence": "Listed as a Snyk user in the Enlyft technology-adoption database.",
+   "source_url": "https://enlyft.com/tech/products/snyk",
+   "confidence": "Likely"
+  },
+  {
+   "name": "Infosys",
+   "domain": "infosys.com",
+   "grade": "C",
+   "evidence": "Listed as a Snyk user in the Enlyft technology-adoption database.",
+   "source_url": "https://enlyft.com/tech/products/snyk",
+   "confidence": "Likely"
+  },
+  {
+   "name": "Manulife",
+   "domain": "manulife.com",
+   "grade": "C",
+   "evidence": "Observed as a Snyk user (usedby.ai tech-stack listing).",
+   "source_url": "https://www.usedby.ai/tools/snyk",
+   "confidence": "Likely"
+  },
+  {
+   "name": "ReliaQuest",
+   "domain": "reliaquest.com",
+   "grade": "C",
+   "evidence": "Observed as a Snyk user (usedby.ai tech-stack listing).",
+   "source_url": "https://www.usedby.ai/tools/snyk",
+   "confidence": "Likely"
+  },
+  {
+   "name": "Varo Bank",
+   "domain": "varomoney.com",
+   "grade": "C",
+   "evidence": "Observed as a Snyk user (usedby.ai tech-stack listing).",
+   "source_url": "https://www.usedby.ai/tools/snyk",
+   "confidence": "Likely"
+  },
+  {
+   "name": "WEX",
+   "domain": "wex.com",
+   "grade": "C",
+   "evidence": "Observed as a Snyk user (usedby.ai tech-stack listing).",
+   "source_url": "https://www.usedby.ai/tools/snyk",
+   "confidence": "Likely"
+  }
+ ],
+ "generated_at": "2026-11-09T18:03:59Z",
+ "company_count": 73
+}
