@@ -1,0 +1,739 @@
+{
+  "competitor": {
+    "name": "Apollo.io",
+    "slug": "apollo",
+    "domain": "apollo.io"
+  },
+  "companies": [
+    {
+      "name": "Built In",
+      "domain": "builtin.com",
+      "grade": "A",
+      "evidence": "Apollo enriches everything we have: contacts, leads, accounts…And we don't really have to touch it, it just works.",
+      "source_url": "https://www.apollo.io/magazine/built-in-customer-story",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Huntr",
+      "domain": "huntr.co",
+      "grade": "A",
+      "evidence": "We started A/B testing our language for our emails, which was super easy with Apollo.",
+      "source_url": "https://www.apollo.io/magazine/huntr-customer-story",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Instabug",
+      "domain": "instabug.com",
+      "grade": "A",
+      "evidence": "Word of mouth truthfully led us to Apollo. Apollo's reputation for having the best mobile contact numbers was a huge selling point.",
+      "source_url": "https://www.apollo.io/magazine/instabug-sales-outreach-success",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Leadium",
+      "domain": "leadium.com",
+      "grade": "A",
+      "evidence": "Today, a prospect lives inside Apollo for 100% of their lifetime with us.",
+      "source_url": "https://www.apollo.io/magazine/how-leadium-3x-annual-revenue-using-apollos-open-api",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Paraform",
+      "domain": "paraform.com",
+      "grade": "A",
+      "evidence": "Apollo turned outbound from something we didn't really know how to do to a structured and scalable process.",
+      "source_url": "https://www.apollo.io/magazine/paraform-customer-story",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Power Digital Marketing",
+      "domain": "powerdigitalmarketing.com",
+      "grade": "A",
+      "evidence": "Discover how top B2B companies increased meetings by 75% and revenue by 200% using Apollo's sales intelligence platform.",
+      "source_url": "https://www.apollo.io/magazine/articles/customer-stories",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Predictable Revenue",
+      "domain": "predictablerevenue.com",
+      "grade": "A",
+      "evidence": "We reduced the complexity of three tools into one.",
+      "source_url": "https://www.apollo.io/magazine/predictable-revenue-customer-story",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Smartling",
+      "domain": "smartling.com",
+      "grade": "A",
+      "evidence": "With this kind of AI system, my BDRs can send ten times more personalized emails. Their productivity and growth has skyrocketed.",
+      "source_url": "https://www.apollo.io/magazine/smartling-customer-story",
+      "confidence": "Verified+"
+    },
+    {
+      "name": "Accord",
+      "domain": "inaccord.com",
+      "grade": "B",
+      "evidence": "The documentation compared to other vendors we looked at was really good. The team could get up and running very fast.",
+      "source_url": "https://www.apollo.io/magazine/accord-customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Adlook",
+      "domain": "adlook.me",
+      "grade": "B",
+      "evidence": "Sales Engagement & Automation: Proficient in tools like Salesloft, Outreach, Apollo.io for automated sequencing, follow-ups, and pipeline management.",
+      "source_url": "https://jobs.lever.co/adlook/f72c8c1f-67d7-49dd-ace5-2955ca8469d4",
+      "confidence": "Verified"
+    },
+    {
+      "name": "AI Numera",
+      "domain": "ainumera.com",
+      "grade": "B",
+      "evidence": "Differentials: Knowledge of tools such as Apollo.io, Pipedrive, Speedio, Econodata, Lusha, Snov.io, and Cloudtalk.",
+      "source_url": "https://www.geekhunter.com/en/ai-numera/jobs/sdr-senior--apollo-io-e-pipedrive---home-office--1",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Aries Global",
+      "domain": "aries.global",
+      "grade": "B",
+      "evidence": "Prospecting & Automation: Clay, Apollo.io, LinkedIn Sales Navigator, ZoomInfo, Seamless.ai, Lusha, Instantly, Walaxy",
+      "source_url": "https://builtin.com/job/sales-development-representative-sdr-business-development-representative-bdr/11231979",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Ashby",
+      "domain": "ashbyhq.com",
+      "grade": "B",
+      "evidence": "Ashby's sales team was already using Apollo to find and do manual outreach to prospects from its 260M+ contacts.",
+      "source_url": "https://www.apollo.io/magazine/ashby-customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Census",
+      "domain": "getcensus.com",
+      "grade": "B",
+      "evidence": "We paid less for one tool than for two tools together...we cut our costs in half.",
+      "source_url": "https://www.apollo.io/magazine/census-customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Click Maint",
+      "domain": "clickmaint.com",
+      "grade": "B",
+      "evidence": "Apollo.io was the right tool, but we struggled configuring it properly until they helped create workflows and tighten integrations.",
+      "source_url": "https://www.gtmworks.ai/case-studies",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Compliancy Group",
+      "domain": "compliancygroup.com",
+      "grade": "B",
+      "evidence": "Knowledge of lead generation tools like Apollo.io or ZoomInfo.",
+      "source_url": "https://freehire.me/jobs/business-development-representative-compliancy-group-llc-ajhwuzft",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Customer.io",
+      "domain": "customer.io",
+      "grade": "B",
+      "evidence": "Apollo is two platforms in one...it's saved us clicks, saved us time, and allowed us to create sequences for the first time.",
+      "source_url": "https://www.apollo.io/magazine/customerio-customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Cyera",
+      "domain": "cyera.io",
+      "grade": "B",
+      "evidence": "Booked 75% more meetings with 50% less effort after consolidating on Apollo.",
+      "source_url": "https://www.cuspera.com/products/apolloio-platform-x-5966/customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Dijital Team",
+      "domain": "dijital.com.au",
+      "grade": "B",
+      "evidence": "Familiarity with lead-sourcing and enrichment platforms such as Apollo.io or ZoomInfo.",
+      "source_url": "https://jobs.lever.co/dijital-team-pty-ltd/ac8070d3-edef-4c78-9ed5-719886eb74af",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Drivetrain",
+      "domain": "drivetrain.ai",
+      "grade": "B",
+      "evidence": "Administer and configure day-to-day tools in our GTM stack (think HubSpot, Apollo.io, Clay, G2, or similar)",
+      "source_url": "https://jobs.lever.co/drivetrain/d7808cbe-0c2f-47f0-9261-f10f6cfea9aa",
+      "confidence": "Verified"
+    },
+    {
+      "name": "eGroup",
+      "domain": "egroup.io",
+      "grade": "B",
+      "evidence": "Familiarity with sales tools like LinkedIn Sales Navigator, Apollo.io and also ChatGPT is a plus",
+      "source_url": "https://egroup.recruitee.com/o/sales-outbound-french-fmd",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Emerge",
+      "domain": "emergemarket.com",
+      "grade": "B",
+      "evidence": "Without Apollo, we would still be in the digital stone age, using multiple disparate tools.",
+      "source_url": "https://www.apollo.io/magazine/emerge-customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Gozio Health",
+      "domain": "goziohealth.com",
+      "grade": "B",
+      "evidence": "Contact and firmographic databases such as ZoomInfo, Apollo.io, or Clay",
+      "source_url": "https://gozio.breezy.hr/p/c186902fb442-inside-sales-representative-isr",
+      "confidence": "Verified"
+    },
+    {
+      "name": "GTM Ops",
+      "domain": "gtmops.agency",
+      "grade": "B",
+      "evidence": "Apollo Workflows give me all the functionality I need to qualify my prospects and assign them to the right campaigns and reps.",
+      "source_url": "https://www.apollo.io/magazine/gtm-ops-customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Gumloop",
+      "domain": "gumloop.com",
+      "grade": "B",
+      "evidence": "Apollo allows our users to go from just an email address to real information about who that person is.",
+      "source_url": "https://www.apollo.io/magazine/gumloop-customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "High Scale",
+      "domain": "highscale.ai",
+      "grade": "B",
+      "evidence": "Familiarity with prospecting tools (Apollo.io, ZoomInfo...)",
+      "source_url": "https://careers.highscale.ai/jobs/544973-sales-va",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Idomoo",
+      "domain": "idomoo.com",
+      "grade": "B",
+      "evidence": "Apollo takes everything I share and creates the sequence for me in a matter of minutes.",
+      "source_url": "https://www.apollo.io/magazine/idomoo-customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Iru",
+      "domain": "iru.com",
+      "grade": "B",
+      "evidence": "With Apollo, I don't have to custom code anything. I flip a switch, and it just works.",
+      "source_url": "https://www.apollo.io/magazine/iru-customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Jolly",
+      "domain": "jollyhq.com",
+      "grade": "B",
+      "evidence": "GTM Works revealed a whole new level of potential in Apollo.io that we didn't know existed.",
+      "source_url": "https://www.gtmworks.ai/apollo-io-case-studies",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Kinsta",
+      "domain": "kinsta.com",
+      "grade": "B",
+      "evidence": "Apollo has increased the likelihood that we're going to get someone on the phone and we're going to get someone to reply to an email.",
+      "source_url": "https://www.apollo.io/magazine/kinstas-customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Lawtrades",
+      "domain": "lawtrades.com",
+      "grade": "B",
+      "evidence": "Apollo.io (Computer Software) partnered with Lawtrades (Internet) to solve key challenges.",
+      "source_url": "https://www.apollo.io/magazine/articles/customer-stories",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Lemonlight",
+      "domain": "lemonlight.com",
+      "grade": "B",
+      "evidence": "Using Apollo, we've had a phenomenally low bounce rate these last two quarters…we've essentially cut them in half.",
+      "source_url": "https://www.apollo.io/magazine/lemonlight-customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "LFDM Digital Marketing Advisors",
+      "domain": "lfdm.co",
+      "grade": "B",
+      "evidence": "I never recommend a tool I don't trust. For me, Apollo is my insurance.",
+      "source_url": "https://www.apollo.io/magazine/how-marketing-agency-founder-howard-lee-delivers-to-his-clients-using-apollo-io",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Mutiny",
+      "domain": "mutinyhq.com",
+      "grade": "B",
+      "evidence": "Apollo is a crucial part of what my team does.",
+      "source_url": "https://www.apollo.io/magazine/how-mutiny-increased-outbound-revenue-by-200-with-apollo",
+      "confidence": "Verified"
+    },
+    {
+      "name": "NeosAlpha Technologies",
+      "domain": "neosalpha.com",
+      "grade": "B",
+      "evidence": "exposure with contact discovery tools (such as Lusha, ZoomInfo, Hunter.io, Apollo.io, etc.)",
+      "source_url": "https://neosalpha.com/job/sales-development-representative/",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Noble",
+      "domain": "thatsnoble.com",
+      "grade": "B",
+      "evidence": "Apollo was consistently the most reliable in terms of both completeness and performance.",
+      "source_url": "https://www.apollo.io/magazine/noble-customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Parabola",
+      "domain": "parabola.io",
+      "grade": "B",
+      "evidence": "You leverage a modern tech stack including Outreach.io, Clay, LinkedIn Sales Navigator, Nooks, Apollo.io, 6Sense, Attention, Salesforce, and Hubspot.",
+      "source_url": "https://jobs.ashbyhq.com/parabola-io/d60abec6-6a4b-46a1-a062-7e9cc329473c",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Popl",
+      "domain": "popl.co",
+      "grade": "B",
+      "evidence": "Disrupting how event lead capture is done wouldn't be possible without Apollo as a key piece of our data stack.",
+      "source_url": "https://www.apollo.io/magazine/popl-customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Recall.ai",
+      "domain": "recall.ai",
+      "grade": "B",
+      "evidence": "Apollo.io Case Study: Recall.ai, industry Sales, headcount 201-500, San Francisco.",
+      "source_url": "https://www.apollo.io/magazine/articles/customer-stories",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Revenue Precision",
+      "domain": "revenueprecision.com",
+      "grade": "B",
+      "evidence": "We were able to use Apollo's phone numbers and actually book meetings from them.",
+      "source_url": "https://www.apollo.io/magazine/revenue-precision-customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "SendtoWin",
+      "domain": "sendtowin.com",
+      "grade": "B",
+      "evidence": "Apollo has been central to our growth from day one.",
+      "source_url": "https://www.apollo.io/magazine/sendtowin-customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Smile Digital Health",
+      "domain": "smiledigitalhealth.com",
+      "grade": "B",
+      "evidence": "Doubled connect rates using Apollo.",
+      "source_url": "https://companydatabenchmarks.com/customers/apollo",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Stack Builders",
+      "domain": "stackbuilders.com",
+      "grade": "B",
+      "evidence": "Experience using CRM platforms (HubSpot, Salesforce, or similar) and prospecting tools (Apollo.io or similar)",
+      "source_url": "https://remoteok.com/remote-jobs/remote-hybrid-quito-bilingual-sales-development-representative-stack-builders-1133773",
+      "confidence": "Verified"
+    },
+    {
+      "name": "State Affairs",
+      "domain": "stateaffairs.com",
+      "grade": "B",
+      "evidence": "Knowledge of sales engagement tools such as Lemlist or Apollo.io",
+      "source_url": "https://job-boards.greenhouse.io/stateaffairs/jobs/4003111009",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Stoke Talent",
+      "domain": "stoketalent.com",
+      "grade": "B",
+      "evidence": "The SDR team all uses Apollo. Sequences, the data, the calls, everything. I really couldn't imagine what it would be like without it.",
+      "source_url": "https://www.apollo.io/blog/learn-apollo-io-best-practices-from-power-user-gabi-sayah",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Superside",
+      "domain": "superside.com",
+      "grade": "B",
+      "evidence": "Unified 130 reps on Apollo while scaling from $16M to $75M ARR.",
+      "source_url": "https://companydatabenchmarks.com/customers/apollo",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Tessell",
+      "domain": "tessell.com",
+      "grade": "B",
+      "evidence": "Apollo has become the backbone of how we support and grow our sales team.",
+      "source_url": "https://www.apollo.io/magazine/tessell-customer-story",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Victorious",
+      "domain": "victorious.com",
+      "grade": "B",
+      "evidence": "Using Apollo, we've solved the biggest problem for every business, the lead problem.",
+      "source_url": "https://www.apollo.io/magazine/articles/customer-stories",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Vistoura Visuals",
+      "domain": "vistouravisuals.com",
+      "grade": "B",
+      "evidence": "You will build prospect lists using Apollo.io and similar resources.",
+      "source_url": "https://prosmarketplace.com/job/job-detail/senior-business-development-rep-bdr",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Wing Assistant",
+      "domain": "wingassistant.com",
+      "grade": "B",
+      "evidence": "Proficient in using tools such as HubSpot, Salesforce, Pipedrive, LinkedIn Sales Navigator, Apollo.io, GoHighLevel, or ZoomInfo",
+      "source_url": "https://jobs.lever.co/getwingapp/9b4c1180-67f1-426e-8141-a29c492c0b68",
+      "confidence": "Verified"
+    },
+    {
+      "name": "Workforce Optimizer",
+      "domain": "workforceoptimizer.com",
+      "grade": "B",
+      "evidence": "Use tools such as HubSpot, Apollo.io, LinkedIn Sales Navigator, and other prospecting tools to identify and engage potential customers.",
+      "source_url": "https://apply.workable.com/workforceoptimizer/j/BEA3D85B3B",
+      "confidence": "Verified"
+    },
+    {
+      "name": "12th Wonder",
+      "domain": "12thwonder.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TheirStack's 'Companies that use Apollo.io' table.",
+      "source_url": "https://theirstack.com/en/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "1Huddle",
+      "domain": "1huddle.co",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io customer in AppsRunTheWorld customer database.",
+      "source_url": "https://www.appsruntheworld.com/customers-database/products/view/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Anchore",
+      "domain": "anchore.com",
+      "grade": "C",
+      "evidence": "Listed among websites using Apollo IO in BuiltWith.",
+      "source_url": "https://trends.builtwith.com/websitelist/Apollo-IO",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Anteriad",
+      "domain": "anteriad.com",
+      "grade": "C",
+      "evidence": "Listed among websites using Apollo IO in BuiltWith.",
+      "source_url": "https://trends.builtwith.com/websitelist/Apollo-IO",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Aramex",
+      "domain": "aramex.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TechnologyChecker.io customer list.",
+      "source_url": "https://technologychecker.io/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Autodesk",
+      "domain": "autodesk.com",
+      "grade": "C",
+      "evidence": "Recorded user of Apollo.io for Marketing Automation and Sales Engagement in AppsRunTheWorld database.",
+      "source_url": "https://www.appsruntheworld.com/customers-database/products/view/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Blacksmith Agency",
+      "domain": "blacksmith.agency",
+      "grade": "C",
+      "evidence": "Listed in TheirStack's 'Companies that use Apollo.io' table with High confidence.",
+      "source_url": "https://theirstack.com/en/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Blackthorn",
+      "domain": "blackthorn.io",
+      "grade": "C",
+      "evidence": "Listed among websites using Apollo IO in BuiltWith.",
+      "source_url": "https://trends.builtwith.com/websitelist/Apollo-IO",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Centific",
+      "domain": "centific.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TechnologyChecker.io customer list.",
+      "source_url": "https://technologychecker.io/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Chargebee",
+      "domain": "chargebee.com",
+      "grade": "C",
+      "evidence": "Listed in Enlyft's 'Who uses Apollo.io?' customer database.",
+      "source_url": "https://enlyft.com/tech/products/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Ciklum",
+      "domain": "ciklum.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TechnologyChecker.io customer list.",
+      "source_url": "https://technologychecker.io/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Colliers International",
+      "domain": "colliers.com",
+      "grade": "C",
+      "evidence": "Recorded user of Apollo.io in AppsRunTheWorld customer database.",
+      "source_url": "https://www.appsruntheworld.com/customers-database/products/view/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Contentsquare",
+      "domain": "contentsquare.com",
+      "grade": "C",
+      "evidence": "Listed among websites using Apollo IO in BuiltWith.",
+      "source_url": "https://trends.builtwith.com/websitelist/Apollo-IO",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Conveyor",
+      "domain": "conveyor.com",
+      "grade": "C",
+      "evidence": "Listed among websites using Apollo IO in BuiltWith.",
+      "source_url": "https://trends.builtwith.com/websitelist/Apollo-IO",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Crescendo AI",
+      "domain": "crescendo.ai",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TechnologyChecker.io customer list.",
+      "source_url": "https://technologychecker.io/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Datamatics",
+      "domain": "datamaticsbpm.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TechnologyChecker.io customer list.",
+      "source_url": "https://technologychecker.io/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Driven Insights",
+      "domain": "driveninsights.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TheirStack's 'Companies that use Apollo.io' table.",
+      "source_url": "https://theirstack.com/en/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "FullStack Labs",
+      "domain": "fullstack.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TheirStack's 'Companies that use Apollo.io' table.",
+      "source_url": "https://theirstack.com/en/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Go1",
+      "domain": "go1.com",
+      "grade": "C",
+      "evidence": "Listed among websites using Apollo IO in BuiltWith.",
+      "source_url": "https://trends.builtwith.com/websitelist/Apollo-IO",
+      "confidence": "Likely"
+    },
+    {
+      "name": "GoDaddy",
+      "domain": "godaddy.com",
+      "grade": "C",
+      "evidence": "Listed in Enlyft's 'Who uses Apollo.io?' customer database.",
+      "source_url": "https://enlyft.com/tech/products/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Hack The Box",
+      "domain": "hackthebox.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TechnologyChecker.io customer list.",
+      "source_url": "https://technologychecker.io/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "HIC Global Solutions",
+      "domain": "hicglobalsolutions.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TheirStack's 'Companies that use Apollo.io' table.",
+      "source_url": "https://theirstack.com/en/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Huzzle",
+      "domain": "huzzle.app",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TheirStack's 'Companies that use Apollo.io' table.",
+      "source_url": "https://theirstack.com/en/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Intellias",
+      "domain": "intellias.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TechnologyChecker.io customer list.",
+      "source_url": "https://technologychecker.io/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Klaviyo",
+      "domain": "klaviyo.com",
+      "grade": "C",
+      "evidence": "Listed in Enlyft's 'Who uses Apollo.io?' customer database.",
+      "source_url": "https://enlyft.com/tech/products/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "LiveChat",
+      "domain": "livechat.com",
+      "grade": "C",
+      "evidence": "Listed among websites using Apollo IO in BuiltWith.",
+      "source_url": "https://trends.builtwith.com/websitelist/Apollo-IO",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Lockton Companies",
+      "domain": "lockton.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TechnologyChecker.io customer list.",
+      "source_url": "https://technologychecker.io/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Mappedin",
+      "domain": "mappedin.com",
+      "grade": "C",
+      "evidence": "Listed in Enlyft's 'Who uses Apollo.io?' customer database.",
+      "source_url": "https://enlyft.com/tech/products/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Maropost",
+      "domain": "maropost.com",
+      "grade": "C",
+      "evidence": "Listed among websites using Apollo IO in BuiltWith.",
+      "source_url": "https://trends.builtwith.com/websitelist/Apollo-IO",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Movate",
+      "domain": "movate.com",
+      "grade": "C",
+      "evidence": "Recorded user of Apollo.io in AppsRunTheWorld customer database.",
+      "source_url": "https://www.appsruntheworld.com/customers-database/products/view/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Plug Power",
+      "domain": "plugpower.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TechnologyChecker.io customer list.",
+      "source_url": "https://technologychecker.io/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "R Systems International",
+      "domain": "rsystems.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TechnologyChecker.io customer list.",
+      "source_url": "https://technologychecker.io/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Rhombus",
+      "domain": "rhombus.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TheirStack's 'Companies that use Apollo.io' table.",
+      "source_url": "https://theirstack.com/en/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Sendoso",
+      "domain": "sendoso.com",
+      "grade": "C",
+      "evidence": "Listed among websites using Apollo IO in BuiltWith.",
+      "source_url": "https://trends.builtwith.com/websitelist/Apollo-IO",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Speechify",
+      "domain": "speechify.com",
+      "grade": "C",
+      "evidence": "Listed in TheirStack's 'Companies that use Apollo.io' table with High confidence.",
+      "source_url": "https://theirstack.com/en/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "To The New",
+      "domain": "tothenew.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TechnologyChecker.io customer list.",
+      "source_url": "https://technologychecker.io/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "ToolsGroup",
+      "domain": "toolsgroup.com",
+      "grade": "C",
+      "evidence": "Listed among websites using Apollo IO in BuiltWith.",
+      "source_url": "https://trends.builtwith.com/websitelist/Apollo-IO",
+      "confidence": "Likely"
+    },
+    {
+      "name": "TruBridge",
+      "domain": "trubridge.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TechnologyChecker.io customer list.",
+      "source_url": "https://technologychecker.io/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Udacity",
+      "domain": "udacity.com",
+      "grade": "C",
+      "evidence": "Listed as an Apollo.io user in TechnologyChecker.io customer list.",
+      "source_url": "https://technologychecker.io/technology/apollo-io",
+      "confidence": "Likely"
+    },
+    {
+      "name": "Veyer Logistics",
+      "domain": "veyer.com",
+      "grade": "C",
+      "evidence": "Recorded user of Apollo.io in AppsRunTheWorld customer database.",
+      "source_url": "https://www.appsruntheworld.com/customers-database/products/view/apollo-io",
+      "confidence": "Likely"
+    }
+  ],
+  "generated_at": "2026-11-16T18:05:41Z",
+  "company_count": 91
+}
